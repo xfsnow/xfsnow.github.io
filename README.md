@@ -98,6 +98,14 @@ server
 然后
 
 ```
+# nginx -t
+nginx: the configuration file /etc/nginx/nginx.conf syntax is ok
+nginx: configuration file /etc/nginx/nginx.conf test is successful
+
+```
+先检测一下配置文件正确。再刷新配置
+
+```
 nginx -s reload
 ```
 
@@ -111,3 +119,28 @@ nginx -s reload
 然后选择服务器平台为 Nginx(pem) 即可
 
 ![KeyManager导出证书选择服务器平台为 Nginx](doc/img/KeyManagerExportNginx.png)
+
+导出文件是一个 zip 压缩包 snowpeak-fun-nginx-0321092656.zip，里面有 2 个文件
+```
+snowpeak.fun_chain.crt
+snowpeak.fun_key.key
+```
+正好对应 nginx 中 HTTPS 站点的配置中，这 2 个证书文件上传到虚拟机上，再如下设置
+
+```
+server {
+    listen       443 ssl;
+    server_name  www.snowpeak.fun;
+    ssl_certificate      /etc/nginx/conf.d/snowpeak.fun_chain.crt; #证书文件路径
+    ssl_certificate_key  /etc/nginx/conf.d/snowpeak.fun_key.key;   #证书文件密钥的路径
+    #ssl_session_cache    shared:SSL:1m;
+    ssl_session_timeout  5m;
+    ssl_ciphers  HIGH:!aNULL:!MD5;
+    ssl_prefer_server_ciphers  on;
+    index index.htm index.html index.php;
+    root /home/azureuser/site/snowpeak.fun;
+    access_log /home/azureuser/logs/snowpeak.fun_ssl_access.log;
+    error_log /home/azureuser/logs/snowpeak.fun_ssl_error.log;
+}
+```
+再把这个配置添加到前面的 sites.conf 配置文件中，再 nginx -t 检测配置，nginx -s reload 一下重新加载。这时再访问 https://www.snowpeak.fun/ 就可以看到绿色的网站连接已加密了。
