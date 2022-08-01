@@ -1,0 +1,10 @@
+ul.icons {
+    display: grid;
+    justify-items: center;
+    grid-template-columns: repeat(auto-fill,minmax(120px,1fr));
+    grid-auto-flow: row dense;
+    grid-gap: 20px;
+}
+li {
+    list-style: none;
+}

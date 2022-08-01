@@ -2,7 +2,6 @@
 图标文件包下载自 https://docs.microsoft.com/en-us/azure/architecture/icons/
 把下载的压缩包解压，然后运行这个脚本即可生成一个静态页面。
 """
-
 import os
 
 
@@ -14,30 +13,37 @@ def findAllFile(base):
 
 
 def main():
-    base = './Icons'
+    basePath = './AzureIcon'
     output = """<!DOCTYPE html>
 <html lang="zh-cn">
 <head>
 <meta charset="utf-8" />
+<link href='azureicon.css' rel='stylesheet' type='text/css'/>
 <title>Azure Icon SVG</title>
 </head>
 <body>
-<h1>Azure Icon SVG</h1><ul>
+<h1>Azure Icon 展示页</h1>
+<p>Azure 的图标可以从微软官网下载 <a href="https://docs.microsoft.com/en-us/azure/architecture/icons/"  target="_blank">https://docs.microsoft.com/en-us/azure/architecture/icons/</a>。但是这里下载的是个压缩包，解压后都是SVG文件，预览和查找都不太方便。
+   我使用这个简单的 <a href="https://github.com/xfsnow/xfsnow.github.io/blob/master/AzureIcon/icon_index.py" target="_blank">Python 脚本</a>，遍历这些子目录和文件，生成一个静态 HTML 文件，就可以简单明了地展示和用服务名称查找了。</p>
+<ul class="icons">
 """
-    fileAll = findAllFile(base)
+    fileAll = findAllFile(basePath)
     for i in fileAll:
         i = i.replace('\\', '/')
         i = i.replace(' ', '%20')
         i = i.replace('+', '%2B')
+        i = i.replace(basePath+'/', '')
         item = i.split('/')
-        if (item[2].find('.py') < 0):
-            # print(item[2].find('.py'))
-            output += '<li><embed src="'+i + \
+        if (i.find('.svg') > 1):
+            itemSrc = item[1]
+            fileName = item[1].replace('.svg', '')
+            fileName = fileName.replace('-', ' ')
+            fileName = fileName.replace('icon service', ' ')
+            output += '<li><embed src="' + i + \
                 '" width="80" height="80" type="image/svg+xml" pluginspage="http://www.adobe.com/svg/viewer/install/" /><br />' + \
-                item[3].replace('-', ' ')+'</li> '
-
+                fileName+'</li> '
     output += '</ul></body></html>'
-    with open('./azure_icon.html', 'w') as f:
+    with open(basePath + '/index.html', 'w', encoding='utf-8') as f:
         f.write(output)
     f.close
 
