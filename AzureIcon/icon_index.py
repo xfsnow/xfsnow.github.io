@@ -24,10 +24,10 @@ def main():
 <body>
 <h1>Azure Icon Index / Azure  图标展示页</h1>
 <p>Azure 的图标可以从微软官网下载 <a href="https://docs.microsoft.com/en-us/azure/architecture/icons/"  target="_blank">https://docs.microsoft.com/en-us/azure/architecture/icons/</a>。但是这里下载的是个压缩包，解压后都是SVG文件，预览和查找都不太方便。
-   我使用这个简单的 <a href="https://github.com/xfsnow/xfsnow.github.io/blob/master/AzureIcon/icon_index.py" target="_blank">Python 脚本</a>，遍历这些子目录和文件，生成一个静态 HTML 文件，就可以简单明了地展示和用服务名称查找了。</p>
+   我使用这个简单的 <a href="https://github.com/xfsnow/xfsnow.github.io/blob/master/AzureIcon/icon_index.py" target="_blank">Python 脚本</a>，遍历这些子目录和文件，生成一个静态 HTML 文件，就可以简单明了地展示和用服务名称查找了。如需要下载图标文件，请在文件名右键另存。</p>
 <p>The Azure icon can be downloaded for <a href="https://docs.microsoft.com/en-us/azure/architecture/icons/"  target="_blank">https://docs.microsoft.com/en-us/azure/architecture/icons/</a> from Microsoft's website.
 However the file downloaded here is a compression package which contains a large number of SVG files. It is not very convenient to preview and search so many SVG files.
-This <a href="https://github.com/xfsnow/xfsnow.github.io/blob/master/AzureIcon/icon_index.py" target="_blank">simple Python script</a> goes through the subdirectories and files to generate a static HTML file that include all the SVG images. We can simply preview all the icon images and search icon by service names. </p>
+This <a href="https://github.com/xfsnow/xfsnow.github.io/blob/master/AzureIcon/icon_index.py" target="_blank">simple Python script</a> goes through the subdirectories and files to generate a static HTML file that include all the SVG images. We can simply preview all the icon images and search icon by service names. Please right click on the file names and choose "Save as" to download the icon files.</p>
 <ul class="icons">
 """
     fileAll = findAllFile(basePath)
@@ -43,8 +43,8 @@ This <a href="https://github.com/xfsnow/xfsnow.github.io/blob/master/AzureIcon/i
             fileName = fileName.replace('-', ' ')
             fileName = fileName.replace('icon service', ' ')
             output += '<li><embed src="' + i + \
-                '" width="80" height="80" type="image/svg+xml" pluginspage="http://www.adobe.com/svg/viewer/install/" /><br />' + \
-                fileName+'</li> '
+                '" width="80" height="80" type="image/svg+xml" pluginspage="http://www.adobe.com/svg/viewer/install/" /><br />'\
+                 + '<a href="'+ i +'">' + fileName +'</a></li> '
     output += '</ul></body></html>'
     with open(basePath + '/index.html', 'w', encoding='utf-8') as f:
         f.write(output)
