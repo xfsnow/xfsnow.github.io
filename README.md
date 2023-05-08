@@ -144,3 +144,11 @@ server {
 }
 ```
 再把这个配置添加到前面的 sites.conf 配置文件中，再 nginx -t 检测配置，nginx -s reload 一下重新加载。这时再访问 https://www.snowpeak.fun/ 就可以看到绿色的网站连接已加密了。
+
+18分钟贪吃蛇游戏的 Prompt:
+怎样使用 GitHub CLI 创建一个新的公开源码库？
+贪吃蛇游戏是什么？
+使用 JavaScript 编写一个贪吃蛇游戏 
+(右上3点 另存为一个新文件，取名为 snake.js)
+怎样调用这段JavaScript代码？
+(我没有说要 HTML，智能的使用了 HTML)
