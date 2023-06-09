@@ -4,6 +4,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Snowpeak on Github</title>
+<script src="Cobra/Numbers.js"></script>
 </head>
 <body>
 <h1>Snowpeak on Github</h1>
@@ -11,85 +12,92 @@
   Now GitHub supports <a href="https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site" target="_blank">customized domain name for hosted websites</a>.
   This website is issued a SSL certificate by GitHub as well.</p>
 <script lang="javascript">
-  document.write('<h2>1到1000的自然数中2数之和的3倍等于2数之积的数</h2><ul>');
-  for (a=1; a<1000;a++) {
-    for (b=1; b<1000;b++) {
-      if (3* (a+b) == a*b) {
-          console.log('a='+a+'; b='+b);
-          document.write('<li>a='+a+'; b='+b+'</li>');
-      }
-    }
-  }
-  document.write('</ul>');
-  // t = 0;
-  // count=0;
-  // for (a=7; a< 90; a+=2) {
-  //   count++;
-  //   t +=a;
-  //   // if (t>2018)
-  //   {
-  //     console.log(a, t);
-  //     // break;
+  // document.write('<h2>1到1000的自然数中2数之和的3倍等于2数之积的数</h2><ul>');
+  // for (a=1; a<1000;a++) {
+  //   for (b=1; b<1000;b++) {
+  //     if (3* (a+b) == a*b) {
+  //         console.log('a='+a+'; b='+b);
+  //         document.write('<li>a='+a+'; b='+b+'</li>');
+  //     }
   //   }
-
   // }
-  // console.log(count);
-  var nq = function(n)
-  {
-    q = 1;
-    while(n > 0)
-    {
-      // console.log('q='+q+', n='+n);
-      q *= n;
-      n--;
-    }
-    return q;
-  };
-  // console.log(nq(7));
-  // console.log((1/2-1/3), (1/6),(1/2-1/3)==(1/6));
-  n=0;
-  for (i=10;i<100;i++) {
+  // document.write('</ul>');
+  // // t = 0;
+  // // count=0;
+  // // for (a=7; a< 90; a+=2) {
+  // //   count++;
+  // //   t +=a;
+  // //   // if (t>2018)
+  // //   {
+  // //     console.log(a, t);
+  // //     // break;
+  // //   }
 
-    q = (i*i-1)/15;
+  // // }
+  // // console.log(count);
+  // var nq = function(n)
+  // {
+  //   q = 1;
+  //   while(n > 0)
+  //   {
+  //     // console.log('q='+q+', n='+n);
+  //     q *= n;
+  //     n--;
+  //   }
+  //   return q;
+  // };
+  // // console.log(nq(7));
+  // // console.log((1/2-1/3), (1/6),(1/2-1/3)==(1/6));
+  // n=0;
+  // for (i=10;i<100;i++) {
 
-    if (Math.floor(q)==q)
-    {
-      n++;
-      // console.log(i, ' ', (i*i-1)/15);
-      console.log(i);
-    }
-    }
-    console.log(n);
+  //   q = (i*i-1)/15;
 
-  y = 2002;
-  x = 2000;
-  m = (x+y) /2;
-  if (Math.floor(m)==m)
-  {
-    x = m;
-  }
+  //   if (Math.floor(q)==q)
+  //   {
+  //     n++;
+  //     // console.log(i, ' ', (i*i-1)/15);
+  //     console.log(i);
+  //   }
+  //   }
+  //   console.log(n);
 
-var mean = function (x)
-{
-  m = (x+y) /2;
+  // y = 2002;
+  // x = 2000;
+  // m = (x+y) /2;
+  // if (Math.floor(m)==m)
+  // {
+  //   x = m;
+  // }
 
-  if (Math.floor(m)==m)
-  {
-    y = mean(x);
-  }
-  else
-  {
-    return x;
-  }
-}
+// var mean = function (x)
+// {
+//   m = (x+y) /2;
 
-console.log(mean(2000));
+//   if (Math.floor(m)==m)
+//   {
+//     y = mean(x);
+//   }
+//   else
+//   {
+//     return x;
+//   }
+// }
+
+// console.log(mean(2000));
+document.write(numToChinese(678941))
 </script>
 <h2>编程填空</h2>
 <form>
   输入 n <input type="text" name="nq_input" />
   <input type="button" name="calculate" value="计算" onclick="this.form.nq_result.value=nq(this.form.nq_input.value);">
   结果 <input type="text" name="nq_result" />
+</form>
+<h2>阿拉伯数字转换中文数字</h2>
+<form>
+  输入 n <input type="text" name="num_input" />
+  <input type="button" name="calculate" value="计算" onclick="this.form.num_result.value=numToChinese(this.form.num_input.value);">
+  结果 <input type="text" name="num_result" />
 </form>
 <p><a href="AzureIcon" target="_blank">Azure Icon List</a></p>
 <p><a href="simtra.htm" target="_blank">汉字简体繁体转换</a></p>
