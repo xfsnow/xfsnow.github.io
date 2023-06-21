@@ -13,3 +13,25 @@ const numToChinese = function(num) {
     }
     return result;
 }
+
+/* 创建一个字典，包含北京各月的天气信息*/
+// var beijing_weather = [
+//     { month: 'January', high: 5, low: -15},
+
+/* 创建一个字典，包含布宜诺斯艾利斯各月的天气信息*/
+
+    
+// 将以下组件重写为 React 组件
+var input = document.createElement('input');
+input.setAttribute('type', 'text');
+document.body.appendChild(input);
+var button = document.createElement('button');
+button.innerHTML = 'Say Hello';
+document.body.appendChild(button);
+button.onclick = function() {
+  var name = input.value;
+  var hello = document.createElement('div');
+  hello.innerHTML = 'Hello ' + name;
+  document.body.appendChild(hello);
+};
+// React 版本:
