@@ -16,7 +16,6 @@ const numToChinese = function(num) {
 
 /* 创建一个字典，包含北京各月的天气信息*/
 // var beijing_weather = [
-//     { month: 'January', high: 5, low: -15},
 
 /* 创建一个字典，包含布宜诺斯艾利斯各月的天气信息*/
 
