@@ -16,15 +16,3 @@ CREATE TABLE users (
   );
 根据表的定义，定义一个结构体User  
 */
-type User struct {
-  UserID int `json:"user_id"`
-  Name string `json:"name"`
-  Birthdate time.Time `json:"birthdate"`
-  IDNumber string `json:"id_number"`
-  PhoneNumber string `json:"phone_number"`
-  Email string `json:"email"`
-  Password string `json:"password"`
-  RegistrationTime time.Time `json:"registration_time"`
-  LastLoginTime time.Time `json:"last_login_time"`
-  UserStatus string `json:"user_status"`
-}
