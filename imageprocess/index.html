@@ -4,15 +4,121 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>图片处理演示</title>
-<style>
-/* 5%圆角矩形，背景色横向渐变浅蓝到深蓝 */
-
-</style> 
-
 </head>
 <body>
 <h1>图片处理演示</h1>
+<h2>海外Azure</h2>
+<p>
+  <img src="https://cs1100320019689ac92.blob.core.windows.net/openai/Microsoft.png?sp=r&st=2023-10-04T03:05:21Z&se=2023-12-31T11:05:21Z&spr=https&sv=2022-11-02&sr=b&sig=HXeImdSGQaD7yvPBHJqrv72SJuLCGxhtumyvKMnVNow%3D" width="512" height="512" /> <br />
+  原图 尺寸是 2048*2048，这里为方便展示，缩小到 512*512 显示。
+</p>
 
+<p>缩略图
+</p>
+<ul>
+  <li>
+
+  <img src="https://img.snowpeak.org/?filename=Microsoft.png&width=100&height=100" width="100" height="100" /> <br />
+  100*100
+  </li>
+  <li>
+
+  <img src="https://img.snowpeak.org/?filename=Microsoft.png&width=200&height=200" width="200" height="200" /> <br />
+  200*200
+  </li>
+</ul>
+
+<p>缩小加翻转
+</p>
+<ul>
+  <li>
+
+  <img src="https://img.snowpeak.org/?filename=Microsoft.png&width=200&height=200&flip=-" width="200" height="200" /><br />
+  200*200 垂直翻转
+  </li>
+  <li>
+
+  <img src="https://img.snowpeak.org/?filename=Microsoft.png&width=200&height=200&flip=|" width="200" height="200" /><br />
+  200*200 水平翻转
+  </li>
+</ul>
+
+<p>缩小加裁剪
+</p>
+<ul>
+  <li>
+  <img src="https://img.snowpeak.org/?filename=Microsoft.png&width=200&height=200&crop=20,20,140,140" width="140" height="140" /><br />
+  先缩小到 200*200，再从 (20,20) 起裁剪出 140*140。
+  </li>
+  <li>
+<img src="https://img.snowpeak.org/?filename=Microsoft.png&width=200&height=200&crop=120,120,80,80" width="80" height="80" /><br />
+  先缩小到 200*200，再从 (120,120) 起裁剪出 80*80。
+  </li>
+</ul>
+
+<p>缩小加旋转
+</p>
+<ul>
+  <li>
+  <img src="https://img.snowpeak.org/?filename=Microsoft.png&width=200&height=200&rotate=270" width="200" height="200" /><br />
+  先缩小到 200*200，再旋转270度。
+  </li>
+  <li>
+<img src="https://img.snowpeak.org/?filename=Microsoft.png&width=200&height=200&rotate=15" width="200" height="200" /><br />
+  先缩小到 200*200，再旋转15度。
+  </li>
+</ul>/?filename=Microsoft.png&width=100&height=100" width="100" height="100" /> <br />
+  100*100
+  </li>
+  <li>
+
+  <img src="https://img.snowpeak.org/?filename=Microsoft.png&width=200&height=200" width="200" height="200" /> <br />
+  200*200
+  </li>
+</ul>
+
+<p>缩小加翻转
+</p>
+<ul>
+  <li>
+
+  <img src="https://img.snowpeak.org/?filename=Microsoft.png&width=200&height=200&flip=-" width="200" height="200" /><br />
+  200*200 垂直翻转
+  </li>
+  <li>
+
+  <img src="https://img.snowpeak.org/?filename=Microsoft.png&width=200&height=200&flip=|" width="200" height="200" /><br />
+  200*200 水平翻转
+  </li>
+</ul>
+
+<p>缩小加裁剪
+</p>
+<ul>
+  <li>
+  <img src="https://img.snowpeak.org/?filename=Microsoft.png&width=200&height=200&crop=20,20,140,140" width="140" height="140" /><br />
+  先缩小到 200*200，再从 (20,20) 起裁剪出 140*140。
+  </li>
+  <li>
+<img src="https://img.snowpeak.org/?filename=Microsoft.png&width=200&height=200&crop=120,120,80,80" width="80" height="80" /><br />
+  先缩小到 200*200，再从 (120,120) 起裁剪出 80*80。
+  </li>
+</ul>
+
+<p>缩小加旋转
+</p>
+<ul>
+  <li>
+  <img src="https://img.snowpeak.org/?filename=Microsoft.png&width=200&height=200&rotate=270" width="200" height="200" /><br />
+  先缩小到 200*200，再旋转270度。
+  </li>
+  <li>
+<img src="https://img.snowpeak.org/?filename=Microsoft.png&width=200&height=200&rotate=15" width="200" height="200" /><br />
+  先缩小到 200*200，再旋转15度。
+  </li>
+</ul>
+
+<h2>中国区Azure</h2>
 <p>
   <img src="https://functioncontoso.blob.core.chinacloudapi.cn/cas/ms.jpg?sp=r&st=2023-09-22T03:39:13Z&se=2023-12-31T11:39:13Z&sv=2022-11-02&sr=b&sig=ui7D2L%2FPZmXRTrYD33D1qU9lhs2JrDXDKsnBjLHHX%2Bg%3D" width="512" height="512" /> <br />
   原图 尺寸是 2048*2048，这里为方便展示，缩小到 512*512 显示。
@@ -72,6 +178,5 @@
   先缩小到 200*200，再旋转15度。
   </li>
 </ul>
-
 </body>
 </html>
