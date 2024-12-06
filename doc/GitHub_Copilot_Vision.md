@@ -33,7 +33,12 @@ GitHub Copilot 是一个由 GitHub 和 OpenAI 合作开发的人工智能代码�
 
 ![vision openai key](img/vision_openai_key.png)
 
-除了常见的看设计图生成 HTML 代码，使用 Vision 插件可以让 Copilot 识别图片中的问题给出解答。比如
+如果需要更换或删除，可以使用 Ctrl+Shit+P 调出快捷命令，搜索“Copilot Vision: Delete”，点击 Copilot Vision: Delete Current Model's API Key 即可。
+
+![vision openai key](img/vision_openai_key_delete.png)
+
+## 让 Vision 插件做更多有趣的事
+除了常见的看设计图生成 HTML 代码，使用 Vision 插件可以让 Copilot 识别图片中的数学问题给出解答。比如
 
 ![vision fraction](img/vision_fraction.png)
 
