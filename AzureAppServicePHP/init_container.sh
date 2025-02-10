@@ -1,7 +1,8 @@
 #!/bin/bash
 # 所有文件都已复制到镜像的 /var/www 目录下，所有文件操作都要加上目录使用绝对路径。
 # apline 默认没有 ll 命令，可以通过别名的方式实现
-alias ll='ls -la'
+echo "alias ll='ls -l --color'" >> ~/.bashrc
+source ~/.bashrc
 
 # 使用root权限启动php, 修改最大子进程数且一次性分配, 需修改配置如下
 sed 's/user = nobody/user = root/g' /etc/php84/php-fpm.d/www.conf | sed 's/group = nobody/group = root/g' | sed 's/pm.max_children = 5/pm.max_children = 30/g' | sed 's/pm = dynamic/pm = static/g' > /tmp/www.conf
