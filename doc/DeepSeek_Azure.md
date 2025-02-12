@@ -96,3 +96,8 @@ Azure Api Key 填 Key，Azure Model Name 填 Model Name。
 
 
 ![Open WebUI new dialog](img/ds_ow_dialog.png)
+
+
+TODO
+- [ ] App Service 挂接 Storage，实现用户和配置信息等持久化，App 重新部署后信息不丢失。
+- [ ] 部署 App Service 时使用启动命令直接把函数注入到配置。
