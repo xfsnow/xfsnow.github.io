@@ -2,10 +2,14 @@
 
 DeepSeek 是杭州深度求索人工智能基础技术研究有限公司发布的开源大模型，最近是持续火爆，使得官方服务经常不可用。网上各种本地部署和私有部署的文章已经很多，这里我们提供一个全部基于 Azure 的私有部署方案。
 
+
 ## 使用 Azure AI Foundry 部署 DeepSeek
-Azure AI Foundry 是微软推出的一个 AI 服务平台，提供了一站式的 AI 服务，包括模型训练、推理、部署等等。创建 Azure AI Foundry 请参考 [官方文档](https://learn.microsoft.com/azure/ai-studio/how-to/create-projects)  。
+Azure AI Foundry 是微软推出的一个 AI 服务平台，提供了一站式的 AI 服务，包括模型训练、推理、部署等等。创建 Azure AI Foundry 请参考 [官方文档](https://learn.microsoft.com/azure/ai-studio/how-to/create-projects) 。
+
+在 Azure AI Foundry 中，我们可以直接部署 DeepSeek 模型，无需自己搭建环境，非常方便。但是有个小问题，Azure AI Foundry 的部署生成不是标准的 DeepSeek API，也不兼容 Ollama，不能直接拿来连接到 Open WebUI，所以我提供了一个[转换的函数](#配置-open-webui-函数连接到-azure-ai-foundry-部署的-deepseek)，配置到 Open WebUI 中就可以了。
 
 我们可以使用 Azure AI Foundry 来部署 DeepSeek。
+
 1. 开始部署 DeepSeek 模型
 
 ![Deploy DeepSeek in Azure AI Foundry](img/ds_deploy.png)
@@ -70,7 +74,7 @@ Azure AI Foundry 是微软推出的一个 AI 服务平台，提供了一站式�
 停止再启动 App Service 后再访问 Open WebUI，发现已经更新到最新版本了。
 ![Open WebUI updated](img/ds_ow_updated.png)
 
-## 配置 Open WebUI 函数，以便连接到  Azure AI Foundry 部署的 DeepSeek
+## 配置 Open WebUI 函数连接到 Azure AI Foundry 部署的 DeepSeek
 
 首次打开 Open WebUI 会提示创建管理员账号，创建后即可登入。点击左下角用户名，弹出菜单中点击 “管理员面板”。
 
@@ -93,7 +97,6 @@ https://raw.githubusercontent.com/xfsnow/python/refs/heads/master/AzureAI/Open_W
 Azure Api Key 填 Key，Azure Model Name 填 Model Name。
 
 最后把函数最右侧圆点切换成启用。再占左上角“新对话”，模型选择菜单就会出现 DeepSeek 了。
-
 
 ![Open WebUI new dialog](img/ds_ow_dialog.png)
 
