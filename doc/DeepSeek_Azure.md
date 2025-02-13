@@ -100,6 +100,7 @@ Azure Api Key 填 Key，Azure Model Name 填 Model Name。
 
 ![Open WebUI new dialog](img/ds_ow_dialog.png)
 
+至此，我们已经成功部署了 DeepSeek 到 Azure 平台，并且配置到 Open WebUI 中，可以愉快的使用了。
 
 TODO
 - [ ] App Service 挂接 Storage，实现用户和配置信息等持久化，App 重新部署后信息不丢失。
