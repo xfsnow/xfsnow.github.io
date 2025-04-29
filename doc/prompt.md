@@ -61,3 +61,114 @@
 最终结果：
 第一个计算结果是：\(\frac{96}{505}\)
 第二个计算结果是：\(\frac{2}{21}\)
+
+## 一些几何题目
+使用 Vision for Copilot 解几何题目
+
+* 问题：求阴影面积。两个正方形如图放置，A是大正方形边上的中点，已知大正方形边长为8。
+
+
+<svg width="200" height="200" xmlns="http://www.w3.org/2000/svg">
+  <!-- 大正方形 -->
+  <rect x="50" y="50" width="100" height="100" fill="none" stroke="black" />
+  <!-- 小正方形 -->
+  <rect x="50" y="100" width="50" height="50" fill="none" stroke="black" />
+  <!-- 斜线 -->
+  <line x1="50" y1="50" x2="100" y2="100" stroke="black" />
+  <!-- 阴影部分 -->
+  <rect x="50" y="100" width="50" height="50" fill="grey" fill-opacity="0.5" />
+  <!-- 标注A -->
+  <text x="95" y="45" font-size="12" fill="black">A</text>
+  <!-- 标注8 -->
+  <text x="40" y="90" font-size="12" fill="black">8</text>
+</svg>
+
+
+* 正方形ABCD边长为8，E是AB中点，F是BC中点，G是CD中点，H是DA中点，P是EH上任意一点，连接点F，G，P得到一个三角形，求这个三角形的面积。
+<svg width="600" height="600" viewBox="-2 -2 82 82" xmlns="http://www.w3.org/2000/svg">
+  <!-- 正方形ABCD -->
+  <rect x="0" y="0" width="64" height="64" fill="none" stroke="black" stroke-width="1"/>
+
+  <!-- 顶点标注 -->
+  <text x="0" y="70">A(0,0)</text>
+  <text x="60" y="70">B(8,0)</text>
+  <text x="60" y="-5">C(8,8)</text>
+  <text x="-10" y="-5">D(0,8)</text>
+
+  <!-- 边中点E,F,G,H -->
+  <circle cx="32" cy="0" r="3" fill="red"/> <!-- E(4,0) -->
+  <circle cx="64" cy="32" r="3" fill="red"/> <!-- F(8,4) -->
+  <circle cx="32" cy="64" r="3" fill="red"/> <!-- G(4,8) -->
+  <circle cx="0" cy="32" r="3" fill="red"/> <!-- H(0,4) -->
+
+  <!-- 线段EH -->
+  <path d="M32,0 L0,32" stroke="blue" stroke-width="1"/>
+
+  <!-- 任意点P（示例中点） -->
+  <circle cx="16" cy="16" r="3" fill="green"/> <!-- P(2,2) -->
+
+  <!-- 三角形FGP -->
+  <path d="M64,32 L32,64 L16,16 Z" fill="none" stroke="purple" stroke-width="1"/>
+</svg>
+
+## k属派生点
+对于平面直角坐标系 \( xOy \) 中的点 \( P(a,b) \)，若点 \( P' \) 的坐标为 \(\left(a + \frac{b}{k},\; ka + b\right)\)，其中 \( k \) 为常数，且 \( k \ne 0 \)，则称点 \( P' \) 为点 \( P \) 的“\( k \)属派生点”。
+
+例如：点 \( P(1,4) \) 的“2属派生点”为\(\left(1 + \frac{4}{2},\; 2 \times 1 + 4\right) = (3,6)\)
+
+若点 \( P \) 的“\( k \)属派生点” \( P' \) 的坐标为 \( (3,3) \)，请写出一个符合条件的点 \( P \) 的坐标。
+
+根据题意，我们需要求解点 \( P(a, b) \) 的坐标，使其“k属派生点” \( P' \) 的坐标为 \( (3, 3) \)。由定义可知：
+
+\[
+P' = \left(a + \frac{b}{k}, ka + b\right)
+\]
+
+因此，可以得到以下方程组：
+\[
+\begin{cases}
+a + \frac{b}{k} = 3 \\
+ka + b = 3
+\end{cases}
+\]
+
+**步骤1：解第二个方程**
+
+从第二个方程出发：
+\[
+ka + b = 3 \quad \Rightarrow \quad b = 3 - ka
+\]
+
+**步骤2：代入第一个方程**
+
+将 \( b = 3 - ka \) 代入第一个方程：
+\[
+a + \frac{3 - ka}{k} = 3
+\]
+
+化简：
+\[
+a + \frac{3}{k} - a = 3 \quad \Rightarrow \quad \frac{3}{k} = 3 \quad \Rightarrow \quad k = 1
+\]
+
+**步骤3：求解 \( a \) 和 \( b \)**
+
+当 \( k = 1 \) 时，将其代入 \( b = 3 - ka \)：
+\[
+b = 3 - a
+\]
+
+由于 \( a + \frac{b}{k} = 3 \) 且 \( k = 1 \)，可得：
+\[
+a + b = 3
+\]
+
+将 \( b = 3 - a \) 代入上式：
+\[
+a + (3 - a) = 3 \quad \Rightarrow \quad 3 = 3
+\]
+
+这说明对于任意满足 \( a + b = 3 \) 的点 \( P(a, b) \)，其“1属派生点”均为 \( (3, 3) \)。
+
+**最终答案：**
+一个符合条件的点 \( P \) 的坐标为 \( (1, 2) \)，因为 \( 1 + 2/1 = 3 \) 且 \( 1 \times 1 + 2 = 3 \)。
