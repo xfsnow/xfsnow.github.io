@@ -186,3 +186,12 @@ sudo systemctl status easy-diffusion.service
 ```
 
 重启系统后，EasyDiffusion 以及反向代理的服务就能自动启动了。
+
+## 在 EasyDiffusion 中添加 ControlNet 模型
+EasyDiffusion 本身设计成触发式添加模型，在 Image Settings 里设置一个 Control 图片，把 Filter 设置为 Canny，controlnet model 也会自动设成 Canny。然后选择上传原图，写入提示词，点击 Generate 按钮，EasyDiffusion 就会自动下载 Canny 模型，生成图片。
+
+问题还是出在网络访问上，虚拟机位于国内网络，访问不了 huggingface.co，EasyDiffusion 不能自动下载 ControlNet 模型。解决办法是手动下载 ControlNet 模型，放在 EasyDiffusion 的 models/controlnet 目录下。
+
+先等 EasyDiffusion 报错，看到提示信息是 `Error: Could not find the desired model control_v11p_sd15_canny! Is it present in the /home/azureuser/easy-diffusion/models/controlnet folder?`
+
+我们自己去 https://huggingface.co/lllyasviel/control_v11p_sd15_canny 下载 control_v11p_sd15_canny.pth 这个文件，然后上传到虚拟机上，放在 EasyDiffusion 的 models/controlnet 目录下。最后重启 EasyDiffusion 的 Web 服务即可。

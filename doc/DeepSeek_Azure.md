@@ -36,7 +36,7 @@ Azure AI Foundry 是微软推出的一个 AI 服务平台，提供了一站式�
 
 ## 使用 Azure App Service 部署 Open WebUI
 
-[Open WebUI](https://www.openwebui.com/) 是一个可扩展、功能丰富且用户友好的自托管 AI 平台，设计为完全离线运行。它支持多种 LLM 运行器（如 Ollama 和与 OpenAI 兼容的 API），并内置用于 RAG 的推理引擎，是一个功能强大的 AI 部署解决方案。虽然它支持多种方式本地安装，但毕竟体积较大，部署起来还是有一定难度。使用 Azure App Service 一健部署到云端，无需本地下载安装包或 Docker 镜像，非常方便。
+[Open WebUI](https://www.openwebui.com/) 是一个可扩展、功能丰富且用户友好的自托管 AI 平台，设计为完全离线运行。它支持多种 LLM 运行器（如 Ollama 和与 OpenAI 兼容的 API），并内置用于 RAG 的推理引擎，是一个功能强大的 AI 部署解决方案。虽然它支持多种方式本地安装，但毕竟体积较大，部署起来还是有一定难度。使用 Azure App Service 一键部署到云端，无需本地下载安装包或 Docker 镜像，非常方便。
 
 ### 创建 App Service
 

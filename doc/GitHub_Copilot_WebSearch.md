@@ -48,7 +48,7 @@ GitHub Copilot 是一个由 GitHub 和 OpenAI 合作开发的人工智能代码�
 “The extension "Web Search for Copilot' wants to access the language models provided by GitHubCopilot chat.” 点击“Allow”按钮即可。
 ![websearch copilot allow](img/websearch_allow.png)
 
-再弹出提示，“TThe extension "Web Search for Copilot' wants to sign in using GitHub.” 点击“Allow”按钮，根据提示选择 GitHub 用户登录即可。
+再弹出提示，“The extension "Web Search for Copilot' wants to sign in using GitHub.” 点击“Allow”按钮，根据提示选择 GitHub 用户登录即可。
 ![websearch github login](img/websearch_login.png)
 
 到此所以配置都完成了，稍等 Copilot 就会把通过 Bing 搜索到的内容回答出来了。
