@@ -20,7 +20,7 @@
 
 <h1 id="图解-ai-核心技术">图解 AI 核心技术 </h1>
 <h2 id="transformer与混合专家moe">Transformer与混合专家（MoE） </h2>
-<p><img src="doc/img/01.jpg" alt="Transformer与MoE的对比"></p>
+<p><img src="img/ai_graph/01.jpg" alt="Transformer与MoE的对比"></p>
 <p>上述图示对比展示了Transformer和混合专家（MoE）在结构上的异同。Transformer通过多层解码器块、层归一化、掩码自注意力和前馈网络处理输入；而混合专家（MoE）在Transformer的基础上，将前馈网络替换为一个基于路由器和多个专家的系统，以动态选择最合适的专家进行计算，从而提高模型的效率和表现力。</p>
 <h3 id="详细解读">详细解读 </h3>
 <h4 id="左侧transformer架构">左侧：Transformer架构 </h4>
@@ -52,10 +52,10 @@
 <li><strong>解码器块重复（Decoder block * N）</strong>：与Transformer类似，MoE也采用多个解码器块堆叠的方式。</li>
 </ul>
 <h2 id="微调-llm-的5种技术">微调 LLM 的5种技术 </h2>
-<p><img src="doc/img/02.jpg" alt="微调 LLM 的5种技术"></p>
+<p><img src="img/ai_graph/02.jpg" alt="微调 LLM 的5种技术"></p>
 <p>微调大语言模型的五种技术，分别为LoRA、LoRA - FA、VeRA、Delta - LoRA和LoRA+。对比了它们的冻结权重和可训练权重的结构，以及各自的更新规则，帮助读者理解这些技术的原理和差异。</p>
 <h2 id="传统-rag-与代理-rag">传统 RAG 与代理 RAG </h2>
-<p><img src="doc/img/03.jpg" alt="传统 RAG 与代理 RAG"><br>
+<p><img src="img/ai_graph/03.jpg" alt="传统 RAG 与代理 RAG"><br>
 传统RAG（Retrieval-Augmented Generation）模型通过检索相关文档来增强生成过程，而代理RAG（Agentic RAG）则将文档嵌入与代理系统结合，提供更丰富的上下文信息。</p>
 <ol>
 <li>
@@ -90,7 +90,7 @@
 </li>
 </ol>
 <h2 id="5种最受欢迎的代理ai设计模式">5种最受欢迎的代理AI设计模式 </h2>
-<p><img src="doc/img/04.jpg" alt="5种最受欢迎的代理AI设计模式"></p>
+<p><img src="img/ai_graph/04.jpg" alt="5种最受欢迎的代理AI设计模式"></p>
 <p>最受欢迎的代理AI设计模式包括：</p>
 <ol>
 <li><strong>Reflection Pattern（反思模式）</strong>：用户提出查询，LLM生成初始输出，然后进行反思和迭代，最终得到经过反思的输出。</li>
@@ -100,7 +100,7 @@
 <li><strong>Multi-agent Pattern（多智能体模式）</strong>：用户发出请求，不同的智能体之间进行任务委派和协作，最终由某个智能体生成响应返回给用户。</li>
 </ol>
 <h2 id="rag-的-5-种分块策略">RAG 的 5 种分块策略 </h2>
-<p><img src="doc/img/05.jpg" alt="RAG 的 5 种分块策略"></p>
+<p><img src="img/ai_graph/05.jpg" alt="RAG 的 5 种分块策略"></p>
 <p>RAG（Retrieval-Augmented Generation）是一种结合了检索和生成的模型架构。其分块策略主要包括以下五种：</p>
 <ol>
 <li><strong>固定尺寸分块</strong>：将文本按照固定的尺寸进行分块。</li>
@@ -110,7 +110,7 @@
 <li><strong>基于LLM分块</strong>：使用大语言模型（LLM）生成文本块。</li>
 </ol>
 <h2 id="代理ai系统的5个级别">代理AI系统的5个级别 </h2>
-<p><img src="doc/img/06.jpg" alt="代理AI系统的5个级别"></p>
+<p><img src="img/ai_graph/06.jpg" alt="代理AI系统的5个级别"></p>
 <p>代理AI ( Agentic AI) 系统从简单到复杂的五个级别分别为：</p>
 <ol>
 <li><strong>基本响应者</strong></li>
@@ -120,7 +120,7 @@
 <li><strong>自主模式</strong></li>
 </ol>
 <h2 id="传统-rag-vs-hyde">传统 RAG vs. HyDe </h2>
-<p><img src="doc/img/07.jpg" alt="传统 RAG vs. HyDe"></p>
+<p><img src="img/ai_graph/07.jpg" alt="传统 RAG vs. HyDe"></p>
 <p>传统的RAG（Retrieval-Augmented Generation）模型通过检索相关文档来增强生成过程，而HyDe（Hybrid Document Embedding）则将文档嵌入与检索相结合，提供更丰富的上下文信息。</p>
 <ol>
 <li>
@@ -151,7 +151,7 @@
 </li>
 </ol>
 <h2 id="传统rag与图rag">传统RAG与图RAG </h2>
-<p><img src="doc/img/08.jpg" alt="传统RAG与图RAG"></p>
+<p><img src="img/ai_graph/08.jpg" alt="传统RAG与图RAG"></p>
 <p>传统RAG（Retrieval-Augmented Generation）模型通过检索相关文档来增强生成过程，而图RAG（Graph Retrieval-Augmented Generation）则将文档嵌入与图结构结合，提供更丰富的上下文信息。</p>
 <ol>
 <li>
@@ -180,7 +180,7 @@
 </li>
 </ol>
 <h2 id="llm中的kv缓存">LLM中的KV缓存 </h2>
-<p><img src="doc/img/09.jpg" alt="LLM中的KV缓存"><br>
+<p><img src="img/ai_graph/09.jpg" alt="LLM中的KV缓存"><br>
 LLM（Large Language Model）中的KV缓存（Key-Value Cache）用于存储中间计算结果，以提高模型的推理速度和效率。</p>
 
       </div>
