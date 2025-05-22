@@ -1,5 +1,17 @@
 # 图解 AI 核心技术
 
+AI 技术纷繁复杂，本文档通过图解的方式，帮助读者更好地理解 AI 核心技术的原理和应用。以下是一些重要的图示和它们的详细解读。
+## 目录
+1. [Transformer与混合专家（MoE）](#transformer与混合专家moe)
+2. [微调 LLM 的5种技术](#微调-llm-的5种技术)
+3. [传统 RAG 与代理 RAG](#传统-rag-与代理-rag)
+4. [5种最受欢迎的代理AI设计模式](#5种最受欢迎的代理ai设计模式)
+5. [RAG 的 5 种分块策略](#rag-的-5-种分块策略)
+6. [代理AI系统的5个级别](#代理ai系统的5个级别)
+7. [传统 RAG vs. HyDe](#传统-rag-vs-hyde)
+8. [传统RAG与图RAG](#传统rag与图rag)
+9. [LLM中的KV缓存](#llm中的kv缓存)
+
 ## Transformer与混合专家（MoE）
 ![Transformer与MoE的对比](img/ai_graph/01.jpg)
 

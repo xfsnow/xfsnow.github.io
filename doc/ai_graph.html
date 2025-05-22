@@ -19,6 +19,19 @@
       <div class="crossnote markdown-preview  ">
 
 <h1 id="图解-ai-核心技术">图解 AI 核心技术 </h1>
+<p>AI 技术纷繁复杂，本文档通过图解的方式，帮助读者更好地理解 AI 核心技术的原理和应用。以下是一些重要的图示和它们的详细解读。</p>
+<h2 id="目录">目录 </h2>
+<ol>
+<li><a href="#transformer%E4%B8%8E%E6%B7%B7%E5%90%88%E4%B8%93%E5%AE%B6moe">Transformer与混合专家（MoE）</a></li>
+<li><a href="#%E5%BE%AE%E8%B0%83-llm-%E7%9A%845%E7%A7%8D%E6%8A%80%E6%9C%AF">微调 LLM 的5种技术</a></li>
+<li><a href="#%E4%BC%A0%E7%BB%9F-rag-%E4%B8%8E%E4%BB%A3%E7%90%86-rag">传统 RAG 与代理 RAG</a></li>
+<li><a href="#5%E7%A7%8D%E6%9C%80%E5%8F%97%E6%AC%A2%E8%BF%8E%E7%9A%84%E4%BB%A3%E7%90%86ai%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F">5种最受欢迎的代理AI设计模式</a></li>
+<li><a href="#rag-%E7%9A%84-5-%E7%A7%8D%E5%88%86%E5%9D%97%E7%AD%96%E7%95%A5">RAG 的 5 种分块策略</a></li>
+<li><a href="#%E4%BB%A3%E7%90%86ai%E7%B3%BB%E7%BB%9F%E7%9A%845%E4%B8%AA%E7%BA%A7%E5%88%AB">代理AI系统的5个级别</a></li>
+<li><a href="#%E4%BC%A0%E7%BB%9F-rag-vs-hyde">传统 RAG vs. HyDe</a></li>
+<li><a href="#%E4%BC%A0%E7%BB%9Frag%E4%B8%8E%E5%9B%BErag">传统RAG与图RAG</a></li>
+<li><a href="#llm%E4%B8%AD%E7%9A%84kv%E7%BC%93%E5%AD%98">LLM中的KV缓存</a></li>
+</ol>
 <h2 id="transformer与混合专家moe">Transformer与混合专家（MoE） </h2>
 <p><img src="img/ai_graph/01.jpg" alt="Transformer与MoE的对比"></p>
 <p>上述图示对比展示了Transformer和混合专家（MoE）在结构上的异同。Transformer通过多层解码器块、层归一化、掩码自注意力和前馈网络处理输入；而混合专家（MoE）在Transformer的基础上，将前馈网络替换为一个基于路由器和多个专家的系统，以动态选择最合适的专家进行计算，从而提高模型的效率和表现力。</p>
@@ -184,4 +197,13 @@
 LLM（Large Language Model）中的KV缓存（Key-Value Cache）用于存储中间计算结果，以提高模型的推理速度和效率。</p>
 
       </div>
+
+
+
+
+
+
+
+
+
     </body></html>
