@@ -1,0 +1,187 @@
+<!DOCTYPE html><html><head>
+      <title>ai_graph</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+      <style>
+      code[class*=language-],pre[class*=language-]{color:#333;background:0 0;font-family:Consolas,"Liberation Mono",Menlo,Courier,monospace;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;word-wrap:normal;line-height:1.4;-moz-tab-size:8;-o-tab-size:8;tab-size:8;-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none}pre[class*=language-]{padding:.8em;overflow:auto;border-radius:3px;background:#f5f5f5}:not(pre)>code[class*=language-]{padding:.1em;border-radius:.3em;white-space:normal;background:#f5f5f5}.token.blockquote,.token.comment{color:#969896}.token.cdata{color:#183691}.token.doctype,.token.macro.property,.token.punctuation,.token.variable{color:#333}.token.builtin,.token.important,.token.keyword,.token.operator,.token.rule{color:#a71d5d}.token.attr-value,.token.regex,.token.string,.token.url{color:#183691}.token.atrule,.token.boolean,.token.code,.token.command,.token.constant,.token.entity,.token.number,.token.property,.token.symbol{color:#0086b3}.token.prolog,.token.selector,.token.tag{color:#63a35c}.token.attr-name,.token.class,.token.class-name,.token.function,.token.id,.token.namespace,.token.pseudo-class,.token.pseudo-element,.token.url-reference .token.variable{color:#795da3}.token.entity{cursor:help}.token.title,.token.title .token.punctuation{font-weight:700;color:#1d3e81}.token.list{color:#ed6a43}.token.inserted{background-color:#eaffea;color:#55a532}.token.deleted{background-color:#ffecec;color:#bd2c00}.token.bold{font-weight:700}.token.italic{font-style:italic}.language-json .token.property{color:#183691}.language-markup .token.tag .token.punctuation{color:#333}.language-css .token.function,code.language-css{color:#0086b3}.language-yaml .token.atrule{color:#63a35c}code.language-yaml{color:#183691}.language-ruby .token.function{color:#333}.language-markdown .token.url{color:#795da3}.language-makefile .token.symbol{color:#795da3}.language-makefile .token.variable{color:#183691}.language-makefile .token.builtin{color:#0086b3}.language-bash .token.keyword{color:#0086b3}pre[data-line]{position:relative;padding:1em 0 1em 3em}pre[data-line] .line-highlight-wrapper{position:absolute;top:0;left:0;background-color:transparent;display:block;width:100%}pre[data-line] .line-highlight{position:absolute;left:0;right:0;padding:inherit 0;margin-top:1em;background:hsla(24,20%,50%,.08);background:linear-gradient(to right,hsla(24,20%,50%,.1) 70%,hsla(24,20%,50%,0));pointer-events:none;line-height:inherit;white-space:pre}pre[data-line] .line-highlight:before,pre[data-line] .line-highlight[data-end]:after{content:attr(data-start);position:absolute;top:.4em;left:.6em;min-width:1em;padding:0 .5em;background-color:hsla(24,20%,50%,.4);color:#f4f1ef;font:bold 65%/1.5 sans-serif;text-align:center;vertical-align:.3em;border-radius:999px;text-shadow:none;box-shadow:0 1px #fff}pre[data-line] .line-highlight[data-end]:after{content:attr(data-end);top:auto;bottom:.4em}html body{font-family:'Helvetica Neue',Helvetica,'Segoe UI',Arial,freesans,sans-serif;font-size:16px;line-height:1.6;color:#333;background-color:#fff;overflow:initial;box-sizing:border-box;word-wrap:break-word}html body>:first-child{margin-top:0}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{line-height:1.2;margin-top:1em;margin-bottom:16px;color:#000}html body h1{font-size:2.25em;font-weight:300;padding-bottom:.3em}html body h2{font-size:1.75em;font-weight:400;padding-bottom:.3em}html body h3{font-size:1.5em;font-weight:500}html body h4{font-size:1.25em;font-weight:600}html body h5{font-size:1.1em;font-weight:600}html body h6{font-size:1em;font-weight:600}html body h1,html body h2,html body h3,html body h4,html body h5{font-weight:600}html body h5{font-size:1em}html body h6{color:#5c5c5c}html body strong{color:#000}html body del{color:#5c5c5c}html body a:not([href]){color:inherit;text-decoration:none}html body a{color:#08c;text-decoration:none}html body a:hover{color:#00a3f5;text-decoration:none}html body img{max-width:100%}html body>p{margin-top:0;margin-bottom:16px;word-wrap:break-word}html body>ol,html body>ul{margin-bottom:16px}html body ol,html body ul{padding-left:2em}html body ol.no-list,html body ul.no-list{padding:0;list-style-type:none}html body ol ol,html body ol ul,html body ul ol,html body ul ul{margin-top:0;margin-bottom:0}html body li{margin-bottom:0}html body li.task-list-item{list-style:none}html body li>p{margin-top:0;margin-bottom:0}html body .task-list-item-checkbox{margin:0 .2em .25em -1.8em;vertical-align:middle}html body .task-list-item-checkbox:hover{cursor:pointer}html body blockquote{margin:16px 0;font-size:inherit;padding:0 15px;color:#5c5c5c;background-color:#f0f0f0;border-left:4px solid #d6d6d6}html body blockquote>:first-child{margin-top:0}html body blockquote>:last-child{margin-bottom:0}html body hr{height:4px;margin:32px 0;background-color:#d6d6d6;border:0 none}html body table{margin:10px 0 15px 0;border-collapse:collapse;border-spacing:0;display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}html body table th{font-weight:700;color:#000}html body table td,html body table th{border:1px solid #d6d6d6;padding:6px 13px}html body dl{padding:0}html body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:700}html body dl dd{padding:0 16px;margin-bottom:16px}html body code{font-family:Menlo,Monaco,Consolas,'Courier New',monospace;font-size:.85em;color:#000;background-color:#f0f0f0;border-radius:3px;padding:.2em 0}html body code::after,html body code::before{letter-spacing:-.2em;content:'\00a0'}html body pre>code{padding:0;margin:0;word-break:normal;white-space:pre;background:0 0;border:0}html body .highlight{margin-bottom:16px}html body .highlight pre,html body pre{padding:1em;overflow:auto;line-height:1.45;border:#d6d6d6;border-radius:3px}html body .highlight pre{margin-bottom:0;word-break:normal}html body pre code,html body pre tt{display:inline;max-width:initial;padding:0;margin:0;overflow:initial;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}html body pre code:after,html body pre code:before,html body pre tt:after,html body pre tt:before{content:normal}html body blockquote,html body dl,html body ol,html body p,html body pre,html body ul{margin-top:0;margin-bottom:16px}html body kbd{color:#000;border:1px solid #d6d6d6;border-bottom:2px solid #c7c7c7;padding:2px 4px;background-color:#f0f0f0;border-radius:3px}@media print{html body{background-color:#fff}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{color:#000;page-break-after:avoid}html body blockquote{color:#5c5c5c}html body pre{page-break-inside:avoid}html body table{display:table}html body img{display:block;max-width:100%;max-height:100%}html body code,html body pre{word-wrap:break-word;white-space:pre}}.markdown-preview{width:100%;height:100%;box-sizing:border-box}.markdown-preview ul{list-style:disc}.markdown-preview ul ul{list-style:circle}.markdown-preview ul ul ul{list-style:square}.markdown-preview ol{list-style:decimal}.markdown-preview ol ol,.markdown-preview ul ol{list-style-type:lower-roman}.markdown-preview ol ol ol,.markdown-preview ol ul ol,.markdown-preview ul ol ol,.markdown-preview ul ul ol{list-style-type:lower-alpha}.markdown-preview .newpage,.markdown-preview .pagebreak{page-break-before:always}.markdown-preview pre.line-numbers{position:relative;padding-left:3.8em;counter-reset:linenumber}.markdown-preview pre.line-numbers>code{position:relative}.markdown-preview pre.line-numbers .line-numbers-rows{position:absolute;pointer-events:none;top:1em;font-size:100%;left:0;width:3em;letter-spacing:-1px;border-right:1px solid #999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.markdown-preview pre.line-numbers .line-numbers-rows>span{pointer-events:none;display:block;counter-increment:linenumber}.markdown-preview pre.line-numbers .line-numbers-rows>span:before{content:counter(linenumber);color:#999;display:block;padding-right:.8em;text-align:right}.markdown-preview .mathjax-exps .MathJax_Display{text-align:center!important}.markdown-preview:not([data-for=preview]) .code-chunk .code-chunk-btn-group{display:none}.markdown-preview:not([data-for=preview]) .code-chunk .status{display:none}.markdown-preview:not([data-for=preview]) .code-chunk .output-div{margin-bottom:16px}.markdown-preview .md-toc{padding:0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link div,.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link p{display:inline}.markdown-preview .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}.scrollbar-style::-webkit-scrollbar{width:8px}.scrollbar-style::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}.scrollbar-style::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,.66);border:4px solid rgba(150,150,150,.66);background-clip:content-box}html body[for=html-export]:not([data-presentation-mode]){position:relative;width:100%;height:100%;top:0;left:0;margin:0;padding:0;overflow:auto}html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{position:relative;top:0;min-height:100vh}@media screen and (min-width:914px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{padding:2em calc(50% - 457px + 2em)}}@media screen and (max-width:914px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{font-size:14px!important;padding:1em}}@media print{html body[for=html-export]:not([data-presentation-mode]) #sidebar-toc-btn{display:none}}html body[for=html-export]:not([data-presentation-mode]) #sidebar-toc-btn{position:fixed;bottom:8px;left:8px;font-size:28px;cursor:pointer;color:inherit;z-index:99;width:32px;text-align:center;opacity:.4}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] #sidebar-toc-btn{opacity:1}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc{position:fixed;top:0;left:0;width:300px;height:100%;padding:32px 0 48px 0;font-size:14px;box-shadow:0 0 4px rgba(150,150,150,.33);box-sizing:border-box;overflow:auto;background-color:inherit}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar{width:8px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,.66);border:4px solid rgba(150,150,150,.66);background-clip:content-box}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc a{text-decoration:none}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc{padding:0 16px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link div,html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link p{display:inline}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{left:300px;width:calc(100% - 300px);padding:2em calc(50% - 457px - 300px / 2);margin:0;box-sizing:border-box}@media screen and (max-width:1274px){html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{width:100%}}html body[for=html-export]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview{left:50%;transform:translateX(-50%)}html body[for=html-export]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .md-sidebar-toc{display:none}
+/* Please visit the URL below for more information: */
+/*   https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */
+
+      </style>
+      <!-- The content below will be included at the end of the <head> element. --><script type="text/javascript">
+  document.addEventListener("DOMContentLoaded", function () {
+    // your code here
+  });
+</script></head><body for="html-export">
+
+
+      <div class="crossnote markdown-preview  ">
+
+<h1 id="图解-ai-核心技术">图解 AI 核心技术 </h1>
+<h2 id="transformer与混合专家moe">Transformer与混合专家（MoE） </h2>
+<p><img src="doc/img/01.jpg" alt="Transformer与MoE的对比"></p>
+<p>上述图示对比展示了Transformer和混合专家（MoE）在结构上的异同。Transformer通过多层解码器块、层归一化、掩码自注意力和前馈网络处理输入；而混合专家（MoE）在Transformer的基础上，将前馈网络替换为一个基于路由器和多个专家的系统，以动态选择最合适的专家进行计算，从而提高模型的效率和表现力。</p>
+<h3 id="详细解读">详细解读 </h3>
+<h4 id="左侧transformer架构">左侧：Transformer架构 </h4>
+<ul>
+<li><strong>输入（Inputs）</strong>：图片上方展示了Transformer的输入，由一系列彩色方块组成，每个方块代表一个输入元素。</li>
+<li><strong>位置编码（Positional embedding）</strong>：在输入层之后，通过位置编码给每个输入元素添加位置信息。</li>
+<li><strong>解码器块（Decoder block）</strong>：解码器块内包含以下组件：
+<ul>
+<li><strong>层归一化（Layer norm）</strong>：对输入进行归一化处理。</li>
+<li><strong>掩码自注意力（Masked self-attention）</strong>：对输入进行自注意力计算，掩码操作防止模型在训练时“偷看”未来的信息。</li>
+<li><strong>前馈网络（Feed forward network）</strong>：由一系列神经元组成的全连接网络，进一步处理掩码自注意力的输出。</li>
+</ul>
+</li>
+<li>每个组件之间用加法和层归一化连接，形成残差连接结构。</li>
+<li><strong>解码器块重复（Decoder block * N）</strong>：多个解码器块堆叠使用，以提高模型的表达能力。</li>
+</ul>
+<h4 id="右侧混合专家moe架构">右侧：混合专家（MoE）架构 </h4>
+<ul>
+<li><strong>输入（Inputs）</strong>：与Transformer相同，MoE的输入也由一系列彩色方块组成，每个方块代表一个输入元素。</li>
+<li><strong>位置编码（Positional embedding）</strong>：同样在输入层之后添加位置编码。</li>
+<li><strong>解码器块（Decoder block）</strong>：解码器块内包含以下组件：
+<ul>
+<li><strong>层归一化（Layer norm）</strong>：与Transformer中的层归一化功能相同。</li>
+<li><strong>掩码自注意力（Masked self-attention）</strong>：执行与Transformer相同的掩码自注意力操作。</li>
+<li><strong>路由器（Router）</strong>：MoE的核心组件，负责根据输入数据选择不同的专家（Expert）进行处理。被选中的专家用彩色方块表示。</li>
+<li>每个组件之间也用加法和层归一化连接，形成残差连接结构。</li>
+</ul>
+</li>
+<li><strong>解码器块重复（Decoder block * N）</strong>：与Transformer类似，MoE也采用多个解码器块堆叠的方式。</li>
+</ul>
+<h2 id="微调-llm-的5种技术">微调 LLM 的5种技术 </h2>
+<p><img src="doc/img/02.jpg" alt="微调 LLM 的5种技术"></p>
+<p>微调大语言模型的五种技术，分别为LoRA、LoRA - FA、VeRA、Delta - LoRA和LoRA+。对比了它们的冻结权重和可训练权重的结构，以及各自的更新规则，帮助读者理解这些技术的原理和差异。</p>
+<h2 id="传统-rag-与代理-rag">传统 RAG 与代理 RAG </h2>
+<p><img src="doc/img/03.jpg" alt="传统 RAG 与代理 RAG"><br>
+传统RAG（Retrieval-Augmented Generation）模型通过检索相关文档来增强生成过程，而代理RAG（Agentic RAG）则将文档嵌入与代理系统结合，提供更丰富的上下文信息。</p>
+<ol>
+<li>
+<p><strong>传统RAG</strong> 的工作流程如下：</p>
+<ol>
+<li><strong>附加文件</strong>：用户添加文件。这些文件会被编码。</li>
+<li><strong>编码</strong>：文件被编码后，进入嵌入模型。</li>
+<li><strong>嵌入模型</strong>：将文件转换为向量形式，存储在向量数据库中。</li>
+<li><strong>向量数据库</strong>：存储向量表示的文件，用于相似性搜索。</li>
+<li><strong>查询</strong>：用户输入查询，同样被编码后进入嵌入模型。</li>
+<li><strong>相似性搜索</strong>：在向量数据库中搜索与查询相似的文件。</li>
+<li><strong>提示</strong>：将相似文件和查询一起作为提示输入到大语言模型（LLM）。</li>
+<li><strong>最终响应</strong>：LLM生成最终响应返回给用户。</li>
+</ol>
+</li>
+<li>
+<p><strong>代理RAG</strong> 的工作流程如下：</p>
+<ol>
+<li><strong>开始</strong>：用户开始查询。</li>
+<li><strong>LLM代理</strong>：查询首先由LLM代理处理，重新制定初始查询。</li>
+<li><strong>更新查询</strong>：LLM代理更新查询，然后进行更多查询。</li>
+<li><strong>搜索更多查询</strong>：LLM代理继续搜索更多相关信息。</li>
+<li><strong>提示</strong>：将更新后的查询和相关信息作为提示输入到LLM。</li>
+<li><strong>LLM</strong>：LLM生成响应。</li>
+<li><strong>工具与API</strong>：LLM可以使用工具和API获取更多信息。</li>
+<li><strong>上下文更新</strong>：根据工具和API获取的信息更新上下文。</li>
+<li><strong>响应</strong>：LLM生成响应，由LLM代理检查。</li>
+<li><strong>是否相关</strong>：LLM代理检查响应是否相关。</li>
+<li><strong>最终响应</strong>：如果相关，将响应返回给用户；否则，继续搜索和处理。</li>
+<li><strong>否</strong>：如果响应不相关，LLM代理继续搜索和更新查询，直到找到相关信息。</li>
+</ol>
+</li>
+</ol>
+<h2 id="5种最受欢迎的代理ai设计模式">5种最受欢迎的代理AI设计模式 </h2>
+<p><img src="doc/img/04.jpg" alt="5种最受欢迎的代理AI设计模式"></p>
+<p>最受欢迎的代理AI设计模式包括：</p>
+<ol>
+<li><strong>Reflection Pattern（反思模式）</strong>：用户提出查询，LLM生成初始输出，然后进行反思和迭代，最终得到经过反思的输出。</li>
+<li><strong>Tool Use Pattern（工具使用模式）</strong>：用户发送查询，LLM通过调用工具和向量数据库中的工具及API来获取信息，然后生成回复返回给用户。</li>
+<li><strong>ReAct Pattern（反应模式）</strong>：用户输入查询，LLM进行推理，然后根据推理结果采取行动，与环境交互获取结果，最后生成响应返回给用户。</li>
+<li><strong>Planning Pattern（规划模式）</strong>：用户提出查询，规划器生成任务，执行器执行任务，判断任务是否完成。如果完成，则返回结果；如果未完成，则重新规划。</li>
+<li><strong>Multi-agent Pattern（多智能体模式）</strong>：用户发出请求，不同的智能体之间进行任务委派和协作，最终由某个智能体生成响应返回给用户。</li>
+</ol>
+<h2 id="rag-的-5-种分块策略">RAG 的 5 种分块策略 </h2>
+<p><img src="doc/img/05.jpg" alt="RAG 的 5 种分块策略"></p>
+<p>RAG（Retrieval-Augmented Generation）是一种结合了检索和生成的模型架构。其分块策略主要包括以下五种：</p>
+<ol>
+<li><strong>固定尺寸分块</strong>：将文本按照固定的尺寸进行分块。</li>
+<li><strong>语义分块</strong>：根据语义相关性将文本分成不同的块。</li>
+<li><strong>递归分块</strong>：将文本递归地分成更小的块，直到达到指定的大小限制。</li>
+<li><strong>基于文件结构分块</strong>：根据文件的结构（如标题、介绍、部分、结论等）进行分块。</li>
+<li><strong>基于LLM分块</strong>：使用大语言模型（LLM）生成文本块。</li>
+</ol>
+<h2 id="代理ai系统的5个级别">代理AI系统的5个级别 </h2>
+<p><img src="doc/img/06.jpg" alt="代理AI系统的5个级别"></p>
+<p>代理AI ( Agentic AI) 系统从简单到复杂的五个级别分别为：</p>
+<ol>
+<li><strong>基本响应者</strong></li>
+<li><strong>路由器模式</strong></li>
+<li><strong>工具调用</strong></li>
+<li><strong>多代理模式</strong></li>
+<li><strong>自主模式</strong></li>
+</ol>
+<h2 id="传统-rag-vs-hyde">传统 RAG vs. HyDe </h2>
+<p><img src="doc/img/07.jpg" alt="传统 RAG vs. HyDe"></p>
+<p>传统的RAG（Retrieval-Augmented Generation）模型通过检索相关文档来增强生成过程，而HyDe（Hybrid Document Embedding）则将文档嵌入与检索相结合，提供更丰富的上下文信息。</p>
+<ol>
+<li>
+<p><strong>传统RAG</strong> 的工作流程如下：</p>
+<ol>
+<li><strong>附加文件</strong>：将文档进行编码。</li>
+<li><strong>嵌入模型</strong>：将编码后的文档嵌入到向量空间中，并存储在向量数据库中。</li>
+<li><strong>查询</strong>：用户提出查询，查询也被编码。</li>
+<li><strong>相似搜索</strong>：在向量数据库中搜索与查询最相似的文档。</li>
+<li><strong>类似文件</strong>：检索到的相似文档与原始查询一起作为提示。</li>
+<li><strong>提示</strong>：提示被输入到大型语言模型（LLM）中。</li>
+<li><strong>响应</strong>：LLM生成响应并返回给用户。</li>
+</ol>
+</li>
+<li>
+<p><strong>HyDE</strong> 的工作流程如下：</p>
+<ol>
+<li><strong>附加文件</strong>：将文档进行编码。</li>
+<li><strong>嵌入模型（检索者）</strong>：将编码后的文档嵌入到向量空间中，并存储在向量数据库中。</li>
+<li><strong>查询</strong>：用户提出查询。</li>
+<li><strong>LLM</strong>：查询被输入到LLM中，生成一个假设文本。</li>
+<li><strong>编码</strong>：假设文本被编码。</li>
+<li><strong>相似搜索</strong>：在向量数据库中搜索与假设文本最相似的文档。</li>
+<li><strong>类似文件</strong>：检索到的相似文档与原始查询和假设文本一起作为提示。</li>
+<li><strong>提示</strong>：提示被输入到LLM中。</li>
+<li><strong>响应</strong>：LLM生成响应并返回给用户。</li>
+</ol>
+</li>
+</ol>
+<h2 id="传统rag与图rag">传统RAG与图RAG </h2>
+<p><img src="doc/img/08.jpg" alt="传统RAG与图RAG"></p>
+<p>传统RAG（Retrieval-Augmented Generation）模型通过检索相关文档来增强生成过程，而图RAG（Graph Retrieval-Augmented Generation）则将文档嵌入与图结构结合，提供更丰富的上下文信息。</p>
+<ol>
+<li>
+<p><strong>传统RAG</strong> 的工作流程如下：</p>
+<ol>
+<li><strong>附加文件</strong>：将文件输入系统。</li>
+<li><strong>编码</strong>：文件通过嵌入模型进行编码，转化为向量表示。</li>
+<li><strong>嵌入模型</strong>：生成文件的向量表示。</li>
+<li><strong>索引</strong>：向量被存储到向量数据库中，并建立索引。</li>
+<li><strong>相似性搜索</strong>：查询通过嵌入模型编码后，在向量数据库中进行相似性搜索，找到最相关的文档。</li>
+<li><strong>提示</strong>：检索到的相关文档与查询结合，形成提示，输入到大语言模型（LLM）。</li>
+<li><strong>最终响应</strong>：LLM根据提示生成最终的响应。</li>
+</ol>
+</li>
+<li>
+<p><strong>图RAG</strong> 的工作流程如下：</p>
+<ol>
+<li><strong>附加文件</strong>：将文件输入系统。</li>
+<li><strong>编码</strong>：文件通过嵌入模型进行编码，转化为向量表示。</li>
+<li><strong>嵌入模型</strong>：生成文件的向量表示。</li>
+<li><strong>索引</strong>：向量被存储到向量数据库中，并建立索引。</li>
+<li><strong>相似性搜索</strong>：查询通过嵌入模型编码后，在向量数据库中进行相似性搜索，找到最相关的文档。</li>
+<li><strong>提示</strong>：检索到的相关文档与查询结合，形成提示，输入到大语言模型（LLM）。</li>
+<li><strong>最终响应</strong>：LLM根据提示生成最终的响应。</li>
+</ol>
+</li>
+</ol>
+<h2 id="llm中的kv缓存">LLM中的KV缓存 </h2>
+<p><img src="doc/img/09.jpg" alt="LLM中的KV缓存"><br>
+LLM（Large Language Model）中的KV缓存（Key-Value Cache）用于存储中间计算结果，以提高模型的推理速度和效率。</p>
+
+      </div>
+    </body></html>
