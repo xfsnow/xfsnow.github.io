@@ -19,17 +19,19 @@
   Now GitHub supports <a href="https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site" target="_blank">customized domain name for hosted websites</a>.
   This website is issued a SSL certificate by GitHub as well.</p>
 <ul>
+  <li><a href="doc/GitHub_Copilot_MCP.html">在 GitHub Copilot 中使用 MCP</a></li>
+  <li><a href="doc/DeepSeek_Prompts.html">DeepSeek 50个常用指令</a></li>
+  <li><a href="doc/ai_graph.html">图解 AI 核心技术</a></li>
+  <li><a href="doc/NanoAI_watermark.html">纳米AI去水印</a></li>
+  <li><a href="doc/GPT_in_Azure_AI.html">Azure AI Foundry中GPT模型的选择</a></li>
   <li><a href="doc/DeepSeek_Azure.html">全 Azure 部署 DeepSeek</a></li>
+  <li><a href="doc/EasyDiffusion_Azure_NC4as.html">在 Azure 虚拟机上安装 EasyDiffusion</a></li>
+  <li><a href="doc/GitHub_Copilot_Vision.html">使用 Vision 插件扩展 GitHub Copilot 识图问答</a></li>
+  <li><a href="doc/GitHub_Copilot_WebSearch.html">使用 Web Search 插件扩展 GitHub Copilot 问答</a></li>
   <li><a href="imageprocess/">响应式图片处理</a>  </li>
   <li><a href="va/">AI 虚拟助手</a>  </li>
   <li><a href="AzureIcon/">Azure图标汇总</a></li>
-  <li><a href="doc/GitHub_Copilot_WebSearch.html">使用 Web Search 插件扩展 GitHub Copilot 问答</a></li>
-  <li><a href="doc/GitHub_Copilot_Vision.html">使用 Vision 插件扩展 GitHub Copilot 识图问答</a></li>
-  <li><a href="doc/EasyDiffusion_Azure_NC4as.html">在 Azure 虚拟机上安装 EasyDiffusion</a></li>
-  <li><a href="doc/GPT_in_Azure_AI.html">Azure AI Foundry中GPT模型的选择</a></li>
-  <li><a href="doc/NanoAI_watermark.html">纳米AI去水印</a></li>
-  <li><a href="doc/ai_graph.html">图解 AI 核心技术</a></li>
-  <li><a href="doc/DeepSeek_Prompts.html">DeepSeek 50个常用指令</a></li>
+
 </ul>
 
 <script lang="javascript">
@@ -107,6 +109,22 @@
 
 // console.log(mean(2000));
 // document.write(numToChinese(678941))
+var maxPrimeNumber = function(n) {
+  if (n < 2) return 0;
+  var isPrime = new Array(n + 1).fill(true);
+  isPrime[0] = isPrime[1] = false; // 0和1不是质数
+  for (var i = 2; i * i <= n; i++) {
+    if (isPrime[i]) {
+      for (var j = i * i; j <= n; j += i) {
+        isPrime[j] = false; // 标记所有i的倍数为非质数
+      }
+    }
+  }
+  for (var k = n; k >= 2; k--) {
+    if (isPrime[k]) return k; // 返回最大的质数
+  }
+  return -1; // 如果没有找到质数，返回-1
+};
 var n = 100000;
 document.write(n+'以内最大质数是'+maxPrimeNumber(n));
 </script>
