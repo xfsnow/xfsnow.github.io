@@ -65,5 +65,5 @@ Azure MCP 服务器能够无缝集成你的主机操作系统的认证机制，�
 ## 总结
 MCP 服务器为 GitHub Copilot 提供了强大的上下文共享能力，使得不同的 AI 模型可以更好地协作。通过简单的配置，开发者可以轻松地使用 MCP 服务器来实现更复杂的任务。
 ## 相关链接
-- [GitHub Copilot MCP Server](https://github.com/github/gh-copilot-mcp)
+- [GitHub Copilot MCP Server](https://github.com/github/github-mcp-server)
 - [Azure MCP](https://github.com/Azure/azure-mcp)
