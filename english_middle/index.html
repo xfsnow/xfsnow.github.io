@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>初中英语测试</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>初中英语能力测试</h1>
+            <div class="progress-container">
+                <div class="progress-bar" id="progressBar"></div>
+            </div>
+            <div class="timer" id="timer">时间: 30:00</div>
+        </header>
+
+        <main id="testContainer">
+            <!-- 题目将通过JavaScript动态生成 -->
+            <div class="start-screen" id="startScreen">
+                <h2>英语能力测试</h2>
+                <p>本测试共28题，包含词汇、语法、阅读理解和听力题型，测试时间为30分钟。</p>
+                <p>请点击"开始测试"按钮开始。</p>
+                <button id="startButton" class="btn primary-btn">开始测试</button>
+            </div>
+        </main>
+
+        <div class="navigation">
+            <button id="prevBtn" class="btn nav-btn">上一题</button>
+            <div id="pagination" class="pagination"></div>
+            <button id="nextBtn" class="btn nav-btn">下一题</button>
+        </div>
+
+        <div class="submit-container">
+            <button id="submitBtn" class="btn primary-btn">提交答案</button>
+        </div>
+
+        <div id="resultsContainer" class="results-container hidden">
+            <h2>测试结果</h2>
+            <div class="score-overview">
+                <div class="total-score">
+                    <h3>总分: <span id="totalScore">0</span>/100</h3>
+                    <p>总体水平: <span id="totalLevel"></span></p>
+                </div>
+                <div class="category-scores">
+                    <div class="chart-container">
+                        <canvas id="scoreChart"></canvas>
+                    </div>
+                </div>
+            </div>
+
+            <div class="detailed-results">
+                <h3>详细评估</h3>
+                <div id="vocabularyResult" class="category-result">
+                    <h4>词汇能力</h4>
+                    <div class="stars"></div>
+                    <p class="feedback"></p>
+                </div>
+                <div id="grammarResult" class="category-result">
+                    <h4>语法能力</h4>
+                    <div class="stars"></div>
+                    <p class="feedback"></p>
+                </div>
+                <div id="readingResult" class="category-result">
+                    <h4>阅读理解</h4>
+                    <div class="stars"></div>
+                    <p class="feedback"></p>
+                </div>
+                <div id="listeningResult" class="category-result">
+                    <h4>听力能力</h4>
+                    <div class="stars"></div>
+                    <p class="feedback"></p>
+                </div>
+            </div>
+
+            <div class="overall-feedback">
+                <h3>整体评价</h3>
+                <p id="overallFeedback"></p>
+            </div>
+
+            <button id="restartBtn" class="btn primary-btn">重新测试</button>
+        </div>
+
+        <footer>
+            <p>初中英语能力测试系统</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
