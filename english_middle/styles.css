@@ -8,6 +8,7 @@
     --border-radius: 8px;
     --shadow: 0 2px 5px rgba(0,0,0,0.1);
     --spacing: 20px;
+    --spacing-small: 10px;
 }
 
 * {
@@ -16,22 +17,36 @@
     padding: 0;
 }
 
+html, body {
+    height: 100%;
+    width: 100%;
+}
+
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: var(--text-color);
     background-color: var(--bg-color);
     line-height: 1.6;
+    display: flex;
+    flex-direction: column;
 }
 
 .container {
-    max-width: 800px;
+    max-width: 1000px;
+    width: 100%;
     margin: 0 auto;
-    padding: 20px;
+    padding: var(--spacing);
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
 }
 
 header {
     text-align: center;
     margin-bottom: var(--spacing);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 h1, h2, h3, h4 {
@@ -41,6 +56,7 @@ h1, h2, h3, h4 {
 
 .progress-container {
     height: 8px;
+    width: 100%;
     background-color: #ddd;
     border-radius: 4px;
     margin: 15px 0;
@@ -59,12 +75,21 @@ h1, h2, h3, h4 {
     color: var(--accent-color);
 }
 
+main {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
 .question {
     background-color: var(--white);
     padding: var(--spacing);
     border-radius: var(--border-radius);
-    margin-bottom: 20px;
+    margin-bottom: var(--spacing);
     box-shadow: var(--shadow);
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
 }
 
 .question-text {
@@ -73,21 +98,24 @@ h1, h2, h3, h4 {
 }
 
 .options {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
     margin-bottom: 15px;
 }
 
 .option {
-    display: block;
+    display: flex;
     padding: 10px 15px;
-    margin: 8px 0;
     background-color: var(--secondary-color);
     border-radius: var(--border-radius);
     cursor: pointer;
-    transition: background-color 0.2s;
+    transition: background-color 0.2s, transform 0.1s;
 }
 
 .option:hover {
     background-color: #bbdefb;
+    transform: translateY(-2px);
 }
 
 .option.selected {
@@ -101,6 +129,8 @@ h1, h2, h3, h4 {
     border-radius: var(--border-radius);
     margin-bottom: 15px;
     border-left: 4px solid var(--primary-color);
+    overflow-y: auto;
+    max-height: 300px;
 }
 
 .audio-container {
@@ -121,6 +151,11 @@ h1, h2, h3, h4 {
     align-items: center;
     justify-content: center;
     cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.audio-btn:hover {
+    transform: scale(1.1);
 }
 
 .btn {
@@ -129,7 +164,10 @@ h1, h2, h3, h4 {
     border-radius: var(--border-radius);
     cursor: pointer;
     font-weight: 600;
-    transition: background-color 0.2s;
+    transition: all 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .primary-btn {
@@ -139,6 +177,12 @@ h1, h2, h3, h4 {
 
 .primary-btn:hover {
     background-color: #1565c0;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.primary-btn:active {
+    transform: translateY(0);
 }
 
 .nav-btn {
@@ -152,9 +196,11 @@ h1, h2, h3, h4 {
 
 .navigation {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    margin: 20px 0;
+    margin: var(--spacing) 0;
+    flex-wrap: wrap;
+    gap: 10px;
 }
 
 .pagination {
@@ -162,43 +208,68 @@ h1, h2, h3, h4 {
     gap: 5px;
     flex-wrap: wrap;
     justify-content: center;
+    max-width: 100%;
+    overflow-x: auto;
+    padding: 5px 0;
 }
 
+/* 分页按钮样式 */
 .page-btn {
-    width: 30px;
-    height: 30px;
+    margin: 0 2px;
+    padding: 5px 0;
+    min-width: 35px;
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: var(--secondary-color);
-    border: none;
-    border-radius: 4px;
+    border: 1px solid #ccc;
+    background-color: #fff;
     cursor: pointer;
+    border-radius: 3px;
+    transition: all 0.2s;
+}
+
+.page-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
 .page-btn.active {
-    background-color: var(--primary-color);
-    color: white;
+    border-color: #1976d2;
+    font-weight: bold;
+    background-color: #fff; /* 当前题目使用白色背景 */
+    box-shadow: 0 0 0 2px rgba(25, 118, 210, 0.3);
+}
+
+.page-btn.answered {
+    background-color: rgba(76, 175, 80, 0.2); /* 淡绿色背景 - 已回答 */
+}
+
+.page-btn.unanswered {
+    background-color: rgba(255, 152, 0, 0.2); /* 淡桔色背景 - 未回答 */
 }
 
 .submit-container {
     text-align: center;
-    margin: 20px 0;
+    margin: var(--spacing) 0;
+    display: flex;
+    justify-content: center;
 }
 
 .results-container {
     background-color: var(--white);
     padding: var(--spacing);
     border-radius: var(--border-radius);
-    margin: 20px 0;
+    margin: var(--spacing) 0;
     box-shadow: var(--shadow);
+    display: flex;
+    flex-direction: column;
 }
 
 .score-overview {
     display: flex;
     flex-direction: column;
-    gap: 20px;
-    margin-bottom: 20px;
+    gap: var(--spacing);
+    margin-bottom: var(--spacing);
 }
 
 .total-score {
@@ -207,14 +278,27 @@ h1, h2, h3, h4 {
 
 .chart-container {
     height: 300px;
-    margin-bottom: 20px;
+    margin-bottom: var(--spacing);
+    width: 100%;
+}
+
+.detailed-results {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--spacing);
 }
 
 .category-result {
     margin-bottom: 15px;
-    padding: 10px;
+    padding: 15px;
     background-color: var(--secondary-color);
     border-radius: var(--border-radius);
+    transition: transform 0.2s;
+}
+
+.category-result:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow);
 }
 
 .stars {
@@ -224,7 +308,7 @@ h1, h2, h3, h4 {
 }
 
 .overall-feedback {
-    margin: 20px 0;
+    margin: var(--spacing) 0;
     padding: 15px;
     background-color: var(--secondary-color);
     border-radius: var(--border-radius);
@@ -233,7 +317,8 @@ h1, h2, h3, h4 {
 
 footer {
     text-align: center;
-    margin-top: 30px;
+    margin-top: var(--spacing);
+    padding: var(--spacing-small);
     color: #666;
 }
 
@@ -247,36 +332,141 @@ footer {
     background-color: var(--white);
     border-radius: var(--border-radius);
     box-shadow: var(--shadow);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+}
+
+/* 导航按钮图标样式 */
+.nav-btn-prev::before,
+.nav-btn-next::before {
+    content: '';
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border-style: solid;
+    border-width: 3px 3px 0 0;
+    vertical-align: middle;
+}
+
+.nav-btn-prev::before {
+    transform: rotate(-135deg); /* 左箭头 */
+    margin-right: -4px; /* 微调位置 */
+}
+
+.nav-btn-next::before {
+    transform: rotate(45deg); /* 右箭头 */
+    margin-left: -4px; /* 微调位置 */
+}
+
+/* 确保按钮有足够的宽度容纳图标 */
+.nav-btn {
+    min-width: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* 子问题样式增强 */
+.sub-question {
+    margin-bottom: 20px;
+    padding: 15px;
+    border-left: 3px solid var(--primary-color);
+    background-color: rgba(227, 242, 253, 0.3);
+    border-radius: 0 var(--border-radius) var(--border-radius) 0;
 }
 
 /* 响应式设计 */
-@media (max-width: 768px) {
-    .container {
-        padding: 10px;
+@media (max-width: 900px) {
+    :root {
+        --spacing: 15px;
     }
 
-    .score-overview {
-        flex-direction: column;
+    .container {
+        max-width: 100%;
+    }
+
+    .detailed-results {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    :root {
+        --spacing: 12px;
+        --spacing-small: 8px;
+    }
+
+    .container {
+        padding: var(--spacing-small);
     }
 
     .navigation {
         flex-direction: column;
-        gap: 10px;
     }
 
     .pagination {
         order: -1;
         margin-bottom: 10px;
+        padding: 0;
+    }
+
+    .question {
+        padding: 15px;
+    }
+
+    .reading-content {
+        max-height: 250px;
+    }
+}
+
+/* 增强页底题号和提交按钮在大屏手机上的可用性 */
+@media (min-width: 481px) and (max-width: 768px) {
+    /* 大屏手机特别优化 */
+    .page-btn {
+        min-width: 42px;
+        height: 42px;
+        font-size: 1.1rem;
+        font-weight: 500;
+    }
+
+    .submit-container .primary-btn {
+        padding: 12px 30px;
+        font-size: 1.2rem;
+        min-height: 50px;
+    }
+
+    /* 确保按钮间距合适 */
+    .pagination {
+        gap: 8px;
+    }
+}
+
+/* 调整所有移动设备的按钮样式 */
+@media (max-width: 768px) {
+    .submit-container {
+        padding: 5px 0 15px 0;
+    }
+
+    .submit-container .primary-btn {
+        width: auto;
+        min-width: 200px;
     }
 }
 
 @media (max-width: 480px) {
+    :root {
+        --spacing: 10px;
+        --spacing-small: 5px;
+    }
+
     h1 {
         font-size: 1.5rem;
     }
 
     .question {
-        padding: 15px;
+        padding: 12px;
     }
 
     .option {
@@ -285,10 +475,56 @@ footer {
 
     .btn {
         padding: 8px 16px;
+        width: 100%;
     }
 
     .page-btn {
-        width: 24px;
-        height: 24px;
+        min-width: 32px;
+        height: 32px;
+        padding: 0;
+        font-size: 1rem;
+    }
+
+    .submit-container .primary-btn {
+        padding: 10px 20px;
+        font-size: 1.1rem;
+    }
+
+    .reading-content {
+        max-height: 200px;
+        padding: 10px;
+    }
+
+    .audio-container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+/* 触摸屏优化 */
+@media (hover: none) {
+    .option:hover {
+        transform: none;
+    }
+
+    .page-btn:hover {
+        transform: none;
+    }
+
+    .btn:hover {
+        transform: none;
+    }
+
+    .category-result:hover {
+        transform: none;
+    }
+
+    /* 增强触屏设备的按钮点击体验 */
+    .page-btn:active {
+        transform: scale(0.95);
+    }
+
+    .btn:active {
+        transform: scale(0.98);
     }
 }

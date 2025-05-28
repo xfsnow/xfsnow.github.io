@@ -309,6 +309,7 @@ let userAnswers = Array(questions.length).fill(null);
 let timer;
 let timeLeft = 30 * 60; // 30分钟，以秒为单位
 let testStarted = false;
+let currentAudio = null; // 跟踪当前播放的音频
 
 // DOM元素
 const testContainer = document.getElementById('testContainer');
@@ -325,6 +326,7 @@ const startButton = document.getElementById('startButton');
 // 初始化
 document.addEventListener('DOMContentLoaded', () => {
     // 初始隐藏导航和提交按钮
+    // 隐藏上一题和下一题按钮，不再使用
     prevBtn.style.display = 'none';
     nextBtn.style.display = 'none';
     submitBtn.style.display = 'none';
@@ -333,9 +335,9 @@ document.addEventListener('DOMContentLoaded', () => {
     // 绑定开始按钮事件
     startButton.addEventListener('click', startTest);
 
-    // 绑定导航按钮事件
-    prevBtn.addEventListener('click', goToPrevQuestion);
-    nextBtn.addEventListener('click', goToNextQuestion);
+    // 不再需要绑定导航按钮事件
+    // prevBtn.addEventListener('click', goToPrevQuestion);
+    // nextBtn.addEventListener('click', goToNextQuestion);
 
     // 绑定提交按钮事件
     submitBtn.addEventListener('click', submitTest);
@@ -344,12 +346,29 @@ document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('restartBtn').addEventListener('click', restartTest);
 });
 
+// 启动计时器
+function startTimer() {
+    timer = setInterval(() => {
+        timeLeft--;
+
+        const minutes = Math.floor(timeLeft / 60);
+        const seconds = timeLeft % 60;
+
+        timerDisplay.textContent = `时间: ${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+
+        if (timeLeft <= 0) {
+            clearInterval(timer);
+            submitTest();
+        }
+    }, 1000);
+}
 // 开始测试
 function startTest() {
     testStarted = true;
     startScreen.style.display = 'none';
-    prevBtn.style.display = 'block';
-    nextBtn.style.display = 'block';
+    // 不再显示上一题和下一题按钮
+    // prevBtn.style.display = 'block';
+    // nextBtn.style.display = 'block';
     submitBtn.style.display = 'block';
     pagination.style.display = 'flex';
 
@@ -372,23 +391,29 @@ function renderPagination() {
 
     for (let i = 0; i < questions.length; i++) {
         const button = document.createElement('button');
-        button.className = `page-btn ${i === currentPage ? 'active' : ''}`;
+        // 初始只设置基本类名，样式将由updatePaginationStyles更新
+        button.className = 'page-btn';
         button.textContent = i + 1;
         button.addEventListener('click', () => {
+            stopCurrentAudio(); // 停止当前音频播放
             currentPage = i;
             renderQuestion(currentPage);
-            updateActivePageBtn();
+            updatePaginationStyles();
         });
         pagination.appendChild(button);
     }
+
+    // 初始设置分页按钮样式
+    updatePaginationStyles();
 }
 
-// 更新活动页按钮
-function updateActivePageBtn() {
-    const pageButtons = document.querySelectorAll('.page-btn');
-    pageButtons.forEach((btn, idx) => {
-        btn.classList.toggle('active', idx === currentPage);
-    });
+// 停止当前正在播放的音频
+function stopCurrentAudio() {
+    if (currentAudio) {
+        currentAudio.pause();
+        currentAudio.currentTime = 0;
+        currentAudio = null;
+    }
 }
 
 // 渲染问题
@@ -458,6 +483,16 @@ function renderQuestion(index) {
 
                     // 更新进度
                     updateProgress();
+
+                    // 检查是否所有小题都已回答
+                    if (!userAnswers[index].includes(null)) {
+                        // 如果所有小题都已回答且不是最后一题，自动前进到下一题
+                        setTimeout(() => {
+                            if (currentPage < questions.length - 1) {
+                                goToNextQuestion();
+                            }
+                        }, 500); // 短暂延迟以便用户看到选择结果
+                    }
                 });
 
                 label.appendChild(input);
@@ -485,17 +520,23 @@ function renderQuestion(index) {
 
         audioBtn.addEventListener('click', () => {
             if (audio.paused) {
+                // 如果有其他音频在播放，先停止它
+                stopCurrentAudio();
+
                 audio.play();
+                currentAudio = audio; // 设置当前音频
                 audioBtn.innerHTML = '<i class="fas fa-pause">❚❚</i>';
             } else {
                 audio.pause();
                 audio.currentTime = 0;
+                currentAudio = null;
                 audioBtn.innerHTML = '<i class="fas fa-play">▶</i>';
             }
         });
 
         audio.addEventListener('ended', () => {
             audioBtn.innerHTML = '<i class="fas fa-play">▶</i>';
+            currentAudio = null;
         });
 
         audioContainer.appendChild(audioBtn);
@@ -526,6 +567,13 @@ function renderQuestion(index) {
                 options.querySelectorAll('.option').forEach(opt => opt.classList.remove('selected'));
                 label.classList.add('selected');
                 updateProgress();
+
+                // 选择答案后自动前进到下一题（如果不是最后一题）
+                setTimeout(() => {
+                    if (currentPage < questions.length - 1) {
+                        goToNextQuestion();
+                    }
+                }, 500);
             });
 
             label.appendChild(input);
@@ -562,6 +610,13 @@ function renderQuestion(index) {
                 options.querySelectorAll('.option').forEach(opt => opt.classList.remove('selected'));
                 label.classList.add('selected');
                 updateProgress();
+
+                // 选择答案后自动前进到下一题（如果不是最后一题）
+                setTimeout(() => {
+                    if (currentPage < questions.length - 1) {
+                        goToNextQuestion();
+                    }
+                }, 500);
             });
 
             label.appendChild(input);
@@ -574,19 +629,20 @@ function renderQuestion(index) {
 
     testContainer.appendChild(questionDiv);
 
-    // 更新导航按钮状态
-    updateNavigationButtons();
+    // 不再需要更新导航按钮状态
+    // updateNavigationButtons();
 }
 
-// 更新导航按钮
-function updateNavigationButtons() {
-    prevBtn.disabled = currentPage === 0;
-    nextBtn.disabled = currentPage === questions.length - 1;
-}
+// 不再需要更新导航按钮状态
+// function updateNavigationButtons() {
+//     prevBtn.disabled = currentPage === 0;
+//     nextBtn.disabled = currentPage === questions.length - 1;
+// }
 
 // 上一题
 function goToPrevQuestion() {
     if (currentPage > 0) {
+        stopCurrentAudio(); // 停止当前音频播放
         currentPage--;
         renderQuestion(currentPage);
         updateActivePageBtn();
@@ -596,6 +652,7 @@ function goToPrevQuestion() {
 // 下一题
 function goToNextQuestion() {
     if (currentPage < questions.length - 1) {
+        stopCurrentAudio(); // 停止当前音频播放
         currentPage++;
         renderQuestion(currentPage);
         updateActivePageBtn();
@@ -623,27 +680,53 @@ function updateProgress() {
 
     const percent = (answeredCount / totalQuestions) * 100;
     progressBar.style.width = `${percent}%`;
+
+    // 更新分页按钮样式
+    updatePaginationStyles();
 }
 
-// 启动计时器
-function startTimer() {
-    timer = setInterval(() => {
-        timeLeft--;
+// 新增：更新分页按钮的样式
+function updatePaginationStyles() {
+    const pageButtons = document.querySelectorAll('.page-btn');
 
-        const minutes = Math.floor(timeLeft / 60);
-        const seconds = timeLeft % 60;
+    pageButtons.forEach((btn, idx) => {
+        // 移除所有状态类
+        btn.classList.remove('active', 'answered', 'unanswered');
 
-        timerDisplay.textContent = `时间: ${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
-
-        if (timeLeft <= 0) {
-            clearInterval(timer);
-            submitTest();
+        // 当前题目只添加active类
+        if (idx === currentPage) {
+            btn.classList.add('active');
         }
-    }, 1000);
+        // 根据是否已回答添加对应样式类
+        else if (isQuestionAnswered(idx)) {
+            btn.classList.add('answered');
+        } else {
+            btn.classList.add('unanswered');
+        }
+    });
+}
+
+// 新增：检查题目是否已回答
+function isQuestionAnswered(index) {
+    if (questions[index].type === 'reading') {
+        // 阅读理解题，检查是否所有小题都已回答
+        return userAnswers[index] && !userAnswers[index].includes(null);
+    } else {
+        // 单选题，直接检查是否已回答
+        return userAnswers[index] !== null;
+    }
+}
+
+// 修改 updateActivePageBtn 函数
+function updateActivePageBtn() {
+    updatePaginationStyles();
 }
 
 // 提交测试
 function submitTest() {
+    // 停止可能正在播放的音频
+    stopCurrentAudio();
+
     // 计算未回答的题目数量
     let unanswered = 0;
     let totalQuestions = 0;
@@ -922,6 +1005,9 @@ function drawChart(categoryScores) {
 
 // 重新测试
 function restartTest() {
+    // 停止可能正在播放的音频
+    stopCurrentAudio();
+
     // 重置状态
     currentPage = 0;
     userAnswers = Array(questions.length).fill(null);
