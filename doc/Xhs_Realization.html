@@ -1,0 +1,136 @@
+<!DOCTYPE html><html><head>
+      <title>Xhs_Realization</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+      <style>
+      code[class*=language-],pre[class*=language-]{color:#333;background:0 0;font-family:Consolas,"Liberation Mono",Menlo,Courier,monospace;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;word-wrap:normal;line-height:1.4;-moz-tab-size:8;-o-tab-size:8;tab-size:8;-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none}pre[class*=language-]{padding:.8em;overflow:auto;border-radius:3px;background:#f5f5f5}:not(pre)>code[class*=language-]{padding:.1em;border-radius:.3em;white-space:normal;background:#f5f5f5}.token.blockquote,.token.comment{color:#969896}.token.cdata{color:#183691}.token.doctype,.token.macro.property,.token.punctuation,.token.variable{color:#333}.token.builtin,.token.important,.token.keyword,.token.operator,.token.rule{color:#a71d5d}.token.attr-value,.token.regex,.token.string,.token.url{color:#183691}.token.atrule,.token.boolean,.token.code,.token.command,.token.constant,.token.entity,.token.number,.token.property,.token.symbol{color:#0086b3}.token.prolog,.token.selector,.token.tag{color:#63a35c}.token.attr-name,.token.class,.token.class-name,.token.function,.token.id,.token.namespace,.token.pseudo-class,.token.pseudo-element,.token.url-reference .token.variable{color:#795da3}.token.entity{cursor:help}.token.title,.token.title .token.punctuation{font-weight:700;color:#1d3e81}.token.list{color:#ed6a43}.token.inserted{background-color:#eaffea;color:#55a532}.token.deleted{background-color:#ffecec;color:#bd2c00}.token.bold{font-weight:700}.token.italic{font-style:italic}.language-json .token.property{color:#183691}.language-markup .token.tag .token.punctuation{color:#333}.language-css .token.function,code.language-css{color:#0086b3}.language-yaml .token.atrule{color:#63a35c}code.language-yaml{color:#183691}.language-ruby .token.function{color:#333}.language-markdown .token.url{color:#795da3}.language-makefile .token.symbol{color:#795da3}.language-makefile .token.variable{color:#183691}.language-makefile .token.builtin{color:#0086b3}.language-bash .token.keyword{color:#0086b3}pre[data-line]{position:relative;padding:1em 0 1em 3em}pre[data-line] .line-highlight-wrapper{position:absolute;top:0;left:0;background-color:transparent;display:block;width:100%}pre[data-line] .line-highlight{position:absolute;left:0;right:0;padding:inherit 0;margin-top:1em;background:hsla(24,20%,50%,.08);background:linear-gradient(to right,hsla(24,20%,50%,.1) 70%,hsla(24,20%,50%,0));pointer-events:none;line-height:inherit;white-space:pre}pre[data-line] .line-highlight:before,pre[data-line] .line-highlight[data-end]:after{content:attr(data-start);position:absolute;top:.4em;left:.6em;min-width:1em;padding:0 .5em;background-color:hsla(24,20%,50%,.4);color:#f4f1ef;font:bold 65%/1.5 sans-serif;text-align:center;vertical-align:.3em;border-radius:999px;text-shadow:none;box-shadow:0 1px #fff}pre[data-line] .line-highlight[data-end]:after{content:attr(data-end);top:auto;bottom:.4em}html body{font-family:'Helvetica Neue',Helvetica,'Segoe UI',Arial,freesans,sans-serif;font-size:16px;line-height:1.6;color:#333;background-color:#fff;overflow:initial;box-sizing:border-box;word-wrap:break-word}html body>:first-child{margin-top:0}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{line-height:1.2;margin-top:1em;margin-bottom:16px;color:#000}html body h1{font-size:2.25em;font-weight:300;padding-bottom:.3em}html body h2{font-size:1.75em;font-weight:400;padding-bottom:.3em}html body h3{font-size:1.5em;font-weight:500}html body h4{font-size:1.25em;font-weight:600}html body h5{font-size:1.1em;font-weight:600}html body h6{font-size:1em;font-weight:600}html body h1,html body h2,html body h3,html body h4,html body h5{font-weight:600}html body h5{font-size:1em}html body h6{color:#5c5c5c}html body strong{color:#000}html body del{color:#5c5c5c}html body a:not([href]){color:inherit;text-decoration:none}html body a{color:#08c;text-decoration:none}html body a:hover{color:#00a3f5;text-decoration:none}html body img{max-width:100%}html body>p{margin-top:0;margin-bottom:16px;word-wrap:break-word}html body>ol,html body>ul{margin-bottom:16px}html body ol,html body ul{padding-left:2em}html body ol.no-list,html body ul.no-list{padding:0;list-style-type:none}html body ol ol,html body ol ul,html body ul ol,html body ul ul{margin-top:0;margin-bottom:0}html body li{margin-bottom:0}html body li.task-list-item{list-style:none}html body li>p{margin-top:0;margin-bottom:0}html body .task-list-item-checkbox{margin:0 .2em .25em -1.8em;vertical-align:middle}html body .task-list-item-checkbox:hover{cursor:pointer}html body blockquote{margin:16px 0;font-size:inherit;padding:0 15px;color:#5c5c5c;background-color:#f0f0f0;border-left:4px solid #d6d6d6}html body blockquote>:first-child{margin-top:0}html body blockquote>:last-child{margin-bottom:0}html body hr{height:4px;margin:32px 0;background-color:#d6d6d6;border:0 none}html body table{margin:10px 0 15px 0;border-collapse:collapse;border-spacing:0;display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}html body table th{font-weight:700;color:#000}html body table td,html body table th{border:1px solid #d6d6d6;padding:6px 13px}html body dl{padding:0}html body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:700}html body dl dd{padding:0 16px;margin-bottom:16px}html body code{font-family:Menlo,Monaco,Consolas,'Courier New',monospace;font-size:.85em;color:#000;background-color:#f0f0f0;border-radius:3px;padding:.2em 0}html body code::after,html body code::before{letter-spacing:-.2em;content:'\00a0'}html body pre>code{padding:0;margin:0;word-break:normal;white-space:pre;background:0 0;border:0}html body .highlight{margin-bottom:16px}html body .highlight pre,html body pre{padding:1em;overflow:auto;line-height:1.45;border:#d6d6d6;border-radius:3px}html body .highlight pre{margin-bottom:0;word-break:normal}html body pre code,html body pre tt{display:inline;max-width:initial;padding:0;margin:0;overflow:initial;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}html body pre code:after,html body pre code:before,html body pre tt:after,html body pre tt:before{content:normal}html body blockquote,html body dl,html body ol,html body p,html body pre,html body ul{margin-top:0;margin-bottom:16px}html body kbd{color:#000;border:1px solid #d6d6d6;border-bottom:2px solid #c7c7c7;padding:2px 4px;background-color:#f0f0f0;border-radius:3px}@media print{html body{background-color:#fff}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{color:#000;page-break-after:avoid}html body blockquote{color:#5c5c5c}html body pre{page-break-inside:avoid}html body table{display:table}html body img{display:block;max-width:100%;max-height:100%}html body code,html body pre{word-wrap:break-word;white-space:pre}}.markdown-preview{width:100%;height:100%;box-sizing:border-box}.markdown-preview ul{list-style:disc}.markdown-preview ul ul{list-style:circle}.markdown-preview ul ul ul{list-style:square}.markdown-preview ol{list-style:decimal}.markdown-preview ol ol,.markdown-preview ul ol{list-style-type:lower-roman}.markdown-preview ol ol ol,.markdown-preview ol ul ol,.markdown-preview ul ol ol,.markdown-preview ul ul ol{list-style-type:lower-alpha}.markdown-preview .newpage,.markdown-preview .pagebreak{page-break-before:always}.markdown-preview pre.line-numbers{position:relative;padding-left:3.8em;counter-reset:linenumber}.markdown-preview pre.line-numbers>code{position:relative}.markdown-preview pre.line-numbers .line-numbers-rows{position:absolute;pointer-events:none;top:1em;font-size:100%;left:0;width:3em;letter-spacing:-1px;border-right:1px solid #999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.markdown-preview pre.line-numbers .line-numbers-rows>span{pointer-events:none;display:block;counter-increment:linenumber}.markdown-preview pre.line-numbers .line-numbers-rows>span:before{content:counter(linenumber);color:#999;display:block;padding-right:.8em;text-align:right}.markdown-preview .mathjax-exps .MathJax_Display{text-align:center!important}.markdown-preview:not([data-for=preview]) .code-chunk .code-chunk-btn-group{display:none}.markdown-preview:not([data-for=preview]) .code-chunk .status{display:none}.markdown-preview:not([data-for=preview]) .code-chunk .output-div{margin-bottom:16px}.markdown-preview .md-toc{padding:0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link div,.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link p{display:inline}.markdown-preview .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}.scrollbar-style::-webkit-scrollbar{width:8px}.scrollbar-style::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}.scrollbar-style::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,.66);border:4px solid rgba(150,150,150,.66);background-clip:content-box}html body[for=html-export]:not([data-presentation-mode]){position:relative;width:100%;height:100%;top:0;left:0;margin:0;padding:0;overflow:auto}html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{position:relative;top:0;min-height:100vh}@media screen and (min-width:914px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{padding:2em calc(50% - 457px + 2em)}}@media screen and (max-width:914px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{font-size:14px!important;padding:1em}}@media print{html body[for=html-export]:not([data-presentation-mode]) #sidebar-toc-btn{display:none}}html body[for=html-export]:not([data-presentation-mode]) #sidebar-toc-btn{position:fixed;bottom:8px;left:8px;font-size:28px;cursor:pointer;color:inherit;z-index:99;width:32px;text-align:center;opacity:.4}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] #sidebar-toc-btn{opacity:1}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc{position:fixed;top:0;left:0;width:300px;height:100%;padding:32px 0 48px 0;font-size:14px;box-shadow:0 0 4px rgba(150,150,150,.33);box-sizing:border-box;overflow:auto;background-color:inherit}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar{width:8px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,.66);border:4px solid rgba(150,150,150,.66);background-clip:content-box}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc a{text-decoration:none}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc{padding:0 16px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link div,html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link p{display:inline}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{left:300px;width:calc(100% - 300px);padding:2em calc(50% - 457px - 300px / 2);margin:0;box-sizing:border-box}@media screen and (max-width:1274px){html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{width:100%}}html body[for=html-export]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview{left:50%;transform:translateX(-50%)}html body[for=html-export]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .md-sidebar-toc{display:none}
+/* Please visit the URL below for more information: */
+/*   https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */
+
+      </style>
+      <!-- The content below will be included at the end of the <head> element. --><script type="text/javascript">
+  document.addEventListener("DOMContentLoaded", function () {
+    // your code here
+  });
+</script></head><body for="html-export">
+
+
+      <div class="crossnote markdown-preview  ">
+
+<h1 id="小红书比你想象的更赚钱">小红书比你想象的更赚钱 </h1>
+<p>粉丝数量=财富？！小红书比你想象的更赚钱 做小红书，赚💰的关键在于粉丝数量和质量，以及你的内容创新能力。<br>
+小🍠每日的涨粉一般都会很缓慢，核心的粉丝来源还是要看爆款笔记！<br>
+保持一个良好的心态，坚持下去!🚀</p>
+<h2 id="新人起号详细流程">新人起号详细流程 </h2>
+<ol>
+<li>自我定位</li>
+</ol>
+<ul>
+<li>身材:45kg、155cm、梨形、微胖、高个子</li>
+<li>爱好:拍视频、美食、旅行、穿搭、读书、购物、手工…</li>
+<li>职业:产品经理、销售、前台、文员、会计、教师</li>
+<li>方向:美食博主、Vlog博主、穿搭博主、美妆博主</li>
+<li>情况:利用下班时间、全职博主、兼职博主</li>
+</ul>
+<ol start="2">
+<li>账号内容</li>
+</ol>
+<ul>
+<li>IP定位:一线城市95后独居交生的Vlog，分享职场日常下班后</li>
+<li>粉丝定位:90-00年女生，追求且向往自律有品质的生活对穿搭、美妆、生活日常感情兴趣的女生，女生更好更自律的生活</li>
+<li>内容关键词:生活、美食、独居、女性、职场、独立:热爱生活…</li>
+<li>选题:一个普通女孩的一天、独居女生的一日三餐、打工人的周末、职场女生的必备小技巧、下班后的小日子、带你体验沉浸式居家、充满烟火气的小日子。</li>
+</ul>
+<p>想好你想要做的领域，是美食、护肤、读书、心理？确定好后，直接在平台以相应的关键字(例如美食/宝妈/护肤)搜索同时按热度将结果进行排序，找到其中做得最好的20-30个账号，并将其划分:</p>
+<ul>
+<li>大V级别<br>
+重点学习大方向的选题类型，长期的运营思路。</li>
+<li>榜样级别<br>
+重点学习如何通过人设，选题和内容，突出个人差异化。</li>
+<li>伙伴级别<br>
+在人设、选题和内容上积极对标，做细节分析。</li>
+</ul>
+<ol start="3">
+<li>
+<p>拆解对标:</p>
+<ul>
+<li>人设:定位，细分方向、昵称、头像、简介。</li>
+<li>选题:话题选题、系列选题等。</li>
+<li>内容:封面、标题、开头、结尾、文案结构。</li>
+<li>用户画像:年龄、地域、性别、痛点。</li>
+<li>变现方式:接广、直播、私域、薯店。</li>
+</ul>
+</li>
+<li>
+<p>持续精进<br>
+撰写笔记后仔细检查修改，避免一些不必要的问题。</p>
+</li>
+</ol>
+<p>及时对发布后的内容进行数据分析，记录下来及时调整不要发布后就不管不顾了。</p>
+<p>遇到不懂的知识点刨根问题，搞清楚问题所在;坚持每周一小结，每月一大结，及时进行规划调整。</p>
+<p>新手博主核心提升这3个数据:</p>
+<ul>
+<li>点击率:点击率不高一定是封面和标题出了问题。</li>
+<li>收藏率:点赞收藏少内容缺乏“利他性，对用户没有.价值</li>
+<li>互动率:用户评论少一定是没有吸引用户互动的点做自媒体，一定不要过度内耗，多通过数据分析找内容上的问题，持续学习+实践复盘，才是做自媒体的正确姿势!</li>
+</ul>
+<p>重要:保持一个良好的心态去坚持!</p>
+<h2 id="黄金发布时间">黄金发布时间 </h2>
+<h3 id="全平台高峰期">全平台高峰期 </h3>
+<p>早:7:00-9:00<br>
+中:12:00-14:00<br>
+晚:18:00-1:00</p>
+<h3 id="各个赛道建议发布的时间段">各个赛道建议发布的时间段 </h3>
+<p>美妆:11:00，19:00-22:00<br>
+护肤:20:00-23:00<br>
+穿搭:11:00-13:00，19:00-23:00<br>
+探店:12:00，18:00-23:00<br>
+美食:11:00-13:00，17:00-22:00<br>
+家居:18:00-22:00<br>
+职场:12:00-13:00，18:00-21:00<br>
+健身:13:00-14:00，19:00-21:00<br>
+情感:21:00-2:00<br>
+摄影:11:00，19:00-22:00<br>
+萌宠:12:00，21:00-23:00<br>
+学习:11:00-12:00，14:00-17:00，19:00-23:00<br>
+母婴:10:00，20:00</p>
+<h2 id="粉丝规模成长路径">粉丝规模成长路径 </h2>
+<ol>
+<li>
+<p>0-1000粉丝(可变现)<br>
+这是做小红书的第一步，当你的粉丝量达到1000就可以开通蒲公英，走官方的商单变现了。这个阶段，可能会有一些商家找你做便宜的置换或者低价合作。<br>
+但你要明白，大量的“图文直发”会让你的账号直接毁掉!平台是可以检测到的，所以不能乱接广告哦。</p>
+</li>
+<li>
+<p>1000-5000粉丝<br>
+到了这个阶段你已经可以开始变现了，其中汽车、母婴、家居、美妆等优秀的赛道，报价甚至能达到15%。<br>
+很多家居类的学员，5000粉丝报价达到800-1000，这是不是让你眼前一亮呢?</p>
+</li>
+<li>
+<p>5000-10000粉丝<br>
+许多博主会卡在这里，因为没有持续发爆款的能力，只能吃“老本”迟迟涨不了粉。这个阶段的博主会有些不上不下的，因此可能商单的机会会减少。注意:社媒每日的涨粉一般都会很缓慢，核心的粉丝来源还是要看爆款笔记!<br>
+如果在这个阶段还能维持较高的互动数据，那么你的报价也会相应上升。</p>
+</li>
+<li>
+<p>10000-50000粉丝<br>
+到达这个粉丝量，家居博主、美妆博主、Vlog/plog这些热门赛道的博主，基本上就可以全职做博主了。<br>
+这个阶段的博主，商单报价一般在2000-5000之间，甚至更高。这个阶段的博主，已经可以开始接一些长期合作的商单了。</p>
+</li>
+<li>
+<p>50000粉丝以上<br>
+10w粉丝在小红书，相当于dy的100w，在这个领域已经相当于KOL的存在了。商单不会少的，只需要专心做内容就可以了。</p>
+</li>
+</ol>
+
+      </div>
+
+
+
+
+
+
+
+
+
+    </body></html>
