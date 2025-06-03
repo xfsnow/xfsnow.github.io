@@ -101,7 +101,7 @@ window.addEventListener('load', () => {
     // 预加载关键资源
     const preloadLinks = [
         'assets/css/style.css',
-        'assets/js/articles-data.js'
+        'assets/js/article_index.js'
     ];
 
     preloadLinks.forEach(href => {
