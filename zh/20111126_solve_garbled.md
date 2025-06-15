@@ -1,0 +1,348 @@
+# Ajax中文乱码解决方案
+
+发布时间: *2011-11-26 22:06:43*
+
+分类: __综合开发__
+
+---------
+
+## [Ajax中文乱码解决方案](/cn/article/detail/solve_garbled_chinese_in_ajax/)
+
+分类: [综合开发](/cn/article/category/comprehensive_development/) 2011-11-26 22:06:43 阅读(4562)
+
+主流浏览器中 Ajax 对象请求时都以 UTF-8 编码发送数据，所以当前后端文件都统一用 UTF-8 编码时情况比较经典而单纯。如果确实需要 GB 字符集，则需要适当变通。这里就这两种字符集分别说明解决方案。服务器端文件以 PHP 举例。
+
+下列方案在 IE 系、FireFox3、Chrome4、Opera10 测试通过。
+
+### UTF-8 经典方案
+
+前后端文件本身统一都用 UTF-8 编码。
+
+HTML 文件使用声明：
+
+
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+JavaScript 文件也要存为 UTF-8 模式，最终确保传递参数始终以 UTF-8 编码的核心是把参数值统一用 encodeURIComponent() 处理。即 SF.HTTP.xhr_utf.js 中的如下这行
+
+
+    param = encodeURIComponent(param);
+
+注意此时后台 PHP 程序接收到的请求数据是 UTF-8 编码的，如果需要转成其它字符集的数据可以用 iconv 进一步处理。PHP 程序输出数据也必须是 UTF-8 编码的，加声明：
+
+
+    header("text/html;charset=UTF-8");
+
+注意要让 IE 正常接收 UTF8 的数据，必须写大写的"UTF-8"，而不能用小写或其它写法！
+
+以下是各文件完整的代码：
+
+#### sfxhr_utf.htm
+
+
+    <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+    <html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>AJAX中文-UTF8版</title>
+    <script type="text/javascript" src="SF.HTTP.xhr_utf.js" mce_src="SF.HTTP.xhr_utf.js"></script>
+    </head>
+    <body>
+    <script type="text/javascript"></script>
+    </body>
+    </html>
+
+#### SF.HTTP.xhr_utf.js
+
+
+    var SF =
+    {
+        //HTTP 请求相关
+        HTTP:
+        {
+            /**兼容 GB2312 字符集的 Ajax 调用方法
+            变通是用 escape，提交的汉字会变成 %u9886%u5730 这样的，后端程序再处理成GB字符集的中文，见 ajax.php 中的 unescape 函数。
+            输入参数，JSON 格式对象
+            {
+            'url': url,     请求的 URL
+            'type': method, 提交方式，get 或 post，默认为 get
+            'charset':charset,  字符集，默认 utf-8
+            'params': 提交的参数，JSON 格式，如{var1:'北京', var2:'test'}
+            'success': 响应成功时的处理函数，传入参数是标准 XMLHttpRequest 对象
+            'fail': 请求失败时的处理函数，通常是在页面上给出提示，可以为空
+            'loading': 等行响应时的加载中函数，通常是在页面上给出提示，可以为空
+            }
+
+            */
+            xhr:function(json)
+            {
+                //取输入参数，以及赋默认值
+                var
+                url=json.url,
+                method=json.type || 'get',
+                params=json.params || {},
+                onComplete=json.success,
+                charset=json.charset || 'utf8',
+                onFailure=json.fail,
+                loading=json.loading;
+
+                var getHTTPObject = function() {
+                    var xmlhttp = false;
+                    if (window.XMLHttpRequest) {
+                        xmlhttp = new XMLHttpRequest();
+                    } else if(window.ActiveXObject) {
+                        try {
+                            xmlhttp = new ActiveXObject("Msxml2.XMLHTTP");
+                        } catch (e) {
+                            try {
+                                xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+                            } catch (e) {
+                                xmlhttp = false;
+                            }
+                        }
+                    }
+                    return xmlhttp;
+                };
+
+                if (loading)
+                {
+                    loading();
+                }
+                var query = '';
+                for (var i in params)
+                {
+                    var param = params[i];
+                    if ('gb2312'==charset)
+                    {
+                        param = escape(param);
+                    }
+                    //最终解决 IE 中 GET 方式参数值传递不灵，给 UTF-8 字符集时统一加上 encodeURIComponent
+                    else
+                    {
+                        param = encodeURIComponent(param);
+                    }
+                    query+= i + '='+ param + '&';
+                }
+                var XHR = getHTTPObject();
+
+                //XHR.setRequestHeader("charset","gb2312");
+                XHR.onreadystatechange = function() {
+                    if (XHR.readyState == 4)    {
+                        if (XHR.status == 200 || XHR.status == 304) {
+                            if (onComplete)     {
+                                onComplete(XHR);
+                            }
+                        }
+                        else
+                        {
+                            if (onFailure)  {
+                                onFailure(XHR)
+                            };
+                        }
+                    }
+                };
+                method = ('get' == method.toLowerCase()) ? 'get':'post';
+                if ('post'==method)
+                {
+                    XHR.open(method, url, true);
+                    XHR.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+                    XHR.send(query);
+                }
+                else
+                {
+                    url += '?'+ query + 'random='+Math.random();
+                    XHR.open(method, url, true);
+                    XHR.send(null);
+                }
+            }
+        }
+    };
+
+#### ajax_utf.php
+
+
+    <?php
+    $test = isset($_GET['test']) ? $_GET['test'] : $_POST['test'];
+    //要让 IE 正常接收 UTF8 的数据，必须使用大写的“UTF-8”，而不能用小写！
+    header("text/plain;charset=UTF-8");
+    echo ($test);
+
+### GB2312 变通方案
+
+前后端文件本身统一都用ANSI编码。
+
+HTML 文件使用声明：
+
+
+    <meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+
+让 Ajax 对象不以默认的 UTF-8 编码发送数据，核心的变通是把参数值统一用 escape() 处理，汉字会变成 %u5317%u4EAC 这样的 Unicode 格式，从而浏览器会把它们当作西文数据，不再像普通汉字那样用 UTF-8 字符集再进行 URI 编码。即 SF.HTTP.xhr_utf.js 中的如下这行
+
+
+    param = escape(param);
+
+注意此时后台 PHP 程序接收到的请求数据是未编码的 Unicode 格式，需要转回成 GB2312 字符集的数据，使用PHP 程序中的 unescape() 函数即可。输出数据也必须是GB2312编码的，输出前加上声明：
+
+
+    header("Content-type: text/html; charset=gb2312");
+
+SF.HTTP.xhr() 方法使用说明请见方法注释及 HTML 范例。
+
+不同字符集的范例包中 SF.HTTP.xhr.js 和 SF.HTTP.xhr_utf.js 内容完全相同，只是 SF.HTTP.xhr_utf.js 的文件编码是 UTF-8。建议使用 UTF-8 版时把前后全部文件都统一成 UTF-8 编码的文件，因为 IE 浏览器要求引用的外部文件也必须是UTF-8 编码。
+
+以下是各文件完整的代码：
+
+#### sfxhr.htm
+
+
+    <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+    <html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+    <title>AJAX中文-GB2312版</title>
+    <script type="text/javascript" src="SF.HTTP.xhr.js" mce_src="SF.HTTP.xhr.js"></script>
+    </head>
+    <body>
+    <script type="text/javascript"></script>
+
+    </body>
+    </html>
+
+
+#### SF.HTTP.xhr.js
+
+
+    var SF =
+    {
+        //HTTP 请求相关
+        HTTP:
+        {
+            /**兼容 GB2312 字符集的 Ajax 调用方法
+            变通是用 escape，提交的汉字会变成 %u9886%u5730 这样的，后端程序再处理成GB字符集的中文，见 ajax.php 中的 unescape 函数。
+            输入参数，JSON 格式对象
+            {
+            'url': url,     请求的 URL
+            'type': method, 提交方式，get 或 post，默认为 get
+            'charset':charset,  字符集，默认 utf-8
+            'params': 提交的参数，JSON 格式，如{var1:'北京', var2:'test'}
+            'success': 响应成功时的处理函数，传入参数是标准 XMLHttpRequest 对象
+            'fail': 请求失败时的处理函数，通常是在页面上给出提示，可以为空
+            'loading': 等行响应时的加载中函数，通常是在页面上给出提示，可以为空
+            }
+
+            */
+            xhr:function(json)
+            {
+                //取输入参数，以及赋默认值
+                var
+                url=json.url,
+                method=json.type || 'get',
+                params=json.params || {},
+                onComplete=json.success,
+                charset=json.charset || 'utf8',
+                onFailure=json.fail,
+                loading=json.loading;
+
+                var getHTTPObject = function() {
+                    var xmlhttp = false;
+                    if (window.XMLHttpRequest) {
+                        xmlhttp = new XMLHttpRequest();
+                    } else if(window.ActiveXObject) {
+                        try {
+                            xmlhttp = new ActiveXObject("Msxml2.XMLHTTP");
+                        } catch (e) {
+                            try {
+                                xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+                            } catch (e) {
+                                xmlhttp = false;
+                            }
+                        }
+                    }
+                    return xmlhttp;
+                };
+
+                if (loading)
+                {
+                    loading();
+                }
+                var query = '';
+                for (var i in params)
+                {
+                    var param = params[i];
+                    if ('gb2312'==charset)
+                    {
+                        param = escape(param);
+                    }
+                    //最终解决 IE 中 GET 方式参数值传递不灵，给 UTF-8 字符集时统一加上 encodeURIComponent
+                    else
+                    {
+                        param = encodeURIComponent(param);
+                    }
+                    query+= i + '='+ param + '&';
+                }
+                var XHR = getHTTPObject();
+
+                //XHR.setRequestHeader("charset","gb2312");
+                XHR.onreadystatechange = function() {
+                    if (XHR.readyState == 4)    {
+                        if (XHR.status == 200 || XHR.status == 304) {
+                            if (onComplete)     {
+                                onComplete(XHR);
+                            }
+                        }
+                        else
+                        {
+                            if (onFailure)  {
+                                onFailure(XHR)
+                            };
+                        }
+                    }
+                };
+                method = ('get' == method.toLowerCase()) ? 'get':'post';
+                if ('post'==method)
+                {
+                    XHR.open(method, url, true);
+                    XHR.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+                    XHR.send(query);
+                }
+                else
+                {
+                    url += '?'+ query + 'random='+Math.random();
+                    XHR.open(method, url, true);
+                    XHR.send(null);
+                }
+            }
+        }
+    };
+
+#### ajax.php
+
+
+    <?php
+    //如果输入参数不是 unicode 格式的值，则会原样返回。
+    function unescape($str) {
+        $str = rawurldecode($str);
+        preg_match_all("/(?:%u.{4})|&#x.{4};|&#/d+;|.+/U",$str,$r);
+        $ar = $r[0];
+        //print_r($ar);
+        foreach($ar as $k=>$v) {
+            if(substr($v,0,2) == "%u")
+            $ar[$k] = iconv("UCS-2","GB2312",pack("H4",substr($v,-4)));
+            elseif(substr($v,0,3) == "&#x")
+            $ar[$k] = iconv("UCS-2","GB2312",pack("H4",substr($v,3,-1)));
+            elseif(substr($v,0,2) == "&#") {
+                echo substr($v,2,-1)."<br>";
+                $ar[$k] = iconv("UCS-2","GB2312",pack("n",substr($v,2,-1)));
+            }
+        }
+        return join("",$ar);
+    }
+
+    $test = isset($_GET['test']) ? $_GET['test'] : $_POST['test'];
+    //为确保输出内容为指定字符集，显式声明一下。要输出 GB2312 字符集内容时，
+    header("Content-type: text/html; charset=gb2312");
+    echo unescape($test);
+
+
+---
+*原文链接: https://www.snowpeak.fun/cn/article/detail/solve_garbled_chinese_in_ajax/*
