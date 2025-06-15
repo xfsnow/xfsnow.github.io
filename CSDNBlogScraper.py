@@ -18,7 +18,8 @@ class CSDNBlogScraper:
             'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36',
             'Referer': f'https://{username}.blog.csdn.net/',
             'Accept': 'application/json, text/plain, */*',
-            'Accept-Language': 'zh-CN,zh;q=0.9,en;q=0.8'
+            'Accept-Language': 'zh-CN,zh;q=0.9,en;q=0.8',
+            'cookie': r'uuid_tt_dd=10_19716680490-1742088980902-575738; fid=20_00926746272-1742088982574-981471; UserName=xfsnow; UserInfo=227d3c9769694c6891657f32c414902b; UserToken=227d3c9769694c6891657f32c414902b; UserNick=%E9%9B%AA%E5%B3%B0; AU=8E1; UN=xfsnow; BT=1742089005601; p_uid=U010000; tfstk=g1rtd6bWF6fi9WiljG_HmtbwqiXh-oew95yWmjcMlWFL3SKMjmmilxGLghq0n-avD8lejRqgnXhYiWic3N5NMdrLwnxG_NyXDmmfZ_jlqRzZ0m1urdViPfk4dj6n57dAHgifZ_jHwpsmlmNMz5GXpJGEHxMscSgBdXk2lmGslBTIFXGjcSgsdDM-BEMsCnsCpxlIGmibGJGKvOhFfY-YPECv8Pgn9ntbvA1qNRhKLvrKBVhSRXKXBkHtWbw_j4DLgvZ3v40Hn_iQUyVsp0I9aAUQecMY0TTxMqEZvvzFMEh8lR4zl2B1fJnt6qkIWLLIXrNaDVz93TyIfWzraV_FTvEgqqhrJB1_KJhsyrFGTnGgyJNKrkAHq0az9o3SVg57quIWSQc-nF6dpE8q5v-FdPmcHQqRavhlCVT2u4EEpbXCcE8qSlDKZ90puEuKZ; FCNEC=%5B%5B%22AKsRol9DB3yCdfFQyDnwdscIpXOveEWco3lRE6N0-0ttPbW2T3KeHs1_TTIwbQ3rnKzyZNxI2dG6FVy1Ww2jIop6fqFpXWJBMwwbWGe8V1uRukvB2eOgVTDraYmCPvJxAkDfKIvCJjj41IueCbLzsfcHpIdxqJ8kpQ%3D%3D%22%5D%5D; c_dl_um=-; csdn_newcert_xfsnow=1; __gads=ID=eeb53108a6ca8359:T=1742300652:RT=1749904535:S=ALNI_MaWhi7ave7Wkdw6HeZzgWcmFdzieg; __gpi=UID=00001066775c4ba8:T=1742300652:RT=1749904535:S=ALNI_MbJR-B38zXYqEDcxq86fl0_DiPSAw; __eoi=ID=8781a6c93e3590b3:T=1742300652:RT=1749904535:S=AA-AfjYeeJZJ7u9sAy_EE1yORAFl; dc_session_id=10_1749973346118.846695; c_segment=10; Hm_lvt_6bcd52f51e9b3dce32bec4a3997715ac=1749522325,1749643150,1749883501,1749973349; HMACCOUNT=85000109A43C15A7; bc_bot_session=17499733478f511cfb4b6935a8; dc_sid=c0fb2467283a79ad7c966f0f63e2eeb3; creative_btn_mp=3; _clck=mgo4b0%7C2%7Cfws%7C0%7C1901; bc_bot_token=10017499733478f511cfb4b6935a89b024f; bc_bot_rules=-; bc_bot_fp=3f103070fe46b5e3877e237f1f3e60f3; c_pref=default; c_first_ref=default; is_advert=1; _clsk=vi6laj%7C1749974985683%7C3%7C0%7Cj.clarity.ms%2Fcollect; c_dl_prid=1747143665416_290677; c_dl_rid=1749975655330_439298; c_dl_fref=https://snowpeak.blog.csdn.net/; c_dl_fpage=/download/xfsnow/1349589; c_ref=default; c_page_id=default; log_Id_click=18; c_first_page=https%3A//www.csdn.net/; c_dsid=11_1749976509240.903238; log_Id_pv=15; c-sidebar-collapse=0; c_ab_test=1; creativeSetApiNew=%7B%22toolbarImg%22%3A%22https%3A//i-operation.csdnimg.cn/images/cd1b1c49ffd24f5f99e0336910392b70.png%22%2C%22publishSuccessImg%22%3A%22https%3A//img-home.csdnimg.cn/images/20240229024608.png%22%2C%22articleNum%22%3A69%2C%22type%22%3A2%2C%22oldUser%22%3Atrue%2C%22useSeven%22%3Afalse%2C%22oldFullVersion%22%3Atrue%2C%22userName%22%3A%22xfsnow%22%7D; Hm_lpvt_6bcd52f51e9b3dce32bec4a3997715ac=1749976511; dc_tos=sxw2jq; dc_tos=sxw2kz; log_Id_view=407'
         })
         # 配置HTML到Markdown转换器
         self.html_converter = html2text.HTML2Text()
@@ -83,278 +84,9 @@ class CSDNBlogScraper:
             '发布': 'Release',
             '上线': 'Online',
             '下线': 'Offline',
-
-            # 工具和平台
-            'GitHub': 'GitHub',
-            'Copilot': 'Copilot',
-            'Azure': 'Azure',
-            'DevOps': 'DevOps',
-            'Docker': 'Docker',
-            'Kubernetes': 'Kubernetes',
-            'Jenkins': 'Jenkins',
-            'Git': 'Git',
-            'VS': 'VS',
-            'Visual': 'Visual',
-            'Studio': 'Studio',
-            'Code': 'Code',
-            'Python': 'Python',
-            'Java': 'Java',
-            'JavaScript': 'JavaScript',
-            'TypeScript': 'TypeScript',
-            'React': 'React',
-            'Vue': 'Vue',
-            'Angular': 'Angular',
-            'Node': 'Node',
-            'Spring': 'Spring',
-            'Boot': 'Boot',
-            'MySQL': 'MySQL',
-            'Redis': 'Redis',
-            'MongoDB': 'MongoDB',
-            'Elasticsearch': 'Elasticsearch',
-            'Nginx': 'Nginx',
-            'Apache': 'Apache',
-            'Linux': 'Linux',
-            'Windows': 'Windows',
-            'Mac': 'Mac',
-            'iOS': 'iOS',
-            'Android': 'Android',
-            'Web': 'Web',
-            'API': 'API',
-            'REST': 'REST',
-            'GraphQL': 'GraphQL',
-            'JSON': 'JSON',
-            'XML': 'XML',
-            'HTML': 'HTML',
-            'CSS': 'CSS',
-            'SQL': 'SQL',
-            'NoSQL': 'NoSQL',
-            'AI': 'AI',
-            'Machine': 'Machine',
-            'Learning': 'Learning',
-            'Deep': 'Deep',
-            'Neural': 'Neural',
-            'Network': 'Network',
-            'Model': 'Model',
-            'Training': 'Training',
-            'Data': 'Data',
-            'Science': 'Science',
-            'Analytics': 'Analytics',
-            'Big': 'Big',
-            'Cloud': 'Cloud',
-            'AWS': 'AWS',
-            'GCP': 'GCP',
-            'Serverless': 'Serverless',
-            'Lambda': 'Lambda',
-            'Function': 'Function',
-            'Edge': 'Edge',
-            'CDN': 'CDN',
-            'Load': 'Load',
-            'Balancer': 'Balancer',
-            'Proxy': 'Proxy',
-            'Gateway': 'Gateway',
-            'Firewall': 'Firewall',
-            'VPN': 'VPN',
-            'SSL': 'SSL',
-            'TLS': 'TLS',
-            'HTTPS': 'HTTPS',
-            'OAuth': 'OAuth',
-            'JWT': 'JWT',
-            'Token': 'Token',
-            'Session': 'Session',
-            'Cookie': 'Cookie',
-            'CORS': 'CORS',
-            'XSS': 'XSS',
-            'CSRF': 'CSRF',
-            'Injection': 'Injection',
-            'Vulnerability': 'Vulnerability',
-            'Penetration': 'Penetration',
-            'Audit': 'Audit',
-            'Compliance': 'Compliance',
-            'GDPR': 'GDPR',
-            'Privacy': 'Privacy',
-            'Encryption': 'Encryption',
-            'Decryption': 'Decryption',
-            'Hash': 'Hash',
-            'Salt': 'Salt',
-            'Key': 'Key',
-            'Certificate': 'Certificate',
-            'Signature': 'Signature',
-            'Verification': 'Verification',
-            'Validation': 'Validation',
-            'Sanitization': 'Sanitization',
-            'Escaping': 'Escaping',
-            'Encoding': 'Encoding',
-            'Decoding': 'Decoding',
-            'Compression': 'Compression',
-            'Optimization': 'Optimization',
-            'Minification': 'Minification',
-            'Bundle': 'Bundle',
-            'Webpack': 'Webpack',
-            'Rollup': 'Rollup',
-            'Vite': 'Vite',
-            'Babel': 'Babel',
-            'ESLint': 'ESLint',
-            'Prettier': 'Prettier',
-            'Jest': 'Jest',
-            'Cypress': 'Cypress',
-            'Selenium': 'Selenium',
-            'Playwright': 'Playwright',
-            'Puppeteer': 'Puppeteer',
-            'Storybook': 'Storybook',
-            'Design': 'Design',
-            'System': 'System',
-            'Component': 'Component',
-            'Library': 'Library',
-            'Framework': 'Framework',
-            'Pattern': 'Pattern',
-            'Architecture': 'Architecture',
-            'MVC': 'MVC',
-            'MVP': 'MVP',
-            'MVVM': 'MVVM',
-            'DDD': 'DDD',
-            'SOLID': 'SOLID',
-            'Clean': 'Clean',
-            'Refactoring': 'Refactoring',
-            'Code': 'Code',
-            'Review': 'Review',
-            'Quality': 'Quality',
-            'Metrics': 'Metrics',
-            'Coverage': 'Coverage',
-            'Unit': 'Unit',
-            'Integration': 'Integration',
-            'E2E': 'E2E',
-            'Smoke': 'Smoke',
-            'Load': 'Load',
-            'Stress': 'Stress',
-            'Performance': 'Performance',
-            'Benchmark': 'Benchmark',
-            'Profiling': 'Profiling',
-            'Memory': 'Memory',
-            'CPU': 'CPU',
-            'GPU': 'GPU',
-            'Disk': 'Disk',
-            'I/O': 'IO',
-            'Throughput': 'Throughput',
-            'Latency': 'Latency',
-            'Response': 'Response',
-            'Time': 'Time',
-            'SLA': 'SLA',
-            'SLO': 'SLO',
-            'SLI': 'SLI',
-            'Uptime': 'Uptime',
-            'Downtime': 'Downtime',
-            'Availability': 'Availability',
-            'Reliability': 'Reliability',
-            'Scalability': 'Scalability',
-            'Maintainability': 'Maintainability',
-            'Usability': 'Usability',
-            'Accessibility': 'Accessibility',
-            'Internationalization': 'I18n',
-            'Localization': 'L10n',
-            'SEO': 'SEO',
-            'PWA': 'PWA',
-            'SPA': 'SPA',
-            'SSR': 'SSR',
-            'CSR': 'CSR',
-            'SSG': 'SSG',
-            'JAMstack': 'JAMstack',
-            'Headless': 'Headless',
-            'CMS': 'CMS',
-            'E-commerce': 'Ecommerce',
-            'Payment': 'Payment',
-            'Gateway': 'Gateway',
-            'Webhook': 'Webhook',
-            'Event': 'Event',
-            'Driven': 'Driven',
-            'Message': 'Message',
-            'Queue': 'Queue',
-            'Pub/Sub': 'PubSub',
-            'Event': 'Event',
-            'Sourcing': 'Sourcing',
-            'CQRS': 'CQRS',
-            'Microservices': 'Microservices',
-            'Monolith': 'Monolith',
-            'Distributed': 'Distributed',
-            'Cluster': 'Cluster',
-            'Replica': 'Replica',
-            'Shard': 'Shard',
-            'Partition': 'Partition',
-            'Consensus': 'Consensus',
-            'Raft': 'Raft',
-            'Paxos': 'Paxos',
-            'Byzantine': 'Byzantine',
-            'Fault': 'Fault',
-            'Tolerance': 'Tolerance',
-            'CAP': 'CAP',
-            'Theorem': 'Theorem',
-            'ACID': 'ACID',
-            'BASE': 'BASE',
-            'Eventually': 'Eventually',
-            'Consistent': 'Consistent',
-            'Strong': 'Strong',
-            'Weak': 'Weak',
-            'Read': 'Read',
-            'Write': 'Write',
-            'Isolation': 'Isolation',
-            'Durability': 'Durability',
-            'Atomicity': 'Atomicity',
-            'Consistency': 'Consistency',
-            'Transaction': 'Transaction',
-            'Lock': 'Lock',
-            'Deadlock': 'Deadlock',
-            'Race': 'Race',
-            'Condition': 'Condition',
-            'Thread': 'Thread',
-            'Process': 'Process',
-            'Coroutine': 'Coroutine',
-            'Async': 'Async',
-            'Await': 'Await',
-            'Promise': 'Promise',
-            'Future': 'Future',
-            'Callback': 'Callback',
-            'Observer': 'Observer',
-            'Listener': 'Listener',
-            'Handler': 'Handler',
-            'Middleware': 'Middleware',
-            'Interceptor': 'Interceptor',
-            'Filter': 'Filter',
-            'Decorator': 'Decorator',
-            'Wrapper': 'Wrapper',
-            'Adapter': 'Adapter',
-            'Facade': 'Facade',
-            'Proxy': 'Proxy',
-            'Factory': 'Factory',
-            'Builder': 'Builder',
-            'Singleton': 'Singleton',
-            'Strategy': 'Strategy',
-            'Command': 'Command',
-            'State': 'State',
-            'Template': 'Template',
-            'Method': 'Method',
-            'Visitor': 'Visitor',
-            'Iterator': 'Iterator',
-            'Composite': 'Composite',
-            'Bridge': 'Bridge',
-            'Chain': 'Chain',
-            'Responsibility': 'Responsibility',
-            'Mediator': 'Mediator',
-            'Memento': 'Memento',
-            'Prototype': 'Prototype',
-            'Abstract': 'Abstract',
-            'Interface': 'Interface',
-            'Implementation': 'Implementation',
-            'Inheritance': 'Inheritance',
-            'Polymorphism': 'Polymorphism',
-            'Encapsulation': 'Encapsulation',
-            'Abstraction': 'Abstraction',
-            'Composition': 'Composition',
-            'Aggregation': 'Aggregation',
-            'Association': 'Association',
-            'Dependency': 'Dependency',
-            'Injection': 'Injection',
-            'Inversion': 'Inversion',
-            'Control': 'Control',
-            'Container': 'Container',
+            '腾讯': 'Tencent',
+            '域名': 'Domain',
+            '服务器': 'Server',
             '一': '1',
             '二': '2',
             '三': '3',
@@ -561,11 +293,12 @@ class CSDNBlogScraper:
 
         for i, article in enumerate(articles, 1):
             # 前4 个文章可以处理路过，从第 5 个开始处理
-            if i <= 4:
-                print(f"[{i}/{len(articles)}] 跳过处理: {article.get('title', 'Unknown')}")
-                continue
-            print(f"[{i}/{len(articles)}] 正在处理: {article.get('title', 'Unknown')}")
+            # # if i <= 4:
+            #     print(f"[{i}/{len(articles)}] 跳过处理: {article.get('title', 'Unknown')}")
+            #     continue
+            print(f"[{i}/{len(articles)}] 正在处理: {article.get('title', 'Unknown')} 来自: {article.get('url', 'Unknown URL')}")
             self.scrape_article_detail(article)
+            break
             # 添加延迟避免请求过快
             time.sleep(1)
             continue
@@ -583,11 +316,18 @@ class CSDNBlogScraper:
         response = self.session.get(url, timeout=30)
         response.raise_for_status()
         response.encoding = 'utf-8'
-
+        # 把 response.text 写出到文件，调试是否能正常获取到文章内容
+        # 发现如果是未登录状态，返回的文章只有前面一小部分！
+        with open('debug_article_content.html', 'w', encoding='utf-8') as f:
+            f.write(response.text)
+        print(response.text)
+        exit()
         soup = BeautifulSoup(response.text, 'html.parser')
 
         # 查找文章内容区域
-        article_content = soup.find('div', {'id': 'article_content', 'class': 'article_content clearfix'})
+        article_content = soup.find('article', {'class': 'baidu_pl'})
+        print(article_content)
+        exit()
         if not article_content:
             print(f"未找到文章内容区域: {article.get('title', 'Unknown')}")
             return
@@ -646,7 +386,7 @@ class CSDNBlogScraper:
                 ext = '.png'  # 默认扩展名
 
             # 生成文件名
-            publish_date = self.format_date(article.get('publish_time', ''))
+            publish_date = self.format_date(article.get('postTime', ''))
             title_keywords = self.extract_keywords(article.get('title', ''))
             filename = f"{publish_date}_{title_keywords}_{str(index).zfill(2)}{ext}"
 
@@ -720,13 +460,12 @@ class CSDNBlogScraper:
     def generate_front_matter(self, article):
         """生成Markdown文件头部信息"""
         title = article.get('title', 'Untitled').replace('"', '\\"')
-        publish_time = article.get('publish_time', '')
+        publish_time = article.get('postTime', '')
         original_url = article.get('url', '')
 
-        front_matter = f"""---
-title: "{title}"
-date: "{publish_time}"
-original_url: "{original_url}"
+        front_matter = f"""# {title}
+发布时间: *{publish_time}
+原文链接: [{original_url}]({original_url})
 ---
 
 """
@@ -746,7 +485,7 @@ original_url: "{original_url}"
 
     def generate_filename(self, article):
         """生成文件名"""
-        publish_date = self.format_date(article.get('publish_time', ''))
+        publish_date = self.format_date(article.get('postTime', ''))
         title_keywords = self.extract_keywords(article.get('title', ''))
         return f"{publish_date}_{title_keywords}.md"
 
@@ -770,63 +509,82 @@ original_url: "{original_url}"
             return datetime.now().strftime('%Y%m%d')
 
     def extract_keywords(self, title):
-        """从标题提取关键词并翻译成英文"""
+        """从标题提取关键词并翻译成英文 - 简化版本"""
         if not title:
             return 'article'
 
-        # 移除标点符号和特殊字符 - 修复转义序列
-        cleaned_title = re.sub(r'[《》【】「」『』""''()（）\[\]{},.，。、；：！？\-_=+*&^%$#@!~`|\\/<>]', ' ', title)
+        # 第一步：提取标题中的英文单词
+        english_words = re.findall(r'[a-zA-Z]+', title)
 
-        # 分词
-        words = [word.strip() for word in cleaned_title.split() if word.strip()]
+        if english_words:
+            # 如果有英文单词，取前3个用下划线连接
+            keywords = english_words[:3]
+            return '_'.join(keywords)
 
-        # 翻译关键词
-        translated_keywords = []
+        # 第二步：如果没有英文，使用技术词汇对照表
+        # 简化的技术词汇对照表
+        tech_translations = {
+            '使用': 'Using',
+            '插件': 'Plugin',
+            '识图': 'Vision',
+            '问答': 'QA',
+            '流水线': 'Pipeline',
+            '合并': 'Merge',
+            '源码库': 'Repository',
+            '源码': 'Source',
+            '部署': 'Deploy',
+            '配置': 'Config',
+            '开发': 'Dev',
+            '测试': 'Test',
+            '自动化': 'Auto',
+            '容器': 'Container',
+            '微服务': 'Microservice',
+            '数据库': 'Database',
+            '前端': 'Frontend',
+            '后端': 'Backend',
+            '接口': 'API',
+            '服务': 'Service',
+            '架构': 'Architecture',
+            '设计': 'Design',
+            '实现': 'Implementation',
+            '优化': 'Optimization',
+            '监控': 'Monitor',
+            '日志': 'Log',
+            '安全': 'Security',
+            '网络': 'Network',
+            '存储': 'Storage',
+            '缓存': 'Cache',
+            '消息': 'Message',
+            '性能': 'Performance',
+            '版本': 'Version',
+            '发布': 'Release',
+            '（一）': '1',
+            '（二）': '2',
+            '（三）': '3',
+            '（四）': '4',
+            '（五）': '5',
+            '(一)': '1',
+            '(二)': '2',
+            '(三)': '3',
+            '(四)': '4',
+            '(五)': '5'
+        }
 
-        for word in words:
-            # 检查完全匹配
-            if word in self.keyword_translations:
-                translated_keywords.append(self.keyword_translations[word])
-            else:
-                # 检查部分匹配
-                found_translation = False
-                for key, value in self.keyword_translations.items():
-                    if key in word or word in key:
-                        translated_keywords.append(value)
-                        found_translation = True
-                        break
+        # 查找匹配的技术词汇
+        found_keywords = []
+        for chinese_word, english_word in tech_translations.items():
+            if chinese_word in title and len(found_keywords) < 3:
+                found_keywords.append(english_word)
 
-                # 如果没有找到翻译，保留原词（如果是英文数字）或跳过
-                if not found_translation:
-                    if re.match(r'^[a-zA-Z0-9]+$', word):
-                        translated_keywords.append(word)
+        if found_keywords:
+            return '_'.join(found_keywords)
 
-        # 去重并限制数量
-        unique_keywords = []
-        seen = set()
-        for keyword in translated_keywords:
-            if keyword not in seen and len(unique_keywords) < 5:
-                unique_keywords.append(keyword)
-                seen.add(keyword)
-
-        # 如果没有关键词，返回默认值
-        if not unique_keywords:
-            return 'article'
-
-        # 连接关键词
-        result = '_'.join(unique_keywords)
-
-        # 确保结果长度合理
-        if len(result) > 100:
-            result = '_'.join(unique_keywords[:3])
-
-        return result
+        # 如果都没找到，返回默认值
+        return 'article'
 
 def main():
     """主函数"""
-    # 可以修改用户名
-    username = "xfsnow"  # 可以改为其他CSDN用户名
-
+    username = "snowpeak"
     scraper = CSDNBlogScraper(username)
 
     # # 获取所有文章
@@ -846,6 +604,8 @@ def main():
 
     # 从JSON文件抓取文章
     scraper.scrape_articles_from_json()
+    # TODO 折腾半天才发现 CSDN 限制登录状态，用 Python 不好模拟，现在只能是未登录状态抓取到的文章只有前面一部分。先不抓取了，因为有不少文章和自己博客上重复的，先整理自己的博客吧，没有在自己博客发布过的文章再手工补上。
+	# 而且从标题提取文件名也不好，还是手工提取和命名吧。
 
 if __name__ == "__main__":
     main()
