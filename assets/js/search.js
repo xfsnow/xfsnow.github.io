@@ -83,9 +83,6 @@ class ArticleSearch {
 
     createArticleCard(article) {
         const categoryInfo = window.categories[article.category];
-        const featuredBadge = article.featured ?
-            '<span class="featured-badge"><i class="fas fa-star"></i> 推荐</span>' : '';
-
         return `
             <article class="article-card" data-category="${article.category}">
                 <div class="article-header">
@@ -97,7 +94,6 @@ class ArticleSearch {
                         </span>
                     </div>
                     <h3>${article.title}</h3>
-                    ${featuredBadge}
                 </div>
                 <div class="article-content">
                     <p class="article-description">${article.description}</p>
@@ -121,33 +117,6 @@ class ArticleSearch {
         });
     }
 }
-
-// 添加推荐徽章样式
-const style = document.createElement('style');
-style.textContent = `
-    .featured-badge {
-        position: absolute;
-        top: 15px;
-        right: 15px;
-        background: #f59e0b;
-        color: white;
-        padding: 4px 8px;
-        border-radius: 12px;
-        font-size: 0.7rem;
-        font-weight: 600;
-    }
-
-    .article-header {
-        position: relative;
-    }
-
-    .category-tag {
-        font-weight: 600 !important;
-        border-radius: 8px !important;
-        padding: 4px 10px !important;
-    }
-`;
-document.head.appendChild(style);
 
 // 页面加载完成后初始化搜索
 document.addEventListener('DOMContentLoaded', () => {

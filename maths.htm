@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Snowpeak Tech Blog - AI与云计算技术分享</title>
+    <meta name="description" content="专注于AI、云计算、GitHub Copilot等前沿技术的分享与探讨">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.7.2/css/all.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html" style="text-decoration: none;"><h2><i class="fas fa-snowflake"></i> Snowpeak</h2></a>
+            </div>
+            <div class="nav-menu">
+                <a href="index.html#home" class="nav-link">首页</a>
+                <a href="index.html#articles" class="nav-link">文章</a>
+                <a href="index.html#tools" class="nav-link">工具</a>
+                <a href="index.html#about" class="nav-link">关于</a>
+            </div>
+            <div class="nav-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+    <header class="article-header">
+        <div class="container">
+            <h1>数学计算演练</h1>
+            <div class="article-meta">
+                <span><i class="fas fa-calendar"></i> 2024年1月15日</span>
+                <span><i class="fas fa-clock"></i> 阅读时间 5分钟</span>
+                <span><i class="fas fa-tag"></i> AI技术</span>
+                <span><i class="fas fa-user"></i> Snowpeak</span>
+            </div>
+        </div>
+    <!-- 数学计算保留（隐藏） -->
+    <div >
+        <script>
+            var maxPrimeNumber = function(n) {
+                if (n < 2) return 0;
+                var isPrime = new Array(n + 1).fill(true);
+                isPrime[0] = isPrime[1] = false;
+                for (var i = 2; i * i <= n; i++) {
+                    if (isPrime[i]) {
+                        for (var j = i * i; j <= n; j += i) {
+                            isPrime[j] = false;
+                        }
+                    }
+                }
+                for (var k = n; k >= 2; k--) {
+                    if (isPrime[k]) return k;
+                }
+                return -1;
+            };
+            document.write('100000以内最大质数是' + maxPrimeNumber(100000));
+        </script>
+    </div>
+</body>
+</html>

@@ -95,32 +95,3 @@ class ArticlePage {
 document.addEventListener('DOMContentLoaded', () => {
     new ArticlePage();
 });
-
-// 添加代码复制按钮样式
-const style = document.createElement('style');
-style.textContent = `
-    .copy-code-btn {
-        position: absolute;
-        top: 10px;
-        right: 10px;
-        background: var(--primary-color);
-        color: white;
-        border: none;
-        padding: 8px 10px;
-        border-radius: 4px;
-        cursor: pointer;
-        font-size: 0.8rem;
-        transition: all 0.3s ease;
-        opacity: 0.7;
-    }
-
-    .copy-code-btn:hover {
-        opacity: 1;
-        background: var(--accent-color);
-    }
-
-    pre:hover .copy-code-btn {
-        opacity: 1;
-    }
-`;
-document.head.appendChild(style);

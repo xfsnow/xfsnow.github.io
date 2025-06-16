@@ -1,3 +1,39 @@
+// 分类配置
+const categories = {
+    all: { name: '全部', color: '#64748b' },
+    ai: { name: 'AI技术', color: '#8b5cf6' },
+    azure: { name: 'Azure云', color: '#0078d4' },
+    copilot: { name: 'GitHub Copilot', color: '#24292f' },
+    tools: { name: '工具', color: '#059669' }
+};
+
+// 搜索索引构建
+function buildSearchIndex() {
+    const searchIndex = [];
+
+    articlesData.forEach(article => {
+        const searchText = [
+            article.title,
+            article.description,
+            ...article.tags,
+            article.category
+        ].join(' ').toLowerCase();
+
+        searchIndex.push({
+            ...article,
+            searchText
+        });
+    });
+
+    return searchIndex;
+}
+
+// 导出数据
+window.articlesData = articlesData;
+window.toolsData = toolsData;
+window.categories = categories;
+window.searchIndex = buildSearchIndex();
+
 class BlogApp {
     constructor() {
         this.init();
@@ -7,6 +43,7 @@ class BlogApp {
         this.initNavigation();
         this.initScrollEffects();
         this.initSmoothScroll();
+        this.renderTools(); // 添加工具渲染
     }
 
     initNavigation() {
@@ -88,6 +125,35 @@ class BlogApp {
                 }
             });
         });
+    }
+
+    renderTools() {
+        const toolsGrid = document.getElementById('toolsGrid');
+        if (!toolsGrid || !window.toolsData) {
+            console.warn('工具容器或数据未找到');
+            return;
+        }
+
+        // 清空容器
+        toolsGrid.innerHTML = '';
+
+        // 生成工具卡片
+        window.toolsData.forEach(tool => {
+            const toolCard = this.createToolCard(tool);
+            toolsGrid.appendChild(toolCard);
+        });
+    }
+
+    createToolCard(tool) {
+        const card = document.createElement('div');
+        card.className = 'tool-card';
+        card.innerHTML = `
+            <i class="${tool.icon}"></i>
+            <h3>${tool.title}</h3>
+            <p>${tool.description}</p>
+            <a href="${tool.url}" class="btn btn-outline">查看体验</a>
+        `;
+        return card;
     }
 }
 
