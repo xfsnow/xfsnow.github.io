@@ -110,7 +110,7 @@ body {
 
 /* 主页横幅 */
 .hero {
-    margin-top: 70px;
+    margin-top: 40px;
     background: var(--gradient-primary);
     color: white;
     padding: 80px 0;
@@ -334,24 +334,20 @@ body {
 .article-meta {
     display: flex;
     align-items: center;
-    gap: 15px;
+    justify-content: space-between;
     margin-bottom: 15px;
     font-size: 0.9rem;
-    opacity: 0.9;
 }
-
 .article-meta span {
     background: rgba(255, 255, 255, 0.2);
     padding: 4px 8px;
     border-radius: 12px;
     font-size: 0.85rem;
     font-weight: 500;
-    color: rgba(255, 255, 255, 0.9);
 }
 
 .article-meta span:last-child {
     background: rgba(255, 255, 255, 0.3);
-    color: white;
     font-weight: 600;
 }
 
@@ -371,6 +367,55 @@ body {
     line-height: 1.6;
 }
 
+.article-category {
+    padding: 6px 12px;
+    border-radius: 15px;
+    color: white;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.article-date {
+    color: var(--text-secondary);
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+
+/* 文章标题样式 */
+.article-title {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 12px;
+    line-height: 1.4;
+    transition: color 0.3s ease;
+}
+
+.article-title a {
+    color: inherit;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.article-title a:hover,
+.article-card:hover .article-title a {
+    color: var(--primary-color);
+}
+
+/* 文章描述样式 */
+.article-description {
+    color: var(--text-secondary);
+    margin-bottom: 15px;
+    line-height: 1.6;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+/* 文章标签样式 */
 .article-tags {
     display: flex;
     flex-wrap: wrap;
@@ -381,24 +426,18 @@ body {
 .tag {
     background: var(--bg-secondary);
     color: var(--text-secondary);
-    padding: 4px 12px;
-    border-radius: 15px;
-    font-size: 0.8rem;
+    padding: 4px 10px;
+    border-radius: 12px;
+    font-size: 0.75rem;
     font-weight: 500;
+    border: 1px solid var(--border-color);
+    transition: all 0.3s ease;
 }
 
-.read-more {
-    color: var(--primary-color);
-    text-decoration: none;
-    font-weight: 600;
-    display: inline-flex;
-    align-items: center;
-    gap: 5px;
-    transition: gap 0.3s ease;
-}
-
-.read-more:hover {
-    gap: 10px;
+.tag:hover {
+    background: var(--primary-color);
+    color: white;
+    border-color: var(--primary-color);
 }
 
 /* 工具区域 */
@@ -455,7 +494,6 @@ body {
     margin-bottom: 20px;
     opacity: 0.5;
 }
-
 /* 页脚 */
 .footer {
     background: var(--text-primary);
@@ -602,7 +640,6 @@ body {
     transform: scale(1.05);
     border-color: rgba(255, 255, 255, 0.4);
 }
-
 /* 响应式设计 */
 @media (max-width: 768px) {
     .nav-menu {
@@ -708,6 +745,14 @@ body {
         width: 60px;
         height: 60px;
     }
+
+    .article-meta {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+
+
 }
 
 @media (max-width: 480px) {
@@ -750,6 +795,23 @@ body {
         width: 100%;
         justify-content: center;
         max-width: 200px;
+    }
+
+    .article-card {
+        padding: 20px;
+    }
+
+    .article-title {
+        font-size: 1.1rem;
+    }
+
+    .article-description {
+        font-size: 0.9rem;
+    }
+
+    .lang-switch {
+        padding: 6px 12px;
+        font-size: 0.8rem;
     }
 }
 

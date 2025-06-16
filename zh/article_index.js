@@ -6,8 +6,7 @@ const articlesData = [
         url: 'doc/Claude_Cheatsheet.html',
         date: '2024-01-15',
         category: 'ai',
-        tags: ['Claude', 'AI', '提示工程', 'Prompt'],
-        readTime: '5分钟'
+        tags: ['Claude', 'AI', '提示工程', 'Prompt']
     },
     {
         id: 'github-copilot-mcp',
@@ -16,8 +15,7 @@ const articlesData = [
         url: 'doc/GitHub_Copilot_MCP.html',
         date: '2024-01-12',
         category: 'copilot',
-        tags: ['GitHub Copilot', 'MCP', '开发工具', 'AI编程'],
-        readTime: '8分钟'
+        tags: ['GitHub Copilot', 'MCP', '开发工具', 'AI编程']
     },
     {
         id: 'deepseek-prompts',
@@ -26,8 +24,7 @@ const articlesData = [
         url: 'doc/DeepSeek_Prompts.html',
         date: '2024-01-10',
         category: 'ai',
-        tags: ['DeepSeek', 'AI指令', 'Prompt', '中文AI'],
-        readTime: '10分钟'
+        tags: ['DeepSeek', 'AI指令', 'Prompt', '中文AI']
     },
     {
         id: 'ai-graph',
@@ -36,8 +33,7 @@ const articlesData = [
         url: 'doc/ai_graph.html',
         date: '2024-01-08',
         category: 'ai',
-        tags: ['AI技术', '机器学习', '深度学习', '图解'],
-        readTime: '15分钟'
+        tags: ['AI技术', '机器学习', '深度学习', '图解']
     },
     {
         id: 'nanoai-watermark',
@@ -46,8 +42,7 @@ const articlesData = [
         url: 'doc/NanoAI_watermark.html',
         date: '2024-01-05',
         category: 'ai',
-        tags: ['AI技术', '图像处理', '水印去除', '纳米AI'],
-        readTime: '6分钟'
+        tags: ['AI技术', '图像处理', '水印去除', '纳米AI']
     },
     {
         id: 'gpt-azure-ai',
@@ -56,8 +51,7 @@ const articlesData = [
         url: 'doc/GPT_in_Azure_AI.html',
         date: '2024-01-03',
         category: 'azure',
-        tags: ['Azure', 'GPT', 'AI Foundry', '云计算'],
-        readTime: '12分钟'
+        tags: ['Azure', 'GPT', 'AI Foundry', '云计算']
     },
     {
         id: 'deepseek-azure',
@@ -66,8 +60,7 @@ const articlesData = [
         url: 'doc/DeepSeek_Azure.html',
         date: '2024-01-01',
         category: 'azure',
-        tags: ['DeepSeek', 'Azure', '云部署', 'AI模型'],
-        readTime: '20分钟'
+        tags: ['DeepSeek', 'Azure', '云部署', 'AI模型']
     },
     {
         id: 'easydiffusion-azure',
@@ -76,8 +69,7 @@ const articlesData = [
         url: 'doc/EasyDiffusion_Azure_NC4as.html',
         date: '2023-12-28',
         category: 'azure',
-        tags: ['Azure', 'EasyDiffusion', 'Stable Diffusion', 'GPU'],
-        readTime: '15分钟'
+        tags: ['Azure', 'EasyDiffusion', 'Stable Diffusion', 'GPU']
     },
     {
         id: 'copilot-vision',
@@ -86,8 +78,7 @@ const articlesData = [
         url: 'doc/GitHub_Copilot_Vision.html',
         date: '2023-12-25',
         category: 'copilot',
-        tags: ['GitHub Copilot', 'Vision', '图像识别', 'AI插件'],
-        readTime: '10分钟'
+        tags: ['GitHub Copilot', 'Vision', '图像识别', 'AI插件']
     },
     {
         id: 'copilot-websearch',
@@ -96,8 +87,7 @@ const articlesData = [
         url: 'doc/GitHub_Copilot_WebSearch.html',
         date: '2023-12-22',
         category: 'copilot',
-        tags: ['GitHub Copilot', 'Web Search', '搜索插件', 'AI扩展'],
-        readTime: '8分钟'
+        tags: ['GitHub Copilot', 'Web Search', '搜索插件', 'AI扩展']
     }
 ];
 
@@ -152,3 +142,22 @@ const toolsData = [
         category: 'tools'
     }
 ];
+
+// 中文语言配置
+const langMap = {
+    'lang': 'zh-CN',
+    'langName': '中文',
+    'read': '阅读',
+    'article': '文章',
+    'noResults': '没有找到相关文章',
+    'tryOtherKeywords': '请尝试其他关键词或查看全部文章',
+    'buttonText': '查看体验',
+    'searchPlaceholder': '搜索文章标题、内容或标签...',
+    'categories': {
+        all: { name: '全部', color: '#64748b' },
+        ai: { name: 'AI技术', color: '#8b5cf6' },
+        azure: { name: 'Azure云', color: '#0078d4' },
+        copilot: { name: 'GitHub Copilot', color: '#24292f' },
+        tools: { name: '工具', color: '#059669' }
+    }
+};
