@@ -15,11 +15,11 @@ class CSDNBlogScraper:
         self.base_api_url = "https://blog.csdn.net/community/home-api/v1/get-business-list"
         self.session = requests.Session()
         self.session.headers.update({
-            'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36',
+            'User-Agent': 'Mozilla/5.0 (Linux; Android 13; Pixel 7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Mobile Safari/537.36 Edg/137.0.0.0',
             'Referer': f'https://{username}.blog.csdn.net/',
             'Accept': 'application/json, text/plain, */*',
             'Accept-Language': 'zh-CN,zh;q=0.9,en;q=0.8',
-            'cookie': r'uuid_tt_dd=10_19716680490-1742088980902-575738; fid=20_00926746272-1742088982574-981471; UserName=xfsnow; UserInfo=227d3c9769694c6891657f32c414902b; UserToken=227d3c9769694c6891657f32c414902b; UserNick=%E9%9B%AA%E5%B3%B0; AU=8E1; UN=xfsnow; BT=1742089005601; p_uid=U010000; tfstk=g1rtd6bWF6fi9WiljG_HmtbwqiXh-oew95yWmjcMlWFL3SKMjmmilxGLghq0n-avD8lejRqgnXhYiWic3N5NMdrLwnxG_NyXDmmfZ_jlqRzZ0m1urdViPfk4dj6n57dAHgifZ_jHwpsmlmNMz5GXpJGEHxMscSgBdXk2lmGslBTIFXGjcSgsdDM-BEMsCnsCpxlIGmibGJGKvOhFfY-YPECv8Pgn9ntbvA1qNRhKLvrKBVhSRXKXBkHtWbw_j4DLgvZ3v40Hn_iQUyVsp0I9aAUQecMY0TTxMqEZvvzFMEh8lR4zl2B1fJnt6qkIWLLIXrNaDVz93TyIfWzraV_FTvEgqqhrJB1_KJhsyrFGTnGgyJNKrkAHq0az9o3SVg57quIWSQc-nF6dpE8q5v-FdPmcHQqRavhlCVT2u4EEpbXCcE8qSlDKZ90puEuKZ; FCNEC=%5B%5B%22AKsRol9DB3yCdfFQyDnwdscIpXOveEWco3lRE6N0-0ttPbW2T3KeHs1_TTIwbQ3rnKzyZNxI2dG6FVy1Ww2jIop6fqFpXWJBMwwbWGe8V1uRukvB2eOgVTDraYmCPvJxAkDfKIvCJjj41IueCbLzsfcHpIdxqJ8kpQ%3D%3D%22%5D%5D; c_dl_um=-; csdn_newcert_xfsnow=1; __gads=ID=eeb53108a6ca8359:T=1742300652:RT=1749904535:S=ALNI_MaWhi7ave7Wkdw6HeZzgWcmFdzieg; __gpi=UID=00001066775c4ba8:T=1742300652:RT=1749904535:S=ALNI_MbJR-B38zXYqEDcxq86fl0_DiPSAw; __eoi=ID=8781a6c93e3590b3:T=1742300652:RT=1749904535:S=AA-AfjYeeJZJ7u9sAy_EE1yORAFl; dc_session_id=10_1749973346118.846695; c_segment=10; Hm_lvt_6bcd52f51e9b3dce32bec4a3997715ac=1749522325,1749643150,1749883501,1749973349; HMACCOUNT=85000109A43C15A7; bc_bot_session=17499733478f511cfb4b6935a8; dc_sid=c0fb2467283a79ad7c966f0f63e2eeb3; creative_btn_mp=3; _clck=mgo4b0%7C2%7Cfws%7C0%7C1901; bc_bot_token=10017499733478f511cfb4b6935a89b024f; bc_bot_rules=-; bc_bot_fp=3f103070fe46b5e3877e237f1f3e60f3; c_pref=default; c_first_ref=default; is_advert=1; _clsk=vi6laj%7C1749974985683%7C3%7C0%7Cj.clarity.ms%2Fcollect; c_dl_prid=1747143665416_290677; c_dl_rid=1749975655330_439298; c_dl_fref=https://snowpeak.blog.csdn.net/; c_dl_fpage=/download/xfsnow/1349589; c_ref=default; c_page_id=default; log_Id_click=18; c_first_page=https%3A//www.csdn.net/; c_dsid=11_1749976509240.903238; log_Id_pv=15; c-sidebar-collapse=0; c_ab_test=1; creativeSetApiNew=%7B%22toolbarImg%22%3A%22https%3A//i-operation.csdnimg.cn/images/cd1b1c49ffd24f5f99e0336910392b70.png%22%2C%22publishSuccessImg%22%3A%22https%3A//img-home.csdnimg.cn/images/20240229024608.png%22%2C%22articleNum%22%3A69%2C%22type%22%3A2%2C%22oldUser%22%3Atrue%2C%22useSeven%22%3Afalse%2C%22oldFullVersion%22%3Atrue%2C%22userName%22%3A%22xfsnow%22%7D; Hm_lpvt_6bcd52f51e9b3dce32bec4a3997715ac=1749976511; dc_tos=sxw2jq; dc_tos=sxw2kz; log_Id_view=407'
+            'cookie': r'uuid_tt_dd=10_19716680490-1742088980902-575738; fid=20_00926746272-1742088982574-981471; UserName=xfsnow; UserInfo=227d3c9769694c6891657f32c414902b; UserToken=227d3c9769694c6891657f32c414902b; UserNick=%E9%9B%AA%E5%B3%B0; AU=8E1; UN=xfsnow; BT=1742089005601; p_uid=U010000; tfstk=g1rtd6bWF6fi9WiljG_HmtbwqiXh-oew95yWmjcMlWFL3SKMjmmilxGLghq0n-avD8lejRqgnXhYiWic3N5NMdrLwnxG_NyXDmmfZ_jlqRzZ0m1urdViPfk4dj6n57dAHgifZ_jHwpsmlmNMz5GXpJGEHxMscSgBdXk2lmGslBTIFXGjcSgsdDM-BEMsCnsCpxlIGmibGJGKvOhFfY-YPECv8Pgn9ntbvA1qNRhKLvrKBVhSRXKXBkHtWbw_j4DLgvZ3v40Hn_iQUyVsp0I9aAUQecMY0TTxMqEZvvzFMEh8lR4zl2B1fJnt6qkIWLLIXrNaDVz93TyIfWzraV_FTvEgqqhrJB1_KJhsyrFGTnGgyJNKrkAHq0az9o3SVg57quIWSQc-nF6dpE8q5v-FdPmcHQqRavhlCVT2u4EEpbXCcE8qSlDKZ90puEuKZ; FCNEC=%5B%5B%22AKsRol9DB3yCdfFQyDnwdscIpXOveEWco3lRE6N0-0ttPbW2T3KeHs1_TTIwbQ3rnKzyZNxI2dG6FVy1Ww2jIop6fqFpXWJBMwwbWGe8V1uRukvB2eOgVTDraYmCPvJxAkDfKIvCJjj41IueCbLzsfcHpIdxqJ8kpQ%3D%3D%22%5D%5D; c_dl_um=-; csdn_newcert_xfsnow=1; c_dl_prid=1747143665416_290677; c_dl_rid=1749975655330_439298; c_dl_fref=https://snowpeak.blog.csdn.net/; c_dl_fpage=/download/xfsnow/1349589; c_ab_test=1; dc_session_id=10_1750559224543.256110; c_pref=default; c_first_ref=default; c_segment=10; dc_sid=50a134a543250a665b69c9e1507e1273; bc_bot_session=1750559225f3167365cd324455; Hm_lvt_6bcd52f51e9b3dce32bec4a3997715ac=1749973349,1750169545,1750509625,1750559226; HMACCOUNT=85000109A43C15A7; creativeSetApiNew=%7B%22toolbarImg%22%3A%22https%3A//i-operation.csdnimg.cn/images/cd1b1c49ffd24f5f99e0336910392b70.png%22%2C%22publishSuccessImg%22%3A%22https%3A//img-home.csdnimg.cn/images/20240229024608.png%22%2C%22articleNum%22%3A69%2C%22type%22%3A2%2C%22oldUser%22%3Atrue%2C%22useSeven%22%3Afalse%2C%22oldFullVersion%22%3Atrue%2C%22userName%22%3A%22xfsnow%22%7D; Hm_lvt_ec8a58cd84a81850bcbd95ef89524721=1750559257; Hm_lpvt_ec8a58cd84a81850bcbd95ef89524721=1750559257; c_first_page=https%3A//snowpeak.blog.csdn.net/article/details/130558658; c_dsid=11_1750559277166.576138; creative_btn_mp=3; c_ref=https%3A//snowpeak.blog.csdn.net/; c_page_id=default; log_Id_pv=6; Hm_lpvt_6bcd52f51e9b3dce32bec4a3997715ac=1750559337; dc_tos=sy8k8a; _clck=mgo4b0%7C2%7Cfwz%7C0%7C1901; __gads=ID=eeb53108a6ca8359:T=1742300652:RT=1750559338:S=ALNI_MaWhi7ave7Wkdw6HeZzgWcmFdzieg; __gpi=UID=00001066775c4ba8:T=1742300652:RT=1750559338:S=ALNI_MbJR-B38zXYqEDcxq86fl0_DiPSAw; __eoi=ID=8781a6c93e3590b3:T=1742300652:RT=1750559338:S=AA-AfjYeeJZJ7u9sAy_EE1yORAFl; _clsk=gwhvim%7C1750559339328%7C1%7C0%7Cy.clarity.ms%2Fcollect; log_Id_view=124'
         })
         # 配置HTML到Markdown转换器
         self.html_converter = html2text.HTML2Text()
@@ -298,10 +298,10 @@ class CSDNBlogScraper:
             #     continue
             print(f"[{i}/{len(articles)}] 正在处理: {article.get('title', 'Unknown')} 来自: {article.get('url', 'Unknown URL')}")
             self.scrape_article_detail(article)
-            break
+            # break
             # 添加延迟避免请求过快
-            time.sleep(1)
-            continue
+            time.sleep(3)
+            # continue
 
         print("所有文章处理完成!")
 
@@ -318,16 +318,15 @@ class CSDNBlogScraper:
         response.encoding = 'utf-8'
         # 把 response.text 写出到文件，调试是否能正常获取到文章内容
         # 发现如果是未登录状态，返回的文章只有前面一小部分！
-        with open('debug_article_content.html', 'w', encoding='utf-8') as f:
-            f.write(response.text)
-        print(response.text)
-        exit()
+        # with open('debug_article_content.html', 'w', encoding='utf-8') as f:
+        #     f.write(response.text)
+        # print(response.text)
+        # exit()
         soup = BeautifulSoup(response.text, 'html.parser')
 
-        # 查找文章内容区域
-        article_content = soup.find('article', {'class': 'baidu_pl'})
+        # 查找文章内容区域 <div id="content_views" > 下的内容
+        article_content = soup.find('div', {'id': 'content_views'})
         print(article_content)
-        exit()
         if not article_content:
             print(f"未找到文章内容区域: {article.get('title', 'Unknown')}")
             return
@@ -464,9 +463,14 @@ class CSDNBlogScraper:
         original_url = article.get('url', '')
 
         front_matter = f"""# {title}
-发布时间: *{publish_time}
+
+发布时间: *{publish_time}*
+
+简介: {article.get('description', '无描述')}
+
 原文链接: [{original_url}]({original_url})
----
+
+---------
 
 """
         return front_matter
@@ -523,52 +527,7 @@ class CSDNBlogScraper:
 
         # 第二步：如果没有英文，使用技术词汇对照表
         # 简化的技术词汇对照表
-        tech_translations = {
-            '使用': 'Using',
-            '插件': 'Plugin',
-            '识图': 'Vision',
-            '问答': 'QA',
-            '流水线': 'Pipeline',
-            '合并': 'Merge',
-            '源码库': 'Repository',
-            '源码': 'Source',
-            '部署': 'Deploy',
-            '配置': 'Config',
-            '开发': 'Dev',
-            '测试': 'Test',
-            '自动化': 'Auto',
-            '容器': 'Container',
-            '微服务': 'Microservice',
-            '数据库': 'Database',
-            '前端': 'Frontend',
-            '后端': 'Backend',
-            '接口': 'API',
-            '服务': 'Service',
-            '架构': 'Architecture',
-            '设计': 'Design',
-            '实现': 'Implementation',
-            '优化': 'Optimization',
-            '监控': 'Monitor',
-            '日志': 'Log',
-            '安全': 'Security',
-            '网络': 'Network',
-            '存储': 'Storage',
-            '缓存': 'Cache',
-            '消息': 'Message',
-            '性能': 'Performance',
-            '版本': 'Version',
-            '发布': 'Release',
-            '（一）': '1',
-            '（二）': '2',
-            '（三）': '3',
-            '（四）': '4',
-            '（五）': '5',
-            '(一)': '1',
-            '(二)': '2',
-            '(三)': '3',
-            '(四)': '4',
-            '(五)': '5'
-        }
+        tech_translations = self.keyword_translations
 
         # 查找匹配的技术词汇
         found_keywords = []
