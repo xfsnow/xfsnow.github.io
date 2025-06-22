@@ -448,8 +448,15 @@ class CSDNBlogScraper:
         # 移除多余的空行
         markdown = re.sub(r'\n{3,}', '\n\n', markdown)
 
-        # 确保代码块格式正确
-        markdown = re.sub(r'```\n```', '```\n\n```', markdown)
+        # 确保代码块格式正确。生成的markdown中源代码是以“    ```”开始，并以“    ```”结束的，包括这2行之间的若干行，所有这些行都的前4个空格字符都是多余的，把它们清理掉。
+        markdown = re.sub(r'(?m)^( {4})+', '', markdown)
+        # 确保代码块以```开始和结束
+        markdown = re.sub(r'(?m)^```', '```', markdown)
+        markdown = re.sub(r'(?m)```$', '```', markdown)
+        # 确保每个代码块之间有一个空行
+        # markdown = re.sub(r'(?m)```(\n+)', '```\n\n', markdown)
+        # print(markdown)
+        # exit()
 
         # 移除HTML注释
         markdown = re.sub(r'<!--.*?-->', '', markdown, flags=re.DOTALL)
