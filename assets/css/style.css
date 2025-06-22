@@ -113,7 +113,7 @@ body {
     margin-top: 40px;
     background: var(--gradient-primary);
     color: white;
-    padding: 80px 0;
+    padding: 40px 0 10px 0 ;
     overflow: hidden;
 }
 
@@ -698,7 +698,7 @@ body {
     }
 
     .hero-image {
-        font-size: 5rem;
+        display: none;
     }
 
     .hero-buttons {
@@ -751,8 +751,6 @@ body {
         align-items: flex-start;
         gap: 8px;
     }
-
-
 }
 
 @media (max-width: 480px) {
