@@ -156,7 +156,3 @@ class SearchHandler {
 document.addEventListener('DOMContentLoaded', () => {
     new SearchHandler();
 });
-// 页面加载完成后初始化搜索功能
-document.addEventListener('DOMContentLoaded', () => {
-    new SearchHandler();
-});
