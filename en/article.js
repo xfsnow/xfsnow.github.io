@@ -1,4 +1,4 @@
-const articlesData = [
+const articles = [
     {
         id: 'claude-cheatsheet',
         title: 'Claude Prompts Cheatsheet',
@@ -92,7 +92,7 @@ const articlesData = [
 ];
 
 // Tools data
-const toolsData = [
+const tools = [
     {
         id: 'image-process',
         title: 'Responsive Image Processing',
@@ -144,7 +144,7 @@ const toolsData = [
 ];
 
 // 英文语言配置
-const langMap = {
+const lang = {
     'lang': 'en',
     'langName': 'English',
     'read': 'read',

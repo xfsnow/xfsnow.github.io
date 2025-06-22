@@ -1,12 +1,12 @@
 // 导出数据到全局
-window.articlesData = typeof articlesData !== 'undefined' ? articlesData : [];
-window.toolsData = typeof toolsData !== 'undefined' ? toolsData : [];
-window.langMap = typeof langMap !== 'undefined' ? langMap : {};
+window.articles = typeof articles !== 'undefined' ? articles : [];
+window.tools = typeof tools !== 'undefined' ? tools : [];
+window.lang = typeof lang !== 'undefined' ? lang : {};
 
 class Blog {
     constructor() {
         this.currentLang = document.documentElement.lang || 'zh-CN';
-        this.langConfig = window.langMap || {};
+        this.langConfig = window.lang || {};
 
         // 搜索相关属性
         this.searchInput = document.getElementById('searchInput');
@@ -25,8 +25,8 @@ class Blog {
     buildSearchIndex() {
         const searchIndex = [];
 
-        if (typeof articlesData !== 'undefined') {
-            articlesData.forEach(article => {
+        if (typeof articles !== 'undefined') {
+            articles.forEach(article => {
                 const searchText = [
                     article.title,
                     article.description,
@@ -163,7 +163,7 @@ class Blog {
 
     renderTools() {
         const toolsGrid = document.getElementById('toolsGrid');
-        if (!toolsGrid || !window.toolsData) {
+        if (!toolsGrid || !window.tools) {
             console.warn('工具容器或数据未找到');
             return;
         }
@@ -172,7 +172,7 @@ class Blog {
         toolsGrid.innerHTML = '';
 
         // 生成工具卡片
-        window.toolsData.forEach(tool => {
+        window.tools.forEach(tool => {
             const toolCard = this.createToolCard(tool);
             toolsGrid.appendChild(toolCard);
         });
@@ -241,7 +241,7 @@ class Blog {
     }
 
     renderArticles() {
-        if (!this.articlesGrid || !window.articlesData) return;
+        if (!this.articlesGrid || !window.articles) return;
 
         const filteredArticles = this.filterArticles();
 
@@ -260,7 +260,7 @@ class Blog {
     }
 
     filterArticles() {
-        let articles = window.articlesData || [];
+        let articles = window.articles || [];
 
         // 分类筛选
         if (this.currentFilter !== 'all') {

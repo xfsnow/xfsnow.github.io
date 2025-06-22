@@ -787,7 +787,6 @@ body {
     }
 
     .social-platforms {
-        flex-direction: column;
         align-items: center;
     }
 

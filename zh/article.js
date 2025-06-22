@@ -1,4 +1,4 @@
-const articlesData = [
+const articles = [
     {
         id: 'claude-cheatsheet',
         title: 'Claude 提示语一览',
@@ -92,7 +92,7 @@ const articlesData = [
 ];
 
 // 工具数据
-const toolsData = [
+const tools = [
     {
         id: 'image-process',
         title: '响应式图片处理',
@@ -144,7 +144,7 @@ const toolsData = [
 ];
 
 // 中文语言配置
-const langMap = {
+const lang = {
     'lang': 'zh-CN',
     'langName': '中文',
     'read': '阅读',
