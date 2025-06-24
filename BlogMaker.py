@@ -65,15 +65,15 @@ class BlogMaker:
                     time_str += ' 00:00:00'
                 article_info['time_publish'] = time_str
 
-            # 提取分类
-            category_pattern = r'分类:\s*__?([^_\n]+)__?'
+            # 提取分类 - 更新正则表达式以匹配双下划线格式
+            category_pattern = r'分类:\s*__([^_\n]+)__'
             category_match = re.search(category_pattern, content)
             if category_match:
                 category = category_match.group(1).strip()
                 article_info['category'] = self.map_category(category)
             else:
-                # 默认分类
-                article_info['category'] = 'tools'
+                # 如果没有找到分类，尝试从文件名或内容推断
+                article_info['category'] = self.infer_category_from_content(content, filename)
 
             # 提取简介
             intro_pattern = r'简介:\s*([^\n]+(?:\n[^\n-]+)*)'
@@ -98,16 +98,49 @@ class BlogMaker:
     def map_category(self, category: str):
         """将中文分类映射为英文分类标识"""
         category_map = {
-            'AI技术': 'ai',
-            'Azure云': 'azure',
-            'GitHub Copilot': 'copilot',
-            '综合开发': 'tools',
-            '工具': 'tools',
-            '开发工具': 'tools',
-            '云计算': 'azure',
-            '人工智能': 'ai'
+            'AI技术': 'AI',
+            'Azure云': 'Azure',
+            'GitHub Copilot': 'GitHub',
+            '综合开发': 'Development',
+            '工具': 'Tools',
+            '开发工具': 'Tools',
+            '云计算': 'Cloud Computing',
+            '人工智能': 'AI',
+            '服务器端技术': 'Backend',
+            '数据库': 'Database',
+            '前端技术': 'Frontend',
+            'Web开发': 'Web',
+            '系统管理': 'System',
+            '网络技术': 'Network',
+            '移动开发': 'Mobile',
+            '软件工程': 'Software',
+            '编程语言': 'Programming',
+            '框架技术': 'Framework'
         }
-        return category_map.get(category, 'tools')
+        return category_map.get(category, 'Tools')
+
+    def infer_category_from_content(self, content: str, filename: str):
+        """从内容或文件名推断分类"""
+        content_lower = content.lower()
+        filename_lower = filename.lower()
+
+        # AI相关关键词
+        ai_keywords = ['ai', 'gpt', 'copilot', 'openai', 'claude', 'deepseek', 'vision', '人工智能', '机器学习', '深度学习']
+        if any(keyword in content_lower or keyword in filename_lower for keyword in ai_keywords):
+            return 'ai'
+
+        # Azure相关关键词
+        azure_keywords = ['azure', 'cloud', '云计算', '云服务', 'vm', 'virtual machine']
+        if any(keyword in content_lower or keyword in filename_lower for keyword in azure_keywords):
+            return 'azure'
+
+        # GitHub Copilot相关关键词
+        copilot_keywords = ['copilot', 'github copilot', 'mcp', 'vision plugin']
+        if any(keyword in content_lower or keyword in filename_lower for keyword in copilot_keywords):
+            return 'copilot'
+
+        # 默认分类
+        return 'tools'
 
     def extract_description_from_content(self, content: str):
         """从文章内容中提取描述"""
