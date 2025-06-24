@@ -194,12 +194,12 @@ class Blog {
     createToolCard(tool) {
         const card = document.createElement('div');
         card.className = 'tool-card';
-        const buttonText = this.langConfig.buttonText || '查看体验';
+        const ReadTry = this.langConfig.ReadTry || '查看体验';
         card.innerHTML = `
             <i class="${tool.icon}"></i>
             <h3>${tool.title}</h3>
             <p>${tool.description}</p>
-            <a href="${tool.url}" class="btn btn-outline">${buttonText}</a>
+            <a href="${tool.url}" class="btn btn-outline">${ReadTry}</a>
         `;
         return card;
     }
