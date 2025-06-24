@@ -30,7 +30,6 @@ class Blog {
                 const searchText = [
                     article.title,
                     article.description,
-                    ...article.tags,
                     article.category
                 ].join(' ').toLowerCase();
 
@@ -274,8 +273,7 @@ class Blog {
             articles = articles.filter(article => {
                 const searchText = [
                     article.title,
-                    article.description,
-                    ...article.tags
+                    article.description
                 ].join(' ').toLowerCase();
 
                 return searchText.includes(this.currentQuery);
@@ -304,9 +302,6 @@ class Blog {
                 <a href="${article.url}">${article.title}</a>
             </h3>
             <p class="article-description">${article.description}</p>
-            <div class="article-tags">
-                ${article.tags.map(tag => `<span class="tag">${tag}</span>`).join('')}
-            </div>
         `;
 
         return card;
