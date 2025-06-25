@@ -3,23 +3,44 @@ import os
 import re
 import json
 from datetime import datetime
+from View import View  # 修正导入方式
 
 class BlogMaker:
+    def __init__(self):
+        """初始化 BlogMaker 类"""
+        self.site = {
+            'title': '博客',
+            'description': '专注于AI、云计算、GitHub Copilot等前沿技术的分享与探讨',
+            'keywords': 'AI, GitHub Copilot, Azure云, 云计算, 前端技术, 后端技术, Web开发, 软件工程',
+        }
+        self.view = View()
 
-    def make_homepage(self, path: str = 'zh'):
+
+    def make_home(self, path: str = 'zh'):
         """读取 index.js 文件，解析文章数据并生成首页 HTML"""
         js_file = os.path.join(path, 'index.js')
+        data = {}
         # 一次性读出 index.js 文件全部内容，把前面的 const articles = 去掉，结尾的分号也去掉，最后 json.loads() 解析成 Python 对象
-        try:
-            with open(js_file, 'r', encoding='utf-8') as f:
-                content = f.read()
-                content = content.replace('const articles = ', '').rstrip(';')
-                articles = json.loads(content)
-                print(articles)
-        except Exception as e:
-            print(f"读取或解析 {js_file} 时出错: {e}")
-            return
 
+        with open(js_file, 'r', encoding='utf-8') as f:
+            content = f.read()
+            content = content.replace('const articles = ', '').rstrip(';')
+            articles = json.loads(content)
+            # 取最前 10 条
+            data['articles'] = articles[:10]
+
+        # 加载 tools.json 文件
+        tools_file = os.path.join(path, 'tools.json')
+        if os.path.exists(tools_file):
+            with open(tools_file, 'r', encoding='utf-8') as f:
+                data['tools'] = json.load(f)
+        else:
+            data['tools'] = []
+
+        # 渲染模板
+        html_content = self.view.render_template('zh.html', site=self.site, data=data)
+        # 保存生成的 HTML 文件
+        self.view.write_html(os.path.join(path, 'zh.htm'), html_content)
 
 
 
@@ -231,4 +252,4 @@ class BlogMaker:
 if __name__ == "__main__":
     blog_maker = BlogMaker()
     # blog_maker.main()
-    blog_maker.make_homepage('en')  # 生成中文文章索引
+    blog_maker.make_home('zh')  # 生成中文文章索引

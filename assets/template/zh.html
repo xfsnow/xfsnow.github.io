@@ -1,0 +1,68 @@
+{% include 'inc.begin.html' %}
+    <!-- 搜索区域 -->
+    <section class="search-section">
+        <div class="container">
+            <div class="search-container">
+                <div class="search-box">
+                    <i class="fas fa-search"></i>
+                    <input type="text" id="searchInput" placeholder="搜索文章标题、内容或标签...">
+                </div>
+                <div class="search-filters">
+                    <button class="filter-btn active" data-category="all">全部</button>
+                    <button class="filter-btn" data-category="ai">AI技术</button>
+                    <button class="filter-btn" data-category="azure">Azure云</button>
+                    <button class="filter-btn" data-category="copilot">GitHub Copilot</button>
+                    <button class="filter-btn" data-category="tools">工具</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 文章列表 -->
+    <section id="articles" class="articles-section">
+        <div class="container">
+            <h2 class="section-title">最新文章</h2>
+            <div class="articles-grid" id="articlesGrid">
+{% for article in data.articles %}
+                <div class="article-card">
+            <div class="article-meta">
+                <span class="article-category article-category-{{ article.category }}">
+                    {{ article.category }}
+                </span>
+                <span class="article-date">{{ article.time_publish }}</span>
+            </div>
+            <h3 class="article-title">
+                <a href="{{ article.url }}">{{ article.title }}</a>
+            </h3>
+            <p class="article-description">{{ article.description }}</p>
+        </div>
+{% endfor %}
+            </div>
+            </div>
+
+            <!-- 搜索结果为空时显示 -->
+            <div class="no-results" id="noResults" style="display: none;">
+                <i class="fas fa-search"></i>
+                <h3>没有找到相关文章</h3>
+                <p>请尝试其他关键词或查看全部文章</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 工具区域 -->
+    <section id="tools" class="tools-section">
+        <div class="container">
+            <h2 class="section-title">范例演示</h2>
+            <div class="tools-grid" id="toolsGrid">
+            {% for tool in data.tools %}
+            <div class="tool-card">
+            <i class="{{ tool.icon }}"></i>
+            <h3>{{ tool.title }}</h3>
+            <p>{{ tool.description }}</p>
+            <a href="{{ tool.url }}" class="btn btn-outline">查看体验</a>
+            </div>
+            {% endfor %}
+        </div>
+        </div>
+    </section>
+{% include 'inc.end.html' %}
