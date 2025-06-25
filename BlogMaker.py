@@ -6,8 +6,43 @@ from datetime import datetime
 
 class BlogMaker:
 
-    def markdown_to_html(self, markdown_text):
-        return markdown.markdown(markdown_text)
+    def make_homepage(self, path: str = 'zh'):
+        """读取 index.js 文件，解析文章数据并生成首页 HTML"""
+        js_file = os.path.join(path, 'index.js')
+        # 一次性读出 index.js 文件全部内容，把前面的 const articles = 去掉，结尾的分号也去掉，最后 json.loads() 解析成 Python 对象
+        try:
+            with open(js_file, 'r', encoding='utf-8') as f:
+                content = f.read()
+                content = content.replace('const articles = ', '').rstrip(';')
+                articles = json.loads(content)
+                print(articles)
+        except Exception as e:
+            print(f"读取或解析 {js_file} 时出错: {e}")
+            return
+
+
+
+
+
+    # markdown 转成HTML，然后再带上模板的页眉和页脚
+    def article(self, title: str, description: str, time_publish: str, category: str):
+        """生成文章的 HTML 结构"""
+        return f"""
+        <article>
+            <h2>{title}</h2>
+            <p>{description}</p>
+            <time datetime="{time_publish}">{time_publish}</time>
+            <span class="category">{category}</span>
+        </article>
+        """
+
+    # 生成文章列表的分页 HTML 文件，同样也带上模板的页眉和页脚
+    def pagination(self, articles: list, page_size: int = 10):
+        """对文章列表进行分页"""
+        pages = []
+        for i in range(0, len(articles), page_size):
+            pages.append(articles[i:i + page_size])
+        return pages
 
     def index_article(self, path: str = 'zh'):
         """遍历指定目录下的所有 Markdown 文件，提取文章信息并生成索引"""
@@ -41,8 +76,9 @@ class BlogMaker:
                 content = f.read()
 
             lines = content.split('\n')
+            fileUrl = filename.replace('.md', '.htm')
             article_info = {
-                'filename': filename,
+                'filename': fileUrl,
                 'title': '',
                 'description': '',
                 'time_publish': '',
@@ -168,27 +204,8 @@ class BlogMaker:
         return description if description else '暂无描述'
 
     def generate_article_js(self, articles: list, path: str):
-        """生成 JavaScript 文件"""
-        # 生成文章数据
-        js_content = "const articles = [\n"
-
-        for article in articles:
-            js_content += "    {\n"
-            js_content += f"        url: '{article['filename'].replace('.md', '.htm')}',\n"
-            js_content += f"        title: '{article['title'].replace('\"', '\\\"')}',\n"
-            js_content += f"        description: '{article['description'].replace('\"', '\\\"')}',\n"
-            js_content += f"        time_publish: '{article['time_publish']}',\n"
-            js_content += f"        category: '{article['category']}'\n"
-            js_content += "    },\n"
-
-        js_content += "];\n\n"
-
-        # 添加工具数据和语言配置
-        if path == 'zh':
-            js_content += self.get_zh_tools_and_lang()
-        else:
-            js_content += self.get_en_tools_and_lang()
-
+        # json.dumps() 不带格式和缩进，可以精简输出文件的体积
+        js_content = "const articles = " + json.dumps(articles, ensure_ascii=False) + ";"
         # 保存到文件
         output_file = os.path.join(path, 'index.js')
         with open(output_file, 'w', encoding='utf-8') as f:
@@ -196,155 +213,6 @@ class BlogMaker:
 
         print(f"已生成 {len(articles)} 篇文章的索引文件: {output_file}")
 
-    def get_zh_tools_and_lang(self):
-        """获取中文版工具和语言配置"""
-        return '''
-// 工具数据
-const tools = [
-    {
-        id: 'image-process',
-        title: '响应式图片处理',
-        description: '在线图片压缩和格式转换工具',
-        url: 'imageprocess/',
-        icon: 'fas fa-images',
-        category: 'tools'
-    },
-    {
-        id: 'ai-assistant',
-        title: 'AI 虚拟助手',
-        description: '智能对话和问答助手',
-        url: 'va/',
-        icon: 'fas fa-robot',
-        category: 'tools'
-    },
-    {
-        id: 'azure-icons',
-        title: 'Azure图标汇总',
-        description: '完整的Azure服务图标集合',
-        url: 'AzureIcon/',
-        icon: 'fas fa-cloud',
-        category: 'tools'
-    },
-    {
-        id: 'english-test',
-        title: '英语能力测试',
-        description: '初中英语水平在线测试系统',
-        url: 'english_middle/',
-        icon: 'fas fa-graduation-cap',
-        category: 'tools'
-    },
-    {
-        id: 'school-regions',
-        title: '北京学校划片数据',
-        description: '北京地区学校划片信息查询',
-        url: 'schools.htm',
-        icon: 'fas fa-map',
-        category: 'tools'
-    },
-    {
-        id: 'maths',
-        title: '数学计算演练',
-        description: '在线数学计算题库，支持多种题型',
-        url: 'maths.htm',
-        icon: 'fas fa-calculator',
-        category: 'tools'
-    }
-];
-
-// 中文语言配置
-const lang = {
-    'lang': 'zh-CN',
-    'langName': '中文',
-    'read': '阅读',
-    'article': '文章',
-    'noResults': '没有找到相关文章',
-    'tryOtherKeywords': '请尝试其他关键词或查看全部文章',
-    'ReadTry': '查看体验',
-    'searchPlaceholder': '搜索文章标题、内容或标签...',
-    'categories': {
-        all: { name: '全部', color: '#64748b' },
-        ai: { name: 'AI技术', color: '#8b5cf6' },
-        azure: { name: 'Azure云', color: '#0078d4' },
-        copilot: { name: 'GitHub Copilot', color: '#24292f' },
-        tools: { name: '工具', color: '#059669' }
-    }
-};
-'''
-
-    def get_en_tools_and_lang(self):
-        """获取英文版工具和语言配置"""
-        return '''
-// Tools data
-const tools = [
-    {
-        id: 'image-process',
-        title: 'Responsive Image Processing',
-        description: 'Online image compression and format conversion tool',
-        url: '../imageprocess/',
-        icon: 'fas fa-images',
-        category: 'tools'
-    },
-    {
-        id: 'ai-assistant',
-        title: 'AI Virtual Assistant',
-        description: 'Intelligent dialogue and Q&A assistant',
-        url: '../va/',
-        icon: 'fas fa-robot',
-        category: 'tools'
-    },
-    {
-        id: 'azure-icons',
-        title: 'Azure Icons Collection',
-        description: 'Complete collection of Azure service icons',
-        url: '../AzureIcon/',
-        icon: 'fas fa-cloud',
-        category: 'tools'
-    },
-    {
-        id: 'english-test',
-        title: 'English Proficiency Test',
-        description: 'Online middle school English level testing system',
-        url: '../english_middle/',
-        icon: 'fas fa-graduation-cap',
-        category: 'tools'
-    },
-    {
-        id: 'school-regions',
-        title: 'Beijing School District Data',
-        description: 'Beijing area school district information query',
-        url: '../schools.htm',
-        icon: 'fas fa-map',
-        category: 'tools'
-    },
-    {
-        id: 'maths',
-        title: 'Math Calculation Practice',
-        description: 'Online math problem bank supporting multiple question types',
-        url: '../maths.htm',
-        icon: 'fas fa-calculator',
-        category: 'tools'
-    }
-};
-
-// 英文语言配置
-const lang = {
-    'lang': 'en',
-    'langName': 'English',
-    'read': 'read',
-    'article': 'article',
-    'noResults': 'No related articles found',
-    'tryOtherKeywords': 'Please try other keywords or view all articles',
-    'ReadTry': 'Read & try',
-    'searchPlaceholder': 'Search article titles, content or tags...',
-    'categories': {
-        all: { name: 'All', color: '#64748b' },
-        ai: { name: 'AI Technology', color: '#8b5cf6' },
-        azure: { name: 'Azure Cloud', color: '#0078d4' },
-        copilot: { name: 'GitHub Copilot', color: '#24292f' },
-        tools: { name: 'Tools', color: '#059669' }
-    }
-};
-'''
 
     def main(self):
         # 处理中文文章
@@ -356,6 +224,11 @@ const lang = {
             en_articles = self.index_article('en')
             print(f"处理了 {len(en_articles)} 篇英文文章")
 
+        # 生成首页 HTML
+        # print("\n=== 测试解析 index.js 文件 ===")
+        # self.make_homepage('zh')  # 生成中文首页
+
 if __name__ == "__main__":
     blog_maker = BlogMaker()
-    blog_maker.main()
+    # blog_maker.main()
+    blog_maker.make_homepage('en')  # 生成中文文章索引

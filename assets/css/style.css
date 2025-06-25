@@ -377,6 +377,75 @@ body {
     letter-spacing: 0.5px;
 }
 
+/* 'AI技术': 'AI',
+            'Azure云': 'Azure',
+            'GitHub Copilot': 'GitHub',
+            '综合开发': 'Development',
+            '工具': 'Tools',
+            '开发工具': 'Tools',
+            '云计算': 'Cloud Computing',
+            '人工智能': 'AI',
+            '服务器端技术': 'Backend',
+            '数据库': 'Database',
+            '前端技术': 'Frontend',
+            'Web开发': 'Web',
+            '系统管理': 'System',
+            '网络技术': 'Network',
+            '移动开发': 'Mobile',
+            '软件工程': 'Software',
+            '编程语言': 'Programming',
+            '框架技术': 'Framework' */
+.article-category-AI {
+    background: #8b5cf6;
+}
+
+.article-category-Azure {
+    background: #3b82f6;
+}
+.article-category-GitHub {
+    background: #f97316;
+}
+.article-category-Development {
+    background: #f59e0b;
+}
+.article-category-Tools {
+    background: #10b981;
+}
+.article-category-Cloud {
+    background: #0ea5e9;
+}
+.article-category-Backend {
+    background: #6366f1;
+}
+.article-category-Database {
+    background: #ef4444;
+}
+.article-category-Frontend {
+    background: #f43f5e;
+}
+.article-category-Web {
+    background: #e879f9;
+}
+.article-category-System {
+    background: #facc15;
+}
+.article-category-Network {
+    background: #22d3ee;
+}
+.article-category-Mobile {
+    background: #f472b6;
+}
+.article-category-Software {
+    background: #a78bfa;
+}
+.article-category-Programming {
+    background: #f87171;
+}
+.article-category-Framework {
+    background: #a3e635;
+}
+
+
 .article-date {
     color: var(--text-secondary);
     font-size: 0.85rem;
@@ -410,7 +479,6 @@ body {
     margin-bottom: 15px;
     line-height: 1.6;
     display: -webkit-box;
-    -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
     overflow: hidden;
 }
