@@ -223,14 +223,15 @@ body {
 }
 
 .search-container {
-    max-width: 800px;
     margin: 0 auto;
     text-align: center;
 }
 
 .search-box {
+    max-width: 800px;
+    margin: 0 auto;
     position: relative;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
 }
 
 .search-box i {

@@ -1,13 +1,8 @@
 // 导出数据到全局
 window.articles = typeof articles !== 'undefined' ? articles : [];
-window.tools = typeof tools !== 'undefined' ? tools : [];
-window.lang = typeof lang !== 'undefined' ? lang : {};
 
 class Blog {
     constructor() {
-        this.currentLang = document.documentElement.lang || 'zh-CN';
-        this.langConfig = window.lang || {};
-
         // 搜索相关属性
         this.searchInput = document.getElementById('searchInput');
         this.articlesGrid = document.getElementById('articlesGrid');
@@ -16,42 +11,14 @@ class Blog {
         this.currentFilter = 'all';
         this.currentQuery = '';
 
-        // 构建搜索索引
-        window.searchIndex = this.buildSearchIndex();
-
         this.init();
-    }
-
-    buildSearchIndex() {
-        const searchIndex = [];
-
-        if (typeof articles !== 'undefined') {
-            articles.forEach(article => {
-                const searchText = [
-                    article.title,
-                    article.description,
-                    article.category
-                ].join(' ').toLowerCase();
-
-                searchIndex.push({
-                    ...article,
-                    searchText
-                });
-            });
-        }
-
-        return searchIndex;
     }
 
     init() {
         this.initNavigation();
         this.initScrollEffects();
         this.initSmoothScroll();
-        this.renderTools();
-        this.initLanguageSwitch();
-        this.updateUITexts();
         this.bindSearchEvents();
-        this.renderArticles();
     }
 
     initNavigation() {
@@ -135,74 +102,6 @@ class Blog {
         });
     }
 
-    updateUITexts() {
-        // 更新搜索框占位符
-        if (this.searchInput && this.langConfig.searchPlaceholder) {
-            this.searchInput.placeholder = this.langConfig.searchPlaceholder;
-        }
-
-        // 更新分类按钮文本
-        this.filterBtns.forEach(btn => {
-            const category = btn.getAttribute('data-category');
-            if (this.langConfig.categories && this.langConfig.categories[category]) {
-                btn.textContent = this.langConfig.categories[category].name;
-            }
-        });
-
-        // 更新无结果提示文本
-        const noResultsTitle = document.querySelector('#noResults h3');
-        const noResultsDesc = document.querySelector('#noResults p');
-        if (noResultsTitle && this.langConfig.noResults) {
-            noResultsTitle.textContent = this.langConfig.noResults;
-        }
-        if (noResultsDesc && this.langConfig.tryOtherKeywords) {
-            noResultsDesc.textContent = this.langConfig.tryOtherKeywords;
-        }
-    }
-
-    renderTools() {
-        const toolsGrid = document.getElementById('toolsGrid');
-        if (!toolsGrid || !window.tools) {
-            console.warn('工具容器或数据未找到');
-            return;
-        }
-
-        // 清空容器
-        toolsGrid.innerHTML = '';
-
-        // 生成工具卡片
-        window.tools.forEach(tool => {
-            const toolCard = this.createToolCard(tool);
-            toolsGrid.appendChild(toolCard);
-        });
-    }
-
-    initLanguageSwitch() {
-        const langSwitch = document.querySelector('.lang-switch');
-        if (langSwitch) {
-            langSwitch.addEventListener('click', (e) => {
-                // 添加点击效果
-                langSwitch.style.transform = 'scale(0.95)';
-                setTimeout(() => {
-                    langSwitch.style.transform = 'scale(1)';
-                }, 150);
-            });
-        }
-    }
-
-    createToolCard(tool) {
-        const card = document.createElement('div');
-        card.className = 'tool-card';
-        const ReadTry = this.langConfig.ReadTry || '查看体验';
-        card.innerHTML = `
-            <i class="${tool.icon}"></i>
-            <h3>${tool.title}</h3>
-            <p>${tool.description}</p>
-            <a href="${tool.url}" class="btn btn-outline">${ReadTry}</a>
-        `;
-        return card;
-    }
-
     // 搜索相关方法
     bindSearchEvents() {
         // 搜索输入事件
@@ -263,9 +162,30 @@ class Blog {
 
         // 分类筛选
         if (this.currentFilter !== 'all') {
-            articles = articles.filter(article =>
-                article.category === this.currentFilter
-            );
+            articles = articles.filter(article => {
+                // 创建分类映射
+                const categoryMap = {
+                    'ai': 'AI',
+                    'azure': 'Azure',
+                    'copilot': 'AI', // GitHub Copilot相关文章通常归类为AI
+                    'tools': 'Tools',
+                    'system': 'System',
+                    'development': 'Development',
+                    'cloud': 'Cloud',
+                    'backend': 'Backend',
+                    'database': 'Database',
+                    'frontend': 'Frontend',
+                    'web': 'Web',
+                    'network': 'Network',
+                    'mobile': 'Mobile',
+                    'software': 'Software',
+                    'programming': 'Programming',
+                    'framework': 'Framework'
+                };
+
+                const targetCategory = categoryMap[this.currentFilter] || this.currentFilter;
+                return article.category === targetCategory;
+            });
         }
 
         // 搜索筛选
@@ -287,19 +207,18 @@ class Blog {
         const card = document.createElement('div');
         card.className = 'article-card';
 
-        const categoryConfig = this.langConfig.categories?.[article.category];
-        const categoryName = categoryConfig?.name || article.category;
-        const categoryColor = categoryConfig?.color || '#64748b';
+        // 简化的分类显示，直接使用CSS类
+        const categoryClass = `article-category-${article.category}`;
 
         card.innerHTML = `
             <div class="article-meta">
-                <span class="article-category" style="background-color: ${categoryColor}">
-                    ${categoryName}
+                <span class="article-category ${categoryClass}">
+                    ${article.category}
                 </span>
-                <span class="article-date">${article.date}</span>
+                <span class="article-date">${article.time_publish}</span>
             </div>
             <h3 class="article-title">
-                <a href="${article.url}">${article.title}</a>
+                <a href="${article.filename}">${article.title}</a>
             </h3>
             <p class="article-description">${article.description}</p>
         `;

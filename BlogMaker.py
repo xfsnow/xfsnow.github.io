@@ -29,6 +29,42 @@ class BlogMaker:
             # 取最前 10 条
             data['articles'] = articles[:10]
 
+        # 提取所有文章的分类并创建分类映射
+        categories_set = set()
+        for article in articles:
+            if 'category' in article and article['category']:
+                categories_set.add(article['category'])
+
+        # 创建分类映射字典（英文分类 -> 中文显示名称）
+        category_display_map = {
+            'AI': 'AI技术',
+            'Azure': 'Azure云',
+            'Development': '综合开发',
+            'Tools': '工具',
+            'Cloud Computing': '云计算',
+            'Backend': '服务器端技术',
+            'Database': '数据库',
+            'Frontend': '前端技术',
+            'Web': 'Web开发',
+            'System': '系统管理',
+            'Network': '网络技术',
+            'Mobile': '移动开发',
+            'Software': '软件',
+            'Programming': '编程语言',
+            'Framework': '框架技术'
+        }
+
+        # 构建分类列表，包含实际存在的分类
+        categories = []
+        for category in sorted(categories_set):
+            if category in category_display_map:
+                categories.append({
+                    'key': category,
+                    'value': category_display_map[category]
+                })
+
+        data['categories'] = categories
+
         # 加载 tools.json 文件
         tools_file = os.path.join(path, 'tools.json')
         if os.path.exists(tools_file):
