@@ -2,6 +2,8 @@
 
 发布时间: *2024-11-14 10:40:18*
 
+分类: __人工智能__
+
 简介: 为了扩展 Copilot 的功能，微软发布了一个名为 Vision for Copilot Preview 的插件，它通过 Copilot 的 Agent 机制对接 OpenAI 中的 GPT 4o 模型实现识图问答。本文介绍Vision for Copilot Preview 的插件的安装配置，以及探索识图解数学题等一些有趣的扩展用法。
 
 原文链接: [https://snowpeak.blog.csdn.net/article/details/143760717](https://snowpeak.blog.csdn.net/article/details/143760717)

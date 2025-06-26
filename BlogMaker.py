@@ -20,11 +20,11 @@ class BlogMaker:
         """读取 index.js 文件，解析文章数据并生成首页 HTML"""
         js_file = os.path.join(path, 'index.js')
         data = {}
-        # 一次性读出 index.js 文件全部内容，把前面的 const articles = 去掉，结尾的分号也去掉，最后 json.loads() 解析成 Python 对象
+        # 一次性读出 index.js 文件全部内容，把前面的 const articles=去掉，结尾的分号也去掉，最后 json.loads() 解析成 Python 对象
 
         with open(js_file, 'r', encoding='utf-8') as f:
             content = f.read()
-            content = content.replace('const articles = ', '').rstrip(';')
+            content = content.replace('const articles=', '').rstrip(';')
             articles = json.loads(content)
             # 取最前 10 条
             data['articles'] = articles[:10]
@@ -155,12 +155,9 @@ class BlogMaker:
     def map_category(self, category: str):
         """将中文分类映射为英文分类标识"""
         category_map = {
-            'AI技术': 'AI',
             'Azure云': 'Azure',
-            'GitHub Copilot': 'GitHub',
             '综合开发': 'Development',
             '工具': 'Tools',
-            '开发工具': 'Tools',
             '云计算': 'Cloud Computing',
             '人工智能': 'AI',
             '服务器端技术': 'Backend',
@@ -170,7 +167,7 @@ class BlogMaker:
             '系统管理': 'System',
             '网络技术': 'Network',
             '移动开发': 'Mobile',
-            '软件工程': 'Software',
+            '软件': 'Software',
             '编程语言': 'Programming',
             '框架技术': 'Framework'
         }
@@ -181,20 +178,15 @@ class BlogMaker:
         content_lower = content.lower()
         filename_lower = filename.lower()
 
-        # AI相关关键词
-        ai_keywords = ['ai', 'gpt', 'copilot', 'openai', 'claude', 'deepseek', 'vision', '人工智能', '机器学习', '深度学习']
+        # GitHub Copilot相关关键词都算AI相关关键词
+        ai_keywords = ['ai', 'gpt', 'copilot', 'openai', 'claude', 'deepseek', 'vision', '人工智能', '机器学习', '深度学习','copilot', 'github copilot', 'mcp', 'vision plugin']
         if any(keyword in content_lower or keyword in filename_lower for keyword in ai_keywords):
-            return 'ai'
+            return 'AI'
 
         # Azure相关关键词
         azure_keywords = ['azure', 'cloud', '云计算', '云服务', 'vm', 'virtual machine']
         if any(keyword in content_lower or keyword in filename_lower for keyword in azure_keywords):
-            return 'azure'
-
-        # GitHub Copilot相关关键词
-        copilot_keywords = ['copilot', 'github copilot', 'mcp', 'vision plugin']
-        if any(keyword in content_lower or keyword in filename_lower for keyword in copilot_keywords):
-            return 'copilot'
+            return 'Azure'
 
         # 默认分类
         return 'tools'
@@ -205,18 +197,35 @@ class BlogMaker:
         description_lines = []
 
         # 跳过前面的元数据，找到正文
-        in_content = False
+        skip_patterns = ['---', '#', '发布时间', '简介', '分类:']
+
         for line in lines:
             line = line.strip()
-            if line.startswith('---') and in_content:
-                break
-            if line.startswith('---') or line.startswith('#') or line.startswith('发布时间') or line.startswith('简介'):
-                in_content = True
+
+            # 跳过空行
+            if not line:
                 continue
-            if in_content and line and not line.startswith('#') and not line.startswith('发布时间'):
-                description_lines.append(line)
-                if len(' '.join(description_lines)) > 200:
+
+            # 跳过元数据行
+            should_skip = False
+            for pattern in skip_patterns:
+                if line.startswith(pattern):
+                    should_skip = True
                     break
+
+            if should_skip:
+                continue
+
+            # 跳过包含分类信息的行
+            if '分类:' in line or '__' in line:
+                continue
+
+            # 这是正文内容
+            description_lines.append(line)
+
+            # 收集够足够的文本就停止
+            if len(' '.join(description_lines)) > 200:
+                break
 
         description = ' '.join(description_lines)
         if len(description) > 200:
@@ -226,7 +235,7 @@ class BlogMaker:
 
     def generate_article_js(self, articles: list, path: str):
         # json.dumps() 不带格式和缩进，可以精简输出文件的体积
-        js_content = "const articles = " + json.dumps(articles, ensure_ascii=False) + ";"
+        js_content = "const articles=" + json.dumps(articles, ensure_ascii=False, indent=4) + ";"
         # 保存到文件
         output_file = os.path.join(path, 'index.js')
         with open(output_file, 'w', encoding='utf-8') as f:
@@ -237,19 +246,17 @@ class BlogMaker:
 
     def main(self):
         # 处理中文文章
-        zh_articles = self.index_article('zh')
-        print(f"处理了 {len(zh_articles)} 篇中文文章")
+        # zh_articles = self.index_article('zh')
+        # print(f"处理了 {len(zh_articles)} 篇中文文章")
 
         # 处理英文文章 (如果有的话)
-        if os.path.exists('en'):
-            en_articles = self.index_article('en')
-            print(f"处理了 {len(en_articles)} 篇英文文章")
+        # if os.path.exists('en'):
+        #     en_articles = self.index_article('en')
+        #     print(f"处理了 {len(en_articles)} 篇英文文章")
 
         # 生成首页 HTML
-        # print("\n=== 测试解析 index.js 文件 ===")
-        # self.make_homepage('zh')  # 生成中文首页
+        blog_maker.make_home('zh')
 
 if __name__ == "__main__":
     blog_maker = BlogMaker()
-    # blog_maker.main()
-    blog_maker.make_home('zh')  # 生成中文文章索引
+    blog_maker.main()

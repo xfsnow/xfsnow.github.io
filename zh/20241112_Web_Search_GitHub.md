@@ -2,6 +2,8 @@
 
 发布时间: *2024-11-12 14:40:23*
 
+分类: __人工智能__
+
 简介: GitHub Copilot 是一个由 GitHub 和 OpenAI 合作开发的人工智能代码提示工具。它可以根据上下文提示代码，还可以回答各种技术相关的问题。但是 Copilot 本身不能回答非技术类型的问题。为了扩展 Copilot 的功能，微软发布了一个名为 Web Search 的插件，它可以使用搜索引擎来扩展 Copilot 无法回答的问题。
 
 原文链接: [https://snowpeak.blog.csdn.net/article/details/143713992](https://snowpeak.blog.csdn.net/article/details/143713992)
@@ -53,7 +55,7 @@ GitHub Copilot 是一个由 GitHub 和 OpenAI 合作开发的人工智能代码�
 
 按 Enter 键 确认保存。注意这个 key 并不保存在 VS Code 的 settings 中。如果需要更换或清理，需要到 VS Code 本地缓存文件中去删。
 
-继续弹出提示  
+继续弹出提示
 “The extension "Web Search for Copilot' wants to access the language models provided by GitHubCopilot chat.” 点击“Allow”按钮即可。
 
 ![](../assets/img/20241112_Web_Search_GitHub_06.png)

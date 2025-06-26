@@ -1,0 +1,44 @@
+[
+        {
+            "id": "image-process",
+            "title": "Responsive Image Processing",
+            "description": "Online image compression and format conversion tool",
+            "url": "../imageprocess/",
+            "icon": "fas fa-images"
+        },
+        {
+            "id": "ai-assistant",
+            "title": "AI Virtual Assistant",
+            "description": "Intelligent dialogue and Q&A assistant",
+            "url": "../va/",
+            "icon": "fas fa-robot"
+        },
+        {
+            "id": "azure-icons",
+            "title": "Azure Icons Collection",
+            "description": "Complete collection of Azure service icons",
+            "url": "../AzureIcon/",
+            "icon": "fas fa-cloud"
+        },
+        {
+            "id": "english-test",
+            "title": "English Proficiency Test",
+            "description": "Online middle school English level testing system",
+            "url": "../english_middle/",
+            "icon": "fas fa-graduation-cap"
+        },
+        {
+            "id": "school-regions",
+            "title": "Beijing School District Data",
+            "description": "Beijing area school district information query",
+            "url": "../schools.htm",
+            "icon": "fas fa-map"
+        },
+        {
+            "id": "maths",
+            "title": "Math Calculation Practice",
+            "description": "Online math problem bank supporting multiple question types",
+            "url": "../maths.htm",
+            "icon": "fas fa-calculator"
+        }
+]

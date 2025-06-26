@@ -282,14 +282,14 @@ body {
 
 /* 文章区域 */
 .articles-section {
-    padding: 60px 0;
+    padding: 10px 0;
 }
 
 .section-title {
     text-align: center;
     font-size: 2.5rem;
     color: var(--text-primary);
-    margin-bottom: 50px;
+    margin-bottom: 20px;
     position: relative;
 }
 
@@ -317,7 +317,7 @@ body {
     box-shadow: var(--shadow-md);
     overflow: hidden;
     transition: all 0.3s ease;
-    position: relative;
+    padding: 0 15px;
 }
 
 .article-card:hover {
@@ -337,13 +337,6 @@ body {
     justify-content: space-between;
     margin-bottom: 15px;
     font-size: 0.9rem;
-}
-.article-meta span {
-    background: rgba(255, 255, 255, 0.2);
-    padding: 4px 8px;
-    border-radius: 12px;
-    font-size: 0.85rem;
-    font-weight: 500;
 }
 
 .article-meta span:last-child {
@@ -379,7 +372,6 @@ body {
 
 /* 'AI技术': 'AI',
             'Azure云': 'Azure',
-            'GitHub Copilot': 'GitHub',
             '综合开发': 'Development',
             '工具': 'Tools',
             '开发工具': 'Tools',
@@ -392,57 +384,54 @@ body {
             '系统管理': 'System',
             '网络技术': 'Network',
             '移动开发': 'Mobile',
-            '软件工程': 'Software',
+            '软件': 'Software',
             '编程语言': 'Programming',
             '框架技术': 'Framework' */
 .article-category-AI {
-    background: #8b5cf6;
+    background-color: #8b5cf6;
 }
 
 .article-category-Azure {
-    background: #3b82f6;
-}
-.article-category-GitHub {
-    background: #f97316;
+    background-color: #1e40af;
 }
 .article-category-Development {
-    background: #f59e0b;
+    background-color: #d97706;
 }
 .article-category-Tools {
-    background: #10b981;
+    background-color: #047857;
 }
 .article-category-Cloud {
-    background: #0ea5e9;
+    background-color: #0369a1;
 }
 .article-category-Backend {
-    background: #6366f1;
+    background-color: #4338ca;
 }
 .article-category-Database {
-    background: #ef4444;
+    background-color: #dc2626;
 }
 .article-category-Frontend {
-    background: #f43f5e;
+    background-color: #e11d48;
 }
 .article-category-Web {
-    background: #e879f9;
+    background-color: #c026d3;
 }
 .article-category-System {
-    background: #facc15;
+    background-color: #ca8a04;
 }
 .article-category-Network {
-    background: #22d3ee;
+    background-color: #0891b2;
 }
 .article-category-Mobile {
-    background: #f472b6;
+    background-color: #ec4899;
 }
 .article-category-Software {
-    background: #a78bfa;
+    background-color: #7c3aed;
 }
 .article-category-Programming {
-    background: #f87171;
+    background-color: #dc2626;
 }
 .article-category-Framework {
-    background: #a3e635;
+    background-color: #65a30d;
 }
 
 
@@ -510,44 +499,64 @@ body {
 
 /* 工具区域 */
 .tools-section {
-    padding: 60px 0;
+    padding: 20px 0;
     background: var(--bg-secondary);
 }
 
 .tools-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 30px;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 20px;
 }
 
 .tool-card {
     background: white;
-    padding: 30px;
+    padding: 20px;
     border-radius: 12px;
-    text-align: center;
     box-shadow: var(--shadow-md);
     transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    text-decoration: none;
+    color: inherit;
 }
 
 .tool-card:hover {
-    transform: translateY(-5px);
+    transform: translateY(-3px);
     box-shadow: var(--shadow-lg);
+    text-decoration: none;
+    color: inherit;
 }
 
-.tool-card i {
-    font-size: 3rem;
+.tool-icon {
+    font-size: 2.5rem;
     color: var(--primary-color);
-    margin-bottom: 20px;
+    flex-shrink: 0;
+    width: 60px;
+    text-align: center;
+}
+
+.tool-content {
+    flex: 1;
 }
 
 .tool-card h3 {
-    margin-bottom: 15px;
+    margin-bottom: 8px;
     color: var(--text-primary);
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
+}
+
+.tool-card:hover h3 {
+    color: var(--primary-color);
 }
 
 .tool-card p {
     color: var(--text-secondary);
-    margin-bottom: 25px;
+    margin: 0;
+    font-size: 0.9rem;
+    line-height: 1.4;
 }
 
 /* 无结果显示 */
@@ -850,6 +859,23 @@ body {
     .article-card,
     .tool-card {
         margin: 0 10px;
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+        padding: 15px;
+    }
+
+    .tool-icon {
+        font-size: 2rem;
+        width: auto;
+    }
+
+    .tool-content h3 {
+        font-size: 1rem;
+    }
+
+    .tool-content p {
+        font-size: 0.85rem;
     }
 
     .social-platforms {
