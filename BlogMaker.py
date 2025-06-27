@@ -151,7 +151,7 @@ class BlogMaker:
 
         # 遍历目录下的所有文件
         for filename in os.listdir(path):
-            if filename.endswith('.md'):
+            if filename.endswith('.md') and not filename.startswith('about'):
                 filepath = os.path.join(path, filename)
                 article_info = self.extract_article_info(filepath, filename)
                 if article_info:
@@ -318,8 +318,8 @@ class BlogMaker:
 
     def main(self):
         # 处理中文文章
-        # zh_articles = self.index_article()
-        # print(f"处理了 {len(zh_articles)} 篇中文文章")
+        zh_articles = self.index_article()
+        print(f"处理了 {len(zh_articles)} 篇中文文章")
 
         # 处理英文文章 (如果有的话)
         # if os.path.exists('en'):
@@ -328,7 +328,7 @@ class BlogMaker:
 
         # 生成首页 HTML
         self.make_home()
-        # self.article()
+        self.article()
 
 if __name__ == "__main__":
     blog_maker = BlogMaker('zh')
