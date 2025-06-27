@@ -87,7 +87,7 @@ https://github.com/xfsnow/container/tree/master/AKSNodeInstaller
 
 创建一个ACR，用于保存容器镜像，注意目前只有东2区域可以支持az acr build 命令在本地直接构建并推送到ACR。所以我们创建的ACR资源在东2区，而AKS集群可以在任何一个国内的区域。
 
-# 定义环境变量
+#### 定义环境变量
 
 
 ```
@@ -97,14 +97,14 @@ AKS_CLUSTER_NAME=NodeInstaller
 ACR_NAME=NodeInstaller$RANDOM
 ```
 
-#创建资源组
+#### 创建资源组
 
 
 ```
 az group create --location $REGION_NAME --name $RESOURCE_GROUP
 ```
 
-# 创建ACR
+#### 创建ACR
 
 
 ```
@@ -121,7 +121,7 @@ NAME      RESOURCE GROUP    LOCATION     SKU    LOGIN SERVER  �
 NodeInstaller1044  aksNodeInstaller  chinaeast2  Standard  nodeinstaller.azurecr.cn  2021-03-28T14:37:32Z  False
 ```
 
-#创建 AKS 集群
+#### 创建 AKS 集群
 
 
 ```
@@ -297,7 +297,7 @@ Processing triggers for man-db (2.8.3-2ubuntu0.1) ...
 
 
 ```
-kubectl debug node/aks-nodepool1-40474697-vmss000000 
+kubectl debug node/aks-nodepool1-40474697-vmss000000
  -it --image=mcr.microsoft.com/dotnet/runtime-deps:6.0
 Creating debugging pod node-debugger-aks-nodepool1-40474697-vmss000000-5bw76 with container debugger on node aks-nodepool1-40474697-vmss000000.
 If you don't see a command prompt, try pressing enter.

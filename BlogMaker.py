@@ -73,7 +73,12 @@ class BlogMaker:
         # 渲染模板
         html_content = self.view.render_template('zh.html', data=data)
         # 保存生成的 HTML 文件
-        self.view.write_html(os.path.join(self.langPath, 'zh.htm'), html_content, strip=True)
+        if 'zh' == self.langPath:
+            # 如果是中文，则保存为 index.htm
+            output_file = 'index.html'
+        else:
+            output_file = os.path.join(self.langPath, 'index.htm')
+        self.view.write_html(output_file, html_content, strip=True)
 
     # markdown 转成HTML，然后再带上模板的页眉和页脚
     def article(self):
@@ -121,8 +126,8 @@ class BlogMaker:
 
             # 保存生成的 HTML 文件
             output_file = os.path.join(self.langPath, article['filename']).lstrip('/')
-            self.view.write_html(output_file, rendered_html, strip=False)
-            break
+            self.view.write_html(output_file, rendered_html, strip=True)
+            # break
 
         print(f"已生成 {len(articles)} 篇文章的 HTML 文件")
 
@@ -323,7 +328,7 @@ class BlogMaker:
 
         # 生成首页 HTML
         self.make_home()
-        self.article()
+        # self.article()
 
 if __name__ == "__main__":
     blog_maker = BlogMaker('zh')

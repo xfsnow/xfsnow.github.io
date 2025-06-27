@@ -15,18 +15,15 @@ Azure DevOps是微软Azure云平台上端到端的企业级研发管理平台，
 源码在这里 [GitHub - xfsnow/SpringTomcat: A demo project of Spring Boot running in Tomcat deployed to Azure App Service with Azure DevOps.](<https://github.com/xfsnow/SpringTomcat> "GitHub - xfsnow/SpringTomcat: A demo project of Spring Boot running in Tomcat deployed to Azure App Service with Azure DevOps.")，请 fork 到自己的GitHub里以便后面练习使用。或者以此为参考，直接使用Visual Studio Code中Spring Initializr 创建默认的Maven Project 也行，注意打包模式要选择war包，因为我们要使用外部的Tomcat Server，而不使用Spring Boot内置的Tomcat Server。pom.xml 中有以下配置项需注意：
 
 
-```
-	<properties>
-		<java.version>11</java.version>
-	</properties>
-
+```xml
+<properties>
+	<java.version>11</java.version>
+</properties>
 ```
 
 引用Tomcat Server相关的库，以方便使用javax.servlet系的包。
 
-
-```
- 
+```xml
     <dependency>
       <groupId>org.apache.tomcat</groupId>
       <artifactId>tomcat-servlet-api</artifactId>
@@ -162,11 +159,11 @@ Tomcat Server中部署到网站根目录，有个简单的小办法，就是把w
 在编辑界面里找到 \- task: CopyFiles@2 这个任务，在这行上面增加。
 
 
-```
-   # 增加一个重命名的步骤，把打包制品文件名统一成 ROOT.war，以便后续部署到 App Service 的根目录。
-    - bash: |
-       echo $(System.DefaultWorkingDirectory)
-       mv $(System.DefaultWorkingDirectory)/target/*.war $(System.DefaultWorkingDirectory)/target/ROOT.war
+```yaml
+# 增加一个重命名的步骤，把打包制品文件名统一成 ROOT.war，以便后续部署到 App Service 的根目录。
+- bash: |
+  echo $(System.DefaultWorkingDirectory)
+  mv $(System.DefaultWorkingDirectory)/target/*.war $(System.DefaultWorkingDirectory)/target/ROOT.war
 ```
 
 这个任务其实是使用的Pipeline中执行 bash 命令的任务类型，$(System.DefaultWorkingDirectory)是个Pipeline中的环境变量，前面构建的任务会根据我们pom.xml中指定的输出设置构建成 hello.war，我们用 mv 命令把它重命名成 ROOT.war。保存流水线后会自动执行，等待执行完毕。我们再到App Service对外服务的URL，重新刷新一下，应用已经可以从域名根目录访问了。
