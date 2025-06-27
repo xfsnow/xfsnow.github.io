@@ -7,7 +7,6 @@ class View:
         """初始化视图渲染器"""
         # 设置模板目录
         template_dir = 'assets/template'
-        print(template_dir)
         self.env = Environment(
             loader=FileSystemLoader(template_dir),
             trim_blocks=True,

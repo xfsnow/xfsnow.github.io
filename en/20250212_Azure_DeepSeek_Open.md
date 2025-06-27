@@ -2,6 +2,8 @@
 
 Published: *2025-02-12 18:01:01*
 
+Category: __AI__
+
 Summary: DeepSeek is an open-source large language model released by Hangzhou DeepSeek Artificial Intelligence Infrastructure Technology Research Co., Ltd. It has been continuously popular recently, causing official services to be frequently unavailable. There are already many articles online about local deployment and private deployment. Here we provide a complete Azure-based private deployment solution.
 
 Original article: [https://snowpeak.blog.csdn.net/article/details/145597507](https://snowpeak.blog.csdn.net/article/details/145597507)

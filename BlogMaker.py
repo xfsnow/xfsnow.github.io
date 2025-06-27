@@ -184,6 +184,7 @@ class BlogMaker:
 
         # 遍历目录下的所有文件
         for filename in os.listdir(path):
+            # 只处理以 .md 结尾的文件，并且不处理以 about 开头的“关于”页面
             if filename.endswith('.md') and not filename.startswith('about'):
                 filepath = os.path.join(path, filename)
                 article_info = self.extract_article_info(filepath, filename)
@@ -220,9 +221,10 @@ class BlogMaker:
                 if line.strip().startswith('# '):
                     article_info['title'] = line.strip()[2:].strip()
                     break
-
-            # 提取发布时间（完整的年月日时分秒）
-            time_pattern = r'发布时间:\s*\*?([0-9]{4}-[0-9]{2}-[0-9]{2}(?:\s+[0-9]{2}:[0-9]{2}:[0-9]{2})?)'
+            # 提取发布时间（完整的年月日时分秒），形如 Published: *2025-02-12 18:01:01* ，或 发布时间:  *2025-02-12 18:01:01*
+            langMap = self.getLang()
+            hint = langMap.get('published', '发布时间')
+            time_pattern = hint + r':\s*\*?([0-9]{4}-[0-9]{2}-[0-9]{2}(?:\s+[0-9]{2}:[0-9]{2}:[0-9]{2})?)'
             time_match = re.search(time_pattern, content)
             if time_match:
                 time_str = time_match.group(1)
@@ -232,7 +234,9 @@ class BlogMaker:
                 article_info['time_publish'] = time_str
 
             # 提取分类 - 更新正则表达式以匹配双下划线格式
-            category_pattern = r'分类:\s*__([^_\n]+)__'
+            hint = langMap.get('category', '分类')
+            # 使用双下划线格式的分类
+            category_pattern = hint + r':\s*__([^_\n]+)__'
             category_match = re.search(category_pattern, content)
             if category_match:
                 category = category_match.group(1).strip()
@@ -248,7 +252,8 @@ class BlogMaker:
                 article_info['category_name'] = category_display_map.get(article_info['category'], article_info['category'])
 
             # 提取简介
-            intro_pattern = r'简介:\s*([^\n]+(?:\n[^\n-]+)*)'
+            hint = langMap.get('summary', '简介')
+            intro_pattern = hint +r':\s*([^\n]+(?:\n[^\n-]+)*)'
             intro_match = re.search(intro_pattern, content)
             if intro_match:
                 description = intro_match.group(1).strip()
@@ -301,7 +306,7 @@ class BlogMaker:
         description_lines = []
 
         # 跳过前面的元数据，找到正文
-        skip_patterns = ['---', '#', '发布时间', '简介', '分类:']
+        skip_patterns = ['---', '#', '发布时间', '简介', '分类', '原文链接']
 
         for line in lines:
             line = line.strip()
@@ -339,8 +344,8 @@ class BlogMaker:
 
     def generate_article_js(self, articles: list, path: str):
         # json.dumps() 不带格式和缩进，可以精简输出文件的体积
-        js_content = "const articles=" + json.dumps(articles, ensure_ascii=False) + ";"
-        # js_content = "const articles=" + json.dumps(articles, ensure_ascii=False, indent=4) + ";"
+        # js_content = "const articles=" + json.dumps(articles, ensure_ascii=False) + ";"
+        js_content = "const articles=" + json.dumps(articles, ensure_ascii=False, indent=4) + ";"
         # 保存到文件
         output_file = os.path.join(path, 'index.js')
         with open(output_file, 'w', encoding='utf-8') as f:
@@ -350,9 +355,9 @@ class BlogMaker:
 
 
     def main(self):
-        # 处理中文文章
-        # zh_articles = self.index_article()
-        # print(f"处理了 {len(zh_articles)} 篇中文文章")
+        # 处理文章索引
+        zh_articles = self.index_article()
+        print(f"处理了 {self.langPath} 目录下 {len(zh_articles)} 篇文章")
 
         # 处理英文文章 (如果有的话)
         # if os.path.exists('en'):
@@ -362,7 +367,7 @@ class BlogMaker:
         # 生成首页 HTML
         # self.make_home()
         # self.make_article()
-        self.make_about()
+        # self.make_about()
 
 if __name__ == "__main__":
     blog_maker = BlogMaker('zh')
