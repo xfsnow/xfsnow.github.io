@@ -173,7 +173,7 @@ class Blog {
             articles = articles.filter(article => {
                 const searchText = [
                     article.title,
-                    article.description
+                    article.summary
                 ].join(' ').toLowerCase();
 
                 return searchText.includes(this.currentQuery);
@@ -200,7 +200,7 @@ class Blog {
             <h3 class="article-title">
                 <a href="${article.filename}">${article.title}</a>
             </h3>
-            <p class="article-description">${article.description}</p>
+            <p class="article-summary">${article.summary}</p>
         `;
 
         return card;

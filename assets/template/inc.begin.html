@@ -23,8 +23,12 @@
                 <a href="/" class="nav-link">{{data.lang.home}}</a>
                 <a href="/#articles" class="nav-link">{{data.lang.article}}</a>
                 <a href="/#tools" class="nav-link">{{data.lang.tool}}</a>
-                <a href="/zh/about.htm" class="nav-link">{{data.lang.about}}</a>
-                <a href="/en/index.html" class="nav-link lang-switch"><i class="fas fa-globe"></i> English</a>
+                <a href="/{{ data.lang.lang }}/about.htm" class="nav-link">{{data.lang.about}}</a>
+                {% if data.lang.lang == 'zh' %}
+                <a href="/en/" class="nav-link lang-switch"><i class="fas fa-globe"></i> English</a>
+                {% else %}
+                <a href="/" class="nav-link lang-switch"><i class="fas fa-globe"></i> 简体中文</a>
+                {% endif %}
             </div>
             <div class="nav-toggle" id="mobile-menu">
                 <span class="bar"></span>

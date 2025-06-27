@@ -1,5 +1,5 @@
 {
-    "lang": "zh-CN",
+    "lang": "zh",
     "langName": "中文",
     "title": "雪峰博客",
     "description": "专注于AI和云计算技术的分享与探讨",
@@ -14,6 +14,7 @@
     "published": "发布时间",
     "reading_time": "阅读约需",
     "category": "分类",
+    "all":"全部",
     "tags": "标签",
     "home": "首页",
     "tool": "工具",

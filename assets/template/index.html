@@ -3,11 +3,11 @@
     <section id="home" class="hero">
         <div class="hero-container">
             <div class="hero-content">
-                <h1>AI与云计算技术分享</h1>
-                <p>探索人工智能、云计算、开发工具的前沿技术与实践经验</p>
+                <h1>{{ data.lang.title }}</h1>
+                <p>{{ data.lang.description }}</p>
                 <div class="hero-buttons">
-                    <a href="#articles" class="btn btn-primary">浏览文章</a>
-                    <a href="#tools" class="btn btn-secondary">范例演示</a>
+                    <a href="#articles" class="btn btn-primary">{{ data.lang.article }}</a>
+                    <a href="#tools" class="btn btn-secondary">{{ data.lang.tool }}</a>
                 </div>
             </div>
             <div class="hero-image">
@@ -21,10 +21,10 @@
             <div class="search-container">
                 <div class="search-box">
                     <i class="fas fa-search"></i>
-                    <input type="text" id="searchInput" placeholder="搜索文章标题、内容或标签...">
+                    <input type="text" id="searchInput" placeholder="{{data.lang.search_placeholder}}" aria-label="{{data.lang.search_placeholder}}">
                 </div>
                 <div class="search-filters">
-                 <button class="filter-btn active" data-category="all">全部分类</button>
+                 <button class="filter-btn active" data-category="all">{{data.lang.all}}</button>
                     {% for category in data.categories %}
                     <button class="filter-btn" data-category="{{ category.key }}">{{ category.value }}</button>
                     {% endfor %}
@@ -36,7 +36,7 @@
     <!-- 文章列表 -->
     <section id="articles" class="articles-section">
         <div class="container">
-            <h2 class="section-title">文章</h2>
+            <h2 class="section-title">{{data.lang.article}}</h2>
             <div class="articles-grid" id="articlesGrid">
 {% for article in data.articles %}
             <div class="article-card">
@@ -48,7 +48,7 @@
             <h3 class="article-title">
                 <a href="{{ article.filename }}">{{ article.title }}</a>
             </h3>
-            <p class="article-description">{{ article.description }}</p>
+            <p class="article-summary">{{ article.summary }}</p>
         </div>
 {% endfor %}
             </div>
@@ -57,15 +57,15 @@
             <!-- 搜索结果为空时显示 -->
             <div class="no-results" id="noResults" style="display: none;">
                 <i class="fas fa-search"></i>
-                <h3>没有找到相关文章</h3>
-                <p>请尝试其他关键词或查看全部文章</p>
+                <h3>{{data.lang.noResults}}</h3>
+                <p>{{data.lang.tryOtherKeywords}}</p>
             </div>
     </section>
 
     <!-- 工具区域 -->
     <section id="tools" class="tools-section">
         <div class="container">
-            <h2 class="section-title">演示和工具</h2>
+            <h2 class="section-title">{{data.lang.tool}}</h2>
             <div class="tools-grid">
             {% for tool in data.tools %}
             <a href="{{ tool.url }}" class="tool-card">

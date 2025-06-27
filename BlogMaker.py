@@ -210,7 +210,7 @@ class BlogMaker:
             article_info = {
                 'filename': fileUrl,
                 'title': '',
-                'description': '',
+                'summary': '',
                 'time_publish': '',
                 'category': '',
                 'category_name': ''  # 添加分类显示名称字段
@@ -256,15 +256,15 @@ class BlogMaker:
             intro_pattern = hint +r':\s*([^\n]+(?:\n[^\n-]+)*)'
             intro_match = re.search(intro_pattern, content)
             if intro_match:
-                description = intro_match.group(1).strip()
+                summary = intro_match.group(1).strip()
                 # 限制简介长度
-                if len(description) > 200:
-                    description = description[:200] + '...'
-                article_info['description'] = description
+                if len(summary) > 200:
+                    summary = summary[:200] + '...'
+                article_info['summary'] = summary
 
             # 如果没有找到简介，从正文提取前几行
-            if not article_info['description']:
-                article_info['description'] = self.extract_description_from_content(content)
+            if not article_info['summary']:
+                article_info['summary'] = self.extract_summary_from_content(content)
 
             return article_info
 
@@ -300,10 +300,10 @@ class BlogMaker:
         # 默认分类
         return 'tools'
 
-    def extract_description_from_content(self, content: str):
+    def extract_summary_from_content(self, content: str):
         """从文章内容中提取描述"""
         lines = content.split('\n')
-        description_lines = []
+        summary_lines = []
 
         # 跳过前面的元数据，找到正文
         skip_patterns = ['---', '#', '发布时间', '简介', '分类', '原文链接']
@@ -330,22 +330,22 @@ class BlogMaker:
                 continue
 
             # 这是正文内容
-            description_lines.append(line)
+            summary_lines.append(line)
 
             # 收集够足够的文本就停止
-            if len(' '.join(description_lines)) > 200:
+            if len(' '.join(summary_lines)) > 200:
                 break
 
-        description = ' '.join(description_lines)
-        if len(description) > 200:
-            description = description[:200] + '...'
+        summary = ' '.join(summary_lines)
+        if len(summary) > 200:
+            summary = summary[:200] + '...'
 
-        return description if description else '暂无描述'
+        return summary if summary else '暂无描述'
 
     def generate_article_js(self, articles: list, path: str):
         # json.dumps() 不带格式和缩进，可以精简输出文件的体积
-        # js_content = "const articles=" + json.dumps(articles, ensure_ascii=False) + ";"
-        js_content = "const articles=" + json.dumps(articles, ensure_ascii=False, indent=4) + ";"
+        js_content = "const articles=" + json.dumps(articles, ensure_ascii=False) + ";"
+        # js_content = "const articles=" + json.dumps(articles, ensure_ascii=False, indent=4) + ";"
         # 保存到文件
         output_file = os.path.join(path, 'index.js')
         with open(output_file, 'w', encoding='utf-8') as f:
@@ -356,17 +356,12 @@ class BlogMaker:
 
     def main(self):
         # 处理文章索引
-        zh_articles = self.index_article()
-        print(f"处理了 {self.langPath} 目录下 {len(zh_articles)} 篇文章")
-
-        # 处理英文文章 (如果有的话)
-        # if os.path.exists('en'):
-        #     en_articles = self.index_article('en')
-        #     print(f"处理了 {len(en_articles)} 篇英文文章")
+        # zh_articles = self.index_article()
+        # print(f"处理了 {self.langPath} 目录下 {len(zh_articles)} 篇文章")
+        # self.make_article()
 
         # 生成首页 HTML
-        # self.make_home()
-        # self.make_article()
+        self.make_home()
         # self.make_about()
 
 if __name__ == "__main__":

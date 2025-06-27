@@ -1,0 +1,97 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Snowpeak Blog</title><meta name="description" content="Sharing and discussing cutting-edge technologies such as AI, cloud computing, and GitHub Copilot"><meta name="keywords" content="AI, GitHub Copilot, Azure Cloud, Cloud Computing, Front-end Technology, Back-end Technology, Web Development, Software Engineering"><link rel="stylesheet" href="/assets/css/style.css"><link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.7.2/css/all.css"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/default.min.css"><script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/highlight.min.js"></script></head><body><nav class="navbar"><div class="nav-container"><div class="nav-logo"><h2><i class="fas fa-snowflake"></i> Snowpeak</h2></div><div class="nav-menu"><a href="/" class="nav-link">Home</a><a href="/#articles" class="nav-link">Article</a><a href="/#tools" class="nav-link">Tools</a><a href="/en/about.htm" class="nav-link">About</a><a href="/zh/index.html" class="nav-link lang-switch"><i class="fas fa-globe"></i> 简体中文</a></div><div class="nav-toggle" id="mobile-menu"><span class="bar"></span><span class="bar"></span><span class="bar"></span></div></div></nav><header class="article-header"><div class="container"><h1>Further Discussion on Managing Hierarchical Data with Nested Set Model</h1><div class="article-meta"><span><i class="fas fa-calendar"></i> Published: </span><span><i class="fas fa-clock"></i> Reading time: 24分钟</span><span><i class="fas fa-tag"></i> Category: AI</span></div></div></header><main class="article-container"><h2><a href="/en/article/detail/further_discussion_on_managing_hierarchical_data_with_nested_set_model/">Further Discussion on Managing Hierarchical Data with Nested Set Model</a></h2><p>Category: <a href="/en/article/category/database/">Database</a> 2012-06-25 21:39:00 Read(8433)</p><p>When we manage hierarchical data with relational database, we can use the Nested Set Model besides our familiar "Adjacency List Model". The fundamental theories of the Nested Set Model are easily found on the Internet. For example:</p><p>Original article by Mike Hillyer:</p><p><a href="http://mikehillyer.com/articles/managing-hierarchical-data-in-mysql/">http://mikehillyer.com/articles/managing-hierarchical-data-in-mysql/</a></p><p>A Chinese translation to the above article by Chen Jianping:</p><p><a href="http://www.cnblogs.com/chinaontology/archive/2010/03/10/NestedSetModel.html">http://www.cnblogs.com/chinaontology/archive/2010/03/10/NestedSetModel.html</a></p><p>And a downloadable PDF version of the above translation by Liu Min:</p><p><a href="http://www.liumin.name/20071117/acts_as_nested_set/">http://www.liumin.name/20071117/acts_as_nested_set/</a></p><p>This article explains the core theories of left and right values and helps us to understand the Nested Set Model from scratch. However, the article only uses two fields of left and right values and entails too many nested queries when involving node depth and thus reduces performance of SQL execution. I add one redundant field of depth to simplify complicated queries and improve performance, so that make it easier to adopt the good model in development and production environment.</p><p>My article is based on the above article. You are recommended to understand the basic mechanism of the Nested Set Model. Please refer to the above links if you wish.</p><p>We use hierarchical geographical data as our scenario. Let's look at SQL to create the table.</p> <pre><code>CREATE TABLE  `geo` (
+
+  `cid` int(11) NOT NULL AUTO_INCREMENT,
+
+  `name` varchar(20) NOT NULL,
+
+  `depth` int(11) NOT NULL,
+
+  `lft` int(11) NOT NULL,
+
+  `rgt` int(11) NOT NULL,
+
+  PRIMARY KEY (`cid`),
+
+  KEY `lft` (`lft`),
+
+  KEY `rgt` (`rgt`)
+
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 ;
+</code></pre> <p>I add only one more field to indicate node depth based on the table structure of Mike Hillyer.</p><p>Now let's see how we can achieve major needs for hierarchical data.</p><h4>Adding a new node</h4><p>Let's add a root node, and we indicate our root node use 1 as depth. When we have only one root node, its left and right value are 1 and 2.</p> <pre><code>INSERT INTO geo (name, depth, lft, rgt) VALUES ('root', 1, 1, 2);
+</code></pre> <p>Now let's add a few more nodes and familiarize us with how newly added nodes influence existing nodes.</p><p>The depth of the child node is 1 more than the depth of the current node. According to the mathematical theory of the Nested Set Model, left value of the node equals right value of the current node, right value of the child node equals right value of the current node plus 1. All the nodes that located right to the current node increase their left and right nodes by 2.</p> <pre><code>INSERT INTO geo (name, depth, lft, rgt) VALUES ('Beijing', 1+1, 2, 2+1);
+
+UPDATE geo SET lft=lft+2 WHERE lft&gt;2;
+
+UPDATE geo SET rgt=rgt+2 WHERE rgt&gt;=2;
+</code></pre> <p>Let's add one more child node. Now current node is still the root node, but its right value is 4 now and its depth is still 1.</p> <pre><code>INSERT INTO geo (name, depth, lft, rgt) VALUES ('Tianjin', 1+1, 4, 4+1);
+UPDATE geo SET lft=lft+2 WHERE lft&gt;4;
+UPDATE geo SET rgt=rgt+2 WHERE rgt&gt;=4;
+</code></pre> <p>Actually, we only need to know the right value and depth of the current node and the name of new node. We can make a stored procedure, but the logic of the SQL is not very complicated, so we can also execute the statements within transaction.</p><p>Below is the SQL of our sample table. If you are interested, you can continue to add more nodes as an exercise.</p> <pre><code>INSERT INTO `geo`
+
+ (`cid`, `name`, `depth`, `lft`, `rgt`)
+
+ VALUES
+
+(1, 'root', 1, 1, 22),
+
+(2, 'Beijing', 2, 2, 13),
+
+(3, 'Tianjin', 2, 14, 19),
+
+(4, 'Shanghai', 2, 20, 21),
+
+(5, 'Dongcheng', 3, 3, 6),
+
+(6, 'Xicheng', 3, 7, 8),
+
+(7, 'Chongwen', 3, 9, 10),
+
+(8, 'Heping', 3, 15, 16),
+
+(9, 'Xuanwu', 3, 11, 12),
+
+(10, 'Nankai', 3, 17, 18),
+
+(11, 'Donghuamen', 4, 4, 5);
+</code></pre> <h4>Finding all the Leaf Nodes</h4><p>According to the model, leaf nodes are the node that have right value 1 bigger than its left value. So the SQL is very simple.。</p> <pre><code>SELECT cid, name FROM geo WHERE rgt = lft + 1;
+</code></pre> <h4>Retrieving a Single Path</h4><p>Let's find one node with all its superior nodes. Here I use comparative operands instead of BETWEEN keyword. The result will include the current node itself if we use equal sign and will not include the current node if not.</p> <pre><code>SELECT parent.cid, parent.name FROM geo  AS node, geo AS parent
+    WHERE parent.lft &lt;= node.lft AND node.lft &lt;= parent.rgt AND node.name = 'Donghuamen'
+    ORDER BY parent.lft;
+</code></pre> <p>Or we can use primary key for more accurate query.</p> <pre><code>SELECT parent.cid, parent.name FROM geo  AS node, geo AS parent
+    WHERE parent.lft &lt;= node.lft AND node.lft &lt;= parent.rgt AND node.cid = 11
+    ORDER BY parent.lft;
+</code></pre> <h4>Finding the Depth of the Nodes</h4><p>Now we can use our redundant field, depth, without complicated nested queries.</p> <pre><code>SELECT depth FROM geo WHERE name='Nankai';
+</code></pre> <h4>Retrieving the whole tree with Depth</h4> <pre><code>SELECT depth, name FROM depth;
+</code></pre> <p>Let's make it with format.</p> <pre><code>SELECT depth, CONCAT( REPEAT('- ', depth - 1), name) AS name FROM geo ORDER BY lft;
+</code></pre> <h4>Depth of a Sub-Tree</h4><p>We use left and right of the starting node as condition, for example, Beijing with lft=2 and rgt=11. Thus, we can avoid nested query, but we need one more query to know the left and right.</p> <pre><code>SELECT depth, CONCAT( REPEAT('- ', depth - 1), name) AS name FROM geo WHERE lft&gt;=2 AND rgt&lt;=11 ORDER BY lft;
+</code></pre> <p>We use primary key, for example, Tianjin with cid=3, as condition with nested query.</p> <pre><code>SELECT n.depth, CONCAT( REPEAT('- ', n.depth - 1), n.name) AS name
+
+FROM geo AS n , geo AS s
+
+WHERE s.cid=3 AND n.lft&gt;=s.lft AND n.rgt&lt;=s.rgt ORDER BY n.lft;
+</code></pre> <h4>The Immediate Subordinates of a Node</h4><p>We are finding direct children of one node. We can still use depth field to simplify query.</p><p>We use left, right and depth of the starting node as condition, for example, root with lft=1, rgt=20, depth=1. Thus, we can avoid nested query, but we need one more query to know the left and right.</p> <pre><code>SELECT cid, depth, name FROM geo WHERE lft&gt;1 AND rgt&lt;22 AND depth=1+1 ORDER BY lft;
+</code></pre> <p>We use primary key, for example, Beijing with cid=2, as condition with nested query.</p> <pre><code>SELECT n.cid, n.depth, n.name
+
+FROM geo AS n, geo AS s
+
+WHERE s.cid=2 AND n.lft&gt;=s.lft AND n.rgt&lt;=s.rgt AND n.depth=s.depth+1 ORDER BY n.lft;
+</code></pre> <h4>The Immediate Parent Node</h4><p>We add LIMIT 1 after querying the single path. Of course the result should exclude the node itself, so we use &lt; instead of &lt;= . It's fast to use primary key.</p> <pre><code>SELECT parent.cid, parent.name FROM geo AS node, geo AS parent
+    WHERE parent.lft &lt; node.lft AND node.lft &lt; parent.rgt AND node.cid = 11
+    ORDER BY parent.lft DESC LIMIT 1;
+</code></pre> <h4>Number of All Subordinates</h4><p>We can calculate with left and right of the current node. According to the Nested Set Model, each node uses two integers, so the number of all subordinates equals (right-left-1) / 2. For example, Beijing with rgt=13 and lft=2, its all subordinates accounts to (13-2-1)/2 = 5.</p><h4>Number of Immediate Subordinates</h4><p>We use left, right and depth of the starting node as condition, for example, root with lft=1, rgt=20, depth=1. Thus, we can avoid nested query, but we need one more query to know the left and right.</p> <pre><code>SELECT count(1) AS num FROM geo WHERE lft&gt;1 AND rgt&lt;22 AND depth=1+1;
+</code></pre> <p>We use primary key, for example, Beijing with cid=2, as condition with nested query.</p> <pre><code>SELECT count(1) AS num
+
+FROM geo AS n , geo AS s
+
+WHERE s.cid=2 AND n.lft&gt;=s.lft AND n.rgt&lt;=s.rgt AND n.depth=s.depth+1;
+</code></pre> <h4>Deleting a Node</h4><p>In order to simplify logic, we only delete leaf node, or delete a sub-tree entirely. We don't deal with deleting middle nodes which can cause orphan nodes. In real production, we usually add nodes and rarely delete nodes. We even don't need to delete nodes in some projects.</p><p>We first calculate the offset caused by deleting a node. We use Xicheng as an example its lft=7, rgt=8, and its offset = 8-7+1 = 2.</p> <pre><code>//Delete current node and its all subordinates
+
+DELETE FROM geo WHERE lft&gt;=7 AND rgt&lt;=8;
+
+//Readjust left value of all nodes with left value larger than the deleted node
+UPDATE geo SET lft=lft-2 WHERE lft&gt;8;
+
+//Readjust right value of all nodes with right value larger than the deleted node
+
+UPDATE geo SET rgt=rgt-2 WHERE rgt&gt;8;
+</code></pre> <h4>Moving nodes of the Same Depth</h4><p>We manage to deal with sorting when reading data while we don't change the order of nodes with writing. Basically, all the above SQL statements are ordered by lft, i.e., ordered by the time when they are added. Quite often we need to display nodes of same depth ordered by their letters or Chinese phonetic alphabet. The solution is simple. If we deal with English data, we just order the nodes by name. If we deal with Chinese, we use one more redundant field to store Chinese phonetic alphabet and order result by it when reading.</p><hr><p><em>原文链接: https://www.snowpeak.fun/en/article/detail/further_discussion_on_managing_hierarchical_data_with_nested_set_model/</em></p></main><footer class="footer"><div class="container"><div class="footer-content"><div class="footer-section"><h3><i class="fas fa-snowflake"></i> Snowpeak</h3><p>Sharing and discussing cutting-edge technologies such as AI, cloud computing, and GitHub Copilot</p><div class="social-links"><div class="social-platforms"><a href="https://github.com/xfsnow" target="_blank" class="social-link"><i class="fab fa-github"></i></a><a href="https://snowpeak.blog.csdn.net/" target="_blank" class="social-link"><i class="fas fa-blog"></i></a><a href="https://space.bilibili.com/701839928" target="_blank" class="social-link"><i class="fab fa-bilibili"></i></a><a href="https://www.linkedin.com/in/snowpeak" target="_blank" class="social-link"><i class="fab fa-linkedin"></i></a></div><div class="wechat-section"><div class="wechat-info"><span class="wechat-label">WeChat Account</span><span class="wechat-name">Tech Warm Life</span></div><img src="/assets/img/techwarm.jpg" alt="Tech Warm Life" class="wechat-qr"></div></div></div><div class="footer-section"><h4>Quick Links</h4><ul><li><a href="/#articles">Article</a></li><li><a href="/#tools">Tools</a></li><li><a href="https://docs.github.com/en/pages" target="_blank">GitHub Pages</a></li></ul></div><div class="footer-section"><h4>Tech Stack</h4><ul><li>Python</li><li>GitHub Copilot</li><li>Claude Sonnet 4</li><li>HTML/CSS/JS</li><li>Responsive Design</li></ul></div></div><div class="footer-bottom"><p>Copyright &copy; 2013-<script>document.write((new Date()).getFullYear());</script> Snowpeak Blog. Running on GitHub Pages.</p></div></div></footer><script src="/en/index.js"></script><script src="/assets/js/blog.js"></script><script>hljs.highlightAll();</script></body></html>
