@@ -1,10 +1,30 @@
 {
     "lang": "en",
     "langName": "English",
-    "read": "read",
-    "article": "article",
+    "title": "Blog",
+    "description": "Sharing and discussing cutting-edge technologies such as AI, cloud computing, and GitHub Copilot",
+    "keywords": "AI, GitHub Copilot, Azure Cloud, Cloud Computing, Front-end Technology, Back-end Technology, Web Development, Software Engineering",
+    "read": "Read",
+    "article": "Article",
     "noResults": "No related articles found",
     "tryOtherKeywords": "Please try other keywords or view all articles",
     "ReadTry": "Read & try",
-    "searchPlaceholder": "Search article titles, content or tags..."
+    "searchPlaceholder": "Search article titles, content or tags...",
+    "categoryMap" : {
+        "AI": "AI",
+        "Azure": "Azure",
+        "Development": "Development",
+        "Tools": "Tools",
+        "Cloud Computing": "Cloud Computing",
+        "Backend": "Backend",
+        "Database": "Database",
+        "Frontend": "Frontend",
+        "Web": "Web",
+        "System": "System",
+        "Network": "Network",
+        "Mobile": "Mobile Development",
+        "Software": "Software",
+        "Programming": "Programming",
+        "Framework": "Framework"
+    }
 }

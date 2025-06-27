@@ -136,9 +136,8 @@ class BlogMaker:
         markdownPath = os.path.join(self.langPath, 'about.md')
         with open(markdownPath, 'r', encoding='utf-8') as f:
                 content = f.read()
-
-            # 取第一个 --------- 以后的内容为文章正文
-            # 使用正则表达式匹配第一个 '---' 之后的内容
+        # 取第一个 --------- 以后的内容为文章正文
+        # 使用正则表达式匹配第一个 '---' 之后的内容
         content = re.split(r'^-+\s*$', content, maxsplit=1, flags=re.MULTILINE)
         # print(content)
         content = content[1] if len(content) > 1 else content[0]  # 取第二部分作为正文

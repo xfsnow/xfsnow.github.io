@@ -4,9 +4,9 @@
         <div class="container">
             <h1>{{ data.article.title }}</h1>
             <div class="article-meta">
-                <span><i class="fas fa-calendar"></i> 发表: {{ data.article.date }}</span>
-                <span><i class="fas fa-clock"></i> 阅读约需: {{ data.article.reading_time }}</span>
-                <span><i class="fas fa-tag"></i> 分类: {{ data.article.category_name }}</span>
+                <span><i class="fas fa-calendar"></i> {{ data.lang.published }}: {{ data.article.date }}</span>
+                <span><i class="fas fa-clock"></i> {{ data.lang.reading_time }}: {{ data.article.reading_time }}</span>
+                <span><i class="fas fa-tag"></i> {{ data.lang.category }}: {{ data.article.category_name }}</span>
             </div>
         </div>
     </header>

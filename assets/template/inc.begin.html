@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>雪峰-{{ data.lang.title }}</title>
+    <title>{{ data.lang.title }}</title>
     <meta name="description" content="{{ data.lang.description }}">
     <meta name="keywords" content="{{ data.lang.keywords }}">
     <link rel="stylesheet" href="/assets/css/style.css">
@@ -20,10 +20,10 @@
                 <h2><i class="fas fa-snowflake"></i> Snowpeak</h2>
             </div>
             <div class="nav-menu">
-                <a href="/" class="nav-link">首页</a>
-                <a href="/#articles" class="nav-link">文章</a>
-                <a href="/#tools" class="nav-link">演示</a>
-                <a href="/zh/about.htm" class="nav-link">关于</a>
+                <a href="/" class="nav-link">{{data.lang.home}}</a>
+                <a href="/#articles" class="nav-link">{{data.lang.article}}</a>
+                <a href="/#tools" class="nav-link">{{data.lang.tool}}</a>
+                <a href="/zh/about.htm" class="nav-link">{{data.lang.about}}</a>
                 <a href="/en/index.html" class="nav-link lang-switch"><i class="fas fa-globe"></i> English</a>
             </div>
             <div class="nav-toggle" id="mobile-menu">

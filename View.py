@@ -3,10 +3,11 @@ import re
 from jinja2 import Environment, FileSystemLoader
 
 class View:
-    def __init__(self, langPath: str = 'zh'):
+    def __init__(self):
         """初始化视图渲染器"""
         # 设置模板目录
-        template_dir = os.path.join('assets', 'template', langPath)
+        template_dir = 'assets/template'
+        print(template_dir)
         self.env = Environment(
             loader=FileSystemLoader(template_dir),
             trim_blocks=True,
@@ -31,7 +32,6 @@ class View:
         # os.makedirs(os.path.dirname(file_path), exist_ok=True)
         if strip:
             # 写出的是 HTML 文件，清理一下，但需要保护 <pre> 标签内的内容
-
             # 首先找到所有 <pre> 标签的内容并保存
             pre_contents = []
             pre_pattern = r'(<pre[^>]*>)(.*?)(</pre>)'
