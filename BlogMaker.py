@@ -28,7 +28,7 @@ class BlogMaker:
         js_file = os.path.join(self.langPath, 'index.js')
         data = {}
         data['lang'] = self.getLang()  # 获取语言配置
-        
+
         # 一次性读出 index.js 文件全部内容，把前面的 const articles=去掉，结尾的分号也去掉，最后 json.loads() 解析成 Python 对象
         with open(js_file, 'r', encoding='utf-8') as f:
             content = f.read()
@@ -40,7 +40,7 @@ class BlogMaker:
         # 提取所有文章的分类并创建分类映射
         categories_set = set()
         category_names = {}  # 存储 category -> category_name 的映射
-        
+
         for article in articles:
             if 'category' in article and article['category']:
                 categories_set.add(article['category'])
@@ -69,10 +69,7 @@ class BlogMaker:
         # 渲染模板
         html_content = self.view.render_template('zh.html', data=data)
         # 保存生成的 HTML 文件
-        self.view.write_html(os.path.join(self.langPath, 'zh.htm'), html_content)
-
-
-
+        self.view.write_html(os.path.join(self.langPath, 'zh.htm'), html_content, strip=True)
 
     # markdown 转成HTML，然后再带上模板的页眉和页脚
     def article(self, title: str, description: str, time_publish: str, category: str):
@@ -260,7 +257,8 @@ class BlogMaker:
 
     def generate_article_js(self, articles: list, path: str):
         # json.dumps() 不带格式和缩进，可以精简输出文件的体积
-        js_content = "const articles=" + json.dumps(articles, ensure_ascii=False, indent=4) + ";"
+        js_content = "const articles=" + json.dumps(articles, ensure_ascii=False) + ";"
+        # js_content = "const articles=" + json.dumps(articles, ensure_ascii=False, indent=4) + ";"
         # 保存到文件
         output_file = os.path.join(path, 'index.js')
         with open(output_file, 'w', encoding='utf-8') as f:

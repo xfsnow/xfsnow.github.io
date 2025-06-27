@@ -163,28 +163,8 @@ class Blog {
         // 分类筛选
         if (this.currentFilter !== 'all') {
             articles = articles.filter(article => {
-                // 创建分类映射
-                const categoryMap = {
-                    'ai': 'AI',
-                    'azure': 'Azure',
-                    'copilot': 'AI', // GitHub Copilot相关文章通常归类为AI
-                    'tools': 'Tools',
-                    'system': 'System',
-                    'development': 'Development',
-                    'cloud': 'Cloud',
-                    'backend': 'Backend',
-                    'database': 'Database',
-                    'frontend': 'Frontend',
-                    'web': 'Web',
-                    'network': 'Network',
-                    'mobile': 'Mobile',
-                    'software': 'Software',
-                    'programming': 'Programming',
-                    'framework': 'Framework'
-                };
-
-                const targetCategory = categoryMap[this.currentFilter] || this.currentFilter;
-                return article.category === targetCategory;
+                // 直接使用 category 字段进行比较，不需要映射
+                return article.category === this.currentFilter;
             });
         }
 
@@ -213,7 +193,7 @@ class Blog {
         card.innerHTML = `
             <div class="article-meta">
                 <span class="article-category ${categoryClass}">
-                    ${article.category}
+                    ${article.category_name}
                 </span>
                 <span class="article-date">${article.time_publish}</span>
             </div>
