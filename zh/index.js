@@ -1,853 +1,853 @@
 const articles=[
     {
-        "filename": "20250212_Azure_DeepSeek_Open.htm",
+        "filename": "/zh/20250212_Azure_DeepSeek_Open.htm",
         "title": "在 Azure 上部署 DeepSeek 并集成 Open WebUI",
         "description": "DeepSeek 是杭州深度求索人工智能基础技术研究有限公司发布的开源大模型，最近是持续火爆，使得官方服务经常不可用。网上各种本地部署和私有部署的文章已经很多，这里我们提供一个全部基于 Azure 的私有部署方案。",
         "time_publish": "2025-02-12 18:01:01",
         "category": "AI"
     },
     {
-        "filename": "20241114_Vision_GitHub_Copilot.htm",
+        "filename": "/zh/20241114_Vision_GitHub_Copilot.htm",
         "title": "使用 Vision 插件让 GitHub Copilot 识图问答",
         "description": "为了扩展 Copilot 的功能，微软发布了一个名为 Vision for Copilot Preview 的插件，它通过 Copilot 的 Agent 机制对接 OpenAI 中的 GPT 4o 模型实现识图问答。本文介绍Vision for Copilot Preview 的插件的安装配置，以及探索识图解数学题等一些有趣的扩展用法。",
         "time_publish": "2024-11-14 10:40:18",
-        "category": "AI"
+        "category": "Tools"
     },
     {
-        "filename": "20241112_Web_Search_GitHub.htm",
+        "filename": "/zh/20241112_Web_Search_GitHub.htm",
         "title": "使用 Web Search 插件扩展 GitHub Copilot 问答",
         "description": "GitHub Copilot 是一个由 GitHub 和 OpenAI 合作开发的人工智能代码提示工具。它可以根据上下文提示代码，还可以回答各种技术相关的问题。但是 Copilot 本身不能回答非技术类型的问题。为了扩展 Copilot 的功能，微软发布了一个名为 Web Search 的插件，它可以使用搜索引擎来扩展 Copilot 无法回答的问题。",
         "time_publish": "2024-11-12 14:40:23",
-        "category": "AI"
+        "category": "Tools"
     },
     {
-        "filename": "20230508_Using_Configuration_Tencent.htm",
+        "filename": "/zh/20230508_Using_Configuration_Tencent.htm",
         "title": "使用腾讯企业邮箱配置免费域名邮箱",
         "description": "各位开发者自己部署个人网站现在很普遍了，也会因此注册自己的域名，但是部署邮件服务器就没那么简单了。腾讯企业邮箱的免费版也可绑定域名，只需简单几步，就可以有自己的域名邮箱啦。",
         "time_publish": "2023-05-08 14:44:11",
         "category": "System"
     },
     {
-        "filename": "20220803_DaemonSet_AKS.htm",
+        "filename": "/zh/20220803_DaemonSet_AKS.htm",
         "title": "使用DaemonSet定制AKS工作节点",
         "description": "很多时候我们需要在AKS (Azure Kubernetes Service)工作节点上运行支持软件，例如，恶意软件扫描程序，Policy Enforcer等。目前AKS的工作节点只能使用云平台指定的操作系统镜像，不能直接用自定义的镜像来定制工作节点。常规操作pod被隔离在容器以内，不能影响其所在的宿主机。这篇文章受到Kured 项目的启发，引导您完成使用守护程序集引导AKS集群的过程，以使其成为...",
         "time_publish": "2022-08-03 15:16:52",
         "category": "AI"
     },
     {
-        "filename": "20220713_Azure_DevOps_Java.htm",
+        "filename": "/zh/20220713_Azure_DevOps_Java.htm",
         "title": "Azure DevOps部署Java Spring 应用到Azure App Service",
         "description": "Azure DevOps是微软Azure云平台上端到端的企业级研发管理平台，其中Azure Pipelines是使用流水线实现CI/CD的核心服务。Azure App Service是一个为开发人员提供的完全托管的平台即服务 (PaaS) 产品。Spring Boot是当前Java应用最主流的开发框架。本文以一个基本的实例，详细讲解使用Azure Pipelines创建和编辑流水线，把Java S...",
         "time_publish": "2022-07-13 10:57:47",
         "category": "AI"
     },
     {
-        "filename": "20220426_AKS.htm",
+        "filename": "/zh/20220426_AKS.htm",
         "title": "AKS集群蓝绿部署实现版本升级(下篇)",
         "description": "在本系列文章的上篇，我们已经介绍了AKS蓝绿部署的基本思路，并介绍了如何部署相关资源并将应用网关与AKS进行集成。错过上篇的小伙伴，可以点击这里回看。本篇我们将基于上篇的内容，进一步介绍如何部署应用，如何部署AKS新集群，以及如何对AKS版本进行切换。应用部署我们来部署一个演示的应用，验证应用网关与AKS集群已经成功集成。把以下YAML源码复制另存为 deployment_aspnet.yaml。...",
         "time_publish": "2022-04-26 17:26:24",
         "category": "AI"
     },
     {
-        "filename": "20220301_AKS.htm",
+        "filename": "/zh/20220301_AKS.htm",
         "title": "AKS集群蓝绿部署实现版本升级（上篇）",
         "description": "Azure Kubernetes 服务 (AKS)是微软云Azure上托管的Kubernetes 群集，可以用于快速部署Kubernetes 群集，结合Azure其它服务和功能，简化日常运维，轻松实现业务应用的弹性。当前Kubernetes 社区蓬勃发展，版本升级比较频繁。AKS托管的版本升级功能，可以一键式地把AKS集群 原地升级，对集群内的工作节点逐个滚动升级，对于小规模或非关键业务集群来说，...",
         "time_publish": "2022-03-01 16:47:49",
         "category": "AI"
     },
     {
-        "filename": "20210609_Azure_DevOps.htm",
+        "filename": "/zh/20210609_Azure_DevOps.htm",
         "title": "Azure DevOps流水线合并多个源码库（一）",
         "description": "Azure DevOps作为微软云上DevOps端到端的工具链，提供了开发日常常用的主要功能模块，尤其是Repos源码库结合 Pipelines 流水线实现自动化的CI和CD，这是最常用到的功能。随着当前Web应用逐渐发展，前后端分离的架构已经成为主流。日常开发时前端源码和后端源码通常由2个团队负责开发，保存在2个源码库中，而自动化集成和部署时则经常需要统一部署到一个资源环境下。为了实现这个常见的...",
         "time_publish": "2021-06-09 15:38:06",
         "category": "AI"
     },
     {
-        "filename": "20210526_Azure_DevOps_Azure.htm",
+        "filename": "/zh/20210526_Azure_DevOps_Azure.htm",
         "title": "Azure DevOps管理Azure中国区域",
         "description": "Azure DevOps目前仍只在微软云Azure海外区域提供SaaS服务，Azure中国区域还没有发布。其实Azure DevOps可以管理各种云和应用部署的环境与平台，可以通过服务连接（Service Connection） 方便地连接Azure中国区域，以及其它Azure的特殊区域，比如美国政务云、德国区域等等。本文将带领大家一步一步配置好中国区域的订阅，以及建立起Azure DevOps到...",
         "time_publish": "2021-05-26 19:01:44",
         "category": "AI"
     },
     {
-        "filename": "20210526_AKS.htm",
+        "filename": "/zh/20210526_AKS.htm",
         "title": "AKS扩展到虚拟节点",
         "description": "Azure Kubernetes 服务 (AKS)是微软云Azure上托管的Kubernetes 群集，可以用于快速部署Kubernetes 群集。基础的AKS集群使用平 Pod 自动缩放程序，在 Kubernetes 群集中使用指标服务器来监视 Pod 的资源需求。如果应用程序需要更多资源，则会自动增加 Pod 数以满足需求。如果工作节点资源也不够了，则再基于虚拟机扩展集（VMSS）进行工作节点...",
         "time_publish": "2021-05-26 15:36:48",
         "category": "AI"
     },
     {
-        "filename": "20210415_Git_SSH.htm",
+        "filename": "/zh/20210415_Git_SSH.htm",
         "title": "Git源码库和SSH远程登录的多账号配置",
         "description": "Git源码库多账号配置，本质上还是SSH远程登录多账号配置的扩展。先看一下基础的SSH远程登录多账号配置。在 ~/.ssh/ 下创建一个名为 config 的文件。里面写上如下配置：Host testVM HostName xxx.xxx.xxx.xxx User username Port 22 IdentityFile /path/to/my/private/key/testVM.pem注意所...",
         "time_publish": "2021-04-15 17:14:21",
         "category": "AI"
     },
     {
-        "filename": "20210205_AKS.htm",
+        "filename": "/zh/20210205_AKS.htm",
         "title": "在微软云AKS上部署弹性应用",
         "description": "Azure Kubernetes 服务 (AKS)是微软云Azure上托管的Kubernetes 群集，可以用于快速部署Kubernetes 群集，结合Azure其它服务和功能，简化日常运维，轻松实现业务应用的弹性。本文是一个动手小实验，演示弹性部署的基本步骤。适用的场景是在AKS背后的虚拟机意外停机时，通过Kubernetes 的配置实现自动故障转移。阅读本文需要掌握Kubernetes的基本知...",
         "time_publish": "2021-02-05 16:25:06",
         "category": "AI"
     },
     {
-        "filename": "20160313_Development_Implementation_Authorization.htm",
+        "filename": "/zh/20160313_Development_Implementation_Authorization.htm",
         "title": "微信公众号开发——网页授权实现简化用户绑定",
         "description": "本教程的学习条件：了解微信公众号开发的基本知识。已经申请了微信公众号并设置了开发模式等。如果不了解，请先到微信官方平台学习 http://mp.weixin.qq.com/wiki。\t需要服务器端开发的基本技能，本文主要讲解流程，基本不涉及具体开发语言。　　首先我们要明确绑定微信用户和系统用户，其目的是为了用户在一次绑定以后，再次通过微信访问系统时可以由系统自动为其登录，避免用户反复登录...",
         "time_publish": "2016-03-13 22:37:47",
         "category": "AI"
     },
     {
-        "filename": "20120708_Eclipse_Spket_ExtJs.htm",
+        "filename": "/zh/20120708_Eclipse_Spket_ExtJs.htm",
         "title": "在Eclipse中安装Spket并实现ExtJs4.1和jQuery代码提示",
         "description": "翻译整理自 Spket 官方网站的说明http://www.spket.com/extjs.htmlhttp://www.spket.com/jquery.htmlSpket 是一个支持各种主流 JavaScript 库的非常棒的 Eclipse 的 JavaScript 插件。支持JavaScript, XUL/XBL, Laszlo, SVG and Yahoo! Widg",
         "time_publish": "2012-07-08 20:31:58",
         "category": "AI"
     },
     {
-        "filename": "20120625_Implementation_1.htm",
+        "filename": "/zh/20120625_Implementation_1.htm",
         "title": "以嵌套集合模型实现树状结构的一点深入探讨",
         "description": "以关系型数据库实现树状结构，除了大家熟悉和容易理解的“邻接表模型”，还有另一种“嵌套集合模型”，其基本理论在网上都可找到，比如：Mike Hillyer 的原作http://mikehillyer.com/articles/managing-hierarchical-data-in-mysql/陈建平对上文的译作http://www.cnblogs.com/chinaontolog",
         "time_publish": "2012-06-25 21:39:15",
         "category": "AI"
     },
     {
-        "filename": "20120625_further_discussion.htm",
+        "filename": "/zh/20120625_further_discussion.htm",
         "title": "以嵌套集合模型实现树状结构的一点深入探讨",
         "description": "以关系型数据库实现树状结构，除了大家熟悉和容易理解的“邻接表模型”，还有另一种“嵌套集合模型”，其基本理论在网上都可找到，比如： Mike Hillyer 的原作 <http://mikehillyer.com/articles/managing-hierarchical-data-in-mysql/> 陈建平对上文的译作 <http://www.cnblogs.com/chinaontology...",
         "time_publish": "2012-06-25 21:39:00",
         "category": "Database"
     },
     {
-        "filename": "20120521_PHP_socket_SSL.htm",
+        "filename": "/zh/20120521_PHP_socket_SSL.htm",
         "title": "为 PHP 的 socket 启用 SSL 支持",
         "description": "使用 PHP 的 socket 访问 SSL 时可能遇到如下报错：Unable to find the socket transport \"ssl\" - did you forget to enable it when you configured PHP?我上网查到了在 Windows 下配置 Apache 的方法，分享出来：停止 Apache 服务。找到 PHP 安装目录下的",
         "time_publish": "2012-05-21 20:00:41",
         "category": "AI"
     },
     {
-        "filename": "20120521_enable_ssl.htm",
+        "filename": "/zh/20120521_enable_ssl.htm",
         "title": "为 PHP 的 socket 启用 SSL 支持",
         "description": "使用 PHP 的 socket 访问 SSL 时可能遇到如下报错： Unable to find the socket transport \"ssl\" - did you forget to enable it when you configured PHP? 我上网查到了在 Windows 下配置 Apache 的方法，分享出来： 1. 停止 Apache 服务。 2. 找到 PHP 安装目录下...",
         "time_publish": "2012-05-21 20:00:00",
         "category": "Backend"
     },
     {
-        "filename": "20120308_MySQL_ID.htm",
+        "filename": "/zh/20120308_MySQL_ID.htm",
         "title": "MySQL 一次查询插入多条的自增 ID",
         "description": "根据http://stackoverflow.com/questions/6895679/mysqls-auto-increment-behavior-in-a-multiple-row-insertMySQL 可以一次性插入多条，LAST_INSERT_ID() 返回的是所插入条目的第一条的 ID。问题是其余的 ID 能否保证是连续的？下面有高手答复，在某种特殊的情况下，如果",
         "time_publish": "2012-03-08 21:24:42",
         "category": "AI"
     },
     {
-        "filename": "20120308_get_multiple.htm",
+        "filename": "/zh/20120308_get_multiple.htm",
         "title": "MySQL 一次查询插入多条的自增 ID",
         "description": "根据 <http://stackoverflow.com/questions/6895679/mysqls-auto-increment-behavior-in-a-multiple-row-insert> MySQL 可以一次性插入多条，LAST_INSERT_ID() 返回的是所插入条目的第一条的 ID。问题是其余的 ID 能否保证是连续的？ 下面有高手答复，在某种特殊的情况下，如果配置成 r...",
         "time_publish": "2012-03-08 21:24:00",
         "category": "Database"
     },
     {
-        "filename": "20120225_install_and.htm",
+        "filename": "/zh/20120225_install_and.htm",
         "title": "在 Windows 下安装配置 PHP + Memcache",
         "description": "随着时间的推移，网上现在能找到的在 Windows下安装 Memcache 的文档大多已经过时。雪峰这里再简要介绍一下当下最新版的安装和配置方法。 Memcached 在其官网是不断更新的，可惜只有源码，没有 windows 编译版。 <http://memcached.org/> 找到当下最新的 Windows 编译版，在 <http://code.jellycan.com/memcached/...",
         "time_publish": "2012-02-25 18:30:00",
         "category": "Backend"
     },
     {
-        "filename": "20120225_Windows_PHP_Memcache.htm",
+        "filename": "/zh/20120225_Windows_PHP_Memcache.htm",
         "title": "在 Windows 下安装配置 PHP + Memcache",
         "description": "Windows下Memcache安装随着时间的推移，网上现在能找到的在 Windows下安装 Memcache 的文档大多已经过时。雪峰这里再简要介绍一下当下最新版的安装和配置方法。Memcached 在其官网是不断更新的，可惜只有源码，没有 windows 编译版。http://memcached.org/找到当下最新的 Windows 编译版，在http",
         "time_publish": "2012-02-25 18:03:26",
         "category": "AI"
     },
     {
-        "filename": "20120105_Domain.htm",
+        "filename": "/zh/20120105_Domain.htm",
         "title": "近日注册了 3 个域名",
         "description": "近日注册了 3 个域名http://www.finedisk.com/http://www.finedisk.net/http://www.fundisk.net/",
         "time_publish": "2012-01-05 08:52:07",
         "category": "AI"
     },
     {
-        "filename": "20111225_10.htm",
+        "filename": "/zh/20111225_10.htm",
         "title": "雪峰网十周年庆",
         "description": "光阴似箭日月如梭，snowpeak.org 这个域名注册到今年已经有 10 年了。注册整好 10 年的那天没赶上发文纪念，但是到现在也要抒发一下。先上个截图。这是在万网查到的域名注册信息。上面显示的域名注册时间是 2001 年 10 月 9 日。那时各大门户网站也基本上都刚刚起步。那个时代，还有不少免费空间可以用呢。免费空间也曾经是门户网站一项服务。雪峰呢，其实也是从免费空间起",
         "time_publish": "2011-12-25 17:56:15",
         "category": "AI"
     },
     {
-        "filename": "20111220_celebrating_10.htm",
+        "filename": "/zh/20111220_celebrating_10.htm",
         "title": "雪峰网十周年庆",
         "description": "光阴似箭日月如梭，snowpeak.org 这个域名注册到今年已经有 10 年了。注册整好 10 年的那天没赶上发文纪念，但是到现在也要抒发一下。 先上个截图。 ![snowpeak_domain.png](../assets/img/20111220_celebrating_10_01.png) 这是在万网查到的域名注册信息。上面显示的域名注册时间是 2001 年 10 月 9 日。那时各大门户...",
         "time_publish": "2011-12-20 21:59:17",
         "category": "Development"
     },
     {
-        "filename": "20111128_TigerVNC_Linux.htm",
+        "filename": "/zh/20111128_TigerVNC_Linux.htm",
         "title": "用 TigerVNC 实现 Linux 远程桌面",
         "description": "tigervnc 配置1. 确认 SSH 在运行2. 安装 TigerVNC Serveryum install tigervnc-server已经安装过的yum info tigervnc-server可以查看已安装的情况3. 配置显示分辨率、商品和用户编辑 /etc/sysconfig/vncservers参考注释掉的最后两行，添加 2 行",
         "time_publish": "2011-11-28 17:40:00",
         "category": "AI"
     },
     {
-        "filename": "20111128_use_tigervnc.htm",
+        "filename": "/zh/20111128_use_tigervnc.htm",
         "title": "用 TigerVNC 实现 Linux 远程桌面",
         "description": "tigervnc 配置 1\\. 确认 SSH 在运行 2\\. 安装 TigerVNC Server yum install tigervnc-server 已经安装过的 yum info tigervnc-server 可以查看已安装的情况 3\\. 配置显示分辨率、商品和用户 编辑 /etc/sysconfig/vncservers 参考注释掉的最后两行，添加 2 行 VNCSERVERS=\"2:...",
         "time_publish": "2011-11-28 17:40:00",
         "category": "System"
     },
     {
-        "filename": "20111126_solve_garbled.htm",
+        "filename": "/zh/20111126_solve_garbled.htm",
         "title": "Ajax中文乱码解决方案",
         "description": "主流浏览器中 Ajax 对象请求时都以 UTF-8 编码发送数据，所以当前后端文件都统一用 UTF-8 编码时情况比较经典而单纯。如果确实需要 GB 字符集，则需要适当变通。这里就这两种字符集分别说明解决方案。服务器端文件以 PHP 举例。 下列方案在 IE 系、FireFox3、Chrome4、Opera10 测试通过。 前后端文件本身统一都用 UTF-8 编码。 HTML 文件使用声明： <m...",
         "time_publish": "2011-11-26 22:06:43",
         "category": "Development"
     },
     {
-        "filename": "20111116_iPhone_iPad_Flash.htm",
+        "filename": "/zh/20111116_iPhone_iPad_Flash.htm",
         "title": "无需越狱或安装应用在 iPhone 和 iPad 上打开 Flash 视频",
         "description": "iPhone 和 iPad 本身不支持 Flash，有一种办法是安装支持 Flash 的 App，如 Frash。我看到国外朋友介绍的一种方法，可以不用越狱或安装应用，这里翻译出来分享一下。方法：用 iPad 或 iPhone 的浏览器如 Safari 访问http://code.google.com/p/itransmogrify/点击页面接近末尾的 “right from",
         "time_publish": "2011-11-16 22:36:29",
         "category": "AI"
     },
     {
-        "filename": "20111116_open_flash.htm",
+        "filename": "/zh/20111116_open_flash.htm",
         "title": "无需越狱或安装应用在 iPhone 和 iPad 上打开 Flash 视频",
         "description": "iPhone 和 iPad 本身不支持 Flash，有一种办法是安装支持 Flash 的 App，如 Frash。我看到国外朋友介绍的一种方法，可以不用越狱或安装应用，这里翻译出来分享一下。 方法： 用 iPad 或 iPhone 的浏览器如 Safari 访问 [http://code.google.com/p/itransmogrify/](https://code.google.com/p/...",
         "time_publish": "2011-11-16 22:36:00",
         "category": "Tools"
     },
     {
-        "filename": "20110817_PHP_PHP.htm",
+        "filename": "/zh/20110817_PHP_PHP.htm",
         "title": "在一台机器上同时安装 PHP5.2 和 PHP5.3",
         "description": "最近做 PHP5.2 向 PHP5.3 的升级, 需要在同一台 Linux 机器上同时安装 PHP5.2 和 PHP5.3。摸索总结出以外方案可以简化安装配置，并且方便在两个版本间切换使用。测试用的 Linux 是 Fedora 14，初始状态是已经安装有 Apach",
         "time_publish": "2011-08-17 17:08:52",
         "category": "AI"
     },
     {
-        "filename": "20110817_install_php.htm",
+        "filename": "/zh/20110817_install_php.htm",
         "title": "在一个 Linux 系统上同时安装 PHP5.2 和 PHP5.3",
         "description": "最近做 PHP5.2 向 PHP5.3 的升级, 需要在同一台 Linux 机器上同时安装 PHP5.2 和 PHP5.3。摸索总结出以外方案可以简化安装配置，并且方便在两个版本间切换使用。 测试用的 Linux 是 Fedora 14，初始状态是已经安装有 Apache 2.0.64 和 PHP5.2.6 ，分别安装在如下路径： /usr/local/apache2 /usr/local/php...",
         "time_publish": "2011-08-17 17:08:00",
         "category": "System"
     },
     {
-        "filename": "20110726_IE.htm",
+        "filename": "/zh/20110726_IE.htm",
         "title": "IE6 和微软雅黑",
         "description": "经我实测让 IE6 支持微软雅黑的唯一办法是 HTML 页面使用 gb2312 字符集，而 CSS 文件的字符集则 gb2312 或 utf8 均可。即 HTML 的 head 里声明然后在 CSS 里使用如下声明就可以了.yahei {font-famil",
         "time_publish": "2011-07-26 17:43:33",
         "category": "AI"
     },
     {
-        "filename": "20110726_microsoft_yahei.htm",
+        "filename": "/zh/20110726_microsoft_yahei.htm",
         "title": "IE6 和微软雅黑",
         "description": "经我实测让 IE6 支持微软雅黑的唯一办法是 HTML 页面使用 gb2312 字符集，而 CSS 文件的字符集则 gb2312 或 utf8 均可。即 HTML 的 head 里声明 <meta http-equiv=\"Content-Type\" content=\"text/html; charset=gb2312\" /> 然后在 CSS 里使用如下声明就可以了 .yahei { font-fa...",
         "time_publish": "2011-07-26 17:43:00",
         "category": "Tools"
     },
     {
-        "filename": "20110630_how_to.htm",
+        "filename": "/zh/20110630_how_to.htm",
         "title": "安装 PHP 的 PECL HTTP 扩展",
         "description": "我的环境是 Apache 2.2.19 + PHP 5.3.6 ，分别在 Fedora 14 Linux 和 Windows 2003 Server 下安装。 在 Linux 下编译安装即可 http://pecl.php.net/packages.php 找 pecl_http http://pecl.php.net/package/pecl_http 下载现在的稳定版是 1.7.1 stabl...",
         "time_publish": "2011-06-30 16:04:00",
         "category": "System"
     },
     {
-        "filename": "20110630_PHP_PECL_HTTP.htm",
+        "filename": "/zh/20110630_PHP_PECL_HTTP.htm",
         "title": "安装 PHP 的 PECL HTTP 扩展",
         "description": "我的环境是 Apache 2.2.19 + PHP 5.3.6 ，分别在 Fedora 14 Linux 和 Windows 2003 Server 下安装。 Linux 安装在 Linux 下编译安装即可http://pecl.php.net/packages.php 找 pecl_httphttp://pecl.php.net/package/pecl_http",
         "time_publish": "2011-06-30 16:04:00",
         "category": "AI"
     },
     {
-        "filename": "20110621_how_to.htm",
+        "filename": "/zh/20110621_how_to.htm",
         "title": "SecureCRT 正常显示中文及显示颜色的配置",
         "description": "先要让远程的 Linux 启用 UTF-8 编码，编辑 /etc/sysconfig/i18n LANG=\"en_US.UTF-8\" 或 LANG=\"zh_CN.UTF-8\" 其实现在新版 Linux 大多已经默认是 LANG=\"en_US.UTF-8\" 了。然后在 SecureCRT 选项->会话选项->外观 选择字体时选择支持汉字的字体，如“新宋体”，尤其注意在弹出的字体选择对话框里还要选择字...",
         "time_publish": "2011-06-21 15:10:00",
         "category": "System"
     },
     {
-        "filename": "20110621_SecureCRT.htm",
+        "filename": "/zh/20110621_SecureCRT.htm",
         "title": "SecureCRT 正常显示中文及显示颜色的配置",
         "description": "1. 让 SecureCRT 正常显示中文先要让远程的 Linux 启用 UTF-8 编码，编辑 /etc/sysconfig/i18nLANG=\"en_US.UTF-8\"或LANG=\"zh_CN.UTF-8\"其实现在新版 Linux 大多已经默认是 LANG=\"en_US.UTF-8\" 了。然后在 SecureCRT 选项->会话选项->外观 选择字体时选择支持汉字的字体，如“新宋体”，尤其",
         "time_publish": "2011-06-21 15:10:00",
         "category": "AI"
     },
     {
-        "filename": "20110609_a_solution.htm",
+        "filename": "/zh/20110609_a_solution.htm",
         "title": "PhpMyAdmin 不能导出数据的一种解决",
         "description": "最近遇到 PhpMyAdmin 不能导出数据的问题，点击导出后先是一个请求失败或者白页，重新刷新后就报错 export.php: Missing parameter: what (FAQ 2.8) export.php: Missing parameter: export_type (FAQ 2.8) 根据网上查的资料，最后确定是 php.ini 设置要调整一下 我原来的 post_max_siz...",
         "time_publish": "2011-06-09 14:06:00",
         "category": "Development"
     },
     {
-        "filename": "20110609_PhpMyAdmin.htm",
+        "filename": "/zh/20110609_PhpMyAdmin.htm",
         "title": "PhpMyAdmin 不能导出数据的一种解决",
         "description": "最近遇到 PhpMyAdmin 不能导出数据的问题，点击导出后先是一个请求失败或者白页，重新刷新后就报错 export.php: Missing parameter: what (FAQ 2.8)export.php: Missing parameter: export_type (FAQ 2.8) 根据网上查的资料，最后确定是 php.ini 设置要调整一下我原来的",
         "time_publish": "2011-06-09 14:06:00",
         "category": "AI"
     },
     {
-        "filename": "20110420_class_in.htm",
+        "filename": "/zh/20110420_class_in.htm",
         "title": "JavaScript 的类和类生成器工具",
         "description": "本文深入讲解 JavaScript 的类有关知识，并介绍了一些改善 JavaScript 面向对象编程的高级功能。适用于对 JavaScript 比较熟悉的朋友，了解 JavaScript 基本语法，有一定的 JavaScript 开发经验。 此文档介绍的内容适用于较大规模 JavaScript 开发，尤其是大量使用面向对象编程大量使用类的声明和继承等时候。 从定义上说， JavaScript 是...",
         "time_publish": "2011-04-20 17:56:00",
         "category": "Tools"
     },
     {
-        "filename": "20110420_JavaScript.htm",
+        "filename": "/zh/20110420_JavaScript.htm",
         "title": "JavaScript 的类和类生成器工具",
         "description": "通过实例介绍了 JavaScript 内置的基于原型的类使用方法，并以此为基础循序渐进地讲解如何实现一个类生成器工具函数，以实现基于类的（类似面向对象语言的）类定义写法。",
         "time_publish": "2011-04-20 17:56:00",
         "category": "AI"
     },
     {
-        "filename": "20110323_Fedora.htm",
+        "filename": "/zh/20110323_Fedora.htm",
         "title": "硬盘安装 Fedora 14",
         "description": "<br />硬盘安装确实比光盘装快。只是整个安装过程都得是英文，即使是后来进入图形界面。<br /><br />我现在的机器是 C 区装 Windows 2003, 单独分出 E 区放安装 Fedora 的文件。为了安装过程中选择镜像路径时方便, 我把安装相关文件都放在 E 区顶层, 除了 ISO 文件, 还要把 ISO 文件里面的 images 目录也解压出来, ISO 文件和解压出来的目录等都...",
         "time_publish": "2011-03-23 15:22:00",
         "category": "AI"
     },
     {
-        "filename": "20110323_install_fedora.htm",
+        "filename": "/zh/20110323_install_fedora.htm",
         "title": "硬盘安装 Fedora 14",
         "description": "硬盘安装确实比光盘装快。只是整个安装过程都得是英文，即使是后来进入图形界面。 我现在的机器是 C 区装 Windows 2003, 单独分出 E 区放安装 Fedora 的文件。为了安装过程中选择镜像路径时方便, 我把安装相关文件都放在 E 区顶层, 除了 ISO 文件, 还要把 ISO 文件里面的 images 目录也解压出来, ISO 文件和解压出来的目录等都不要改文件名。最后的目录结构是 E...",
         "time_publish": "2011-03-23 15:22:00",
         "category": "System"
     },
     {
-        "filename": "20110313_winmail_dat.htm",
+        "filename": "/zh/20110313_winmail_dat.htm",
         "title": "查看 winmail.dat 附件及避免此问题的配置",
         "description": "<br />有时我们的邮件会收到一个名叫 winmail.dat 的大附件，但又没有程序能打开它。原来这是 Microsoft Exchange 的一个“功能”。 Exchange 支持富文本邮件，即包含字体格式等的邮件，但其它邮件系统不支持，于是从 Exchange 发到非 Exchange 的邮箱后，这个邮件就变成了一个附件，通常叫 winmail.dat，偶尔有其它名字。如果你以纯文本方式打...",
         "time_publish": "2011-03-13 21:42:00",
         "category": "AI"
     },
     {
-        "filename": "20110313_how_to.htm",
+        "filename": "/zh/20110313_how_to.htm",
         "title": "Windows 版的 Fedora LiveUSB Creator 找不到 7z 的问题及解决办法",
         "description": "Fedora 有个 LiveUSB Creator 小工具，可以方便地把 Fedora 系统安装镜像制作成一个 USB 启动盘。注意请仅从以下官方网站下载，其它网站上的可能含有病毒！ <https://fedorahosted.org/liveusb-creator/> 这个工具程序其实很简单，尽管下载下来的是个安装程序，但可以不用运行安装，直接用 Winrar 之类的解压工具解压出来，然后运行 ...",
         "time_publish": "2011-03-13 15:42:00",
         "category": "System"
     },
     {
-        "filename": "20110313_Windows_Fedora_LiveUSB.htm",
+        "filename": "/zh/20110313_Windows_Fedora_LiveUSB.htm",
         "title": "Windows 版的 Fedora LiveUSB Creator 找不到 7z 的问题及解决办法",
         "description": "<br />Fedora 有个 LiveUSB Creator 小工具，可以方便地把 Fedora 系统安装镜像制作成一个 USB 启动盘。注意请仅从以下官方网站下载，其它网站上的可能含有病毒！<br /><br />https://fedorahosted.org/liveusb-creator/<br /><br />这个工具程序其实很简单，尽管下载下来的是个安装程序，但可以不用运行安装，直接...",
         "time_publish": "2011-03-13 15:42:00",
         "category": "AI"
     },
     {
-        "filename": "20110306_JavaScript.htm",
+        "filename": "/zh/20110306_JavaScript.htm",
         "title": "用 JavaScript 清理干扰码",
         "description": "用 JavaScript 做一个 bookmarklet, 非常简单的清理掉网页干扰码。",
         "time_publish": "2011-03-06 21:21:00",
         "category": "AI"
     },
     {
-        "filename": "20110306_use_javascript.htm",
+        "filename": "/zh/20110306_use_javascript.htm",
         "title": "用 JavaScript 清理干扰码",
         "description": "网上有些内容发布系统或者论坛的内容会掺杂进干扰码，即看上去是正常的文字，但是复制粘贴出来就会带有一些乱码以及网站网址等标志信息，目的是为了防止发布的内容太轻易被别人拷走。 这干扰码其实就是在 HTML 源码里加一些特定的标签如 font 和 span ，再用样式把它们做成不显示，但复制粘贴时里面的内容会被拷出来。有兴趣的看看带干扰码的 HTML 源文件就知道了。 这里介绍一下用 JavaScrip...",
         "time_publish": "2011-03-06 21:21:00",
         "category": "Tools"
     },
     {
-        "filename": "20110221_Firefox.htm",
+        "filename": "/zh/20110221_Firefox.htm",
         "title": "减少 Firefox 占用内存",
         "description": "翻译一篇国外的文章，经我实地测试，感觉解决 Firefox 占用内存过多比较有效。",
         "time_publish": "2011-02-21 17:23:00",
         "category": "AI"
     },
     {
-        "filename": "20110221_how_to.htm",
+        "filename": "/zh/20110221_how_to.htm",
         "title": "减少 Firefox 占用内存",
         "description": "最近使用的机器资源比较少，感觉 Firefox 占用内存过多的问题必须处理一下。上网找到一篇比较好的文章，简单翻译一下，自己留个记录，也分享给大家。 原文地址 <http://www.zolved.com/synapse/view_content/24939/How_to_reduce_the_memory_usage_on_Firefox> 原文有些截图是旧版的 Firefox 了，我根据我现在...",
         "time_publish": "2011-02-21 17:23:00",
         "category": "Development"
     },
     {
-        "filename": "20110221_magic_quotes_gpc.htm",
+        "filename": "/zh/20110221_magic_quotes_gpc.htm",
         "title": "在开启 magic_quotes_gpc 的 PHP 环境下使用 Smarty 模板引擎",
         "description": "在开启 magic_quotes_gpc 的 PHP 环境下使用 Smarty 模板引擎。",
         "time_publish": "2011-02-21 17:00:00",
         "category": "AI"
     },
     {
-        "filename": "20110221_use_smarty.htm",
+        "filename": "/zh/20110221_use_smarty.htm",
         "title": "在开启 magic_quotes_gpc 的 PHP 环境下使用 Smarty 模板引擎",
         "description": "尽管不建议设置 magic_quotes_gpc 为 ON，但有些早期的程序已经依赖此环境配置，一时不能关闭它，而默认情况下 Smarty 模板的解析功能又要求必须关闭 magic_quotes_gpc，否则不能正常解析模板文件。 要解决此问题，可以在扩展 Smarty 基类的自己的类里覆盖一下 fetch 方法，如果 PHP 环境是开启 magic_quotes_gpc 的，就临时把此配置关闭一...",
         "time_publish": "2011-02-21 17:00:00",
         "category": "Backend"
     },
     {
-        "filename": "20110131_open_chm.htm",
+        "filename": "/zh/20110131_open_chm.htm",
         "title": "在 Windows 2003 不能打开局域网共享的 CHM 文件的解决",
         "description": "有些朋友在局域网内既有 Windows 又有 Linux 机器，并且在 Linux 上部署了 Samba 共享后，发现从 Windows 机器不能打开 Samba 共享上的 CHM 文件。这其实不是 Samba 共享的问题，而是 Windows 自己的安全限制。如果有问题的 Windows 机器也不能打开其它 Windows 上的共享的 CHM 文件，则验证是此情况。 微软已经发布了具体而详细的解...",
         "time_publish": "2011-01-31 12:21:00",
         "category": "System"
     },
     {
-        "filename": "20110131_Windows_CHM.htm",
+        "filename": "/zh/20110131_Windows_CHM.htm",
         "title": "在 Windows 2003 不能打开局域网共享的 CHM 文件的解决",
         "description": "<br />有些朋友在局域网内既有 Windows 又有 Linux 机器，并且在 Linux 上部署了 Samba 共享后，发现从 Windows 机器不能打开 Samba 共享上的 CHM 文件。这其实不是 Samba 共享的问题，而是 Windows 自己的安全限制。如果有问题的 Windows 机器也不能打开其它 Windows 上的共享的 CHM 文件，则验证是此情况。<br /> <b...",
         "time_publish": "2011-01-31 12:21:00",
         "category": "AI"
     },
     {
-        "filename": "20110125_disable_access.htm",
+        "filename": "/zh/20110125_disable_access.htm",
         "title": "禁用访问时间记录，提升 Linux 硬盘访问性能",
         "description": "Linux 的文件系统会在读文件时也更新最后访问时间，相当于每次读操作还会多一次写操作。这种记录访问时间通常是不必要的，用以下配置禁用访问时间的记录，硬盘访问速度大为提升。 编辑 /etc/fstab 配置文件，在 ext 格式的分区配置中 “defaults” 后面加 “,noatime”，注意逗号前不能有空格，重启即可。 尽管我现在的 Fedora 13 已经是 ext4 文件格式了，但是添加...",
         "time_publish": "2011-01-25 10:42:00",
         "category": "System"
     },
     {
-        "filename": "20110125_Linux.htm",
+        "filename": "/zh/20110125_Linux.htm",
         "title": "禁用访问时间记录，提升 Linux 硬盘访问性能",
         "description": "禁用访问时间记录，提升 Linux 硬盘访问性能",
         "time_publish": "2011-01-25 10:42:00",
         "category": "AI"
     },
     {
-        "filename": "20101202_Firefox_display_block.htm",
+        "filename": "/zh/20101202_Firefox_display_block.htm",
         "title": "Firefox 中 display为 block 时 tbody 失去宽度",
         "description": "用 JavaScript 动态设置一个表格的显示和隐藏，先是直接设置此 table 的 display 为 block，发现整个表格宽度仍维持正常，但各表格行的边框线不能撑满了。这里研究了此问题的原因，并提供了一些简单的解决办法。",
         "time_publish": "2010-12-02 18:08:00",
         "category": "AI"
     },
     {
-        "filename": "20101202_firefox_lost.htm",
+        "filename": "/zh/20101202_firefox_lost.htm",
         "title": "Firefox 中 display为 block 时 tbody 失去宽度",
         "description": "用 JavaScript 动态设置一个表格的显示和隐藏，先是直接设置此 table 的 display 为 block，发现整个表格宽度仍维持正常，但各表格行的边框线不能撑满了。下面示例在非 IE 浏览器中可见问题的效果。 table.displayBlock { width: 90%; border:2px solid #999; display:block; } table.displayBl...",
         "time_publish": "2010-12-02 18:08:00",
         "category": "Tools"
     },
     {
-        "filename": "20100711_HTML_CSS_JavaScript.htm",
+        "filename": "/zh/20100711_HTML_CSS_JavaScript.htm",
         "title": "你的 HTML、CSS 和 JavaScript 到什么水平了？",
         "description": "从开发者的想法和思路来衡量运用 HTML、CSS 和 JavaScript 水平。其实很多时候你怎样看待某项技术，和如何运用这项技术，最能体现出你的技术水平。",
         "time_publish": "2010-07-11 15:34:00",
         "category": "AI"
     },
     {
-        "filename": "20100610_filter_by.htm",
+        "filename": "/zh/20100610_filter_by.htm",
         "title": "用位操作实现按子集筛选",
         "description": "最近做用户权限控制，遇到一个需求，可以抽象为用户的城市属性都是多城市的，需要列出某城市集合的子集的用户。 最初的用户-城市关系表有如下范例数据，前一列为用户ID，后一列是城市 1 anshan 1 beijing 1 baotou 1 baoding 1 beihai 1 baoji 1 chongqing 1 chengdu 2 anshan 2 beijing 3 baotou 3 baodi...",
         "time_publish": "2010-06-10 18:09:00",
         "category": "Database"
     },
     {
-        "filename": "20100610_Implementation.htm",
+        "filename": "/zh/20100610_Implementation.htm",
         "title": "用位操作实现按子集筛选",
         "description": "SQL 数据库也支持位操作，位操作平时看似不常用，但可以用来简便地解决一些难题，比如按子集筛选。",
         "time_publish": "2010-06-10 18:09:00",
         "category": "AI"
     },
     {
-        "filename": "20100603_Ajax.htm",
+        "filename": "/zh/20100603_Ajax.htm",
         "title": "Ajax中文乱码解决方案",
         "description": "主流浏览器中 Ajax 对象请求时都以 UTF-8 编码发送数据，所以当前后端文件都统一用 UTF-8 编码时情况比较经典而单纯。如果确实需要 GB 字符集，则需要适当变通。这里就这两种字符集分别说明解决方案。",
         "time_publish": "2010-06-03 12:44:00",
         "category": "AI"
     },
     {
-        "filename": "20100414_Eclipse_Resin.htm",
+        "filename": "/zh/20100414_Eclipse_Resin.htm",
         "title": "无插件在Eclipse中配置Resin方法",
         "description": "Eclipse 3.5 + Resin 2.1.17 或 Resin 3.1.10 测试通过。一、配置 Resin1. Resin 安装路径下的 resin.conf 里 java compiler 改用 javac，这样可以使用系统 JDK 的编译器，方便在 Eclipse 里的配置，并且可以让编译的错误信息显示为中文。如 Resin 2 的用resin 3 用如果运行",
         "time_publish": "2010-04-14 22:36:00",
         "category": "AI"
     },
     {
-        "filename": "20100414_support_resin.htm",
+        "filename": "/zh/20100414_support_resin.htm",
         "title": "无插件在Eclipse中配置Resin方法",
         "description": "Eclipse 3.5 + Resin 2.1.17 或 Resin 3.1.10 测试通过。 1\\. Resin 安装路径下的 resin.conf 里 java compiler 改用 javac，这样可以使用系统 JDK 的编译器，方便在 Eclipse 里的配置，并且可以让编译的错误信息显示为中文。如 Resin 2 的用 <java compiler=\"javac\" compiler-a...",
         "time_publish": "2010-04-14 22:36:00",
         "category": "Backend"
     },
     {
-        "filename": "20100317_cut_string.htm",
+        "filename": "/zh/20100317_cut_string.htm",
         "title": "Java 按字节截取带有汉字的字符串的一种做法",
         "description": "Java 按字节截取带有汉字的字符串的解法，网上有不少讨论。这里我也给出一种我自己的处理，基本原理还是统计要截取的字节数中是表示汉字的字节数是否是偶数个，即是否刚好包括了完整的汉字。 /** * 编程：编写一个截取字符串的函数，输入为一个字符串和字节数，输出为按字节截取的字符串。 但是要保证汉字不被截半个，如“我ABC”4，应该截为“我AB”，输入“我ABC汉DEF”，6，应该输出为“我ABC”而...",
         "time_publish": "2010-03-17 13:06:00",
         "category": "Backend"
     },
     {
-        "filename": "20100317_Java.htm",
+        "filename": "/zh/20100317_Java.htm",
         "title": "Java 按字节截取带有汉字的字符串的一种做法",
         "description": "Java 按字节截取带有汉字的字符串的解法，网上有不少讨论。这里我也给出一种我自己的处理，基本原理还是统计要截取的字节数中是表示汉字的字节数是否是偶数个，即是否刚好包括了完整的汉字。 /** * 编程：编写一个截取字符串的函数，输入为一个字符串和字节数，输出为按字节截取的字符串。 但是要保证汉字不被截半个，如“我ABC”4，应该截为“我AB”，输入“我ABC汉DEF”，6，应该输出为“我A",
         "time_publish": "2010-03-17 13:06:00",
         "category": "AI"
     },
     {
-        "filename": "20091001_CSS_JavaScript.htm",
+        "filename": "/zh/20091001_CSS_JavaScript.htm",
         "title": "CSS+JavaScript 通用循环滚动条",
         "description": "直接上源码啦：  http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd\">http://www.w3.org/1999/xhtml\">滚动板/* 初始化 */body { font: 12px/1 \"宋体\", SimSun, serif; background:#fff; color:#000;}/*核心是 position:r",
         "time_publish": "2009-10-01 17:01:00",
         "category": "AI"
     },
     {
-        "filename": "20090909_CSS_JS.htm",
+        "filename": "/zh/20090909_CSS_JS.htm",
         "title": "纯 CSS+JS 通用选项卡",
         "description": "请看源码吧，各段都有详细注释。 http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd\">http://www.w3.org/1999/xhtml\">选项卡/*核心：选项页切换：先把各选项内容块设置成 display: none，再把当前选项的 .tabOn .tabContentBox 设置为 display: block;选项页是",
         "time_publish": "2009-09-09 15:29:00",
         "category": "AI"
     },
     {
-        "filename": "20090909_general_tab.htm",
+        "filename": "/zh/20090909_general_tab.htm",
         "title": "纯 CSS+JS 通用选项卡",
         "description": "请看源码吧，各段都有详细注释。 <!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Transitional//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd\"> <html xmlns=\"http://www.w3.org/1999/xhtml\"> <head> <meta http-...",
         "time_publish": "2009-09-09 15:29:00",
         "category": "Tools"
     },
     {
-        "filename": "20090815_MKV.htm",
+        "filename": "/zh/20090815_MKV.htm",
         "title": "《国王与小鸟》MKV 网盘发布!",
         "description": "http://www.megaupload.com/?d=V8HZI4AV&setlang=cn我自认为这是我的字幕组的巅峰的作品。视频采用的是2001年1月到2003年7月经过化学和数码技术修复的亮彩高清版。法语汉语配音双 AC3 音频，法语音频经过修复，汉语音频修补了同步问题。法语汉语外挂字幕，重新校对了法语和汉语字幕。片长 01:21:58文件体积 959 MB视频 DivX 5",
         "time_publish": "2009-08-15 15:55:00",
         "category": "AI"
     },
     {
-        "filename": "20090706_iReport.htm",
+        "filename": "/zh/20090706_iReport.htm",
         "title": "iReport 3.5 版设置英文界面",
         "description": "iReport 是图形界面编辑 JasperReport 的工具，在简体中文的操作系统下，它的本地化功能把界面弄得又有中文又有英文，很乱。以前的旧版可以在选项中方便地修改界面成英文，但是到了 iReport-nb-3.5.2 版，我找了半天也没在选项中找到修改界面的地方。结合其官网上的问答，加上自己的尝试，终于找到把界面设置成英文的方法：在 iReport 安装路径下的 etc/ireport.c",
         "time_publish": "2009-07-06 17:41:00",
         "category": "AI"
     },
     {
-        "filename": "20090706_set_ireport.htm",
+        "filename": "/zh/20090706_set_ireport.htm",
         "title": "iReport 3.5 版设置英文界面",
         "description": "iReport 是图形界面编辑 JasperReport 的工具，在简体中文的操作系统下，它的本地化功能把界面弄得又有中文又有英文，很乱。 以前的旧版可以在选项中方便地修改界面成英文，但是到了 iReport-nb-3.5.2 版，我找了半天也没在选项中找到修改界面的地方。结合其官网上的问答，加上自己的尝试，终于找到把界面设置成英文的方法： 在 iReport 安装路径下的 etc/ireport...",
         "time_publish": "2009-07-06 17:41:00",
         "category": "Backend"
     },
     {
-        "filename": "20090209_autoload_external.htm",
+        "filename": "/zh/20090209_autoload_external.htm",
         "title": "自动加载外部 JavaScript 文件",
         "description": "虽说标题叫《自动加载外部 JavaScript 文件》，其实还未达到 PHP 那样在程序中只要遇到新的类名就自动加载类定义文件的程度，还需要指定文件名才能加载外部 JavaScript 文件，但是这对 JavaScript 应该已经够了。如果外部 JavaScript 文件比较多时，用这个还是比较方便的。详细说明用使用方法请见源码中的注释。 /* Copyright 2009 Snowpeak.o...",
         "time_publish": "2009-02-09 17:29:00",
         "category": "Tools"
     },
     {
-        "filename": "20090209_JavaScript.htm",
+        "filename": "/zh/20090209_JavaScript.htm",
         "title": "自动加载外部 JavaScript 文件",
         "description": "虽说标题叫《自动加载外部 JavaScript 文件》，其实还未达到 PHP 那样在程序中只要遇到新的类名就自动加载类定义文件的程度，还需要指定文件名才能加载外部 JavaScript 文件，但是这对 JavaScript 应该已经够了。如果外部 JavaScript 文件比较多时，用这个还是比较方便的。详细说明用使用方法请见源码中的注释。 /* Copyright 2009 Snowpe",
         "time_publish": "2009-02-09 17:29:00",
         "category": "AI"
     },
     {
-        "filename": "20090116_article.htm",
+        "filename": "/zh/20090116_article.htm",
         "title": "浮动层菜单",
         "description": "最近做了一个通用的浮动层菜单替代函数，可以方便地把传统的 SELECT 单选菜单替换成时尚的浮动层菜单。 效果演示和源码下载请到http://www.snowpeak.org/upload/DivMenu/DivMenu.htm 使用说明即仅需把附件中的 JS 文件和 CSS 文件引用到网页里，如：其中 DivMenu.js 是经 Javascript compress",
         "time_publish": "2009-01-16 16:49:00",
         "category": "AI"
     },
     {
-        "filename": "20090116_menu_by.htm",
+        "filename": "/zh/20090116_menu_by.htm",
         "title": "浮动层菜单",
         "description": "最近做了一个通用的浮动层菜单替代函数，可以方便地把传统的 SELECT 单选菜单替换成时尚的浮动层菜单。 a.divmenu, a.divmenu:hover  { padding: 1px 1px 1px 3px; border: 1px solid #9999CC; color:#000; text-decoration:none; cursor:default; } /*提示文字条上的文字样...",
         "time_publish": "2009-01-16 16:49:00",
         "category": "Tools"
     },
     {
-        "filename": "20081230_JavaScript.htm",
+        "filename": "/zh/20081230_JavaScript.htm",
         "title": "JavaScript 压缩和格式化",
         "description": "以前在找到过压缩 Javascript 代码的程序，一直在用，感觉效果不错。http://javascriptcompressor.com/在线压缩 Javascript 源码只是把空格、换行、多余的注释等等清理掉，尤其选中 Shrink variables 时，会把长的变量名缩减成单个字母的变量名，压缩比通常能达到50%甚至更小。现在 AJAX 大行其道，JavaScript 文件越来越大，用此",
         "time_publish": "2008-12-30 14:00:00",
         "category": "AI"
     },
     {
-        "filename": "20081230_javascript_compressor.htm",
+        "filename": "/zh/20081230_javascript_compressor.htm",
         "title": "JavaScript 压缩和格式化",
         "description": "以前找到过压缩 Javascript 代码的程序，一直在用，感觉效果不错。 <http://javascriptcompressor.com/> 在线压缩 Javascript 源码 只是把空格、换行、多余的注释等等清理掉，尤其选中 Shrink variables 时，会把长的变量名缩减成单个字母的变量名，压缩比通常能达到50%甚至更小。现在 AJAX 大行其道，JavaScript 文件越来越...",
         "time_publish": "2008-12-30 14:00:00",
         "category": "Tools"
     },
     {
-        "filename": "20081230_a_solution.htm",
+        "filename": "/zh/20081230_a_solution.htm",
         "title": "Resin 报错乱码解决",
         "description": "Windows 2003 Server 简体中文版安装 resin-pro-3.1.8，报错信息都是乱码 改了 resin 安装目录下的 resin.conf <javac compiler=\"internal\" args=\"-source 1.5\"/> 改成 <javac compiler=\"javac\" args=\"-source 1.5\"/> 就好了，而且由于我本地安装的 JDK 是中文版，...",
         "time_publish": "2008-12-30 13:56:00",
         "category": "Backend"
     },
     {
-        "filename": "20081230_Resin.htm",
+        "filename": "/zh/20081230_Resin.htm",
         "title": "Resin 报错乱码解决",
         "description": "Windows 2003 Server 简体中文版安装 resin-pro-3.1.8，报错信息都是乱码改了 resin 安装目录下的 resin.conf改成就好了，而且由于我本地安装的 JDK 是中文版，这时编译错误还成了 javac 返回的中文呢！",
         "time_publish": "2008-12-30 13:56:00",
         "category": "AI"
     },
     {
-        "filename": "20081024_javascript_url.htm",
+        "filename": "/zh/20081024_javascript_url.htm",
         "title": "JavaScript 读 URL 参数改进版",
         "description": "此前发表的那一版确实能不用循环，但是总用正则表达式的替换，不一定比用循环提高性能，而且把程序搞得有些太复杂了。从《JavaScript权威指南》上学到的范例如下，/* 《JavaScript权威指南》介绍的更简洁的取 URL 参数的方法，不用正则表达式，用一次循环。一次性返回一个对象的好处是只需要调用一次此函数，参数和值对可以存在一个对象里，以后再取其它参数的值就不用再调用此函数了，只要取对象",
         "time_publish": "2008-10-24 17:41:00",
         "category": "AI"
     },
     {
-        "filename": "20081024_a_solution.htm",
+        "filename": "/zh/20081024_a_solution.htm",
         "title": "PHP 中 syntax error, unexpected $end 错误的一种原因及解决",
         "description": "Parse error: syntax error, unexpected $end in script.php on line xx 调试了一会后发现产生错误的行是文件中间某行 //$str .= \"?>/n\"; 想起来了 PHP 解释器允许的结尾标记那行还可以用单行注释，即 //$str .= \"?>/n\"; 被解释成结尾标记前有注释，注释的内容是 //$str .= \"，而 ?> 后面的 /...",
         "time_publish": "2008-10-24 17:35:00",
         "category": "Backend"
     },
     {
-        "filename": "20081024_PHP_syntax_error.htm",
+        "filename": "/zh/20081024_PHP_syntax_error.htm",
         "title": "PHP 中 syntax error, unexpected $end 错误的一种原因及解决",
         "description": "Parse error: syntax error, unexpected $end in script.php on line xx调试了一会后发现产生错误的行是文件中间某行//$str .= \"?>/n\"; 想起来了 PHP 解释器允许的结尾标记那行还可以用单行注释，即 //$str .= \"?>/n\"; 被解释成结尾标记前有注释，注释的内容是 //$str .= \"，而 ?> 后面的",
         "time_publish": "2008-10-24 17:35:00",
         "category": "AI"
     },
     {
-        "filename": "20080905_collation_in.htm",
+        "filename": "/zh/20080905_collation_in.htm",
         "title": "MySQL 的 collation",
         "description": "<http://logzgh.itpub.net/post/3185/467401> 在以前用oracle的时候，很少关于它的collation方法，但是在mysql中，这点不加注意的话，却有可能会出现问题。 问题是这样的： 一张test的表，字符集采用的latin1。 select to_id from test where to_id='cn象_王'; +---------------+ | ...",
         "time_publish": "2008-09-05 15:01:00",
         "category": "Database"
     },
     {
-        "filename": "20080905_MySQL_collation.htm",
+        "filename": "/zh/20080905_MySQL_collation.htm",
         "title": "MySQL 的 collation",
         "description": "先转一别人的学习文章做个引子和基础http://logzgh.itpub.net/post/3185/467401在以前用oracle的时候，很少关于它的collation方法，但是在mysql中，这点不加注意的话，却有可能会出现问题。问题是这样的：一张test的表，字符集采用的latin1。select to_id from test where to_id=cn象_王;+---",
         "time_publish": "2008-09-05 15:01:00",
         "category": "AI"
     },
     {
-        "filename": "20080707_mysqldump.htm",
+        "filename": "/zh/20080707_mysqldump.htm",
         "title": "mysqldump 备份数据库中文乱码解决一法",
         "description": "如果MySQL服务器上的字符集是 latin1 的，mysqldump 出来的中文都是乱码！一个简单的办法是加上默认字符集选项，如： mysqldump -h 127.0.0.1 -P 3307 -u username --default-character-set=gbk -p databasename > dumpfile.txt-h 主机-P 端口，必须单独用此选项，而不能连续写",
         "time_publish": "2008-07-07 14:14:00",
         "category": "AI"
     },
     {
-        "filename": "20080707_specify_charset.htm",
+        "filename": "/zh/20080707_specify_charset.htm",
         "title": "mysqldump 备份数据库中文乱码解决一法",
         "description": "如果MySQL服务器上的字符集是 latin1 的，mysqldump 出来的中文都是乱码！一个简单的办法是加上默认字符集选项，如： mysqldump -h 127.0.0.1 -P 3307 -u username --default-character-set=gbk -p databasename > dumpfile.txt -h 主机 -P 端口，必须单独用此选项，而不能连续写在主机地...",
         "time_publish": "2008-07-07 14:14:00",
         "category": "Database"
     },
     {
-        "filename": "20080704_conquer_a.htm",
+        "filename": "/zh/20080704_conquer_a.htm",
         "title": "征服无光驱电脑——纯硬盘安装 Windows 2003",
         "description": "现在的电脑基本都没有软驱了，有些电脑连光驱也没有，但只要有USB接口，就可以做个USB启动盘，从USB盘引导，然后安装操作系统。正如网上很多USB启动盘制作说明建议的，做USB启动盘时要选 USB-ZIP 模式，这样启动后USB会模拟成软盘，而使用 A 盘符。麻烦的是有些电脑的主板虽然支持 USB 启动，但没有 USB-ZIP 模式，即使USB启动盘是 ZIP 模式仍然只能按 USB-HDD 模式...",
         "time_publish": "2008-07-04 17:42:00",
         "category": "System"
     },
     {
-        "filename": "20080704_Windows.htm",
+        "filename": "/zh/20080704_Windows.htm",
         "title": "征服无光驱电脑——纯硬盘安装 Windows 2003",
         "description": "现在的电脑基本都没有软驱了，有些电脑连光驱也没有，但只要有USB接口，就可以做个USB启动盘，从USB盘引导，然后安装操作系统。正如网上很多USB启动盘制作说明建议的，做USB启动盘时要选 USB-ZIP 模式，这样启动后USB会模拟成软盘，而使用 A 盘符。麻烦的是有些电脑的主板虽然支持 USB 启动，但没有 USB-ZIP 模式，即使USB启动盘是 ZIP 模式仍然只能按 USB-HDD 模式",
         "time_publish": "2008-07-04 17:42:00",
         "category": "AI"
     },
     {
-        "filename": "20080618_Apache.htm",
+        "filename": "/zh/20080618_Apache.htm",
         "title": "“Apache2 服务无法启动。发生服务特定错误: 1.”的一种情况及解决",
         "description": "Windows 系统下配置 Apache 服务有时会遇到Apache2 服务无法启动。发生服务特定错误: 1.请键入 NET HELPMSG 3547 以获得更多的帮助。的错误，这种错误可能有多种原因引起。我今天发现配置文件注释用得不对也是造成这个错误的一个原因：配置文件 httpd.conf 中如果写注释，注释以 # 开头必须单独放在一行中。而在某个配置项同一行写了 #",
         "time_publish": "2008-06-18 11:12:00",
         "category": "AI"
     },
     {
-        "filename": "20080618_a_solution.htm",
+        "filename": "/zh/20080618_a_solution.htm",
         "title": "“Apache2 服务无法启动。发生服务特定错误: 1.”的一种情况及解决",
         "description": "Windows 系统下配置 Apache 服务有时会遇到 Apache2 服务无法启动。 发生服务特定错误: 1. 请键入 NET HELPMSG 3547 以获得更多的帮助。 的错误，这种错误可能有多种原因引起。我今天发现配置文件注释用得不对也是造成这个错误的一个原因：配置文件 httpd.conf 中如果写注释，注释以 # 开头必须单独放在一行中。而在某个配置项同一行写了 # 注释，就会造成以...",
         "time_publish": "2008-06-18 11:12:00",
         "category": "System"
     },
     {
-        "filename": "20080522_pear_itx.htm",
+        "filename": "/zh/20080522_pear_itx.htm",
         "title": "Pear ITX 对 Smarty：两个常见模板系统性能小测评",
         "description": "Pear 的 ITX 和 Smarty 是两大常用的模板插件，我这里做了简单的运行时间测评对比，分享我自己一点使用的体会。 实测模板输出使用时间，单位是毫秒。 ITX | Smarty 105 | 254 95 | 87 94 | 79 84 | 80 86 | 80 84 | 80 84 | 83 84 | 82 86 | 80 84 | 80 ITX好像也有简单的缓存机制，而 Smarty 使...",
         "time_publish": "2008-05-22 11:30:00",
         "category": "Backend"
     },
     {
-        "filename": "20080516_integrate_tomcat.htm",
+        "filename": "/zh/20080516_integrate_tomcat.htm",
         "title": "Tomcat 整合进 IIS",
         "description": "网上也有不少探讨，我结合各家介绍及查错，经过几天努力，也试通一种方案。我知道 Java 的东西鲜有“放之四海而皆准”的解决方案，分享在此，只为给大家提供多点思路。 Windox XP SP2 下的 IIS5.1, Windows Server 2003 下的 IIS6.0 java version \"1.6.0_03\" Java(TM) SE Runtime Environment (build ...",
         "time_publish": "2008-05-16 17:35:00",
         "category": "System"
     },
     {
-        "filename": "20080516_Tomcat_IIS.htm",
+        "filename": "/zh/20080516_Tomcat_IIS.htm",
         "title": "Tomcat 整合进 IIS",
         "description": "网上也有不少探讨，我结合各家介绍及查错，经过几天努力，也试通一种方案。我知道 Java 的东西鲜有“放之四海而皆准”的解决方案，分享在此，只为给大家提供多点思路。环境：Windox XP SP2 下的 IIS5.1, Windows Server 2003 下的 IIS6.0java version \"1.6.0_03\"Java(TM) SE Runtime Environment (build",
         "time_publish": "2008-05-16 17:35:00",
         "category": "AI"
     },
     {
-        "filename": "20080509_a_simple.htm",
+        "filename": "/zh/20080509_a_simple.htm",
         "title": "星级评分的简化实现",
         "description": "星级评分是调查的一个常用功能，网上常见多是动态调用图片实现的，我结合 CSS 想出一种更简洁的方法。功能使用更方便，HTML页源代码和 JavaScript 语句更简洁，使用 CSS 排版进一步实现和内容与设计的分离。 使用 CSS 用单个图片做背景，还有个额外带来的好处，即页面下载完后作为背景的那个图片就已经加载，再动态切换对象的样式类名时由于用的是同一个图片文件，所以显示效果没有延迟。传统的换...",
         "time_publish": "2008-05-09 10:44:00",
         "category": "Tools"
     },
     {
-        "filename": "20080509_Implementation.htm",
+        "filename": "/zh/20080509_Implementation.htm",
         "title": "星级评分的简化实现",
         "description": "星级评分是调查的一个常用功能，网上常见多是动态调用图片实现的，我结合 CSS 想出一种更简洁的方法。功能使用更方便，HTML页源代码和 JavaScript 语句更简洁，使用 CSS 排版进一步实现和内容与设计的分享。使用 CSS 用单个图片做背景，还有个额外带来的好处，即页面下载完后作为背景的那个图片就已经加载，再动态切换对象的样式类名时由于用的是同一个图片文件，所以显示效果没有延迟。传统的换用",
         "time_publish": "2008-05-09 10:44:00",
         "category": "AI"
     },
     {
-        "filename": "20080422_a_css.htm",
+        "filename": "/zh/20080422_a_css.htm",
         "title": "IE7 列表元素小Bug的CSS处理",
         "description": "在 IE7 中，遇到HTML代码 LI 元素内紧跟 DL 元素时会出现 bug： OL 和 UL 元素的第一个 LI 项不显示前导的序号。比如： <ul> <li><dl>li 跟 dl 引发 IE7 bug</dl></li> <li><dl>li 跟 dl 引发 IE7 bug</dl></li> <li><dl>li 跟 dl 引发 IE7 bug</dl></li> </ul> 见如下截图...",
         "time_publish": "2008-04-22 15:20:00",
         "category": "Tools"
     },
     {
-        "filename": "20080422_IE_Bug_CSS.htm",
+        "filename": "/zh/20080422_IE_Bug_CSS.htm",
         "title": "IE7 列表元素小Bug的CSS处理",
         "description": "在 IE7 中，遇到HTML代码 LI 元素内紧跟 DL 元素时会出现 bug： OL 和 UL 元素的第一个 LI 项不显示前导的序号。比如：li 跟 dl 引发 IE7 bugli 跟 dl 引发 IE7 bugli 跟 dl 引发 IE7 bug见如下截图： 对比以下是 Firefox 2.0 中正常的效果：经过试验发现，只是这样才会引发，但只要和之间有除了空格以外的其它",
         "time_publish": "2008-04-22 15:20:00",
         "category": "AI"
     },
     {
-        "filename": "20080327_JavaScript.htm",
+        "filename": "/zh/20080327_JavaScript.htm",
         "title": "JavaScript 简体繁体转换小程序",
         "description": "网上常见简体繁体转换小程序，但多是常用的3000多字，我这里把文字整理得多一些，语句理清一些。主要思路还是把主要汉字的简体和繁体版本做两个字符串，按对应位置找到对应的字。http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd\">http://www.w3.org/1999/xhtml\">汉字简体繁体转换//基本思路就是把一个完整的简体字库",
         "time_publish": "2008-03-27 09:30:00",
         "category": "AI"
     },
     {
-        "filename": "20080327_simplified_and.htm",
+        "filename": "/zh/20080327_simplified_and.htm",
         "title": "JavaScript 简体繁体转换小程序",
         "description": "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Transitional//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd\"> <html xmlns=\"http://www.w3.org/1999/xhtml\"> <head> <meta http-equiv=\"Content-T...",
         "time_publish": "2008-03-27 09:30:00",
         "category": "Tools"
     },
     {
-        "filename": "20080320_article.htm",
+        "filename": "/zh/20080320_article.htm",
         "title": "国际化用的语言代码及名称",
         "description": "最近收信整理了些国际化用的语言代码及名称，分享出来。",
         "time_publish": "2008-03-20 17:53:00",
         "category": "Development"
     },
     {
-        "filename": "20080320_locale_id.htm",
+        "filename": "/zh/20080320_locale_id.htm",
         "title": "国际化使用用的语言名称及代码表",
         "description": "最近收信整理了些国际化用的语言代码及名称，分享出来。 ID | lang_code | lang_en | lang_cn | lang_hex | lang_dec 1 | af | Afrikaans - South Africa | 南非荷兰语 | 0x0436 | 1078 2 | ar-ae | Arabic(U.A.E.) | 阿拉伯语 - 阿拉伯联合酋长国 | 0x3801 | 14...",
         "time_publish": "2008-03-20 17:53:00",
         "category": "Development"
     },
     {
-        "filename": "20080320_PHP.htm",
+        "filename": "/zh/20080320_PHP.htm",
         "title": "PHP站点国际化后层次细分的一点体会",
         "description": "学习了MVC模式，再加上数据抽象层，发现仅前端交互用的网站还可以再分成多层，以PHP为例可以再分成下面这。                                    MVC                                    具体层                                    实现技术",
         "time_publish": "2008-03-20 16:11:00",
         "category": "AI"
     },
     {
-        "filename": "20080221_a_little.htm",
+        "filename": "/zh/20080221_a_little.htm",
         "title": "JavaScript 抽奖小程序",
         "description": "公司春节前办联欢会，有抽奖环节，抽奖共有若干轮，每次抽出几人不等，抽中的人不参与后面的抽奖。 由于开发用自己的电脑，而在联欢会现场要放在专门接投影仪的机器上，所以要跨平台性；参加联欢会的员工可能经常要调整直到当天才能确认下来，所以还要方便对接员工源数据，最后选择了 JavaScript 这个纯客户端的语言，只要有IE就能运行，而且显示效果可以完全交由CSS去支持，界面也可以做得很美观。 IE 6+...",
         "time_publish": "2008-02-21 14:37:00",
         "category": "Tools"
     },
     {
-        "filename": "20080221_JavaScript.htm",
+        "filename": "/zh/20080221_JavaScript.htm",
         "title": "JavaScript抽奖小程序",
         "description": "任务：公司春节前办联欢会，有抽奖环节，抽奖共有若干轮，每次抽出几人不等，抽中的人不参与后面的抽奖。分析：由于开发用自己的电脑，而在联欢会现场要放在专门接投影仪的机器上，所以要跨平台性；参加联欢会的员工可能经常要调整直到当天才能确认下来，所以还要方便对接员工源数据，最后选择了 JavaScript 这个纯客户端的语言，只要有IE就能运行，而且显示效果可以完全交由CSS去支持，界面",
         "time_publish": "2008-02-21 14:37:00",
         "category": "AI"
     },
     {
-        "filename": "20080124_JSP_SQL_Server.htm",
+        "filename": "/zh/20080124_JSP_SQL_Server.htm",
         "title": "JSP 读取 SQL Server 2000 中 image 型数据生成图片文件",
         "description": "环境：Windows XPTomcat 6.0jre1.6.0_03SQL Server 2000任务：数据库表中user_id是用户ID， photo 字段存储着照片的二进制数据，用如下代码可以把所有用户的照片二进制数据读出，写成图片文件并以用户ID作为文件名。代码：//建立连接对象Class.forName(\"com.microsoft.jdbc.sqlserver.SQLServer",
         "time_publish": "2008-01-24 20:03:00",
         "category": "Development"
     },
     {
-        "filename": "20071207_configure_tomcat.htm",
+        "filename": "/zh/20071207_configure_tomcat.htm",
         "title": "Tomcat 6 通过 JDBC 连接池连接 SQL Server 2000 和 MySQL 5 的设置",
         "description": "Tomcat 文档及网上看到的说明都挺乱的，我经过几天尝试现在测试成功的Tomcat 6 设置分享一下。 我的环境是: Windows XP SP2, Windows 2003 Server SP1 Tomcat 6 SQL Server 2000 MySQL 5 方法按顺序操作如下： 1\\. 下载 SQL Server 2000 JDBC Driver 放在/Tomcat6/lib，我现在使用的...",
         "time_publish": "2007-12-07 15:23:00",
         "category": "Development"
     },
     {
-        "filename": "20071207_Tomcat_JDBC_SQL.htm",
+        "filename": "/zh/20071207_Tomcat_JDBC_SQL.htm",
         "title": "Tomcat 6 通过 JDBC 连接池连接 SQL Server 2000 和 MySQL 5 的设置",
         "description": "Tomcat 文档及网上看到的说明都挺乱的，我经过几天尝试现在测试成功的Tomcat 6 设置分享一下.我的环境是:Windows XP SP2, Windows 2003 Server SP1Tomcat 6SQL Server 2000MySQL 5SQL Server 2000 连接池配置方法按顺序操作如下：1. 下载 SQL Server 2000 JDBC Driver 放在",
         "time_publish": "2007-12-07 15:23:00",
         "category": "AI"
     },
     {
-        "filename": "20070608_how_to.htm",
+        "filename": "/zh/20070608_how_to.htm",
         "title": "去除PDF文件水印方法",
         "description": "之所以要去除PDF文件的水印，不仅是因为打印稿上有水印看着乱，更严重的原因： 1、打印出水印时文件本身文字颜色会变浅，看不清楚； 2、带水印打印时打印时间延长非常严重。 我实验成功的方法是: 若用Adobe 8 Professional，打开这个文件，Document > Watermark > Remove，提示是否全部去除水印，选是即可。去掉水印后文件体积确实减小了，而且打印时间会明显缩短。 ...",
         "time_publish": "2007-06-08 16:01:00",
         "category": "Development"
     },
     {
-        "filename": "20070608_PDF.htm",
+        "filename": "/zh/20070608_PDF.htm",
         "title": "去除PDF文件水印方法",
         "description": "之所以要去除PDF文件的水印，不仅是因为打印稿上有水印看着乱，更严重的原因：1、打印出水印时文件本身文字颜色会变浅，看不清楚；2、带水印打印时打印时间延长非常严重。我实验成功的方法是:若用Adobe 8 Professional，打开这个文件，Document > Watermark > Remove，提示是否全部去除水印，选是即可。去掉水印后文件体积确实减小了，而且打印时间会明显缩短。",
         "time_publish": "2007-06-08 16:01:00",
         "category": "AI"
     },
     {
-        "filename": "20061123_ASP.htm",
+        "filename": "/zh/20061123_ASP.htm",
         "title": "ASP 动态包含文件的改进",
         "description": "ASP 本身不支持动态包含文件，现在的动态包含是通过 FSO 把被包含的文件合并到主文件里再运行。以下也有把形如 `<!--#include file=\"filename.asp\" -->` 的普通包含文件方式称作“传统引用”，用函数实现的动态包含文件称作“动态引用”。",
         "time_publish": "2006-11-23 16:33:00",
         "category": "Tools"
     },
     {
-        "filename": "20061123_dynamically_including.htm",
+        "filename": "/zh/20061123_dynamically_including.htm",
         "title": "ASP 动态包含文件的改进",
         "description": "ASP 本身不支持动态包含文件，现在的动态包含是通过 FSO 把被包含的文件合并到主文件里再运行。以下也有把形如  的普通包含文件方式称作“传统引用”，用函数实现的动态包含文件称作“动态引用”。 常见的程序如下： Function include(filename) Dim re,content,fso,f,aspStart,aspEnd set fso=CreateObject(\"Scripti...",
         "time_publish": "2006-11-23 16:33:00",
         "category": "Backend"
     },
     {
-        "filename": "20060609_configuring_mysql.htm",
+        "filename": "/zh/20060609_configuring_mysql.htm",
         "title": "JRun 使用 Connector/J 驱动程序连接 MySQL 数据库",
         "description": "MySQL 推出新版 JDBC 驱动程序叫 Connector/J ，原有的 JRun 中 JDBC 数据源使用 MySQL 的配置就不灵了，我参考了Macromedia 的官方 TechNote，结合自己实践，配置成功，把我的配置分享如下。 以下配置方法测试通过，环境：Windows 2000 Advanced Server (SP4) + JRun 4.0.5.27373 + MySQL 4....",
         "time_publish": "2006-06-09 11:15:00",
         "category": "Development"
     },
     {
-        "filename": "20060609_JRun_Connector_J.htm",
+        "filename": "/zh/20060609_JRun_Connector_J.htm",
         "title": "JRun 使用 Connector/J JDBC 驱动程序连接 MySQL 数据库",
         "description": "MySQL 推出新版DBC 驱动程序叫Connector/J ，原有的 JRun 中 JDBC 数据源使用 MySQL 的配置就不灵了，以下配置方法测试通过，环境：Windows 2000 Advanced Server (SP4) + JRun 4.0.5.27373 + MySQL 4.0.16，MySQL Connector/J JDBC 驱动程序使用的是 mysql-connector-j",
         "time_publish": "2006-06-09 11:15:00",
         "category": "AI"
     },
     {
-        "filename": "20050724_Subtitle_Workshop.htm",
+        "filename": "/zh/20050724_Subtitle_Workshop.htm",
         "title": "Subtitle Workshop——雪峰推荐字幕工具",
         "description": "官方站点：www.urusoft.net体积：1 MB注册：免费软件运行系统：Windows 9x, ME, NT, 2000, XP 安装需要：需要播放你要做的影片所需的解码器。 官方站点下载本地下载 这是雪峰提取压缩的程序文件，不用安装直接解压后即可运行，界面已经变成中文。安装完成后第一次运行，可 Settings > Language > Chinese Simpli",
         "time_publish": "2005-07-24 10:00:00",
         "category": "Software"
     },
     {
-        "filename": "20050718_DVD.htm",
+        "filename": "/zh/20050718_DVD.htm",
         "title": "DVD提取字幕的简要流程及涉及的主要工具",
         "description": "1、DVD拷盘用 DVD Decrypter，得到VOB文件2、从VOB中提取图形型字幕用 VobSub，得到 idx和sub配对的图形字幕文件3、图形型字幕转换成文本型用 SubOCR，得到 srt 字幕文件4、校对字幕用 Subtitle Workshop，得到翻译精准的 srt 字幕文件5、如果要加上字幕效果把  srt 字幕文件转换成SSA或ASS字幕，还可以用Subtitle Works",
         "time_publish": "2005-07-18 18:19:00",
         "category": "AI"
     },
     {
-        "filename": "20050718_main_steps.htm",
+        "filename": "/zh/20050718_main_steps.htm",
         "title": "DVD提取字幕的主要流程及工具",
         "description": "制做字幕到现在为止，我没发现一个包括所有功能的一体化的大型程序，这可能和制做字幕涉及的流程比较复杂、情况多种多样也有一定关系。不过理清了思路，找准每个步骤需要的工具，做出好的字幕其实并不难。而且由于各个步骤的工具功能都很专一，所以这些程序往往体积小巧，安装简便，使用也很方便。 下面简单介绍一下各步骤以及使用的工具软件。 1. DVD拷盘 用 DVD Decrypter，得到VOB文件 2. 从VO...",
         "time_publish": "2005-07-18 18:19:00",
         "category": "Tools"
     },
     {
-        "filename": "20050713_DVD_RMVB.htm",
+        "filename": "/zh/20050713_DVD_RMVB.htm",
         "title": "DVD压缩RMVB的简便方法",
         "description": "最近又学习到一种更方便的办法，用 Gordian Knot + AVS做：1、GDIndex从DVD的VOB文件生成D2V工程文件，同时把音频分离成AC3的音频文件；2、BeSweet把AC3的音频转换成MP3；3、AVS把上面的D2V和MP3合并到一起，这个AVS可以直接用RM工具压缩成RMVB文件，完毕。",
         "time_publish": "2005-07-13 17:14:00",
         "category": "AI"
     },
     {
-        "filename": "20050614_subtitle_tools.htm",
+        "filename": "/zh/20050614_subtitle_tools.htm",
         "title": "雪峰推荐字幕工具",
         "description": "字幕制作工具需要反复的播放和暂停，下面两款工具都是用快捷键 Ctrl+Space 来控制播放/暂停的。但默认状态下 Ctrl+Space 是 Windows 系统用来开启/关闭中文输入法的，则需要把 Ctrl+Space 这个快捷键空出来给它用。（Subtitle Workshop 支持自定义快捷键，你可以参考帮助文件里自行设置成其它自己方便使用的快捷键而不必修改系统的快捷键。） 在控制面板中打开...",
         "time_publish": "2005-06-14 10:00:00",
         "category": "Tools"
     },
     {
-        "filename": "20040620_compress_rmvb.htm",
+        "filename": "/zh/20040620_compress_rmvb.htm",
         "title": "用Helix Producer压缩RMVB",
         "description": "现在网上流行的电影动画文件大部分都是RMVB格式的，这是因为该格式有如下诸多优点： 1. 它是现在多种媒体文件中压缩比最高的，即相同画质的影片，RMVB格式的文件可以做到体积最小，对于网上的文件传输和个人的文件保存都是首选。 2. 它支持可变码率（Variable Bitrate），可根据画面内容自动调整码率，动作快的部分给予更多数据，而动作慢的部分适当减少数据量，从而实现更好的画质体积性能比。这...",
         "time_publish": "2004-06-20 20:42:00",

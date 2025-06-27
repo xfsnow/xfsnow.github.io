@@ -25,11 +25,12 @@
 {% for article in data.articles %}
             <div class="article-card">
             <div class="article-meta">
-                <span class="article-category article-category-{{ article.category }}">{{ article.category }}</span>
+                <span class="article-category article-category-{{ article.category }}">
+                {{ article.category_name }}</span>
                 <span class="article-date">{{ article.time_publish }}</span>
             </div>
             <h3 class="article-title">
-                <a href="{{ article.url }}">{{ article.title }}</a>
+                <a href="{{ article.filename }}">{{ article.title }}</a>
             </h3>
             <p class="article-description">{{ article.description }}</p>
         </div>

@@ -2,10 +2,11 @@ import os
 from jinja2 import Environment, FileSystemLoader
 
 class View:
-    def __init__(self):
+    def __init__(self, langPath: str = 'zh'):
         """初始化视图渲染器"""
         # 设置模板目录
-        self.env = Environment(loader=FileSystemLoader('assets/template'))
+        template_dir = os.path.join('assets', 'template', langPath)
+        self.env = Environment(loader=FileSystemLoader(template_dir))
 
     def render_template(self, template_name, **kwargs):
         """渲染模板"""

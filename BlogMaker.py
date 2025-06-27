@@ -6,22 +6,30 @@ from datetime import datetime
 from View import View  # 修正导入方式
 
 class BlogMaker:
-    def __init__(self):
-        """初始化 BlogMaker 类"""
-        self.site = {
-            'title': '博客',
-            'description': '专注于AI、云计算、GitHub Copilot等前沿技术的分享与探讨',
-            'keywords': 'AI, GitHub Copilot, Azure云, 云计算, 前端技术, 后端技术, Web开发, 软件工程',
-        }
+    def __init__(self, langPath: str = 'zh'):
         self.view = View()
+        self.langPath = langPath
 
+    def getLang(self):
+        """读取 lang.json 文件，获取语言相关的配置"""
+        lang_file = os.path.join(self.langPath, 'lang.json')
+        if not os.path.exists(lang_file):
+            print(f"语言文件 {lang_file} 不存在")
+            return {}
 
-    def make_home(self, path: str = 'zh'):
+        with open(lang_file, 'r', encoding='utf-8') as f:
+            lang_data = json.load(f)
+
+        # 返回语言配置
+        return lang_data
+
+    def make_home(self):
         """读取 index.js 文件，解析文章数据并生成首页 HTML"""
-        js_file = os.path.join(path, 'index.js')
+        js_file = os.path.join(self.langPath, 'index.js')
         data = {}
+        data['lang'] = self.getLang()  # 获取语言配置
+        
         # 一次性读出 index.js 文件全部内容，把前面的 const articles=去掉，结尾的分号也去掉，最后 json.loads() 解析成 Python 对象
-
         with open(js_file, 'r', encoding='utf-8') as f:
             content = f.read()
             content = content.replace('const articles=', '').rstrip(';')
@@ -31,42 +39,27 @@ class BlogMaker:
 
         # 提取所有文章的分类并创建分类映射
         categories_set = set()
+        category_names = {}  # 存储 category -> category_name 的映射
+        
         for article in articles:
             if 'category' in article and article['category']:
                 categories_set.add(article['category'])
-
-        # 创建分类映射字典（英文分类 -> 中文显示名称）
-        category_display_map = {
-            'AI': 'AI技术',
-            'Azure': 'Azure云',
-            'Development': '综合开发',
-            'Tools': '工具',
-            'Cloud Computing': '云计算',
-            'Backend': '服务器端技术',
-            'Database': '数据库',
-            'Frontend': '前端技术',
-            'Web': 'Web开发',
-            'System': '系统管理',
-            'Network': '网络技术',
-            'Mobile': '移动开发',
-            'Software': '软件',
-            'Programming': '编程语言',
-            'Framework': '框架技术'
-        }
+                # 直接从文章中获取 category_name
+                if 'category_name' in article and article['category_name']:
+                    category_names[article['category']] = article['category_name']
 
         # 构建分类列表，包含实际存在的分类
         categories = []
         for category in sorted(categories_set):
-            if category in category_display_map:
-                categories.append({
-                    'key': category,
-                    'value': category_display_map[category]
-                })
+            categories.append({
+                'key': category,
+                'value': category_names.get(category, category)  # 直接使用已有的 category_name
+            })
 
         data['categories'] = categories
 
         # 加载 tools.json 文件
-        tools_file = os.path.join(path, 'tools.json')
+        tools_file = os.path.join(self.langPath, 'tools.json')
         if os.path.exists(tools_file):
             with open(tools_file, 'r', encoding='utf-8') as f:
                 data['tools'] = json.load(f)
@@ -74,9 +67,9 @@ class BlogMaker:
             data['tools'] = []
 
         # 渲染模板
-        html_content = self.view.render_template('zh.html', site=self.site, data=data)
+        html_content = self.view.render_template('zh.html', data=data)
         # 保存生成的 HTML 文件
-        self.view.write_html(os.path.join(path, 'zh.htm'), html_content)
+        self.view.write_html(os.path.join(self.langPath, 'zh.htm'), html_content)
 
 
 
@@ -101,10 +94,10 @@ class BlogMaker:
             pages.append(articles[i:i + page_size])
         return pages
 
-    def index_article(self, path: str = 'zh'):
+    def index_article(self):
         """遍历指定目录下的所有 Markdown 文件，提取文章信息并生成索引"""
         articles = []
-
+        path = self.langPath
         # 确保路径存在
         if not os.path.exists(path):
             print(f"路径 {path} 不存在")
@@ -133,13 +126,14 @@ class BlogMaker:
                 content = f.read()
 
             lines = content.split('\n')
-            fileUrl = filename.replace('.md', '.htm')
+            fileUrl = '/' + self.langPath +'/' + filename.replace('.md', '.htm')
             article_info = {
                 'filename': fileUrl,
                 'title': '',
                 'description': '',
                 'time_publish': '',
-                'category': ''
+                'category': '',
+                'category_name': ''  # 添加分类显示名称字段
             }
 
             # 提取标题 (第一行的 # 标题)
@@ -164,9 +158,15 @@ class BlogMaker:
             if category_match:
                 category = category_match.group(1).strip()
                 article_info['category'] = self.map_category(category)
+                # 添加分类显示名称
+                category_display_map = self.getLang().get('categoryMap', {})
+                article_info['category_name'] = category_display_map.get(article_info['category'], category)
             else:
                 # 如果没有找到分类，尝试从文件名或内容推断
                 article_info['category'] = self.infer_category_from_content(content, filename)
+                # 添加分类显示名称
+                category_display_map = self.getLang().get('categoryMap', {})
+                article_info['category_name'] = category_display_map.get(article_info['category'], article_info['category'])
 
             # 提取简介
             intro_pattern = r'简介:\s*([^\n]+(?:\n[^\n-]+)*)'
@@ -189,25 +189,14 @@ class BlogMaker:
             return None
 
     def map_category(self, category: str):
-        """将中文分类映射为英文分类标识"""
-        category_map = {
-            'Azure云': 'Azure',
-            '综合开发': 'Development',
-            '工具': 'Tools',
-            '云计算': 'Cloud Computing',
-            '人工智能': 'AI',
-            '服务器端技术': 'Backend',
-            '数据库': 'Database',
-            '前端技术': 'Frontend',
-            'Web开发': 'Web',
-            '系统管理': 'System',
-            '网络技术': 'Network',
-            '移动开发': 'Mobile',
-            '软件': 'Software',
-            '编程语言': 'Programming',
-            '框架技术': 'Framework'
-        }
-        return category_map.get(category, 'Tools')
+        # 从 self.getLang() 中获取分类映射
+        category_display_map = self.getLang().get('categoryMap', {})
+        # 再反转键与值，得到中文为键，英文为值的映射
+        default_category = 'Tools'
+        if not category_display_map:
+            return default_category
+        category_display_map = {v: k for k, v in category_display_map.items()}
+        return category_display_map.get(category, default_category)  # 默认返回 'Tools' 分类
 
     def infer_category_from_content(self, content: str, filename: str):
         """从内容或文件名推断分类"""
@@ -282,8 +271,8 @@ class BlogMaker:
 
     def main(self):
         # 处理中文文章
-        # zh_articles = self.index_article('zh')
-        # print(f"处理了 {len(zh_articles)} 篇中文文章")
+        zh_articles = self.index_article()
+        print(f"处理了 {len(zh_articles)} 篇中文文章")
 
         # 处理英文文章 (如果有的话)
         # if os.path.exists('en'):
@@ -291,8 +280,8 @@ class BlogMaker:
         #     print(f"处理了 {len(en_articles)} 篇英文文章")
 
         # 生成首页 HTML
-        blog_maker.make_home('zh')
+        # blog_maker.make_home()
 
 if __name__ == "__main__":
-    blog_maker = BlogMaker()
+    blog_maker = BlogMaker('zh')
     blog_maker.main()

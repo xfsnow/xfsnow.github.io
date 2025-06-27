@@ -1,10 +1,30 @@
 {
     "lang": "zh-CN",
     "langName": "中文",
+    "title": "博客",
+    "description": "专注于AI、云计算、GitHub Copilot等前沿技术的分享与探讨",
+    "keywords": "AI, GitHub Copilot, Azure云, 云计算, 前端技术, 后端技术, Web开发, 软件工程",
     "read": "阅读",
     "article": "文章",
     "noResults": "没有找到相关文章",
     "tryOtherKeywords": "请尝试其他关键词或查看全部文章",
     "ReadTry": "查看体验",
-    "searchPlaceholder": "搜索文章标题、内容或标签..."
+    "searchPlaceholder": "搜索文章标题、内容或标签...",
+    "categoryMap" : {
+        "AI": "AI技术",
+        "Azure": "Azure云",
+        "Development": "综合开发",
+        "Tools": "工具",
+        "Cloud Computing": "云计算",
+        "Backend": "服务器端技术",
+        "Database": "数据库",
+        "Frontend": "前端技术",
+        "Web": "Web开发",
+        "System": "系统管理",
+        "Network": "网络技术",
+        "Mobile": "移动开发",
+        "Software": "软件",
+        "Programming": "编程语言",
+        "Framework": "框架技术"
+    }
 }
