@@ -71,13 +71,13 @@ class BlogMaker:
             data['tools'] = []
 
         # 渲染模板
-        html_content = self.view.render_template('zh.html', data=data)
+        html_content = self.view.render_template('index.html', data=data)
         # 保存生成的 HTML 文件
         if 'zh' == self.langPath:
-            # 如果是中文，则保存为 index.htm
+            # 如果是中文，则保存为 /index.html
             output_file = 'index.html'
         else:
-            output_file = os.path.join(self.langPath, 'index.htm')
+            output_file = os.path.join(self.langPath, 'index.html')
         self.view.write_html(output_file, html_content, strip=True)
 
     # markdown 转成HTML，然后再带上模板的页眉和页脚
@@ -147,13 +147,18 @@ class BlogMaker:
         data = {
             'lang': self.getLang(),
             'article': {
-                    'title': '关于雪峰',
                     'date': '2010-10-9 09:00:00',
-                    'reading_time': '1分钟',
-                    'category_name': '关于',
                     'content': html_content
                 },
         }
+        if 'zh' == self.langPath:
+            data['article']['title'] = '关于雪峰'
+            data['article']['reading_time'] = '1分钟'
+            data['article']['category_name'] = '关于'
+        else:
+            data['article']['title'] = 'About Snowpeak'
+            data['article']['reading_time'] = '1 min'
+            data['article']['category_name'] = 'About'
         # 渲染模板
         html_content = self.view.render_template('article.html', data=data)
         # 保存生成的 HTML 文件
@@ -361,4 +366,7 @@ class BlogMaker:
 
 if __name__ == "__main__":
     blog_maker = BlogMaker('zh')
+    blog_maker.main()
+
+    blog_maker = BlogMaker('en')
     blog_maker.main()
