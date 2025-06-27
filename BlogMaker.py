@@ -23,19 +23,23 @@ class BlogMaker:
         # 返回语言配置
         return lang_data
 
-    def make_home(self):
-        """读取 index.js 文件，解析文章数据并生成首页 HTML"""
+    def list_articles(self):
         js_file = os.path.join(self.langPath, 'index.js')
-        data = {}
-        data['lang'] = self.getLang()  # 获取语言配置
-
-        # 一次性读出 index.js 文件全部内容，把前面的 const articles=去掉，结尾的分号也去掉，最后 json.loads() 解析成 Python 对象
+          # 一次性读出 index.js 文件全部内容，把前面的 const articles=去掉，结尾的分号也去掉，最后 json.loads() 解析成 Python 对象
         with open(js_file, 'r', encoding='utf-8') as f:
             content = f.read()
             content = content.replace('const articles=', '').rstrip(';')
             articles = json.loads(content)
-            # 取最前 10 条
-            data['articles'] = articles[:10]
+            return articles
+
+    def make_home(self):
+        """读取 index.js 文件，解析文章数据并生成首页 HTML"""
+        data = {}
+        data['lang'] = self.getLang()  # 获取语言配置
+
+        articles = self.list_articles()
+        # 取最前 10 条
+        data['articles'] = articles[:10]
 
         # 提取所有文章的分类并创建分类映射
         categories_set = set()
@@ -72,16 +76,56 @@ class BlogMaker:
         self.view.write_html(os.path.join(self.langPath, 'zh.htm'), html_content, strip=True)
 
     # markdown 转成HTML，然后再带上模板的页眉和页脚
-    def article(self, title: str, description: str, time_publish: str, category: str):
-        """生成文章的 HTML 结构"""
-        return f"""
-        <article>
-            <h2>{title}</h2>
-            <p>{description}</p>
-            <time datetime="{time_publish}">{time_publish}</time>
-            <span class="category">{category}</span>
-        </article>
-        """
+    def article(self):
+        articles = self.list_articles()
+        # 遍历所有文章，生成每篇文章的 HTML
+        for article in articles:
+            markdownPath = os.path.join(self.langPath, article['filename'].replace('.htm', '.md'))
+            # markdownPath 去掉开头 / 符
+            markdownPath = markdownPath.lstrip('/')
+            print(f"正在处理文章: {markdownPath}")
+            # exit()
+            if not os.path.exists(markdownPath):
+                print(f"文章文件 {markdownPath} 不存在")
+                continue
+
+            with open(markdownPath, 'r', encoding='utf-8') as f:
+                content = f.read()
+
+            # 取第一个 --------- 以后的内容为文章正文
+            # 使用正则表达式匹配第一个 '---' 之后的内容
+            content = re.split(r'^-+\s*$', content, maxsplit=1, flags=re.MULTILINE)
+            # print(content)
+            content = content[1] if len(content) > 1 else content[0]  # 取第二部分作为正文
+
+            # 使用 markdown 库将 Markdown 转换为 HTML
+            html_content = markdown.markdown(content, extensions=['fenced_code', 'tables'])
+            # print(html_content)
+
+            # 根据 markdown 文件内容长度粗略估计阅读时间， 假设每分钟阅读 60 个单词
+            reading_time = len(content.split()) // 60
+            reading_time_str = f"{reading_time}分钟" if reading_time > 0 else "1分钟"
+
+            # 渲染模板
+            data = {
+                'article': {
+                    'title': article['title'],
+                    'date': article['time_publish'],
+                    'reading_time': reading_time_str,
+                    'category_name': article['category_name'],
+                    'content': html_content
+                },
+                'lang': self.getLang()
+            }
+            rendered_html = self.view.render_template('article.html', data=data)
+
+            # 保存生成的 HTML 文件
+            output_file = os.path.join(self.langPath, article['filename']).lstrip('/')
+            self.view.write_html(output_file, rendered_html, strip=False)
+            break
+
+        print(f"已生成 {len(articles)} 篇文章的 HTML 文件")
+
 
     # 生成文章列表的分页 HTML 文件，同样也带上模板的页眉和页脚
     def pagination(self, articles: list, page_size: int = 10):
@@ -269,8 +313,8 @@ class BlogMaker:
 
     def main(self):
         # 处理中文文章
-        zh_articles = self.index_article()
-        print(f"处理了 {len(zh_articles)} 篇中文文章")
+        # zh_articles = self.index_article()
+        # print(f"处理了 {len(zh_articles)} 篇中文文章")
 
         # 处理英文文章 (如果有的话)
         # if os.path.exists('en'):
@@ -278,7 +322,8 @@ class BlogMaker:
         #     print(f"处理了 {len(en_articles)} 篇英文文章")
 
         # 生成首页 HTML
-        # blog_maker.make_home()
+        self.make_home()
+        self.article()
 
 if __name__ == "__main__":
     blog_maker = BlogMaker('zh')

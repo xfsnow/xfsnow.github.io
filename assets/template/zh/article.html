@@ -1,144 +1,29 @@
-<!DOCTYPE html>
-<html lang="zh-CN">
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>文章标题 - Snowpeak Tech Blog</title>
-    <meta name="description" content="文章描述">
-    <meta name="keywords" content="关键词1, 关键词2, 关键词3">
-
-    <!-- 样式文件 -->
-    <link rel="stylesheet" href="../assets/css/article.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-</head>
-<body class="article-page">
-    <!-- 导航栏 -->
-    <nav class="navbar">
-        <div class="nav-container">
-            <div class="nav-logo">
-                <a href="../index.html" style="text-decoration: none;"><h2><i class="fas fa-snowflake"></i> Snowpeak</h2></a>
-            </div>
-            <div class="nav-menu">
-                <a href="../index.html#home" class="nav-link">首页</a>
-                <a href="../index.html#articles" class="nav-link">文章</a>
-                <a href="../index.html#tools" class="nav-link">工具</a>
-                <a href="../index.html#about" class="nav-link">关于</a>
-            </div>
-            <div class="nav-toggle" id="mobile-menu">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </div>
-        </div>
-    </nav>
-
-    <!-- 文章标题区域 -->
+{% include 'inc.begin.html' %}
+<!-- 文章标题区域 -->
     <header class="article-header">
         <div class="container">
-            <h1>文章标题</h1>
+            <h1>{{ data.article.title }}</h1>
             <div class="article-meta">
-                <span><i class="fas fa-calendar"></i> 2024年1月15日</span>
-                <span><i class="fas fa-clock"></i> 阅读时间 5分钟</span>
-                <span><i class="fas fa-tag"></i> AI技术</span>
-                <span><i class="fas fa-user"></i> Snowpeak</span>
+                <span><i class="fas fa-calendar"></i>发表: {{ data.article.date }}</span>
+                <span><i class="fas fa-clock"></i> 阅读约需: {{ data.article.reading_time }}</span>
+                <span><i class="fas fa-tag"></i> 分类: {{ data.article.category_name }}</span>
             </div>
         </div>
     </header>
 
-    <!-- 面包屑导航 -->
+    <!-- 面包屑导航
     <nav class="breadcrumb">
         <div class="container">
             <a href="../index.html">首页</a>
-            <span>></span>
+            <span>&gt;</span>
             <a href="../index.html#articles">文章</a>
-            <span>></span>
+            <span>&gt;</span>
             <span>当前文章</span>
         </div>
-    </nav>
+    </nav>-->
 
     <!-- 文章内容 -->
     <main class="article-container">
-        <article class="article-content">
-            <!-- 文章正文内容 -->
-            <h1>主标题</h1>
-            <p>这里是文章的正文内容...</p>
-
-            <h2>二级标题</h2>
-            <p>更多内容...</p>
-
-            <h3>三级标题</h3>
-            <ul>
-                <li>列表项 1</li>
-                <li>列表项 2</li>
-                <li>列表项 3</li>
-            </ul>
-
-            <blockquote>
-                这是一个引用块的示例。
-            </blockquote>
-
-            <pre><code>// 代码示例
-function example() {
-    console.log("Hello World!");
-}</code></pre>
-
-        </article>
+        {{ data.article.content | safe }}
     </main>
-
-    <!-- 文章导航 -->
-    <nav class="article-nav">
-        <div class="nav-links">
-            <a href="../index.html#articles" class="nav-link prev">
-                <div class="nav-label">← 返回文章列表</div>
-                <div class="nav-title">浏览更多文章</div>
-            </a>
-            <a href="../index.html#tools" class="nav-link next">
-                <div class="nav-label">实用工具 →</div>
-                <div class="nav-title">查看实用工具</div>
-            </a>
-        </div>
-    </nav>
-
-    <!-- 页脚 -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h3><i class="fas fa-snowflake"></i> Snowpeak</h3>
-                    <p>专注于AI与云计算技术的分享平台</p>
-                    <div class="social-links">
-                        <a href="https://github.com/xfsnow" target="_blank"><i class="fab fa-github"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-linkedin"></i></a>
-                    </div>
-                </div>
-                <div class="footer-section">
-                    <h4>快速链接</h4>
-                    <ul>
-                        <li><a href="../index.html#articles">最新文章</a></li>
-                        <li><a href="../index.html#tools">实用工具</a></li>
-                        <li><a href="https://docs.github.com/en/pages" target="_blank">GitHub Pages</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h4>技术栈</h4>
-                    <ul>
-                        <li>GitHub Pages</li>
-                        <li>纯静态HTML/CSS/JS</li>
-                        <li>响应式设计</li>
-                        <li>PWA支持</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>Copyright &copy; 2013-<script>document.write((new Date()).getFullYear());</script> Snowpeak Tech Blog. 基于 GitHub Pages 构建。</p>
-            </div>
-        </div>
-    </footer>
-
-    <!-- JavaScript文件 -->
-    <script src="../assets/js/main.js"></script>
-    <script src="../assets/js/article.js"></script>
-</body>
-</html>
+{% include 'inc.end.html' %}
