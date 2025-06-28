@@ -2,7 +2,7 @@
 
 Published: *2022-07-13 10:57:47*
 
-Category: __Azure Cloud__
+Category: __Azure__
 
 Summary: Azure DevOps is an end-to-end enterprise-level development management platform on Microsoft Azure cloud platform, where Azure Pipelines is the core service for implementing CI/CD using pipelines. Azure App Service is a fully managed platform-as-a-service (PaaS) product for developers. Spring Boot is the most mainstream development framework for current Java applications. This article uses a basic example to explain in detail how to use Azure Pipelines to create and edit pipelines, building and deploying Java Spring applications to Azure App Service.
 
