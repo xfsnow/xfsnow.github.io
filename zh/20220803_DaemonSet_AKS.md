@@ -2,7 +2,9 @@
 
 发布时间: *2022-08-03 15:16:52*
 
-简介: 很多时候我们需要在AKS (Azure Kubernetes Service)工作节点上运行支持软件，例如，恶意软件扫描程序，Policy Enforcer等。目前AKS的工作节点只能使用云平台指定的操作系统镜像，不能直接用自定义的镜像来定制工作节点。常规操作pod被隔离在容器以内，不能影响其所在的宿主机。这篇文章受到Kured 项目的启发，引导您完成使用守护程序集引导AKS集群的过程，以使其成为可能。......
+分类: __Azure__
+
+简介: 很多时候我们需要在AKS (Azure Kubernetes Service)工作节点上运行支持软件，例如，恶意软件扫描程序，Policy Enforcer等。目前AKS的工作节点只能使用云平台指定的操作系统镜像，不能直接用自定义的镜像来定制工作节点。常规操作pod被隔离在容器以内，不能影响其所在的宿主机。这篇文章受到Kured 项目的启发，引导您完成使用守护程序集引导AKS集群的过程，以使其成为可能。
 
 原文链接: [https://snowpeak.blog.csdn.net/article/details/126140523](https://snowpeak.blog.csdn.net/article/details/126140523)
 
@@ -79,9 +81,7 @@ apt-get install cowsay -y
 
 ### 应用
 
-演示用的源码在这里
-
-https://github.com/xfsnow/container/tree/master/AKSNodeInstaller
+演示用的源码在这里: [https://github.com/xfsnow/container/tree/master/AKSNodeInstaller](https://github.com/xfsnow/container/tree/master/AKSNodeInstaller)
 
 ### Azure资源
 
@@ -183,7 +183,7 @@ InstanceId    Name                           State
 
 #### 构建镜像推送到镜像注册表。
 
-git clone <https://github.com/xfsnow/AKSNodeInstaller>
+`git clone https://github.com/xfsnow/AKSNodeInstaller`
 
 拉取源码。
 

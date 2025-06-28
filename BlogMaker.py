@@ -106,7 +106,7 @@ class BlogMaker:
             html_content = markdown.markdown(content, extensions=['fenced_code', 'tables'])
             # 根据 markdown 文件内容长度粗略估计阅读时间， 假设每分钟阅读 60 个单词
             reading_time = len(content.split()) // 60
-            reading_time_str = f"{reading_time}分钟" if reading_time > 0 else "1分钟"
+            reading_time_str = f"{reading_time}" if reading_time > 0 else "1"
 
             # 渲染模板
             data = {
@@ -392,17 +392,17 @@ class BlogMaker:
         # 处理文章索引
         # zh_articles = self.index_article()
         # print(f"处理了 {self.langPath} 目录下 {len(zh_articles)} 篇文章")
-        # # 生成首页 HTML
+        # 生成首页 HTML
         # self.make_home()
 
         # # 生成关于页面
         # self.make_about()
 
-        # # 生成文章页面
-        # self.make_article()
+        # 生成文章页面
+        self.make_article()
 
         # 生成分页列表
-        self.make_pager()
+        # self.make_pager()
 
 
 if __name__ == "__main__":

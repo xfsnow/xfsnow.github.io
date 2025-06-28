@@ -2,6 +2,8 @@
 
 发布时间: *2022-07-13 10:57:47*
 
+分类: __Azure__
+
 简介: Azure DevOps是微软Azure云平台上端到端的企业级研发管理平台，其中Azure Pipelines是使用流水线实现CI/CD的核心服务。Azure App Service是一个为开发人员提供的完全托管的平台即服务 (PaaS) 产品。Spring Boot是当前Java应用最主流的开发框架。本文以一个基本的实例，详细讲解使用Azure Pipelines创建和编辑流水线，把Java Spring 应用构建并部署到 Azure App Service..........
 
 原文链接: [https://snowpeak.blog.csdn.net/article/details/125759341](https://snowpeak.blog.csdn.net/article/details/125759341)

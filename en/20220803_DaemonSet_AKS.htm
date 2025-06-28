@@ -1,0 +1,130 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Snowpeak Blog</title><meta name="description" content="Sharing and discussing cutting-edge technologies of AI and cloud computing, and other interesting topics."><meta name="keywords" content="AI, GitHub Copilot, Azure Cloud, Cloud Computing, Front-end Technology, Back-end Technology, Web Development, Software Engineering"><link rel="stylesheet" href="/assets/css/style.css"><link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.7.2/css/all.css"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/default.min.css"><script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/highlight.min.js"></script></head><body><nav class="navbar"><div class="nav-container"><div class="nav-logo"><h2><i class="fas fa-snowflake"></i> Snowpeak</h2></div><div class="nav-menu"><a href="/en/" class="nav-link">Home</a><a href="/en/page_1.htm" class="nav-link">Article</a><a href="/en#tools" class="nav-link">Tools</a><a href="/en/about.htm" class="nav-link">About</a><a href="/" class="nav-link lang-switch"><i class="fas fa-globe"></i> 简体中文</a></div><div class="nav-toggle" id="mobile-menu"><span class="bar"></span><span class="bar"></span><span class="bar"></span></div></div></nav><header class="article-header"><div class="container"><h1>Customizing AKS Worker Nodes Using DaemonSet</h1><div class="article-meta"><span><i class="fas fa-calendar"></i> Published: 2022-08-03 15:16:52</span><span><i class="fas fa-clock"></i> Reading time: 25 minutes </span><span><i class="fas fa-tag"></i> Category: System</span></div></div></header><main class="article-container"><p>Often we need to run supporting software on AKS (Azure Kubernetes Service) worker nodes, such as malware scanners, Policy Enforcers, etc. Currently, AKS worker nodes can only use operating system images specified by the cloud platform and cannot directly use custom images to customize worker nodes. Regular pod operations are isolated within containers and cannot affect their host machines. This article, inspired by the Kured project, guides you through the process of bootstrapping an AKS cluster using DaemonSets to make this possible.</p><p>Before reading this article, you need to master <a href="https://kubernetes.io/docs/" title="basic Kubernetes knowledge and operations">basic Kubernetes knowledge and operations</a>, <a href="https://kubernetes.io/docs/concepts/workloads/controllers/daemonset/" title="DaemonSet">DaemonSet</a>, as well as AKS <a href="https://docs.microsoft.com/en-us/azure/aks/" title="basic concepts">basic concepts</a> and <a href="https://docs.microsoft.com/en-us/azure/aks/tutorial-kubernetes-deploy-cluster" title="deployment">deployment</a>.</p><h2>Principle</h2><p>DaemonSets in Kubernetes allow you to run pods on every node; this is a great choice if you want to bootstrap new nodes and install software. You can configure privileges to run with DaemonSets and adjust the access level required by the DaemonSet according to the tasks you need to perform.</p><p>If you need to run commands on the host running the container, you can use the nsenter command. As a prerequisite for being able to do this, you need to ensure that the DaemonSet container has elevated privileges. This can be achieved by setting hostPID = true and privileged = true in the Daemonset YAML for high privileges, as shown below.</p> <pre><code>apiVersion: apps/v1
+kind: DaemonSet
+metadata:
+  name: installer
+  namespace: node-installer
+spec:
+  selector:
+    matchLabels:
+      job: installer
+  template:
+    metadata:
+      labels:
+        job: installer
+    spec:
+      hostPID: true
+      restartPolicy: Always
+      containers:
+      - image: snowpeak.azurecr.cn/node-installer:centos
+        name: installer
+        securityContext:
+          privileged: true
+        volumeMounts:
+        - name: install-script
+          mountPath: /tmp
+        - name: host-mount
+          mountPath: /host
+      volumes:
+      - name: install-script
+        configMap:
+          name: sample-installer-config
+      - name: host-mount
+        hostPath:
+          path: /tmp/install
+</code></pre> <p>This way you can get permission to execute commands on the host machine, and then use configMap to set the commands to execute. For example, here are 2 configuration files. One configmap_cowsay.yaml is used to install cowsay, a small program purely for text output.</p> <pre><code>apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: sample-installer-config
+  namespace: node-installer
+data:
+  install.sh: |
+    #!/bin/bash
+
+    # Update and install packages
+    apt-get update
+    apt-get install cowsay -y
+</code></pre> <p>Another configmap_nginx.yaml is used to install nginx. The programs installed by these 2 configuration files are only for demonstration. We can extend them to other commands needed to initialize AKS worker nodes according to actual work needs and the actual operating system of the host machine.</p><h2>Basic Deployment</h2><h3>Application</h3><p>The demo source code is here: <a href="https://github.com/xfsnow/container/tree/master/AKSNodeInstaller">https://github.com/xfsnow/container/tree/master/AKSNodeInstaller</a></p><h3>Azure Resources</h3><p>Create an ACR for storing container images. Note that currently only the East 2 region can support the az acr build command to build and push locally to ACR. So we create the ACR resource in East 2, while the AKS cluster can be in any domestic region.</p><h4>Define Environment Variables</h4> <pre><code>REGION_NAME=ChinaEast2
+RESOURCE_GROUP=aksNodeInstaller
+AKS_CLUSTER_NAME=NodeInstaller
+ACR_NAME=NodeInstaller$RANDOM
+</code></pre> <h4>Create Resource Group</h4> <pre><code>az group create --location $REGION_NAME --name $RESOURCE_GROUP
+</code></pre> <h4>Create ACR</h4> <pre><code>az acr create --resource-group $RESOURCE_GROUP --name $ACR_NAME --location $REGION_NAME --sku Standard
+</code></pre> <p>List the results</p> <pre><code>az acr list -o table
+NAME              RESOURCE GROUP     LOCATION     SKU      LOGIN SERVER                   CREATION DATE         ADMIN ENABLED
+--------          ----------------   -----------  -----    -------------------           --------------------  ---------------
+NodeInstaller1044 aksNodeInstaller   chinaeast2   Standard nodeinstaller.azurecr.cn    2021-03-28T14:37:32Z  False
+</code></pre> <h4>Create AKS Cluster</h4> <pre><code>az aks create \
+    --resource-group $RESOURCE_GROUP \
+    --name $AKS_CLUSTER_NAME \
+    --location $REGION_NAME \
+    --node-count 1 \
+    --attach-acr $ACR_NAME
+</code></pre> <p>Parameter explanation:</p><p>--resource-group specifies the resource group.</p><p>--name AKS cluster name.</p><p>--location AKS cluster region.</p><p>--node-count Number of worker nodes in the AKS cluster. For a demo cluster, we specify only 1. In actual production environments, you can specify multiple nodes. Using DaemonSet can update multiple worker nodes simultaneously.</p><p>--attach-acr The bound container image registry ACR resource, so that this AKS cluster can directly pull images from this ACR later.</p><p>This step is slow, please wait patiently until there are return results.</p><p>View the created AKS cluster</p> <pre><code>az aks show --resource-group $RESOURCE_GROUP --name $AKS_CLUSTER_NAME -o table
+Name           Location     ResourceGroup     KubernetesVersion    ProvisioningState    Fqdn
+-------------  -----------  ----------------  -------------------  -------------------  ------
+NodeInstaller  chinaeast2   aksNodeInstaller  1.18.14              Succeeded            xxxx.azk8s.cn
+</code></pre> <p>Also view the virtual machine scale set behind the AKS cluster and the virtual machines inside it.</p> <pre><code>CLUSTER_RESOURCE_GROUP=$(az aks show --resource-group $RESOURCE_GROUP --name $AKS_CLUSTER_NAME --query nodeResourceGroup -o tsv)
+SCALE_SET_NAME=$(az vmss list --resource-group $CLUSTER_RESOURCE_GROUP --query '[0].name' -o tsv)
+</code></pre> <p>Finally list the instances in the virtual machine scale set</p> <pre><code>az vmss list-instances -g $CLUSTER_RESOURCE_GROUP -n $SCALE_SET_NAME -o table \
+--query &quot;[].{instanceId:instanceId, Name:name, State:provisioningState}&quot;
+InstanceId    Name                           State
+------------  -----------------------------  ---------
+0             aks-nodepool1-29740120-vmss_0  Succeeded
+</code></pre> <p>At this point, Azure resources have been created, totaling 1 AKS cluster, including 1 virtual machine scale set with 1 virtual machine.</p><h3>Deploy Kubernetes</h3><h4>Build Image and Push to Image Registry</h4><p><code>git clone https://github.com/xfsnow/AKSNodeInstaller</code></p><p>Pull the source code.</p><p>First build and push the image</p> <pre><code>cd app
+IMAGE_NAME=node-installer
+az acr build --file Dockerfile_centos \
+    --resource-group $RESOURCE_GROUP \
+    --registry $ACR_NAME \
+    --image $IMAGE_NAME:1.0 .
+</code></pre> <p>Then get the specific URL of the image registry</p> <pre><code>az acr repository show -n $ACR_NAME --repository $IMAGE_NAME --query &quot;registry&quot;
+&quot;nodeinstaller11044.azurecr.cn&quot;
+</code></pre> <p>Note down this URL like nodeinstaller11044.azurecr.cn. Adding node-installer:1.0 after it gives the complete image pull address, like "acr11044.azurecr.cn/node-installer:1.0".</p><p>Find this line in daemonset_centos.yaml</p> <pre><code># Container image uses ACR service on Azure.
+- image: snowpeak.azurecr.cn/node-installer:centos
+</code></pre> <p>Replace it with your own ACR image URL "acr11044.azurecr.cn/node-installer:1.0".</p><h4>Connect to AKS Cluster and Deploy Image</h4><p>Connect to AKS cluster</p> <pre><code>az aks get-credentials --resource-group $RESOURCE_GROUP --name $AKS_CLUSTER_NAME
+</code></pre> <p>First view the nodes in the AKS cluster</p> <pre><code>kubectl get nodes -o wide --namespace node-installer
+NAME                                STATUS   ROLES   AGE    VERSION    INTERNAL-IP   EXTERNAL-IP   OS-IMAGE             KERNEL-VERSION     CONTAINER-RUNTIME
+aks-nodepool1-40474697-vmss000000   Ready    agent   142m   v1.18.14   10.240.0.4    &lt;none&gt;        Ubuntu 18.04.5 LTS   5.4.0-1035-azure   docker://19.3.14
+</code></pre> <p>Then view the pods.</p> <pre><code>kubectl get pods -o wide
+No resources found in default namespace.
+</code></pre> <p>At this time, no images have been deployed yet, so there are no resources.</p><p>Then use cd ./k8s/ to go to the Kubernetes configuration file directory.</p><p>Deploy to the AKS cluster with kubectl apply -f daemonset_centos.yaml and kubectl apply -f configmap_cowsay.yaml. The deployed cluster looks like this.</p> <pre><code>kubectl get pods -o wide --namespace node-installer
+NAME              READY   STATUS    RESTARTS   AGE   IP           NODE                                NOMINATED NODE   READINESS GATES
+installer-c68jv   1/1     Running   0          32s   10.244.0.8   aks-nodepool1-40474697-vmss000000   &lt;none&gt;           &lt;none&gt;
+</code></pre> <p>View the pod logs</p> <pre><code>kubectl logs installer-c68jv --namespace node-installer
+……
+The following NEW packages will be installed:
+  cowsay
+0 upgraded, 1 newly installed, 0 to remove and 14 not upgraded.
+Need to get 17.7 kB of archives.
+After this operation, 89.1 kB of additional disk space will be used.
+Get:1 http://azure.archive.ubuntu.com/ubuntu bionic/universe amd64 cowsay all 3.03+dfsg2-4 [17.7 kB]
+debconf: unable to initialize frontend: Dialog
+debconf: (TERM is not set, so the dialog frontend is not usable.)
+debconf: falling back to frontend: Readline
+debconf: unable to initialize frontend: Readline
+debconf: (This frontend requires a controlling tty.)
+debconf: falling back to frontend: Teletype
+dpkg-preconfigure: unable to re-open stdin:
+Fetched 17.7 kB in 1s (24.6 kB/s)
+Selecting previously unselected package cowsay.
+(Reading database ... 121200 files and directories currently installed.)
+Preparing to unpack .../cowsay_3.03+dfsg2-4_all.deb ...
+Unpacking cowsay (3.03+dfsg2-4) ...
+Setting up cowsay (3.03+dfsg2-4) ...
+Processing triggers for man-db (2.8.3-2ubuntu0.1) ...
+</code></pre> <p>You can see that the logs finally show that cowsay has been successfully installed.</p><h2>Login and Verification</h2><p>Below we will remotely connect to the AKS worker node via SSH and finally verify that cowsay has been successfully installed. Use kubectl debug to run a privileged container on the node. In the previous steps, we saw that the current worker node name is aks-nodepool1-40474697-vmss000000.</p><ol><li>Use kubectl debug to run a container image on the node to connect to that container.</li></ol> <pre><code>kubectl debug node/aks-nodepool1-40474697-vmss000000 \
+ -it --image=mcr.microsoft.com/dotnet/runtime-deps:6.0
+Creating debugging pod node-debugger-aks-nodepool1-40474697-vmss000000-5bw76 with container debugger on node aks-nodepool1-40474697-vmss000000.
+If you don't see a command prompt, try pressing enter.
+root@aks-nodepool1-40474697-vmss000000:/#
+</code></pre> <ol><li>In this privileged container, run the chroot /host command to get an isolated root path and safely interact with the worker node session. Note that after switching the root path, commands need to use absolute paths and cannot use command shortcuts. You can use exec bash to switch from dash to bash to restore normal commands. For example:</li></ol> <pre><code>root@aks-nodepool1-40474697-vmss000000:/# chroot /host
+# exec bash
+root@aks-nodepool1-40474697-vmss000000:/# cowsay -l
+Cow files in /usr/share/cowsay/cows:
+apt bud-frogs bunny calvin cheese cock cower daemon default dragon
+dragon-and-cow duck elephant elephant-in-snake eyes flaming-sheep
+ghostbusters gnu hellokitty kiss koala kosh luke-koala mech-and-cow milk
+moofasa moose pony pony-smaller ren sheep skeleton snowman stegosaurus
+stimpy suse three-eyes turkey turtle tux unipony unipony-smaller vader
+vader-koala www
+</code></pre> <p>This proves that cowsay was indeed successfully installed on the VM worker node.</p><p>Of course, this cowsay is just a small demo program with no practical use. You can create other configmap.yaml files according to your needs. For example, the source code also includes a configmap_nginx.yaml that can be used to install nginx. You just need to delete the existing DaemonSet and re-execute the relevant configuration files.</p><h2>Resource Cleanup</h2> <pre><code>az group delete --name $RESOURCE_GROUP --yes
+</code></pre> <p>Delete the resource group and all its resources. The experiment is complete.</p></main><footer class="footer"><div class="container"><div class="footer-content"><div class="footer-section"><h3><i class="fas fa-snowflake"></i> Snowpeak</h3><p>Sharing and discussing cutting-edge technologies of AI and cloud computing, and other interesting topics.</p><div class="social-links"><div class="social-platforms"><a href="https://github.com/xfsnow" target="_blank" class="social-link"><i class="fab fa-github"></i></a><a href="https://snowpeak.blog.csdn.net/" target="_blank" class="social-link"><i class="fas fa-blog"></i></a><a href="https://space.bilibili.com/701839928" target="_blank" class="social-link"><i class="fab fa-bilibili"></i></a><a href="https://www.linkedin.com/in/snowpeak" target="_blank" class="social-link"><i class="fab fa-linkedin"></i></a></div><div class="wechat-section"><div class="wechat-info"><span class="wechat-label">WeChat Account</span><span class="wechat-name">Tech Warm Life</span></div><img src="/assets/img/techwarm.jpg" alt="Tech Warm Life" class="wechat-qr"></div></div></div><div class="footer-section"><h4>Quick Links</h4><ul><li><a href="/#articles">Article</a></li><li><a href="/#tools">Tools</a></li><li><a href="https://docs.github.com/en/pages" target="_blank">GitHub Pages</a></li></ul></div><div class="footer-section"><h4>Tech Stack</h4><ul><li>Python</li><li>GitHub Copilot</li><li>Claude Sonnet 4</li><li>HTML/CSS/JS</li><li>Responsive Design</li></ul></div></div><div class="footer-bottom"><p>Copyright &copy; 2013-<script>document.write((new Date()).getFullYear());</script> Snowpeak Blog. Running on GitHub Pages.</p></div></div></footer><script src="/en/index.js"></script><script src="/assets/js/blog.js"></script><script>hljs.highlightAll();</script></body></html>

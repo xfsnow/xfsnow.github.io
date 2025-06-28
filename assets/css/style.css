@@ -816,14 +816,14 @@ body {
     color: var(--primary-color);
     text-decoration: none;
     border-bottom: 1px solid transparent;
+    padding: 1px 2px;
+    border-radius: 3px;
     transition: all 0.3s ease;
 }
 
 .article-container a:hover {
     border-bottom-color: var(--primary-color);
     background: rgba(37, 99, 235, 0.05);
-    padding: 2px 4px;
-    border-radius: 4px;
 }
 
 /* 代码样式 */
