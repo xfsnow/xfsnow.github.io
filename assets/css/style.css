@@ -174,7 +174,7 @@ body {
 /* 按钮样式 */
 .btn {
     display: inline-block;
-    padding: 12px 30px;
+    padding: 5px 10px;
     border-radius: 6px;
     text-decoration: none;
     font-weight: 600;
@@ -912,6 +912,53 @@ body {
 }
 
 /* 文章详情页结束 */
+
+/* 分页样式 */
+.pagination-section {
+    padding: 40px 0;
+    background: var(--bg-secondary);
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    gap: 8px;
+    margin: 0;
+    padding: 0;
+}
+
+.page-item {
+    margin: 0;
+}
+
+.page-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 12px;
+    min-width: 40px;
+    height: 40px;
+    border: 2px solid var(--border-color);
+    border-radius: 6px;
+    color: var(--text-primary);
+    text-decoration: none;
+    transition: all 0.3s ease;
+    font-weight: 500;
+}
+
+.page-link:hover {
+    background: var(--primary-color);
+    color: white;
+    border-color: var(--primary-color);
+}
+
+.page-item.active .page-link {
+    background: var(--primary-color);
+    color: white;
+    border-color: var(--primary-color);
+}
 
 /* 响应式设计 */
 @media (max-width: 768px) {

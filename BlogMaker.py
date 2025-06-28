@@ -100,13 +100,10 @@ class BlogMaker:
             # 取第一个 --------- 以后的内容为文章正文
             # 使用正则表达式匹配第一个 '---' 之后的内容
             content = re.split(r'^-+\s*$', content, maxsplit=1, flags=re.MULTILINE)
-            # print(content)
             content = content[1] if len(content) > 1 else content[0]  # 取第二部分作为正文
 
             # 使用 markdown 库将 Markdown 转换为 HTML
             html_content = markdown.markdown(content, extensions=['fenced_code', 'tables'])
-            # print(html_content)
-
             # 根据 markdown 文件内容长度粗略估计阅读时间， 假设每分钟阅读 60 个单词
             reading_time = len(content.split()) // 60
             reading_time_str = f"{reading_time}分钟" if reading_time > 0 else "1分钟"
@@ -130,6 +127,43 @@ class BlogMaker:
             # break
 
         print(f"已生成 {len(articles)} 篇文章的 HTML 文件")
+
+    def make_pager(self, page_size: int = 10):
+        """生成文章分页页面"""
+        articles = self.list_articles()
+        total_articles = len(articles)
+        total_pages = (total_articles + page_size - 1) // page_size
+
+        if total_pages == 0:
+            print("没有文章需要分页")
+            return
+
+        # 为每一页生成HTML文件
+        for page_num in range(1, total_pages + 1):
+            start_index = (page_num - 1) * page_size
+            end_index = min(start_index + page_size, total_articles)
+            page_articles = articles[start_index:end_index]
+
+            # 准备模板数据
+            data = {
+                'lang': self.getLang(),
+                'articles': page_articles,
+                'page': page_num,
+                'total_pages': total_pages,
+                'page_size': page_size,
+                'total_articles': total_articles
+            }
+
+            # 渲染模板
+            html_content = self.view.render_template('page.html', data=data)
+
+            # 生成文件名
+            output_file = os.path.join(self.langPath, f'page_{page_num}.htm')
+
+            # 保存生成的HTML文件
+            self.view.write_html(output_file, html_content, strip=True)
+
+        print(f"已生成 {total_pages} 个分页文件，共 {total_articles} 篇文章")
 
     def make_about(self):
         """生成关于页面"""
@@ -358,11 +392,18 @@ class BlogMaker:
         # 处理文章索引
         # zh_articles = self.index_article()
         # print(f"处理了 {self.langPath} 目录下 {len(zh_articles)} 篇文章")
+        # # 生成首页 HTML
+        # self.make_home()
+
+        # # 生成关于页面
+        # self.make_about()
+
+        # # 生成文章页面
         # self.make_article()
 
-        # 生成首页 HTML
-        self.make_home()
-        # self.make_about()
+        # 生成分页列表
+        self.make_pager()
+
 
 if __name__ == "__main__":
     blog_maker = BlogMaker('zh')
