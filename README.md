@@ -5,6 +5,12 @@ Miscellaneous technical contents and codes are also stored here.
 这是 snowpeak 的 WIKI 网站，存放在 GitHub 上。
 各种技术内容和代码也存放在这里。
 
+## Word 文件转换成引用图片的 markdown 文件
+安装 Pandoc，然后
+```bash
+pandoc Azure_DevOps_Pipeline_Combine_Repos_Cn_1.docx --extract-media=../assets/img/ -o Azure_DevOps_Pipeline_Combine_Repos_1.md
+```
+
 
 TODO
 - [ ] 整理文章结构，区分出 en 和 zh 2大目录，分别放置英文和中文文章。

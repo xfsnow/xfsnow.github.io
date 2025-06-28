@@ -1,0 +1,174 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Snowpeak Blog</title><meta name="description" content="Sharing and discussing cutting-edge technologies of AI and cloud computing, and other interesting topics."><meta name="keywords" content="AI, GitHub Copilot, Azure Cloud, Cloud Computing, Front-end Technology, Back-end Technology, Web Development, Software Engineering"><link rel="stylesheet" href="/assets/css/style.css"><link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.7.2/css/all.css"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/default.min.css"><script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/highlight.min.js"></script></head><body><nav class="navbar"><div class="nav-container"><div class="nav-logo"><h2><i class="fas fa-snowflake"></i> Snowpeak</h2></div><div class="nav-menu"><a href="/en/" class="nav-link">Home</a><a href="/en/page_1.htm" class="nav-link">Article</a><a href="/en#tools" class="nav-link">Tools</a><a href="/en/about.htm" class="nav-link">About</a><a href="/" class="nav-link lang-switch"><i class="fas fa-globe"></i> 简体中文</a></div><div class="nav-toggle" id="mobile-menu"><span class="bar"></span><span class="bar"></span><span class="bar"></span></div></div></nav><header class="article-header"><div class="container"><h1>AKS Cluster Blue-Green Deployment for Version Upgrade (Part 2)</h1><div class="article-meta"><span><i class="fas fa-calendar"></i> Published: 2022-04-26 17:26:24</span><span><i class="fas fa-clock"></i> Reading time: 25 minutes </span><span><i class="fas fa-tag"></i> Category: Azure</span></div></div></header><main class="article-container"><p>In the first part of this series, we introduced the basic concepts of AKS blue-green deployment and explained how to deploy related resources and integrate Application Gateway with AKS. For those who missed the first part, you can click <a href="/zh/20220301_AKS.htm">here to review</a>。</p><p>In this part, we will build upon the previous content to further explain how to deploy applications, how to deploy new AKS clusters, and how to switch between AKS versions.</p><h3>Application Deployment</h3><p>Let's deploy a demo application to verify that the Application Gateway has been successfully integrated with the AKS cluster. Copy the following YAML source code and save it as deployment_aspnet.yaml。</p> <pre><code class="language-yaml">apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: aspnetapp
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: aspnetapp
+  template:
+    metadata:
+      labels:
+        app: aspnetapp
+    spec:
+      containers:
+      - name: aspnetapp
+        # Sample ASP.Net application from Microsoft which can get private IP.
+        image: mcr.microsoft.com/dotnet/core/samples:aspnetapp
+        ports:
+        - containerPort: 80
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: aspnetapp
+spec:
+  selector:
+    app: aspnetapp
+  ports:
+  - protocol: TCP
+    port: 80
+    targetPort: 80
+
+---
+
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: aspnetapp
+  annotations:
+    kubernetes.io/ingress.class: azure/application-gateway
+spec:
+  rules:
+  - http:
+      paths:
+      - path: /
+        backend:
+          serviceName: aspnetapp
+          servicePort: 80
+</code></pre> <p>Deploy the application。</p> <pre><code>kubectl apply -f deployment_aspnet.yaml
+</code></pre> <p>List pods to confirm the application deployment is running。</p> <pre><code>kubectl get po -o wide
+NAME                                    READY   STATUS    RESTARTS   AGE    IP            NODE                                NOMINATED NODE   READINESS GATES
+aad-pod-identity-mic-787c5958fd-kmx9b   1/1     Running   0          177m   10.240.0.33   aks-nodepool1-94448771-vmss000000   &lt;none&gt;           &lt;none&gt;
+aad-pod-identity-mic-787c5958fd-nkpv4   1/1     Running   0          177m   10.240.0.63   aks-nodepool1-94448771-vmss000001   &lt;none&gt;           &lt;none&gt;
+aad-pod-identity-nmi-mhp86              1/1     Running   0          177m   10.240.0.4    aks-nodepool1-94448771-vmss000000   &lt;none&gt;           &lt;none&gt;
+aad-pod-identity-nmi-sjpvw              1/1     Running   0          177m   10.240.0.35   aks-nodepool1-94448771-vmss000001   &lt;none&gt;           &lt;none&gt;
+aad-pod-identity-nmi-xnfxh              1/1     Running   0          177m   10.240.0.66   aks-nodepool1-94448771-vmss000002   &lt;none&gt;           &lt;none&gt;
+agic-ingress-azure-84967fc5b6-cqcn4     1/1     Running   0          111m   10.240.0.79   aks-nodepool1-94448771-vmss000002   &lt;none&gt;           &lt;none&gt;
+aspnetapp-68784d6544-j99qg              1/1     Running   0          96s    10.240.0.75   aks-nodepool1-94448771-vmss000002   &lt;none&gt;           &lt;none&gt;
+aspnetapp-68784d6544-v9449              1/1     Running   0          96s    10.240.0.13   aks-nodepool1-94448771-vmss000000   &lt;none&gt;           &lt;none&gt;
+aspnetapp-68784d6544-ztbd9              1/1     Running   0          96s    10.240.0.50   aks-nodepool1-94448771-vmss000001   &lt;none&gt;           &lt;none&gt;
+</code></pre> <p>We can see that all application pods are running normally. Note their IPs are 10.240.0.13, 10.240.0.50, and 10.240.0.75.</p><p>The Application Gateway backend shows exactly these IPs。</p> <pre><code>az network application-gateway show-backend-health \
+ -g $RESOURCE_GROUP \
+ -n $APP_GATEWAY \
+ --query backendAddressPools[].backendHttpSettingsCollection[].servers[][address,health] \
+ -o tsv
+10.240.0.13     Healthy
+10.240.0.50     Healthy
+10.240.0.75     Healthy
+</code></pre> <p>Check the frontend IP address。</p> <pre><code>az network public-ip show -g $RESOURCE_GROUP -n $APPGW_IP --query ipAddress -o tsv
+</code></pre> <p>Then access this IP with a browser to see：</p><p><img alt="" src="../assets/img/20220426_AKS_01.png"></p><p>Refresh several times, and the Host name and Server IP address will alternately display the 3 hostnames and IPs, which are exactly the 3 pod names and private IPs we deployed earlier. This shows that the Application Gateway and pods in AKS have been successfully integrated.</p><h2>Deploying New AKS Cluster</h2><h3>Creating New Version AKS Cluster</h3><p>In the second AKS subnet, create a new AKS cluster. Our previous AKS version used the current default version 1.19.11, the new AKS cluster will use 1.20.7, with all other parameters remaining the same. Declare the new AKS cluster name variable。</p> <pre><code>AKS_NEW=new
+</code></pre> <p>Get the subnet ID for the new cluster。</p> <pre><code>NEW_AKS_SUBNET_ID=$(az network vnet subnet show -g $RESOURCE_GROUP --vnet-name $VNET_NAME --name $NEW_AKS_SUBNET --query id -o tsv)
+</code></pre> <p>Create the new AKS cluster。</p> <pre><code>az aks create -n $AKS_NEW \
+-g $RESOURCE_GROUP \
+-l $AZ_REGION \
+--generate-ssh-keys \
+--network-plugin azure \
+--enable-managed-identity \
+--vnet-subnet-id $NEW_AKS_SUBNET_ID \
+--kubernetes-version 1.20.7
+</code></pre> <p>The new AKS cluster also uses Helm to install application-gateway-kubernetes-ingress。</p><h3>Installing Pod Identity on New Version AKS Cluster</h3><p>Connect to AKS cluster</p> <pre><code>az aks get-credentials --resource-group $RESOURCE_GROUP --name $AKS_NEW
+</code></pre> <p>Install AAD Pod Identity</p> <pre><code>kubectl create serviceaccount --namespace kube-system tiller-sa
+kubectl create clusterrolebinding tiller-cluster-rule --clusterrole=cluster-admin --serviceaccount=kube-system:tiller-sa
+helm repo add aad-pod-identity https://raw.githubusercontent.com/Azure/aad-pod-identity/master/charts
+helm install aad-pod-identity aad-pod-identity/aad-pod-identity
+</code></pre> <p>Helm install Application Gateway Ingress Controller。</p> <pre><code>helm repo add application-gateway-kubernetes-ingress https://appgwingress.blob.core.windows.net/ingress-azure-helm-package/
+helm repo update
+</code></pre> <h3>Deploying Applications on New Version AKS Cluster</h3><p>We'll also install the same application on the new AKS cluster。</p> <pre><code>kubectl apply -f deployment_aspnet.yaml
+</code></pre> <p>After deploying the application, list the pods。</p> <pre><code>kubectl get po -o=custom-columns=NAME:.metadata.name,\
+podIP:.status.podIP,NODE:.spec.nodeName,\
+READY-true:.status.containerStatuses[*].ready
+
+NAME                                    podIP          NODE                                READY-true
+aad-pod-identity-mic-644c7c9f6-cqkxr   10.241.0.25   aks-nodepool1-20247409-vmss000000   true
+aad-pod-identity-mic-644c7c9f6-xpwlt   10.241.0.43   aks-nodepool1-20247409-vmss000002   true
+aad-pod-identity-nmi-k2c8s             10.241.0.35   aks-nodepool1-20247409-vmss000001   true
+aad-pod-identity-nmi-vqqzq             10.241.0.66   aks-nodepool1-20247409-vmss000002   true
+aad-pod-identity-nmi-xvcxm             10.241.0.4    aks-nodepool1-20247409-vmss000000   true
+aspnetapp-5844845bdc-82lcw             10.241.0.33   aks-nodepool1-20247409-vmss000000   true
+aspnetapp-5844845bdc-hskvg             10.241.0.43   aks-nodepool1-20247409-vmss000001   true
+aspnetapp-5844845bdc-qzt7f             10.241.0.84   aks-nodepool1-20247409-vmss000002   true
+</code></pre> <p>In actual production workflows, after deploying the application, don't associate it with the existing Application Gateway immediately. Instead, remotely log in and test via private IPs first。</p> <pre><code>kubectl run -it --rm aks-ssh --image=mcr.microsoft.com/aks/fundamental/base-ubuntu:v0.0.11
+</code></pre> <p>After the container starts, you'll directly enter this container. We'll access the 3 private IPs mentioned above: 10.241.0.33, 10.241.0.43, 10.241.0.84。 For example：</p> <pre><code>root@aks-ssh:/# curl http://10.241.0.33
+root@aks-ssh:/# curl http://10.241.0.43
+root@aks-ssh:/# curl http://10.241.0.84
+</code></pre> <p>We can see that all return content normally. This demonstrates that the new environment has been tested and passed. Finally, associate this new AKS cluster with the existing Application Gateway.</p><h2>Switching Between Different AKS Cluster Versions</h2><h3>Application Gateway Switching to Integration with New Version AKS</h3><p>Execute the following command to install AGIC</p> <pre><code>helm install agic application-gateway-kubernetes-ingress/ingress-azure -f helm_agic.yaml
+</code></pre> <p>Wait a few seconds</p> <pre><code>kubectl get po -o=custom-columns=NAME:.metadata.name,podIP:.status.podIP,NODE:.spec.nodeName,READY-true:.status.containerStatuses[*].ready
+NAME                                    podIP          NODE                                READY-true
+aad-pod-identity-mic-644c7c9f6-cqkxr   10.241.0.25   aks-nodepool1-20247409-vmss000000   true
+aad-pod-identity-mic-644c7c9f6-xpwlt   10.241.0.43   aks-nodepool1-20247409-vmss000002   true
+aad-pod-identity-nmi-k2c8s             10.241.0.35   aks-nodepool1-20247409-vmss000001   true
+aad-pod-identity-nmi-vqqzq             10.241.0.66   aks-nodepool1-20247409-vmss000002   true
+aad-pod-identity-nmi-xvcxm             10.241.0.4    aks-nodepool1-20247409-vmss000000   true
+agic-ingress-azure-84967fc5b6-6x4dd    10.241.0.79   aks-nodepool1-20247409-vmss000002   true
+aspnetapp-5844845bdc-82lcw             10.241.0.33   aks-nodepool1-20247409-vmss000000   true
+aspnetapp-5844845bdc-hskvg             10.241.0.43   aks-nodepool1-20247409-vmss000001   true
+aspnetapp-5844845bdc-qzt7f             10.241.0.84   aks-nodepool1-20247409-vmss000002   true
+</code></pre> <p>We can see that the agic-ingress-azure-*** pod is running normally.</p><p>First use command line to check that the Application Gateway backend has been updated to the new pods。</p> <pre><code>az network application-gateway show-backend-health \
+-g $RESOURCE_GROUP \
+-n $APP_GATEWAY \
+--query backendAddressPools[].backendHttpSettingsCollection[].servers[][address,health] \
+-o tsv
+10.241.0.33     Healthy
+10.241.0.43     Healthy
+10.241.0.84     Healthy
+</code></pre> <p>Let's go back to the browser and refresh the Application Gateway's public IP. We can see that the Host name and IP in the displayed content have switched to the new backend。</p><p><img alt="" src="../assets/img/20220426_AKS_02.png"></p><h3>Version Rollback</h3><p>If the new AKS cluster has issues, we can switch back to the old AKS cluster. We just need to go back to the old AKS cluster and reinstall AGIC to re-associate the Application Gateway with the application pods in the old AKS cluster。</p> <pre><code>az aks get-credentials --resource-group $RESOURCE_GROUP --name $AKS_OLD
+helm uninstall agic
+helm install agic application-gateway-kubernetes-ingress/ingress-azure -f helm_agic.yaml
+</code></pre> <p>Soon we can see that the AGIC pod is running。</p> <pre><code>kubectl get po -o wide
+NAME                                    READY   STATUS    RESTARTS   AGE    IP            NODE                                NOMINATED NODE   READINESS GATES
+aad-pod-identity-mic-787c5958fd-kmx9b   1/1     Running   0          2d1h   10.240.0.33   aks-nodepool1-94448771-vmss000000   &lt;none&gt;           &lt;none&gt;
+aad-pod-identity-mic-787c5958fd-nkpv4   1/1     Running   1          2d1h   10.240.0.63   aks-nodepool1-94448771-vmss000001   &lt;none&gt;           &lt;none&gt;
+aad-pod-identity-nmi-mhp86              1/1     Running   0          2d1h   10.240.0.4    aks-nodepool1-94448771-vmss000000   &lt;none&gt;           &lt;none&gt;
+aad-pod-identity-nmi-sjpvw              1/1     Running   0          2d1h   10.240.0.35   aks-nodepool1-94448771-vmss000001   &lt;none&gt;           &lt;none&gt;
+aad-pod-identity-nmi-xnfxh              1/1     Running   0          2d1h   10.240.0.66   aks-nodepool1-94448771-vmss000002   &lt;none&gt;           &lt;none&gt;
+agic-ingress-azure-84967fc5b6-nwbh4     1/1     Running   0          8s     10.240.0.70   aks-nodepool1-94448771-vmss000002   &lt;none&gt;           &lt;none&gt;
+aspnetapp-68784d6544-j99qg              1/1     Running   0          2d     10.240.0.75   aks-nodepool1-94448771-vmss000002   &lt;none&gt;           &lt;none&gt;
+aspnetapp-68784d6544-v9449              1/1     Running   0          2d     10.240.0.13   aks-nodepool1-94448771-vmss000000   &lt;none&gt;           &lt;none&gt;
+aspnetapp-68784d6544-ztbd9              1/1     Running   0          2d     10.240.0.50   aks-nodepool1-94448771-vmss000001   &lt;none&gt;           &lt;none&gt;
+</code></pre> <p>Check the Application Gateway backend again</p> <pre><code>az network application-gateway show-backend-health \
+ -g $RESOURCE_GROUP \
+ -n $APP_GATEWAY \
+ --query backendAddressPools[].backendHttpSettingsCollection[].servers[][address,health] \
+ -o tsv
+10.240.0.13     Healthy
+10.240.0.50     Healthy
+10.240.0.75     Healthy
+</code></pre> <p>We can see that the same Application Gateway backend has been restored to the old AKS cluster IPs.</p><h3>Testing Application Availability During Version Switching</h3><p>We'll use continuous HTTP requests to verify that the service is not interrupted during switching.</p><p>Open another command line window and execute</p> <pre><code>while(true); \
+do curl -s http://139.217.117.86/ |ts '[%Y-%m-%d %H:%M:%S]' | grep 10.24; \
+sleep 0.1; done
+[2021-08-03 16:35:09] 10.240.0.13                        &lt;br /&gt;
+[2021-08-03 16:35:10] 10.240.0.50                        &lt;br /&gt;
+[2021-08-03 16:35:11] 10.240.0.13                        &lt;br /&gt;
+[2021-08-03 16:35:12] 10.240.0.75                        &lt;br /&gt;
+[2021-08-03 16:35:12] 10.240.0.50                        &lt;br /&gt;
+[2021-08-03 16:35:13] 10.240.0.13                        &lt;br /&gt;
+[2021-08-03 16:35:14] 10.240.0.75                        &lt;br /&gt;
+</code></pre> <p>We can see the output alternates between the private IPs of pods in the old AKS cluster.</p><p>Go back to the AKS operation window, switch to the new AKS cluster, and execute the delete and install AGIC commands again。</p> <pre><code>az aks get-credentials --resource-group $RESOURCE_GROUP --name $AKS_NEW
+helm uninstall agic
+</code></pre> <p>Observe in the second window - you'll find that it still returns IPs from the old AKS cluster. This is because we're only deleting from the new AKS cluster at this point, while the Application Gateway and old AKS cluster are still running normally。</p><p>Then execute in the new AKS cluster</p> <pre><code>helm install agic application-gateway-kubernetes-ingress/ingress-azure -f helm_agic.yaml
+</code></pre> <p>Observe in the second window - you'll find that from a certain line onwards, it directly switches to the new AKS cluster IP addresses. No interruption occurs。</p> <pre><code>[2021-08-03 16:42:08] 10.240.0.13                        &lt;br /&gt;
+[2021-08-03 16:42:09] 10.240.0.50                        &lt;br /&gt;
+[2021-08-03 16:42:09] 10.240.0.75                        &lt;br /&gt;
+[2021-08-03 16:42:10] 10.240.0.13                        &lt;br /&gt;
+[2021-08-03 16:42:11] 10.240.0.50                        &lt;br /&gt;
+[2021-08-03 16:42:11] 10.240.0.75                        &lt;br /&gt;
+[2021-08-03 16:42:12] 10.241.0.33                        &lt;br /&gt;
+[2021-08-03 16:42:13] 10.241.0.33                        &lt;br /&gt;
+[2021-08-03 16:42:13] 10.241.0.43                        &lt;br /&gt;
+[2021-08-03 16:42:15] 10.241.0.43                        &lt;br /&gt;
+[2021-08-03 16:42:15] 10.241.0.84                        &lt;br /&gt;
+[2021-08-03 16:42:16] 10.241.0.84                        &lt;br /&gt;
+</code></pre> <p>This verifies that the Application Gateway's external service continues to run normally during the switching process. Through these operations, we can ultimately maintain both new and old AKS clusters while enabling real-time switching。</p><h2>Summary</h2><p>The above uses a common web application as an example to demonstrate creating new AKS clusters through blue-green deployment for stable version upgrades. Besides web applications, other types and scenarios of applications can also refer to this approach, switching at the AKS cluster and upstream integration points to achieve real-time switching and rollback.</p></main><footer class="footer"><div class="container"><div class="footer-content"><div class="footer-section"><h3><i class="fas fa-snowflake"></i> Snowpeak</h3><p>Sharing and discussing cutting-edge technologies of AI and cloud computing, and other interesting topics.</p><div class="social-links"><div class="social-platforms"><a href="https://github.com/xfsnow" target="_blank" class="social-link"><i class="fab fa-github"></i></a><a href="https://snowpeak.blog.csdn.net/" target="_blank" class="social-link"><i class="fas fa-blog"></i></a><a href="https://space.bilibili.com/701839928" target="_blank" class="social-link"><i class="fab fa-bilibili"></i></a><a href="https://www.linkedin.com/in/snowpeak" target="_blank" class="social-link"><i class="fab fa-linkedin"></i></a></div><div class="wechat-section"><div class="wechat-info"><span class="wechat-label">WeChat Account</span><span class="wechat-name">Tech Warm Life</span></div><img src="/assets/img/techwarm.jpg" alt="Tech Warm Life" class="wechat-qr"></div></div></div><div class="footer-section"><h4>Quick Links</h4><ul><li><a href="/#articles">Article</a></li><li><a href="/#tools">Tools</a></li><li><a href="https://docs.github.com/en/pages" target="_blank">GitHub Pages</a></li></ul></div><div class="footer-section"><h4>Tech Stack</h4><ul><li>Python</li><li>GitHub Copilot</li><li>Claude Sonnet 4</li><li>HTML/CSS/JS</li><li>Responsive Design</li></ul></div></div><div class="footer-bottom"><p>Copyright &copy; 2013-<script>document.write((new Date()).getFullYear());</script> Snowpeak Blog. Running on GitHub Pages.</p></div></div></footer><script src="/en/index.js"></script><script src="/assets/js/blog.js"></script><script>hljs.highlightAll();</script></body></html>

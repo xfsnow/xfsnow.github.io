@@ -1,0 +1,78 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Snowpeak Blog</title><meta name="description" content="Sharing and discussing cutting-edge technologies of AI and cloud computing, and other interesting topics."><meta name="keywords" content="AI, GitHub Copilot, Azure Cloud, Cloud Computing, Front-end Technology, Back-end Technology, Web Development, Software Engineering"><link rel="stylesheet" href="/assets/css/style.css"><link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.7.2/css/all.css"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/default.min.css"><script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/highlight.min.js"></script></head><body><nav class="navbar"><div class="nav-container"><div class="nav-logo"><h2><i class="fas fa-snowflake"></i> Snowpeak</h2></div><div class="nav-menu"><a href="/en/" class="nav-link">Home</a><a href="/en/page_1.htm" class="nav-link">Article</a><a href="/en#tools" class="nav-link">Tools</a><a href="/en/about.htm" class="nav-link">About</a><a href="/" class="nav-link lang-switch"><i class="fas fa-globe"></i> 简体中文</a></div><div class="nav-toggle" id="mobile-menu"><span class="bar"></span><span class="bar"></span><span class="bar"></span></div></div></nav><header class="article-header"><div class="container"><h1>Azure DevOps Pipeline Combining Multiple Repositories (Part 4)</h1><div class="article-meta"><span><i class="fas fa-calendar"></i> Published: 2021-06-12 10:57:47</span><span><i class="fas fa-clock"></i> Reading time: 12 minutes </span><span><i class="fas fa-tag"></i> Category: Azure</span></div></div></header><main class="article-container"><p>This is the 4th part of the series on combining multiple repositories with Azure DevOps pipeline. In our last post, we have included the two source repositories of front-end and back-end projects. In this post, we will continue to build the front-end project and combine the artifacts from front-end and back-end together.</p><h2>Build the front-end project</h2><p>Go back to the YAML file editing interface and find this step.</p> <pre><code class="language-yaml">steps:
+- checkout: Angular
+  displayName: 'checkout Angular'
+</code></pre> <p>Add the following 2 tasks below the step.</p> <pre><code class="language-yaml">- task: Npm@1
+  displayName: 'npm install'
+  inputs:
+    command: install
+    workingDir: '$(Agent.BuildDirectory)/s/ASP_Angular/'
+
+- task: Npm@1
+  displayName: 'Build Angular'
+  inputs:
+    command: custom
+    customCommand: run build
+    workingDir: '$(Agent.BuildDirectory)/s/ASP_Angular/'
+</code></pre> <p>The first 1 new task is to install the dependency library by the dependency of the front-end project. The last 1 task is to build files that can be published by the front end.</p><p>Note that both tasks have workDir: '$(Agent.BuildDirectory)/s/ASP_Angular/' statement. $(Agent.BuildDirectory) is an environment variable that refers to /home/vsts in the context of the current task /work/1, so the code check-out path /home/vsts/work/1/s/ASP_Angular shown in the previous log can be represented by an environment variable that is $(Agent.BuildDirectory)/s/ASP_Angular/.</p><p>Save and run. Wait patiently for a while, when the task runs, we click into the task log and see the following log.</p><p><img alt="" src="../assets/img/20210612_Azure_DevOps_Pipeline_4_01.png"></p><p>This indicates that the build of the front end has been successfully completed.</p><h2>Combine the front-end and back-end artifacts</h2><p>Finally, we copy the front-end built files to the back-end built directory to prepare the total package for the release.</p><p>Go back to the YAML file editing interface and find the task.</p> <pre><code class="language-yaml">- task: DotNetCoreCLI@2
+  displayName: 'dotnet publish'
+  inputs:
+    command: publish
+    publishWebProjects: false
+    projects: '**/*.csproj'
+    arguments: '--configuration $(BuildConfiguration) --output $(build.artifactstagingdirectory)'
+    zipAfterPublish: true
+</code></pre> <p>Change the last zipAfterPublish: true to zipAfterPublish: false, which means that we don't compress at this step, keep the original directory and files. Then add a task after this task.</p> <pre><code class="language-yaml">- task: CopyFiles@2
+  displayName: 'copy frontend files'
+  inputs:
+    SourceFolder: '$(Agent.BuildDirectory)/s/ASP_Angular/dist'
+    Contents: '**'
+    TargetFolder: '$(Build.ArtifactStagingDirectory)/ASP_Backend/wwwroot'
+</code></pre> <p>This is to copy the files built from the front end into the specified directory that the back end is built in.</p><p>SourceFolder: '$(Agent.BuildDirectory)/s/ASP_Angular/dist' means that the source path is set to $(Agent.BuildDirectory)/s/ASP_Angular/dist because by default the files generated by the Angular build are placed in the project's /dist directory.</p><p>TargetFolder: '$(Build.ArtifactStagingDirectory)/ASP_Backend/wwwroot' means that the target path is the back-end built directory in wwwroot, which is a path ASP.Net projects use usually for static files. Static files in wwwroot are output directly.</p><p>Then add a task.</p> <pre><code class="language-yaml">- task: ArchiveFiles@2
+  inputs:
+    rootFolderOrFile: '$(Build.ArtifactStagingDirectory)/ASP_Backend/'
+    includeRootFolder: false
+    archiveType: 'zip'
+    archiveFile: '$(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip'
+    replaceExistingArchive: true
+    verbose: true
+</code></pre> <p>Archive the previously organized directories and files in one package.</p><p>archiveFile: '$(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip' this line declares the path to which the packaged file is stored. $(Build.BuildId) is an environment variable that stands for a built serial number that is typically used to generate a different name for each packaged file built.</p><p>Finally, the task of publishing the product is changed from the original</p> <pre><code class="language-yaml">PathtoPublish: '$(Build.ArtifactStagingDirectory)/'
+</code></pre> <p>to</p> <pre><code class="language-yaml">PathtoPublish: '$(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip'
+</code></pre> <p>Let's just save this final package, and ignore the rest files in the process.</p><p>Run after saving. After a successful run, this time we can see that the resulting product file name becomes like this.</p><p><img alt="" src="../assets/img/20210612_Azure_DevOps_Pipeline_4_02.png"></p><p>Because it contains all the built files from the front and back ends, the volume also increases to 4MB.</p><p>We download this file and can look at it on our computer.</p> <pre><code>unzip -l 235.zip
+Archive: 235.zip
+Length Date Time Name
+---------- ---------- ----- ----
+138528 06-03-21 08:12 ASP_Backend
+10240 06-03-21 08:12 ASP_Backend.Views.dll
+19216 06-03-21 08:12 ASP_Backend.Views.pdb
+106734 06-03-21 08:12 ASP_Backend.deps.json
+11264 06-03-21 08:12 ASP_Backend.dll
+20472 06-03-21 08:12 ASP_Backend.pdb
+292 06-03-21 08:12 ASP_Backend.runtimeconfig.json
+62328 04-23-21 18:32 Microsoft.AspNetCore.SpaServices.Extensions.dll
+162 06-03-21 08:11 appsettings.Development.json
+196 06-03-21 08:11 appsettings.json
+487 06-03-21 08:12 web.config
+0 06-03-21 08:12 wwwroot/
+2530889 06-03-21 08:12 wwwroot/vendor-es5.js.map
+6303 06-03-21 08:12 wwwroot/runtime-es5.js
+6289 06-03-21 08:12 wwwroot/runtime-es2015.js.map
+14659 06-03-21 08:12 wwwroot/main-es2015.js.map
+5430 06-03-21 08:11 wwwroot/favicon.ico
+387821 06-03-21 08:12 wwwroot/polyfills-es5.js.map
+6286 06-03-21 08:12 wwwroot/runtime-es5.js.map
+816259 06-03-21 08:12 wwwroot/polyfills-es5.js
+289746 06-03-21 08:12 wwwroot/polyfills-es2015.js
+6306 06-03-21 08:12 wwwroot/runtime-es2015.js
+16417 06-03-21 08:12 wwwroot/main-es5.js.map
+147637 06-03-21 08:12 wwwroot/styles.css
+819 06-03-21 08:12 wwwroot/index.html
+5198180 06-03-21 08:12 wwwroot/vendor-es5.js
+28439 06-03-21 08:12 wwwroot/main-es2015.js
+4315318 06-03-21 08:12 wwwroot/vendor-es2015.js
+776588 06-03-21 08:12 wwwroot/styles.css.map
+256877 06-03-21 08:12 wwwroot/polyfills-es2015.js.map
+5079925 06-03-21 08:12 wwwroot/vendor-es2015.js.map
+32199 06-03-21 08:12 wwwroot/main-es5.js
+---------- -------
+20292306 32 files
+</code></pre> <p>It does contain all the files on the front and back ends and is organized in the directory format that are ready to deploy.</p><p>If you still have problems editing YAML files for CI pipelines, you can refer to the ASP_Combine.yml file in the back-end source package ASP_Backend.zip.</p></main><footer class="footer"><div class="container"><div class="footer-content"><div class="footer-section"><h3><i class="fas fa-snowflake"></i> Snowpeak</h3><p>Sharing and discussing cutting-edge technologies of AI and cloud computing, and other interesting topics.</p><div class="social-links"><div class="social-platforms"><a href="https://github.com/xfsnow" target="_blank" class="social-link"><i class="fab fa-github"></i></a><a href="https://snowpeak.blog.csdn.net/" target="_blank" class="social-link"><i class="fas fa-blog"></i></a><a href="https://space.bilibili.com/701839928" target="_blank" class="social-link"><i class="fab fa-bilibili"></i></a><a href="https://www.linkedin.com/in/snowpeak" target="_blank" class="social-link"><i class="fab fa-linkedin"></i></a></div><div class="wechat-section"><div class="wechat-info"><span class="wechat-label">WeChat Account</span><span class="wechat-name">Tech Warm Life</span></div><img src="/assets/img/techwarm.jpg" alt="Tech Warm Life" class="wechat-qr"></div></div></div><div class="footer-section"><h4>Quick Links</h4><ul><li><a href="/#articles">Article</a></li><li><a href="/#tools">Tools</a></li><li><a href="https://docs.github.com/en/pages" target="_blank">GitHub Pages</a></li></ul></div><div class="footer-section"><h4>Tech Stack</h4><ul><li>Python</li><li>GitHub Copilot</li><li>Claude Sonnet 4</li><li>HTML/CSS/JS</li><li>Responsive Design</li></ul></div></div><div class="footer-bottom"><p>Copyright &copy; 2013-<script>document.write((new Date()).getFullYear());</script> Snowpeak Blog. Running on GitHub Pages.</p></div></div></footer><script src="/en/index.js"></script><script src="/assets/js/blog.js"></script><script>hljs.highlightAll();</script></body></html>

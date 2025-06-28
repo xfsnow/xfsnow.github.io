@@ -2,8 +2,10 @@ import markdown
 import os
 import re
 import json
-from datetime import datetime
 from View import View  # 修正导入方式
+import subprocess
+import shutil
+import glob
 
 class BlogMaker:
     def __init__(self, langPath: str = 'zh'):
@@ -387,13 +389,142 @@ class BlogMaker:
 
         print(f"已生成 {len(articles)} 篇文章的索引文件: {output_file}")
 
+    def word2markdown(self):
+        """将 Word 文档转换为 Markdown 格式"""
+        # 任务列表
+        tasks = [
+            {
+                'source': "Azure_DevOps_Pipeline_Combine_Repos_Eng_1.docx",
+                'target': "20210610_Azure_DevOps_Pipeline_1.md"
+            },
+            {
+                'source': "Azure_DevOps_Pipeline_Combine_Repos_Eng_2.docx",
+                'target': "20210610_Azure_DevOps_Pipeline_2.md"
+            },
+            {
+                'source': "Azure_DevOps_Pipeline_Combine_Repos_Eng_3.docx",
+                'target': "20210611_Azure_DevOps_Pipeline_3.md"
+            },
+            {
+                'source': "Azure_DevOps_Pipeline_Combine_Repos_Eng_4.docx",
+                'target': "20210612_Azure_DevOps_Pipeline_4.md"
+            },
+            {
+                'source': "Azure_DevOps_Pipeline_Combine_Repos_Eng_5.docx",
+                'target': "20210613_Azure_DevOps_Pipeline_5.md"
+            }
+        ]
+        # 当前文件所在的物理路径
+        workPath = os.path.dirname(os.path.abspath(__file__)) + '/' + self.langPath + '/'
+        for task in tasks:
+            source_file = task['source']
+            target_file = task['target']
+            print(f"正在转换 {source_file} 为 {target_file}")
+
+            try:
+                # 使用 pandoc 转换 Word 文档为 Markdown，并提取图片
+                cmd = f'pandoc {workPath}/{source_file} --extract-media=. -o {workPath}/{target_file}'
+                result = subprocess.run(cmd, shell=True, capture_output=True, text=True)
+
+                if result.returncode != 0:
+                    print(f"转换失败: {result.stderr}")
+                    continue
+
+                # 处理提取的图片文件
+                self._process_images(target_file)
+
+                # 清理 Markdown 文件中的图片尺寸属性
+                self._clean_markdown_file(f"{target_file}")
+
+                print(f"成功转换 {source_file} 为 {target_file}")
+
+            except Exception as e:
+                print(f"转换 {source_file} 时出错: {e}")
+
+    def _process_images(self, target_file):
+        """处理提取的图片文件：重命名并移动到 assets/img 目录"""
+        # 确保 assets/img 目录存在
+        img_dir = os.path.join('assets', 'img')
+        os.makedirs(img_dir, exist_ok=True)
+
+        # 查找所有提取的图片文件（pandoc 默认存放在 media 目录下）
+        media_dir = 'media'
+        if os.path.exists(media_dir):
+            image_files = glob.glob(os.path.join(media_dir, 'image*'))
+            print(image_files)
+            workPath = os.path.dirname(os.path.abspath(__file__)) + '/' + self.langPath + '/'
+            # 读取 markdown 文件内容
+            md_file = workPath + target_file
+            if os.path.exists(md_file):
+                with open(md_file, 'r', encoding='utf-8') as f:
+                    content = f.read()
+
+                # 重命名图片并更新 markdown 文件中的引用
+                for i, img_file in enumerate(image_files, 1):
+                    # 获取原文件扩展名
+                    _, ext = os.path.splitext(img_file)
+                    if not ext:
+                        ext = '.png'  # 默认扩展名
+
+                    # 生成新的图片文件名, target_file 是目标文件名，带 .md 扩展名，要先截掉，再加图片扩展名
+                    new_img_name = f"{os.path.splitext(target_file)[0]}_{i:02d}{ext}"
+                    new_img_path = os.path.join(img_dir, new_img_name)
+                    print(f"重命名 {img_file} 为 {new_img_path}")
+
+                    # 移动并重命名图片文件
+                    shutil.move(img_file, new_img_path)
+
+                    # 更新 markdown 文件中的图片引用路径
+                    old_path = os.path.basename(img_file)
+                    new_path = f"../assets/img/{new_img_name}"
+                    content = content.replace(f"./media/{old_path}", new_path)
+
+                # 写回更新后的 markdown 文件
+                with open(md_file, 'w', encoding='utf-8') as f:
+                    f.write(content)
+
+                print(f"已处理 {len(image_files)} 个图片文件")
+
+            # 删除空的 media 目录
+            if os.path.exists(media_dir) and not os.listdir(media_dir):
+                os.rmdir(media_dir)
+
+    def _clean_markdown_file(self, md_file):
+        """清理 Markdown 文件中的图片尺寸属性"""
+        workPath = os.path.dirname(os.path.abspath(__file__)) + '/' + self.langPath + '/'
+        full_md_file = workPath + md_file
+
+        if not os.path.exists(full_md_file):
+            return
+
+        with open(full_md_file, 'r', encoding='utf-8') as f:
+            content = f.read()
+
+        # 删除形如 {width="7.5in" height="8.154166666666667in"} 的属性，包括可能的换行符
+        # 使用 re.DOTALL 标志让 . 匹配包括换行符在内的所有字符
+        content = re.sub(r'\{[^}]*width="[^"]*"[^}]*height="[^"]*"[^}]*\}', '', content, flags=re.DOTALL)
+
+        # 也处理反向的情况（height在前，width在后）
+        content = re.sub(r'\{[^}]*height="[^"]*"[^}]*width="[^"]*"[^}]*\}', '', content, flags=re.DOTALL)
+
+        # 清理单独的width或height属性
+        content = re.sub(r'\{[^}]*width="[^"]*"[^}]*\}', '', content, flags=re.DOTALL)
+        content = re.sub(r'\{[^}]*height="[^"]*"[^}]*\}', '', content, flags=re.DOTALL)
+
+        # 清理可能残留的空白属性块
+        content = re.sub(r'\s*\{\s*\}', '', content)
+
+        with open(full_md_file, 'w', encoding='utf-8') as f:
+            f.write(content)
+
+        print(f"已清理 {md_file} 中的图片尺寸属性")
 
     def main(self):
         # 处理文章索引
-        # zh_articles = self.index_article()
-        # print(f"处理了 {self.langPath} 目录下 {len(zh_articles)} 篇文章")
+        zh_articles = self.index_article()
+        print(f"处理了 {self.langPath} 目录下 {len(zh_articles)} 篇文章")
         # 生成首页 HTML
-        # self.make_home()
+        self.make_home()
 
         # # 生成关于页面
         # self.make_about()
@@ -402,7 +533,8 @@ class BlogMaker:
         self.make_article()
 
         # 生成分页列表
-        # self.make_pager()
+        self.make_pager()
+        # self.word2markdown()
 
 
 if __name__ == "__main__":
