@@ -2,7 +2,9 @@
 
 发布时间: *2021-05-26 19:01:44*
 
-简介: Azure DevOps目前仍只在微软云Azure海外区域提供SaaS服务，Azure中国区域还没有发布。其实Azure DevOps可以管理各种云和应用部署的环境与平台，可以通过服务连接（Service Connection） 方便地连接Azure中国区域，以及其它Azure的特殊区域，比如美国政务云、德国区域等等。本文将带领大家一步一步配置好中国区域的订阅，以及建立起Azure DevOps到中国区域订阅的连接。配置Azure中国区域Azure DevOps的服务连接支持多种连接方式，包括Azu
+分类: __Azure__
+
+简介: Azure DevOps目前仍只在微软云Azure海外区域提供SaaS服务，Azure中国区域还没有发布。其实Azure DevOps可以管理各种云和应用部署的环境与平台，可以通过服务连接（Service Connection） 方便地连接Azure中国区域，以及其它Azure的特殊区域，比如美国政务云、德国区域等等。本文将带领大家一步一步配置好中国区域的订阅，以及建立起Azure DevOps到中国区域订阅的连接。
 
 原文链接: [https://snowpeak.blog.csdn.net/article/details/117301972](https://snowpeak.blog.csdn.net/article/details/117301972)
 

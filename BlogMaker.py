@@ -9,6 +9,7 @@ import glob
 
 class BlogMaker:
     def __init__(self, langPath: str = 'zh'):
+        self.pageSize = 12  # 每页显示的文章数量，因为有时2列有时3列，所以取 12 条
         self.view = View()
         self.langPath = langPath
 
@@ -40,8 +41,8 @@ class BlogMaker:
         data['lang'] = self.getLang()  # 获取语言配置
 
         articles = self.list_articles()
-        # 取最前 10 条
-        data['articles'] = articles[:10]
+        # 取最前 self.pageSize 条
+        data['articles'] = articles[:self.pageSize]
 
         # 提取所有文章的分类并创建分类映射
         categories_set = set()
@@ -130,8 +131,9 @@ class BlogMaker:
 
         print(f"已生成 {len(articles)} 篇文章的 HTML 文件")
 
-    def make_pager(self, page_size: int = 10):
+    def make_pager(self):
         """生成文章分页页面"""
+        page_size = self.pageSize  # 每页显示的文章数量
         articles = self.list_articles()
         total_articles = len(articles)
         total_pages = (total_articles + page_size - 1) // page_size
@@ -394,30 +396,24 @@ class BlogMaker:
         # 任务列表
         tasks = [
             {
-                'source': "Azure_DevOps_Pipeline_Combine_Repos_Eng_1.docx",
-                'target': "20210610_Azure_DevOps_Pipeline_1.md"
+                'source': "AzureDevOps综合管理ACR和AKS.docx",
+                'target': "20220713_Azure_DevOps_ACR_AKS.md"
             },
             {
-                'source': "Azure_DevOps_Pipeline_Combine_Repos_Eng_2.docx",
-                'target': "20210610_Azure_DevOps_Pipeline_2.md"
+                'source': "在Azure Pipeline中显示代码覆盖率.docx",
+                'target': "20230123_Azure_DevOps_Coverage.md"
             },
             {
-                'source': "Azure_DevOps_Pipeline_Combine_Repos_Eng_3.docx",
-                'target': "20210611_Azure_DevOps_Pipeline_3.md"
-            },
-            {
-                'source': "Azure_DevOps_Pipeline_Combine_Repos_Eng_4.docx",
-                'target': "20210612_Azure_DevOps_Pipeline_4.md"
-            },
-            {
-                'source': "Azure_DevOps_Pipeline_Combine_Repos_Eng_5.docx",
-                'target': "20210613_Azure_DevOps_Pipeline_5.md"
+                'source': "使用Azure AD OAuth 2.0 保护API Management的API.docx",
+                'target': "20230120_Azure_AD_APIM.md"
             }
         ]
         # 当前文件所在的物理路径
         workPath = os.path.dirname(os.path.abspath(__file__)) + '/' + self.langPath + '/'
         for task in tasks:
             source_file = task['source']
+            # 在 Windows 下文件名中有空格，需要在文件名前后加上双引号
+            source_file = f'"{source_file}"'
             target_file = task['target']
             print(f"正在转换 {source_file} 为 {target_file}")
 
@@ -521,8 +517,8 @@ class BlogMaker:
 
     def main(self):
         # 处理文章索引
-        zh_articles = self.index_article()
-        print(f"处理了 {self.langPath} 目录下 {len(zh_articles)} 篇文章")
+        # zh_articles = self.index_article()
+        # print(f"处理了 {self.langPath} 目录下 {len(zh_articles)} 篇文章")
         # 生成首页 HTML
         self.make_home()
 
@@ -530,10 +526,12 @@ class BlogMaker:
         # self.make_about()
 
         # 生成文章页面
-        self.make_article()
+        # self.make_article()
 
         # 生成分页列表
         self.make_pager()
+
+        # docx 转 Markdown
         # self.word2markdown()
 
 
