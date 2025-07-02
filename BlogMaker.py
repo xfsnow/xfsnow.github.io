@@ -517,8 +517,8 @@ class BlogMaker:
 
     def main(self):
         # 处理文章索引
-        # zh_articles = self.index_article()
-        # print(f"处理了 {self.langPath} 目录下 {len(zh_articles)} 篇文章")
+        zh_articles = self.index_article()
+        print(f"处理了 {self.langPath} 目录下 {len(zh_articles)} 篇文章")
         # 生成首页 HTML
         self.make_home()
 
@@ -526,7 +526,7 @@ class BlogMaker:
         # self.make_about()
 
         # 生成文章页面
-        # self.make_article()
+        self.make_article()
 
         # 生成分页列表
         self.make_pager()

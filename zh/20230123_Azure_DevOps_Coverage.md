@@ -64,4 +64,4 @@ generated](../assets/img/20230123_Azure_DevOps_Coverage_05.png)
 
 最后点击右上角Save and run按钮，按提示commit到源码库并执行。
 
-- [ ] 待完成
+- [ ] 待续
