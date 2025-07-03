@@ -1,0 +1,6 @@
+beautifulsoup4==4.13.4
+html2text==2025.4.15
+Jinja2==3.1.6
+Markdown==3.8.2
+pip==25.1.1
+Requests==2.32.4
