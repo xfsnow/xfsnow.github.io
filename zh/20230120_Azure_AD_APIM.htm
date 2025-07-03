@@ -1,0 +1,72 @@
+<!DOCTYPE html><html lang="zh"><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"><title>雪峰博客</title><meta name="description" content="分享AI和云计算技术的最新动态与实践经验，以及其它有趣的话题。"><meta name="keywords" content="AI, GitHub Copilot, Azure云, 云计算, 前端技术, 后端技术, Web开发, 软件工程"><link rel="stylesheet" href="/assets/css/style.css"><link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.7.2/css/all.css"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/default.min.css"><script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/highlight.min.js"></script></head><body><nav class="navbar"><div class="nav-container"><div class="nav-logo"><h2><i class="fas fa-snowflake"></i> Snowpeak</h2></div><div class="nav-menu"><a href="/" class="nav-link">首页</a><a href="/zh/page_1.htm" class="nav-link">文章</a><a href="/#tools" class="nav-link">工具</a><a href="/zh/about.htm" class="nav-link">关于</a><a href="/en/" class="nav-link lang-switch"><i class="fas fa-globe"></i> English</a></div><div class="nav-toggle" id="mobile-menu"><span class="bar"></span><span class="bar"></span><span class="bar"></span></div></div></nav><header class="article-header"><div class="container"><h1>使用Azure AD OAuth 2.0 保护API Management的API</h1><div class="article-meta"><span><i class="fas fa-calendar"></i> 发布时间: 2023-01-20 10:00:00</span><span><i class="fas fa-clock"></i> 阅读约需: 7 分钟 </span><span><i class="fas fa-tag"></i> 分类: 工具</span></div></div></header><main class="article-container"><p>Azure API Management是微软云Azure上托管的API网关服务，具备完备的API管理功能。在安全方面，可以和 Azure Active Directory紧密集成，提供客户端OAuth 2.0的验证机制。官方文档有些简略，这里详细讲解验证机制和配置流程。</p><h2>核心机制</h2><p>在Azure AD中注册2个应用，一个对应API Management中创建的API，一个对应访问API的客户端应用。在Azure AD中为客户端应用授权可以访问后端API。在API Management中的API关联Azure AD中的后端应用。最后以客户端应用申请访问token，来访问后端API。</p><p>有关在API Management中创建API的操作本文不再赘述，如有需要，请参考官方文档 https://docs.microsoft.com/en-us/azure/api-management/add-api-manually。这里我们直接选用一个已经部署好的API Management中的API。</p><p><img alt="Graphical user interface, application Description automatically generated" src="../assets/img/20230120_Azure_AD_APIM_01.png"></p><p>简化起见，我们把这个API设置成不要求订阅key，即在Settings中不勾选Subscription required。这样现在这个API就是没有任何限制，可以直接访问。就像：</p> <pre><code class="language-bash">curl https://contonso.azure-api.cn/contonso/name?name=test
+
+{&quot;message&quot;: &quot;Hello, test! Welcome to Azure Function!&quot;, &quot;timestamp&quot;: &quot;2022-09-04, 14:35:34&quot;}
+</code></pre> <p>下面我们会为这个API加上OAuth 2.0的token，把它保护起来。</p><h2>Azure AD部署</h2><h2>为后端API注册Azure AD应用</h2><p>在Azure控制台进入Azure Active Directory, 选择 App Registrations。在右侧点击New registration。输入一个有意义的名字，比如这里我们命名为 name-backend。Redirect URI选择Web，其它保持默认，点击Register按钮。</p><p><img alt="Graphical user interface, text, application, email Description automatically generated" src="../assets/img/20230120_Azure_AD_APIM_08.png"></p><p>创建成功后在Overview页，记录下这个应用的Application (client) ID。如这里是：</p> <pre><code class="language-plaintext">Display name: name-backend
+Application (client) ID: 95ac855d-724d-4bf7-95b1-93244f4e2e5b
+</code></pre> <p>左侧导航链接在Manage部分点击Expose an API，在Application ID URI右侧点击Set链接。</p><p><img alt="Graphical user interface, text, application, email Description automatically generated" src="../assets/img/20230120_Azure_AD_APIM_09.png"></p><p>使用默认值，点击 Save按钮保存。</p><p><img alt="Graphical user interface, application Description automatically generated" src="../assets/img/20230120_Azure_AD_APIM_10.png"></p><p>把这个Application ID URI 也记录下来。</p><p>在Manage部分点击App roles 然后点击 Create app role。</p><p>Display name，输入一个有意义的名字，如Reader。</p><p>Allowed member types，选择Applications</p><p>Value输入有意义的值 ，如Read</p><p>Description 输入有意义的值 ，如Readers have rights to read.</p><p>Do you want to enable this app role? 勾选。</p><p><img alt="Graphical user interface, text, application, email Description automatically generated" src="../assets/img/20230120_Azure_AD_APIM_11.png"></p><p>最后点击Apply保存。</p><p>设置返回token的版本</p><p>左侧导航菜单Manage下点击Manifest，右侧主窗格中找到 accessTokenAcceptedVersion，把它的值设为2。</p><p><img alt="Graphical user interface, application Description automatically generated" src="../assets/img/20230120_Azure_AD_APIM_12.png"></p><p>这步很重要，因为API Management中的JWT仅支持 2.0 版的格式。如果不修改此值，调用Azure AD接口获取的JWT token中解析出来的token 发布者URL格式不对，后面验证就不能通过。</p><h2>为客户端注册Azure AD应用</h2><p>在Azure控制台进入Azure Active Directory, 选择 App Registrations。在右侧点击New registration。输入一个有意义的名字，比如这里我们命名为 name-client。Redirect URI选择Web，其它保持默认，点击Register按钮。</p><p>创建成功后在Overview页，记录下这个应用的Application (client) ID值。如这里的 ```plaintext Display name: name-client Application (client) ID: 6bfe51f7-ea34-4096-aa7c-7e8df1043bbd</p> <pre><code>
+为这个客户端应用创建密钥。左侧导航菜单Manage下点击 Certificates &amp; secrets。在New client secret下点击New client secret。在弹出层中Description输入name-client，再点击下面的Add按钮添加。
+
+添加完成时，首次显示密钥值时一定要及时复制保存出来，刷新页面以后就不再显示了。如果没有及时保存下来，只能把它删除，再创建一个新的。
+
+![Graphical user interface, text, application, email Description automatically generated](../assets/img/20230120_Azure_AD_APIM_13.png)
+
+## 在Azure AD中为应用赋权
+
+在Azure AD的App registrations中选择刚刚创建的客户端的应用，左侧导航Manage段下点击API permissions。右侧窗格点击Add a permission。选中前面我们创建的后端应用name-backend。
+
+![Graphical user interface, text, application, email Description automatically generated](../assets/img/20230120_Azure_AD_APIM_14.png)
+
+再选择Application permissions，以及下面选择我们已经创建好的角色。点击Add permissions。
+
+![Graphical user interface, text, application, email Description automatically generated](../assets/img/20230120_Azure_AD_APIM_15.png)
+
+这时会回到Configured permissions列表，Status列都是空白了。
+
+![Graphical user interface, text, application, email Description automatically generated](../assets/img/20230120_Azure_AD_APIM_02.png)
+
+点击 `Grant admin consent for &lt;your-tenant-name&gt;`，弹层点Yes。然后Status列显示为绿色对勾即可。
+
+![Graphical user interface, text, application, email Description automatically generated](../assets/img/20230120_Azure_AD_APIM_03.png)
+
+## 配置API Management中的JWT策略
+
+先到 Azure AD控制台的Overview页，记录下当前的Tenant ID。
+
+![Graphical user interface, application Description automatically generated](../assets/img/20230120_Azure_AD_APIM_04.png)
+
+准备Open ID URL。使用Azure全球区域时，此URL规则是
+</code></pre> <p>https://login.microsoftonline.com/{Tenant-ID}/v2.0/.well-known/openid-configuration</p> <pre><code>使用Azure中国区域时，此URL规则是
+</code></pre> <p>https://login.partner.microsoftonline.cn/{Tenant-ID}/v2.0/.well-known/openid-configuration</p> <pre><code>在API Management控制台，打开我们已经准备好的API。在Design界面，Inbound policy点击Add policy。
+
+![Graphical user interface, application Description automatically generated](../assets/img/20230120_Azure_AD_APIM_05.png)
+
+再向下翻页，点选Validate JWT。
+
+Header name输入Authorization。
+
+Failed validation error message输入Unauthorized. Access token is missing or invalid.
+
+点击Add claim，name输入aud。再点击Add value，Values输入前述记录下的Azure AD中注册的后端应用的client ID.
+
+点击 Add Open ID URL，输入前述准备好的Open ID URL。点击最下面的Save按钮保存。
+
+![Graphical user interface, text, application, email Description automatically generated](../assets/img/20230120_Azure_AD_APIM_06.png)
+
+到此为API启用OAuth 2.0 验证配置完成。现在我们直接访问这个API，返回的是验证失败的错误了。
+```bash
+curl https://snowpeak.azure-api.cn/contonso/name
+
+{ &quot;statusCode&quot;: 401, &quot;message&quot;: &quot;Unauthorized. Access token is missing or invalid.&quot; }
+</code></pre> <h2>验证测试</h2><h3>使用Azure AD中的客户端应用获取访问token</h3><p>我们使用OAuth 2.0的标准流程，组织请求。使用前述Azure AD 的Tenant ID 组织目标地址。使用Azure全球区域时，目标地址是</p> <pre><code>https://login.microsoftonline.com/{Tenant-ID}/oauth2/v2.0/token
+</code></pre> <p>使用Azure 中国区域时，目标地址是</p> <pre><code>https://login.partner.microsoftonline.cn/{Tenant-ID}/oauth2/v2.0/token
+</code></pre> <p>参数说明如下：</p><table><thead><tr><th>参数名</th><th>参数值</th></tr></thead><tbody><tr><td>grant_type</td><td>client_credentials</td></tr><tr><td>client_id</td><td>前述客户端应用的Application (client) ID，如6bfe51f7-ea34-4096-aa7c-7e8df1043bbd</td></tr><tr><td>client_secret</td><td>前述客户端应用的密钥，如Lz36Zrilxa~01234567890#ABCDEFGH</td></tr><tr><td>Scope</td><td>以后端应用ID按 {backend-application-Application-ID}/.default 格式组织，如95ac855d-724d-4bf7-95b1-93244f4e2e5b/.default</td></tr></tbody></table><p>组织好请求地址和参数后，我们以curl发送请求，并得到响应，注意再加一个 <code>Content-Type: application/x-www-form-urlencoded</code> 的请求头。</p> <pre><code class="language-bash">curl -X POST -H &quot;Content-Type: application/x-www-form-urlencoded&quot; -d
+'client_id=6bfe51f7-ea34-4096-aa7c-7e8df1043bbd&amp;client_secret=Lz36Zrilxa~pB3d6LAewX~33~6rWREFLC.&amp;scope=95ac855d-724d-4bf7-95b1-93244f4e2e5b/.default&amp;grant_type=client_credentials'
+'https://login.partner.microsoftonline.cn/78c60b1a-3a93-4e0e-99ad-00dc772cfb6f/oauth2/v2.0/token'
+
+{&quot;token_type&quot;:&quot;Bearer&quot;,&quot;expires_in&quot;:3599,&quot;ext_expires_in&quot;:3599,&quot;access_token&quot;:&quot;eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImtpZCI6Il9DSkFPdHlzWVZtNXhjMVlvSzBvUTdxeUJDUSJ9.eyJhdWQiOiI5NWFj......&quot;}
+</code></pre> <p>浏览器打开<a href="https://jwt.ms/">https://jwt.ms/</a>，我们把返回的access_token解析看一下。</p><p><img alt="Graphical user interface, text, application Description automatically generated" src="../assets/img/20230120_Azure_AD_APIM_07.png"></p><p>可以看到解析出详细的token信息，其中 iss 就是token发布者的URL。这就是前面为后端应用设置accessTokenAcceptedVersion为2的效果。</p><p>最后我们添加请求头，再访问已经加上验证的API。</p> <pre><code class="language-bash">curl -H 'Authorization: Bearer
+eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzIlvSzBvUTdxeUJDUSJ9.eyJhdWQiOiI......'
+'https://snowpeak.azure-api.cn/contonso/name?name=test'
+
+{&quot;message&quot;: &quot;Hello, test! Welcome to Azure Function!&quot;, &quot;timestamp&quot;: &quot;2022-09-05, 07:50:57&quot;}
+</code></pre> <p>可以看到通过通过验证，并返回了正常的结果。</p></main><footer class="footer"><div class="container"><div class="footer-content"><div class="footer-section"><h3><i class="fas fa-snowflake"></i> Snowpeak</h3><p>分享AI和云计算技术的最新动态与实践经验，以及其它有趣的话题。</p><div class="social-links"><div class="social-platforms"><a href="https://github.com/xfsnow" target="_blank" class="social-link"><i class="fab fa-github"></i></a><a href="https://snowpeak.blog.csdn.net/" target="_blank" class="social-link"><i class="fas fa-blog"></i></a><a href="https://space.bilibili.com/701839928" target="_blank" class="social-link"><i class="fab fa-bilibili"></i></a><a href="https://www.linkedin.com/in/snowpeak" target="_blank" class="social-link"><i class="fab fa-linkedin"></i></a></div><div class="wechat-section"><div class="wechat-info"><span class="wechat-label">微信公众号</span><span class="wechat-name">技术温暖生活</span></div><img src="/assets/img/techwarm.jpg" alt="技术温暖生活" class="wechat-qr"></div></div></div><div class="footer-section"><h4>快速链接</h4><ul><li><a href="/#articles">文章</a></li><li><a href="/#tools">工具</a></li><li><a href="https://docs.github.com/en/pages" target="_blank">GitHub Pages</a></li></ul></div><div class="footer-section"><h4>技术栈</h4><ul><li>Python</li><li>GitHub Copilot</li><li>Claude Sonnet 4</li><li>HTML/CSS/JS</li><li>响应式设计</li></ul></div></div><div class="footer-bottom"><p>Copyright &copy; 2013-<script>document.write((new Date()).getFullYear());</script> 雪峰博客。运行在 GitHub Pages 上。</p></div></div></footer><script src="/zh/index.js"></script><script src="/assets/js/blog.js"></script><script>hljs.highlightAll();</script></body></html>
