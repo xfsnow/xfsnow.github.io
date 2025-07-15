@@ -25,14 +25,13 @@ generated](../assets/img/20230120_Azure_AD_APIM_01.png)
 简化起见，我们把这个API设置成不要求订阅key，即在Settings中不勾选Subscription required。这样现在这个API就是没有任何限制，可以直接访问。就像：
 ```bash
 curl https://contonso.azure-api.cn/contonso/name?name=test
-
 {"message": "Hello, test! Welcome to Azure Function!", "timestamp": "2022-09-04, 14:35:34"}
 ```
 下面我们会为这个API加上OAuth 2.0的token，把它保护起来。
 
 ## Azure AD部署
 
-## 为后端API注册Azure AD应用
+### 为后端API注册Azure AD应用
 
 在Azure控制台进入Azure Active Directory, 选择 App Registrations。在右侧点击New registration。输入一个有意义的名字，比如这里我们命名为 name-backend。Redirect URI选择Web，其它保持默认，点击Register按钮。
 
@@ -77,7 +76,7 @@ Do you want to enable this app role? 勾选。
 
 这步很重要，因为API Management中的JWT仅支持 2.0 版的格式。如果不修改此值，调用Azure AD接口获取的JWT token中解析出来的token 发布者URL格式不对，后面验证就不能通过。
 
-## 为客户端注册Azure AD应用
+### 为客户端注册Azure AD应用
 
 在Azure控制台进入Azure Active Directory, 选择 App Registrations。在右侧点击New registration。输入一个有意义的名字，比如这里我们命名为 name-client。Redirect URI选择Web，其它保持默认，点击Register按钮。
 
@@ -93,7 +92,7 @@ Application (client) ID: 6bfe51f7-ea34-4096-aa7c-7e8df1043bbd
 
 ![Graphical user interface, text, application, email Description automatically generated](../assets/img/20230120_Azure_AD_APIM_13.png)
 
-## 在Azure AD中为应用赋权
+### 在Azure AD中为应用赋权
 
 在Azure AD的App registrations中选择刚刚创建的客户端的应用，左侧导航Manage段下点击API permissions。右侧窗格点击Add a permission。选中前面我们创建的后端应用name-backend。
 
@@ -144,7 +143,6 @@ Failed validation error message输入Unauthorized. Access token is missing or in
 到此为API启用OAuth 2.0 验证配置完成。现在我们直接访问这个API，返回的是验证失败的错误了。
 ```bash
 curl https://snowpeak.azure-api.cn/contonso/name
-
 { "statusCode": 401, "message": "Unauthorized. Access token is missing or invalid." }
 ```
 ## 验证测试

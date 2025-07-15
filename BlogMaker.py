@@ -522,8 +522,8 @@ class BlogMaker:
         # 生成首页 HTML
         self.make_home()
 
-        # # 生成关于页面
-        # self.make_about()
+        # 生成关于页面
+        self.make_about()
 
         # 生成文章页面
         self.make_article()

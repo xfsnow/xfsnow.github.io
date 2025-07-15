@@ -960,6 +960,33 @@ body {
     border-color: var(--primary-color);
 }
 
+a.icp_beian {
+    color: #94a3b8;
+	background-repeat: no-repeat;
+	background-position: left center;
+    padding-left: 3ex;
+	margin-left: 1ex;
+	margin-top: 1ex;
+	margin-bottom: 1ex;
+	display: inline-block;
+	height: 5ex;
+	line-height: 5ex;
+	background-image: url(icp_beian.png);
+}
+a.gongan_beian {
+    color: #94a3b8;
+	background-repeat: no-repeat;
+	background-position: left center;
+    padding-left: 3ex;
+	margin-left: 1ex;
+	margin-top: 1ex;
+	margin-bottom: 1ex;
+	display: inline-block;
+	height: 5ex;
+	line-height: 5ex;
+	background-image: url(gongan_beian.png);
+}
+
 /* 响应式设计 */
 @media (max-width: 768px) {
     .nav-menu {

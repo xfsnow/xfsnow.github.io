@@ -24,7 +24,6 @@ For simplicity, we set this API to not require a subscription key, i.e., uncheck
 
 ```bash
 curl https://contonso.azure-api.cn/contonso/name?name=test
-
 {"message": "Hello, test! Welcome to Azure Function!", "timestamp": "2022-09-04, 14:35:34"}
 ```
 
@@ -32,7 +31,7 @@ Below we will add OAuth 2.0 token to this API to protect it.
 
 ## Azure AD Deployment
 
-## Register Azure AD Application for Backend API
+### Register Azure AD Application for Backend API
 
 In the Azure console, go to Azure Active Directory and select App Registrations. Click "New registration" on the right side. Enter a meaningful name, for example, we name it "name-backend" here. Select Web for Redirect URI, keep other defaults, and click the Register button.
 
@@ -79,7 +78,7 @@ In the left navigation menu under Manage, click Manifest, find accessTokenAccept
 
 This step is very important because JWT in API Management only supports version 2.0 format. If this value is not modified, the token publisher URL format parsed from the JWT token obtained by calling the Azure AD interface will be incorrect, and subsequent verification will not pass.
 
-## Register Azure AD Application for Client
+### Register Azure AD Application for Client
 
 In the Azure console, go to Azure Active Directory and select App Registrations. Click "New registration" on the right side. Enter a meaningful name, for example, we name it "name-client" here. Select Web for Redirect URI, keep other defaults, and click the Register button.
 
@@ -96,7 +95,7 @@ When the addition is complete, you must copy and save the secret value when it's
 
 ![](../assets/img/20230120_Azure_AD_APIM_13.png)
 
-## Grant Permissions to Applications in Azure AD
+### Grant Permissions to Applications in Azure AD
 
 In Azure AD's App registrations, select the client application just created, and click "API permissions" under the Manage section in the left navigation. In the right pane, click "Add a permission". Select the backend application "name-backend" we created earlier.
 
@@ -110,7 +109,7 @@ This will return to the Configured permissions list, and the Status column will 
 
 ![](../assets/img/20230120_Azure_AD_APIM_02.png)
 
-Click "Grant admin consent for <your-tenant-name>", click Yes in the popup. Then the Status column should show a green checkmark.
+Click `Grant admin consent for <your-tenant-name>`, click Yes in the popup. Then the Status column should show a green checkmark.
 
 ![](../assets/img/20230120_Azure_AD_APIM_03.png)
 
@@ -152,7 +151,6 @@ At this point, enabling OAuth 2.0 authentication for the API is complete. Now wh
 
 ```bash
 curl https://snowpeak.azure-api.cn/contonso/name
-
 { "statusCode": 401, "message": "Unauthorized. Access token is missing or invalid." }
 ```
 
@@ -203,7 +201,6 @@ Finally, we add the request header and access the API that now has authenticatio
 curl -H 'Authorization: Bearer
 eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzIlvSzBvUTdxeUJDUSJ9.eyJhdWQiOiI......'
 'https://snowpeak.azure-api.cn/contonso/name?name=test'
-
 {"message": "Hello, test! Welcome to Azure Function!", "timestamp": "2022-09-05, 07:50:57"}
 ```
 
