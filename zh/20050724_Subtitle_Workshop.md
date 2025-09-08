@@ -4,7 +4,7 @@
 
 简介: 官方站点：www.urusoft.net体积：1 MB注册：免费软件运行系统：Windows 9x, ME, NT, 2000, XP 安装需要：需要播放你要做的影片所需的解码器。 官方站点下载本地下载 这是雪峰提取压缩的程序文件，不用安装直接解压后即可运行，界面已经变成中文。安装完成后第一次运行，可 Settings > Language > Chinese Simpli
 
-分类: __软件__
+分类: __软件工具__
 
 原文链接: [https://snowpeak.blog.csdn.net/article/details/433102](https://snowpeak.blog.csdn.net/article/details/433102)
 

@@ -1,8 +1,8 @@
 # Main Steps and Tools to Extract Subtitle from DVD
 
-发布时间: *2005-07-18 18:19:00*
+Published: *2005-07-18 18:19:00*
 
-分类: __工具__
+Category: __Tools__
 
 ---------
 

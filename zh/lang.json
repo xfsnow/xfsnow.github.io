@@ -30,7 +30,7 @@
         "AI": "AI技术",
         "Azure": "Azure云",
         "Development": "综合开发",
-        "Tools": "工具",
+        "Tools": "软件工具",
         "Cloud Computing": "云计算",
         "Backend": "服务器端技术",
         "Database": "数据库",
@@ -39,7 +39,6 @@
         "System": "系统管理",
         "Network": "网络技术",
         "Mobile": "移动开发",
-        "Software": "软件",
         "Programming": "编程语言",
         "Framework": "框架技术"
     }

@@ -16,8 +16,6 @@ class Blog {
 
     init() {
         this.initNavigation();
-        this.initScrollEffects();
-        this.initSmoothScroll();
         this.bindSearchEvents();
     }
 
@@ -48,58 +46,6 @@ class Blog {
                 }
             });
         }
-
-        // 导航栏滚动效果
-        window.addEventListener('scroll', () => {
-            const navbar = document.querySelector('.navbar');
-            if (window.scrollY > 100) {
-                navbar.style.background = 'rgba(255, 255, 255, 0.95)';
-                navbar.style.backdropFilter = 'blur(10px)';
-            } else {
-                navbar.style.background = 'var(--bg-primary)';
-                navbar.style.backdropFilter = 'none';
-            }
-        });
-    }
-
-    initScrollEffects() {
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                }
-            });
-        }, observerOptions);
-
-        // 观察需要动画的元素
-        const animateElements = document.querySelectorAll(
-            '.article-card, .tool-card, .hero-content, .search-container'
-        );
-
-        animateElements.forEach(el => {
-            el.classList.add('fade-in');
-            observer.observe(el);
-        });
-    }
-
-    initSmoothScroll() {
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
-            });
-        });
     }
 
     // 搜索相关方法
