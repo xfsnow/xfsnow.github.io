@@ -73,7 +73,7 @@ function updatePreview(type) {
         // 重新渲染MathJax
         safeMathJaxRender(preview);
     } else {
-        preview.innerHTML = type === 'content' ? '在此输入内容后查看预览' : '在此输入答案后查看预览';
+        preview.innerHTML = '';
     }
 }
 

@@ -306,28 +306,20 @@ line-height: 1.5;
 }
 
 /* 预览区域 */
-.preview-area {
-border: 1px solid #e5e7eb;
-border-radius: 8px;
-padding: 20px;
-margin-top: 15px;
-background: #f9fafb;
-min-height: 60px;
-}
-
 .preview-title {
 font-size: 14px;
 font-weight: 500;
 color: #6b7280;
-margin-bottom: 10px;
+margin: 15px 0 10px 0;
 }
 
 .preview-content {
 border: 1px solid #d1d5db;
 border-radius: 6px;
 padding: 15px;
-background: white;
+background: #f9fafb;
 min-height: 50px;
+margin-bottom: 15px;
 }
 
 /* 打印样式 */
@@ -644,19 +636,15 @@ line-height: 1.4;
 <div class="input-group">
 <label for="questionContent">题目内容（支持LaTeX）：</label>
 <textarea id="questionContent" placeholder="输入题目内容，支持多行和LaTeX公式&#10;例如：\\(\\alpha = 40^{\\circ}\\)&#10;多行内容用回车键换行" oninput="updatePreview('content')"></textarea>
-<div class="preview-area">
 <div class="preview-title">题目预览：</div>
-<div class="preview-content" id="contentPreview">在此输入内容后查看预览</div>
-</div>
+<div class="preview-content" id="contentPreview"></div>
 </div>
 
 <div class="input-group">
 <label for="questionAnswer">题目答案（支持LaTeX）：</label>
 <textarea id="questionAnswer" placeholder="输入详细解答过程，支持多行&#10;可以使用LaTeX数学公式&#10;用空行分段，用回车键换行" oninput="updatePreview('answer')"></textarea>
-<div class="preview-area">
 <div class="preview-title">答案预览：</div>
-<div class="preview-content" id="answerPreview">在此输入答案后查看预览</div>
-</div>
+<div class="preview-content" id="answerPreview"></div>
 </div>
 
 <div style="text-align: center; margin-top: 25px;">
