@@ -36,9 +36,9 @@
     },
     {
         "id": "maths",
-        "title": "数学计算演练",
-        "description": "在线数学计算题库，支持多种题型",
-        "url": "/maths.htm",
+        "title": "数学题库",
+        "description": "使用 LaTex 记录和展示数学题目",
+        "url": "/math_question/math_question.htm",
         "icon": "fas fa-calculator"
     }
 ]

@@ -36,9 +36,9 @@
         },
         {
             "id": "maths",
-            "title": "Math Calculation Practice",
-            "description": "Online math problem bank supporting multiple question types",
-            "url": "../maths.htm",
+            "title": "Maths Questions Bank",
+            "description": "Records and displays maths questions using LaTex",
+            "url": "../math_question/math_question.htm",
             "icon": "fas fa-calculator"
         }
 ]

@@ -523,13 +523,13 @@ class BlogMaker:
         self.make_home()
 
         # 生成关于页面
-        self.make_about()
+        # self.make_about()
 
         # 生成文章页面
-        self.make_article()
+        # self.make_article()
 
         # 生成分页列表
-        self.make_pager()
+        # self.make_pager()
 
         # docx 转 Markdown
         # self.word2markdown()
