@@ -8,6 +8,281 @@
     <meta name="description" content="专注于AI、云计算、GitHub Copilot等前沿技术的分享与探讨">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.7.2/css/all.css">
+    <!-- MathJax for LaTeX rendering -->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>
+        window.MathJax = {
+            tex: {
+                inlineMath: [['\\(', '\\)'], ['$', '$']],
+                displayMath: [['\\[', '\\]'], ['$$', '$$']],
+                processEscapes: true,
+                processEnvironments: true
+            },
+            options: {
+                skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+                ignoreHtmlClass: 'tex2jax_ignore'
+            }
+        };
+    </script>
+    <style>
+        .math-title {
+            color: #2563eb;
+            border-bottom: 2px solid #2563eb;
+            padding-bottom: 10px;
+            margin-top: 20px;
+        }
+        .math-section {
+            color: #1e40af;
+            margin-top: 25px;
+            margin-bottom: 15px;
+        }
+        .math-subsection {
+            color: #3730a3;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+        .math-step {
+            margin: 15px 0;
+            padding: 10px;
+            background-color: #f8fafc;
+            border-left: 4px solid #3b82f6;
+            border-radius: 4px;
+        }
+        #latexInput {
+            width: 100%;
+            max-width: 800px;
+            height: 200px;
+            padding: 10px;
+            border: 1px solid #d1d5db;
+            border-radius: 6px;
+            font-family: 'Consolas', 'Monaco', monospace;
+            font-size: 14px;
+            line-height: 1.5;
+            resize: vertical;
+        }
+        #convertButton {
+            margin: 10px 0;
+            padding: 8px 20px;
+            background-color: #3b82f6;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+        #convertButton:hover {
+            background-color: #2563eb;
+        }
+        #htmlOutput {
+            border: 1px solid #d1d5db;
+            padding: 20px;
+            margin-top: 10px;
+            border-radius: 6px;
+            background-color: #ffffff;
+            max-width: 800px;
+            line-height: 1.6;
+        }
+        #htmlOutput p {
+            margin: 10px 0;
+        }
+        #htmlOutput .MathJax {
+            display: inline-block;
+        }
+        
+        /* 数学题库系统样式 */
+        .math-bank-container {
+            max-width: 900px;
+            margin: 30px auto;
+            padding: 20px;
+        }
+        
+        .question-card {
+            border: 1px solid #e5e7eb;
+            border-radius: 8px;
+            margin: 20px 0;
+            background: white;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        .question-header {
+            background: #f8fafc;
+            padding: 15px 20px;
+            border-bottom: 1px solid #e5e7eb;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .question-title {
+            font-weight: bold;
+            color: #374151;
+            margin: 0;
+        }
+        
+        .question-meta {
+            font-size: 12px;
+            color: #6b7280;
+        }
+        
+        .question-content {
+            padding: 20px;
+        }
+        
+        .question-body {
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+        
+        .answer-section {
+            border-top: 1px solid #f3f4f6;
+            padding-top: 15px;
+            margin-top: 15px;
+            display: none;
+        }
+        
+        .answer-section.show {
+            display: block;
+        }
+        
+        .answer-space {
+            min-height: 100px;
+            border: 1px dashed #d1d5db;
+            border-radius: 4px;
+            background: #fafafa;
+            margin: 15px 0;
+            position: relative;
+        }
+        
+        .answer-space::after {
+            content: "答题区域";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: #9ca3af;
+            font-size: 14px;
+        }
+        
+        .control-buttons {
+            text-align: center;
+            margin: 20px 0;
+        }
+        
+        .btn {
+            padding: 8px 16px;
+            margin: 0 5px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 14px;
+            transition: background-color 0.3s;
+        }
+        
+        .btn-primary {
+            background-color: #3b82f6;
+            color: white;
+        }
+        
+        .btn-primary:hover {
+            background-color: #2563eb;
+        }
+        
+        .btn-success {
+            background-color: #10b981;
+            color: white;
+        }
+        
+        .btn-success:hover {
+            background-color: #059669;
+        }
+        
+        .btn-warning {
+            background-color: #f59e0b;
+            color: white;
+        }
+        
+        .btn-warning:hover {
+            background-color: #d97706;
+        }
+        
+        .btn-danger {
+            background-color: #ef4444;
+            color: white;
+        }
+        
+        .btn-danger:hover {
+            background-color: #dc2626;
+        }
+        
+        .question-input-area {
+            background: #f9fafb;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+        
+        .input-group {
+            margin: 15px 0;
+        }
+        
+        .input-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: 500;
+            color: #374151;
+        }
+        
+        .input-group input,
+        .input-group textarea,
+        .input-group select {
+            width: 100%;
+            padding: 8px 12px;
+            border: 1px solid #d1d5db;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+        
+        .input-group textarea {
+            resize: vertical;
+            min-height: 80px;
+            font-family: 'Consolas', 'Monaco', monospace;
+        }
+        
+        /* 打印样式 */
+        @media print {
+            .navbar, .control-buttons, .question-input-area {
+                display: none !important;
+            }
+            
+            .answer-section {
+                display: none !important;
+            }
+            
+            .answer-space {
+                min-height: 150px;
+                background: white !important;
+                border: 1px solid #000 !important;
+            }
+            
+            .answer-space::after {
+                display: none;
+            }
+            
+            .question-card {
+                break-inside: avoid;
+                page-break-inside: avoid;
+                margin: 20px 0;
+                box-shadow: none;
+                border: 1px solid #000;
+            }
+            
+            body {
+                font-size: 12pt;
+                line-height: 1.4;
+            }
+        }
+    </style>
 </head>
 <body>
     <nav class="navbar">
@@ -62,220 +337,549 @@
         </script>
     </div>
 <div>
-<h2>视频播放器</h2>
-<div class="video-player-container" style="max-width: 800px; margin: 20px auto; padding: 20px; border: 1px solid #ddd; border-radius: 8px;">
-    <!-- 文件选择器 -->
-    <div class="file-input-container" style="margin-bottom: 20px; text-align: center;">
-        <label for="videoFileInput" style="display: inline-block; padding: 10px 20px; background-color: #007bff; color: white; border-radius: 5px; cursor: pointer; transition: background-color 0.3s;">
-            <i class="fas fa-upload"></i> 选择视频文件
-        </label>
-        <input type="file" id="videoFileInput" accept="video/*" style="display: none;">
-        <div id="fileName" style="margin-top: 10px; color: #666; font-size: 14px;"></div>
-    </div>
+<h2>LaTex转HTML</h2>
+<div style="margin-bottom: 10px;">
+    <button id="loadExampleButton" style="padding: 6px 12px; background-color: #10b981; color: white; border: none; border-radius: 4px; cursor: pointer; margin-right: 10px;">
+        加载示例
+    </button>
+    <button id="clearButton" style="padding: 6px 12px; background-color: #ef4444; color: white; border: none; border-radius: 4px; cursor: pointer;">
+        清空
+    </button>
+</div>
+<textarea id="latexInput" rows="4" cols="50" placeholder="在此输入包含LaTeX数学公式的文本，支持Markdown格式"></textarea>
+<button id="convertButton">转换</button>
+<div id="htmlOutput" style="border: 1px solid #ddd; padding: 10px; margin-top: 10px;"></div>
+<script>
+    document.getElementById('convertButton').addEventListener('click', function() {
+        var latexCode = document.getElementById('latexInput').value;
+        var htmlOutput = document.getElementById('htmlOutput');
+        
+        // 转换LaTeX到HTML
+        htmlOutput.innerHTML = convertLatexToHTML(latexCode);
+        
+        // 重新渲染MathJax
+        if (window.MathJax) {
+            MathJax.typesetPromise([htmlOutput]).then(() => {
+                console.log('MathJax rendering completed');
+            }).catch((err) => {
+                console.error('MathJax rendering error:', err);
+            });
+        }
+    });
+
+    // 加载示例按钮
+    document.getElementById('loadExampleButton').addEventListener('click', function() {
+        var exampleText = `# 💡解答
+## 分析
+本题主要涉及三角形全等的判定与性质以及三角形内角和定理。通过证明三角形全等得到对应角相等，再利用三角形内角和定理求出所求角的度数。
+
+## 详解
+1. **证明\\(\\triangle CAD\\cong\\triangle EAB\\)**
+
+因为\\(\\angle BAD = \\angle CAE=\\alpha\\)，所以\\(\\angle BAD+\\angle BAC=\\angle CAE+\\angle BAC\\)，即\\(\\angle CAD=\\angle EAB\\)。
+
+又因为\\(AB = AD\\)，\\(AC = AE\\)，根据"边角边"（SAS）判定定理，可得\\(\\triangle CAD\\cong\\triangle EAB\\)。
+
+2. **求\\(\\angle DFE\\)的度数（当\\(\\alpha = 40^{\\circ}\\)时）**
+
+由\\(\\triangle CAD\\cong\\triangle EAB\\)，可得\\(\\angle ADC=\\angle ABE\\)。
+
+在\\(\\triangle AOD\\)和\\(\\triangle BOF\\)中（设\\(AD\\)与\\(BE\\)交于点\\(O\\)），\\(\\angle AOD=\\angle BOF\\)（对顶角相等）。
+
+根据三角形内角和定理，\\(\\angle DFE = 180^{\\circ}-(\\angle FDB+\\angle FBD)\\)。
+
+因为\\(\\angle ADC=\\angle ABE\\)，所以\\(\\angle DFE = 180^{\\circ}-(\\angle ADB+\\angle ABD)\\)。
+
+在\\(\\triangle ABD\\)中，\\(AB = AD\\)，\\(\\angle BAD = 40^{\\circ}\\)，则\\(\\angle ADB=\\angle ABD=\\frac{1}{2}(180^{\\circ}-\\angle BAD)=\\frac{1}{2}(180 - 40)^{\\circ}=70^{\\circ}\\)。
+
+所以\\(\\angle DFE=180^{\\circ}-70^{\\circ}-70^{\\circ}=40^{\\circ}\\)。
+
+3. **求\\(\\angle DFE\\)的度数（用含\\(\\alpha\\)的式子表示）**
+
+同样由\\(\\triangle CAD\\cong\\triangle EAB\\)，\\(\\angle ADC=\\angle ABE\\)。
+
+在\\(\\triangle AOD\\)和\\(\\triangle BOF\\)中，\\(\\angle AOD=\\angle BOF\\)。
+
+\\(\\angle DFE = 180^{\\circ}-(\\angle FDB+\\angle FBD)=180^{\\circ}-(\\angle ADB+\\angle ABD)\\)。
+
+在\\(\\triangle ABD\\)中，\\(AB = AD\\)，\\(\\angle BAD=\\alpha\\)，则\\(\\angle ADB=\\angle ABD=\\frac{1}{2}(180^{\\circ}-\\angle BAD)=\\frac{1}{2}(180 - \\alpha)^{\\circ}\\)。
+
+所以\\(\\angle DFE = 180^{\\circ}-\\frac{1}{2}(180 - \\alpha)^{\\circ}-\\frac{1}{2}(180 - \\alpha)^{\\circ}=\\alpha\\)。
+
+## 总结
+(1) 当\\(\\alpha = 40^{\\circ}\\)时，\\(\\angle DFE\\)的度数为\\(40^{\\circ}\\)；
+(2) 用含\\(\\alpha\\)的式子表示\\(\\angle DFE\\)的度数为\\(\\alpha\\)。`;
+        
+        document.getElementById('latexInput').value = exampleText;
+    });
+
+    // 清空按钮
+    document.getElementById('clearButton').addEventListener('click', function() {
+        document.getElementById('latexInput').value = '';
+        document.getElementById('htmlOutput').innerHTML = '';
+    });
+
+    function convertLatexToHTML(latex) {
+        // 完善的LaTeX到HTML转换函数
+        let html = latex;
+        
+        // 1. 处理Markdown标题
+        html = html.replace(/^# (.*$)/gm, '<h1>$1</h1>');
+        html = html.replace(/^## (.*$)/gm, '<h2>$1</h2>');
+        html = html.replace(/^### (.*$)/gm, '<h3>$1</h3>');
+        
+        // 2. 处理粗体文字
+        html = html.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
+        
+        // 3. 处理段落 - 将连续的非空行作为段落
+        html = html.replace(/\n\n+/g, '</p><p>');
+        html = '<p>' + html + '</p>';
+        
+        // 4. 处理换行
+        html = html.replace(/\n/g, '<br>');
+        
+        // 5. 清理空段落
+        html = html.replace(/<p><\/p>/g, '');
+        html = html.replace(/<p>\s*<\/p>/g, '');
+        
+        // 6. 处理列表项 - 数字列表
+        html = html.replace(/(\d+)\.\s\*\*(.*?)\*\*/g, '<div class="math-step"><strong>$1. $2</strong></div>');
+        
+        // 7. 处理特殊格式的角度符号
+        html = html.replace(/(\d+)\^\\circ/g, '$1°');
+        
+        // 8. 确保LaTeX数学公式被正确包裹
+        // 处理行内公式 \(...\)
+        html = html.replace(/\\?\\\((.*?)\\?\\\)/g, '\\($1\\)');
+        
+        // 处理显示公式 \[...\]
+        html = html.replace(/\\?\\\[(.*?)\\?\\\]/g, '\\[$1\\]');
+        
+        // 9. 处理一些常见的LaTeX符号替换（作为后备）
+        const latexReplacements = {
+            '\\alpha': 'α',
+            '\\beta': 'β',
+            '\\gamma': 'γ',
+            '\\delta': 'δ',
+            '\\epsilon': 'ε',
+            '\\theta': 'θ',
+            '\\lambda': 'λ',
+            '\\mu': 'μ',
+            '\\pi': 'π',
+            '\\sigma': 'σ',
+            '\\phi': 'φ',
+            '\\omega': 'ω',
+            '\\Delta': 'Δ',
+            '\\Gamma': 'Γ',
+            '\\Lambda': 'Λ',
+            '\\Omega': 'Ω',
+            '\\Phi': 'Φ',
+            '\\Psi': 'Ψ',
+            '\\infty': '∞',
+            '\\pm': '±',
+            '\\mp': '∓',
+            '\\times': '×',
+            '\\div': '÷',
+            '\\leq': '≤',
+            '\\geq': '≥',
+            '\\neq': '≠',
+            '\\approx': '≈',
+            '\\equiv': '≡',
+            '\\subset': '⊂',
+            '\\supset': '⊃',
+            '\\subseteq': '⊆',
+            '\\supseteq': '⊇',
+            '\\in': '∈',
+            '\\notin': '∉',
+            '\\cup': '∪',
+            '\\cap': '∩',
+            '\\emptyset': '∅',
+            '\\forall': '∀',
+            '\\exists': '∃',
+            '\\nabla': '∇',
+            '\\partial': '∂',
+            '\\sum': '∑',
+            '\\prod': '∏',
+            '\\int': '∫',
+            '\\oint': '∮',
+            '\\sqrt': '√',
+            '\\cdot': '·',
+            '\\bullet': '•',
+            '\\circ': '°'
+        };
+        
+        // 应用符号替换（仅在非公式区域）
+        for (let latex in latexReplacements) {
+            // 避免替换已经在公式环境中的内容
+            html = html.replace(new RegExp(latex.replace(/\\/g, '\\\\'), 'g'), function(match, offset, string) {
+                // 检查是否在数学公式环境中
+                let beforeMatch = string.substring(0, offset);
+                let afterMatch = string.substring(offset);
+                
+                // 简单检查：如果在 \( ... \) 或 \[ ... \] 中，不替换
+                let inInlineMath = (beforeMatch.lastIndexOf('\\(') > beforeMatch.lastIndexOf('\\)'));
+                let inDisplayMath = (beforeMatch.lastIndexOf('\\[') > beforeMatch.lastIndexOf('\\]'));
+                
+                if (inInlineMath || inDisplayMath) {
+                    return match; // 保持原样
+                }
+                
+                return latexReplacements[latex];
+            });
+        }
+        
+        // 10. 添加数学样式类
+        html = html.replace(/<h1>/g, '<h1 class="math-title">');
+        html = html.replace(/<h2>/g, '<h2 class="math-section">');
+        html = html.replace(/<h3>/g, '<h3 class="math-subsection">');
+        
+        return html;
+    }
+</script>
+
+<!-- 数学题库系统 -->
+<div class="math-bank-container">
+    <h2>📚 数学题库系统</h2>
     
-    <!-- 视频播放器 -->
-    <div class="video-wrapper" style="position: relative; width: 100%; max-width: 100%; background: #000; border-radius: 5px; overflow: hidden;">
-        <video id="videoPlayer" controls style="width: 100%; height: auto; display: none;">
-            您的浏览器不支持 HTML5 视频播放。
-        </video>
-        <div id="videoPlaceholder" style="width: 100%; height: 300px; background: linear-gradient(45deg, #f0f0f0 25%, transparent 25%), linear-gradient(-45deg, #f0f0f0 25%, transparent 25%), linear-gradient(45deg, transparent 75%, #f0f0f0 75%), linear-gradient(-45deg, transparent 75%, #f0f0f0 75%); background-size: 20px 20px; background-position: 0 0, 0 10px, 10px -10px, -10px 0px; display: flex; align-items: center; justify-content: center; color: #999; font-size: 18px; border-radius: 5px;">
-            <div style="text-align: center;">
-                <i class="fas fa-play-circle" style="font-size: 48px; margin-bottom: 10px; display: block;"></i>
-                请选择视频文件开始播放
-            </div>
+    <!-- 控制按钮 -->
+    <div class="control-buttons">
+        <button class="btn btn-primary" onclick="toggleAnswers()">
+            <i class="fas fa-eye"></i> 切换答案显示
+        </button>
+        <button class="btn btn-success" onclick="printQuestions()">
+            <i class="fas fa-print"></i> 打印题目
+        </button>
+        <button class="btn btn-warning" onclick="toggleAddQuestion()">
+            <i class="fas fa-plus"></i> 添加题目
+        </button>
+        <button class="btn btn-danger" onclick="clearAllQuestions()">
+            <i class="fas fa-trash"></i> 清空题库
+        </button>
+        <button class="btn btn-primary" onclick="loadSampleQuestions()">
+            <i class="fas fa-download"></i> 加载示例题目
+        </button>
+    </div>
+
+    <!-- 添加题目区域 -->
+    <div id="addQuestionArea" class="question-input-area" style="display: none;">
+        <h3>添加新题目</h3>
+        <div class="input-group">
+            <label for="questionTitle">题目标题：</label>
+            <input type="text" id="questionTitle" placeholder="例如：三角形全等证明题">
+        </div>
+        <div class="input-group">
+            <label for="questionCategory">题目分类：</label>
+            <select id="questionCategory">
+                <option value="geometry">几何</option>
+                <option value="algebra">代数</option>
+                <option value="calculus">微积分</option>
+                <option value="probability">概率统计</option>
+                <option value="other">其他</option>
+            </select>
+        </div>
+        <div class="input-group">
+            <label for="questionDifficulty">难度等级：</label>
+            <select id="questionDifficulty">
+                <option value="easy">简单</option>
+                <option value="medium">中等</option>
+                <option value="hard">困难</option>
+            </select>
+        </div>
+        <div class="input-group">
+            <label for="questionContent">题目内容（支持LaTeX）：</label>
+            <textarea id="questionContent" placeholder="输入题目内容，可以使用LaTeX公式，例如：\\(\\alpha = 40^{\\circ}\\)"></textarea>
+        </div>
+        <div class="input-group">
+            <label for="questionAnswer">题目答案（支持LaTeX）：</label>
+            <textarea id="questionAnswer" placeholder="输入详细解答过程"></textarea>
+        </div>
+        <div class="control-buttons">
+            <button class="btn btn-success" onclick="addQuestion()">
+                <i class="fas fa-save"></i> 保存题目
+            </button>
+            <button class="btn btn-danger" onclick="cancelAddQuestion()">
+                <i class="fas fa-times"></i> 取消
+            </button>
         </div>
     </div>
-    
-    <!-- 播放控制信息 -->
-    <div id="videoInfo" style="margin-top: 15px; padding: 10px; background-color: #f8f9fa; border-radius: 5px; display: none;">
-        <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px;">
-            <div>
-                <strong>文件名:</strong> <span id="videoFileName">-</span><br>
-                <strong>时长:</strong> <span id="videoDuration">-</span>
-            </div>
-            <div>
-                <strong>分辨率:</strong> <span id="videoResolution">-</span><br>
-                <strong>文件大小:</strong> <span id="videoFileSize">-</span>
-            </div>
-        </div>
+
+    <!-- 题目列表容器 -->
+    <div id="questionsContainer">
+        <!-- 题目将动态插入到这里 -->
     </div>
 </div>
 
 <script>
+// 数学题库数据存储
+let mathQuestions = [];
+let showAnswers = false;
+
+// 从localStorage加载题目
+function loadQuestions() {
+    const saved = localStorage.getItem('mathQuestions');
+    if (saved) {
+        mathQuestions = JSON.parse(saved);
+        renderQuestions();
+    }
+}
+
+// 保存题目到localStorage
+function saveQuestions() {
+    localStorage.setItem('mathQuestions', JSON.stringify(mathQuestions));
+}
+
+// 渲染所有题目
+function renderQuestions() {
+    const container = document.getElementById('questionsContainer');
+    container.innerHTML = '';
+    
+    mathQuestions.forEach((question, index) => {
+        const questionCard = createQuestionCard(question, index);
+        container.appendChild(questionCard);
+    });
+    
+    // 重新渲染MathJax
+    if (window.MathJax) {
+        MathJax.typesetPromise([container]);
+    }
+}
+
+// 创建题目卡片
+function createQuestionCard(question, index) {
+    const card = document.createElement('div');
+    card.className = 'question-card';
+    card.innerHTML = `
+        <div class="question-header">
+            <div>
+                <h4 class="question-title">${question.title}</h4>
+                <div class="question-meta">
+                    分类: ${getCategoryName(question.category)} | 
+                    难度: ${getDifficultyName(question.difficulty)} | 
+                    创建时间: ${question.createTime}
+                </div>
+            </div>
+            <button class="btn btn-danger" onclick="deleteQuestion(${index})" style="font-size: 12px; padding: 4px 8px;">
+                <i class="fas fa-trash"></i>
+            </button>
+        </div>
+        <div class="question-content">
+            <div class="question-body">
+                ${convertLatexToHTML(question.content)}
+            </div>
+            <div class="answer-space"></div>
+            <div class="answer-section ${showAnswers ? 'show' : ''}">
+                <h5 style="color: #059669; margin-bottom: 10px;">
+                    <i class="fas fa-lightbulb"></i> 参考答案：
+                </h5>
+                ${convertLatexToHTML(question.answer)}
+            </div>
+        </div>
+    `;
+    return card;
+}
+
+// 获取分类名称
+function getCategoryName(category) {
+    const names = {
+        'geometry': '几何',
+        'algebra': '代数', 
+        'calculus': '微积分',
+        'probability': '概率统计',
+        'other': '其他'
+    };
+    return names[category] || category;
+}
+
+// 获取难度名称
+function getDifficultyName(difficulty) {
+    const names = {
+        'easy': '简单',
+        'medium': '中等',
+        'hard': '困难'
+    };
+    return names[difficulty] || difficulty;
+}
+
+// 切换答案显示
+function toggleAnswers() {
+    showAnswers = !showAnswers;
+    const answerSections = document.querySelectorAll('.answer-section');
+    answerSections.forEach(section => {
+        if (showAnswers) {
+            section.classList.add('show');
+        } else {
+            section.classList.remove('show');
+        }
+    });
+}
+
+// 打印题目
+function printQuestions() {
+    window.print();
+}
+
+// 切换添加题目区域
+function toggleAddQuestion() {
+    const area = document.getElementById('addQuestionArea');
+    area.style.display = area.style.display === 'none' ? 'block' : 'none';
+}
+
+// 取消添加题目
+function cancelAddQuestion() {
+    document.getElementById('addQuestionArea').style.display = 'none';
+    clearAddQuestionForm();
+}
+
+// 清空添加题目表单
+function clearAddQuestionForm() {
+    document.getElementById('questionTitle').value = '';
+    document.getElementById('questionContent').value = '';
+    document.getElementById('questionAnswer').value = '';
+    document.getElementById('questionCategory').value = 'geometry';
+    document.getElementById('questionDifficulty').value = 'medium';
+}
+
+// 添加题目
+function addQuestion() {
+    const title = document.getElementById('questionTitle').value.trim();
+    const content = document.getElementById('questionContent').value.trim();
+    const answer = document.getElementById('questionAnswer').value.trim();
+    const category = document.getElementById('questionCategory').value;
+    const difficulty = document.getElementById('questionDifficulty').value;
+    
+    if (!title || !content || !answer) {
+        alert('请填写完整的题目信息！');
+        return;
+    }
+    
+    const question = {
+        id: Date.now(),
+        title: title,
+        content: content,
+        answer: answer,
+        category: category,
+        difficulty: difficulty,
+        createTime: new Date().toLocaleDateString()
+    };
+    
+    mathQuestions.push(question);
+    saveQuestions();
+    renderQuestions();
+    cancelAddQuestion();
+    
+    alert('题目添加成功！');
+}
+
+// 删除题目
+function deleteQuestion(index) {
+    if (confirm('确定要删除这道题目吗？')) {
+        mathQuestions.splice(index, 1);
+        saveQuestions();
+        renderQuestions();
+    }
+}
+
+// 清空所有题目
+function clearAllQuestions() {
+    if (confirm('确定要清空所有题目吗？此操作不可恢复！')) {
+        mathQuestions = [];
+        saveQuestions();
+        renderQuestions();
+    }
+}
+
+// 加载示例题目
+function loadSampleQuestions() {
+    const sampleQuestions = [
+        {
+            id: 1,
+            title: "三角形全等证明题",
+            category: "geometry",
+            difficulty: "medium",
+            createTime: "2024-01-15",
+            content: `已知：在\\(\\triangle ABC\\)中，\\(AB = AC\\)，\\(D\\)是\\(BC\\)的中点，\\(E\\)是\\(AC\\)上一点。
+
+求证：\\(\\triangle ABD \\cong \\triangle ACD\\)
+
+如果\\(\\angle BAC = 60^{\\circ}\\)，求\\(\\angle ABC\\)的度数。`,
+            answer: `## 证明过程
+
+**第一步：证明\\(\\triangle ABD \\cong \\triangle ACD\\)**
+
+因为：
+- \\(AB = AC\\)（已知）
+- \\(AD = AD\\)（公共边）  
+- \\(BD = CD\\)（\\(D\\)是\\(BC\\)中点）
+
+所以根据SSS判定定理，\\(\\triangle ABD \\cong \\triangle ACD\\)
+
+**第二步：求\\(\\angle ABC\\)的度数**
+
+因为\\(AB = AC\\)，所以\\(\\triangle ABC\\)是等腰三角形
+
+在等腰三角形中，\\(\\angle ABC = \\angle ACB\\)
+
+由三角形内角和定理：
+\\(\\angle BAC + \\angle ABC + \\angle ACB = 180^{\\circ}\\)
+
+代入已知条件：
+\\(60^{\\circ} + 2\\angle ABC = 180^{\\circ}\\)
+
+解得：\\(\\angle ABC = 60^{\\circ}\\)
+
+因此\\(\\triangle ABC\\)是等边三角形。`
+        },
+        {
+            id: 2,
+            title: "二次函数的性质",
+            category: "algebra", 
+            difficulty: "easy",
+            createTime: "2024-01-15",
+            content: `已知二次函数\\(f(x) = ax^2 + bx + c\\)的图像经过点\\((0, 3)\\)，\\((1, 2)\\)，\\((2, 5)\\)。
+
+1. 求函数解析式
+2. 求函数的对称轴和顶点坐标
+3. 求函数的最小值`,
+            answer: `## 解答
+
+**1. 求函数解析式**
+
+将三个点代入函数式：
+- \\(f(0) = c = 3\\)
+- \\(f(1) = a + b + c = 2\\)
+- \\(f(2) = 4a + 2b + c = 5\\)
+
+解方程组：
+- \\(c = 3\\)
+- \\(a + b = -1\\)
+- \\(4a + 2b = 2\\)
+
+解得：\\(a = 2\\)，\\(b = -3\\)，\\(c = 3\\)
+
+所以\\(f(x) = 2x^2 - 3x + 3\\)
+
+**2. 对称轴和顶点坐标**
+
+对称轴：\\(x = -\\frac{b}{2a} = \\frac{3}{4}\\)
+
+顶点坐标：\\((\\frac{3}{4}, f(\\frac{3}{4})) = (\\frac{3}{4}, \\frac{15}{8})\\)
+
+**3. 最小值**
+
+因为\\(a = 2 > 0\\)，抛物线开口向上，所以最小值为\\(\\frac{15}{8}\\)`
+        }
+    ];
+    
+    mathQuestions = [...mathQuestions, ...sampleQuestions];
+    saveQuestions();
+    renderQuestions();
+    alert('示例题目加载成功！');
+}
+
+// 页面加载时初始化
 document.addEventListener('DOMContentLoaded', function() {
-    const fileInput = document.getElementById('videoFileInput');
-    const videoPlayer = document.getElementById('videoPlayer');
-    const videoPlaceholder = document.getElementById('videoPlaceholder');
-    const fileName = document.getElementById('fileName');
-    const videoInfo = document.getElementById('videoInfo');
-    const videoFileName = document.getElementById('videoFileName');
-    const videoDuration = document.getElementById('videoDuration');
-    const videoResolution = document.getElementById('videoResolution');
-    const videoFileSize = document.getElementById('videoFileSize');
-
-    let currentBlobURL = null;
-
-    fileInput.addEventListener('change', function(e) {
-        const file = e.target.files[0];
-        if (file) {
-            // 检查是否为视频文件
-            if (!file.type.startsWith('video/')) {
-                alert('请选择有效的视频文件！');
-                return;
-            }
-
-            // 清理之前的 blob URL
-            if (currentBlobURL) {
-                URL.revokeObjectURL(currentBlobURL);
-                currentBlobURL = null;
-            }
-
-            // 显示文件名
-            fileName.textContent = `已选择: ${file.name}`;
-            
-            try {
-                // 创建视频URL
-                currentBlobURL = URL.createObjectURL(file);
-                
-                // 重置视频播放器
-                videoPlayer.load();
-                videoPlayer.src = currentBlobURL;
-                
-                // 显示视频播放器，隐藏占位符
-                videoPlaceholder.style.display = 'none';
-                videoPlayer.style.display = 'block';
-                videoInfo.style.display = 'block';
-                
-                // 更新文件信息
-                videoFileName.textContent = file.name;
-                videoFileSize.textContent = formatFileSize(file.size);
-                
-                console.log('Video blob URL created:', currentBlobURL);
-                
-            } catch (error) {
-                console.error('Error creating blob URL:', error);
-                alert('创建视频URL时出错，请尝试其他视频文件。');
-                return;
-            }
-        }
-    });
-
-    // 监听视频元数据加载（移到外部，避免重复绑定）
-    videoPlayer.addEventListener('loadedmetadata', function() {
-        videoDuration.textContent = formatTime(videoPlayer.duration);
-        videoResolution.textContent = `${videoPlayer.videoWidth} × ${videoPlayer.videoHeight}`;
-    });
-
-    // 监听视频加载错误
-    videoPlayer.addEventListener('error', function(e) {
-        console.error('Video loading error:', e);
-        const error = videoPlayer.error;
-        let errorMessage = '视频加载失败';
-        
-        if (error) {
-            switch (error.code) {
-                case error.MEDIA_ERR_ABORTED:
-                    errorMessage = '视频加载被中断';
-                    break;
-                case error.MEDIA_ERR_NETWORK:
-                    errorMessage = '网络错误导致视频加载失败';
-                    break;
-                case error.MEDIA_ERR_DECODE:
-                    errorMessage = '视频解码失败，可能是格式不支持';
-                    break;
-                case error.MEDIA_ERR_SRC_NOT_SUPPORTED:
-                    errorMessage = '不支持的视频格式';
-                    break;
-            }
-        }
-        
-        alert(errorMessage + '。请尝试其他视频文件或格式。');
-        
-        // 重置到初始状态
-        videoPlaceholder.style.display = 'flex';
-        videoPlayer.style.display = 'none';
-        videoInfo.style.display = 'none';
-        fileName.textContent = '';
-    });
-
-    // 监听视频加载成功
-    videoPlayer.addEventListener('loadstart', function() {
-        console.log('Video loading started');
-    });
-
-    videoPlayer.addEventListener('canplay', function() {
-        console.log('Video can start playing');
-    });
-
-    // 格式化文件大小
-    function formatFileSize(bytes) {
-        if (bytes === 0) return '0 Bytes';
-        const k = 1024;
-        const sizes = ['Bytes', 'KB', 'MB', 'GB'];
-        const i = Math.floor(Math.log(bytes) / Math.log(k));
-        return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + ' ' + sizes[i];
-    }
-
-    // 格式化时间
-    function formatTime(seconds) {
-        if (isNaN(seconds)) return '00:00';
-        const minutes = Math.floor(seconds / 60);
-        const remainingSeconds = Math.floor(seconds % 60);
-        return `${minutes.toString().padStart(2, '0')}:${remainingSeconds.toString().padStart(2, '0')}`;
-    }
-
-    // 拖拽上传功能
-    const container = document.querySelector('.video-player-container');
-    
-    ['dragenter', 'dragover', 'dragleave', 'drop'].forEach(eventName => {
-        container.addEventListener(eventName, preventDefaults, false);
-    });
-    
-    function preventDefaults(e) {
-        e.preventDefault();
-        e.stopPropagation();
-    }
-    
-    ['dragenter', 'dragover'].forEach(eventName => {
-        container.addEventListener(eventName, highlight, false);
-    });
-    
-    ['dragleave', 'drop'].forEach(eventName => {
-        container.addEventListener(eventName, unhighlight, false);
-    });
-    
-    function highlight() {
-        container.style.backgroundColor = '#e3f2fd';
-        container.style.borderColor = '#2196f3';
-    }
-    
-    function unhighlight() {
-        container.style.backgroundColor = '';
-        container.style.borderColor = '#ddd';
-    }
-    
-    container.addEventListener('drop', handleDrop, false);
-    
-    function handleDrop(e) {
-        const dt = e.dataTransfer;
-        const files = dt.files;
-        
-        if (files.length > 0) {
-            fileInput.files = files;
-            const event = new Event('change', { bubbles: true });
-            fileInput.dispatchEvent(event);
-        }
-    }
-
-    // 页面卸载时清理 blob URL
-    window.addEventListener('beforeunload', function() {
-        if (currentBlobURL) {
-            URL.revokeObjectURL(currentBlobURL);
-        }
-    });
+    loadQuestions();
 });
 </script>
-
-</div>    
 </body>
 </html>
