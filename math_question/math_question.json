@@ -3,7 +3,7 @@
   "lastUpdated": "2025-09-12",
   "description": "数学题库数据文件",
   "questions": [
-    {
+   {
       "id": 1757645039353,
       "title": "已经周长求面积",
       "content": "已知三角形周长为 12，其内角角平分线的交点到三角形三边的距离之和为 6，则三角形的面积为？",
@@ -20,6 +20,15 @@
       "category": "geometry",
       "difficulty": "easy",
       "createTime": "2025-09-12 10:15:00"
+    },
+    {
+      "id": 1757678060835,
+      "title": "利用全等三角形求角的度数",
+      "content": "16．如图，$D$、$E$是$\\triangle ABC$外两点，连接$AD$、$AE$，有$AB = AD$、$AC = AE$，$\\angle BAD = \\angle CAE = \\alpha$．连接$CD$、$BE$交于点$F$．\n（1）当$\\alpha = 40^{\\circ}$时，$\\angle DFE$的度数为____．\n（2）用含$\\alpha$的式子表示$\\angle DFE$的度数为____．",
+      "answer": "# 💡解答\n## 分析\n本题主要涉及三角形全等的判定和性质，以及三角形内角和定理、对顶角和邻补角的概念。通过证明三角形全等得到对应角相等，再利用角之间的关系求出\\(∠DFE\\)的度数。\n## 详解\n1. **（1）当\\(\\alpha = 40^{\\circ}\\)时**\n   - **证明\\(∠DAC = ∠BAE\\)**\n     因为\\(∠BAD = ∠CAE = 40^{\\circ}\\)，且\\(∠DAC = ∠BAD+∠BAC\\)，\\(∠BAE = ∠CAE + ∠BAC\\)，所以\\(∠DAC = ∠BAE\\)。\n   - **证明\\(△ADC\\cong△ABE\\)**\n     在\\(△ADC\\)和\\(△ABE\\)中，已知\\(AD = AB\\)，\\(∠DAC = ∠BAE\\)，\\(AC = AE\\)，根据全等三角形判定定理中的“边角 - 边”（SAS），可以得出\\(△ADC\\cong△ABE(SAS)\\)。\n   - **得出\\(∠D = ∠ABE\\)**\n     由于\\(△ADC\\cong△ABE\\)，根据全等三角形的性质，全等三角形的对应角相等，所以\\(∠D = ∠ABE\\)。\n   - **证明\\(∠DAG = ∠GFB = 40^{\\circ}\\)**\n     设\\(AB\\)，\\(CD\\)交于点\\(G\\)。因为\\(∠AGD\\)与\\(∠FGB\\)是对顶角，所以\\(∠AGD = ∠FGB\\)。又因为\\(∠D = ∠ABE\\)，在\\(△ADG\\)中\\(∠DAG+∠D + ∠AGD = 180^{\\circ}\\)，在\\(△FBG\\)中\\(∠GFB+∠ABE + ∠FGB = 180^{\\circ}\\)，所以\\(∠DAG = ∠GFB\\)，而\\(∠DAG = ∠BAD = 40^{\\circ}\\)，故\\(∠GFB = 40^{\\circ}\\)。\n   - **求出\\(∠DFE\\)的度数**\n     因为\\(∠GFB\\)与\\(∠DFE\\)是邻补角，即\\(∠GFB + ∠DFE = 180^{\\circ}\\)，已知\\(∠GFB = 40^{\\circ}\\)，所以\\(∠DFE = 180^{\\circ}-40^{\\circ}=140^{\\circ}\\)。\n2. **（2）用含\\(\\alpha\\)的式子表示\\(∠DFE\\)的度数**\n   - **证明\\(∠DAC = ∠BAE\\)**\n     因为\\(∠BAD = ∠CAE=\\alpha\\)，且\\(∠DAC = ∠BAD + ∠BAC\\)，\\(∠BAE = ∠CAE+∠BAC\\)，所以\\(∠DAC = ∠BAE\\)。\n   - **证明\\(△ADC\\cong△ABE\\)**\n     在\\(△ADC\\)和\\(△ABE\\)中，\\(AD = AB\\)，\\(∠DAC = ∠BAE\\)，\\(AC = AE\\)，根据“边角 - 边”（SAS）判定定理，可得\\(△ADC\\cong△ABE(SAS)\\)。\n   - **得出\\(∠D = ∠ABE\\)**\n     由\\(△ADC\\cong△ABE\\)，根据全等三角形对应角相等，可知\\(∠D = ∠ABE\\)。\n   - **证明\\(∠DAG = ∠GFB=\\alpha\\)**\n     设\\(AB\\)，\\(CD\\)交于点\\(G\\)。因为\\(∠AGD\\)与\\(∠FGB\\)是对顶角，所以\\(∠AGD = ∠FGB\\)。又因为\\(∠D = ∠ABE\\)，在\\(△ADG\\)中\\(∠DAG + ∠D+∠AGD = 180^{\\circ}\\)，在\\(△FBG\\)中\\(∠GFB+∠ABE + ∠FGB = 180^{\\circ}\\)，所以\\(∠DAG = ∠GFB\\)，而\\(∠DAG = ∠BAD=\\alpha\\)，故\\(∠GFB=\\alpha\\)。\n   - **求出\\(∠DFE\\)的度数**\n     因为\\(∠GFB\\)与\\(∠DFE\\)是邻补角，即\\(∠GFB + ∠DFE = 180^{\\circ}\\)，所以\\(∠DFE = 180^{\\circ}-\\alpha\\)。\n## 总结\n（1）当\\(\\alpha = 40^{\\circ}\\)时，\\(∠DFE\\)的度数为\\(140^{\\circ}\\)；（2）用含\\(\\alpha\\)的式子表示\\(∠DFE\\)的度数为\\(180^{\\circ}-\\alpha\\)。",
+      "category": "geometry",
+      "difficulty": "hard",
+      "createTime": "2025-09-12 11:54:20"
     }
   ],
   "categories": {
