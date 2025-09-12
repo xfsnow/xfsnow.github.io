@@ -8,7 +8,9 @@
     <meta name="description" content="数学题库管理系统，支持LaTeX数学公式">
     <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.7.2/css/all.css">
     <!-- MathJax for LaTeX rendering -->
-    <!-- <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script> -->
+    <script src="https://cdn.bootcdn.net/ajax/libs/babel-polyfill/7.12.1/polyfill.min.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/core-js-bundle@3/minified.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/regenerator-runtime@0.13.11/runtime.js"></script> -->
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>
         window.MathJax = {
@@ -596,9 +598,6 @@
                 <button class="btn btn-success" onclick="toggleAddQuestion()">
                     <i class="fas fa-plus"></i> 添加题目
                 </button>
-                <button class="btn btn-primary" onclick="loadSampleQuestions()">
-                    <i class="fas fa-download"></i> 加载示例
-                </button>
             </div>
             
             <div class="control-group">
@@ -733,98 +732,31 @@ function updatePreview(type) {
 }
 </script>
 
-<!-- 数学题库系统 -->
-<div class="math-bank-container">
-    <h2>📚 数学题库系统</h2>
-    
-    <!-- 控制按钮 -->
-    <div class="control-buttons">
-        <button class="btn btn-success" onclick="printQuestions()">
-            <i class="fas fa-print"></i> 打印题目
-        </button>
-        <button class="btn btn-warning" onclick="toggleAddQuestion()">
-            <i class="fas fa-plus"></i> 添加题目
-        </button>
-        <button class="btn btn-danger" onclick="clearAllQuestions()">
-            <i class="fas fa-trash"></i> 清空题库
-        </button>
-        <button class="btn btn-primary" onclick="loadSampleQuestions()">
-            <i class="fas fa-download"></i> 加载示例题目
-        </button>
-        <button class="btn btn-success" onclick="exportQuestions()">
-            <i class="fas fa-file-export"></i> 导出题库
-        </button>
-        <button class="btn btn-warning" onclick="importQuestions()">
-            <i class="fas fa-file-import"></i> 导入题库
-        </button>
-        <input type="file" id="importFile" accept=".json" style="display: none;" onchange="handleImportFile(event)">
-    </div>
-
-    <!-- 添加题目区域 -->
-    <div id="addQuestionArea" class="question-input-area" style="display: none;">
-        <h3>添加新题目</h3>
-        <div class="input-group">
-            <label for="questionTitle">题目标题：</labesl>
-            <input type="text" id="questionTitle" placeholder="例如：三角形全等证明题">
-        </div>
-        <div class="input-group">
-            <label for="questionCategory">题目分类：</label>
-            <select id="questionCategory">
-                <option value="geometry">几何</option>
-                <option value="algebra">代数</option>
-                <option value="calculus">微积分</option>
-                <option value="probability">概率统计</option>
-                <option value="other">其他</option>
-            </select>
-        </div>
-        <div class="input-group">
-            <label for="questionDifficulty">难度等级：</label>
-            <select id="questionDifficulty">
-                <option value="easy">简单</option>
-                <option value="medium">中等</option>
-                <option value="hard">困难</option>
-            </select>
-        </div>
-        <div class="input-group">
-            <label for="questionContent">题目内容（支持LaTeX）：</label>
-            <textarea id="questionContent" placeholder="输入题目内容，可以使用LaTeX公式，例如：\\(\\alpha = 40^{\\circ}\\)"></textarea>
-        </div>
-        <div class="input-group">
-            <label for="questionAnswer">题目答案（支持LaTeX）：</label>
-            <textarea id="questionAnswer" placeholder="输入详细解答过程"></textarea>
-        </div>
-        <div class="control-buttons">
-            <button class="btn btn-success" onclick="addQuestion()">
-                <i class="fas fa-save"></i> 保存题目
-            </button>
-            <button class="btn btn-danger" onclick="cancelAddQuestion()">
-                <i class="fas fa-times"></i> 取消
-            </button>
-        </div>
-    </div>
-
-    <!-- 题目列表容器 -->
-    <div id="questionsContainer">
-        <!-- 题目将动态插入到这里 -->
-    </div>
-</div>
-
 <script>
 // 数学题库数据存储
 let mathQuestions = [];
 
-// 从localStorage加载题目
+// 从math_questions.json加载题目
 function loadQuestions() {
-    const saved = localStorage.getItem('mathQuestions');
-    if (saved) {
-        mathQuestions = JSON.parse(saved);
-        renderQuestions();
-    }
-}
-
-// 保存题目到localStorage
-function saveQuestions() {
-    localStorage.setItem('mathQuestions', JSON.stringify(mathQuestions));
+    fetch('math_questions.json')
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('题目文件不存在或无法访问');
+            }
+            return response.json();
+        })
+        .then(data => {
+            if (data.questions && Array.isArray(data.questions)) {
+                mathQuestions = data.questions;
+                renderQuestions();
+                console.log(`成功加载 ${mathQuestions.length} 道题目`);
+            }
+        })
+        .catch(error => {
+            console.log('未找到题目文件，使用空题库');
+            mathQuestions = [];
+            renderQuestions();
+        });
 }
 
 // 渲染所有题目
@@ -972,7 +904,6 @@ function addQuestion() {
     };
     
     mathQuestions.push(question);
-    saveQuestions();
     renderQuestions();
     cancelAddQuestion();
     
@@ -983,7 +914,6 @@ function addQuestion() {
 function deleteQuestion(index) {
     if (confirm('确定要删除这道题目吗？')) {
         mathQuestions.splice(index, 1);
-        saveQuestions();
         renderQuestions();
     }
 }
@@ -992,97 +922,8 @@ function deleteQuestion(index) {
 function clearAllQuestions() {
     if (confirm('确定要清空所有题目吗？此操作不可恢复！')) {
         mathQuestions = [];
-        saveQuestions();
         renderQuestions();
     }
-}
-
-// 加载示例题目
-function loadSampleQuestions() {
-    const sampleQuestions = [
-        {
-            id: 1,
-            title: "三角形全等证明题",
-            category: "geometry",
-            difficulty: "medium",
-            createTime: "2024-01-15",
-            content: `已知：在\\(\\triangle ABC\\)中，\\(AB = AC\\)，\\(D\\)是\\(BC\\)的中点，\\(E\\)是\\(AC\\)上一点。
-
-求证：\\(\\triangle ABD \\cong \\triangle ACD\\)
-
-如果\\(\\angle BAC = 60^{\\circ}\\)，求\\(\\angle ABC\\)的度数。`,
-            answer: `## 证明过程
-
-**第一步：证明\\(\\triangle ABD \\cong \\triangle ACD\\)**
-
-因为：
-- \\(AB = AC\\)（已知）
-- \\(AD = AD\\)（公共边）  
-- \\(BD = CD\\)（\\(D\\)是\\(BC\\)中点）
-
-所以根据SSS判定定理，\\(\\triangle ABD \\cong \\triangle ACD\\)
-
-**第二步：求\\(\\angle ABC\\)的度数**
-
-因为\\(AB = AC\\)，所以\\(\\triangle ABC\\)是等腰三角形
-
-在等腰三角形中，\\(\\angle ABC = \\angle ACB\\)
-
-由三角形内角和定理：
-\\(\\angle BAC + \\angle ABC + \\angle ACB = 180^{\\circ}\\)
-
-代入已知条件：
-\\(60^{\\circ} + 2\\angle ABC = 180^{\\circ}\\)
-
-解得：\\(\\angle ABC = 60^{\\circ}\\)
-
-因此\\(\\triangle ABC\\)是等边三角形。`
-        },
-        {
-            id: 2,
-            title: "二次函数的性质",
-            category: "algebra", 
-            difficulty: "easy",
-            createTime: "2024-01-15",
-            content: `已知二次函数\\(f(x) = ax^2 + bx + c\\)的图像经过点\\((0, 3)\\)，\\((1, 2)\\)，\\((2, 5)\\)。
-
-1. 求函数解析式
-2. 求函数的对称轴和顶点坐标
-3. 求函数的最小值`,
-            answer: `## 解答
-
-**1. 求函数解析式**
-
-将三个点代入函数式：
-- \\(f(0) = c = 3\\)
-- \\(f(1) = a + b + c = 2\\)
-- \\(f(2) = 4a + 2b + c = 5\\)
-
-解方程组：
-- \\(c = 3\\)
-- \\(a + b = -1\\)
-- \\(4a + 2b = 2\\)
-
-解得：\\(a = 2\\)，\\(b = -3\\)，\\(c = 3\\)
-
-所以\\(f(x) = 2x^2 - 3x + 3\\)
-
-**2. 对称轴和顶点坐标**
-
-对称轴：\\(x = -\\frac{b}{2a} = \\frac{3}{4}\\)
-
-顶点坐标：\\((\\frac{3}{4}, f(\\frac{3}{4})) = (\\frac{3}{4}, \\frac{15}{8})\\)
-
-**3. 最小值**
-
-因为\\(a = 2 > 0\\)，抛物线开口向上，所以最小值为\\(\\frac{15}{8}\\)`
-        }
-    ];
-    
-    mathQuestions = [...mathQuestions, ...sampleQuestions];
-    saveQuestions();
-    renderQuestions();
-    alert('示例题目加载成功！');
 }
 
 // 导出题库到JSON文件
@@ -1142,7 +983,6 @@ function handleImportFile(event) {
                     });
                     
                     mathQuestions = [...mathQuestions, ...importData.questions];
-                    saveQuestions();
                     renderQuestions();
                     
                     alert(`成功导入 ${importCount} 道题目！`);
