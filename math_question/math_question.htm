@@ -300,7 +300,7 @@ box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
 
 .input-group textarea {
 resize: vertical;
-min-height: 100px;
+min-height: 120px;
 font-family: 'Consolas', 'Monaco', monospace;
 line-height: 1.5;
 }
@@ -529,8 +529,9 @@ font-size: 14px;
 
 .input-group textarea {
 resize: vertical;
-min-height: 80px;
+min-height: 120px;
 font-family: 'Consolas', 'Monaco', monospace;
+line-height: 1.5;
 }
 
 /* 打印样式 */
@@ -642,7 +643,7 @@ line-height: 1.4;
 
 <div class="input-group">
 <label for="questionContent">题目内容（支持LaTeX）：</label>
-<textarea id="questionContent" placeholder="输入题目内容，可以使用LaTeX公式，例如：\\(\\alpha = 40^{\\circ}\\)" oninput="updatePreview('content')"></textarea>
+<textarea id="questionContent" placeholder="输入题目内容，支持多行和LaTeX公式&#10;例如：\\(\\alpha = 40^{\\circ}\\)&#10;多行内容用回车键换行" oninput="updatePreview('content')"></textarea>
 <div class="preview-area">
 <div class="preview-title">题目预览：</div>
 <div class="preview-content" id="contentPreview">在此输入内容后查看预览</div>
@@ -651,7 +652,7 @@ line-height: 1.4;
 
 <div class="input-group">
 <label for="questionAnswer">题目答案（支持LaTeX）：</label>
-<textarea id="questionAnswer" placeholder="输入详细解答过程" oninput="updatePreview('answer')"></textarea>
+<textarea id="questionAnswer" placeholder="输入详细解答过程，支持多行&#10;可以使用LaTeX数学公式&#10;用空行分段，用回车键换行" oninput="updatePreview('answer')"></textarea>
 <div class="preview-area">
 <div class="preview-title">答案预览：</div>
 <div class="preview-content" id="answerPreview">在此输入答案后查看预览</div>

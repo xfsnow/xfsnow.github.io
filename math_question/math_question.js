@@ -23,16 +23,22 @@ function convertLatexToHTML(latex) {
     // 处理粗体文字
     html = html.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
     
-    // 处理段落
+    // 处理Markdown图片链接
+    html = html.replace(/!\[([^\]]*)\]\(([^)]+)\)/g, '<img src="$2" alt="$1" style="max-width: 100%; height: auto; margin: 10px 0; border-radius: 4px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">');
+    
+    // 处理多行段落：先将双换行转换为段落分隔符
     html = html.replace(/\n\n+/g, '</p><p>');
+    
+    // 包装为段落
     html = '<p>' + html + '</p>';
     
-    // 处理换行
+    // 处理单个换行为<br>
     html = html.replace(/\n/g, '<br>');
     
     // 清理空段落
     html = html.replace(/<p><\/p>/g, '');
     html = html.replace(/<p>\s*<\/p>/g, '');
+    html = html.replace(/<p><br><\/p>/g, '');
     
     return html;
 }
@@ -236,7 +242,7 @@ function addQuestion() {
         answer: answer,
         category: category,
         difficulty: difficulty,
-        createTime: new Date().toLocaleDateString()
+        createTime: new Date().toISOString().slice(0, 19).replace('T', ' ')
     };
     
     mathQuestions.push(question);
@@ -315,7 +321,7 @@ function handleImportFile(event) {
                     
                     importData.questions.forEach((question, index) => {
                         question.id = maxId + index + 1;
-                        question.createTime = question.createTime || new Date().toLocaleDateString();
+                        question.createTime = question.createTime || new Date().toISOString().slice(0, 19).replace('T', ' ');
                     });
                     
                     mathQuestions = [...mathQuestions, ...importData.questions];
