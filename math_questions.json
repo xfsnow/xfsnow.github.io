@@ -1,0 +1,39 @@
+{
+  "version": "1.0",
+  "lastUpdated": "2024-01-15",
+  "description": "数学题库数据文件",
+  "questions": [
+    {
+      "id": 1,
+      "title": "三角形全等证明题",
+      "category": "geometry",
+      "difficulty": "medium",
+      "tags": ["三角形", "全等", "证明"],
+      "createTime": "2024-01-15",
+      "content": "已知：在三角形ABC中，AB = AC，D是BC的中点。求证：三角形ABD全等于三角形ACD",
+      "answer": "证明过程：因为AB = AC（已知），AD = AD（公共边），BD = CD（D是BC中点），所以根据SSS判定定理，三角形ABD全等于三角形ACD"
+    },
+    {
+      "id": 2,
+      "title": "二次函数的性质",
+      "category": "algebra",
+      "difficulty": "easy", 
+      "tags": ["二次函数", "解析式", "顶点"],
+      "createTime": "2024-01-15",
+      "content": "已知二次函数f(x) = ax² + bx + c的图像经过点(0, 3)，(1, 2)，(2, 5)。求函数解析式",
+      "answer": "将三个点代入函数式求解方程组，得到a = 2，b = -3，c = 3，所以f(x) = 2x² - 3x + 3"
+    }
+  ],
+  "categories": {
+    "geometry": "几何",
+    "algebra": "代数",
+    "calculus": "微积分",
+    "probability": "概率统计",
+    "other": "其他"
+  },
+  "difficulties": {
+    "easy": "简单",
+    "medium": "中等",
+    "hard": "困难"
+  }
+}

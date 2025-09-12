@@ -558,6 +558,13 @@
         <button class="btn btn-primary" onclick="loadSampleQuestions()">
             <i class="fas fa-download"></i> 加载示例题目
         </button>
+        <button class="btn btn-success" onclick="exportQuestions()">
+            <i class="fas fa-file-export"></i> 导出题库
+        </button>
+        <button class="btn btn-warning" onclick="importQuestions()">
+            <i class="fas fa-file-import"></i> 导入题库
+        </button>
+        <input type="file" id="importFile" accept=".json" style="display: none;" onchange="handleImportFile(event)">
     </div>
 
     <!-- 添加题目区域 -->
@@ -874,6 +881,85 @@ function loadSampleQuestions() {
     saveQuestions();
     renderQuestions();
     alert('示例题目加载成功！');
+}
+
+// 导出题库到JSON文件
+function exportQuestions() {
+    if (mathQuestions.length === 0) {
+        alert('题库为空，无法导出！');
+        return;
+    }
+    
+    const dataToExport = {
+        version: "1.0",
+        exportTime: new Date().toISOString(),
+        description: "数学题库导出数据",
+        totalQuestions: mathQuestions.length,
+        questions: mathQuestions
+    };
+    
+    const dataStr = JSON.stringify(dataToExport, null, 2);
+    const dataBlob = new Blob([dataStr], {type: 'application/json'});
+    
+    const link = document.createElement('a');
+    link.href = URL.createObjectURL(dataBlob);
+    link.download = `math_questions_${new Date().toISOString().slice(0,10)}.json`;
+    
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+    
+    alert(`成功导出 ${mathQuestions.length} 道题目！`);
+}
+
+// 触发导入文件选择
+function importQuestions() {
+    document.getElementById('importFile').click();
+}
+
+// 处理导入的文件
+function handleImportFile(event) {
+    const file = event.target.files[0];
+    if (!file) return;
+    
+    const reader = new FileReader();
+    reader.onload = function(e) {
+        try {
+            const importData = JSON.parse(e.target.result);
+            
+            if (importData.questions && Array.isArray(importData.questions)) {
+                const importCount = importData.questions.length;
+                
+                if (confirm(`确定要导入 ${importCount} 道题目吗？这将添加到现有题库中。`)) {
+                    // 为导入的题目分配新的ID，避免冲突
+                    const maxId = mathQuestions.length > 0 ? Math.max(...mathQuestions.map(q => q.id)) : 0;
+                    
+                    importData.questions.forEach((question, index) => {
+                        question.id = maxId + index + 1;
+                        question.createTime = question.createTime || new Date().toLocaleDateString();
+                    });
+                    
+                    mathQuestions = [...mathQuestions, ...importData.questions];
+                    saveQuestions();
+                    renderQuestions();
+                    
+                    alert(`成功导入 ${importCount} 道题目！`);
+                } else {
+                    alert('导入已取消。');
+                }
+            } else {
+                alert('文件格式错误：缺少有效的题目数据！');
+            }
+        } catch (error) {
+            alert('文件格式错误：无法解析JSON文件！');
+            console.error('Import error:', error);
+        }
+    };
+    
+    reader.readAsText(file);
+    
+    // 清除文件输入，允许重复导入同一文件
+    event.target.value = '';
 }
 
 // 页面加载时初始化
