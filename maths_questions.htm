@@ -1,0 +1,1173 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>数学题库系统</title>
+    <meta name="description" content="数学题库管理系统，支持LaTeX数学公式">
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.7.2/css/all.css">
+    <!-- MathJax for LaTeX rendering -->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>
+        window.MathJax = {
+            tex: {
+                inlineMath: [['\\(', '\\)'], ['$', '$']],
+                displayMath: [['\\[', '\\]'], ['$$', '$$']],
+                processEscapes: true,
+                processEnvironments: true
+            },
+            options: {
+                skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+                ignoreHtmlClass: 'tex2jax_ignore'
+            }
+        };
+    </script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+            background-color: #f8fafc;
+            color: #1f2937;
+            line-height: 1.6;
+        }
+        
+        /* 页面标题 */
+        .page-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-align: center;
+            padding: 15px 20px; /* 减少纵向padding */
+            margin-bottom: 15px; /* 减少底部间距 */
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        
+        .page-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin: 0;
+        }
+        
+        /* 数学题库系统样式 */
+        .math-bank-container {
+            max-width: 1200px;
+            width: 95%;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        /* 响应式设计 */
+        @media (max-width: 768px) {
+            .page-title {
+                font-size: 2rem;
+            }
+            
+            .math-bank-container {
+                width: 98%;
+                padding: 10px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .page-title {
+                font-size: 1.8rem;
+            }
+            
+            .page-header {
+                padding: 20px 15px;
+            }
+        }
+        
+        .question-card {
+            border: 1px solid #e5e7eb;
+            border-radius: 12px;
+            margin: 25px 0;
+            background: white;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.07);
+            transition: box-shadow 0.3s ease;
+        }
+        
+        .question-card:hover {
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .question-header {
+            background: #f8fafc;
+            padding: 20px 25px;
+            border-bottom: 1px solid #e5e7eb;
+            border-radius: 12px 12px 0 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+        
+        .question-actions {
+            display: flex;
+            gap: 8px;
+            flex-shrink: 0;
+        }
+        
+        .btn-sm {
+            font-size: 12px;
+            padding: 6px 12px;
+            border-radius: 6px;
+        }
+        
+        .question-info {
+            flex: 1;
+            min-width: 250px;
+        }
+        
+        .question-title {
+            font-weight: 600;
+            color: #374151;
+            margin: 0 0 8px 0;
+            font-size: 1.1rem;
+        }
+        
+        .question-meta {
+            font-size: 13px;
+            color: #6b7280;
+        }
+        
+        .question-actions {
+            display: flex;
+            gap: 8px;
+            align-items: center;
+        }
+        
+        .question-content {
+            padding: 25px;
+        }
+        
+        .question-body {
+            margin-bottom: 25px;
+            line-height: 1.7;
+            font-size: 16px;
+        }
+        
+        .answer-section {
+            border-top: 1px solid #f3f4f6;
+            padding-top: 20px;
+            margin-top: 20px;
+            display: none;
+        }
+        
+        .answer-section.show {
+            display: block;
+        }
+        
+        .answer-space {
+            display: none; /* 普通模式下隐藏答题区域 */
+        }
+        
+        /* 控制按钮样式 */
+        .main-controls {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin: 15px 0; /* 减少纵向margin */
+            padding: 15px; /* 减少纵向padding */
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+        }
+        
+        .control-group {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+        }
+        
+        @media (max-width: 768px) {
+            .main-controls {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .control-group {
+                justify-content: center;
+                width: 100%;
+            }
+        }
+        
+        .btn {
+            padding: 10px 18px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            white-space: nowrap;
+        }
+        
+        .btn:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+        }
+        
+        .btn-sm {
+            padding: 6px 12px;
+            font-size: 12px;
+        }
+        
+        .btn-primary {
+            background-color: #3b82f6;
+            color: white;
+        }
+        
+        .btn-primary:hover {
+            background-color: #2563eb;
+        }
+        
+        .btn-success {
+            background-color: #10b981;
+            color: white;
+        }
+        
+        .btn-success:hover {
+            background-color: #059669;
+        }
+        
+        .btn-warning {
+            background-color: #f59e0b;
+            color: white;
+        }
+        
+        .btn-warning:hover {
+            background-color: #d97706;
+        }
+        
+        .btn-danger {
+            background-color: #ef4444;
+            color: white;
+        }
+        
+        .btn-danger:hover {
+            background-color: #dc2626;
+        }
+        
+        .btn-secondary {
+            background-color: #6b7280;
+            color: white;
+        }
+        
+        .btn-secondary:hover {
+            background-color: #4b5563;
+        }
+        
+        /* 添加题目区域 */
+        .question-input-area {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            margin: 25px 0;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+            border: 1px solid #e5e7eb;
+        }
+        
+        .input-group {
+            margin: 20px 0;
+        }
+        
+        .input-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+            color: #374151;
+            font-size: 14px;
+        }
+        
+        .input-group input,
+        .input-group textarea,
+        .input-group select {
+            width: 100%;
+            padding: 12px 16px;
+            border: 1px solid #d1d5db;
+            border-radius: 8px;
+            font-size: 14px;
+            transition: border-color 0.3s ease;
+        }
+        
+        .input-group input:focus,
+        .input-group textarea:focus,
+        .input-group select:focus {
+            outline: none;
+            border-color: #3b82f6;
+            box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+        }
+        
+        .input-group textarea {
+            resize: vertical;
+            min-height: 100px;
+            font-family: 'Consolas', 'Monaco', monospace;
+            line-height: 1.5;
+        }
+        
+        /* 预览区域 */
+        .preview-area {
+            border: 1px solid #e5e7eb;
+            border-radius: 8px;
+            padding: 20px;
+            margin-top: 15px;
+            background: #f9fafb;
+            min-height: 60px;
+        }
+        
+        .preview-title {
+            font-size: 14px;
+            font-weight: 500;
+            color: #6b7280;
+            margin-bottom: 10px;
+        }
+        
+        .preview-content {
+            border: 1px solid #d1d5db;
+            border-radius: 6px;
+            padding: 15px;
+            background: white;
+            min-height: 50px;
+        }
+        
+        /* 打印样式 */
+        @media print {
+            body {
+                background: white;
+                font-size: 12pt;
+                line-height: 1.4;
+            }
+            
+            .page-header,
+            .main-controls,
+            .question-input-area,
+            .question-actions {
+                display: none !important;
+            }
+            
+            .answer-section {
+                display: none !important;
+            }
+            
+            .answer-space {
+                min-height: 200px !important;
+                background: white !important;
+                border: 1px solid #000 !important;
+                page-break-inside: avoid;
+            }
+            
+            .answer-space::after {
+                display: none;
+            }
+            
+            .question-card {
+                break-inside: avoid;
+                page-break-inside: avoid;
+                margin: 30px 0;
+                box-shadow: none;
+                border: 1px solid #000;
+            }
+            
+            .question-header {
+                background: white !important;
+                border-bottom: 1px solid #000;
+            }
+            
+            .math-bank-container {
+                max-width: none;
+                width: 100%;
+                margin: 0;
+                padding: 0;
+            }
+        }
+        
+        .question-card {
+            border: 1px solid #e5e7eb;
+            border-radius: 8px;
+            margin: 20px 0;
+            background: white;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        .question-header {
+            background: #f8fafc;
+            padding: 15px 20px;
+            border-bottom: 1px solid #e5e7eb;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .question-title {
+            font-weight: bold;
+            color: #374151;
+            margin: 0;
+        }
+        
+        .question-meta {
+            font-size: 12px;
+            color: #6b7280;
+        }
+        
+        .question-content {
+            padding: 20px;
+        }
+        
+        .question-body {
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+        
+        .answer-section {
+            border-top: 1px solid #f3f4f6;
+            padding-top: 15px;
+            margin-top: 15px;
+            display: none;
+        }
+        
+        .answer-section.show {
+            display: block;
+        }
+        
+        .answer-space {
+            min-height: 100px;
+            border: 1px dashed #d1d5db;
+            border-radius: 4px;
+            background: #fafafa;
+            margin: 15px 0;
+            position: relative;
+        }
+        
+        .answer-space::after {
+            content: "答题区域";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: #9ca3af;
+            font-size: 14px;
+        }
+        
+        .control-buttons {
+            text-align: center;
+            margin: 20px 0;
+        }
+        
+        .btn {
+            padding: 8px 16px;
+            margin: 0 5px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 14px;
+            transition: background-color 0.3s;
+        }
+        
+        .btn-primary {
+            background-color: #3b82f6;
+            color: white;
+        }
+        
+        .btn-primary:hover {
+            background-color: #2563eb;
+        }
+        
+        .btn-success {
+            background-color: #10b981;
+            color: white;
+        }
+        
+        .btn-success:hover {
+            background-color: #059669;
+        }
+        
+        .btn-warning {
+            background-color: #f59e0b;
+            color: white;
+        }
+        
+        .btn-warning:hover {
+            background-color: #d97706;
+        }
+        
+        .btn-danger {
+            background-color: #ef4444;
+            color: white;
+        }
+        
+        .btn-danger:hover {
+            background-color: #dc2626;
+        }
+        
+        .question-input-area {
+            background: #f9fafb;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+        
+        .input-group {
+            margin: 15px 0;
+        }
+        
+        .input-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: 500;
+            color: #374151;
+        }
+        
+        .input-group input,
+        .input-group textarea,
+        .input-group select {
+            width: 100%;
+            padding: 8px 12px;
+            border: 1px solid #d1d5db;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+        
+        .input-group textarea {
+            resize: vertical;
+            min-height: 80px;
+            font-family: 'Consolas', 'Monaco', monospace;
+        }
+        
+        /* 打印样式 */
+        @media print {
+            .navbar, .control-buttons, .question-input-area {
+                display: none !important;
+            }
+            
+            .answer-section {
+                display: none !important;
+            }
+            
+            .answer-space {
+                display: block; /* 打印时显示答题区域 */
+                min-height: 200px;
+                background: white !important;
+                border: none !important; /* 不要边框 */
+                margin: 20px 0;
+            }
+            
+            .answer-space::after {
+                display: none;
+            }
+            
+            .question-card {
+                break-inside: avoid;
+                page-break-inside: avoid;
+                margin: 20px 0;
+                box-shadow: none;
+                border: none;
+            }
+            
+            body {
+                font-size: 12pt;
+                line-height: 1.4;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- 页面标题 -->
+    <div class="page-header">
+        <h1 class="page-title">📚 数学题库系统</h1>
+    </div>
+
+    <!-- 数学题库系统 -->
+    <div class="math-bank-container">
+        <!-- 主要控制按钮 -->
+        <div class="main-controls">
+            <div class="control-group">
+                <button class="btn btn-success" onclick="toggleAddQuestion()">
+                    <i class="fas fa-plus"></i> 添加题目
+                </button>
+                <button class="btn btn-primary" onclick="loadSampleQuestions()">
+                    <i class="fas fa-download"></i> 加载示例
+                </button>
+            </div>
+            
+            <div class="control-group">
+                <button class="btn btn-warning" onclick="exportQuestions()">
+                    <i class="fas fa-file-export"></i> 导出题库
+                </button>
+                <button class="btn btn-secondary" onclick="importQuestions()">
+                    <i class="fas fa-file-import"></i> 导入题库
+                </button>
+            </div>
+            
+            <div class="control-group">
+                <button class="btn btn-primary" onclick="printQuestions()">
+                    <i class="fas fa-print"></i> 打印题目
+                </button>
+                <button class="btn btn-danger" onclick="clearAllQuestions()">
+                    <i class="fas fa-trash"></i> 清空题库
+                </button>
+            </div>
+        </div>
+
+        <!-- 隐藏的文件输入 -->
+        <input type="file" id="importFile" accept=".json" style="display: none;" onchange="handleImportFile(event)">
+
+        <!-- 添加题目区域 -->
+        <div id="addQuestionArea" class="question-input-area" style="display: none;">
+            <h3 style="margin-bottom: 25px; color: #374151;">
+                <i class="fas fa-plus"></i> 添加新题目
+            </h3>
+            
+            <div class="input-group">
+                <label for="questionTitle">题目标题：</label>
+                <input type="text" id="questionTitle" placeholder="例如：三角形全等证明题">
+            </div>
+            
+            <div style="display: flex; gap: 20px;">
+                <div class="input-group" style="flex: 1;">
+                    <label for="questionCategory">题目分类：</label>
+                    <select id="questionCategory">
+                        <option value="geometry">几何</option>
+                        <option value="algebra">代数</option>
+                        <option value="calculus">微积分</option>
+                        <option value="probability">概率统计</option>
+                        <option value="other">其他</option>
+                    </select>
+                </div>
+                <div class="input-group" style="flex: 1;">
+                    <label for="questionDifficulty">难度等级：</label>
+                    <select id="questionDifficulty">
+                        <option value="easy">简单</option>
+                        <option value="medium">中等</option>
+                        <option value="hard">困难</option>
+                    </select>
+                </div>
+            </div>
+            
+            <div class="input-group">
+                <label for="questionContent">题目内容（支持LaTeX）：</label>
+                <textarea id="questionContent" placeholder="输入题目内容，可以使用LaTeX公式，例如：\\(\\alpha = 40^{\\circ}\\)" oninput="updatePreview('content')"></textarea>
+                <div class="preview-area">
+                    <div class="preview-title">题目预览：</div>
+                    <div class="preview-content" id="contentPreview">在此输入内容后查看预览</div>
+                </div>
+            </div>
+            
+            <div class="input-group">
+                <label for="questionAnswer">题目答案（支持LaTeX）：</label>
+                <textarea id="questionAnswer" placeholder="输入详细解答过程" oninput="updatePreview('answer')"></textarea>
+                <div class="preview-area">
+                    <div class="preview-title">答案预览：</div>
+                    <div class="preview-content" id="answerPreview">在此输入答案后查看预览</div>
+                </div>
+            </div>
+            
+            <div style="text-align: center; margin-top: 25px;">
+                <button class="btn btn-success" onclick="addQuestion()">
+                    <i class="fas fa-save"></i> 保存题目
+                </button>
+                <button class="btn btn-danger" onclick="cancelAddQuestion()">
+                    <i class="fas fa-times"></i> 取消
+                </button>
+            </div>
+        </div>
+
+        <!-- 题目列表容器 -->
+        <div id="questionsContainer">
+            <!-- 题目将动态插入到这里 -->
+        </div>
+    </div>
+
+<script>
+// LaTeX到HTML转换函数（简化版）
+function convertLatexToHTML(latex) {
+    let html = latex;
+    
+    // 处理Markdown标题
+    html = html.replace(/^# (.*$)/gm, '<h1>$1</h1>');
+    html = html.replace(/^## (.*$)/gm, '<h2>$1</h2>');
+    html = html.replace(/^### (.*$)/gm, '<h3>$1</h3>');
+    
+    // 处理粗体文字
+    html = html.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
+    
+    // 处理段落
+    html = html.replace(/\n\n+/g, '</p><p>');
+    html = '<p>' + html + '</p>';
+    
+    // 处理换行
+    html = html.replace(/\n/g, '<br>');
+    
+    // 清理空段落
+    html = html.replace(/<p><\/p>/g, '');
+    html = html.replace(/<p>\s*<\/p>/g, '');
+    
+    return html;
+}
+
+// 预览功能
+function updatePreview(type) {
+    const content = document.getElementById(`question${type.charAt(0).toUpperCase() + type.slice(1)}`).value;
+    const preview = document.getElementById(`${type}Preview`);
+    
+    if (content.trim()) {
+        preview.innerHTML = convertLatexToHTML(content);
+        // 重新渲染MathJax
+        if (window.MathJax) {
+            MathJax.typesetPromise([preview]);
+        }
+    } else {
+        preview.innerHTML = type === 'content' ? '在此输入内容后查看预览' : '在此输入答案后查看预览';
+    }
+}
+</script>
+
+<!-- 数学题库系统 -->
+<div class="math-bank-container">
+    <h2>📚 数学题库系统</h2>
+    
+    <!-- 控制按钮 -->
+    <div class="control-buttons">
+        <button class="btn btn-success" onclick="printQuestions()">
+            <i class="fas fa-print"></i> 打印题目
+        </button>
+        <button class="btn btn-warning" onclick="toggleAddQuestion()">
+            <i class="fas fa-plus"></i> 添加题目
+        </button>
+        <button class="btn btn-danger" onclick="clearAllQuestions()">
+            <i class="fas fa-trash"></i> 清空题库
+        </button>
+        <button class="btn btn-primary" onclick="loadSampleQuestions()">
+            <i class="fas fa-download"></i> 加载示例题目
+        </button>
+        <button class="btn btn-success" onclick="exportQuestions()">
+            <i class="fas fa-file-export"></i> 导出题库
+        </button>
+        <button class="btn btn-warning" onclick="importQuestions()">
+            <i class="fas fa-file-import"></i> 导入题库
+        </button>
+        <input type="file" id="importFile" accept=".json" style="display: none;" onchange="handleImportFile(event)">
+    </div>
+
+    <!-- 添加题目区域 -->
+    <div id="addQuestionArea" class="question-input-area" style="display: none;">
+        <h3>添加新题目</h3>
+        <div class="input-group">
+            <label for="questionTitle">题目标题：</labesl>
+            <input type="text" id="questionTitle" placeholder="例如：三角形全等证明题">
+        </div>
+        <div class="input-group">
+            <label for="questionCategory">题目分类：</label>
+            <select id="questionCategory">
+                <option value="geometry">几何</option>
+                <option value="algebra">代数</option>
+                <option value="calculus">微积分</option>
+                <option value="probability">概率统计</option>
+                <option value="other">其他</option>
+            </select>
+        </div>
+        <div class="input-group">
+            <label for="questionDifficulty">难度等级：</label>
+            <select id="questionDifficulty">
+                <option value="easy">简单</option>
+                <option value="medium">中等</option>
+                <option value="hard">困难</option>
+            </select>
+        </div>
+        <div class="input-group">
+            <label for="questionContent">题目内容（支持LaTeX）：</label>
+            <textarea id="questionContent" placeholder="输入题目内容，可以使用LaTeX公式，例如：\\(\\alpha = 40^{\\circ}\\)"></textarea>
+        </div>
+        <div class="input-group">
+            <label for="questionAnswer">题目答案（支持LaTeX）：</label>
+            <textarea id="questionAnswer" placeholder="输入详细解答过程"></textarea>
+        </div>
+        <div class="control-buttons">
+            <button class="btn btn-success" onclick="addQuestion()">
+                <i class="fas fa-save"></i> 保存题目
+            </button>
+            <button class="btn btn-danger" onclick="cancelAddQuestion()">
+                <i class="fas fa-times"></i> 取消
+            </button>
+        </div>
+    </div>
+
+    <!-- 题目列表容器 -->
+    <div id="questionsContainer">
+        <!-- 题目将动态插入到这里 -->
+    </div>
+</div>
+
+<script>
+// 数学题库数据存储
+let mathQuestions = [];
+
+// 从localStorage加载题目
+function loadQuestions() {
+    const saved = localStorage.getItem('mathQuestions');
+    if (saved) {
+        mathQuestions = JSON.parse(saved);
+        renderQuestions();
+    }
+}
+
+// 保存题目到localStorage
+function saveQuestions() {
+    localStorage.setItem('mathQuestions', JSON.stringify(mathQuestions));
+}
+
+// 渲染所有题目
+function renderQuestions() {
+    const container = document.getElementById('questionsContainer');
+    container.innerHTML = '';
+    
+    mathQuestions.forEach((question, index) => {
+        const questionCard = createQuestionCard(question, index);
+        container.appendChild(questionCard);
+    });
+    
+    // 重新渲染MathJax
+    if (window.MathJax) {
+        MathJax.typesetPromise([container]);
+    }
+}
+
+// 创建题目卡片
+function createQuestionCard(question, index) {
+    const card = document.createElement('div');
+    card.className = 'question-card';
+    card.innerHTML = `
+        <div class="question-header">
+            <div>
+                <h4 class="question-title">${question.title}</h4>
+                <div class="question-meta">
+                    分类: ${getCategoryName(question.category)} | 
+                    难度: ${getDifficultyName(question.difficulty)} | 
+                    创建时间: ${question.createTime}
+                </div>
+            </div>
+            <div class="question-actions">
+                <button class="btn btn-info btn-sm" onclick="toggleAnswerVisibility(${index})" id="toggle-${index}">
+                    <i class="fas fa-eye"></i> 显示答案
+                </button>
+                <button class="btn btn-danger btn-sm" onclick="deleteQuestion(${index})">
+                    <i class="fas fa-trash"></i>
+                </button>
+            </div>
+        </div>
+        <div class="question-content">
+            <div class="question-body">
+                ${convertLatexToHTML(question.content)}
+            </div>
+            <div class="answer-space"></div>
+            <div class="answer-section" id="answer-${index}" style="display: none;">
+                <h5 style="color: #059669; margin-bottom: 10px;">
+                    <i class="fas fa-lightbulb"></i> 参考答案：
+                </h5>
+                ${convertLatexToHTML(question.answer)}
+            </div>
+        </div>
+    `;
+    return card;
+}
+
+// 获取分类名称
+function getCategoryName(category) {
+    const names = {
+        'geometry': '几何',
+        'algebra': '代数', 
+        'calculus': '微积分',
+        'probability': '概率统计',
+        'other': '其他'
+    };
+    return names[category] || category;
+}
+
+// 获取难度名称
+function getDifficultyName(difficulty) {
+    const names = {
+        'easy': '简单',
+        'medium': '中等',
+        'hard': '困难'
+    };
+    return names[difficulty] || difficulty;
+}
+
+// 打印题目
+function printQuestions() {
+    window.print();
+}
+
+// 切换添加题目区域
+// 切换特定题目的答案显示
+function toggleAnswerVisibility(index) {
+    const answerSection = document.getElementById(`answer-${index}`);
+    const toggleButton = document.getElementById(`toggle-${index}`);
+    
+    if (answerSection.style.display === 'none' || answerSection.style.display === '') {
+        answerSection.style.display = 'block';
+        toggleButton.innerHTML = '<i class="fas fa-eye-slash"></i> 隐藏答案';
+        toggleButton.classList.remove('btn-info');
+        toggleButton.classList.add('btn-warning');
+    } else {
+        answerSection.style.display = 'none';
+        toggleButton.innerHTML = '<i class="fas fa-eye"></i> 显示答案';
+        toggleButton.classList.remove('btn-warning');
+        toggleButton.classList.add('btn-info');
+    }
+}
+
+function toggleAddQuestion() {
+    const area = document.getElementById('addQuestionArea');
+    area.style.display = area.style.display === 'none' ? 'block' : 'none';
+}
+
+// 取消添加题目
+function cancelAddQuestion() {
+    document.getElementById('addQuestionArea').style.display = 'none';
+    clearAddQuestionForm();
+}
+
+// 清空添加题目表单
+function clearAddQuestionForm() {
+    document.getElementById('questionTitle').value = '';
+    document.getElementById('questionContent').value = '';
+    document.getElementById('questionAnswer').value = '';
+    document.getElementById('questionCategory').value = 'geometry';
+    document.getElementById('questionDifficulty').value = 'medium';
+}
+
+// 添加题目
+function addQuestion() {
+    const title = document.getElementById('questionTitle').value.trim();
+    const content = document.getElementById('questionContent').value.trim();
+    const answer = document.getElementById('questionAnswer').value.trim();
+    const category = document.getElementById('questionCategory').value;
+    const difficulty = document.getElementById('questionDifficulty').value;
+    
+    if (!title || !content || !answer) {
+        alert('请填写完整的题目信息！');
+        return;
+    }
+    
+    const question = {
+        id: Date.now(),
+        title: title,
+        content: content,
+        answer: answer,
+        category: category,
+        difficulty: difficulty,
+        createTime: new Date().toLocaleDateString()
+    };
+    
+    mathQuestions.push(question);
+    saveQuestions();
+    renderQuestions();
+    cancelAddQuestion();
+    
+    alert('题目添加成功！');
+}
+
+// 删除题目
+function deleteQuestion(index) {
+    if (confirm('确定要删除这道题目吗？')) {
+        mathQuestions.splice(index, 1);
+        saveQuestions();
+        renderQuestions();
+    }
+}
+
+// 清空所有题目
+function clearAllQuestions() {
+    if (confirm('确定要清空所有题目吗？此操作不可恢复！')) {
+        mathQuestions = [];
+        saveQuestions();
+        renderQuestions();
+    }
+}
+
+// 加载示例题目
+function loadSampleQuestions() {
+    const sampleQuestions = [
+        {
+            id: 1,
+            title: "三角形全等证明题",
+            category: "geometry",
+            difficulty: "medium",
+            createTime: "2024-01-15",
+            content: `已知：在\\(\\triangle ABC\\)中，\\(AB = AC\\)，\\(D\\)是\\(BC\\)的中点，\\(E\\)是\\(AC\\)上一点。
+
+求证：\\(\\triangle ABD \\cong \\triangle ACD\\)
+
+如果\\(\\angle BAC = 60^{\\circ}\\)，求\\(\\angle ABC\\)的度数。`,
+            answer: `## 证明过程
+
+**第一步：证明\\(\\triangle ABD \\cong \\triangle ACD\\)**
+
+因为：
+- \\(AB = AC\\)（已知）
+- \\(AD = AD\\)（公共边）  
+- \\(BD = CD\\)（\\(D\\)是\\(BC\\)中点）
+
+所以根据SSS判定定理，\\(\\triangle ABD \\cong \\triangle ACD\\)
+
+**第二步：求\\(\\angle ABC\\)的度数**
+
+因为\\(AB = AC\\)，所以\\(\\triangle ABC\\)是等腰三角形
+
+在等腰三角形中，\\(\\angle ABC = \\angle ACB\\)
+
+由三角形内角和定理：
+\\(\\angle BAC + \\angle ABC + \\angle ACB = 180^{\\circ}\\)
+
+代入已知条件：
+\\(60^{\\circ} + 2\\angle ABC = 180^{\\circ}\\)
+
+解得：\\(\\angle ABC = 60^{\\circ}\\)
+
+因此\\(\\triangle ABC\\)是等边三角形。`
+        },
+        {
+            id: 2,
+            title: "二次函数的性质",
+            category: "algebra", 
+            difficulty: "easy",
+            createTime: "2024-01-15",
+            content: `已知二次函数\\(f(x) = ax^2 + bx + c\\)的图像经过点\\((0, 3)\\)，\\((1, 2)\\)，\\((2, 5)\\)。
+
+1. 求函数解析式
+2. 求函数的对称轴和顶点坐标
+3. 求函数的最小值`,
+            answer: `## 解答
+
+**1. 求函数解析式**
+
+将三个点代入函数式：
+- \\(f(0) = c = 3\\)
+- \\(f(1) = a + b + c = 2\\)
+- \\(f(2) = 4a + 2b + c = 5\\)
+
+解方程组：
+- \\(c = 3\\)
+- \\(a + b = -1\\)
+- \\(4a + 2b = 2\\)
+
+解得：\\(a = 2\\)，\\(b = -3\\)，\\(c = 3\\)
+
+所以\\(f(x) = 2x^2 - 3x + 3\\)
+
+**2. 对称轴和顶点坐标**
+
+对称轴：\\(x = -\\frac{b}{2a} = \\frac{3}{4}\\)
+
+顶点坐标：\\((\\frac{3}{4}, f(\\frac{3}{4})) = (\\frac{3}{4}, \\frac{15}{8})\\)
+
+**3. 最小值**
+
+因为\\(a = 2 > 0\\)，抛物线开口向上，所以最小值为\\(\\frac{15}{8}\\)`
+        }
+    ];
+    
+    mathQuestions = [...mathQuestions, ...sampleQuestions];
+    saveQuestions();
+    renderQuestions();
+    alert('示例题目加载成功！');
+}
+
+// 导出题库到JSON文件
+function exportQuestions() {
+    if (mathQuestions.length === 0) {
+        alert('题库为空，无法导出！');
+        return;
+    }
+    
+    const dataToExport = {
+        version: "1.0",
+        exportTime: new Date().toISOString(),
+        description: "数学题库导出数据",
+        totalQuestions: mathQuestions.length,
+        questions: mathQuestions
+    };
+    
+    const dataStr = JSON.stringify(dataToExport, null, 2);
+    const dataBlob = new Blob([dataStr], {type: 'application/json'});
+    
+    const link = document.createElement('a');
+    link.href = URL.createObjectURL(dataBlob);
+    link.download = `math_questions_${new Date().toISOString().slice(0,10)}.json`;
+    
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+    
+    alert(`成功导出 ${mathQuestions.length} 道题目！`);
+}
+
+// 触发导入文件选择
+function importQuestions() {
+    document.getElementById('importFile').click();
+}
+
+// 处理导入的文件
+function handleImportFile(event) {
+    const file = event.target.files[0];
+    if (!file) return;
+    
+    const reader = new FileReader();
+    reader.onload = function(e) {
+        try {
+            const importData = JSON.parse(e.target.result);
+            
+            if (importData.questions && Array.isArray(importData.questions)) {
+                const importCount = importData.questions.length;
+                
+                if (confirm(`确定要导入 ${importCount} 道题目吗？这将添加到现有题库中。`)) {
+                    // 为导入的题目分配新的ID，避免冲突
+                    const maxId = mathQuestions.length > 0 ? Math.max(...mathQuestions.map(q => q.id)) : 0;
+                    
+                    importData.questions.forEach((question, index) => {
+                        question.id = maxId + index + 1;
+                        question.createTime = question.createTime || new Date().toLocaleDateString();
+                    });
+                    
+                    mathQuestions = [...mathQuestions, ...importData.questions];
+                    saveQuestions();
+                    renderQuestions();
+                    
+                    alert(`成功导入 ${importCount} 道题目！`);
+                } else {
+                    alert('导入已取消。');
+                }
+            } else {
+                alert('文件格式错误：缺少有效的题目数据！');
+            }
+        } catch (error) {
+            alert('文件格式错误：无法解析JSON文件！');
+            console.error('Import error:', error);
+        }
+    };
+    
+    reader.readAsText(file);
+    
+    // 清除文件输入，允许重复导入同一文件
+    event.target.value = '';
+}
+
+// 页面加载时初始化
+document.addEventListener('DOMContentLoaded', function() {
+    loadQuestions();
+});
+</script>
+</body>
+</html>
