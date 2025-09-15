@@ -15,8 +15,8 @@
     {
       "id": 1757656292855,
       "title": "求四边形面积",
-      "content": "如图，在四边形 ABCD 中，\\(AB=AD,\\)\\(AC=5,∠DAB=∠DCB=90^{\\circ }\\), 求四边形 ABCD 的面积.\n\n![img](https://p6-hippo-sign.byteimg.com/tos-cn-i-a9yeduch1e/48be4bde71dc4053994f598a4052ef94~tplv-ii0cwwkcx9-resize-crop-v1:400:129:660:324:0:0.jpeg?lk3s=6d071cf4&x-expires=2072874151&x-signature=TGQhuHT0JeYQF%2FI9bVD97lg4cbk%3D)",
-      "answer": "# 解答\n解:如图,过点 A 作$AE⊥AC$,交 CB 的延长线于点E. \n![img](https://p3-hippo-sign.byteimg.com/tos-cn-i-a9yeduch1e/c3961300a7414bd18528dff5b3780956~tplv-ii0cwwkcx9-resize-crop-v1:178:86:453:261:0:0.jpeg?lk3s=6d071cf4&x-expires=2072874151&x-signature=5UgXpJgLNon%2Fu4IZ4jsQZJ3OgKA%3D)\nE \n$\\because ∠DAB=∠DCB=90^{\\circ },$\n$\\therefore ∠D+∠ABC=180^{\\circ }=∠ABE+∠ABC$\n$\\therefore ∠D=∠ABE.$\n又$\\because ∠DAB=∠CAE=90^{\\circ },$\n$\\therefore ∠CAD=∠EAB.$\n又$\\because AD=AB,$\n$\\therefore △ACD\\cong △AEB(ASA),$\n∴AC=AE,即$△ACE$是等腰直角三角形, \n∴四边形 ABCD 的面积与$△ACE$的面积相等. \n$\\because S_{△ACE}=\\frac {1}{2}×5×5=12.5,$\n∴四边形 ABCD 的面积为 12. 5.",
+      "content": "如图，在四边形 ABCD 中，\\(AB=AD,\\)\\(AC=5,∠DAB=∠DCB=90^{\\circ }\\), 求四边形 ABCD 的面积.\n![img](1757656292855_q.webp)",
+      "answer": "# 解答\n解:如图,过点 A 作$AE⊥AC$,交 CB 的延长线于点E. \n![img](1757656292855_a.webp)\nE \n$\\because ∠DAB=∠DCB=90^{\\circ },$\n$\\therefore ∠D+∠ABC=180^{\\circ }=∠ABE+∠ABC$\n$\\therefore ∠D=∠ABE.$\n又$\\because ∠DAB=∠CAE=90^{\\circ },$\n$\\therefore ∠CAD=∠EAB.$\n又$\\because AD=AB,$\n$\\therefore △ACD\\cong △AEB(ASA),$\n∴AC=AE,即$△ACE$是等腰直角三角形, \n∴四边形 ABCD 的面积与$△ACE$的面积相等. \n$\\because S_{△ACE}=\\frac {1}{2}×5×5=12.5,$\n∴四边形 ABCD 的面积为 12. 5.",
       "category": "geometry",
       "difficulty": "easy",
       "createTime": "2025-09-12 10:15:00"
