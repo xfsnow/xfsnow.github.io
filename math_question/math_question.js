@@ -8,6 +8,20 @@ window.MathJax = {
             options: {
                 skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
                 ignoreHtmlClass: 'tex2jax_ignore'
+            },
+            config: {
+                categories: {
+                    "geometry": "几何",
+                    "algebra": "代数",
+                    "calculus": "微积分",
+                    "probability": "概率统计",
+                    "other": "其他"
+                },
+                difficulties: {
+                    "easy": "简单",
+                    "medium": "中等",
+                    "hard": "困难"
+                }
             }
 };
 
@@ -80,27 +94,24 @@ function updatePreview(type) {
 // 数学题库数据存储
 let mathQuestions = [];
 
-// 从math_questions.json加载题目
+// 从question.js中的math_question变量加载题目
 function loadQuestions() {
-    fetch('math_question.json')
-        .then(response => {
-            if (!response.ok) {
-                throw new Error('题目文件不存在或无法访问');
-            }
-            return response.json();
-        })
-        .then(data => {
-            if (data.questions && Array.isArray(data.questions)) {
-                mathQuestions = data.questions;
-                renderQuestions();
-                console.log(`成功加载 ${mathQuestions.length} 道题目`);
-            }
-        })
-        .catch(error => {
-            console.log('未找到题目文件，使用空题库');
+    try {
+        // 检查math_question变量是否存在
+        if (typeof math_question !== 'undefined' && math_question.questions && Array.isArray(math_question.questions)) {
+            mathQuestions = math_question.questions;
+            renderQuestions();
+            console.log(`成功加载 ${mathQuestions.length} 道题目`);
+        } else {
+            console.log('math_question变量不存在或格式错误，使用空题库');
             mathQuestions = [];
             renderQuestions();
-        });
+        }
+    } catch (error) {
+        console.log('加载题目时出错，使用空题库:', error);
+        mathQuestions = [];
+        renderQuestions();
+    }
 }
 
 // 渲染所有题目
@@ -158,6 +169,10 @@ function createQuestionCard(question, index) {
 
 // 获取分类名称
 function getCategoryName(category) {
+    if (window.MathJax && window.MathJax.config && window.MathJax.config.categories) {
+        return window.MathJax.config.categories[category] || category;
+    }
+    // 备用配置，防止MathJax未加载
     const names = {
         'geometry': '几何',
         'algebra': '代数', 
@@ -170,6 +185,10 @@ function getCategoryName(category) {
 
 // 获取难度名称
 function getDifficultyName(difficulty) {
+    if (window.MathJax && window.MathJax.config && window.MathJax.config.difficulties) {
+        return window.MathJax.config.difficulties[difficulty] || difficulty;
+    }
+    // 备用配置，防止MathJax未加载
     const names = {
         'easy': '简单',
         'medium': '中等',
@@ -268,7 +287,7 @@ function clearAllQuestions() {
     }
 }
 
-// 导出题库到JSON文件
+// 导出题库到question.js文件
 function exportQuestions() {
     if (mathQuestions.length === 0) {
         alert('题库为空，无法导出！');
@@ -276,25 +295,25 @@ function exportQuestions() {
     }
     
     const dataToExport = {
-        version: "1.0",
         exportTime: new Date().toISOString(),
-        description: "数学题库导出数据",
-        totalQuestions: mathQuestions.length,
+        description: "数学题库数据",
         questions: mathQuestions
     };
     
-    const dataStr = JSON.stringify(dataToExport, null, 2);
-    const dataBlob = new Blob([dataStr], {type: 'application/json'});
+    // 创建JavaScript文件内容
+    const jsContent = `var math_question = ${JSON.stringify(dataToExport, null, 2)};`;
+    
+    const dataBlob = new Blob([jsContent], {type: 'application/javascript'});
     
     const link = document.createElement('a');
     link.href = URL.createObjectURL(dataBlob);
-    link.download = `math_questions_${new Date().toISOString().slice(0,10)}.json`;
+    link.download = `question.js`;  // 固定文件名为question.js
     
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
     
-    alert(`成功导出 ${mathQuestions.length} 道题目！`);
+    alert(`成功导出 ${mathQuestions.length} 道题目到 question.js 文件！`);
 }
 
 // 触发导入文件选择
@@ -348,28 +367,16 @@ function handleImportFile(event) {
 
 // 页面加载时初始化
 document.addEventListener('DOMContentLoaded', function() {
-    // 等待MathJax加载完成后再加载题目
+    // 直接加载题目，不需要等待异步操作
+    loadQuestions();
+    
+    // 如果MathJax已加载，重新渲染一次确保公式正确显示
     if (window.MathJax && window.MathJax.startup && window.MathJax.startup.promise) {
         window.MathJax.startup.promise.then(() => {
-            loadQuestions();
-        });
-    } else {
-        // 如果MathJax还未初始化，等待一段时间后重试
-        let attempts = 0;
-        const checkMathJax = () => {
-            attempts++;
-            if (window.MathJax && window.MathJax.startup && window.MathJax.startup.promise) {
-                window.MathJax.startup.promise.then(() => {
-                    loadQuestions();
-                });
-            } else if (attempts < 50) { // 最多等待5秒
-                setTimeout(checkMathJax, 100);
-            } else {
-                // 超时后直接加载，不等待MathJax
-                console.warn('MathJax加载超时，直接加载题目');
-                loadQuestions();
+            const container = document.getElementById('questionsContainer');
+            if (container) {
+                safeMathJaxRender(container);
             }
-        };
-        checkMathJax();
+        });
     }
 });
