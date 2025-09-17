@@ -48,7 +48,6 @@ margin: 0;
 max-width: 1200px;
 width: 95%;
 margin: 0 auto;
-padding: 20px;
 }
 
 /* 响应式设计 */
@@ -304,6 +303,54 @@ resize: vertical;
 min-height: 120px;
 font-family: 'Consolas', 'Monaco', monospace;
 line-height: 1.5;
+}
+
+/* 专门为答案输入框设置更大的高度 */
+#questionAnswer {
+min-height: 180px;
+}
+
+/* 编辑表单样式 */
+.question-edit {
+background: #fef3c7;
+border: 2px solid #f59e0b;
+border-radius: 8px;
+margin-top: 10px;
+}
+
+.question-edit .question-header {
+background: #f59e0b;
+color: white;
+padding: 15px 20px;
+margin: 0;
+border-radius: 6px 6px 0 0;
+}
+
+.question-edit .question-header h4 {
+color: white;
+margin: 0;
+}
+
+.question-input-content {
+padding: 20px;
+}
+
+.question-edit .input-group {
+margin: 15px 0;
+}
+
+.question-edit .input-group label {
+color: #92400e;
+font-weight: 600;
+}
+
+.question-edit .input-row {
+display: flex;
+gap: 20px;
+}
+
+.question-edit .input-row .input-group {
+flex: 1;
 }
 
 /* 预览区域 */
@@ -600,7 +647,7 @@ line-height: 1.4;
 </div>
 
 <!-- 隐藏的文件输入 -->
-<input type="file" id="importFile" accept=".json" style="display: none;" onchange="handleImportFile(event)">
+<input type="file" id="importFile" accept=".js" style="display: none;" onchange="handleImportFile(event)">
 
 <!-- 添加题目区域 -->
 <div id="addQuestionArea" class="question-input-area" style="display: none;">

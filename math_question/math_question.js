@@ -133,34 +133,93 @@ function createQuestionCard(question, index) {
     const card = document.createElement('div');
     card.className = 'question-card';
     card.innerHTML = `
-        <div class="question-header">
-            <div>
-                <h4 class="question-title">${question.title}</h4>
-                <div class="question-meta">
-                    分类: ${getCategoryName(question.category)} | 
-                    难度: ${getDifficultyName(question.difficulty)} | 
-                    创建时间: ${question.createTime}
+        <div class="question-display" id="display-${index}">
+            <div class="question-header">
+                <div>
+                    <h4 class="question-title">${question.title}</h4>
+                    <div class="question-meta">
+                        分类: ${getCategoryName(question.category)} | 
+                        难度: ${getDifficultyName(question.difficulty)} | 
+                        创建时间: ${question.createTime}
+                    </div>
+                </div>
+                <div class="question-actions">
+                    <button class="btn btn-warning btn-sm" onclick="toggleEditMode(${index})" title="编辑题目">
+                        <i class="fas fa-edit"></i> 编辑
+                    </button>
+                    <button class="btn btn-secondary btn-sm" onclick="toggleAnswerVisibility(${index})" id="toggle-${index}">
+                        <i class="fas fa-eye"></i> 显示答案
+                    </button>
+                    <button class="btn btn-danger btn-sm" onclick="deleteQuestion(${index})">
+                        <i class="fas fa-trash"></i> 删除
+                    </button>
                 </div>
             </div>
-            <div class="question-actions">
-                <button class="btn btn-info btn-sm" onclick="toggleAnswerVisibility(${index})" id="toggle-${index}">
-                    <i class="fas fa-eye"></i> 显示答案
-                </button>
-                <button class="btn btn-danger btn-sm" onclick="deleteQuestion(${index})">
-                    <i class="fas fa-trash"></i>
-                </button>
+            <div class="question-content">
+                <div class="question-body">
+                    ${convertLatexToHTML(question.content)}
+                </div>
+                <div class="answer-space"></div>
+                <div class="answer-section" id="answer-${index}" style="display: none;">
+                    <h5 style="color: #059669; margin-bottom: 10px;">
+                        <i class="fas fa-lightbulb"></i> 参考答案：
+                    </h5>
+                    ${convertLatexToHTML(question.answer)}
+                </div>
             </div>
         </div>
-        <div class="question-content">
-            <div class="question-body">
-                ${convertLatexToHTML(question.content)}
+        
+        <div class="question-edit" id="edit-${index}" style="display: none;">
+            <div class="question-header">
+                <h4 style="color: #f59e0b;">
+                    <i class="fas fa-edit"></i> 编辑题目
+                </h4>
+                <div class="question-actions">
+                    <button class="btn btn-success btn-sm" onclick="saveQuestion(${index})" title="保存修改">
+                        <i class="fas fa-save"></i> 保存
+                    </button>
+                    <button class="btn btn-secondary btn-sm" onclick="cancelEditMode(${index})" title="取消编辑">
+                        <i class="fas fa-times"></i> 取消
+                    </button>
+                </div>
             </div>
-            <div class="answer-space"></div>
-            <div class="answer-section" id="answer-${index}" style="display: none;">
-                <h5 style="color: #059669; margin-bottom: 10px;">
-                    <i class="fas fa-lightbulb"></i> 参考答案：
-                </h5>
-                ${convertLatexToHTML(question.answer)}
+            <div class="question-input-content">
+                <div class="input-group">
+                    <label for="edit-title-${index}">题目标题：</label>
+                    <input type="text" id="edit-title-${index}" class="form-control" value="${question.title.replace(/"/g, '&quot;')}" placeholder="请输入题目标题">
+                </div>
+                
+                <div class="input-group">
+                    <label for="edit-content-${index}">题目内容：</label>
+                    <textarea id="edit-content-${index}" class="form-control" rows="6" placeholder="请输入题目内容，支持LaTeX数学公式">${question.content}</textarea>
+                </div>
+                
+                <div class="input-group">
+                    <label for="edit-answer-${index}">参考答案：</label>
+                    <textarea id="edit-answer-${index}" class="form-control" rows="8" placeholder="请输入参考答案，支持LaTeX数学公式">${question.answer}</textarea>
+                </div>
+                
+                <div class="input-row">
+                    <div class="input-group">
+                        <label for="edit-category-${index}">分类：</label>
+                        <select id="edit-category-${index}" class="form-control">
+                            <option value="geometry" ${question.category === 'geometry' ? 'selected' : ''}>几何</option>
+                            <option value="algebra" ${question.category === 'algebra' ? 'selected' : ''}>代数</option>
+                            <option value="calculus" ${question.category === 'calculus' ? 'selected' : ''}>微积分</option>
+                            <option value="probability" ${question.category === 'probability' ? 'selected' : ''}>概率统计</option>
+                            <option value="other" ${question.category === 'other' ? 'selected' : ''}>其他</option>
+                        </select>
+                    </div>
+                    
+                    <div class="input-group">
+                        <label for="edit-difficulty-${index}">难度：</label>
+                        <select id="edit-difficulty-${index}" class="form-control">
+                            <option value="easy" ${question.difficulty === 'easy' ? 'selected' : ''}>简单</option>
+                            <option value="medium" ${question.difficulty === 'medium' ? 'selected' : ''}>中等</option>
+                            <option value="hard" ${question.difficulty === 'hard' ? 'selected' : ''}>困难</option>
+                        </select>
+                    </div>
+                </div>
             </div>
         </div>
     `;
@@ -211,24 +270,51 @@ function toggleAnswerVisibility(index) {
     if (answerSection.style.display === 'none' || answerSection.style.display === '') {
         answerSection.style.display = 'block';
         toggleButton.innerHTML = '<i class="fas fa-eye-slash"></i> 隐藏答案';
-        toggleButton.classList.remove('btn-info');
-        toggleButton.classList.add('btn-warning');
+        toggleButton.classList.remove('btn-secondary');
+        toggleButton.classList.add('btn-success');
     } else {
         answerSection.style.display = 'none';
         toggleButton.innerHTML = '<i class="fas fa-eye"></i> 显示答案';
-        toggleButton.classList.remove('btn-warning');
-        toggleButton.classList.add('btn-info');
+        toggleButton.classList.remove('btn-success');
+        toggleButton.classList.add('btn-secondary');
     }
 }
 
 function toggleAddQuestion() {
     const area = document.getElementById('addQuestionArea');
-    area.style.display = area.style.display === 'none' ? 'block' : 'none';
+    const toggleButton = document.querySelector('button[onclick="toggleAddQuestion()"]');
+    
+    if (area.style.display === 'none' || area.style.display === '') {
+        // 显示添加题目区域
+        area.style.display = 'block';
+        // 更新按钮文字和样式
+        toggleButton.innerHTML = '<i class="fas fa-times"></i> 取消添加';
+        toggleButton.classList.remove('btn-success');
+        toggleButton.classList.add('btn-secondary');
+    } else {
+        // 隐藏添加题目区域
+        area.style.display = 'none';
+        // 恢复按钮文字和样式
+        toggleButton.innerHTML = '<i class="fas fa-plus"></i> 添加题目';
+        toggleButton.classList.remove('btn-secondary');
+        toggleButton.classList.add('btn-success');
+    }
 }
 
 // 取消添加题目
 function cancelAddQuestion() {
-    document.getElementById('addQuestionArea').style.display = 'none';
+    const area = document.getElementById('addQuestionArea');
+    const toggleButton = document.querySelector('button[onclick="toggleAddQuestion()"]');
+    
+    // 隐藏添加题目区域
+    area.style.display = 'none';
+    
+    // 恢复主按钮的文字和样式
+    toggleButton.innerHTML = '<i class="fas fa-plus"></i> 添加题目';
+    toggleButton.classList.remove('btn-secondary');
+    toggleButton.classList.add('btn-success');
+    
+    // 清空表单
     clearAddQuestionForm();
 }
 
@@ -266,9 +352,66 @@ function addQuestion() {
     
     mathQuestions.push(question);
     renderQuestions();
+    
+    // 取消添加题目（这会自动更新按钮状态）
     cancelAddQuestion();
     
     alert('题目添加成功！');
+}
+
+// 切换编辑模式
+function toggleEditMode(index) {
+    const displayDiv = document.getElementById(`display-${index}`);
+    const editDiv = document.getElementById(`edit-${index}`);
+    
+    displayDiv.style.display = 'none';
+    editDiv.style.display = 'block';
+}
+
+// 取消编辑模式
+function cancelEditMode(index) {
+    const displayDiv = document.getElementById(`display-${index}`);
+    const editDiv = document.getElementById(`edit-${index}`);
+    
+    displayDiv.style.display = 'block';
+    editDiv.style.display = 'none';
+    
+    // 恢复原始值
+    const question = mathQuestions[index];
+    document.getElementById(`edit-title-${index}`).value = question.title;
+    document.getElementById(`edit-content-${index}`).value = question.content;
+    document.getElementById(`edit-answer-${index}`).value = question.answer;
+    document.getElementById(`edit-category-${index}`).value = question.category;
+    document.getElementById(`edit-difficulty-${index}`).value = question.difficulty;
+}
+
+// 保存题目修改
+function saveQuestion(index) {
+    const title = document.getElementById(`edit-title-${index}`).value.trim();
+    const content = document.getElementById(`edit-content-${index}`).value.trim();
+    const answer = document.getElementById(`edit-answer-${index}`).value.trim();
+    const category = document.getElementById(`edit-category-${index}`).value;
+    const difficulty = document.getElementById(`edit-difficulty-${index}`).value;
+    
+    if (!title || !content || !answer) {
+        alert('请填写完整的题目信息！');
+        return;
+    }
+    
+    // 更新题目数据
+    mathQuestions[index] = {
+        ...mathQuestions[index],
+        title: title,
+        content: content,
+        answer: answer,
+        category: category,
+        difficulty: difficulty
+    };
+    
+    // 重新渲染题目列表
+    renderQuestions();
+    
+    alert('题目修改成功！');
 }
 
 // 删除题目
@@ -329,7 +472,16 @@ function handleImportFile(event) {
     const reader = new FileReader();
     reader.onload = function(e) {
         try {
-            const importData = JSON.parse(e.target.result);
+            const fileContent = e.target.result;
+            let importData;
+            
+            // 只支持JavaScript文件格式：var math_question = {...};
+            const jsonMatch = fileContent.match(/var\s+math_question\s*=\s*({[\s\S]*?});?\s*$/);
+            if (!jsonMatch) {
+                throw new Error('文件格式错误：请导入JavaScript变量格式的文件 (var math_question = ...)');
+            }
+            
+            importData = JSON.parse(jsonMatch[1]);
             
             if (importData.questions && Array.isArray(importData.questions)) {
                 const importCount = importData.questions.length;
@@ -354,7 +506,7 @@ function handleImportFile(event) {
                 alert('文件格式错误：缺少有效的题目数据！');
             }
         } catch (error) {
-            alert('文件格式错误：无法解析JSON文件！');
+            alert('文件格式错误：无法解析文件内容！请确保文件是有效的JavaScript变量格式。');
             console.error('Import error:', error);
         }
     };
