@@ -1,7 +1,6 @@
-{
-  "version": "1.0",
-  "lastUpdated": "2025-09-12",
-  "description": "数学题库数据文件",
+var math_question = {
+  "exportTime": "2025-09-16T12:13:34.153Z",
+  "description": "数学题库数据",
   "questions": [
    {
       "id": 1757645039353,
