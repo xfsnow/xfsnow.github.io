@@ -27,7 +27,7 @@ window.MathJax = {
 
 // LaTeX到HTML转换函数（简化版）
 function convertLatexToHTML(latex) {
-    let html = latex;
+    let html = latex.trim();
     
     // 处理Markdown标题
     html = html.replace(/^# (.*$)/gm, '<h1>$1</h1>');
@@ -38,7 +38,7 @@ function convertLatexToHTML(latex) {
     html = html.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
     
     // 处理Markdown图片链接
-    html = html.replace(/!\[([^\]]*)\]\(([^)]+)\)/g, '<img src="$2" alt="$1" style="max-width: 100%; height: auto; margin: 10px 0; border-radius: 4px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">');
+    html = html.replace(/!\[([^\]]*)\]\(([^)]+)\)/g, '<img src="$2" alt="$1" style="max-width: 100%; height: auto; margin: 10px 0;">');
     
     // 处理多行段落：先将双换行转换为段落分隔符
     html = html.replace(/\n\n+/g, '</p><p>');
@@ -49,10 +49,25 @@ function convertLatexToHTML(latex) {
     // 处理单个换行为<br>
     html = html.replace(/\n/g, '<br>');
     
-    // 清理空段落
+    // 清理标题后面紧接的<br>
+    html = html.replace(/(<\/h[1-6]>)<br>/g, '$1');
+    
+    // 清理空段落和只包含空白字符的段落
     html = html.replace(/<p><\/p>/g, '');
     html = html.replace(/<p>\s*<\/p>/g, '');
     html = html.replace(/<p><br><\/p>/g, '');
+    html = html.replace(/<p>(\s*<br>\s*)+<\/p>/g, '');
+    
+    // 清理连续的<br>标签（超过2个）
+    html = html.replace(/(<br>\s*){3,}/g, '<br><br>');
+    
+    // 清理段落开头和结尾的<br>
+    html = html.replace(/<p><br>/g, '<p>');
+    html = html.replace(/<br><\/p>/g, '</p>');
+    
+    // 最终清理：再次检查空段落
+    html = html.replace(/<p><\/p>/g, '');
+    html = html.replace(/<p>\s*<\/p>/g, '');
     
     return html;
 }

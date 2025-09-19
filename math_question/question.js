@@ -1,5 +1,5 @@
 var math_question = {
-  "exportTime": "2025-09-17T08:14:46.222Z",
+  "exportTime": "2025-09-19T03:25:59.656Z",
   "description": "数学题库数据",
   "questions": [
     {
@@ -37,6 +37,15 @@ var math_question = {
       "category": "geometry",
       "difficulty": "medium",
       "createTime": "2025-09-16 12:13:19"
+    },
+    {
+      "id": 1758186154839,
+      "title": "面积为2.5的三角形",
+      "content": "如图，在锐角三角形$ABC$中，$∠BAC=60^{\\circ }$，$BE、CD分别为△ABC的角平分线。BE、CD 相交于点 F$。已知$BD=3,CE=2,△BFC$的面积$=2.5$，求$△BCD$的面积= ____ . \n![img](BFC2.5_q.webp)",
+      "answer": "## 分析\n本题涉及角平分线的性质、三角形内角和定理、邻补角定义、全等三角形的判定与性质以及三角形面积公式。先利用角平分线性质计算找出相等角，进而证明全等三角形得出线段关系，最后根据面积公式求解。\n## 详解\n# 💡解答\n### 1. 求相关角度\n![img](BFC2.5_a.webp)\n做辅助线 \\(FG\\) 为 \\(\\angle BFC\\) 的角平分线。\n\n - 已知\\(\\angle BAC = 60^{\\circ}\\)，根据三角形内角和定理，在\\(\\triangle ABC\\)中，\\(\\angle ABC+\\angle ACB = 180^{\\circ}-\\angle BAC\\)。\n将\\(\\angle BAC = 60^{\\circ}\\)代入可得：\\(\\angle ABC+\\angle ACB = 180^{\\circ}- 60^{\\circ}=120^{\\circ}\\)。\n - 因为\\(BE\\)、\\(CD\\)分别平分\\(\\angle ABC\\)、\\(\\angle ACB\\)，所以\\(\\angle EBC+\\angle DCB=\\frac{1}{2}\\angle ABC+\\frac{1}{2}\\angle ACB=\\frac{1}{2}(\\angle ABC + \\angle ACB)\\)。\n把\\(\\angle ABC+\\angle ACB = 120^{\\circ}\\)代入得：\\(\\angle EBC+\\angle DCB=\\frac{1}{2}\\times120^{\\circ}=60^{\\circ}\\)。\n - 在\\(\\triangle BFC\\)中，由三角形内角和定理可知\\(\\angle BFC = 180^{\\circ}-(\\angle EBC+\\angle DCB)\\)。\n将\\(\\angle EBC+\\angle DCB = 60^{\\circ}\\)代入得：\\(\\angle BFC = 180^{\\circ}-60^{\\circ}=120^{\\circ}\\)。\n - 因为\\(\\angle BFC\\)与\\(\\angle BFD\\)互为邻补角，所以\\(\\angle BFD = 180^{\\circ}-\\angle BFC\\)。\n把\\(\\angle BFC = 120^{\\circ}\\)代入得：\\(\\angle BFD = 180^{\\circ}-120^{\\circ}=60^{\\circ}\\)。\n - 因为\\(FG\\)平分\\(\\angle BFC\\)，所以\\(\\angle BFG=\\frac{1}{2}\\angle BFC\\)。\n将\\(\\angle BFC = 120^{\\circ}\\)代入得：\\(\\angle BFG=\\frac{1}{2}\\times120^{\\circ}=60^{\\circ}\\)，即\\(\\angle BFD=\\angle BFG = 60^{\\circ}\\)。\n\n### 2. 证明全等三角形\n - 在\\(\\triangle BDF\\)和\\(\\triangle BGF\\)中：\n    - \\(\\angle BFD=\\angle BFG\\)（已证）；\n    - \\(BF = BF\\)（公共边）；\n    - 因为\\(BE\\)是角平分线，所以\\(\\angle DBF=\\angle GBF\\)。\n根据全等三角形判定定理“角 - 边 - 角”（ASA），可得\\(\\triangle BDF\\cong\\triangle BGF\\)，所以\\(BD = BG\\)。\n - 同理，在\\(\\triangle CEF\\)和\\(\\triangle CGF\\)中：\n    - 因为\\(EF\\)平分\\(\\angle AEC\\)，所以\\(\\angle CEF=\\angle GEF\\)；\n    - \\(EF = EF\\)（公共边）；\n    - 因为\\(FG\\)平分\\(\\angle BFC\\)，\\(\\angle EFC=\\angle EFG = 90^{\\circ}\\)（由\\(DF\\perp FG\\)，\\(EF\\perp FG\\)及角平分线性质可得）。\n根据 ASA 定理，可证明\\(\\triangle CEF\\cong\\triangle CGF\\)，所以\\(CE = CG\\)。\n\n### 3. 求\\(BC\\)的长度\n因为\\(BC = BG+CG\\)，且\\(BD = BG = 3\\)，\\(CE = CG = 2\\)，所以\\(BC = BD + CE=3 + 2 = 5\\)。\n\n### 4. 求\\(\\triangle BCD\\)的面积\n - 已知\\(S_{\\triangle BFC}=2.5\\)，设\\(\\triangle BFC\\)中\\(BC\\)边上的高为\\(h\\)。\n根据三角形面积公式\\(S=\\frac{1}{2}\\times\\text{底}\\times\\text{高}\\)，即\\(2.5=\\frac{1}{2}\\times5\\times h\\)。\n解方程\\(2.5=\\frac{1}{2}\\times5\\times h\\)：\n\\[\n\\begin{align*}\n\\frac{1}{2}\\times5\\times h&=2.5\\\\\n\\frac{5h}{2}&=2.5\\\\\n5h&=2.5\\times2\\\\\n5h&=5\\\\\nh&=1\n\\end{align*}\n\\]\n - 对于\\(\\triangle BGF\\)，以\\(BG = 3\\)为底，高与\\(\\triangle BFC\\)相同（均为\\(h = 1\\)）。\n根据三角形面积公式可得其面积为\\(S_{\\triangle BGF}=\\frac{1}{2}\\times3\\times1 = 1.5\\)。\n - 又因为\\(\\triangle BGF\\cong\\triangle BDF\\)，所以\\(S_{\\triangle BDF}=S_{\\triangle BGF}=1.5\\)。\n - 则\\(S_{\\triangle BCD}=S_{\\triangle BDF}+S_{\\triangle BFC}=1.5 + 2.5 = 4\\)。\n\n综上，\\(BC\\)的长度为\\(5\\)，\\(\\triangle BCD\\)的面积为\\(4\\)。",
+      "category": "geometry",
+      "difficulty": "easy",
+      "createTime": "2025-09-18 09:02:34"
     }
   ]
 };

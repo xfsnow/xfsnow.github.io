@@ -1,5 +1,22 @@
 # 📚 数学题库系统使用指南
 
+DeepSeek + GeoGebra 辅助绘图
+https://www.bilibili.com/video/BV1v9fPYbEBQ/
+
+https://chat-with-geogebra.ivory.cafe/
+
+https://github.com/tiwe0/chat-with-geogebra
+
+# 使用 Python 画图
+
+## 生成 Python 代码的提示语。
+总体样式要求：
+* 所有点都不使用圆点
+* 所有标点字母都使用黑色，Roman 体的斜体。
+* 最外层的大图形以及主体图形边框使用黑色
+* 只要遇到直角或垂线，都在直角和垂线处用一个小方框标记一下，不用写 90 度的文字。
+
+
 ## 系统概述
 
 这是一个完整的数学题库管理系统，支持题目的存储、展示、答案切换和打印功能。系统使用 LaTeX 格式保存数学公式，通过 MathJax 进行渲染。
