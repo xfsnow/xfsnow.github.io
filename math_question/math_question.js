@@ -77,7 +77,7 @@ class MathQuestionBank {
             { pattern: /\*\*(.*?)\*\*/g, replacement: '<strong>$1</strong>' },
             
             // 处理Markdown图片链接
-            { pattern: /!\[([^\]]*)\]\(([^)]+)\)/g, replacement: '<img src="$2" alt="$1" style="max-width: 100%; height: auto; margin: 10px 0;">' }
+            { pattern: /!\[([^\]]*)\]\(([^)]+)\)/g, replacement: '<img src="$2" alt="$1" class="graphic">' }
         ];
         
         // 执行转换规则
@@ -264,7 +264,7 @@ class MathQuestionBank {
                     </div>
                     <div class="answer-space"></div>
                     <div class="answer-section" id="answer-${index}" style="display: none;">
-                        <h5 style="color: #059669; margin-bottom: 10px;">
+                        <h5 class="answer-ref">
                             <i class="fas fa-lightbulb"></i> 参考答案：
                         </h5>
                         ${this.convertLatexToHTML(question.answer)}
@@ -274,7 +274,7 @@ class MathQuestionBank {
             
             <div class="question-edit" id="edit-${index}" style="display: none;">
                 <div class="question-header">
-                    <h4 style="color: #f59e0b;">
+                    <h4>
                         <i class="fas fa-edit"></i> 编辑题目
                     </h4>
                     <div class="question-actions">
