@@ -41,6 +41,14 @@
   box-sizing: border-box;
 }
 
+.azure-endpoint-input,
+.azure-model-input {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 15px;
+  box-sizing: border-box;
+}
+
 #system-prompt {
   width: 100%;
   min-height: 300px;

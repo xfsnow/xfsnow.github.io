@@ -20,15 +20,27 @@
       <div class="model-selection">
         <label for="model-select">选择模型:</label>
         <select id="model-select" class="model-select">
-          <option value="openai">OpenAI</option>
-          <option value="azure-openai">Azure OpenAI</option>
           <option value="deepseek" selected>DeepSeek</option>
+          <option value="azure-openai">Azure OpenAI</option>
+          <option value="openai">OpenAI原版</option>
         </select>
       </div>
       
       <div class="api-key-section">
         <label for="api-key">API 密钥:</label>
         <input type="password" id="api-key" class="api-key-input" placeholder="请输入您的 API 密钥">
+      </div>
+      
+      <div class="azure-section" id="azure-section" style="display: none;">
+        <div class="azure-endpoint-section">
+          <label for="azure-endpoint">Azure OpenAI访问端点:</label>
+          <input type="text" id="azure-endpoint" class="azure-endpoint-input" placeholder="请输入Azure OpenAI访问端点">
+        </div>
+        
+        <div class="azure-model-section">
+          <label for="azure-model">模型名称:</label>
+          <input type="text" id="azure-model" class="azure-model-input" placeholder="请输入模型名称">
+        </div>
       </div>
       
       <div class="system-prompt-section">
@@ -117,5 +129,17 @@ GeoGebra支持的命令类型包括：
       <button id="execute-btn">执行全部命令</button>
     </div>
   </div>
+  
+  <script>
+    // 模型选择变化时的处理逻辑
+    document.getElementById('model-select').addEventListener('change', function() {
+      const azureSection = document.getElementById('azure-section');
+      if (this.value === 'azure-openai') {
+        azureSection.style.display = 'block';
+      } else {
+        azureSection.style.display = 'none';
+      }
+    });
+  </script>
 </body>
 </html>

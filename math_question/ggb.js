@@ -12,6 +12,8 @@ window.addEventListener("load", function() {
       this.apiKeyInput = null;
       this.modelSelect = null;
       this.systemPrompt = null;
+      this.azureEndpointInput = null;
+      this.azureModelInput = null;
       
       this.init();
     }
@@ -47,6 +49,8 @@ window.addEventListener("load", function() {
       this.apiKeyInput = document.getElementById('api-key');
       this.modelSelect = document.getElementById('model-select');
       this.systemPrompt = document.getElementById('system-prompt');
+      this.azureEndpointInput = document.getElementById('azure-endpoint');
+      this.azureModelInput = document.getElementById('azure-model');
     }
     
     // 绑定事件
@@ -117,8 +121,31 @@ window.addEventListener("load", function() {
       // 构造对话历史
       const chatHistory = this.getChatHistory();
       
-      // 调用DeepSeek API
-      this.callDeepSeekAPI(message, apiKey, systemMessage, chatHistory);
+      // 根据选择的模型调用相应的API
+      const selectedModel = this.modelSelect.value;
+      switch (selectedModel) {
+        case 'azure-openai':
+          // 检查Azure OpenAI必需的参数
+          const azureEndpoint = this.azureEndpointInput.value.trim();
+          const azureModel = this.azureModelInput.value.trim();
+          if (!azureEndpoint) {
+            this.displayMessage('请先输入Azure OpenAI访问端点', 'ai');
+            return;
+          }
+          if (!azureModel) {
+            this.displayMessage('请先输入模型名称', 'ai');
+            return;
+          }
+          this.callAzureOpenAIAPI(message, apiKey, systemMessage, chatHistory, azureEndpoint, azureModel);
+          break;
+        case 'openai':
+          this.callOpenAIAPI(message, apiKey, systemMessage, chatHistory);
+          break;
+        case 'deepseek':
+        default:
+          this.callDeepSeekAPI(message, apiKey, systemMessage, chatHistory);
+          break;
+      }
     }
     
     // 显示消息
@@ -226,6 +253,227 @@ window.addEventListener("load", function() {
                 try {
                   const parsed = JSON.parse(data);
                   const content = parsed.choices[0].delta.content;
+                  if (content) {
+                    fullResponse += content;
+                    // 更新思考消息内容
+                    thinkingMessage.textContent = fullResponse;
+                  }
+                } catch (e) {
+                  // 忽略解析错误
+                }
+              }
+            });
+            
+            // 继续读取流
+            readStream();
+          }).catch(error => {
+            // 移除思考消息
+            if (thinkingMessage.parentNode) {
+              this.chatContainer.removeChild(thinkingMessage);
+            }
+            this.displayMessage('错误: ' + error.message, 'ai');
+          });
+        };
+        
+        // 开始读取流
+        readStream();
+      })
+      .catch(error => {
+        // 移除思考消息
+        if (thinkingMessage.parentNode) {
+          this.chatContainer.removeChild(thinkingMessage);
+        }
+        this.displayMessage('错误: ' + error.message, 'ai');
+      });
+    }
+    
+    // 调用OpenAI API
+    callOpenAIAPI(userMessage, apiKey, systemMessage, chatHistory) {
+      // 显示思考过程消息
+      const thinkingMessage = this.displayMessage('AI正在思考...', 'ai', true);
+      
+      // 构造消息数组
+      const messages = [];
+      if (systemMessage) {
+        messages.push({ role: 'system', content: systemMessage });
+      }
+      
+      // 添加历史对话
+      messages.push(...chatHistory);
+      
+      // 添加当前用户消息
+      messages.push({ role: 'user', content: userMessage });
+      
+      // 发送请求到OpenAI API
+      fetch('https://api.openai.com/v1/chat/completions', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': 'Bearer ' + apiKey
+        },
+        body: JSON.stringify({
+          model: 'gpt-3.5-turbo',
+          messages: messages,
+          stream: true  // 启用流式传输
+        })
+      })
+      .then(response => {
+        if (!response.ok) {
+          throw new Error('API请求失败: ' + response.status);
+        }
+        
+        // 处理流式响应
+        const reader = response.body.getReader();
+        const decoder = new TextDecoder('utf-8');
+        let fullResponse = '';
+        
+        // 递归读取流数据
+        const readStream = () => {
+          reader.read().then(({ done, value }) => {
+            if (done) {
+              // 流结束，移除思考消息，显示完整响应
+              if (thinkingMessage.parentNode) {
+                this.chatContainer.removeChild(thinkingMessage);
+              }
+              this.displayMessage(fullResponse, 'ai');
+              
+              // 提取GeoGebra命令并填充到命令区域
+              this.extractAndFillGgbCommands(fullResponse);
+              return;
+            }
+            
+            // 解码数据
+            const chunk = decoder.decode(value, { stream: true });
+            const lines = chunk.split('\n');
+            
+            // 处理每个数据行
+            lines.forEach(line => {
+              if (line.startsWith('data: ')) {
+                const data = line.slice(6);
+                if (data === '[DONE]') {
+                  return;
+                }
+                
+                try {
+                  const parsed = JSON.parse(data);
+                  const content = parsed.choices[0].delta.content;
+                  if (content) {
+                    fullResponse += content;
+                    // 更新思考消息内容
+                    thinkingMessage.textContent = fullResponse;
+                  }
+                } catch (e) {
+                  // 忽略解析错误
+                }
+              }
+            });
+            
+            // 继续读取流
+            readStream();
+          }).catch(error => {
+            // 移除思考消息
+            if (thinkingMessage.parentNode) {
+              this.chatContainer.removeChild(thinkingMessage);
+            }
+            this.displayMessage('错误: ' + error.message, 'ai');
+          });
+        };
+        
+        // 开始读取流
+        readStream();
+      })
+      .catch(error => {
+        // 移除思考消息
+        if (thinkingMessage.parentNode) {
+          this.chatContainer.removeChild(thinkingMessage);
+        }
+        this.displayMessage('错误: ' + error.message, 'ai');
+      });
+    }
+    
+    // 调用Azure OpenAI API
+    callAzureOpenAIAPI(userMessage, apiKey, systemMessage, chatHistory, endpoint, deployment) {
+      // 显示思考过程消息
+      const thinkingMessage = this.displayMessage('AI正在思考...', 'ai', true);
+      
+      // 构造消息数组
+      const messages = [];
+      if (systemMessage) {
+        messages.push({ role: 'system', content: systemMessage });
+      }
+      
+      // 添加历史对话
+      messages.push(...chatHistory);
+      
+      // 添加当前用户消息
+      messages.push({ role: 'user', content: userMessage });
+      
+      // 确保端点URL以斜杠结尾，并构建完整的API URL
+      let fullEndpoint = endpoint;
+      if (!endpoint.endsWith('/')) {
+        fullEndpoint = endpoint + '/';
+      }
+      // 构建正确的Azure OpenAI API URL
+      fullEndpoint += `openai/deployments/${deployment}/chat/completions?api-version=2025-01-01-preview`;
+      
+      // 发送请求到Azure OpenAI API
+      fetch(fullEndpoint, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'api-key': apiKey
+        },
+        body: JSON.stringify({
+          messages: messages,
+          max_tokens: 6553,
+          temperature: 0.7,
+          top_p: 0.95,
+          frequency_penalty: 0,
+          presence_penalty: 0,
+          stop: null,
+          stream: true  // 启用流式传输
+        })
+      })
+      .then(response => {
+        if (!response.ok) {
+          throw new Error('API请求失败: ' + response.status);
+        }
+        
+        // 处理流式响应
+        const reader = response.body.getReader();
+        const decoder = new TextDecoder('utf-8');
+        let fullResponse = '';
+        
+        // 递归读取流数据
+        const readStream = () => {
+          reader.read().then(({ done, value }) => {
+            if (done) {
+              // 流结束，移除思考消息，显示完整响应
+              if (thinkingMessage.parentNode) {
+                this.chatContainer.removeChild(thinkingMessage);
+              }
+              this.displayMessage(fullResponse, 'ai');
+              
+              // 提取GeoGebra命令并填充到命令区域
+              this.extractAndFillGgbCommands(fullResponse);
+              return;
+            }
+            
+            // 解码数据
+            const chunk = decoder.decode(value, { stream: true });
+            const lines = chunk.split('\n');
+            
+            // 处理每个数据行
+            lines.forEach(line => {
+              if (line.startsWith('data: ')) {
+                const data = line.slice(6);
+                if (data === '[DONE]') {
+                  return;
+                }
+                
+                try {
+                  const parsed = JSON.parse(data);
+                  const content = parsed.choices && parsed.choices[0] && parsed.choices[0].delta && parsed.choices[0].delta.content;
                   if (content) {
                     fullResponse += content;
                     // 更新思考消息内容
