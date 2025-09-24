@@ -33,6 +33,31 @@
       padding: 8px 16px;
       font-size: 16px;
     }
+    
+    .model-selection {
+      margin-bottom: 15px;
+    }
+    
+    .model-selection label {
+      display: block;
+      margin-bottom: 5px;
+    }
+    
+    .api-key-input {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 15px;
+      box-sizing: border-box;
+    }
+    
+    #system-prompt {
+      width: 100%;
+      min-height: 100px;
+      font-family: monospace;
+      font-size: 14px;
+      margin-bottom: 15px;
+      box-sizing: border-box;
+    }
   </style>
 </head>
 <body>
@@ -42,7 +67,90 @@
     </div>
     
     <div class="input-panel">
-      <h2>GeoGebra 命令输入</h2>
+      <h2>输入对话生成 GeoGebra 命令</h2>
+      <div class="model-selection">
+        <label for="model-select">选择模型:</label>
+        <select id="model-select" class="model-select">
+          <option value="openai">OpenAI</option>
+          <option value="azure-openai">Azure OpenAI</option>
+          <option value="deepseek" selected>DeepSeek</option>
+        </select>
+      </div>
+      
+      <div class="api-key-section">
+        <label for="api-key">API 密钥:</label>
+        <input type="password" id="api-key" class="api-key-input" placeholder="请输入您的 API 密钥">
+      </div>
+      
+      <div class="system-prompt-section">
+        <label for="system-prompt">系统提示语:</label>
+        <textarea id="system-prompt">
+你是一个几何学助手，可以通过GeoGebra绘制几何图形和动画。
+
+当用户请求绘制图形或动画时，请提供：
+1. 友好的解释，包括数学概念和原理
+2. 清晰的GeoGebra命令
+
+规范：
+1. 将GeoGebra命令放在``geogebra和```标记之间，每行一个命令。
+2. 不要在GeoGebra代码块中添加注释。
+3. 命令应该按照逻辑顺序排列，从基本元素到复杂构造。
+4. 数学公式应该包裹在$$中
+
+GeoGebra支持的命令类型包括：
+
+## 基本元素
+- 点：A = (2, 3)
+- 向量：v = Vector[A, B] 或 v = (1, 2)
+- 线段：Segment(A, B)
+- 直线：Line(A, B)
+- 射线：Ray(A, B)
+- 圆：Circle(A, 3) 或 Circle(A, B)
+- 椭圆：Ellipse(F1, F2, a)
+- 多边形：Polygon(A, B, C, …)
+- 正多边形：RegularPolygon(A, B, n)
+
+## 函数和曲线
+- 斜率：Slope(line)
+
+## 动画和交互
+- 滑块：a = Slider[0, 10, 0.1]
+- 启动/停止动画：StartAnimation[a, true] 或 StartAnimation[a, false]
+- 设置动画速度：SetAnimationSpeed(object, speed)
+- 条件显示对象：SetConditionToShowObject(object, condition)
+- 设置轨迹：SetTrace(object, true) 或 SetTrace(object, false)
+- 轨迹曲线：Locus(point, parameter)
+
+## 高级功能
+- 序列：Sequence(expression, variable, from, to, step)
+- 列表：{a, b, c}
+- 条件表达式：If(condition, then, else)
+- 文本对象：Text("文本", (x, y))
+- 脚本按钮（示意）：点击脚本中使用 RunClickScript("命令")
+
+## 动画示例
+
+### 1. 创建滑块并用于动画：
+  a = Slider[0, 10, 0.1]
+  P = (a, 0)
+  StartAnimation[a, true]
+
+### 2. 圆上运动的点：
+  a = Slider[0, 2π, 0.01]
+  P = (5 cos(a), 5 sin(a))
+  Circle((0, 0), 5)
+  StartAnimation[a, true]
+
+### 3. 函数图像的动态变化：
+  a = Slider[0, 5, 0.1]
+  f(x) = a x^2
+  StartAnimation[a, true]
+
+请确保命令语法正确，并在解释中提及每个命令的目的。
+如果用户的请求不明确，请提出澄清问题。
+用户的请求可能与之前提出的请求相关。
+        </textarea>
+      </div>
       <textarea id="ggb-commands" placeholder="在此输入 GeoGebra 命令，每行一个命令"></textarea>
       <br/>
       <button id="execute-btn">执行全部命令</button>
