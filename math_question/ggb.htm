@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8"/>
+  <title>Basic Construct</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
+  <!-- 使用 GeoGebra 的标准部署版本 -->
+  <script src="https://cdn.geogebra.org/apps/deployggb.js"></script>
+  <style>
+    .container {
+      display: flex;
+      flex-direction: row;
+    }
+    
+    .input-panel {
+      flex: 1;
+      padding: 10px;
+    }
+    
+    .ggb-panel {
+      padding: 10px;
+    }
+    
+    #ggb-commands {
+      width: 100%;
+      min-height: 300px;
+      font-family: monospace;
+      font-size: 14px;
+    }
+    
+    #execute-btn {
+      margin-top: 10px;
+      padding: 8px 16px;
+      font-size: 16px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="ggb-panel">
+      <div id="ggb-element"></div>
+    </div>
+    
+    <div class="input-panel">
+      <h2>GeoGebra 命令输入</h2>
+      <textarea id="ggb-commands" placeholder="在此输入 GeoGebra 命令，每行一个命令"></textarea>
+      <br/>
+      <button id="execute-btn">执行全部命令</button>
+    </div>
+  </div>
+
+  <script>
+    var ggbApp = new GGBApplet({
+      "width": 600,
+      "height": 600,
+      "showToolBar": true,
+      "showAlgebraInput": true,
+      "showMenuBar": true,
+      "allowStyleBar": true,
+      "language": "zh"
+    }, true);
+    ggbApp.inject('ggb-element');
+    
+    // 等待 GeoGebra 应用加载完成
+    window.addEventListener("load", function() {
+      // 获取按钮和文本框元素
+      const executeBtn = document.getElementById('execute-btn');
+      const commandArea = document.getElementById('ggb-commands');
+      
+      // 添加按钮点击事件
+      executeBtn.addEventListener('click', function() {
+        const commands = commandArea.value.split('\n');
+        const app = window.ggbApplet; // 获取 GeoGebra 应用实例
+        
+        // 逐行执行命令
+        commands.forEach(function(command) {
+          command = command.trim();
+          if (command) {
+            try {
+              app.evalCommand(command);
+            } catch (e) {
+              console.error('执行命令出错: ' + command, e);
+            }
+          }
+        });
+      });
+    });
+  </script>
+</body>
+</html>
