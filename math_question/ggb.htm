@@ -151,48 +151,5 @@ GeoGebra支持的命令类型包括：
     </div>
   </div>
 
-  <script>
-    // 获取设置面板相关元素
-    const settingsBtn = document.getElementById('settings-btn');
-    const closeSettingsBtn = document.getElementById('close-settings');
-    const settingsPanel = document.getElementById('settings-panel');
-    
-    // 显示设置面板
-    settingsBtn.addEventListener('click', () => {
-      settingsPanel.style.display = 'block';
-    });
-    
-    // 隐藏设置面板
-    closeSettingsBtn.addEventListener('click', () => {
-      settingsPanel.style.display = 'none';
-    });
-    
-    // 模型选择变化时的处理逻辑
-    document.getElementById('model-select').addEventListener('change', function() {
-      const azureSection = document.getElementById('azure-section');
-      const qwenSection = document.getElementById('qwen-section');
-      
-      // 隐藏所有特定模型的输入区域
-      azureSection.style.display = 'none';
-      qwenSection.style.display = 'none';
-      
-      // 根据选择显示相应的输入区域
-      if (this.value === 'azure-openai') {
-        azureSection.style.display = 'block';
-      } else if (this.value === 'qwen-max') {
-        qwenSection.style.display = 'block';
-      }
-    });
-    
-    // 保存设置按钮点击事件
-    document.getElementById('save-settings').addEventListener('click', () => {
-      // 这里可以添加保存设置的逻辑，例如存储到 localStorage
-      alert('设置已保存！');
-      settingsPanel.style.display = 'none';
-    });
-    
-    // 初始化设置面板为隐藏状态
-    settingsPanel.style.display = 'none';
-  </script>
 </body>
 </html>
