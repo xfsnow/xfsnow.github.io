@@ -13,51 +13,54 @@
   <div class="container">
     <div class="ggb-panel">
       <div id="ggb-element"></div>
-    </div>
-    
-    <div class="input-panel">
-      <h2>输入对话生成 GeoGebra 命令</h2>
-      <div class="model-selection">
-        <label for="model-select">选择模型:</label>
-        <select id="model-select" class="model-select">
-          <option value="deepseek" selected>DeepSeek</option>
-          <option value="azure-openai">Azure OpenAI</option>
-          <option value="qwen-max">通义千问max</option>
-        </select>
-      </div>
-      
-      <div class="api-key-section">
-        <label for="api-key">API 密钥:</label>
-        <input type="password" id="api-key" class="api-key-input" placeholder="请输入您的 API 密钥">
-      </div>
-      
-      <div class="azure-section" id="azure-section" style="display: none;">
-        <div class="azure-endpoint-section">
-          <label for="azure-endpoint">Azure OpenAI访问端点:</label>
-          <input type="text" id="azure-endpoint" class="azure-endpoint-input" placeholder="请输入Azure OpenAI访问端点">
+      <button id="settings-btn" class="settings-btn">设置</button>
+      <div id="settings-panel" class="settings-panel">
+        <div class="settings-header">
+          <h3>设置</h3>
+          <button id="close-settings" class="close-settings-btn">✕</button>
         </div>
         
-        <div class="azure-model-section">
-          <label for="azure-model">模型名称:</label>
-          <input type="text" id="azure-model" class="azure-model-input" placeholder="请输入模型名称">
-        </div>
-      </div>
-      
-      <div class="qwen-section" id="qwen-section" style="display: none;">
-        <div class="qwen-endpoint-section">
-          <label for="qwen-endpoint">通义千问访问端点:</label>
-          <input type="text" id="qwen-endpoint" class="qwen-endpoint-input" placeholder="请输入通义千问访问端点" value="https://dashscope.aliyuncs.com/compatible-mode/v1">
+        <div class="model-selection">
+          <label for="model-select">选择模型:</label>
+          <select id="model-select" class="model-select">
+            <option value="deepseek" selected>DeepSeek</option>
+            <option value="azure-openai">Azure OpenAI</option>
+            <option value="qwen-max">通义千问max</option>
+          </select>
         </div>
         
-        <div class="qwen-model-section">
-          <label for="qwen-model">模型名称:</label>
-          <input type="text" id="qwen-model" class="qwen-model-input" placeholder="请输入模型名称" value="qwen3-235b-a22b">
+        <div class="api-key-section">
+          <label for="api-key">API 密钥:</label>
+          <input type="password" id="api-key" class="api-key-input" placeholder="请输入您的 API 密钥">
         </div>
-      </div>
-      
-      <div class="system-prompt-section">
-        <label for="system-prompt">系统提示语:</label>
-        <textarea id="system-prompt" class="system-prompt-textarea">
+        
+        <div class="azure-section" id="azure-section" style="display: none;">
+          <div class="azure-endpoint-section">
+            <label for="azure-endpoint">Azure OpenAI访问端点:</label>
+            <input type="text" id="azure-endpoint" class="azure-endpoint-input" placeholder="请输入Azure OpenAI访问端点">
+          </div>
+          
+          <div class="azure-model-section">
+            <label for="azure-model">模型名称:</label>
+            <input type="text" id="azure-model" class="azure-model-input" placeholder="请输入模型名称">
+          </div>
+        </div>
+        
+        <div class="qwen-section" id="qwen-section" style="display: none;">
+          <div class="qwen-endpoint-section">
+            <label for="qwen-endpoint">通义千问访问端点:</label>
+            <input type="text" id="qwen-endpoint" class="qwen-endpoint-input" placeholder="请输入通义千问访问端点" value="https://dashscope.aliyuncs.com/compatible-mode/v1">
+          </div>
+          
+          <div class="qwen-model-section">
+            <label for="qwen-model">模型名称:</label>
+            <input type="text" id="qwen-model" class="qwen-model-input" placeholder="请输入模型名称" value="qwen3-max">
+          </div>
+        </div>
+        
+        <div class="system-prompt-section">
+          <label for="system-prompt">系统提示语:</label>
+          <textarea id="system-prompt" class="system-prompt-textarea">
 你是一个几何学助手，可以通过GeoGebra绘制几何图形和动画。
 
 当用户请求绘制图形或动画时，请提供：
@@ -122,8 +125,15 @@ GeoGebra支持的命令类型包括：
 请确保命令语法正确，并在解释中提及每个命令的目的。
 如果用户的请求不明确，请提出澄清问题。
 用户的请求可能与之前提出的请求相关。
-        </textarea>
+          </textarea>
+        </div>
+        
+        <button id="save-settings" class="save-settings-btn">保存设置</button>
       </div>
+    </div>
+    
+    <div class="input-panel">
+      <h2>输入对话生成 GeoGebra 命令</h2>
       
       <div class="chat-section">
         <label>对话记录:</label>
@@ -141,8 +151,23 @@ GeoGebra支持的命令类型包括：
       <button id="execute-btn">执行全部命令</button>
     </div>
   </div>
-  
+
   <script>
+    // 获取设置面板相关元素
+    const settingsBtn = document.getElementById('settings-btn');
+    const closeSettingsBtn = document.getElementById('close-settings');
+    const settingsPanel = document.getElementById('settings-panel');
+    
+    // 显示设置面板
+    settingsBtn.addEventListener('click', () => {
+      settingsPanel.style.display = 'block';
+    });
+    
+    // 隐藏设置面板
+    closeSettingsBtn.addEventListener('click', () => {
+      settingsPanel.style.display = 'none';
+    });
+    
     // 模型选择变化时的处理逻辑
     document.getElementById('model-select').addEventListener('change', function() {
       const azureSection = document.getElementById('azure-section');
@@ -159,6 +184,16 @@ GeoGebra支持的命令类型包括：
         qwenSection.style.display = 'block';
       }
     });
+    
+    // 保存设置按钮点击事件
+    document.getElementById('save-settings').addEventListener('click', () => {
+      // 这里可以添加保存设置的逻辑，例如存储到 localStorage
+      alert('设置已保存！');
+      settingsPanel.style.display = 'none';
+    });
+    
+    // 初始化设置面板为隐藏状态
+    settingsPanel.style.display = 'none';
   </script>
 </body>
 </html>

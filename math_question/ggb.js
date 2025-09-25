@@ -393,6 +393,10 @@ window.addEventListener("load", function() {
       this.azureModelInput = null;
       this.qwenEndpointInput = null;
       this.qwenModelInput = null;
+      this.settingsBtn = null;
+      this.settingsPanel = null;
+      this.closeSettingsBtn = null;
+      this.saveSettingsBtn = null;
       
       this.init();
     }
@@ -402,6 +406,7 @@ window.addEventListener("load", function() {
       this.initGGBApplet();
       this.bindElements();
       this.bindEvents();
+      this.loadSettings();
     }
     
     // 初始化GeoGebra应用
@@ -432,6 +437,10 @@ window.addEventListener("load", function() {
       this.azureModelInput = document.getElementById('azure-model');
       this.qwenEndpointInput = document.getElementById('qwen-endpoint');
       this.qwenModelInput = document.getElementById('qwen-model');
+      this.settingsBtn = document.getElementById('settings-btn');
+      this.settingsPanel = document.getElementById('settings-panel');
+      this.closeSettingsBtn = document.getElementById('close-settings');
+      this.saveSettingsBtn = document.getElementById('save-settings');
     }
     
     // 绑定事件
@@ -442,6 +451,40 @@ window.addEventListener("load", function() {
         if (e.key === 'Enter') {
           this.sendMessage();
         }
+      });
+      
+      // 设置面板事件
+      this.settingsBtn.addEventListener('click', () => {
+        this.settingsPanel.classList.add('active');
+      });
+      
+      this.closeSettingsBtn.addEventListener('click', () => {
+        this.settingsPanel.classList.remove('active');
+      });
+      
+      this.saveSettingsBtn.addEventListener('click', () => {
+        this.saveSettings();
+        this.settingsPanel.classList.remove('active');
+      });
+      
+      // 模型选择变化时的处理逻辑
+      this.modelSelect.addEventListener('change', () => {
+        const azureSection = document.getElementById('azure-section');
+        const qwenSection = document.getElementById('qwen-section');
+        
+        // 隐藏所有特定模型的输入区域
+        azureSection.style.display = 'none';
+        qwenSection.style.display = 'none';
+        
+        // 根据选择显示相应的输入区域
+        if (this.modelSelect.value === 'azure-openai') {
+          azureSection.style.display = 'block';
+        } else if (this.modelSelect.value === 'qwen-max') {
+          qwenSection.style.display = 'block';
+        }
+        
+        // 加载当前模型的配置
+        this.loadModelSettings(this.modelSelect.value);
       });
     }
     
@@ -623,6 +666,85 @@ window.addEventListener("load", function() {
       });
       
       return history;
+    }
+    
+    // 保存当前模型设置到localStorage
+    saveSettings() {
+      const currentModel = this.modelSelect.value;
+      const modelSettings = {
+        apiKey: this.apiKeyInput.value,
+        systemPrompt: this.systemPrompt.value
+      };
+      
+      // 根据模型类型保存特定设置
+      switch (currentModel) {
+        case 'azure-openai':
+          modelSettings.azureEndpoint = this.azureEndpointInput.value;
+          modelSettings.azureModel = this.azureModelInput.value;
+          break;
+        case 'qwen-max':
+          modelSettings.qwenEndpoint = this.qwenEndpointInput.value;
+          modelSettings.qwenModel = this.qwenModelInput.value;
+          break;
+      }
+      
+      // 获取现有的模型设置
+      let allSettings = {};
+      const existingSettings = localStorage.getItem('ggbModelSettings');
+      if (existingSettings) {
+        try {
+          allSettings = JSON.parse(existingSettings);
+        } catch (e) {
+          console.error('解析现有设置失败:', e);
+        }
+      }
+      
+      // 更新当前模型的设置
+      allSettings[currentModel] = modelSettings;
+      
+      // 保存到localStorage
+      localStorage.setItem('ggbModelSettings', JSON.stringify(allSettings));
+    }
+    
+    // 加载指定模型的设置
+    loadModelSettings(model) {
+      const settingsStr = localStorage.getItem('ggbModelSettings');
+      if (settingsStr) {
+        try {
+          const allSettings = JSON.parse(settingsStr);
+          const modelSettings = allSettings[model];
+          
+          if (modelSettings) {
+            // 加载通用设置
+            if (modelSettings.apiKey) this.apiKeyInput.value = modelSettings.apiKey;
+            if (modelSettings.systemPrompt) this.systemPrompt.value = modelSettings.systemPrompt;
+            
+            // 根据模型类型加载特定设置
+            switch (model) {
+              case 'azure-openai':
+                if (modelSettings.azureEndpoint) this.azureEndpointInput.value = modelSettings.azureEndpoint;
+                if (modelSettings.azureModel) this.azureModelInput.value = modelSettings.azureModel;
+                break;
+              case 'qwen-max':
+                if (modelSettings.qwenEndpoint) this.qwenEndpointInput.value = modelSettings.qwenEndpoint;
+                if (modelSettings.qwenModel) this.qwenModelInput.value = modelSettings.qwenModel;
+                break;
+            }
+          }
+        } catch (e) {
+          console.error('加载模型设置失败:', e);
+        }
+      }
+    }
+    
+    // 从localStorage加载设置（页面初始化时调用）
+    loadSettings() {
+      const currentModel = this.modelSelect.value;
+      this.loadModelSettings(currentModel);
+      
+      // 触发模型选择变化事件，显示对应的输入区域
+      const event = new Event('change');
+      this.modelSelect.dispatchEvent(event);
     }
   }
   
