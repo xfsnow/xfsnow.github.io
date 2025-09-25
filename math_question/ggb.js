@@ -14,6 +14,8 @@ window.addEventListener("load", function() {
       this.systemPrompt = null;
       this.azureEndpointInput = null;
       this.azureModelInput = null;
+      this.qwenEndpointInput = null;
+      this.qwenModelInput = null;
       
       this.init();
     }
@@ -51,6 +53,8 @@ window.addEventListener("load", function() {
       this.systemPrompt = document.getElementById('system-prompt');
       this.azureEndpointInput = document.getElementById('azure-endpoint');
       this.azureModelInput = document.getElementById('azure-model');
+      this.qwenEndpointInput = document.getElementById('qwen-endpoint');
+      this.qwenModelInput = document.getElementById('qwen-model');
     }
     
     // 绑定事件
@@ -138,8 +142,19 @@ window.addEventListener("load", function() {
           }
           this.callAzureOpenAIAPI(message, apiKey, systemMessage, chatHistory, azureEndpoint, azureModel);
           break;
-        case 'openai':
-          this.callOpenAIAPI(message, apiKey, systemMessage, chatHistory);
+        case 'qwen-max':
+          // 检查通义千问必需的参数
+          const qwenEndpoint = this.qwenEndpointInput.value.trim();
+          const qwenModel = this.qwenModelInput.value.trim();
+          if (!qwenEndpoint) {
+            this.displayMessage('请先输入通义千问访问端点', 'ai');
+            return;
+          }
+          if (!qwenModel) {
+            this.displayMessage('请先输入模型名称', 'ai');
+            return;
+          }
+          this.callQwenAPI(message, apiKey, systemMessage, chatHistory, qwenEndpoint, qwenModel);
           break;
         case 'deepseek':
         default:
@@ -156,10 +171,43 @@ window.addEventListener("load", function() {
       if (isThinking) {
         messageDiv.classList.add('ai-thinking');
       }
-      messageDiv.textContent = message;
+      
+      // 如果是AI消息且不是思考中状态，则格式化内容
+      if (sender === 'ai' && !isThinking) {
+        messageDiv.innerHTML = this.formatAIResponse(message);
+      } else {
+        messageDiv.textContent = message;
+      }
+      
       this.chatContainer.appendChild(messageDiv);
       this.chatContainer.scrollTop = this.chatContainer.scrollHeight;
       return messageDiv;
+    }
+    
+    // 格式化AI响应内容
+    formatAIResponse(content) {
+      // 转义HTML特殊字符
+      let formattedContent = content
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;');
+      
+      // 处理GeoGebra代码块 ```geogebra ... ```
+      formattedContent = formattedContent.replace(/```geogebra([\s\S]*?)```/g, '<pre class="ggb-code-block"><code>$1</code></pre>');
+      
+      // 处理普通代码块 ``` ... ```
+      formattedContent = formattedContent.replace(/```([\s\S]*?)```/g, '<pre><code>$1</code></pre>');
+      
+      // 处理行内代码 `...`
+      formattedContent = formattedContent.replace(/`([^`]+)`/g, '<code>$1</code>');
+      
+      // 处理加粗 **...**
+      formattedContent = formattedContent.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
+      
+      // 处理换行
+      formattedContent = formattedContent.replace(/\n/g, '<br>');
+      
+      return formattedContent;
     }
     
     // 获取对话历史
@@ -176,7 +224,9 @@ window.addEventListener("load", function() {
         if (messageDiv.classList.contains('user-message')) {
           history.push({ role: 'user', content: messageDiv.textContent });
         } else if (messageDiv.classList.contains('ai-message')) {
-          history.push({ role: 'assistant', content: messageDiv.textContent });
+          // 对于AI消息，获取纯文本内容（去除HTML标签）
+          const textContent = messageDiv.textContent;
+          history.push({ role: 'assistant', content: textContent });
         }
       });
       
@@ -255,8 +305,8 @@ window.addEventListener("load", function() {
                   const content = parsed.choices[0].delta.content;
                   if (content) {
                     fullResponse += content;
-                    // 更新思考消息内容
-                    thinkingMessage.textContent = fullResponse;
+                    // 更新思考消息内容，使用innerHTML来支持HTML格式
+                    thinkingMessage.innerHTML = this.formatAIResponse(fullResponse);
                   }
                 } catch (e) {
                   // 忽略解析错误
@@ -287,8 +337,8 @@ window.addEventListener("load", function() {
       });
     }
     
-    // 调用OpenAI API
-    callOpenAIAPI(userMessage, apiKey, systemMessage, chatHistory) {
+    // 调用通义千问 API
+    callQwenAPI(userMessage, apiKey, systemMessage, chatHistory, endpoint, model) {
       // 显示思考过程消息
       const thinkingMessage = this.displayMessage('AI正在思考...', 'ai', true);
       
@@ -304,17 +354,18 @@ window.addEventListener("load", function() {
       // 添加当前用户消息
       messages.push({ role: 'user', content: userMessage });
       
-      // 发送请求到OpenAI API
-      fetch('https://api.openai.com/v1/chat/completions', {
+      // 发送请求到通义千问 API
+      fetch(endpoint + '/chat/completions', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
-          'Authorization': 'Bearer ' + apiKey
+          'Authorization': 'Bearer ' + apiKey,
+          'X-DashScope-SSE': 'enable'
         },
         body: JSON.stringify({
-          model: 'gpt-3.5-turbo',
+          model: model,
           messages: messages,
-          stream: true  // 启用流式传输
+          stream: true
         })
       })
       .then(response => {
@@ -356,11 +407,11 @@ window.addEventListener("load", function() {
                 
                 try {
                   const parsed = JSON.parse(data);
-                  const content = parsed.choices[0].delta.content;
+                  const content = parsed.choices && parsed.choices[0] && parsed.choices[0].delta && parsed.choices[0].delta.content;
                   if (content) {
                     fullResponse += content;
-                    // 更新思考消息内容
-                    thinkingMessage.textContent = fullResponse;
+                    // 更新思考消息内容，使用innerHTML来支持HTML格式
+                    thinkingMessage.innerHTML = this.formatAIResponse(fullResponse);
                   }
                 } catch (e) {
                   // 忽略解析错误
@@ -476,8 +527,8 @@ window.addEventListener("load", function() {
                   const content = parsed.choices && parsed.choices[0] && parsed.choices[0].delta && parsed.choices[0].delta.content;
                   if (content) {
                     fullResponse += content;
-                    // 更新思考消息内容
-                    thinkingMessage.textContent = fullResponse;
+                    // 更新思考消息内容，使用innerHTML来支持HTML格式
+                    thinkingMessage.innerHTML = this.formatAIResponse(fullResponse);
                   }
                 } catch (e) {
                   // 忽略解析错误

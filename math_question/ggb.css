@@ -42,7 +42,9 @@
 }
 
 .azure-endpoint-input,
-.azure-model-input {
+.azure-model-input,
+.qwen-endpoint-input,
+.qwen-model-input {
   width: 100%;
   padding: 8px;
   margin-bottom: 15px;
@@ -51,7 +53,7 @@
 
 #system-prompt {
   width: 100%;
-  min-height: 300px;
+  max-height: 300px;
   font-family: monospace;
   font-size: 14px;
   margin-bottom: 15px;
@@ -105,4 +107,45 @@
 #send-btn {
   padding: 8px 16px;
   margin-left: 10px;
+}
+
+/* GeoGebra代码块样式 */
+.ggb-code-block {
+  background-color: #f8f9fa;
+  border: 1px solid #e9ecef;
+  border-radius: 4px;
+  padding: 8px;
+  margin: 8px 0;
+  font-family: 'Courier New', Courier, monospace;
+  white-space: pre-wrap;
+}
+
+.ggb-code-block code {
+  background-color: transparent;
+  padding: 0;
+}
+
+/* 普通代码块样式 */
+pre {
+  background-color: #f8f9fa;
+  border: 1px solid #e9ecef;
+  border-radius: 4px;
+  padding: 8px;
+  margin: 8px 0;
+  font-family: 'Courier New', Courier, monospace;
+  white-space: pre-wrap;
+}
+
+pre code {
+  background-color: transparent;
+  padding: 0;
+}
+
+/* 行内代码样式 */
+code {
+  background-color: #f8f9fa;
+  border: 1px solid #e9ecef;
+  border-radius: 3px;
+  padding: 2px 4px;
+  font-family: 'Courier New', Courier, monospace;
 }

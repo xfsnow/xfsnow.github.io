@@ -22,7 +22,7 @@
         <select id="model-select" class="model-select">
           <option value="deepseek" selected>DeepSeek</option>
           <option value="azure-openai">Azure OpenAI</option>
-          <option value="openai">OpenAI原版</option>
+          <option value="qwen-max">通义千问max</option>
         </select>
       </div>
       
@@ -40,6 +40,18 @@
         <div class="azure-model-section">
           <label for="azure-model">模型名称:</label>
           <input type="text" id="azure-model" class="azure-model-input" placeholder="请输入模型名称">
+        </div>
+      </div>
+      
+      <div class="qwen-section" id="qwen-section" style="display: none;">
+        <div class="qwen-endpoint-section">
+          <label for="qwen-endpoint">通义千问访问端点:</label>
+          <input type="text" id="qwen-endpoint" class="qwen-endpoint-input" placeholder="请输入通义千问访问端点" value="https://dashscope.aliyuncs.com/compatible-mode/v1">
+        </div>
+        
+        <div class="qwen-model-section">
+          <label for="qwen-model">模型名称:</label>
+          <input type="text" id="qwen-model" class="qwen-model-input" placeholder="请输入模型名称" value="qwen3-235b-a22b">
         </div>
       </div>
       
@@ -134,10 +146,17 @@ GeoGebra支持的命令类型包括：
     // 模型选择变化时的处理逻辑
     document.getElementById('model-select').addEventListener('change', function() {
       const azureSection = document.getElementById('azure-section');
+      const qwenSection = document.getElementById('qwen-section');
+      
+      // 隐藏所有特定模型的输入区域
+      azureSection.style.display = 'none';
+      qwenSection.style.display = 'none';
+      
+      // 根据选择显示相应的输入区域
       if (this.value === 'azure-openai') {
         azureSection.style.display = 'block';
-      } else {
-        azureSection.style.display = 'none';
+      } else if (this.value === 'qwen-max') {
+        qwenSection.style.display = 'block';
       }
     });
   </script>
