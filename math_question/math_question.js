@@ -610,8 +610,14 @@ document.addEventListener('DOMContentLoaded', function() {
   
   // 如果MathJax已加载，重新渲染一次确保公式正确显示
   if (window.MathJax && window.MathJax.startup && window.MathJax.startup.promise) {
+    // 先渲染题目内容
+    const container = document.getElementById('questionsContainer');
+    if (container) {
+      questionBank.renderQuestions();
+    }
+    
+    // 然后等待MathJax加载完成并重新渲染
     window.MathJax.startup.promise.then(() => {
-      const container = document.getElementById('questionsContainer');
       if (container) {
         questionBank.safeMathJaxRender(container);
       }
