@@ -46,8 +46,8 @@ window.addEventListener("load", function() {
     
     // 提取GeoGebra命令
     static extractGgbCommands(response) {
-      // 使用正则表达式提取```geogebra和```之间的内容
-      const regex = /```geogebra([\s\S]*?)```/g;
+      // 使用正则表达式提取```geogebra和```之间的内容，允许geogebra关键字和代码块标记之间有换行符
+      const regex = /```(?:\s*geogebra\s*|\s*geogebra\s*\n)([\s\S]*?)```/g;
       let match;
       const commands = [];
       
@@ -227,7 +227,17 @@ window.addEventListener("load", function() {
                 
                 try {
                   const parsed = JSON.parse(data);
-                  const content = parsed.choices && parsed.choices[0] && parsed.choices[0].delta && parsed.choices[0].delta.content;
+                  // 修复：正确提取Qwen模型的内容，兼容不同响应格式
+                  let content = '';
+                  if (parsed.choices && parsed.choices[0]) {
+                    const choice = parsed.choices[0];
+                    if (choice.delta && choice.delta.content !== undefined) {
+                      content = choice.delta.content;
+                    } else if (choice.message && choice.message.content) {
+                      content = choice.message.content;
+                    }
+                  }
+                  
                   if (content) {
                     fullResponse += content;
                     // 更新思考消息内容，使用innerHTML来支持HTML格式
@@ -642,8 +652,10 @@ window.addEventListener("load", function() {
             (content, sender, isThinking) => this.displayMessage(content, sender, isThinking),
             (response) => {
               this.displayMessage(response, 'ai');
+              console.log('response:', response);
               // 提取GeoGebra命令并填充到命令区域
               const commands = AiBase.extractGgbCommands(response);
+              console.log('commands:', commands);
               if (commands.length > 0) {
                 this.commandArea.value = commands.join('\n');
               }
