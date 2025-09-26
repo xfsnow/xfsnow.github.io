@@ -50,10 +50,8 @@ window.addEventListener("load", function() {
       // 恢复GeoGebra代码块为textarea（在所有格式化之后）
       formattedContent = formattedContent.replace(/\{\{GGB_BLOCK_(\d+)\}\}/g, (match, index) => {
         const blockContent = ggbBlocks[index];
-        // 重要：在textarea中保持原始的\n换行符，不使用<br>标签
-        // 使用 encodeURIComponent 编码内容，防止特殊字符破坏HTML结构
-        const encodedContent = encodeURIComponent(blockContent);
-        return `<textarea class="ggb-code-block" rows="5" data-raw-content="${encodedContent}"></textarea><div class="ggb-execute-container"><button class="ggb-execute-btn" data-ggb-execute><span class="ggb-execute-icon"></span>执行全部命令</button></div>`;
+        // 直接将内容放入textarea的value中，确保命令立即显示
+        return `<textarea class="ggb-code-block" rows="5">${blockContent}</textarea><div class="ggb-execute-container"><button class="ggb-execute-btn" data-ggb-execute><span class="ggb-execute-icon"></span>执行全部命令</button></div>`;
       });
       
       return formattedContent;
@@ -571,12 +569,6 @@ window.addEventListener("load", function() {
       // 获取包含代码的textarea元素
       const textareaElement = buttonElement.closest('.ggb-execute-container').previousElementSibling;
       if (textareaElement && textareaElement.classList.contains('ggb-code-block')) {
-        // 从data属性获取原始内容并解码
-        const encodedContent = textareaElement.getAttribute('data-raw-content');
-        if (encodedContent) {
-          const rawContent = decodeURIComponent(encodedContent);
-          textareaElement.value = rawContent;
-        }
         // 直接执行 textarea 中的命令，而不是先填充到主命令区域
         this.executeCommandsFromTextarea(textareaElement);
       }
