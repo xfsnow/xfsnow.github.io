@@ -16,6 +16,16 @@
   padding: 10px;
   position: relative;
   width: 620px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* 标题样式 */
+.ggb-title {
+  margin: 0 0 15px 0;
+  color: #333;
+  font-size: 24px;
+  font-weight: 500;
 }
 
 /* GeoGebra画板 */
@@ -24,6 +34,7 @@
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
   border-radius: 8px;
   overflow: hidden;
+  flex: 1;
 }
 
 /* 命令输入区域 */
@@ -194,6 +205,12 @@ pre code {
   box-shadow: 0 0 0 0.2rem rgba(0,123,255,.25);
 }
 
+.ggb-code-block code {
+  background-color: transparent;
+  padding: 0;
+  font-size: 13px;
+}
+
 /* GeoGebra执行按钮容器 */
 .ggb-execute-container {
   margin: 10px 0;
@@ -226,6 +243,17 @@ pre code {
   transform: translateY(0);
 }
 
+/* GeoGebra执行按钮图标 */
+.ggb-execute-icon {
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+  border-left: 8px solid white;
+  margin-right: 8px;
+}
+
 /* 行内代码样式 */
 code {
   background-color: #f1f3f4;
@@ -237,10 +265,8 @@ code {
 
 /* 设置面板样式 */
 .settings-btn {
-  position: absolute;
-  bottom: 15px;
-  left: 15px;
-  z-index: 100;
+  align-self: flex-start;
+  margin-top: 15px;
   padding: 8px 12px;
   background-color: #6c757d;
   color: white;
@@ -250,6 +276,7 @@ code {
   font-weight: 500;
   box-shadow: 0 2px 4px rgba(0,0,0,0.2);
   transition: background-color 0.2s;
+  z-index: 100;
 }
 
 .settings-btn:hover {
@@ -258,23 +285,24 @@ code {
 
 .settings-panel {
   position: absolute;
-  top: 0;
-  right: 0;
-  width: 320px;
-  height: 100%;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 400px;
   background-color: #fff;
-  box-shadow: -2px 0 10px rgba(0,0,0,0.15);
+  box-shadow: 0 -2px 10px rgba(0,0,0,0.15);
   z-index: 1000;
   padding: 20px;
   box-sizing: border-box;
   overflow-y: auto;
-  transform: translateX(100%);
-  transition: transform 0.3s ease-in-out;
-  border-left: 1px solid #dee2e6;
+  border-top: 1px solid #dee2e6;
+  border-right: 1px solid #dee2e6;
+  border-radius: 8px 8px 0 0;
+  display: none;
 }
 
 .settings-panel.active {
-  transform: translateX(0);
+  display: block;
 }
 
 .settings-header {
@@ -386,13 +414,4 @@ code {
 
 .save-settings-btn:hover {
   background-color: #218838;
-}
-
-/* 标题样式 */
-.input-panel h2 {
-  color: #333;
-  margin-top: 0;
-  margin-bottom: 20px;
-  font-size: 24px;
-  font-weight: 500;
 }
