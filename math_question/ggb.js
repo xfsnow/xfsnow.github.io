@@ -434,14 +434,17 @@ window.addEventListener("load", function() {
     
     // 初始化GeoGebra应用
     initGGBApplet() {
+      // 默认视图不显示"代数区"
       this.ggbApp = new GGBApplet({
         "width": 600,
         "height": 600,
         "showToolBar": true,
-        "showAlgebraInput": true,
+        "showAlgebraInput": false,
         "showMenuBar": true,
         "allowStyleBar": true,
-        "language": "zh"
+        "language": "zh",
+        "showAlgebraView": false,  // 明确隐藏代数视图
+        "perspective": "G"  // 只显示图形视图(Geometry)
       }, true);
       this.ggbApp.inject('ggb-element');
     }
