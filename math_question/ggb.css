@@ -2,21 +2,28 @@
 .container {
   display: flex;
   flex-direction: row;
+  height: 100vh;
 }
 
 .input-panel {
   flex: 1;
   padding: 10px;
+  display: flex;
+  flex-direction: column;
 }
 
 .ggb-panel {
   padding: 10px;
   position: relative;
+  width: 620px;
 }
 
 /* GeoGebra画板 */
 #ggb-element {
   border: 1px solid #ddd;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  border-radius: 8px;
+  overflow: hidden;
 }
 
 /* 命令输入区域 */
@@ -25,47 +32,83 @@
   min-height: 300px;
   font-family: monospace;
   font-size: 14px;
+  border: 1px solid #ced4da;
+  border-radius: 8px;
+  padding: 12px;
+  box-sizing: border-box;
+  resize: vertical;
+  box-shadow: inset 0 1px 2px rgba(0,0,0,0.075);
 }
 
 #execute-btn {
   margin-top: 10px;
-  padding: 8px 16px;
+  padding: 10px 16px;
   font-size: 16px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  font-weight: 500;
+}
+
+#execute-btn:hover {
+  background-color: #218838;
 }
 
 /* 聊天区域 */
 .chat-container {
-  height: calc(100vh - 200px);
-  border: 1px solid #ccc;
+  flex: 1;
+  border: 1px solid #ced4da;
   overflow-y: auto;
-  padding: 10px;
+  padding: 15px;
   margin-bottom: 15px;
   background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: inset 0 1px 2px rgba(0,0,0,0.075);
+  display: flex;
+  flex-direction: column;
 }
 
 .message {
-  margin-bottom: 10px;
-  padding: 8px;
-  border-radius: 5px;
+  margin-bottom: 15px;
+  padding: 12px 16px;
+  border-radius: 18px;
+  max-width: 85%;
+  position: relative;
+  animation: fadeIn 0.2s ease-in;
+  line-height: 1.5;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(5px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 .user-message {
-  background-color: #d1e7ff;
+  background-color: #007bff;
+  color: white;
   text-align: left;
   margin-left: auto;
   margin-right: 0;
-  width: 80%;
+  border-bottom-right-radius: 4px;
 }
 
 .ai-message {
-  background-color: #f8f9fa;
+  background-color: #f1f3f4;
+  color: #202124;
   text-align: left;
-  margin-right: 20%;
+  margin-right: auto;
+  border-bottom-left-radius: 4px;
 }
 
 .ai-thinking {
   color: #6c757d;
   font-style: italic;
+  background-color: #f8f9fa;
+  border: 1px dashed #dee2e6;
 }
 
 /* 用户输入区域 */
@@ -76,70 +119,104 @@
 
 #user-input {
   flex: 1;
-  padding: 8px;
-  font-family: monospace;
+  padding: 12px 15px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   font-size: 14px;
+  border: 1px solid #ced4da;
+  border-radius: 20px;
+  box-sizing: border-box;
+  box-shadow: inset 0 1px 2px rgba(0,0,0,0.075);
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+#user-input:focus {
+  outline: none;
+  border-color: #80bdff;
+  box-shadow: 0 0 0 0.2rem rgba(0,123,255,.25);
 }
 
 #send-btn {
-  padding: 8px 16px;
+  padding: 10px 20px;
   margin-left: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background-color 0.2s;
+}
+
+#send-btn:hover {
+  background-color: #0069d9;
 }
 
 /* 代码块样式 */
 pre {
   background-color: #f8f9fa;
   border: 1px solid #e9ecef;
-  border-radius: 4px;
-  padding: 8px;
-  margin: 8px 0;
+  border-radius: 8px;
+  padding: 12px;
+  margin: 12px 0;
   font-family: 'Courier New', Courier, monospace;
   white-space: pre-wrap;
+  overflow-x: auto;
 }
 
 pre code {
   background-color: transparent;
   padding: 0;
+  font-size: 13px;
 }
 
 /* GeoGebra代码块样式 */
 .ggb-code-block {
   background-color: #f8f9fa;
   border: 1px solid #e9ecef;
-  border-radius: 4px;
-  padding: 8px;
-  margin: 8px 0;
+  border-radius: 8px;
+  padding: 12px;
+  margin: 12px 0;
   font-family: 'Courier New', Courier, monospace;
   white-space: pre-wrap;
   position: relative;
+  overflow-x: auto;
 }
 
 .ggb-code-block code {
   background-color: transparent;
   padding: 0;
+  font-size: 13px;
 }
 
 /* GeoGebra执行按钮容器 */
 .ggb-execute-container {
   margin: 10px 0;
+  text-align: center;
 }
 
 /* GeoGebra执行按钮样式 */
 .ggb-execute-btn {
   display: inline-flex;
   align-items: center;
-  background-color: #007bff;
+  background-color: #28a745;
   color: white;
   border: none;
-  border-radius: 4px;
-  padding: 6px 12px;
+  border-radius: 6px;
+  padding: 8px 16px;
   font-size: 14px;
   cursor: pointer;
-  transition: background-color 0.2s;
+  transition: background-color 0.2s, transform 0.1s;
+  font-weight: 500;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
 .ggb-execute-btn:hover {
-  background-color: #0056b3;
+  background-color: #218838;
+  transform: translateY(-1px);
+}
+
+.ggb-execute-btn:active {
+  transform: translateY(0);
 }
 
 /* GeoGebra执行按钮图标 */
@@ -150,45 +227,54 @@ pre code {
   border-top: 5px solid transparent;
   border-bottom: 5px solid transparent;
   border-left: 8px solid white;
-  margin-right: 6px;
+  margin-right: 8px;
 }
 
 /* 行内代码样式 */
 code {
-  background-color: #f8f9fa;
-  border-radius: 3px;
-  padding: 2px 4px;
+  background-color: #f1f3f4;
+  border-radius: 4px;
+  padding: 2px 6px;
   font-family: 'Courier New', Courier, monospace;
+  font-size: 13px;
 }
 
 /* 设置面板样式 */
 .settings-btn {
   position: absolute;
-  bottom: 10px;
-  left: 10px;
+  bottom: 15px;
+  left: 15px;
   z-index: 100;
-  padding: 5px 10px;
-  background-color: #007bff;
+  padding: 8px 12px;
+  background-color: #6c757d;
   color: white;
   border: none;
-  border-radius: 4px;
+  border-radius: 6px;
   cursor: pointer;
+  font-weight: 500;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  transition: background-color 0.2s;
+}
+
+.settings-btn:hover {
+  background-color: #5a6268;
 }
 
 .settings-panel {
   position: absolute;
   top: 0;
   right: 0;
-  width: 300px;
+  width: 320px;
   height: 100%;
   background-color: #fff;
-  box-shadow: -2px 0 5px rgba(0,0,0,0.1);
+  box-shadow: -2px 0 10px rgba(0,0,0,0.15);
   z-index: 1000;
-  padding: 15px;
+  padding: 20px;
   box-sizing: border-box;
   overflow-y: auto;
   transform: translateX(100%);
   transition: transform 0.3s ease-in-out;
+  border-left: 1px solid #dee2e6;
 }
 
 .settings-panel.active {
@@ -199,31 +285,46 @@ code {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 15px;
-  padding-bottom: 10px;
+  margin-bottom: 20px;
+  padding-bottom: 15px;
   border-bottom: 1px solid #eee;
+}
+
+.settings-header h3 {
+  margin: 0;
+  font-size: 20px;
+  color: #333;
 }
 
 .close-settings-btn {
   background: none;
   border: none;
-  font-size: 18px;
+  font-size: 20px;
   cursor: pointer;
   padding: 0;
-  width: 30px;
-  height: 30px;
+  width: 32px;
+  height: 32px;
   display: flex;
   align-items: center;
   justify-content: center;
+  color: #6c757d;
+  border-radius: 50%;
+  transition: background-color 0.2s;
+}
+
+.close-settings-btn:hover {
+  background-color: #f1f3f4;
 }
 
 .model-selection {
-  margin-bottom: 15px;
+  margin-bottom: 20px;
 }
 
 .model-selection label {
   display: block;
-  margin-bottom: 5px;
+  margin-bottom: 8px;
+  font-weight: 500;
+  color: #333;
 }
 
 .model-select,
@@ -233,31 +334,69 @@ code {
 .qwen-endpoint-input,
 .qwen-model-input {
   width: 100%;
-  padding: 8px;
+  padding: 10px 12px;
   margin-bottom: 15px;
   box-sizing: border-box;
+  border: 1px solid #ced4da;
+  border-radius: 6px;
+  font-size: 14px;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.model-select:focus,
+.api-key-input:focus,
+.azure-endpoint-input:focus,
+.azure-model-input:focus,
+.qwen-endpoint-input:focus,
+.qwen-model-input:focus {
+  outline: none;
+  border-color: #80bdff;
+  box-shadow: 0 0 0 0.2rem rgba(0,123,255,.25);
 }
 
 #system-prompt {
   width: 100%;
+  min-height: 200px;
   max-height: 300px;
-  font-family: monospace;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   font-size: 14px;
   margin-bottom: 15px;
   box-sizing: border-box;
+  border: 1px solid #ced4da;
+  border-radius: 6px;
+  padding: 12px;
+  resize: vertical;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+#system-prompt:focus {
+  outline: none;
+  border-color: #80bdff;
+  box-shadow: 0 0 0 0.2rem rgba(0,123,255,.25);
 }
 
 .save-settings-btn {
   width: 100%;
-  padding: 10px;
+  padding: 12px;
   background-color: #28a745;
   color: white;
   border: none;
-  border-radius: 4px;
+  border-radius: 6px;
   cursor: pointer;
   font-size: 16px;
+  font-weight: 500;
+  transition: background-color 0.2s;
 }
 
 .save-settings-btn:hover {
   background-color: #218838;
+}
+
+/* 标题样式 */
+.input-panel h2 {
+  color: #333;
+  margin-top: 0;
+  margin-bottom: 20px;
+  font-size: 24px;
+  font-weight: 500;
 }
