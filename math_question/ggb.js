@@ -27,7 +27,11 @@ window.addEventListener("load", function() {
         .replace(/>/g, '&gt;');
       
       // 处理GeoGebra代码块 ```geogebra ... ```，并在后面添加执行按钮
-      formattedContent = formattedContent.replace(/```geogebra([\s\S]*?)```/g, '<pre class="ggb-code-block"><code>$1</code></pre><div class="ggb-execute-container"><button class="ggb-execute-btn" data-ggb-execute><span class="ggb-execute-icon"></span>执行全部命令</button></div>');
+      formattedContent = formattedContent.replace(/```geogebra([\s\S]*?)```/g, (match, p1) => {
+        // 去除代码块内容前后的空白字符，但保留内部结构
+        const trimmedContent = p1.trim();
+        return `<pre class="ggb-code-block"><code>${trimmedContent}</code></pre><div class="ggb-execute-container"><button class="ggb-execute-btn" data-ggb-execute><span class="ggb-execute-icon"></span>执行全部命令</button></div>`;
+      });
       
       // 处理普通代码块 ``` ... ```
       formattedContent = formattedContent.replace(/```([\s\S]*?)```/g, '<pre><code>$1</code></pre>');
