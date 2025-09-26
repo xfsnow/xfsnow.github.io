@@ -22,7 +22,7 @@ window.addEventListener("load", function() {
     static formatAIResponse(content) {
       // 先处理GeoGebra代码块，将其替换为占位符
       const ggbBlocks = [];
-      let placeholderContent = content.replace(/```geogebra([\s\S]*?)```/g, (match, p1) => {
+      let placeholderContent = content.replace(/```(?:\s*geogebra\s*|\s*geogebra\s*\n)([\s\S]*?)```/g, (match, p1) => {
         // 去除代码块内容前后的空白字符，但保留内部结构和换行符
         const trimmedContent = p1.trim();
         ggbBlocks.push(trimmedContent);
@@ -35,7 +35,14 @@ window.addEventListener("load", function() {
         .replace(/</g, '&lt;')
         .replace(/>/g, '&gt;');
       
-      // 处理普通代码块 ``` ... ```
+      // 恢复GeoGebra代码块为textarea（先于普通代码块处理）
+      formattedContent = formattedContent.replace(/\{\{GGB_BLOCK_(\d+)\}\}/g, (match, index) => {
+        const blockContent = ggbBlocks[index];
+        // 使用 textarea 替代 pre+code，并添加执行按钮
+        return `<textarea class="ggb-code-block" rows="5">${blockContent}</textarea><div class="ggb-execute-container"><button class="ggb-execute-btn" data-ggb-execute><span class="ggb-execute-icon"></span>执行全部命令</button></div>`;
+      });
+      
+      // 处理普通代码块 ``` ... ```（在GeoGebra代码块恢复之后）
       formattedContent = formattedContent.replace(/```([\s\S]*?)```/g, '<pre><code>$1</code></pre>');
       
       // 处理行内代码 `...`
@@ -46,12 +53,6 @@ window.addEventListener("load", function() {
       
       // 处理换行
       formattedContent = formattedContent.replace(/\n/g, '<br>');
-      
-      // 恢复GeoGebra代码块为textarea
-      formattedContent = formattedContent.replace(/\{\{GGB_BLOCK_(\d+)\}\}/g, (match, index) => {
-        const blockContent = ggbBlocks[index];
-        return `<textarea class="ggb-code-block" rows="5">${blockContent}</textarea><div class="ggb-execute-container"><button class="ggb-execute-btn" data-ggb-execute><span class="ggb-execute-icon"></span>执行全部命令</button></div>`;
-      });
       
       return formattedContent;
     }
@@ -513,7 +514,6 @@ window.addEventListener("load", function() {
     
     // 绑定事件
     bindEvents() {
-      this.executeBtn.addEventListener('click', () => this.executeCommands());
       this.sendBtn.addEventListener('click', () => this.sendMessage());
       this.userInput.addEventListener('keypress', (e) => {
         if (e.key === 'Enter') {
@@ -569,16 +569,54 @@ window.addEventListener("load", function() {
       // 获取包含代码的textarea元素
       const textareaElement = buttonElement.closest('.ggb-execute-container').previousElementSibling;
       if (textareaElement && textareaElement.classList.contains('ggb-code-block')) {
-        // 将代码填充到主命令区域
-        this.commandArea.value = textareaElement.value;
-        
-        // 执行命令
-        this.executeCommands();
+        // 直接执行 textarea 中的命令，而不是先填充到主命令区域
+        this.executeCommandsFromTextarea(textareaElement);
       }
     }
     
-    // 执行GeoGebra命令
+    // 从指定的 textarea 执行 GeoGebra 命令
+    executeCommandsFromTextarea(textareaElement) {
+      // 获取 GeoGebra 应用实例
+      const app = window.ggbApplet;
+      
+      // 清空画板上的所有对象
+      if (app) {
+        try {
+          app.reset();
+        } catch (e) {
+          // 如果reset方法不可用，尝试使用其他方式清空
+          try {
+            app.evalCommand('Delete[All]');
+          } catch (e2) {
+            console.warn('无法清空画板:', e2);
+          }
+        }
+      }
+      
+      // 从 textarea 获取命令并执行
+      const commands = textareaElement.value.split('\n');
+      
+      // 逐行执行命令
+      commands.forEach((command) => {
+        command = command.trim();
+        if (command) {
+          try {
+            app.evalCommand(command);
+          } catch (e) {
+            console.error('执行命令出错: ' + command, e);
+          }
+        }
+      });
+    }
+    
+    // 执行GeoGebra命令（从主命令区域）
     executeCommands() {
+      // 检查主命令区域是否存在
+      if (!this.commandArea) {
+        console.warn('主命令区域不存在');
+        return;
+      }
+      
       // 获取 GeoGebra 应用实例
       const app = window.ggbApplet;
       
@@ -659,7 +697,8 @@ window.addEventListener("load", function() {
               // 提取GeoGebra命令并填充到命令区域
               const commands = AiBase.extractGgbCommands(response);
               if (commands.length > 0) {
-                this.commandArea.value = commands.join('\n');
+                // 不再需要填充主命令区域
+                console.log('提取到GeoGebra命令:', commands);
               }
             },
             (error) => this.displayMessage(error, 'ai')
@@ -689,7 +728,8 @@ window.addEventListener("load", function() {
               const commands = AiBase.extractGgbCommands(response);
               console.log('commands:', commands);
               if (commands.length > 0) {
-                this.commandArea.value = commands.join('\n');
+                // 不再需要填充主命令区域
+                console.log('提取到GeoGebra命令:', commands);
               }
             },
             (error) => this.displayMessage(error, 'ai')
@@ -706,7 +746,8 @@ window.addEventListener("load", function() {
               // 提取GeoGebra命令并填充到命令区域
               const commands = AiBase.extractGgbCommands(response);
               if (commands.length > 0) {
-                this.commandArea.value = commands.join('\n');
+                // 不再需要填充主命令区域
+                console.log('提取到GeoGebra命令:', commands);
               }
             },
             (error) => this.displayMessage(error, 'ai')
