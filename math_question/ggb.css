@@ -1,3 +1,4 @@
+/* 布局样式 */
 .container {
   display: flex;
   flex-direction: row;
@@ -13,10 +14,12 @@
   position: relative;
 }
 
+/* GeoGebra画板 */
 #ggb-element {
   border: 1px solid #ddd;
 }
 
+/* 命令输入区域 */
 #ggb-commands {
   width: 100%;
   min-height: 300px;
@@ -30,6 +33,7 @@
   font-size: 16px;
 }
 
+/* 聊天区域 */
 .chat-container {
   height: calc(100vh - 200px);
   border: 1px solid #ccc;
@@ -62,6 +66,7 @@
   font-style: italic;
 }
 
+/* 用户输入区域 */
 .user-input-container {
   display: flex;
   margin-bottom: 15px;
@@ -77,6 +82,22 @@
 #send-btn {
   padding: 8px 16px;
   margin-left: 10px;
+}
+
+/* 代码块样式 */
+pre {
+  background-color: #f8f9fa;
+  border: 1px solid #e9ecef;
+  border-radius: 4px;
+  padding: 8px;
+  margin: 8px 0;
+  font-family: 'Courier New', Courier, monospace;
+  white-space: pre-wrap;
+}
+
+pre code {
+  background-color: transparent;
+  padding: 0;
 }
 
 /* GeoGebra代码块样式 */
@@ -128,49 +149,6 @@
   border-bottom: 5px solid transparent;
   border-left: 8px solid white;
   margin-right: 6px;
-}
-
-/* 执行全部按钮样式 */
-.execute-all-btn {
-  width: auto;
-  height: auto;
-  background-color: #007bff;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: 6px 12px;
-  color: white;
-  font-size: 14px;
-  margin-top: 5px;
-}
-
-.execute-all-btn:hover {
-  background-color: #0056b3;
-}
-
-.execute-all-btn::after {
-  content: " 执行全部";
-  display: block;
-  margin-left: 5px;
-}
-
-/* 普通代码块样式 */
-pre {
-  background-color: #f8f9fa;
-  border: 1px solid #e9ecef;
-  border-radius: 4px;
-  padding: 8px;
-  margin: 8px 0;
-  font-family: 'Courier New', Courier, monospace;
-  white-space: pre-wrap;
-}
-
-pre code {
-  background-color: transparent;
-  padding: 0;
 }
 
 /* 行内代码样式 */
@@ -246,13 +224,8 @@ code {
   margin-bottom: 5px;
 }
 
-.api-key-input {
-  width: 100%;
-  padding: 8px;
-  margin-bottom: 15px;
-  box-sizing: border-box;
-}
-
+.model-select,
+.api-key-input,
 .azure-endpoint-input,
 .azure-model-input,
 .qwen-endpoint-input,
