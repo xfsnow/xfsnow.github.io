@@ -51,8 +51,10 @@
 
 .user-message {
   background-color: #d1e7ff;
-  text-align: right;
-  margin-left: 20%;
+  text-align: left;
+  margin-left: auto;
+  margin-right: 0;
+  width: 80%;
 }
 
 .ai-message {
