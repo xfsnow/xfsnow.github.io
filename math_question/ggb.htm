@@ -68,7 +68,7 @@
 2. 清晰的GeoGebra命令
 
 规范：
-1. 将GeoGebra命令放在```geogebra和```标记之间，每行一个命令。
+1. 将GeoGebra命令放在``geogebra和```标记之间，每行一个命令。
 2. 不要在GeoGebra代码块中添加注释。
 3. 命令应该按照逻辑顺序排列，从基本元素到复杂构造。
 4. 数学公式应该包裹在$$中
@@ -143,10 +143,11 @@ GeoGebra支持的命令类型包括：
         </div>
       </div>
       
-      <label for="ggb-commands">GeoGebra 命令:</label>
-      <textarea id="ggb-commands" placeholder="在此输入 GeoGebra 命令，每行一个命令"></textarea>
-      <br/>
-      <button id="execute-btn">执行全部命令</button>
+      <div id="command-section" style="display: none;">
+        <textarea id="ggb-commands" placeholder="在此输入 GeoGebra 命令，每行一个命令"></textarea>
+        <br/>
+        <button id="execute-btn">执行全部命令</button>
+      </div>
     </div>
   </div>
 

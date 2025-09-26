@@ -26,11 +26,11 @@ window.addEventListener("load", function() {
         .replace(/</g, '&lt;')
         .replace(/>/g, '&gt;');
       
-      // 处理GeoGebra代码块 ```geogebra ... ```，并在后面添加执行按钮
+      // 处理GeoGebra代码块 ```geogebra ... ```，并在后面添加执行按钮和编辑按钮
       formattedContent = formattedContent.replace(/```geogebra([\s\S]*?)```/g, (match, p1) => {
         // 去除代码块内容前后的空白字符，但保留内部结构
         const trimmedContent = p1.trim();
-        return `<pre class="ggb-code-block"><code>${trimmedContent}</code></pre><div class="ggb-execute-container"><button class="ggb-execute-btn" data-ggb-execute><span class="ggb-execute-icon"></span>执行全部命令</button></div>`;
+        return `<pre class="ggb-code-block"><code>${trimmedContent}</code></pre><div class="ggb-execute-container"><button class="ggb-execute-btn" data-ggb-execute><span class="ggb-execute-icon"></span>执行全部命令</button> <button class="ggb-edit-btn" data-ggb-edit>编辑命令</button></div>`;
       });
       
       // 处理普通代码块 ``` ... ```
@@ -548,11 +548,15 @@ window.addEventListener("load", function() {
         this.loadModelSettings(this.modelSelect.value);
       });
       
-      // 绑定聊天容器的点击事件，用于处理GeoGebra执行按钮
+      // 绑定聊天容器的点击事件，用于处理GeoGebra执行按钮和编辑按钮
       this.chatContainer.addEventListener('click', (e) => {
         // 检查点击的是否是GeoGebra执行按钮
         if (e.target && e.target.matches('[data-ggb-execute]')) {
           this.handleGgbExecute(e.target);
+        }
+        // 检查点击的是否是编辑命令按钮
+        else if (e.target && e.target.matches('[data-ggb-edit]')) {
+          this.handleGgbEdit(e.target);
         }
       });
     }
@@ -568,8 +572,33 @@ window.addEventListener("load", function() {
           // 更不能获取来无换行的还替换进this.commandArea.value，把原本正常的多行命令也变成一行，导致无法执行。
           // ！const codeContent = codeElement.innerText;
           // 直接取 this.commandArea.value 的命令来执行就好了。
+          
+          // 正确的方法是保留换行符，将代码填充到命令区域
+          // this.commandArea.value = codeElement.textContent;
+          
           // 执行命令
           this.executeCommands();
+        }
+      }
+    }
+    
+    // 处理编辑GeoGebra命令
+    handleGgbEdit(buttonElement) {
+      // 获取包含代码的pre元素
+      const preElement = buttonElement.closest('.ggb-execute-container').previousElementSibling;
+      if (preElement && preElement.classList.contains('ggb-code-block')) {
+        const codeElement = preElement.querySelector('code');
+        if (codeElement) {
+          // ！使用 codeElement.textContent 获取代码内容就是会清除换行符，不要用这种方法，会导致命令连在一起无法执行。
+          // 更不能获取来无换行的还替换进this.commandArea.value，把原本正常的多行命令也变成一行，导致无法执行。
+          // ！const codeContent = codeElement.innerText;
+          // 直接取 this.commandArea.value 的命令来执行就好了。
+          
+          // 将代码填充到命令区域，保留换行符
+          // this.commandArea.value = codeElement.textContent;
+          
+          // 显示命令区域
+          document.getElementById('command-section').style.display = 'block';
         }
       }
     }
