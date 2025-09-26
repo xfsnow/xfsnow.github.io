@@ -751,6 +751,9 @@ window.addEventListener("load", function() {
       
       // 保存到localStorage
       localStorage.setItem('ggbModelSettings', JSON.stringify(allSettings));
+      
+      // 保存当前选择的模型
+      localStorage.setItem('ggbCurrentModel', currentModel);
     }
     
     // 加载指定模型的设置
@@ -786,6 +789,12 @@ window.addEventListener("load", function() {
     
     // 从localStorage加载设置（页面初始化时调用）
     loadSettings() {
+      // 先加载上次选择的模型
+      const lastSelectedModel = localStorage.getItem('ggbCurrentModel');
+      if (lastSelectedModel) {
+        this.modelSelect.value = lastSelectedModel;
+      }
+      
       const currentModel = this.modelSelect.value;
       this.loadModelSettings(currentModel);
       
