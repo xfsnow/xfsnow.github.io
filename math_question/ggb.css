@@ -13,6 +13,10 @@
   position: relative;
 }
 
+#ggb-element {
+  border: 1px solid #ddd;
+}
+
 #ggb-commands {
   width: 100%;
   min-height: 300px;
@@ -92,20 +96,55 @@
   padding: 0;
 }
 
+/* GeoGebra执行按钮容器 */
+.ggb-execute-container {
+  margin: 10px 0;
+}
+
+/* GeoGebra执行按钮样式 */
+.ggb-execute-btn {
+  display: inline-flex;
+  align-items: center;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 6px 12px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.ggb-execute-btn:hover {
+  background-color: #0056b3;
+}
+
+/* GeoGebra执行按钮图标 */
+.ggb-execute-icon {
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+  border-left: 8px solid white;
+  margin-right: 6px;
+}
+
 /* 执行全部按钮样式 */
 .execute-all-btn {
-  position: absolute;
-  bottom: 5px;
-  right: 5px;
-  width: 24px;
-  height: 24px;
+  width: auto;
+  height: auto;
   background-color: #007bff;
   border: none;
-  border-radius: 50%;
+  border-radius: 4px;
   cursor: pointer;
-  display: flex;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
+  padding: 6px 12px;
+  color: white;
+  font-size: 14px;
+  margin-top: 5px;
 }
 
 .execute-all-btn:hover {
@@ -113,14 +152,9 @@
 }
 
 .execute-all-btn::after {
-  content: "";
+  content: " 执行全部";
   display: block;
-  width: 0;
-  height: 0;
-  border-top: 6px solid transparent;
-  border-bottom: 6px solid transparent;
-  border-left: 8px solid white;
-  margin-left: 2px;
+  margin-left: 5px;
 }
 
 /* 普通代码块样式 */
@@ -142,7 +176,6 @@ pre code {
 /* 行内代码样式 */
 code {
   background-color: #f8f9fa;
-  border: 1px solid #e9ecef;
   border-radius: 3px;
   padding: 2px 4px;
   font-family: 'Courier New', Courier, monospace;

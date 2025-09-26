@@ -26,8 +26,8 @@ window.addEventListener("load", function() {
         .replace(/</g, '&lt;')
         .replace(/>/g, '&gt;');
       
-      // 处理GeoGebra代码块 ```geogebra ... ```
-      formattedContent = formattedContent.replace(/```geogebra([\s\S]*?)```/g, '<pre class="ggb-code-block"><code>$1</code></pre>');
+      // 处理GeoGebra代码块 ```geogebra ... ```，并在后面添加执行按钮
+      formattedContent = formattedContent.replace(/```geogebra([\s\S]*?)```/g, '<pre class="ggb-code-block"><code>$1</code></pre><div class="ggb-execute-container"><button class="ggb-execute-btn" data-ggb-execute><span class="ggb-execute-icon"></span>执行全部命令</button></div>');
       
       // 处理普通代码块 ``` ... ```
       formattedContent = formattedContent.replace(/```([\s\S]*?)```/g, '<pre><code>$1</code></pre>');
@@ -543,6 +543,31 @@ window.addEventListener("load", function() {
         // 加载当前模型的配置
         this.loadModelSettings(this.modelSelect.value);
       });
+      
+      // 绑定聊天容器的点击事件，用于处理GeoGebra执行按钮
+      this.chatContainer.addEventListener('click', (e) => {
+        // 检查点击的是否是GeoGebra执行按钮
+        if (e.target && e.target.matches('[data-ggb-execute]')) {
+          this.handleGgbExecute(e.target);
+        }
+      });
+    }
+    
+    // 处理GeoGebra命令执行
+    handleGgbExecute(buttonElement) {
+      // 获取包含代码的pre元素
+      const preElement = buttonElement.closest('.ggb-execute-container').previousElementSibling;
+      if (preElement && preElement.classList.contains('ggb-code-block')) {
+        const codeElement = preElement.querySelector('code');
+        if (codeElement) {
+          // ！使用 codeElement.textContent 获取代码内容就是会清除换行符，不要用这种方法，会导致命令连在一起无法执行。
+          // 更不能获取来无换行的还替换进this.commandArea.value，把原本正常的多行命令也变成一行，导致无法执行。
+          // ！const codeContent = codeElement.innerText;
+          // 直接取 this.commandArea.value 的命令来执行就好了。
+          // 执行命令
+          this.executeCommands();
+        }
+      }
     }
     
     // 执行GeoGebra命令
