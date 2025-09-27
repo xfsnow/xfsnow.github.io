@@ -85,6 +85,13 @@ GeoGebra支持的命令类型包括：
 - 圆：Circle(A, 3) 或 Circle(A, B)
 - 椭圆：Ellipse(F1, F2, a)
 - 多边形：Polygon(A, B, C, …)
+- 文本: Text(<对象>)
+Text(<对象>,<是否替换变量?true|false>)
+Text(<对象>,<点>)
+Text(<对象>,<点>,<是否替换变量?true|false>)
+Text(<对象>,<点>,<是否替换变量?true|false>,<LaTeX 公式布尔值>)
+Text(<对象>,<点>,<是否替换变量?true|false>,<LaTeX 公式布尔值>,<水平对齐 -110|1>)
+Text(<对象>,<点>,<是否替换变量?true|false>,<LaTeX 公式布尔值>,<水平对齐 -1|0|1>,<垂直对齐 -110|1>)
 
 ## 函数和曲线
 - 斜率：Slope(line)
@@ -133,7 +140,7 @@ GeoGebra支持的命令类型包括：
     </div>
     
     <div class="input-panel">
-      <div class="chat-section">
+      <div class="chat-section" style="display: flex; flex-direction: column; height: 100%;">
         <div id="chat-container" class="chat-container"></div>
         
         <div class="user-input-container">
