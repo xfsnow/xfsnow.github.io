@@ -50,8 +50,10 @@ window.addEventListener("load", function() {
       // 恢复GeoGebra代码块为textarea（在所有格式化之后）
       formattedContent = formattedContent.replace(/\{\{GGB_BLOCK_(\d+)\}\}/g, (match, index) => {
         const blockContent = ggbBlocks[index];
+        // 计算行数以设置合适的行高
+        const lines = blockContent.split('\n').length;
         // 直接将内容放入textarea的value中，确保命令立即显示
-        return `<textarea class="ggb-code-block" rows="5">${blockContent}</textarea><div class="ggb-execute-container"><button class="ggb-execute-btn" data-ggb-execute><span class="ggb-execute-icon"></span>执行全部命令</button></div>`;
+        return `<textarea class="ggb-code-block" rows="${Math.max(lines, 3)}">${blockContent}</textarea><div class="ggb-execute-container"><button class="ggb-execute-btn" data-ggb-execute><span class="ggb-execute-icon"></span>执行全部命令</button></div>`;
       });
       
       return formattedContent;

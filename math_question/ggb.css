@@ -100,7 +100,7 @@ body {
   margin-bottom: 15px;
   padding: 12px 16px;
   border-radius: 18px;
-  max-width: 85%;
+  max-width: 90%;
   position: relative;
   animation: fadeIn 0.2s ease-in;
   line-height: 1.5;
@@ -207,12 +207,14 @@ pre code {
   white-space: pre-wrap;
   position: relative;
   overflow-x: auto;
+  overflow-y: auto;
   width: 100%;
   box-sizing: border-box;
-  resize: vertical;
-  min-height: 100px;
+  resize: none;
+  min-height: 60px;
   font-size: 14px;
   color: #212529;
+  line-height: 1.5;
 }
 
 .ggb-code-block:focus {
