@@ -516,6 +516,13 @@ window.addEventListener("load", function() {
     
     // 绑定事件
     bindEvents() {
+      this.imageAttachmentBtn = document.getElementById('image-attachment-btn');
+      this.imageAttachmentBtn.addEventListener('click', () => {
+        // 处理图片选择逻辑
+        console.log('Image attachment button clicked');
+      });
+      
+      this.sendBtn = document.getElementById('send-btn');
       this.sendBtn.addEventListener('click', () => this.sendMessage());
       this.userInput.addEventListener('keypress', (e) => {
         if (e.key === 'Enter') {

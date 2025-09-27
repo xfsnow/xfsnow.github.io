@@ -139,8 +139,7 @@ body {
 /* 用户输入区域 */
 .user-input-container {
   display: flex;
-  margin-bottom: 15px;
-  flex-shrink: 0;
+  align-items: center;
 }
 
 #user-input {
@@ -154,28 +153,55 @@ body {
   box-shadow: inset 0 1px 2px rgba(0,0,0,0.075);
   transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
-
-#user-input:focus {
-  outline: none;
-  border-color: #80bdff;
-  box-shadow: 0 0 0 0.2rem rgba(0,123,255,.25);
-}
-
-#send-btn {
-  padding: 10px 20px;
+.send-btn {
   margin-left: 10px;
   background-color: #007bff;
   color: white;
   border: none;
-  border-radius: 20px;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   cursor: pointer;
-  font-weight: 500;
   transition: background-color 0.2s;
-  flex-shrink: 0;
 }
 
-#send-btn:hover {
+.send-btn:hover {
   background-color: #0069d9;
+}
+
+.send-btn::before {
+  content: "🠝";
+  font-size: 18px;
+  line-height: 1;
+}
+
+.image-attachment-btn {
+  margin-left: 10px;
+  background-color: transparent;
+  border: none;
+  color: #6c757d;
+  font-size: 18px;
+  cursor: pointer;
+  transition: color 0.2s;
+  position: relative;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.image-attachment-btn:hover {
+  color: #007bff;
+}
+.image-attachment-btn::before {
+  content: "◪";
+  width: 24px;
+  height: 24px;
+  font-size: 30px;
 }
 
 /* 代码块样式 */
