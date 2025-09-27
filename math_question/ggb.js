@@ -184,13 +184,44 @@ window.addEventListener("load", function() {
       this.model = model;
     }
     
-    callAPI(userMessage, onUpdate, onComplete, onError) {
+    // 将图片文件转换为 base64 字符串
+    async imageFileToBase64(imageFile) {
+      return new Promise((resolve, reject) => {
+        const reader = new FileReader();
+        reader.onload = () => {
+          // 移除 Data URL 的前缀 "data:image/...;base64," 只保留纯 base64 编码
+          resolve(reader.result.split(',')[1]);
+        };
+        reader.onerror = reject;
+        reader.readAsDataURL(imageFile);
+      });
+    }
+    
+    async callAPI(userMessage, onUpdate, onComplete, onError, imageBlob = null) {
       // 显示思考过程消息
       const thinkingMessage = onUpdate('AI正在思考...', 'ai', true);
       
       // 构造消息数组
       const messages = this.constructMessages();
-      messages.push({ role: 'user', content: userMessage });
+
+      // 准备用户消息内容
+      let userContent;
+      if (imageBlob) {
+        // 如果有图片，则创建多部分消息
+        userContent = [
+          { type: "text", text: userMessage },
+          { 
+            type: "image_url", 
+            image_url: {
+              url: `data:image/png;base64,${await this.imageFileToBase64(imageBlob)}`
+            }
+          }
+        ];
+      } else {
+        // 没有图片，就是纯文本
+        userContent = userMessage;
+      }
+      messages.push({ role: 'user', content: userContent });
       
       // 发送请求到通义千问 API
       fetch(this.endpoint + '/chat/completions', {
@@ -422,6 +453,8 @@ window.addEventListener("load", function() {
       this.settingsPanel = null;
       this.closeSettingsBtn = null;
       this.saveSettingsBtn = null;
+      this.imageAttachmentBtn = null;
+      this.selectedImageBase64 = null; // 存储选中图片的Base64编码
       
       this.init();
     }
@@ -512,15 +545,52 @@ window.addEventListener("load", function() {
       this.settingsPanel = document.getElementById('settings-panel');
       this.closeSettingsBtn = document.getElementById('close-settings');
       this.saveSettingsBtn = document.getElementById('save-settings');
+      this.imageAttachmentBtn = document.getElementById('image-attachment-btn');
     }
     
     // 绑定事件
     bindEvents() {
-      this.imageAttachmentBtn = document.getElementById('image-attachment-btn');
-      this.imageAttachmentBtn.addEventListener('click', () => {
-        // 处理图片选择逻辑
-        console.log('Image attachment button clicked');
-      });
+      // 图片附件按钮事件
+      if (this.imageAttachmentBtn) {
+        // 创建隐藏的文件输入元素
+        this.fileInput = document.createElement('input');
+        this.fileInput.type = 'file';
+        this.fileInput.accept = 'image/*';
+        this.fileInput.style.display = 'none';
+        document.body.appendChild(this.fileInput);
+        
+        // 绑定图片附件按钮点击事件
+        this.imageAttachmentBtn.addEventListener('click', () => {
+          this.fileInput.click();
+        });
+        
+        // 处理文件选择
+        this.fileInput.addEventListener('change', (e) => {
+          const file = e.target.files[0];
+          if (!file) return;
+          
+          // 校验图片格式和大小 (最大10MB)
+          const allowedTypes = ['image/jpeg', 'image/png', 'image/webp'];
+          if (!allowedTypes.includes(file.type)) {
+            alert('仅支持 JPG/PNG/WEBP 格式图片！');
+            this.fileInput.value = '';
+            return;
+          }
+          if (file.size > 10 * 1024 * 1024) {
+            alert('图片大小不能超过10MB！');
+            this.fileInput.value = '';
+            return;
+          }
+          
+          // 读取图片并转为Base64
+          const reader = new FileReader();
+          reader.onload = (event) => {
+            this.selectedImageBase64 = event.target.result;
+            alert(`已选择图片：${file.name}`);
+          };
+          reader.readAsDataURL(file);
+        });
+      }
       
       this.sendBtn = document.getElementById('send-btn');
       this.sendBtn.addEventListener('click', () => this.sendMessage());
@@ -662,11 +732,18 @@ window.addEventListener("load", function() {
     // 发送消息到AI
     sendMessage() {
       const message = this.userInput.value.trim();
-      if (!message) return;
+      if (!message && !this.selectedImageBase64) return; // 文本和图片都为空时不发送
       
-      // 显示用户消息
-      this.displayMessage(message, 'user');
+      // 显示用户消息到界面
+      this.displayUserMessage(message, this.selectedImageBase64);
+      
+      // 清空输入框和图片选择
       this.userInput.value = '';
+      const tempImage = this.selectedImageBase64; // 临时存储图片
+      this.selectedImageBase64 = null;
+      if (this.fileInput) {
+        this.fileInput.value = '';
+      }
       
       // 获取API密钥
       const apiKey = this.apiKeyInput.value.trim();
@@ -726,9 +803,12 @@ window.addEventListener("load", function() {
             return;
           }
           
+          // 创建支持图片的Qwen API调用
           const qwenAI = new AiQwen(apiKey, systemMessage, chatHistory, qwenEndpoint, qwenModel);
-          qwenAI.callAPI(
+          this.callQwenAPIWithImage(
+            qwenAI,
             message,
+            tempImage,
             (content, sender, isThinking) => this.displayMessage(content, sender, isThinking),
             (response) => {
               this.displayMessage(response, 'ai');
@@ -759,6 +839,144 @@ window.addEventListener("load", function() {
           );
           break;
       }
+    }
+    
+    // 调用Qwen API并支持图片
+    callQwenAPIWithImage(qwenAI, userMessage, imageBase64, onUpdate, onComplete, onError) {
+      // 显示思考过程消息
+      const thinkingMessage = onUpdate('AI正在思考...', 'ai', true);
+      
+      // 构造消息数组
+      const messages = qwenAI.constructMessages();
+      
+      // 构造用户消息内容（支持文本和图片）
+      let userContent = [];
+      if (userMessage) {
+        userContent.push({ type: "text", text: userMessage });
+      }
+      
+      if (imageBase64) {
+        // 直接使用完整的Base64 URI作为URL，不需要提取base64部分
+        userContent.push({
+          type: "image_url",  // 修正：类型改为image_url
+          image_url: {        // 新增image_url对象
+            url: imageBase64  // 使用完整的Data URL
+          }
+        });
+      }
+      
+      messages.push({ role: 'user', content: userContent });
+      
+      // 发送请求到通义千问 API
+      fetch(qwenAI.endpoint + '/chat/completions', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': 'Bearer ' + qwenAI.apiKey,
+          'X-DashScope-SSE': 'enable'
+        },
+        body: JSON.stringify({
+          model: qwenAI.model,
+          messages: messages,
+          stream: true
+        })
+      })
+      .then(response => {
+        if (!response.ok) {
+          throw new Error('API请求失败: ' + response.status);
+        }
+        
+        // 处理流式响应
+        const reader = response.body.getReader();
+        const decoder = new TextDecoder('utf-8');
+        let fullResponse = '';
+        
+        // 递归读取流数据
+        const readStream = () => {
+          reader.read().then(({ done, value }) => {
+            if (done) {
+              // 流结束，移除思考消息，显示完整响应
+              if (thinkingMessage.parentNode) {
+                thinkingMessage.parentNode.removeChild(thinkingMessage);
+              }
+              onComplete(fullResponse, 'ai');
+              return;
+            }
+            
+            // 解码数据
+            const chunk = decoder.decode(value, { stream: true });
+            const lines = chunk.split('\n');
+            
+            // 处理每个数据行
+            lines.forEach(line => {
+              if (line.startsWith('data: ')) {
+                const data = line.slice(6);
+                if (data === '[DONE]') {
+                  return;
+                }
+                
+                try {
+                  const parsed = JSON.parse(data);
+                  // 修复：正确提取Qwen模型的内容，兼容不同响应格式
+                  let content = '';
+                  if (parsed.choices && parsed.choices[0]) {
+                    const choice = parsed.choices[0];
+                    if (choice.delta && choice.delta.content !== undefined) {
+                      content = choice.delta.content;
+                    } else if (choice.message && choice.message.content) {
+                      content = choice.message.content;
+                    }
+                  }
+                  
+                  if (content) {
+                    fullResponse += content;
+                    // 更新思考消息内容，使用innerHTML来支持HTML格式
+                    thinkingMessage.innerHTML = AiBase.formatAIResponse(fullResponse);
+                  }
+                } catch (e) {
+                  // 忽略解析错误
+                }
+              }
+            });
+            
+            // 继续读取流
+            readStream();
+          }).catch(error => {
+            // 移除思考消息
+            if (thinkingMessage.parentNode) {
+              thinkingMessage.parentNode.removeChild(thinkingMessage);
+            }
+            onError('错误: ' + error.message, 'ai');
+          });
+        };
+        
+        // 开始读取流
+        readStream();
+      })
+      .catch(error => {
+        // 移除思考消息
+        if (thinkingMessage.parentNode) {
+          thinkingMessage.parentNode.removeChild(thinkingMessage);
+        }
+        onError('错误: ' + error.message, 'ai');
+      });
+    }
+    
+    // 显示用户消息（包括可能的图片）
+    displayUserMessage(text, imageBase64 = null) {
+      const messageDiv = document.createElement('div');
+      messageDiv.classList.add('message', 'user-message');
+      
+      // 拼接内容：文本 + 图片（如有）
+      let content = `<p>${text || "(无文本消息)"}</p>`;
+      if (imageBase64) {
+        content += `<img src="${imageBase64}" class="image-preview" alt="用户上传图片" style="max-width: 200px; max-height: 200px; margin-top: 10px; border-radius: 4px;">`;
+      }
+      
+      messageDiv.innerHTML = content;
+      this.chatContainer.appendChild(messageDiv);
+      this.chatContainer.scrollTop = this.chatContainer.scrollHeight;
+      return messageDiv;
     }
     
     // 显示消息
@@ -794,7 +1012,23 @@ window.addEventListener("load", function() {
         }
         
         if (messageDiv.classList.contains('user-message')) {
-          history.push({ role: 'user', content: messageDiv.textContent });
+          // 对于用户消息，我们需要检查是否包含图片
+          const textContent = messageDiv.querySelector('p').textContent;
+          const imgElement = messageDiv.querySelector('img');
+          
+          // 构造用户消息内容
+          let content = [{ type: "text", text: textContent }];
+          if (imgElement) {
+            // 注意：由于历史记录中的图片无法恢复原始Base64数据，这里仅保留文本
+            // 在实际应用中，可能需要将图片数据存储在其他地方
+          }
+          
+          // 如果只包含文本，则简化为字符串形式（保持与原来兼容）
+          if (content.length === 1 && content[0].type === "text") {
+            history.push({ role: 'user', content: content[0].text });
+          } else {
+            history.push({ role: 'user', content: content });
+          }
         } else if (messageDiv.classList.contains('ai-message')) {
           // 对于AI消息，获取纯文本内容（去除HTML标签）
           const textContent = messageDiv.textContent;
