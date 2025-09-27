@@ -49,7 +49,6 @@ body {
   overflow: hidden;
   flex: 1;
   min-height: 300px;
-  max-height: 50vh;
 }
 
 /* 命令输入区域 */
@@ -282,8 +281,7 @@ code {
 
 /* 设置面板样式 */
 .settings-btn {
-  align-self: flex-start;
-  margin-top: 15px;
+  margin-top: auto;
   padding: 8px 12px;
   background-color: #6c757d;
   color: white;
@@ -293,7 +291,8 @@ code {
   font-weight: 500;
   box-shadow: 0 2px 4px rgba(0,0,0,0.2);
   transition: background-color 0.2s;
-  z-index: 100;
+  align-self: flex-start;
+  flex-shrink: 0;
 }
 
 .settings-btn:hover {

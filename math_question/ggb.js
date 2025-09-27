@@ -723,14 +723,10 @@ window.addEventListener("load", function() {
             (content, sender, isThinking) => this.displayMessage(content, sender, isThinking),
             (response) => {
               this.displayMessage(response, 'ai');
-              console.log('response:', response);
+              console.log('API response:', response);
               // 提取GeoGebra命令并填充到命令区域
               const commands = AiBase.extractGgbCommands(response);
-              console.log('commands:', commands);
-              if (commands.length > 0) {
-                // 不再需要填充主命令区域
-                console.log('提取到GeoGebra命令:', commands);
-              }
+              console.log('GeoGebra commands parsed:', commands);
             },
             (error) => this.displayMessage(error, 'ai')
           );
