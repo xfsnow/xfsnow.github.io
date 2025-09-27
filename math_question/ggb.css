@@ -6,6 +6,7 @@ body {
   color: #212529;
   overflow: hidden;
 }
+
 .container {
   display: flex;
   flex-direction: row;
@@ -139,7 +140,12 @@ body {
 /* 用户输入区域 */
 .user-input-container {
   display: flex;
-  align-items: center;
+  flex-direction: column;
+}
+
+.input-wrapper {
+  display: flex;
+  gap: 10px;
 }
 
 #user-input {
@@ -148,13 +154,25 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   font-size: 14px;
   border: 1px solid #ced4da;
-  border-radius: 20px;
+  border-radius: 8px;
   box-sizing: border-box;
   box-shadow: inset 0 1px 2px rgba(0,0,0,0.075);
   transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  resize: vertical;
+  min-height: 80px;
+  overflow-y: auto;
 }
+
+.input-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  padding: 5px 0;
+}
+
 .send-btn {
-  margin-left: 10px;
   background-color: #007bff;
   color: white;
   border: none;
@@ -179,7 +197,6 @@ body {
 }
 
 .image-attachment-btn {
-  margin-left: 10px;
   background-color: transparent;
   border: none;
   color: #6c757d;
@@ -197,11 +214,64 @@ body {
 .image-attachment-btn:hover {
   color: #007bff;
 }
+
 .image-attachment-btn::before {
   content: "◪";
+  width: 36px;
+  height: 30px;
+  font-size: 40px;
+}
+
+.close-preview-btn {
+  position: absolute;
+  top: -8px;
+  right: -8px;
   width: 24px;
   height: 24px;
-  font-size: 30px;
+  border-radius: 50%;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  font-size: 18px;
+  font-weight: bold;
+  color: #666;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.close-preview-btn:hover {
+  background-color: #f8f9fa;
+  color: #000;
+}
+
+.image-preview-wrapper {
+  text-align: right;
+  display: none;
+}
+
+.image-preview-wrapper.active {
+  display: block;
+}
+
+.image-preview-container {
+  margin-bottom: 10px;
+  position: relative;
+  display: inline-block;
+}
+
+#image-preview {
+  max-width: 200px;
+  max-height: 200px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+}
+
+.chat-section {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 
 /* 代码块样式 */

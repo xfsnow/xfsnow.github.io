@@ -586,16 +586,32 @@ window.addEventListener("load", function() {
           const reader = new FileReader();
           reader.onload = (event) => {
             this.selectedImageBase64 = event.target.result;
-            alert(`已选择图片：${file.name}`);
+            // 显示图片预览
+            this.showImagePreview(this.selectedImageBase64);
           };
           reader.readAsDataURL(file);
         });
       }
       
+      // 绑定关闭预览按钮事件
+      const closePreviewBtn = document.getElementById('close-preview');
+      if (closePreviewBtn) {
+        closePreviewBtn.addEventListener('click', () => {
+          this.selectedImageBase64 = null;
+          this.hideImagePreview();
+          if (this.fileInput) {
+            this.fileInput.value = '';
+          }
+        });
+      }
+      
       this.sendBtn = document.getElementById('send-btn');
       this.sendBtn.addEventListener('click', () => this.sendMessage());
-      this.userInput.addEventListener('keypress', (e) => {
-        if (e.key === 'Enter') {
+      
+      // 修改为支持多行文本框的回车发送逻辑
+      this.userInput.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' && !e.shiftKey) {
+          e.preventDefault();
           this.sendMessage();
         }
       });
@@ -729,6 +745,25 @@ window.addEventListener("load", function() {
       });
     }
     
+    // 显示图片预览
+    showImagePreview(imageData) {
+      const previewWrapper = document.querySelector('.image-preview-wrapper');
+      const previewImage = document.getElementById('image-preview');
+      
+      if (imageData && previewWrapper && previewImage) {
+        previewImage.src = imageData;
+        previewWrapper.classList.add('active');
+      }
+    }
+    
+    // 隐藏图片预览
+    hideImagePreview() {
+      const previewWrapper = document.querySelector('.image-preview-wrapper');
+      if (previewWrapper) {
+        previewWrapper.classList.remove('active');
+      }
+    }
+    
     // 发送消息到AI
     sendMessage() {
       const message = this.userInput.value.trim();
@@ -744,6 +779,8 @@ window.addEventListener("load", function() {
       if (this.fileInput) {
         this.fileInput.value = '';
       }
+      
+      // 移除自动隐藏图片预览的功能，让用户可以继续查看已上传的图片
       
       // 获取API密钥
       const apiKey = this.apiKeyInput.value.trim();

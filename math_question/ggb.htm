@@ -140,16 +140,25 @@ Text(<对象>,<点>,<是否替换变量?true|false>,<LaTeX 公式布尔值>,<水
     </div>
     
     <div class="input-panel">
-      <div class="chat-section" style="display: flex; flex-direction: column; height: 100%;">
+      <div class="chat-section">
         <div id="chat-container" class="chat-container"></div>
         
-       <div class="user-input-container">
-      <input type="text" id="user-input" placeholder="在这里输入内容，让AI帮你画图">
-      <button id="image-attachment-btn" class="image-attachment-btn" title="添加图片"></button>
-        <button id="send-btn" class="send-btn">
-        </button>
-      </div>
-
+        <div class="image-preview-wrapper">
+          <div class="image-preview-container" id="image-preview-container">
+            <img id="image-preview" src="" alt="Image preview">
+            <button id="close-preview" class="close-preview-btn" title="移除图片">×</button>
+          </div>
+        </div>
+        
+        <div class="user-input-container">
+          <div class="input-wrapper">
+            <textarea id="user-input" placeholder="在这里输入内容，让AI帮你画图" rows="3"></textarea>
+            <div class="input-actions">
+              <button id="image-attachment-btn" class="image-attachment-btn" title="添加图片"></button>
+              <button id="send-btn" class="send-btn"></button>
+            </div>
+          </div>
+        </div>
 
       </div>
     </div>
