@@ -836,7 +836,7 @@ window.addEventListener("load", function() {
               const commands = AiBase.extractGgbCommands(response);
               if (commands.length > 0) {
                 // 不再需要填充主命令区域
-                console.log('提取到GeoGebra命令:', commands);
+                console.log('GeoGebra commands extracted:', commands);
               }
             },
             (error) => this.displayMessage(error, 'ai')
