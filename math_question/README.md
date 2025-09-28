@@ -33,6 +33,9 @@ f = x^0.2
 第2个是通义千问，只填写API密钥。
 第3个是Azure OpenAI,填写API密钥、访问端点、和模型名称。
 
+
+现在调用 Azure OpenAI和 Qwen 对图片的处理方法应该再整合到一起，处理逻辑应保持一致，提取出共用的方法放到 AiBase类中，比如存取临时图片需要变量应该放在AiBase类中，而不是 GgbManage类中。图片base64编码的方法应该统一放在 AiBase类中。Qwen 的callAPI() 方法应该统一成一个，像Azure OpenAI那样图片参数为可选的。
+
 ## 测试用提示语
 
 * 支持你的AI模型是什么？

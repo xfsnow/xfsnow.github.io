@@ -6,6 +6,20 @@ window.addEventListener("load", function() {
       this.apiKey = apiKey;
       this.systemMessage = systemMessage;
       this.chatHistory = chatHistory;
+      this.selectedImageBase64 = null; // 存储选中的图片Base64编码
+    }
+    
+    // 将图片文件转换为 base64 字符串
+    imageFileToBase64(imageFile) {
+      return new Promise((resolve, reject) => {
+        const reader = new FileReader();
+        reader.onload = () => {
+          // 移除 Data URL 的前缀 "data:image/...;base64," 只保留纯 base64 编码
+          resolve(reader.result.split(',')[1]);
+        };
+        reader.onerror = reject;
+        reader.readAsDataURL(imageFile);
+      });
     }
     
     // 构造消息数组
@@ -16,6 +30,25 @@ window.addEventListener("load", function() {
       }
       messages.push(...this.chatHistory);
       return messages;
+    }
+    
+    // 构造用户消息内容（支持文本和图片）
+    constructUserContent(userMessage, imageBase64 = null) {
+      if (imageBase64) {
+        // 如果有图片，则创建多部分消息
+        return [
+          { type: "text", text: userMessage },
+          { 
+            type: "image_url", 
+            image_url: {
+              url: imageBase64
+            }
+          }
+        ];
+      } else {
+        // 没有图片，就是纯文本
+        return userMessage;
+      }
     }
     
     // 格式化AI响应内容
@@ -53,7 +86,7 @@ window.addEventListener("load", function() {
         // 计算行数以设置合适的行高
         const lines = blockContent.split('\n').length;
         // 直接将内容放入textarea的value中，确保命令立即显示
-        return `<textarea class="ggb-code-block" rows="${Math.max(lines, 3)}">${blockContent}</textarea><div class="ggb-execute-container"><button class="ggb-execute-btn" data-ggb-execute><span class="ggb-execute-icon"></span>执行全部命令</button></div>`;
+        return `<textarea class="ggb-code-block" rows="${Math.max(lines, 3)}">${blockContent}</textarea><div class="ggb-execute-container"><button class="ggb-execute-btn" data-ggb-execute><span class="ggb-execute-icon"></span>执行命令</button></div>`;
       });
       
       return formattedContent;
@@ -184,20 +217,7 @@ window.addEventListener("load", function() {
       this.model = "qwen3-vl-plus";
     }
     
-    // 将图片文件转换为 base64 字符串
-    async imageFileToBase64(imageFile) {
-      return new Promise((resolve, reject) => {
-        const reader = new FileReader();
-        reader.onload = () => {
-          // 移除 Data URL 的前缀 "data:image/...;base64," 只保留纯 base64 编码
-          resolve(reader.result.split(',')[1]);
-        };
-        reader.onerror = reject;
-        reader.readAsDataURL(imageFile);
-      });
-    }
-    
-    async callAPI(userMessage, onUpdate, onComplete, onError, imageBlob = null) {
+    async callAPI(userMessage, onUpdate, onComplete, onError, imageBase64 = null) {
       // 显示思考过程消息
       const thinkingMessage = onUpdate('AI正在思考...', 'ai', true);
       
@@ -206,20 +226,10 @@ window.addEventListener("load", function() {
 
       // 准备用户消息内容
       let userContent;
-      if (imageBlob) {
-        // 如果有图片，则创建多部分消息
-        userContent = [
-          { type: "text", text: userMessage },
-          { 
-            type: "image_url", 
-            image_url: {
-              url: `data:image/png;base64,${await this.imageFileToBase64(imageBlob)}`
-            }
-          }
-        ];
+      if (imageBase64) {
+        userContent = this.constructUserContent(userMessage, imageBase64);
       } else {
-        // 没有图片，就是纯文本
-        userContent = userMessage;
+        userContent = this.constructUserContent(userMessage);
       }
       messages.push({ role: 'user', content: userContent });
       
@@ -327,13 +337,16 @@ window.addEventListener("load", function() {
       this.deployment = deployment;
     }
     
-    callAPI(userMessage, onUpdate, onComplete, onError) {
+    callAPI(userMessage, onUpdate, onComplete, onError, imageBase64 = null) {
       // 显示思考过程消息
       const thinkingMessage = onUpdate('AI正在思考...', 'ai', true);
       
       // 构造消息数组
       const messages = this.constructMessages();
-      messages.push({ role: 'user', content: userMessage });
+      
+      // 准备用户消息内容
+      const userContent = this.constructUserContent(userMessage, imageBase64);
+      messages.push({ role: 'user', content: userContent });
       
       // 确保端点URL以斜杠结尾，并构建完整的API URL
       let fullEndpoint = this.endpoint;
@@ -351,6 +364,7 @@ window.addEventListener("load", function() {
           'api-key': this.apiKey
         },
         body: JSON.stringify({
+          model: "gpt-4o", // 指定模型名称
           messages: messages,
           max_tokens: 6553,
           temperature: 0.7,
@@ -397,7 +411,16 @@ window.addEventListener("load", function() {
                 
                 try {
                   const parsed = JSON.parse(data);
-                  const content = parsed.choices && parsed.choices[0] && parsed.choices[0].delta && parsed.choices[0].delta.content;
+                  let content = '';
+                  if (parsed.choices && parsed.choices.length > 0) {
+                    const choice = parsed.choices[0];
+                    if (choice.delta && choice.delta.content) {
+                      content = choice.delta.content;
+                    } else if (choice.message && choice.message.content) {
+                      content = choice.message.content;
+                    }
+                  }
+                  
                   if (content) {
                     fullResponse += content;
                     // 更新思考消息内容，使用innerHTML来支持HTML格式
@@ -454,7 +477,6 @@ window.addEventListener("load", function() {
       this.closeSettingsBtn = null;
       this.saveSettingsBtn = null;
       this.imageAttachmentBtn = null;
-      this.selectedImageBase64 = null; // 存储选中图片的Base64编码
       
       this.init();
     }
@@ -570,9 +592,10 @@ window.addEventListener("load", function() {
           // 读取图片并转为Base64
           const reader = new FileReader();
           reader.onload = (event) => {
-            this.selectedImageBase64 = event.target.result;
+            // 存储选中的图片Base64编码到AiBase类中
+            AiBase.prototype.selectedImageBase64 = event.target.result;
             // 显示图片预览
-            this.showImagePreview(this.selectedImageBase64);
+            this.showImagePreview(AiBase.prototype.selectedImageBase64);
           };
           reader.readAsDataURL(file);
         });
@@ -582,7 +605,6 @@ window.addEventListener("load", function() {
       const closePreviewBtn = document.getElementById('close-preview');
       if (closePreviewBtn) {
         closePreviewBtn.addEventListener('click', () => {
-          this.selectedImageBase64 = null;
           this.hideImagePreview();
           if (this.fileInput) {
             this.fileInput.value = '';
@@ -732,15 +754,16 @@ window.addEventListener("load", function() {
     // 发送消息到AI
     sendMessage() {
       const message = this.userInput.value.trim();
-      if (!message && !this.selectedImageBase64) return; // 文本和图片都为空时不发送
+      // 注意：这里暂时保留原来的图片检查逻辑，实际图片处理已移至AI类中
+      if (!message && !AiBase.prototype.selectedImageBase64) return; // 文本和图片都为空时不发送
       
-      // 显示用户消息到界面
-      this.displayUserMessage(message, this.selectedImageBase64);
+      // 显示用户消息到界面（包含图片）
+      this.displayUserMessage(message, AiBase.prototype.selectedImageBase64);
       
       // 清空输入框和图片选择
       this.userInput.value = '';
-      const tempImage = this.selectedImageBase64; // 临时存储图片
-      this.selectedImageBase64 = null;
+      const tempImage = AiBase.prototype.selectedImageBase64; // 临时存储图片
+      AiBase.prototype.selectedImageBase64 = null;
       this.hideImagePreview(); // 隐藏图片预览
       if (this.fileInput) {
         this.fileInput.value = '';
@@ -806,19 +829,17 @@ window.addEventListener("load", function() {
               const commands = AiBase.extractGgbCommands(response);
               if (commands.length > 0) {
                 // 不再需要填充主命令区域
-                console.log('提取到GeoGebra命令:', commands);
+                console.log('GeoGebra commands extracted:', commands);
               }
             },
-            (error) => this.displayMessage(error, 'ai')
+            (error) => this.displayMessage(error, 'ai'),
+            tempImage // 传递图片数据
           );
           break;
         case 'qwen-max':
-          // 创建支持图片的Qwen API调用
           const qwenAI = new AiQwen(apiKey, systemMessage, chatHistory);
-          this.callQwenAPIWithImage(
-            qwenAI,
+          qwenAI.callAPI(
             message,
-            tempImage,
             (content, sender, isThinking) => this.displayMessage(content, sender, isThinking),
             (response) => {
               this.displayMessage(response, 'ai');
@@ -827,7 +848,8 @@ window.addEventListener("load", function() {
               const commands = AiBase.extractGgbCommands(response);
               console.log('GeoGebra commands parsed:', commands);
             },
-            (error) => this.displayMessage(error, 'ai')
+            (error) => this.displayMessage(error, 'ai'),
+            tempImage // 传递图片数据
           );
           break;
         case 'deepseek':
@@ -852,127 +874,6 @@ window.addEventListener("load", function() {
       
       // 保存当前选择的模型
       localStorage.setItem('ggbCurrentModel', selectedModel);
-    }
-    
-    // 调用Qwen API并支持图片
-    callQwenAPIWithImage(qwenAI, userMessage, imageBase64, onUpdate, onComplete, onError) {
-      // 显示思考过程消息
-      const thinkingMessage = onUpdate('AI正在思考...', 'ai', true);
-      
-      // 构造消息数组
-      const messages = qwenAI.constructMessages();
-      
-      // 构造用户消息内容（支持文本和图片）
-      let userContent = [];
-      if (userMessage) {
-        userContent.push({ type: "text", text: userMessage });
-      }
-      
-      if (imageBase64) {
-        // 直接使用完整的Base64 URI作为URL，不需要提取base64部分
-        userContent.push({
-          type: "image_url",  // 修正：类型改为image_url
-          image_url: {        // 新增image_url对象
-            url: imageBase64  // 使用完整的Data URL
-          }
-        });
-      }
-      
-      messages.push({ role: 'user', content: userContent });
-      
-      // 发送请求到通义千问 API
-      fetch(qwenAI.endpoint + '/chat/completions', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          'Authorization': 'Bearer ' + qwenAI.apiKey,
-          'X-DashScope-SSE': 'enable'
-        },
-        body: JSON.stringify({
-          model: qwenAI.model,
-          messages: messages,
-          stream: true
-        })
-      })
-      .then(response => {
-        if (!response.ok) {
-          throw new Error('API请求失败: ' + response.status);
-        }
-        
-        // 处理流式响应
-        const reader = response.body.getReader();
-        const decoder = new TextDecoder('utf-8');
-        let fullResponse = '';
-        
-        // 递归读取流数据
-        const readStream = () => {
-          reader.read().then(({ done, value }) => {
-            if (done) {
-              // 流结束，移除思考消息，显示完整响应
-              if (thinkingMessage.parentNode) {
-                thinkingMessage.parentNode.removeChild(thinkingMessage);
-              }
-              onComplete(fullResponse, 'ai');
-              return;
-            }
-            
-            // 解码数据
-            const chunk = decoder.decode(value, { stream: true });
-            const lines = chunk.split('\n');
-            
-            // 处理每个数据行
-            lines.forEach(line => {
-              if (line.startsWith('data: ')) {
-                const data = line.slice(6);
-                if (data === '[DONE]') {
-                  return;
-                }
-                
-                try {
-                  const parsed = JSON.parse(data);
-                  // 修复：正确提取Qwen模型的内容，兼容不同响应格式
-                  let content = '';
-                  if (parsed.choices && parsed.choices[0]) {
-                    const choice = parsed.choices[0];
-                    if (choice.delta && choice.delta.content !== undefined) {
-                      content = choice.delta.content;
-                    } else if (choice.message && choice.message.content) {
-                      content = choice.message.content;
-                    }
-                  }
-                  
-                  if (content) {
-                    fullResponse += content;
-                    // 更新思考消息内容，使用innerHTML来支持HTML格式
-                    thinkingMessage.innerHTML = AiBase.formatAIResponse(fullResponse);
-                  }
-                } catch (e) {
-                  // 忽略解析错误
-                }
-              }
-            });
-            
-            // 继续读取流
-            readStream();
-          }).catch(error => {
-            // 移除思考消息
-            if (thinkingMessage.parentNode) {
-              thinkingMessage.parentNode.removeChild(thinkingMessage);
-            }
-            onError('错误: ' + error.message, 'ai');
-          });
-        };
-        
-        // 开始读取流
-        readStream();
-      })
-      .catch(error => {
-        // 移除思考消息
-        if (thinkingMessage.parentNode) {
-          thinkingMessage.parentNode.removeChild(thinkingMessage);
-        }
-        onError('错误: ' + error.message, 'ai');
-      });
     }
     
     // 显示用户消息（包括可能的图片）
