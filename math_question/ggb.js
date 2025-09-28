@@ -555,9 +555,9 @@ window.addEventListener("load", function() {
           if (!file) return;
 
           // 校验图片格式和大小 (最大10MB)
-          const allowedTypes = ['image/jpeg', 'image/png', 'image/webp'];
+          const allowedTypes = ['image/jpeg', 'image/png', 'image/gif', 'image/webp'];
           if (!allowedTypes.includes(file.type)) {
-            alert('仅支持 JPG/PNG/WEBP 格式图片！');
+            alert('仅支持 JPG/PNG/GIF/WEBP 格式图片！');
             this.fileInput.value = '';
             return;
           }
@@ -741,6 +741,7 @@ window.addEventListener("load", function() {
       this.userInput.value = '';
       const tempImage = this.selectedImageBase64; // 临时存储图片
       this.selectedImageBase64 = null;
+      this.hideImagePreview(); // 隐藏图片预览
       if (this.fileInput) {
         this.fileInput.value = '';
       }
