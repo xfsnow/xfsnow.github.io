@@ -178,10 +178,10 @@ window.addEventListener("load", function() {
   
   // 通义千问 AI类
   class AiQwen extends AiBase {
-    constructor(apiKey, systemMessage, chatHistory, endpoint, model) {
+    constructor(apiKey, systemMessage, chatHistory) {
       super(apiKey, systemMessage, chatHistory);
-      this.endpoint = endpoint;
-      this.model = model;
+      this.endpoint = "https://dashscope.aliyuncs.com/compatible-mode/v1";
+      this.model = "qwen3-vl-plus";
     }
     
     // 将图片文件转换为 base64 字符串
@@ -501,30 +501,6 @@ window.addEventListener("load", function() {
       closeSettingsBtn.addEventListener('click', () => {
         settingsPanel.classList.remove('active');
       });
-      
-      // 模型选择变化时的处理逻辑
-      document.getElementById('model-select').addEventListener('change', function() {
-        const azureSection = document.getElementById('azure-section');
-        const qwenSection = document.getElementById('qwen-section');
-        
-        // 隐藏所有特定模型的输入区域
-        azureSection.style.display = 'none';
-        qwenSection.style.display = 'none';
-        
-        // 根据选择显示相应的输入区域
-        if (this.value === 'azure-openai') {
-          azureSection.style.display = 'block';
-        } else if (this.value === 'qwen-max') {
-          qwenSection.style.display = 'block';
-        }
-      });
-      
-      // 保存设置按钮点击事件
-      document.getElementById('save-settings').addEventListener('click', () => {
-        // 这里可以添加保存设置的逻辑，例如存储到 localStorage
-        alert('设置已保存！');
-        settingsPanel.classList.remove('active');
-      });
     }
     
     // 绑定DOM元素
@@ -534,13 +510,22 @@ window.addEventListener("load", function() {
       this.sendBtn = document.getElementById('send-btn');
       this.userInput = document.getElementById('user-input');
       this.chatContainer = document.getElementById('chat-container');
-      this.apiKeyInput = document.getElementById('api-key');
       this.modelSelect = document.getElementById('model-select');
       this.systemPrompt = document.getElementById('system-prompt');
+      
+      // 各模型专用API密钥输入框
+      this.deepSeekApiKeyInput = document.getElementById('deepseek-api-key');
+      this.qwenApiKeyInput = document.getElementById('qwen-api-key');
+      this.azureApiKeyInput = document.getElementById('azure-api-key');
+      
+      // Azure OpenAI特定输入框
       this.azureEndpointInput = document.getElementById('azure-endpoint');
       this.azureModelInput = document.getElementById('azure-model');
+      
+      // 通义千问特定输入框
       this.qwenEndpointInput = document.getElementById('qwen-endpoint');
       this.qwenModelInput = document.getElementById('qwen-model');
+      
       this.settingsBtn = document.getElementById('settings-btn');
       this.settingsPanel = document.getElementById('settings-panel');
       this.closeSettingsBtn = document.getElementById('close-settings');
@@ -558,17 +543,17 @@ window.addEventListener("load", function() {
         this.fileInput.accept = 'image/*';
         this.fileInput.style.display = 'none';
         document.body.appendChild(this.fileInput);
-        
+
         // 绑定图片附件按钮点击事件
         this.imageAttachmentBtn.addEventListener('click', () => {
           this.fileInput.click();
         });
-        
+
         // 处理文件选择
         this.fileInput.addEventListener('change', (e) => {
           const file = e.target.files[0];
           if (!file) return;
-          
+
           // 校验图片格式和大小 (最大10MB)
           const allowedTypes = ['image/jpeg', 'image/png', 'image/webp'];
           if (!allowedTypes.includes(file.type)) {
@@ -581,7 +566,7 @@ window.addEventListener("load", function() {
             this.fileInput.value = '';
             return;
           }
-          
+
           // 读取图片并转为Base64
           const reader = new FileReader();
           reader.onload = (event) => {
@@ -592,7 +577,7 @@ window.addEventListener("load", function() {
           reader.readAsDataURL(file);
         });
       }
-      
+
       // 绑定关闭预览按钮事件
       const closePreviewBtn = document.getElementById('close-preview');
       if (closePreviewBtn) {
@@ -604,10 +589,10 @@ window.addEventListener("load", function() {
           }
         });
       }
-      
+
       this.sendBtn = document.getElementById('send-btn');
       this.sendBtn.addEventListener('click', () => this.sendMessage());
-      
+
       // 修改为支持多行文本框的回车发送逻辑
       this.userInput.addEventListener('keydown', (e) => {
         if (e.key === 'Enter' && !e.shiftKey) {
@@ -628,26 +613,6 @@ window.addEventListener("load", function() {
       this.saveSettingsBtn.addEventListener('click', () => {
         this.saveSettings();
         this.settingsPanel.classList.remove('active');
-      });
-      
-      // 模型选择变化时的处理逻辑
-      this.modelSelect.addEventListener('change', () => {
-        const azureSection = document.getElementById('azure-section');
-        const qwenSection = document.getElementById('qwen-section');
-        
-        // 隐藏所有特定模型的输入区域
-        azureSection.style.display = 'none';
-        qwenSection.style.display = 'none';
-        
-        // 根据选择显示相应的输入区域
-        if (this.modelSelect.value === 'azure-openai') {
-          azureSection.style.display = 'block';
-        } else if (this.modelSelect.value === 'qwen-max') {
-          qwenSection.style.display = 'block';
-        }
-        
-        // 加载当前模型的配置
-        this.loadModelSettings(this.modelSelect.value);
       });
       
       // 绑定聊天容器的点击事件，用于处理GeoGebra执行按钮
@@ -780,10 +745,25 @@ window.addEventListener("load", function() {
         this.fileInput.value = '';
       }
       
-      // 移除自动隐藏图片预览的功能，让用户可以继续查看已上传的图片
+      // 获取当前选择的模型
+      const selectedModel = this.modelSelect.value;
       
-      // 获取API密钥
-      const apiKey = this.apiKeyInput.value.trim();
+      // 根据选择的模型获取对应的API密钥
+      let apiKey = '';
+      switch (selectedModel) {
+        case 'deepseek':
+          apiKey = this.deepSeekApiKeyInput.value.trim();
+          break;
+        case 'qwen-max':
+          apiKey = this.qwenApiKeyInput.value.trim();
+          break;
+        case 'azure-openai':
+          apiKey = this.azureApiKeyInput.value.trim();
+          break;
+        default:
+          apiKey = this.apiKeyInput.value.trim(); // 备用通用API密钥输入框
+      }
+      
       if (!apiKey) {
         this.displayMessage('请先输入API密钥', 'ai');
         return;
@@ -796,7 +776,6 @@ window.addEventListener("load", function() {
       const chatHistory = this.getChatHistory();
       
       // 根据选择的模型调用相应的API
-      const selectedModel = this.modelSelect.value;
       switch (selectedModel) {
         case 'azure-openai':
           // 检查Azure OpenAI必需的参数
@@ -828,20 +807,8 @@ window.addEventListener("load", function() {
           );
           break;
         case 'qwen-max':
-          // 检查通义千问必需的参数
-          const qwenEndpoint = this.qwenEndpointInput.value.trim();
-          const qwenModel = this.qwenModelInput.value.trim();
-          if (!qwenEndpoint) {
-            this.displayMessage('请先输入通义千问访问端点', 'ai');
-            return;
-          }
-          if (!qwenModel) {
-            this.displayMessage('请先输入模型名称', 'ai');
-            return;
-          }
-          
           // 创建支持图片的Qwen API调用
-          const qwenAI = new AiQwen(apiKey, systemMessage, chatHistory, qwenEndpoint, qwenModel);
+          const qwenAI = new AiQwen(apiKey, systemMessage, chatHistory);
           this.callQwenAPIWithImage(
             qwenAI,
             message,
@@ -876,6 +843,9 @@ window.addEventListener("load", function() {
           );
           break;
       }
+      
+      // 保存当前选择的模型
+      localStorage.setItem('ggbCurrentModel', selectedModel);
     }
     
     // 调用Qwen API并支持图片
@@ -1076,92 +1046,35 @@ window.addEventListener("load", function() {
       return history;
     }
     
-    // 保存当前模型设置到localStorage
+    // 保存设置到localStorage
     saveSettings() {
-      const currentModel = this.modelSelect.value;
-      const modelSettings = {
-        apiKey: this.apiKeyInput.value,
+      const settings = {
+        deepseekApiKey: this.deepSeekApiKeyInput.value,
+        qwenApiKey: this.qwenApiKeyInput.value,
+        azureApiKey: this.azureApiKeyInput.value,
+        azureEndpoint: this.azureEndpointInput.value,
+        azureModel: this.azureModelInput.value,
         systemPrompt: this.systemPrompt.value
       };
-      
-      // 根据模型类型保存特定设置
-      switch (currentModel) {
-        case 'azure-openai':
-          modelSettings.azureEndpoint = this.azureEndpointInput.value;
-          modelSettings.azureModel = this.azureModelInput.value;
-          break;
-        case 'qwen-max':
-          modelSettings.qwenEndpoint = this.qwenEndpointInput.value;
-          modelSettings.qwenModel = this.qwenModelInput.value;
-          break;
-      }
-      
-      // 获取现有的模型设置
-      let allSettings = {};
-      const existingSettings = localStorage.getItem('ggbModelSettings');
-      if (existingSettings) {
-        try {
-          allSettings = JSON.parse(existingSettings);
-        } catch (e) {
-          console.error('解析现有设置失败:', e);
-        }
-      }
-      
-      // 更新当前模型的设置
-      allSettings[currentModel] = modelSettings;
-      
-      // 保存到localStorage
-      localStorage.setItem('ggbModelSettings', JSON.stringify(allSettings));
-      
-      // 保存当前选择的模型
-      localStorage.setItem('ggbCurrentModel', currentModel);
+      localStorage.setItem('ggbSettings', JSON.stringify(settings));
+      alert('设置已保存！');
     }
-    
-    // 加载指定模型的设置
-    loadModelSettings(model) {
-      const settingsStr = localStorage.getItem('ggbModelSettings');
-      if (settingsStr) {
-        try {
-          const allSettings = JSON.parse(settingsStr);
-          const modelSettings = allSettings[model];
-          
-          if (modelSettings) {
-            // 加载通用设置
-            if (modelSettings.apiKey) this.apiKeyInput.value = modelSettings.apiKey;
-            if (modelSettings.systemPrompt) this.systemPrompt.value = modelSettings.systemPrompt;
-            
-            // 根据模型类型加载特定设置
-            switch (model) {
-              case 'azure-openai':
-                if (modelSettings.azureEndpoint) this.azureEndpointInput.value = modelSettings.azureEndpoint;
-                if (modelSettings.azureModel) this.azureModelInput.value = modelSettings.azureModel;
-                break;
-              case 'qwen-max':
-                if (modelSettings.qwenEndpoint) this.qwenEndpointInput.value = modelSettings.qwenEndpoint;
-                if (modelSettings.qwenModel) this.qwenModelInput.value = modelSettings.qwenModel;
-                break;
-            }
-          }
-        } catch (e) {
-          console.error('加载模型设置失败:', e);
-        }
-      }
-    }
-    
-    // 从localStorage加载设置（页面初始化时调用）
+
+    // 加载设置从localStorage
     loadSettings() {
-      // 先加载上次选择的模型
-      const lastSelectedModel = localStorage.getItem('ggbCurrentModel');
-      if (lastSelectedModel) {
-        this.modelSelect.value = lastSelectedModel;
+      const settings = JSON.parse(localStorage.getItem('ggbSettings')) || {};
+      this.deepSeekApiKeyInput.value = settings.deepseekApiKey || '';
+      this.qwenApiKeyInput.value = settings.qwenApiKey || '';
+      this.azureApiKeyInput.value = settings.azureApiKey || '';
+      this.azureEndpointInput.value = settings.azureEndpoint || '';
+      this.azureModelInput.value = settings.azureModel || '';
+      this.systemPrompt.value = settings.systemPrompt || '';
+      
+      // 加载当前选择的模型
+      const currentModel = localStorage.getItem('ggbCurrentModel');
+      if (currentModel) {
+        this.modelSelect.value = currentModel;
       }
-      
-      const currentModel = this.modelSelect.value;
-      this.loadModelSettings(currentModel);
-      
-      // 触发模型选择变化事件，显示对应的输入区域
-      const event = new Event('change');
-      this.modelSelect.dispatchEvent(event);
     }
   }
   

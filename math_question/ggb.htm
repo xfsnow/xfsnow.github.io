@@ -25,17 +25,37 @@
           <label for="model-select">选择模型:</label>
           <select id="model-select" class="model-select">
             <option value="deepseek" selected>DeepSeek</option>
-            <option value="azure-openai">Azure OpenAI</option>
             <option value="qwen-max">通义千问max</option>
+            <option value="azure-openai">Azure OpenAI</option>
           </select>
         </div>
-        
-        <div class="api-key-section">
-          <label for="api-key">API 密钥:</label>
-          <input type="password" id="api-key" class="api-key-input" placeholder="请输入您的 API 密钥">
+      
+        <!-- DeepSeek配置 -->
+        <div class="deepseek-section">
+          <h4>DeepSeek 配置</h4>
+          <div class="deepseek-api-key-section">
+            <label for="deepseek-api-key">DeepSeek API 密钥:</label>
+            <input type="password" id="deepseek-api-key" class="api-key-input" placeholder="请输入DeepSeek API密钥">
+          </div>
         </div>
-        
-        <div class="azure-section" id="azure-section" style="display: none;">
+
+        <!-- 通义千问配置 -->
+        <div class="qwen-section">
+          <h4>通义千问 配置</h4>
+          <div class="qwen-api-key-section">
+            <label for="qwen-api-key">通义千问 API 密钥:</label>
+            <input type="password" id="qwen-api-key" class="api-key-input" placeholder="请输入通义千问 API密钥">
+          </div>
+        </div>
+
+        <!-- Azure OpenAI配置 -->
+        <div class="azure-section">
+          <h4>Azure OpenAI 配置</h4>
+          <div class="azure-api-key-section">
+            <label for="azure-api-key">Azure OpenAI API 密钥:</label>
+            <input type="password" id="azure-api-key" class="api-key-input" placeholder="请输入Azure OpenAI API密钥">
+          </div>
+          
           <div class="azure-endpoint-section">
             <label for="azure-endpoint">Azure OpenAI访问端点:</label>
             <input type="text" id="azure-endpoint" class="azure-endpoint-input" placeholder="请输入Azure OpenAI访问端点">
@@ -47,18 +67,7 @@
           </div>
         </div>
         
-        <div class="qwen-section" id="qwen-section" style="display: none;">
-          <div class="qwen-endpoint-section">
-            <label for="qwen-endpoint">通义千问访问端点:</label>
-            <input type="text" id="qwen-endpoint" class="qwen-endpoint-input" placeholder="请输入通义千问访问端点" value="https://dashscope.aliyuncs.com/compatible-mode/v1">
-          </div>
-          
-          <div class="qwen-model-section">
-            <label for="qwen-model">模型名称:</label>
-            <input type="text" id="qwen-model" class="qwen-model-input" placeholder="请输入模型名称" value="qwen3-vl-plus">
-          </div>
-        </div>
-        
+        <!-- 公共系统提示语区域 -->
         <div class="system-prompt-section">
           <label for="system-prompt">系统提示语:</label>
           <textarea id="system-prompt" class="system-prompt-textarea">
