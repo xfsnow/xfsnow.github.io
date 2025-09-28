@@ -14,7 +14,11 @@
     <div class="ggb-panel">
       <h2 class="ggb-title">和AI聊聊天，用GeoGebra画图形</h2>
       <div id="ggb-element"></div>
-      <button id="settings-btn" class="settings-btn">⚙️ 设置</button>
+      <div class="button-group">
+        <button id="settings-btn" class="settings-btn">⚙️ 设置</button>
+        <a href="ChatGGB_Guide.html" target="_blank" class="guide-link">使用指南</a>
+      </div>
+
       <div id="settings-panel" class="settings-panel">
         <div class="settings-header">
           <h3>设置</h3>
@@ -78,7 +82,7 @@
 2. 清晰的GeoGebra命令
 
 规范：
-1. 将GeoGebra命令放在```geogebra和```标记之间，每行一个命令。
+1. 将GeoGebra命令放在``geogebra和```标记之间，每行一个命令。
 2. 不要在GeoGebra命令行添加任何注释！
 3. 命令应该按照逻辑顺序排列，从基本元素到复杂构造。
 4. 数学公式应该包裹在$$中
@@ -142,7 +146,6 @@ Text(<对象>,<点>,<是否替换变量?true|false>,<LaTeX 公式布尔值>,<水
 如果用户的请求不明确，请提出澄清问题。
 用户的请求可能与之前提出的请求相关。</textarea>
         </div>
-        
         <button id="save-settings" class="save-settings-btn">保存设置</button>
       </div>
     </div>

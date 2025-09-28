@@ -384,8 +384,16 @@ code {
 }
 
 /* 设置面板样式 */
-.settings-btn {
+.button-group {
+  margin-top: 10px;
+  display: flex;
+  gap: 10px;
   margin-top: auto;
+  align-self: flex-start;
+  flex-shrink: 0;
+}
+
+.settings-btn {
   padding: 8px 12px;
   background-color: #6c757d;
   color: white;
@@ -395,12 +403,28 @@ code {
   font-weight: 500;
   box-shadow: 0 2px 4px rgba(0,0,0,0.2);
   transition: background-color 0.2s;
-  align-self: flex-start;
-  flex-shrink: 0;
 }
 
 .settings-btn:hover {
   background-color: #5a6268;
+}
+
+.guide-link {
+  display: inline-flex;
+  align-items: center;
+  padding: 8px 12px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 500;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  transition: background-color 0.2s;
+}
+
+.guide-link:hover {
+  background-color: #0069d9;
 }
 
 .settings-panel {
@@ -534,4 +558,12 @@ code {
 
 .save-settings-btn:hover {
   background-color: #218838;
+}
+
+.guide-link {
+  display: inline-block;
+  text-decoration: none;
+  color: #fff;
+  font-size: 14px;
+  transition: color 0.2s;
 }
