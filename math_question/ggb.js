@@ -772,8 +772,13 @@ window.addEventListener("load", function() {
       // 获取系统提示语
       const systemMessage = this.systemPrompt.value.trim();
       
-      // 构造对话历史
+      // 构造对话历史（不包含刚刚发送的用户消息）
       const chatHistory = this.getChatHistory();
+      
+      // 移除最后一条用户消息（因为这是刚刚添加的，避免重复发送）
+      if (chatHistory.length > 0 && chatHistory[chatHistory.length - 1].role === 'user') {
+        chatHistory.pop();
+      }
       
       // 根据选择的模型调用相应的API
       switch (selectedModel) {
@@ -836,7 +841,7 @@ window.addEventListener("load", function() {
               const commands = AiBase.extractGgbCommands(response);
               if (commands.length > 0) {
                 // 不再需要填充主命令区域
-                console.log('GeoGebra commands extracted:', commands);
+                console.log('GeoGebra命令提取完成:', commands);
               }
             },
             (error) => this.displayMessage(error, 'ai')
