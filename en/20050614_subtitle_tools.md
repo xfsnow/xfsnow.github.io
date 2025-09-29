@@ -8,7 +8,6 @@ Category: __Tools__
 
 ## [Snowpeak Recommends Subtitle Tools](/cn/article/detail/snowpeak_recommends_subtitle_tools/)
 
-Category: [Multimedia and Subtitles](/cn/article/category/multimedia_subtitle/) 2005-06-14 10:00:00 Views(7205)
 
 ## Shortcut Key Preparation
 

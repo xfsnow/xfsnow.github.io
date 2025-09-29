@@ -1,8 +1,8 @@
 # Cut String with Chinese by Byte in Java
 
-发布时间: *2010-03-17 13:06:00*
+Published: *2010-03-17 13:06:00*
 
-分类: __Server Side Technology__
+Category: __Server Side Technology__
 
 ---------
 

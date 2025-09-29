@@ -1,8 +1,8 @@
 # Install PHP 5.2 and PHP 5.3 in Same Linux
 
-发布时间: *2011-08-17 17:08:00*
+Published: *2011-08-17 17:08:00*
 
-分类: __System Operation__
+Category: __System Operation__
 
 ---------
 

@@ -1,8 +1,8 @@
 # A Solution to "Apache 2 Specific Error 1"
 
-发布时间: *2008-06-18 11:12:00*
+Published: *2008-06-18 11:12:00*
 
-分类: __System Operation__
+Category: __System Operation__
 
 ---------
 

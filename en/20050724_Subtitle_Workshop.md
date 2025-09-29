@@ -1,16 +1,16 @@
-# Subtitle Workshop — Snowpeak's Recommended Subtitle Tool
+# Subtitle Workshop - Snowpeak's Recommended Subtitle Tool
 
-Release Time: *2005-07-24 10:00:00*
-
-Summary: Official website: www.urusoft.net Size: 1 MB Registration: Free software Operating system: Windows 9x, ME, NT, 2000, XP Installation requirements: Requires codecs needed to play the video files you want to subtitle. Official download Local download This is a compressed program file extracted by Snowpeak, can be run directly after extraction without installation, interface has been changed to Chinese. After installation and first run, go to Settings > Language > Chinese Simpli
+Published: *2005-07-24 10:00:00*
 
 Category: __Tools__
+
+Summary: Official website: www.urusoft.net Size: 1 MB Registration: Free software Operating system: Windows 9x, ME, NT, 2000, XP Installation requirements: Requires codecs needed to play the video files you want to subtitle. Official download Local download This is a compressed program file extracted by Snowpeak, can be run directly after extraction without installation, interface has been changed to Chinese. After installation and first run, go to Settings > Language > Chinese Simpli
 
 Original Link: [https://snowpeak.blog.csdn.net/article/details/433102](https://snowpeak.blog.csdn.net/article/details/433102)
 
 ---------
 
-Official website: [www.urusoft.net](<http://www.urusoft.net>)
+Official website: [www.urusoft.net](http://www.urusoft.net)
 
 Size: 1 MB
 
@@ -46,13 +46,13 @@ SW saves files in standard subtitle formats. When saving, a save format dialog w
 
 Generally select SubRip, double-click it to open the save path dialog. This format is the simplest; complex formats can be saved after completing the entire subtitle. SW supports 54 common subtitle formats and also allows users to define custom file formats for work use! However, these advanced features are optional. ;)
 
-##### Custom Shortcut Key Example
+## Custom Shortcut Key Example
 
 Find the shortcuts.key file in the installation or extraction folder, which can be opened with Notepad. Find
 SetKey(aPlayPause,Ctrl,Space)
 You can modify it to, for example, SetKey(aPlayPause,Ctrl+Shift,Space), which will allow it to control play/pause with the shortcut Ctrl+Shift+Space.
 
-##### Making SW Support RM/RMVB Files
+## Making SW Support RM/RMVB Files
 
 Some existing video files with Chinese subtitles might be RM/RMVB files. To make SW support RM/RMVB files, do the following:
 

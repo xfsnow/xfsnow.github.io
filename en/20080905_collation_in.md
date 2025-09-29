@@ -1,8 +1,8 @@
 # Collation in MySQL
 
-发布时间: *2008-09-05 15:01:00*
+Published: *2008-09-05 15:01:00*
 
-分类: __Database__
+Category: __Database__
 
 ---------
 

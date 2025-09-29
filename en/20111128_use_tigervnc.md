@@ -1,8 +1,8 @@
 # Use TigerVNC to Setup Remote Desktop for Linux
 
-发布时间: *2011-11-28 17:40:00*
+Published: *2011-11-28 17:40:00*
 
-分类: __System Operation__
+Category: __System Operation__
 
 ---------
 

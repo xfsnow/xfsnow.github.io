@@ -1,14 +1,14 @@
 # Solve Garbled Chinese in AJAX
 
-发布时间: *2011-11-26 22:06:43*
+Published: *2011-11-26 22:06:43*
 
-分类: __Comprehensive Development__
+Category: __Comprehensive Development__
 
 ---------
 
 ## [Solve Garbled Chinese in AJAX](/en/article/detail/solve_garbled_chinese_in_ajax/)
 
-分类: [Comprehensive Development](/en/article/category/comprehensive_development/) 2011-11-26 22:06:43 阅读(4563)
+Category: [Comprehensive Development](/en/article/category/comprehensive_development/) 2011-11-26 22:06:43 阅读(4563)
 
 
 ---

@@ -1,6 +1,6 @@
 # JavaScript Classes and Class Generator Tool
 
-Publish Date: *2011-04-20 17:56:00*
+Published: *2011-04-20 17:56:00*
 
 Category: __Development__
 

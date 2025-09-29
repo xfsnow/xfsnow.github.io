@@ -1,8 +1,8 @@
 # Microsoft YaHei in IE6
 
-发布时间: *2011-07-26 17:43:00*
+Published: *2011-07-26 17:43:00*
 
-分类: __Client Side Technology__
+Category: __Client Side Technology__
 
 ---------
 

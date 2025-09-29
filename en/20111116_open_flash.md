@@ -1,8 +1,8 @@
 # Open Flash Video on iPhone and iPad without Jailbreak or App Installation
 
-发布时间: *2011-11-16 22:36:00*
+Published: *2011-11-16 22:36:00*
 
-分类: __Apple Fan__
+Category: __Apple Fan__
 
 ---------
 

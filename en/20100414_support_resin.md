@@ -1,8 +1,8 @@
 # Support Resin in Eclipse without Plugin
 
-发布时间: *2010-04-14 22:36:00*
+Published: *2010-04-14 22:36:00*
 
-分类: __Server Side Technology__
+Category: __Server Side Technology__
 
 ---------
 

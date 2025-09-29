@@ -37,10 +37,8 @@
         "Backend": "Backend",
         "Database": "Database",
         "Frontend": "Frontend",
-        "Web": "Web",
         "System": "System",
         "Network": "Network",
-        "Programming": "Programming",
-        "Framework": "Framework"
+        "Programming": "Programming"
     }
 }

@@ -2,6 +2,8 @@
 
 发布时间: *2007-12-07 15:23:00*
 
+分类: __后端技术__
+
 简介: Tomcat 文档及网上看到的说明都挺乱的，我经过几天尝试现在测试成功的Tomcat 6 设置分享一下.我的环境是:Windows XP SP2, Windows 2003 Server SP1Tomcat 6SQL Server 2000MySQL 5SQL Server 2000 连接池配置方法按顺序操作如下：1. 下载 SQL Server 2000 JDBC Driver 放在
 
 原文链接: [https://snowpeak.blog.csdn.net/article/details/1922788](https://snowpeak.blog.csdn.net/article/details/1922788)

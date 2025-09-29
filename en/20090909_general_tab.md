@@ -1,8 +1,8 @@
 # General Tab with Pure CSS and JS
 
-发布时间: *2009-09-09 15:29:00*
+Published: *2009-09-09 15:29:00*
 
-分类: __Client Side Technology__
+Category: __Client Side Technology__
 
 ---------
 

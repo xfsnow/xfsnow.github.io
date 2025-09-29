@@ -2,7 +2,9 @@
 
 发布时间: *2008-03-27 09:30:00*
 
-简介: 网上常见简体繁体转换小程序，但多是常用的3000多字，我这里把文字整理得多一些，语句理清一些。主要思路还是把主要汉字的简体和繁体版本做两个字符串，按对应位置找到对应的字。http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">http://www.w3.org/1999/xhtml">汉字简体繁体转换//基本思路就是把一个完整的简体字库
+分类: __前端技术__
+
+简介: 网上常见简体繁体转换小程序，但多是常用的3000多字，我这里把文字整理得多一些，语句理清一些。主要思路还是把主要汉字的简体和繁体版本做两个字符串，按对应位置找到对应的字。
 
 原文链接: [https://snowpeak.blog.csdn.net/article/details/2221935](https://snowpeak.blog.csdn.net/article/details/2221935)
 
@@ -15,7 +17,7 @@
 <https://github.com/xfsnow/xfsnow.github.io/blob/master/simtra.htm>
 
 以下是旧版程序，仅做归档了。
-
+```
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "<http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd>">  
 <html xmlns="<http://www.w3.org/1999/xhtml>">  
 <head>  
@@ -73,3 +75,4 @@ return str;
 </div>  
 </body>  
 </html>
+```

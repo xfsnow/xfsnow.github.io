@@ -1,8 +1,8 @@
 # Use JavaScript to Clear Interference code
 
-发布时间: *2011-03-06 21:21:00*
+Published: *2011-03-06 21:21:00*
 
-分类: __Client Side Technology__
+Category: __Client Side Technology__
 
 ---------
 

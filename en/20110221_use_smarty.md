@@ -1,8 +1,8 @@
 # Use Smarty with magic_quotes_gpc on
 
-发布时间: *2011-02-21 17:00:00*
+Published: *2011-02-21 17:00:00*
 
-分类: __Server Side Technology__
+Category: __Server Side Technology__
 
 ---------
 

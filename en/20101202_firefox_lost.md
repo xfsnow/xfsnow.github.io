@@ -1,8 +1,8 @@
 # Firefox Lost Width When Setting Display of Tbody to Block
 
-发布时间: *2010-12-02 18:08:00*
+Published: *2010-12-02 18:08:00*
 
-分类: __Client Side Technology__
+Category: __Client Side Technology__
 
 ---------
 

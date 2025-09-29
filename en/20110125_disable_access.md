@@ -1,8 +1,8 @@
 # Disable Access Time to Boost Hard Disk Performance
 
-发布时间: *2011-01-25 10:42:00*
+Published: *2011-01-25 10:42:00*
 
-分类: __System Operation__
+Category: __System Operation__
 
 ---------
 

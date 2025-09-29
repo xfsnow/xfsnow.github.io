@@ -1,8 +1,8 @@
 # Get Multiple Auto_increment ID with One Query in MySQL
 
-发布时间: *2012-03-08 21:24:00*
+Published: *2012-03-08 21:24:00*
 
-分类: __Database__
+Category: __Database__
 
 ---------
 

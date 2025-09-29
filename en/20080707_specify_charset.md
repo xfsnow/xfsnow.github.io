@@ -1,8 +1,8 @@
 # Specify Charset to Solve Garbled Chinese When Backing Up MySQL with mysqldump
 
-发布时间: *2008-07-07 14:14:00*
+Published: *2008-07-07 14:14:00*
 
-分类: __Database__
+Category: __Database__
 
 ---------
 

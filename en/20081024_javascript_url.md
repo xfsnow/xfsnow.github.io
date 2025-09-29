@@ -1,8 +1,8 @@
 # JavaScript URL Parser Improved
 
-发布时间: *2008-10-24 17:41:00*
+Published: *2008-10-24 17:41:00*
 
-分类: __Client Side Technology__
+Category: __Client Side Technology__
 
 ---------
 

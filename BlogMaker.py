@@ -526,18 +526,18 @@ class BlogMaker:
         # self.make_about()
 
         # 生成文章页面
-        # self.make_article()
+        self.make_article()
 
         # 生成分页列表
-        # self.make_pager()
+        self.make_pager()
 
         # docx 转 Markdown
         # self.word2markdown()
 
 
 if __name__ == "__main__":
-    blog_maker = BlogMaker('zh')
-    blog_maker.main()
+    # blog_maker = BlogMaker('zh')
+    # blog_maker.main()
 
     blog_maker = BlogMaker('en')
     blog_maker.main()

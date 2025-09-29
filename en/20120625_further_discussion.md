@@ -1,8 +1,8 @@
 # Further Discussion on Managing Hierarchical Data with Nested Set Model
 
-发布时间: *2012-06-25 21:39:00*
+Published: *2012-06-25 21:39:00*
 
-分类: __Database__
+Category: __Database__
 
 ---------
 

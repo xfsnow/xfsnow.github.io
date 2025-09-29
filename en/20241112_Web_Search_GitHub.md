@@ -2,7 +2,7 @@
 
 Published: *2024-11-12 14:40:23*
 
-Category: __Artificial Intelligence__
+Category: __AI__
 
 Summary: GitHub Copilot is an AI-powered code suggestion tool developed collaboratively by GitHub and OpenAI. It can provide code suggestions based on context and answer various technical questions. However, Copilot itself cannot answer non-technical questions. To extend Copilot's functionality, Microsoft released a plugin called Web Search, which can use search engines to extend answers to questions that Copilot cannot handle.
 

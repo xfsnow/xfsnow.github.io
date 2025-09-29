@@ -1,8 +1,8 @@
 # A Solution to Garbled Error Message by Resin
 
-发布时间: *2008-12-30 13:56:00*
+Published: *2008-12-30 13:56:00*
 
-分类: __Server Side Technology__
+Category: __Server Side Technology__
 
 ---------
 

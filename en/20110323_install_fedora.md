@@ -1,8 +1,8 @@
 # Install Fedora 14 from Hard Disk
 
-发布时间: *2011-03-23 15:22:00*
+Published: *2011-03-23 15:22:00*
 
-分类: __System Operation__
+Category: __System Operation__
 
 ---------
 

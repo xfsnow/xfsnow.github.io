@@ -1,8 +1,8 @@
 # Install and Configure PHP + Memcache in Windows
 
-发布时间: *2012-02-25 18:30:00*
+Published: *2012-02-25 18:30:00*
 
-分类: __Server Side Technology__
+Category: __Server Side Technology__
 
 ---------
 

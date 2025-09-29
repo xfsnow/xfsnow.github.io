@@ -1,8 +1,8 @@
 # Autoload External JavaScript Files
 
-发布时间: *2009-02-09 17:29:00*
+Published: *2009-02-09 17:29:00*
 
-分类: __Client Side Technology__
+Category: __Client Side Technology__
 
 ---------
 

@@ -1,8 +1,8 @@
 # A Solution to PhpMyAdmin Cannot Export Data
 
-发布时间: *2011-06-09 14:06:00*
+Published: *2011-06-09 14:06:00*
 
-分类: __Comprehensive Development__
+Category: __Comprehensive Development__
 
 ---------
 

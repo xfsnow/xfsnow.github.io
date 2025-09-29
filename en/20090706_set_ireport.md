@@ -1,8 +1,8 @@
 # Set iReport 3.5 to English UI
 
-发布时间: *2009-07-06 17:41:00*
+Published: *2009-07-06 17:41:00*
 
-分类: __Server Side Technology__
+Category: __Server Side Technology__
 
 ---------
 

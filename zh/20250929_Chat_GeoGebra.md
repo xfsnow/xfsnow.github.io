@@ -2,7 +2,7 @@
 
 发布时间: *2025-09-29 09:55:00*
 
-分类: __应用开发__
+分类: __综合开发__
 
 简介: 介绍一个结合 GeoGebra 数学软件与 AI 对话功能的智能工具，用户可以通过自然语言与 AI 进行数学相关问题的交流，AI 会生成相应的 GeoGebra 命令并自动在画板上绘制图形。
 
@@ -10,9 +10,9 @@
 
 ## 概述
 
-先上演示应用 https://www.snowpeak.org/math_question/ggb.htm
+先上演示应用 <https://www.snowpeak.org/math_question/ggb.htm>
 
-项目源码已开源 https://github.com/xfsnow/xfsnow.github.io/blob/master/math_question/ggb.htm
+项目源码已开源 <https://github.com/xfsnow/xfsnow.github.io/blob/master/math_question/ggb.htm>
 
 ### 谁适合看此文档？
 

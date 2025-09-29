@@ -23,6 +23,8 @@
     "wechat_account": "微信公众号",
     "wechat_tech_warm": "技术温暖生活",
     "quick_links": "快速链接",
+    "latest_articles": "最新文章",
+    "demo_examples": "示例演示",
     "tech_stack": "技术栈",
     "responsive_design": "响应式设计",
     "copyright_text": "雪峰博客。运行在 GitHub Pages 上。",
@@ -32,13 +34,11 @@
         "Development": "综合开发",
         "Tools": "软件工具",
         "Cloud Computing": "云计算",
-        "Backend": "服务器端技术",
+        "Backend": "后端技术",
         "Database": "数据库",
         "Frontend": "前端技术",
-        "Web": "Web开发",
-        "System": "系统管理",
-        "Network": "网络技术",
-        "Programming": "编程语言",
-        "Framework": "框架技术"
+        "System": "系统",
+        "Network": "网络",
+        "Programming": "编程语言"
     }
 }

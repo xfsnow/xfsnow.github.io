@@ -1,8 +1,8 @@
 # JavaScript Compressor and Formatter
 
-发布时间: *2008-12-30 14:00:00*
+Published: *2008-12-30 14:00:00*
 
-分类: __Client Side Technology__
+Category: __Client Side Technology__
 
 ---------
 

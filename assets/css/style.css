@@ -744,7 +744,6 @@ body {
 .article-container p {
     margin-bottom: 1.2rem;
     color: var(--text-primary);
-    text-align: justify;
     word-break: break-word;
 }
 
