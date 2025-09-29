@@ -1,0 +1,342 @@
+# JavaScript Classes and Class Generator Tool
+
+Publish Date: *2011-04-20 17:56:00*
+
+Category: __Development__
+
+Introduction: This article introduces the prototype-based class usage built into JavaScript through examples, and explains step by step how to implement a class generator utility function to achieve class-based (similar to object-oriented languages) class definition syntax.
+
+Original Link: [https://snowpeak.blog.csdn.net/article/details/6336685](https://snowpeak.blog.csdn.net/article/details/6336685)
+
+---------
+
+### Overview
+
+#### Who Should Read This Document?
+
+This article provides an in-depth explanation of JavaScript class concepts and introduces some advanced features for improving object-oriented programming in JavaScript. It is suitable for those familiar with JavaScript who understand basic JavaScript syntax and have some JavaScript development experience.
+
+#### What Is This Document Useful For?
+
+The content introduced in this document is suitable for large-scale JavaScript development, especially when extensively using object-oriented programming with class declarations and inheritance.
+
+#### Significance
+
+By definition, JavaScript is a prototype-based object-oriented scripting language that possesses all the main features of object-oriented (Object Oriented) languages and can fully implement object-oriented programming. Due to JavaScript's prototype-based characteristic, using the language's own supported syntax for class declaration and inheritance is quite different from the approach used in other mainstream object-oriented languages. Creating a convenient class generator (Class Creator) to implement class-based programming syntax inheritance will greatly facilitate object-oriented JavaScript programming. It not only aligns with programmers' familiar class inheritance thinking patterns, improving development efficiency, but also reduces code volume and enhances the efficiency of JavaScript program parsing and execution.
+
+When conducting large-scale JavaScript development, object-oriented approaches are heavily used, making the role of class generators even more important. Class generators have become indispensable core components of JavaScript base libraries, such as Prototype library's [Class.create()](<http://api.prototypejs.org/language/Class/create/>) and extJs's [Ext.create()](<http://dev.sencha.com/deploy/dev/docs/source/ComponentMgr.html#method-Ext-create>) and [Ext.extend()](<http://dev.sencha.com/deploy/dev/docs/source/Ext.html#method-Ext-extend>).
+
+### JavaScript's Built-in Prototype-based Class Usage
+
+#### Class Declaration
+
+JavaScript itself supports class usage, but it is prototype-based, and its syntax differs from languages we are familiar with. Let's first look at JavaScript's built-in class usage. The following examples and explanations are from "JavaScript: The Definitive Guide, 5th Edition". Its cover features a rhinoceros, and JavaScript enthusiasts familiar with the book affectionately call it the "rhino book".
+
+A class can be declared through the following code.
+
+```javascript
+// 用一个函数作构造器。它的作用就是初始化那些每个实例都不同的属性值。
+function Rectangle(w, h) {
+    this.width = w;
+    this.height = h;
+}
+
+// 当我们需要一个各个实例都共有的成员时，我们把此成员放在 prototype 对象里。
+Rectangle.prototype.area = function() {
+    return this.width * this.height;
+}
+```
+
+Through the above code, we have declared a Rectangle class, where each instance will have different width and height properties. "The Definitive Guide" refers to such members as instance properties (instance property) or instance methods (instance method); they share an area() method, which "The Definitive Guide" refers to as a class property (class property) or class method (class method). This effect can be verified through the following code.
+
+```javascript
+var r = new Rectangle(2, 3);
+r.hasOwnProperty("width");  // true: width is a direct property of r
+r.hasOwnProperty("area");   // false: area is an inherited property of r
+"area" in r;                // true: "area" is a property of r
+```
+
+The core principle of JavaScript's use of the new keyword to instantiate an object is through "prototype". A constructor is a function that provides the name for this "class" of objects and initializes property values that differ for each instance. The constructor function is associated with a prototype object, and each object instance initialized using this constructor function will have a set of identical properties and methods from this prototype. Object instances possess prototype properties and methods not by copying prototype members to each instance, but through a member lookup process. That is, when JavaScript encounters a call to an object's member, it first looks for the object's own instance properties or instance methods. If not found, it continues to look up the class constructor's prototype for class properties or class methods.
+
+This mechanism of JavaScript has two implications. First, using prototype to implement member sharing can save a lot of memory. Second, since members are looked up and called at runtime, even after object instantiation, if members are added to the prototype, object instances can still use these newly added members (though this is not recommended).
+
+The following image is also from "The Definitive Guide" and visually illustrates the principle of runtime object member lookup and usage.
+
+![JavaScript 对象实例方法查找和调用演示](../assets/img/20110420_JavaScript_01.webp)
+
+#### Class Inheritance
+
+Let's explain JavaScript's native class inheritance usage with the following example. Based on the previous Rectangle class declaration, we'll inherit a subclass from it.
+
+```javascript
+function PositionedRectangle(x, y, w, h) {
+    //首先，在新对象的的构造方法里调用父类的构造方法，用 call 方法来调父类的构造方法目的就是让它作用在当前类实例化的对象上。
+    //这种做法叫做constructor chaining，"构造函数链"。其实很多类继承的语言都有这种做法。
+    Rectangle.call(this, w, h);
+    
+    // 现在给当前类增加两个属性。
+    this.x = x;
+    this.y = y;
+}
+
+// 如果使用默认的 prototype 对象，我们只会得到一个默认类 Object 的子类。
+// 为了继承 Rectangle 类，我们必须显式创建自己的 prototype 对象，把它指定成 new Rectangle() 就可以得到 Rectangle 的 prototype 对象了。
+PositionedRectangle.prototype = new Rectangle();
+
+// 前面的构造函数的 prototype 对象是用 Rectangle() 构造函数创建的，prototype 对象有个 constructor 属性指向构造函数自己，从而每个对象实例都可以通过 constructor 知道哪个函数是自己的构造函数。
+// 我们想让当前的子类 PositionedRectangle 的对象实例有自己的构造函数，如下显式指定就可以了。
+PositionedRectangle.prototype.constructor = PositionedRectangle;
+
+// 现在我们已经准备好了子类的 prototype 对象，我们可以给它添加新的实例方法了。
+PositionedRectangle.prototype.contains = function(x, y) {
+    return (x > this.x && x < this.x + this.width && y > this.y && y < this.y + this.height);
+}
+```
+
+After declaring this subclass as above, we can use it.
+
+```javascript
+var pr = new PositionedRectangle(2, 2, 2, 2);
+pr.contains(3, 3);                     // 调用自己的实例方法
+pr.area();                             // 调用继承自父类的实例方法
+
+// 父类和自己的属性都一样的调用
+pr.x + ", " + pr.y + ", " + pr.width + ", " + pr.height;
+
+// 这个对象实例是是下面 3 个类的实例
+pr instanceof PositionedRectangle     // true
+pr instanceof Rectangle               // true
+pr instanceof Object                  // true
+```
+
+
+### Step-by-Step Class Generator Creation
+
+The above examples show that JavaScript fully supports class declaration and inheritance, but it is indeed somewhat cumbersome to use. Those familiar with mainstream JavaScript base libraries may know some class generator usages. Next, we'll create a class generator ourselves.
+
+Essentially, a class generator utility function encapsulates JavaScript's own class writing approach discussed earlier. Let's first clarify our goals and then implement them step by step.
+
+1. Simplify class definition syntax, no longer separately writing constructors and defining methods in prototype one by one, but passing in a concise JSON structure and converting it to a class definition. Use __init as the constructor name, and the constructor is optional.
+2. Basic class inheritance, inheriting only one class at a time
+3. Support instanceof method to detect if an object is an instance of a class
+4. Subclasses can call parent class methods, both differently named methods and same-named methods.
+
+#### Step Zero: Naming Our Class Generator Utility Function
+
+Let's clarify again: a class generator is essentially a utility function that takes parameters related to class definitions and returns a constructor function for instantiating objects. Based on our previous introduction to JavaScript class usage fundamentals, the returned constructor function also has its prototype object and related properties and methods. Just use new to instantiate different object instances. Therefore, a class generator itself is not a class definition; it is an ordinary function. Following common library naming conventions, this function name should be all lowercase. Let's call it classer, meaning "class maker".
+
+#### Step One: Simplify Class Definition Syntax
+
+Pass in a JSON structure and convert it to the constructor and prototype object with related properties and methods required for class definition. This is essentially organizing JavaScript's separate constructor and prototype method declarations together.  
+We约定 use __init as the constructor name, and the constructor is optional.
+
+```javascript
+// 只有一个参数，是类定义
+var classer = function(aDefine) {
+    //约定构造函数名字为 __init()
+    var constructorName = '__init';
+    
+    //类型即为该构造函数，若没有 __init()，则使用默认的根类 Object 的构造函数
+    var aType = aDefine[constructorName] ? aDefine[constructorName] : Object;
+    var aPrototype = aType.prototype;
+    
+    for (var member in aDefine)  //复制类定义到当前类的prototype
+    {
+        if(constructorName != member)  //构造函数不用复制
+        {
+            aPrototype[member] = aDefine[member];
+        }
+    }
+    
+    return aType;
+};
+```
+
+With this basic class generator, we can define classes more simply. For example:
+
+```javascript
+var Animal = classer({
+    __init: function(name) {
+        this.name = name;
+    },
+    
+    getName: function() {
+        return this.name;
+    }
+});
+
+// 实例化一个对象，并且测试一下。
+var animal = new Animal('animal');
+animal instanceof Animal;  // true
+animal.getName();          // "animal"
+```
+
+
+#### Step Two: Implement Class Inheritance
+
+Here we adopt Li Zhan's Ganlu model approach. When there is one parameter, it is a class definition; when there are two parameters, the first is the base class and the second is the current class definition.
+
+```javascript
+var classer = function() {
+    var argLength = arguments.length;
+    var aDefine = arguments[argLength-1];  //最后一个参数是类定义
+    
+    if(aDefine) {
+        //解析基类。有基类时用基类，没有基类时用默认的根类 Object
+        var aBase = argLength > 1 ? arguments[0] : Object;
+        
+        //约定构造函数名字为 __init()
+        var constructorName = '__init';
+        
+        //类型即为该构造函数，若没有 __init()，则使用默认的根类的构造函数。
+        //经典类继承的写法也是在 Child 的构造函数中调用 Parent.call(this, arguments);
+        var aType = aDefine[constructorName] ? aDefine[constructorName] : function() {
+            aBase.call(this, arguments);
+        };
+        
+        //经典类继承其实就是 Child.prototype = new Parent(); 但是仅仅 var aPrototype = new aBase(); 是不行的，
+        //因为不能直接访问对象内置的 prototype 属性。必须经过一个构造函数链才能传递过去。
+        // 详见《悟透》 http://www.cnblogs.com/leadzen/archive/2008/02/25/1073404.html
+        function prototype_() {}           //准备传递prototype
+        prototype_.prototype = aBase.prototype;  //建立类要用的prototype。新建对象的内置原型将是我们期望的原型对象
+        var aPrototype = new prototype_();
+        
+        //复制类定义到当前类的prototype
+        for (var member in aDefine) {
+            //构造函数不用复制
+            if(constructorName != member) {
+                aPrototype[member] = aDefine[member];
+            }
+        }
+        
+        //设置类(构造函数)的prototype
+        aType.prototype = aPrototype;
+        //设置类的 constructor
+        aType.prototype.constructor = aType;
+        
+        return aType;
+    }
+};
+```
+
+After the above expansion, we can now inherit classes very conveniently. Based on the previous Animal class, we inherit a Dog subclass.
+
+```javascript
+var Dog = classer(Animal, {
+    __init: function(name) {
+        this.name = name;
+    },
+    
+    bark: function() {
+        return 'woof';
+    }
+});
+
+// 实例化一个对象，并且测试一下。
+var dog = new Dog('dog');
+dog instanceof Dog       // true
+dog instanceof Animal    // true
+dog instanceof Object    // true
+dog.getName()            // "dog"
+dog.bark()               // "woof"
+```
+
+#### Finally, Let's Implement Calling Parent Class Members in Subclass Declarations
+
+In the process of assembling prototype object members above, parent class members have already been assembled into the subclass prototype object. Therefore, subclass method declarations can directly use parent class members, except when a subclass method needs to call a parent class method with the same name. Now we借鉴 John Resig's solution to address this issue.
+
+```javascript
+var classer = function() {
+    var argLength = arguments.length;
+    var aDefine = arguments[argLength-1];  //最后一个参数是类定义
+    
+    if(aDefine) {
+        //解析基类。有基类时用基类，没有基类时用默认的根类 Object
+        var aBase = argLength > 1 ? arguments[0] : Object;
+        
+        //约定构造函数名字为 __init()
+        var constructorName = '__init';
+        
+        //类型即为该构造函数，若没有 __init()，则使用默认的根类的构造函数。
+        //经典类继承的写法也是在 Child 的构造函数中调用 Parent.call(this, arguments);
+        //经典类继承其实就是 Child.prototype = new Parent(); 但是仅仅 var aPrototype = new aBase(); 是不行的，
+        //因为不能直接访问对象内置的 prototype 属性。必须经过一个构造函数链才能传递过去。
+        
+        // 增加 _super() 方法, 以实现当前类的方法调用父类的同名方法
+        var _super = aBase.prototype;
+        
+        //构造prototype的临时函数，用于挂接原型链
+        function prototype_() {}           //准备传递prototype
+        prototype_.prototype = _super;
+        
+        //建立类要用的prototype 。新建对象的内置原型将是我们期望的原型对象
+        var aPrototype = new prototype_();
+        
+        //复制类定义到当前类的prototype
+        for (var member in aDefine) {
+            aPrototype[member] = (
+                ("function" == typeof aDefine[member]) && 
+                ("function" == typeof _super[member])
+            ) ? (function(member, fn) {
+                return function() {
+                    // _super 方法只是临时加进来的, 所以先把原有的 this._super 备份成 tmp, 然后绑定之后再恢复回原来的 this._super = tmp;
+                    // 至于绑定的做法, 我现在能理解到的是 var ret = fn.apply(this, arguments); 把 fn 作用于当前对象的 this, 
+                    // 最后返回的 return ret; 就是这个函数. 从而实现在类定义的每个方法里都可以调用 this._super(), 方法名是相同的, 但是它们的内容不同!
+                    var tmp = this._super;
+                    
+                    // 把当前这个方法在父类里添加一个 ._super() 方法
+                    this._super = _super[member];
+                    
+                    // 这个方法只是临时绑定的，所以执行完毕后我们再把它删除。
+                    var ret = fn.apply(this, arguments);
+                    this._super = tmp;
+                    
+                    return ret;
+                };
+            })(member, aDefine[member]) : aDefine[member];
+        }
+        
+        // 要实现要构造方法里调用父类的同名构造方法, 就得把构造方法的定义放在复制 prototype 成员后面了.
+        // 并且程序语句更自然了: 有自己的构造方法就用自己的, 没有自己的构造方法就用父类的.
+        var aType = aDefine[constructorName] ? aPrototype[constructorName] : _super[constructorName];
+        
+        //设置类(构造函数)的prototype
+        aType.prototype = aPrototype;
+        //设置类的 constructor
+        aType.prototype.constructor = aType;
+        
+        return aType;
+    }
+};
+```
+
+Finally, let's demonstrate our成果 and test it. Note that in subclass definitions, the `_super()` method can be used in different methods, and they point to different methods in the parent class!
+
+```javascript
+var Person = classer(Animal, {
+    __init: function(name, sex) {
+        this.sex = sex;
+        this._super(name);
+    },
+    
+    getName: function() {
+        return 'Person says ' + this._super();
+    },
+    
+    getSex: function() {
+        return this.sex;
+    }
+});
+
+var p = new Person('boy', 'male');
+p instanceof Person     // true
+p instanceof Animal     // true
+p instanceof Object     // true
+p.getName()             // "Person says boy"
+p.getSex()              // "male"
+```
+
+The above class generator code and explanations参考了 Li Zhan's ["Ganlu Model of 'Understanding JavaScript'"](http://www.cnblogs.com/leadzen/archive/2008/06/04/1213090.html)
+and [John Resig's Simple JavaScript Inheritance](http://ejohn.org/blog/simple-javascript-inheritance/).
+
+Ultimately, our classer function adopts the two-parameter approach of the Ganlu model because I personally prefer this approach. Its usage习惯 is basically consistent with the class-based declaration approach commonly used by everyone. Whether declaring a new class or inheriting a class, the classer() function is uniformly called, which looks clearer and more明白 than John Resig's approach. John Resig's方案 adds an extend() method to all constructor functions generated by its generator, which I don't particularly like.

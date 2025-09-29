@@ -8,7 +8,6 @@
 
 ## [PhpMyAdmin 不能导出数据的一种解决](/cn/article/detail/a_solution_to_phpmyadmin_cannot_export_data/)
 
-分类: [综合开发](/cn/article/category/comprehensive_development/) 2011-06-09 14:06:00 阅读(5023)
 
 最近遇到 PhpMyAdmin 不能导出数据的问题，点击导出后先是一个请求失败或者白页，重新刷新后就报错
 
