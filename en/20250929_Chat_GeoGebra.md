@@ -12,6 +12,10 @@ Summary: Introducing an intelligent tool that combines GeoGebra math software wi
 
 First, let's see the application demo <https://www.snowpeak.org/math_question/ggb.htm>
 
+A snapshot of the application：
+![ChatGGB snapshot](../assets/img/20250929_ChatGGB.webp)
+
+
 Project source code is open-sourced <https://github.com/xfsnow/xfsnow.github.io/blob/master/math_question/ggb.htm>
 
 ### Who Should Read This Document?

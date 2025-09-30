@@ -1,1 +1,101 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Snowpeak Blog</title><meta name="description" content="Sharing and discussing cutting-edge technologies of AI and cloud computing, and other interesting topics."><meta name="keywords" content="AI, GitHub Copilot, Azure Cloud, Cloud Computing, Front-end Technology, Back-end Technology, Web Development, Software Engineering"><link rel="stylesheet" href="/assets/css/style.min.css"><link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.7.2/css/all.css"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/default.min.css"><script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/highlight.min.js"></script></head><body><nav class="navbar"><div class="nav-container"><div class="nav-logo"><h2><i class="fas fa-snowflake"></i> Snowpeak</h2></div><div class="nav-menu"><a href="/en/" class="nav-link">Home</a><a href="/en/page_1.htm" class="nav-link">Article</a><a href="/en#tools" class="nav-link">Tools</a><a href="/en/about.htm" class="nav-link">About</a><a href="/" class="nav-link lang-switch"><i class="fas fa-globe"></i> 简体中文</a></div><div class="nav-toggle" id="mobile-menu"><span class="bar"></span><span class="bar"></span><span class="bar"></span></div></div></nav><header class="article-header"><div class="container"><h1>A Simple Star Rating</h1><div class="article-meta"><span><i class="fas fa-calendar"></i> Published: 2008-05-09 10:44:00</span><span><i class="fas fa-clock"></i> Reading time: 1 minutes </span><span><i class="fas fa-tag"></i> Category: Tools</span></div></div></header><main class="article-container"><h2><a href="/en/article/detail/a_simple_star_rating/">A Simple Star Rating</a></h2><p>Category: <a href="/en/article/category/client_side_technology/">Client Side Technology</a> 2008-05-09 10:44:00 Read(2642)</p><hr><p><em>原文链接: https://www.snowpeak.fun/en/article/detail/a_simple_star_rating/</em></p></main><footer class="footer"><div class="container"><div class="footer-content"><div class="footer-section"><h3><i class="fas fa-snowflake"></i> Snowpeak</h3><p>Sharing and discussing cutting-edge technologies of AI and cloud computing, and other interesting topics.</p><div class="social-links"><div class="social-platforms"><a href="https://github.com/xfsnow" target="_blank" class="social-link"><i class="fab fa-github"></i></a><a href="https://snowpeak.blog.csdn.net/" target="_blank" class="social-link"><i class="fas fa-blog"></i></a><a href="https://space.bilibili.com/701839928" target="_blank" class="social-link"><i class="fab fa-bilibili"></i></a><a href="https://www.linkedin.com/in/snowpeak" target="_blank" class="social-link"><i class="fab fa-linkedin"></i></a></div><div class="wechat-section"><div class="wechat-info"><span class="wechat-label">WeChat Account</span><span class="wechat-name">Tech Warm Life</span></div><img src="/assets/img/techwarm.jpg" alt="Tech Warm Life" class="wechat-qr"></div></div></div><div class="footer-section"><h4>Quick Links</h4><ul><li><a href="/#articles">Article</a></li><li><a href="/#tools">Tools</a></li><li><a href="https://docs.github.com/en/pages" target="_blank">GitHub Pages</a></li></ul></div><div class="footer-section"><h4>Tech Stack</h4><ul><li>Python</li><li>GitHub Copilot</li><li>Claude Sonnet 4</li><li>HTML/CSS/JS</li><li>Responsive Design</li></ul></div></div><div class="footer-bottom"><p>Copyright &copy; 2013-<script>document.write((new Date()).getFullYear());</script> Snowpeak Blog. Running on GitHub Pages. <a href="https://beian.miit.gov.cn" target="_blank" class="icp_beian">京ICP备2021007720号</a><a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=11010502052523" target="_blank" class="gongan_beian">京公网安备11010502052523号</a></p></div></div></footer><script src="/en/index.js"></script><script src="/assets/js/blog.min.js"></script><script>hljs.highlightAll();</script></body></html>
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Snowpeak Blog</title><meta name="description" content="Sharing and discussing cutting-edge technologies of AI and cloud computing, and other interesting topics."><meta name="keywords" content="AI, GitHub Copilot, Azure Cloud, Cloud Computing, Front-end Technology, Back-end Technology, Web Development, Software Engineering"><link rel="stylesheet" href="/assets/css/style.min.css"><link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.7.2/css/all.css"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/default.min.css"><script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/highlight.min.js"></script></head><body><nav class="navbar"><div class="nav-container"><div class="nav-logo"><h2><i class="fas fa-snowflake"></i> Snowpeak</h2></div><div class="nav-menu"><a href="/en/" class="nav-link">Home</a><a href="/en/page_1.htm" class="nav-link">Article</a><a href="/en#tools" class="nav-link">Tools</a><a href="/en/about.htm" class="nav-link">About</a><a href="/" class="nav-link lang-switch"><i class="fas fa-globe"></i> 简体中文</a></div><div class="nav-toggle" id="mobile-menu"><span class="bar"></span><span class="bar"></span><span class="bar"></span></div></div></nav><header class="article-header"><div class="container"><h1>A Simple Star Rating</h1><div class="article-meta"><span><i class="fas fa-calendar"></i> Published: 2008-05-09 10:44:00</span><span><i class="fas fa-clock"></i> Reading time: 13 minutes </span><span><i class="fas fa-tag"></i> Category: Frontend</span></div></div></header><main class="article-container"><p>Star rating is a commonly used feature in surveys. Most implementations online dynamically call images to achieve this functionality. By combining CSS, I came up with a simpler method. This approach makes the functionality easier to use, simplifies the HTML page source code and JavaScript statements, and further separates content from design using CSS layout.</p><p>Using CSS with a single image as the background has an additional benefit: once the page is downloaded, the background image is already loaded. When dynamically switching the class name of the object, since the same image file is used, there is no display delay. Traditional methods that use different images to show different states may experience delays when loading new images unless JavaScript is used to pre-download all images.</p><p><strong>Basic Idea</strong>: The star rating area is an independent <code>div</code> block. Based on the horizontal position of the mouse within this block, the position is converted into a ratio of the block's width, which is then translated into a value between 1 and 5. For example, in the following example, the block width is 80 pixels. When the mouse's horizontal coordinate is 27, <code>(27/80)*5</code>, rounded up, results in a rating of 2.</p><h2>HTML Example</h2> <pre><code class="language-html">&lt;!DOCTYPE html PUBLIC &quot;-//W3C//DTD XHTML 1.0 Transitional//EN&quot; &quot;http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd&quot;&gt;
+&lt;html xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt;
+&lt;head&gt;
+&lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=utf-8&quot; /&gt;
+&lt;title&gt;Star Rating&lt;/title&gt;
+&lt;link href=&quot;css.css&quot; rel=&quot;stylesheet&quot; type=&quot;text/css&quot; /&gt;
+&lt;script language=&quot;JavaScript&quot; src=&quot;star.js&quot; type=&quot;text/JavaScript&quot;&gt;&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+Star rating. Here, the input is initially set as a text type for easier debugging. In actual use, it can be changed to a hidden type.
+&lt;form name=&quot;qn&quot; method=&quot;post&quot; action=&quot;#&quot;&gt;
+&lt;input type=&quot;text&quot; name=&quot;field0&quot; id=&quot;field0&quot; /&gt;
+&lt;div class=&quot;ratingstar&quot; id=&quot;field0_star&quot;
+onClick=&quot;page.starSet(this, 'field0');&quot;
+onmousemove=&quot;page.starHover(this);&quot;
+onmouseout=&quot;page.starOut(this, 'field0');&quot;&gt;
+&lt;div id=&quot;field0_star_hover&quot;&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;/form&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre> <h2>CSS Example</h2> <pre><code class="language-css">.ratingstar, .ratingstar_hover, .ratingstar_set {
+  height: 16px;
+  width: 80px;
+  cursor: pointer;
+  background-image: url(ratingstar.gif);
+  background-repeat: repeat-x;
+  position: relative; /* Fixes mouse position inaccuracies in Firefox */
+}
+.ratingstar_hover {
+  background-position: 0 -32px;
+}
+.ratingstar_set {
+  background-position: 0 -16px;
+}
+</code></pre> <p><img alt="ratingstar.gif" src="../assets/img/20080509_a_simple_01.gif"></p><p>The <code>ratingstar.gif</code> image is shown above. It is 16 pixels wide and 48 pixels high, with three vertically stacked stars of different colors. The CSS uses <code>background-repeat: repeat-x;</code> to tile it horizontally. Combined with a block width of <code>width: 80px;</code>, it displays 5 stars. The block width must be defined as 5 times the image width.</p><h2>JavaScript Example</h2> <pre><code class="language-javascript">function getEvent() // Compatible with both IE and Firefox
+{
+  if (document.all) return window.event;
+  func = getEvent.caller;
+  while (func != null) {
+    var arg0 = func.arguments[0];
+    if (arg0) {
+      if ((arg0.constructor == Event || arg0.constructor == MouseEvent) || (typeof(arg0) == &quot;object&quot; &amp;&amp; arg0.preventDefault &amp;&amp; arg0.stopPropagation)) {
+        return arg0;
+      }
+    }
+    func = func.caller;
+  }
+  return null;
+}
+
+function getMouseWithinX() {
+  e = getEvent();
+  var mouseX = 0;
+  // Firefox uses layerX for horizontal position
+  if (navigator.userAgent.indexOf(&quot;Firefox&quot;) != -1) {
+    return e.layerX;
+  }
+  // IE uses offsetX for mouse position relative to the element
+  else {
+    return e.offsetX;
+  }
+}
+
+var page = {
+  $: function (el) {
+    return document.getElementById(el);
+  },
+  starHover: function (obj) {
+    var mousex = getMouseWithinX();
+    var intStar = Math.ceil(5 * (mousex / obj.clientWidth));
+    var widthStar = intStar * obj.clientWidth / 5;
+    var hover = obj.id + '_hover';
+    obj.title = intStar + '/5';
+    var objHover = this.$(hover);
+    objHover.className = &quot;ratingstar_hover&quot;;
+    objHover.style.width = widthStar + 'px';
+  },
+  starOut: function (obj, container) {
+    if (this.$(container))
+      var intStar = this.$(container).value;
+    var widthStar = intStar * obj.clientWidth / 5;
+    var hover = obj.id + '_hover';
+    var objHover = this.$(hover);
+    objHover.className = &quot;ratingstar_set&quot;;
+    objHover.style.width = widthStar + 'px';
+  },
+  starSet: function (obj, container) {
+    var mousex = getMouseWithinX();
+    var intStar = Math.ceil(5 * (mousex / obj.clientWidth));
+    var widthStar = intStar * obj.clientWidth / 5;
+    var hover = obj.id + '_hover';
+    var objHover = this.$(hover);
+    objHover.className = &quot;ratingstar_set&quot;;
+    objHover.style.width = widthStar + 'px';
+    if (this.$(container))
+      this.$(container).value = intStar;
+  }
+};
+</code></pre> <p><strong>Explanation</strong>: The first two functions are used to get the mouse position within an element. The core algorithm is in the <code>starHover</code> function, which has been explained earlier. Other details are documented in the function comments.</p><p>A few days ago, I tried to simplify the HTML by keeping only:</p> <pre><code class="language-html">&lt;div class=&quot;ratingstar&quot; id=&quot;field0_star&quot; onClick=&quot;page.starSet(this, 'field0');&quot; onmousemove=&quot;page.starHover(this);&quot; onmouseout=&quot;page.starOut(this, 'field0');&quot;&gt;&lt;/div&gt;
+</code></pre> <p>And dynamically generating the inner:</p> <pre><code class="language-html">&lt;div id=&quot;field0_star_hover&quot;&gt;&lt;/div&gt;
+</code></pre> <p>using JavaScript. However, a strange issue occurred: moving the mouse within the <code>field0_star</code> area seemed to continuously trigger <code>onmousemove</code> and <code>onmouseout</code> events, causing the styles to switch rapidly and resulting in a flickering effect. Therefore, I decided to stick with the current approach.</p><p><strong>Remaining Issues</strong>: The CSS property <code>position:relative;</code> is used to fix mouse position inaccuracies in Firefox. Without this, <code>getMouseWithinX()</code> in Firefox seems to return the mouse position relative to the page instead of the <code>field0_star</code> element, resulting in values that are too large. The effect is that more than 5 stars are displayed when the mouse hovers over the area. Further investigation is needed to fully understand the relationship between events, elements, and the mouse in both IE and Firefox. If anyone has insights, feel free to share in the comments.</p><hr><p><em>Original link: https://www.snowpeak.fun/cn/article/detail/a_simple_star_rating/</em></p></main><footer class="footer"><div class="container"><div class="footer-content"><div class="footer-section"><h3><i class="fas fa-snowflake"></i> Snowpeak</h3><p>Sharing and discussing cutting-edge technologies of AI and cloud computing, and other interesting topics.</p><div class="social-links"><div class="social-platforms"><a href="https://github.com/xfsnow" target="_blank" class="social-link"><i class="fab fa-github"></i></a><a href="https://snowpeak.blog.csdn.net/" target="_blank" class="social-link"><i class="fas fa-blog"></i></a><a href="https://space.bilibili.com/701839928" target="_blank" class="social-link"><i class="fab fa-bilibili"></i></a><a href="https://www.linkedin.com/in/snowpeak" target="_blank" class="social-link"><i class="fab fa-linkedin"></i></a></div><div class="wechat-section"><div class="wechat-info"><span class="wechat-label">WeChat Account</span><span class="wechat-name">Tech Warm Life</span></div><img src="/assets/img/techwarm.jpg" alt="Tech Warm Life" class="wechat-qr"></div></div></div><div class="footer-section"><h4>Quick Links</h4><ul><li><a href="/#articles">Article</a></li><li><a href="/#tools">Tools</a></li><li><a href="https://docs.github.com/en/pages" target="_blank">GitHub Pages</a></li></ul></div><div class="footer-section"><h4>Tech Stack</h4><ul><li>Python</li><li>GitHub Copilot</li><li>Claude Sonnet 4</li><li>HTML/CSS/JS</li><li>Responsive Design</li></ul></div></div><div class="footer-bottom"><p>Copyright &copy; 2013-<script>document.write((new Date()).getFullYear());</script> Snowpeak Blog. Running on GitHub Pages. <a href="https://beian.miit.gov.cn" target="_blank" class="icp_beian">京ICP备2021007720号</a><a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=11010502052523" target="_blank" class="gongan_beian">京公网安备11010502052523号</a></p></div></div></footer><script src="/en/index.js"></script><script src="/assets/js/blog.min.js"></script><script>hljs.highlightAll();</script></body></html>

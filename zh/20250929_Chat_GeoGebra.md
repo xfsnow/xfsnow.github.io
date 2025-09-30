@@ -12,6 +12,9 @@
 
 先上演示应用 <https://www.snowpeak.org/math_question/ggb.htm>
 
+演示运行的截图：
+![ChatGGB运行截图](../assets/img/20250929_ChatGGB.webp)
+
 项目源码已开源 <https://github.com/xfsnow/xfsnow.github.io/blob/master/math_question/ggb.htm>
 
 ### 谁适合看此文档？

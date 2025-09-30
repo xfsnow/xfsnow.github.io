@@ -10,7 +10,7 @@ Original link: [https://snowpeak.blog.csdn.net/article/details/2221935](https://
 
 ---------
 
-Based on suggestions from Lang Tao (https://blog.csdn.net/lt1129lt), I removed characters that are identical in both simplified and traditional forms and added a filter to exclude non-Chinese characters. This optimization reduced runtime to about 30% of the original. The new source code can be found here:
+Based on suggestions from Lang Tao <https://blog.csdn.net/lt1129lt>, I removed characters that are identical in both simplified and traditional forms and added a filter to exclude non-Chinese characters. This optimization reduced runtime to about 30% of the original. The new source code can be found here:
 
 <https://github.com/xfsnow/xfsnow.github.io/blob/master/simtra.htm>
 
