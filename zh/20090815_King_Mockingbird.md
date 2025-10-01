@@ -2,13 +2,12 @@
 
 发布时间: *2009-08-15 15:55:00*
 
-简介: http://www.megaupload.com/?d=V8HZI4AV&setlang=cn我自认为这是我的字幕组的巅峰的作品。视频采用的是2001年1月到2003年7月经过化学和数码技术修复的亮彩高清版。法语汉语配音双 AC3 音频，法语音频经过修复，汉语音频修补了同步问题。法语汉语外挂字幕，重新校对了法语和汉语字幕。片长 01:21:58文件体积 959 MB视频 DivX 5
+分类: __软件工具__
 
-原文链接: [https://snowpeak.blog.csdn.net/article/details/4449686](https://snowpeak.blog.csdn.net/article/details/4449686)
+简介: 《国王与小鸟》是法国浪漫主义动画电影的巅峰，也是我的字幕组的巅峰的作品。
 
 ---------
-
-##### [http://www.megaupload.com/?d=V8HZI4AV&setlang=cn](<http://www.megaupload.com/?d=V8HZI4AV&setlang=cn>)
+<http://www.megaupload.com/?d=V8HZI4AV&setlang=cn>
 
 我自认为这是我的字幕组的巅峰的作品。
 

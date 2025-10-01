@@ -1,1 +1,405 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Snowpeak Blog</title><meta name="description" content="Sharing and discussing cutting-edge technologies of AI and cloud computing, and other interesting topics."><meta name="keywords" content="AI, GitHub Copilot, Azure Cloud, Cloud Computing, Front-end Technology, Back-end Technology, Web Development, Software Engineering"><link rel="stylesheet" href="/assets/css/style.min.css"><link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.7.2/css/all.css"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/default.min.css"><script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/highlight.min.js"></script></head><body><nav class="navbar"><div class="nav-container"><div class="nav-logo"><h2><i class="fas fa-snowflake"></i> Snowpeak</h2></div><div class="nav-menu"><a href="/en/" class="nav-link">Home</a><a href="/en/page_1.htm" class="nav-link">Article</a><a href="/en#tools" class="nav-link">Tools</a><a href="/en/about.htm" class="nav-link">About</a><a href="/" class="nav-link lang-switch"><i class="fas fa-globe"></i> 简体中文</a></div><div class="nav-toggle" id="mobile-menu"><span class="bar"></span><span class="bar"></span><span class="bar"></span></div></div></nav><header class="article-header"><div class="container"><h1>Menu by Floating Layer</h1><div class="article-meta"><span><i class="fas fa-calendar"></i> Published: 2009-01-16 16:49:00</span><span><i class="fas fa-clock"></i> Reading time: 1 minutes </span><span><i class="fas fa-tag"></i> Category: Tools</span></div></div></header><main class="article-container"><h2><a href="/en/article/detail/menu_by_floating_layer/">Menu by Floating Layer</a></h2><p>Category: <a href="/en/article/category/client_side_technology/">Client Side Technology</a> 2009-01-16 16:49:00 Read(2594)</p><hr><p><em>原文链接: https://www.snowpeak.fun/en/article/detail/menu_by_floating_layer/</em></p></main><footer class="footer"><div class="container"><div class="footer-content"><div class="footer-section"><h3><i class="fas fa-snowflake"></i> Snowpeak</h3><p>Sharing and discussing cutting-edge technologies of AI and cloud computing, and other interesting topics.</p><div class="social-links"><div class="social-platforms"><a href="https://github.com/xfsnow" target="_blank" class="social-link"><i class="fab fa-github"></i></a><a href="https://snowpeak.blog.csdn.net/" target="_blank" class="social-link"><i class="fas fa-blog"></i></a><a href="https://space.bilibili.com/701839928" target="_blank" class="social-link"><i class="fab fa-bilibili"></i></a><a href="https://www.linkedin.com/in/snowpeak" target="_blank" class="social-link"><i class="fab fa-linkedin"></i></a></div><div class="wechat-section"><div class="wechat-info"><span class="wechat-label">WeChat Account</span><span class="wechat-name">Tech Warm Life</span></div><img src="/assets/img/techwarm.jpg" alt="Tech Warm Life" class="wechat-qr"></div></div></div><div class="footer-section"><h4>Quick Links</h4><ul><li><a href="/#articles">Article</a></li><li><a href="/#tools">Tools</a></li><li><a href="https://docs.github.com/en/pages" target="_blank">GitHub Pages</a></li></ul></div><div class="footer-section"><h4>Tech Stack</h4><ul><li>Python</li><li>GitHub Copilot</li><li>Claude Sonnet 4</li><li>HTML/CSS/JS</li><li>Responsive Design</li></ul></div></div><div class="footer-bottom"><p>Copyright &copy; 2013-<script>document.write((new Date()).getFullYear());</script> Snowpeak Blog. Running on GitHub Pages. <a href="https://beian.miit.gov.cn" target="_blank" class="icp_beian">京ICP备2021007720号</a><a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=11010502052523" target="_blank" class="gongan_beian">京公网安备11010502052523号</a></p></div></div></footer><script src="/en/index.js"></script><script src="/assets/js/blog.min.js"></script><script>hljs.highlightAll();</script></body></html>
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Snowpeak Blog</title><meta name="description" content="Sharing and discussing cutting-edge technologies of AI and cloud computing, and other interesting topics."><meta name="keywords" content="AI, GitHub Copilot, Azure Cloud, Cloud Computing, Front-end Technology, Back-end Technology, Web Development, Software Engineering"><link rel="stylesheet" href="/assets/css/style.min.css"><link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.7.2/css/all.css"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/default.min.css"><script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/highlight.min.js"></script></head><body><nav class="navbar"><div class="nav-container"><div class="nav-logo"><h2><i class="fas fa-snowflake"></i> Snowpeak</h2></div><div class="nav-menu"><a href="/en/" class="nav-link">Home</a><a href="/en/page_1.htm" class="nav-link">Article</a><a href="/en#tools" class="nav-link">Tools</a><a href="/en/about.htm" class="nav-link">About</a><a href="/" class="nav-link lang-switch"><i class="fas fa-globe"></i> 简体中文</a></div><div class="nav-toggle" id="mobile-menu"><span class="bar"></span><span class="bar"></span><span class="bar"></span></div></div></nav><header class="article-header"><div class="container"><h1>Menu by Floating Layer</h1><div class="article-meta"><span><i class="fas fa-calendar"></i> Published: 2009-01-16 16:49:00</span><span><i class="fas fa-clock"></i> Reading time: 54 minutes </span><span><i class="fas fa-tag"></i> Category: Frontend</span></div></div></header><main class="article-container"><p>I recently created a generic floating layer menu replacement function that can easily replace traditional SELECT single-choice menus with fashionable floating layer menus.</p><h2>Source Code</h2><h3>DivMenu.css</h3> <pre><code class="language-css">a.divmenu, a.divmenu:hover  {
+    padding: 1px 1px 1px 3px;
+    border: 1px solid #9999CC;
+    color:#000;
+    text-decoration:none;
+    cursor:default;
+}
+/* Text style on the hint bar. 'a' is an inline element, and needs display:inline-block to set its width in the program */
+a.divmenu span.menuhint {
+    display:inline-block;
+}
+/* Arrow on the hint bar */
+a.divmenu span.menuarrow {
+    color: #000;
+}
+/* Style on mouse hover
+IE6 bug handling for CSS pseudo-class :hover. In IE 6, a:hover and a must have clearly different definitions to make a:hover span effective, so a new definition that doesn't affect the effect can be added according to the actual situation.
+*/
+a.divmenu:hover
+{
+    color:#fff;
+    border: 1px solid #33f;
+    background-color: #36f;
+}
+/* Doesn't work in IE 6, see a.divmenu:hover above for solution */
+a.divmenu:hover span {
+    color: #fff;
+}
+/* Style of the floating menu layer. Setting to display:inline-block; allows this layer's width to automatically adapt to the internal text instead of the full window width. But it doesn't work in IE, and display:table-cell; doesn't work either. */
+.divmenu_panel {
+    position: absolute;
+    display: none;
+    z-index: 9999;
+    width: 100px;
+    border: 1px solid #999999;
+    background-color: #fff;
+}
+/* Style of links that replace the original options in the menu layer. Using cursor:default; is to restore the same mouse pointer as traditional menus, rather than the hand pointer used for links. display:block; makes 'a' form its own line without writing other tags. */
+.divmenu_panel a {
+    cursor:default;
+    display:block;
+    color:#000;
+    text-decoration:none;
+}
+.divmenu_panel a:hover {
+    color:#399;
+    background-color: #f99;
+    background-color: #BBDDFF;
+    color: #3366FF;
+}
+/* Style of option group bands */
+.divmenu_group {
+    display:block;
+    background-color: #9cf;
+}
+</code></pre> <h3>DivMenu.js</h3> <pre><code class="language-javascript">// Because the replacement links need to use global event handlers, it's not very convenient for this program to use completely anonymous functions, so let's define a global object first
+// Let's encapsulate a simple event handler registration object here first
+var DivMenu =
+{
+    // Event registration compatible with IE and FF. No need to write event unregistration in this object for now.
+    add : function(element, eventType, handler)
+    {
+        if (document.addEventListener)
+        {
+            element.addEventListener(eventType, handler, false);
+        }
+        else if (document.attachEvent)
+        {
+            element.attachEvent(&quot;on&quot; + eventType, handler);
+        };
+
+    },
+    // Get the absolute position of page elements relative to the window
+    getAbsPoint : function (e)
+    {
+        var x = e.offsetLeft;
+        var y = e.offsetTop;
+        while(e = e.offsetParent)
+        {
+            x += e.offsetLeft;
+            y += e.offsetTop;
+        }
+        return {&quot;x&quot;: x, &quot;y&quot;: y};
+    },
+    // The parameter of show is the id of the original SELECT form item such as city, but to find the position, we need to find the replacement SELECT 'a' element such as city_a, and the menu layer it displays is city_div
+    show : function (sourceId)
+    {
+        var sourceobj = document.getElementById(sourceId+'_a');
+        var panelId = &quot;divmenu_panel&quot;;
+        var panel= document.getElementById(panelId);
+        if (!panel)
+        {
+            panel= document.createElement(&quot;div&quot;);
+            panel.className = &quot;divmenu_panel&quot;;
+            panel.id=panelId;
+            document.body.appendChild(panel);
+        }
+        panel.innerHTML = document.getElementById(sourceId+'_div').innerHTML;
+        // In FF, we still need to display this layer when it's on the layer, otherwise it will be hidden again when moving to the menu layer. Currently, there's no need to use the contains method in FF, so let's comment out the contains method defined for FF on the previous page.
+        //panel.setAttribute('onmouseover',&quot;DivMenu.show('&quot; + sourceId +&quot;');&quot;);
+
+        // Align left with the initiating element
+        var xy = this.getAbsPoint(sourceobj);
+        panel.style.left = xy.x + &quot;px&quot;;
+        // Add the height of the initiating element vertically
+        panel.style.top = (xy.y + sourceobj.offsetHeight) + &quot;px&quot;;
+        panel.style.display = &quot;block&quot;;
+        if (navigator.appName == &quot;Microsoft Internet Explorer&quot;)
+        {
+            // Add an IFRAME layer to solve the problem of SELECT blocking DIV layer in IE6
+            var iframeId = &quot;divmenu_panel_iframe&quot;;
+            var iframe_dom = document.getElementById(iframeId);
+            if(!iframe_dom) // If it doesn't exist, automatically generate iframe
+            {
+                var tmpIframeDom    = document.createElement(&quot;IFRAME&quot;);
+                tmpIframeDom.id     = iframeId;
+                document.body.appendChild(tmpIframeDom);
+                iframe_dom = document.getElementById(iframeId);
+                iframe_dom.src  = &quot;about:blank&quot;;    //javascript:void(0);  about:blank
+                iframe_dom.style.position = &quot;absolute&quot;;
+                iframe_dom.style.scrolling = &quot;no&quot;;
+                iframe_dom.style.frameBorder = 0;
+                //iframe_dom.style.backgroundColor = &quot;#ff0000&quot;; // Add a background color just for debugging
+            }
+            // The hide() method in the hidden layer way will set this IFRAME to display = &quot;none&quot;, so each time the menu layer is displayed, the IFRAME needs to be set to display = &quot;block&quot; again.
+            iframe_dom.style.display = &quot;block&quot;;
+            // Set the same width, height and coordinates as the menu layer
+            iframe_dom.style.width = panel.offsetWidth;
+            iframe_dom.style.height = panel.offsetHeight;
+            iframe_dom.style.top = panel.style.top;
+            iframe_dom.style.left = panel.style.left;
+            // Originally panel.style.zIndex - 1, but I can't get the panel.style.zIndex value here, so I'll manually set it to 9998, which is 1 less than panel.style.zIndex anyway
+            iframe_dom.style.zIndex = 9998;
+        }
+    },
+    // Hide menu
+    hide : function()
+    {
+        if (document.getElementById('divmenu_panel'))
+        {
+            document.getElementById('divmenu_panel').style.display = &quot;none&quot;;
+        }
+        // Add an IFRAME layer to solve the problem of SELECT blocking DIV layer in IE6. When hiding the menu, this IFRAME also needs to be hidden
+        if (navigator.appName == &quot;Microsoft Internet Explorer&quot;)
+        {
+            var iframeId = &quot;divmenu_panel_iframe&quot;;
+            var iframe_dom = document.getElementById(iframeId);
+            if(iframe_dom)  // Hide only if it really exists
+            {
+                iframe_dom.style.display = &quot;none&quot;;
+            }
+        }
+    },
+    // When an item is selected, assign the value to the hidden item that replaces select, and then replace the text in 'a'
+    setInput : function(itemid, hint, val)
+    {
+        var formitem = document.getElementById(itemid);
+        formitem.value = val;
+        var nodeHint = document.getElementById(itemid+'_a');
+        // An 'a' element looks like &lt;a id=&quot;purpose_a&quot; class=&quot;divmenu&quot; href='javascript:DivMenu.show(&quot;purpose&quot;)'&gt;&lt;span style=&quot;width: 6em;&quot; class=&quot;menuhint&quot;&gt;Office Building&lt;/span&gt;&lt;span&gt;▼&lt;input type=&quot;hidden&quot; id=&quot;purpose&quot; name=&quot;purpose&quot; class=&quot;&quot; value=&quot;&quot;/&gt;&lt;/span&gt;&lt;/a&gt;. Replacing the display text means replacing the text of the first child node of 'a', so:
+        var nodeHint = nodeHint.firstChild; // Take the first child node, at this time nodeHint is &lt;span style=&quot;width: 6em;&quot; class=&quot;menuhint&quot;&gt;Office Building&lt;/span&gt;
+        var newHint = document.createTextNode(hint);    // Create a text node with the new display text
+        nodeHint.replaceChild(newHint, nodeHint.firstChild);    // Use nodeHint to replace its first child node, i.e. the &quot;Office Building&quot; text node
+    },
+    // Calculate the byte length of a string
+    byteLength : function (s)
+    {
+        var len = 0;
+        for (i = 0; i &lt; s.length; i++)
+        {// Decide whether to add 1 or 2 to the total number of bytes based on character encoding. The problem is that charCodeAt returns Unicode encoding. Which Unicode encoding range counts as only 1 byte? Basically \x00-\xff, i.e. characters 0 - 255 are 1 byte. There are many other considerations, such as听说 there are also 3-byte characters, but most users won't be able to type them.
+            len += (s.charCodeAt(i) &lt; 256) ? 1:2;
+        }
+        return len;
+    },
+    // Menu transformation function
+    menuTransform : function ()
+    {
+        var debug = '';
+        // All menus exist in an array
+        var menuSelects = [];
+        var arrMenu = document.getElementsByTagName('select');
+        for (var i=0; i&lt;arrMenu.length; i++)
+        {
+            // Only replace single-choice menus, so find those that are single-choice menus
+            // http://alex.zybar.net/javascript/IE/IE indeed doesn't support the hasAttribute() and hasAttributes() methods of DOM Level 2. attributes.length &gt; 0 can be used instead of hasAttributes(), and getAttribute(attrName) != null can be used instead of hasAttribute(attrName). But for attributes like multiple that have no value, when they don't exist, FF returns null while IE returns false (when they exist, FF returns an empty string, IE returns true). We'll have to make do again, and we still need to use strict equality ===, otherwise it won't work. Both multiple and multiple=&quot;multiple&quot; are可行
+            var getMultiple = arrMenu[i].getAttribute('multiple');
+            if ((null === getMultiple) || (false === getMultiple))
+            {
+                var nodesOption = arrMenu[i].childNodes;
+                var menuName = arrMenu[i].getAttribute('name');
+                // The hint bar for the entire menu, used for the text in the 'a' element that initially replaces the menu
+                var strHint='';
+                var valSelected = null;
+                var objOptions = [];
+                // Store the current menu's information as an object
+                var objSelect = {};
+                for (var j=0; j&lt;nodesOption.length; j++)
+                {
+                    // Options within option groups are usually not used as hint bars, so the loop within these option groups doesn't process hint bars
+                    if ('OPTGROUP'== nodesOption[j].nodeName)
+                    {
+                        objOptions.push({'hint':nodesOption[j].getAttribute('label'), 'value':null, 'type':'OPTGROUP'});
+                        var nodesGroup = nodesOption[j].childNodes;
+                        for (var k = 0;k&lt;nodesGroup.length;k++)
+                        {
+                            if ('OPTION'== nodesGroup[k].nodeName)
+                            {
+                                var hintThis = nodesGroup[k].firstChild.data;
+                                var valueThis = nodesGroup[k].getAttribute('value');
+                                var selectedThis = nodesOption[j].getAttribute('selected');
+                                if (('selected' == selectedThis) || (true === selectedThis))
+                                {
+                                    strHint = hintThis;
+                                    valSelected = valueThis;
+                                }
+                                objOptions.push({'hint':hintThis, 'value':valueThis, 'type':'OPTION'});
+                            }
+                        }
+                    }
+                    else if ('OPTION'== nodesOption[j].nodeName)
+                    {
+                        var hintThis = nodesOption[j].firstChild.data;
+                        var disabledThis = nodesOption[j].getAttribute('disabled');
+                        var selectedThis = nodesOption[j].getAttribute('selected');
+                        var valueThis = nodesOption[j].getAttribute('value');
+                        //alert(selectedThis);
+                        // Empty string values should be counted as options, not hint bars, so the condition doesn't add || ('' == valueThis)
+                        if (('disabled' == disabledThis) || (true === disabledThis) || (null == valueThis))
+                        {
+                            strHint = hintThis;
+                        }
+
+                        else
+                        {
+                            // If there's a default selected item, use its display text as the hint bar
+                            if (('selected' == selectedThis) || (true === selectedThis) || ('' === selectedThis))
+                            {
+                                strHint = hintThis;
+                                valSelected = valueThis;
+                            }
+                            objOptions.push({'hint':hintThis, 'value':valueThis, 'type':'OPTION'});
+                        }
+                    }
+                }
+                // If the menu doesn't define an option to be used as a hint, use the first option as the hint
+                if ('' == strHint)
+                {
+                    strHint = objOptions[0].hint;
+                }
+
+                // The menu layer is directly generated as a node and added to the entire document
+                var nodeDiv = document.createElement('div');
+                nodeDiv.id=menuName+'_div';
+                // Generate menu layer as backup, set to invisible style
+                nodeDiv.style.display='none';
+                // Temporary string for assembling innerHTML
+                var str = '';
+                // First note down the byte count of the hint bar, then compare the byte count of the option display text one by one when assembling options, take the maximum value, and finally determine the width of the hint bar 'a'
+                var strLength = DivMenu.byteLength(strHint);
+                for (n=0; n&lt;objOptions.length;n++)
+                {
+                    if ('OPTGROUP' == objOptions[n].type)
+                    {
+                        str += '&lt;div class=&quot;divmenu_group&quot;&gt;'+objOptions[n].hint+'&lt;/div&gt;';
+                    }
+                    else if('OPTION' == objOptions[n].type)
+                    {
+                        str += '&lt;a href=&quot;javascript:DivMenu.setInput(&quot;'+menuName+'&quot;, &quot;'+objOptions[n].hint+'&quot;, &quot;'+objOptions[n].value+'&quot;)&quot;&gt;'+objOptions[n].hint+'&lt;/a&gt;';
+                    }
+                    // Find the longest string in the display text to determine the width of 'a'. When JavaScript counts characters, one Chinese character counts as 1 character, but Chinese width is much larger than Western width, so counting characters to determine width is not good. Try directly comparing the width of 'a' and the created menu layer, and take the larger value. But directly getting ComputedStyle doesn't work either. These menu divs are hidden and absolutely positioned. In IE, ComputedStyle returns 'auto' for width, while FF returns the width of the entire window. In fact, except for monospaced fonts, each Western character has a different width, so it's difficult to determine the width through character count. Traditional SELECT is parsed and rendered by the browser after getting all the option text, but now replacing it with 'a' and 'div' elements is indeed troublesome. The current approach is a safer one: calculate the maximum character count strLength, then set width:'+strLength*0.6+'em, where 0.6 is just an empirical coefficient. Directly width:'+strLength+'em is too wide, so it's reduced by 60%.
+                    var thisLength = DivMenu.byteLength(objOptions[n].hint);
+                    if (thisLength &gt; strLength)
+                    {
+                        strLength = thisLength;
+                    }
+                }
+                nodeDiv.innerHTML = str;
+                document.body.appendChild(nodeDiv);
+
+                // Create the 'a' node that replaces select, and store it in the replacement array. This 'a' including the hidden input will be used to replace the original select node
+                // Create the 'a' node that replaces select, and store it in the replacement array. This 'a' including the hidden input will be used to replace the original select node
+                var nodeHint = document.createElement('a');
+                nodeHint.id=menuName+'_a';
+                nodeHint.className='divmenu';
+                nodeHint.setAttribute('href', 'javascript:DivMenu.show(&quot;'+menuName+'&quot;)');
+                str = '&lt;span class=&quot;menuhint&quot; style=&quot;width:'+strLength*0.6+'em&quot;&gt;'+strHint+'&lt;/span&gt;&lt;span class=&quot;menuarrow&quot;&gt;▼&lt;input type=&quot;hidden&quot; name=&quot;'+menuName+'&quot; id=&quot;'+menuName+'&quot;'+((null == valSelected)? '':' value=&quot;'+valSelected+'&quot;')+'&gt;&lt;/span&gt;';
+                nodeHint.innerHTML = str;
+                // Store the new and old nodes in the object array first for unified replacement later
+                var menuthis = {'node':arrMenu[i],'nodeNew':nodeHint};
+                menuSelects.push(menuthis);
+            }
+        }
+        for (var i=0; i&lt;menuSelects.length; i++)
+        {
+            menuSelects[i].node.parentNode.replaceChild(menuSelects[i].nodeNew, menuSelects[i].node);
+        }
+    }
+};
+
+// Execute the above menu transformation function after the document is loaded
+DivMenu.add(window, 'load', DivMenu.menuTransform);
+// When traditional menus are opened, they occupy focus, and clicking somewhere else in the document will close the menu. To completely reproduce the usage habits of traditional menus, click the document again to hide the menu
+DivMenu.add(document, 'click', DivMenu.hide);
+</code></pre> <h3>DivMenu.htm</h3> <pre><code class="language-html">&lt;!DOCTYPE html PUBLIC &quot;-//W3C//DTD XHTML 1.0 Strict//EN&quot; &quot;http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd&quot;&gt;
+&lt;html xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt;
+&lt;head&gt;
+&lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=gb2312&quot; /&gt;
+&lt;title&gt;Menu by Floating Layer&lt;/title&gt;
+&lt;script type=&quot;text/javascript&quot; src=&quot;DivMenu.js&quot;&gt;&lt;/script&gt;
+&lt;link href=&quot;DivMenu.css&quot; rel=&quot;stylesheet&quot; type=&quot;text/css&quot; /&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+&lt;h1&gt;Menu by Floating Layer&lt;/h1&gt;
+&lt;p&gt;This is a generic floating layer menu replacement function that can easily replace traditional SELECT single-choice menus with fashionable floating layer menus.&lt;/p&gt;
+&lt;h3&gt;Instructions&lt;/h3&gt;
+&lt;p&gt;Simply reference the JS file and CSS file in the attachment to the web page, such as:&lt;/p&gt;
+&lt;pre&gt;&lt;script type=&quot;text/javascript&quot; src=&quot;DivMenu.js&quot;&gt;&lt;/script&gt;
+&lt;link href=&quot;DivMenu.css&quot; rel=&quot;stylesheet&quot; type=&quot;text/css&quot; /&gt; &lt;/pre&gt;
+&lt;h4&gt;&lt;a href=&quot;DivMenu.zip&quot;&gt;Download Source Code Package&lt;/a&gt;&lt;/h4&gt;
+&lt;p&gt;Among them, DivMenu.js is a compressed streamlined version by Javascript compressor for actual production use. DivMenu_develop.js is a development version with detailed comments for learning and research. When using it, you can refer to the comments in the DivMenu.css file and modify the style definition by yourself.&lt;/p&gt;
+&lt;p&gt;The JavaScript program has implemented unobtrusive functionality, meaning that HTML files referencing this JS file don't need any other adjustments. However, it hasn't fully implemented anonymous functionality, meaning that this program still creates global variables and several web page nodes. We've tried to minimize the addition of global variables and nodes, but please still pay attention to variable naming conflicts when using it. This program only adds one global variable &quot;DivMenu&quot;, and adds quite a few web page nodes. For each SELECT node that is replaced, two nodes are added, with names being the SELECT node's name value plus &quot;_a&quot; suffix and &quot;_div&quot; suffix respectively. For example, if the name of an original SELECT node is &quot;menu&quot;, the names of the two newly added nodes are &quot;menu_a&quot; and &quot;menu_div&quot;.&lt;/p&gt;
+&lt;h3&gt;Function Description&lt;/h3&gt;
+&lt;form id=&quot;classic&quot; method=&quot;post&quot; action=&quot;&quot;&gt;
+  &lt;div&gt; City
+    &lt;select name=&quot;city&quot;&gt;
+        &lt;option disabled=&quot;disabled&quot;&gt;Please select a city&lt;/option&gt;
+        &lt;option value=&quot;beijing&quot;&gt;Beijing&lt;/option&gt;
+        &lt;option value=&quot;tianjin&quot;&gt;Tianjin&lt;/option&gt;
+        &lt;optgroup label=&quot;Hebei Province&quot;&gt;
+        &lt;option value=&quot;shijiazhuang&quot;&gt;Shijiazhuang&lt;/option&gt;
+        &lt;option value=&quot;tangshan&quot;&gt;Tangshan&lt;/option&gt;
+        &lt;/optgroup&gt;
+        &lt;optgroup label=&quot;Zhejiang Province&quot;&gt;
+        &lt;option value=&quot;suzhou&quot;&gt;Suzhou&lt;/option&gt;
+        &lt;option value=&quot;hangzhou&quot;&gt;Hangzhou&lt;/option&gt;
+        &lt;option value=&quot;ningbo&quot;&gt;Ningbo&lt;/option&gt;
+        &lt;/optgroup&gt;
+    &lt;/select&gt;
+    Type
+    &lt;select name=&quot;purpose&quot;&gt;
+      &lt;option&gt;Please select type&lt;/option&gt;
+      &lt;option value=&quot;house&quot; selected=&quot;selected&quot; &gt;Residential&lt;/option&gt;
+      &lt;option value=&quot;economic&quot;&gt;Affordable Housing&lt;/option&gt;
+      &lt;option value=&quot;villa&quot;&gt;Villa&lt;/option&gt;
+      &lt;option value=&quot;building&quot;&gt;Office Building&lt;/option&gt;
+      &lt;option value=&quot;shop&quot;&gt;Shop&lt;/option&gt;
+    &lt;/select&gt;
+    Price
+    &lt;select name=&quot;price&quot;&gt;
+      &lt;option selected=&quot;selected&quot; disabled=&quot;disabled&quot;&gt;Please select price&lt;/option&gt;
+      &lt;option value=&quot;0-1000&quot;&gt;0 to 1000&lt;/option&gt;
+      &lt;option value=&quot;1000-2000&quot;&gt;1000-2000&lt;/option&gt;
+      &lt;option value=&quot;2000-3000&quot;&gt;2000-3000&lt;/option&gt;
+      &lt;option value=&quot;3000-4000&quot;&gt;3000-4000&lt;/option&gt;
+      &lt;option value=&quot;4000-5000&quot;&gt;4000-5000&lt;/option&gt;
+      &lt;option value=&quot;5000-6000&quot;&gt;5000-6000&lt;/option&gt;
+      &lt;option value=&quot;6000-7000&quot;&gt;6000-7000&lt;/option&gt;
+      &lt;option value=&quot;7000-8000&quot;&gt;7000-8000&lt;/option&gt;
+      &lt;option value=&quot;8000-9000&quot;&gt;8000-9000&lt;/option&gt;
+      &lt;option value=&quot;9000-10000&quot;&gt;9000-10000&lt;/option&gt;
+      &lt;option value=&quot;&quot; selected=&quot;selected&quot;&gt;Unlimited&lt;/option&gt;
+    &lt;/select&gt;
+    &lt;select name=&quot;nohint&quot;&gt;
+      &lt;option value=&quot;0&quot;&gt;Zero&lt;/option&gt;
+      &lt;option value=&quot;1000-2000&quot;&gt;1000-2000&lt;/option&gt;
+      &lt;option value=&quot;2000-3000&quot;&gt;2000-3000&lt;/option&gt;
+      &lt;option value=&quot;3000-4000&quot;&gt;3000-4000&lt;/option&gt;
+      &lt;option value=&quot;4000-5000&quot;&gt;4000-5000&lt;/option&gt;
+      &lt;option value=&quot;5000-6000&quot;&gt;5000-6000&lt;/option&gt;
+      &lt;option value=&quot;6000-7000&quot;&gt;6000-7000&lt;/option&gt;
+      &lt;option value=&quot;7000-8000&quot;&gt;7000-8000&lt;/option&gt;
+      &lt;option value=&quot;8000-9000&quot;&gt;8000-9000&lt;/option&gt;
+      &lt;option value=&quot;9000-10000&quot;&gt;9000-10000&lt;/option&gt;
+      &lt;option value=&quot;10000-11000&quot;&gt;10000-11000&lt;/option&gt;
+    &lt;/select&gt;
+    Multiple selection menus are not converted. Hint text in multiple selection menus can only be implemented with disabled=&quot;disabled&quot;.
+    &lt;select name=&quot;multi&quot; multiple=&quot;multiple&quot;&gt;
+      &lt;option disabled=&quot;disabled&quot;&gt;To select multiple items, please hold down the Ctrl key and then select&lt;/option&gt;
+      &lt;option value=&quot;house&quot;&gt;Multiple Selection 1&lt;/option&gt;
+      &lt;option value=&quot;economic&quot;&gt;Multiple Selection 2&lt;/option&gt;
+      &lt;option value=&quot;villa&quot;&gt;Multiple Selection 3&lt;/option&gt;
+      &lt;option value=&quot;building&quot;&gt;Multiple Selection 4&lt;/option&gt;
+      &lt;option value=&quot;shop&quot;&gt;Multiple Selection 5&lt;/option&gt;
+    &lt;/select&gt;
+    Put a multiple selection menu to demonstrate that multiple selection menus will not be replaced, and that floating layers can be displayed normally above other SELECT elements in IE6. &lt;/div&gt;
+&lt;/form&gt;
+This is a practical example with several classic SELECT selection menus. The first one is complex with grouping, and the hint text is implemented with the first option that has disabled=&quot;disabled&quot;. The second one is simple, with hint text using the option that has no value attribute. Practice has found that FF can normally handle options with disabled=&quot;disabled&quot; or just disabled, putting them in an unselectable state, while IE ignores any disabled=&quot;disabled&quot; and disabled, so it's estimated that menus in IE usually use options with no value attribute or value=&quot;&quot; as hint text. You can see that its source code is the original SELECT, requiring no changes.
+&lt;p&gt;The basic idea is to convert the existing SELECT menus in the document into hidden INPUT form items, use 'A' elements for the menu hint bar and option bars, use DIV layers for menus, and also use 'A' elements to replace each option. When clicked, the value is assigned to the hidden INPUT form item.&lt;/p&gt;
+&lt;p&gt;Main functions or limitations include:&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;All usage habits follow traditional SELECT menus.&lt;/li&gt;
+  &lt;li&gt;Only single-choice SELECT menus will be replaced, while multiple-choice menus remain unchanged, because multiple-choice menus usually don't need to be replaced with floating layer menus.&lt;/li&gt;
+  &lt;li&gt;Supports various SELECT element features, such as using disabled or valueless options as hint bars; options grouped with optgroup will also be grouped in the new menu. Special corrections have been made for the bug in IE 6 where SELECT blocks DIV layers.&lt;/li&gt;
+  &lt;li&gt;Supports default selected items.&lt;/li&gt;
+  &lt;li&gt;Almost supports all functions of ordinary menus, but doesn't support additional interactive functions, such as JavaScript real-time created Option options, linked options, etc. For example, functions where selecting a city district will correspondingly change are not supported.&lt;/li&gt;
+  &lt;li&gt;All styles are defined with CSS, using relative font sizes, which can adapt to most web pages without modification.&lt;/li&gt;
+  &lt;li&gt;Menu position and size are set flexibly to adapt to any web page layout. When making it, the consideration was to be able to display the widest option text in the replacement 'A' element, so the width of the original SELECT box was not directly taken. Therefore, the menu size may be wider than the original SELECT, please note this when using.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Welcome to try it out and provide suggestions and feedback for joint discussion and improvement.&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre> <h2>Instructions</h2><p>Simply reference the above JS file and CSS file to the web page, such as:</p> <pre><code class="language-html">&lt;script type=&quot;text/javascript&quot; src=&quot;DivMenu.js&quot;&gt;&lt;/script&gt;
+&lt;link href=&quot;DivMenu.css&quot; rel=&quot;stylesheet&quot; type=&quot;text/css&quot; /&gt;
+</code></pre> <p>Among them, DivMenu.js is a compressed streamlined version by Javascript compressor for actual production use. DivMenu_develop.js is a development version with detailed comments for learning and research. When using it, you can refer to the comments in the DivMenu.css file and modify the style definition by yourself.</p><p>The JavaScript program has implemented unobtrusive functionality, meaning that HTML files referencing this JS file don't need any other adjustments. However, it hasn't fully implemented anonymous functionality, meaning that this program still creates global variables and several web page nodes. We've tried to minimize the addition of global variables and nodes, but please still pay attention to variable naming conflicts when using it. This program only adds one global variable "DivMenu", and adds quite a few web page nodes. For each SELECT node that is replaced, two nodes are added, with names being the SELECT node's name value plus "_a" suffix and "_div" suffix respectively. For example, if the name of an original SELECT node is "menu", the names of the two newly added nodes are "menu_a" and "menu_div".</p><h2>Function Description</h2><p>The basic idea is to convert the existing SELECT menus in the document into hidden INPUT form items, use 'A' elements for the menu hint bar and option bars, use DIV layers for menus, and also use 'A' elements to replace each option. When clicked, the value is assigned to the hidden INPUT form item.</p><p>Main functions or limitations include:</p><ol><li><p>All usage habits follow traditional SELECT menus.</p></li><li><p>Only single-choice SELECT menus will be replaced, while multiple-choice menus remain unchanged, because multiple-choice menus usually don't need to be replaced with floating layer menus.</p></li><li><p>Supports various SELECT element features, such as using disabled or valueless options as hint bars; options grouped with optgroup will also be grouped in the new menu. Special corrections have been made for the bug in IE 6 where SELECT blocks DIV layers.</p></li><li><p>Supports default selected items.</p></li><li><p>Almost supports all functions of ordinary menus, but doesn't support additional interactive functions, such as JavaScript real-time created Option options, linked options, etc. For example, functions where selecting a city district will correspondingly change are not supported.</p></li><li><p>All styles are defined with CSS, using relative font sizes, which can adapt to most web pages without modification.</p></li><li><p>Menu position and size are set flexibly to adapt to any web page layout. When making it, the consideration was to be able to display the widest option text in the replacement 'A' element, so the width of the original SELECT box was not directly taken. Therefore, the menu size may be wider than the original SELECT, please note this when using.</p></li></ol></main><footer class="footer"><div class="container"><div class="footer-content"><div class="footer-section"><h3><i class="fas fa-snowflake"></i> Snowpeak</h3><p>Sharing and discussing cutting-edge technologies of AI and cloud computing, and other interesting topics.</p><div class="social-links"><div class="social-platforms"><a href="https://github.com/xfsnow" target="_blank" class="social-link"><i class="fab fa-github"></i></a><a href="https://snowpeak.blog.csdn.net/" target="_blank" class="social-link"><i class="fas fa-blog"></i></a><a href="https://space.bilibili.com/701839928" target="_blank" class="social-link"><i class="fab fa-bilibili"></i></a><a href="https://www.linkedin.com/in/snowpeak" target="_blank" class="social-link"><i class="fab fa-linkedin"></i></a></div><div class="wechat-section"><div class="wechat-info"><span class="wechat-label">WeChat Account</span><span class="wechat-name">Tech Warm Life</span></div><img src="/assets/img/techwarm.jpg" alt="Tech Warm Life" class="wechat-qr"></div></div></div><div class="footer-section"><h4>Quick Links</h4><ul><li><a href="/#articles">Article</a></li><li><a href="/#tools">Tools</a></li><li><a href="https://docs.github.com/en/pages" target="_blank">GitHub Pages</a></li></ul></div><div class="footer-section"><h4>Tech Stack</h4><ul><li>Python</li><li>GitHub Copilot</li><li>Claude Sonnet 4</li><li>HTML/CSS/JS</li><li>Responsive Design</li></ul></div></div><div class="footer-bottom"><p>Copyright &copy; 2013-<script>document.write((new Date()).getFullYear());</script> Snowpeak Blog. Running on GitHub Pages. <a href="https://beian.miit.gov.cn" target="_blank" class="icp_beian">京ICP备2021007720号</a><a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=11010502052523" target="_blank" class="gongan_beian">京公网安备11010502052523号</a></p></div></div></footer><script src="/en/index.js"></script><script src="/assets/js/blog.min.js"></script><script>hljs.highlightAll();</script></body></html>

@@ -1,9 +1,9 @@
-<!DOCTYPE html><html lang="zh"><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"><title>雪峰博客</title><meta name="description" content="分享AI和云计算技术的最新动态与实践经验，以及其它有趣的话题。"><meta name="keywords" content="AI, GitHub Copilot, Azure云, 云计算, 前端技术, 后端技术, Web开发, 软件工程"><link rel="stylesheet" href="/assets/css/style.min.css"><link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.7.2/css/all.css"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/default.min.css"><script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/highlight.min.js"></script></head><body><nav class="navbar"><div class="nav-container"><div class="nav-logo"><h2><i class="fas fa-snowflake"></i> Snowpeak</h2></div><div class="nav-menu"><a href="/" class="nav-link">首页</a><a href="/zh/page_1.htm" class="nav-link">文章</a><a href="/#tools" class="nav-link">工具</a><a href="/zh/about.htm" class="nav-link">关于</a><a href="/en/" class="nav-link lang-switch"><i class="fas fa-globe"></i> English</a></div><div class="nav-toggle" id="mobile-menu"><span class="bar"></span><span class="bar"></span><span class="bar"></span></div></div></nav><header class="article-header"><div class="container"><h1>纯 CSS+JS 通用选项卡</h1><div class="article-meta"><span><i class="fas fa-calendar"></i> 发布时间: 2009-09-09 15:29:00</span><span><i class="fas fa-clock"></i> 阅读约需: 6 分钟 </span><span><i class="fas fa-tag"></i> 分类: 软件工具</span></div></div></header><main class="article-container"><h2><a href="/cn/article/detail/general_tab_with_pure_css_and_js/">纯 CSS+JS 通用选项卡</a></h2><p>分类: <a href="/cn/article/category/client_side_technology/">客户端技术</a> 2009-09-09 15:29:00 阅读(2567)</p><p>请看源码吧，各段都有详细注释。</p> <pre><code>&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"&gt;
-&lt;html xmlns="http://www.w3.org/1999/xhtml"&gt;
+<!DOCTYPE html><html lang="zh"><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"><title>雪峰博客</title><meta name="description" content="分享AI和云计算技术的最新动态与实践经验，以及其它有趣的话题。"><meta name="keywords" content="AI, GitHub Copilot, Azure云, 云计算, 前端技术, 后端技术, Web开发, 软件工程"><link rel="stylesheet" href="/assets/css/style.min.css"><link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.7.2/css/all.css"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/default.min.css"><script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/highlight.min.js"></script></head><body><nav class="navbar"><div class="nav-container"><div class="nav-logo"><h2><i class="fas fa-snowflake"></i> Snowpeak</h2></div><div class="nav-menu"><a href="/" class="nav-link">首页</a><a href="/zh/page_1.htm" class="nav-link">文章</a><a href="/#tools" class="nav-link">工具</a><a href="/zh/about.htm" class="nav-link">关于</a><a href="/en/" class="nav-link lang-switch"><i class="fas fa-globe"></i> English</a></div><div class="nav-toggle" id="mobile-menu"><span class="bar"></span><span class="bar"></span><span class="bar"></span></div></div></nav><header class="article-header"><div class="container"><h1>纯 CSS+JS 通用选项卡</h1><div class="article-meta"><span><i class="fas fa-calendar"></i> 发布时间: 2009-09-09 15:29:00</span><span><i class="fas fa-clock"></i> 阅读约需: 6 分钟 </span><span><i class="fas fa-tag"></i> 分类: 前端技术</span></div></div></header><main class="article-container"><p>请看源码吧，各段都有详细注释。</p><h2>源码</h2> <pre><code class="language-html">&lt;!DOCTYPE html PUBLIC &quot;-//W3C//DTD XHTML 1.0 Transitional//EN&quot; &quot;http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd&quot;&gt;
+&lt;html xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt;
 &lt;head&gt;
-&lt;meta http-equiv="Content-Type" content="text/html; charset=gb2312" /&gt;
+&lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=gb2312&quot; /&gt;
 &lt;title&gt;选项卡&lt;/title&gt;
-&lt;style type="text/css"&gt;
+&lt;style type=&quot;text/css&quot;&gt;
 /*核心：
 选项页切换：先把各选项内容块设置成 display: none，再把当前选项的 .tabOn .tabContentBox 设置为 display: block;
 选项页是分属不同的 li 的，要让它们定位到相同的位置，就要用到 position: absolute; 而这时又不是相对窗口的绝对定位，而是相对于整个选项组 ul 的定位，因为给 .tabList .tabBox 设置 position:relative;。
@@ -37,7 +37,7 @@
 
 /* 初始化 */
 body {
-    font: 12px/1 "宋体", SimSun, serif;
+    font: 12px/1 &quot;宋体&quot;, SimSun, serif;
     background:#fff;
     color:#000;
 }
@@ -88,6 +88,7 @@ width:25%; 只是默认的 4 个选项时用的，选项个数不是 4 时，由
     background:#fff;
     border-left:1px solid #99F;
     border-right: 1px solid #99F;
+    border-right: 1px solid #99F;
     border-bottom:1px solid #FFF;
 }
 .tabBox h4.tabOnFirst {
@@ -99,60 +100,60 @@ width:25%; 只是默认的 4 个选项时用的，选项个数不是 4 时，由
     border-bottom:1px solid #fff;
 }
 &lt;/style&gt;
-&lt;script type="text/javascript" language="javascript"&gt;
+&lt;script type=&quot;text/javascript&quot; language=&quot;javascript&quot;&gt;
 
 &lt;/script&gt;
 
 &lt;/head&gt;
 &lt;body&gt;
 &lt;h1&gt;通用选项卡演示&lt;/h1&gt;
-  &lt;ul class="tabBox"&gt;
+  &lt;ul class=&quot;tabBox&quot;&gt;
 
-    &lt;li class="tabOption tabOn"&gt;
-      &lt;h4 class="tabOnFirst"&gt;选项1&lt;/h4&gt;
-      &lt;div class="tabContentBox"&gt;
-      1的具体内容&lt;br /&gt;&lt;a href="http://www.snowpeak.org" target="_blank"&gt;www.snowpeak.org&lt;/a&gt;
+    &lt;li class=&quot;tabOption tabOn&quot;&gt;
+      &lt;h4 class=&quot;tabOnFirst&quot;&gt;选项1&lt;/h4&gt;
+      &lt;div class=&quot;tabContentBox&quot;&gt;
+      1的具体内容&lt;br /&gt;&lt;a href=&quot;http://www.snowpeak.org&quot; target=&quot;_blank&quot;&gt;www.snowpeak.org&lt;/a&gt;
       &lt;/div&gt;
     &lt;/li&gt;
-    &lt;li class="tabOption"&gt;
+    &lt;li class=&quot;tabOption&quot;&gt;
       &lt;h4&gt;选项2&lt;/h4&gt;
-      &lt;div class="tabContentBox"&gt;
-    2的具体内容&lt;br /&gt;&lt;a href="http://www.snowpeak.org" target="_blank"&gt;www.snowpeak.org&lt;/a&gt;
+      &lt;div class=&quot;tabContentBox&quot;&gt;
+    2的具体内容&lt;br /&gt;&lt;a href=&quot;http://www.snowpeak.org&quot; target=&quot;_blank&quot;&gt;www.snowpeak.org&lt;/a&gt;
       &lt;/div&gt;
     &lt;/li&gt;
-    &lt;li class="tabOption"&gt;
+    &lt;li class=&quot;tabOption&quot;&gt;
       &lt;h4&gt;选项3&lt;/h4&gt;
-      &lt;div class="tabContentBox"&gt;
-        3的具体内容&lt;br /&gt;&lt;a href="http://www.snowpeak.org" target="_blank"&gt;www.snowpeak.org&lt;/a&gt;
+      &lt;div class=&quot;tabContentBox&quot;&gt;
+        3的具体内容&lt;br /&gt;&lt;a href=&quot;http://www.snowpeak.org&quot; target=&quot;_blank&quot;&gt;www.snowpeak.org&lt;/a&gt;
       &lt;/div&gt;
     &lt;/li&gt;
   &lt;/ul&gt;
 
 
 &lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;
-  &lt;ul class="tabBox"&gt;
-    &lt;li class="tabOption tabOn"&gt;
-      &lt;h4 class="tabOnFirst"&gt;选项1&lt;/h4&gt;
-      &lt;div class="tabContentBox"&gt;
-        1的具体内容&lt;br /&gt;&lt;a href="http://www.snowpeak.org" target="_blank"&gt;www.snowpeak.org&lt;/a&gt;
+  &lt;ul class=&quot;tabBox&quot;&gt;
+    &lt;li class=&quot;tabOption tabOn&quot;&gt;
+      &lt;h4 class=&quot;tabOnFirst&quot;&gt;选项1&lt;/h4&gt;
+      &lt;div class=&quot;tabContentBox&quot;&gt;
+        1的具体内容&lt;br /&gt;&lt;a href=&quot;http://www.snowpeak.org&quot; target=&quot;_blank&quot;&gt;www.snowpeak.org&lt;/a&gt;
       &lt;/div&gt;
     &lt;/li&gt;
-    &lt;li class="tabOption"&gt;
+    &lt;li class=&quot;tabOption&quot;&gt;
       &lt;h4&gt;选项2&lt;/h4&gt;
-      &lt;div class="tabContentBox"&gt;
-    2的具体内容&lt;br /&gt;&lt;a href="http://www.snowpeak.org" target="_blank"&gt;www.snowpeak.org&lt;/a&gt;
+      &lt;div class=&quot;tabContentBox&quot;&gt;
+    2的具体内容&lt;br /&gt;&lt;a href=&quot;http://www.snowpeak.org&quot; target=&quot;_blank&quot;&gt;www.snowpeak.org&lt;/a&gt;
       &lt;/div&gt;
     &lt;/li&gt;
-    &lt;li class="tabOption"&gt;
+    &lt;li class=&quot;tabOption&quot;&gt;
       &lt;h4&gt;选项3&lt;/h4&gt;
-      &lt;div class="tabContentBox"&gt;
-        3的具体内容&lt;br /&gt;&lt;a href="http://www.snowpeak.org" target="_blank"&gt;www.snowpeak.org&lt;/a&gt;
+      &lt;div class=&quot;tabContentBox&quot;&gt;
+        3的具体内容&lt;br /&gt;&lt;a href=&quot;http://www.snowpeak.org&quot; target=&quot;_blank&quot;&gt;www.snowpeak.org&lt;/a&gt;
       &lt;/div&gt;
     &lt;/li&gt;
-    &lt;li class="tabOption"&gt;
+    &lt;li class=&quot;tabOption&quot;&gt;
       &lt;h4&gt;选项4&lt;/h4&gt;
-      &lt;div class="tabContentBox"&gt;
-        4的具体内容&lt;br /&gt;&lt;a href="http://www.snowpeak.org" target="_blank"&gt;www.snowpeak.org&lt;/a&gt;
+      &lt;div class=&quot;tabContentBox&quot;&gt;
+        4的具体内容&lt;br /&gt;&lt;a href=&quot;http://www.snowpeak.org&quot; target=&quot;_blank&quot;&gt;www.snowpeak.org&lt;/a&gt;
       &lt;/div&gt;
     &lt;/li&gt;
   &lt;/ul&gt;

@@ -1,28 +1,53 @@
-# PHP 中 syntax error, unexpected $end 错误的一种原因及解决
+# PHP 中 `syntax error, unexpected $end` 错误的一种原因及解决
 
 发布时间: *2008-10-24 17:35:00*
 
-分类: __服务器端技术__
+分类: __后端技术__
 
 ---------
 
-## [PHP 中 syntax error, unexpected $end 错误的一种原因及解决](/cn/article/detail/a_solution_to_unexpected_end_in_php/)
+当 PHP 遇到 `syntax error, unexpected $end` 错误时，排查思路如下：
 
-分类: [服务器端技术](/cn/article/category/server_side_technology/) 2008-10-24 17:35:00 阅读(2355)
+1. 检查文件中 PHP 的开始标记 `<?php` 和结束标记 `?>` 是否配对。
+2. 额外注意注释中是否出现过 `?>`。
 
+错误示例：
+
+```plaintext
 Parse error: syntax error, unexpected $end in script.php on line xx
+```
 
-调试了一会后发现产生错误的行是文件中间某行
+调试后发现，错误的行位于文件中间某行：
 
+```php
+//$str .= "?>\n";
+```
 
-    //$str .= "?>/n";
+## 问题分析
 
-想起来了 PHP 解释器允许的结尾标记那行还可以用单行注释，即 //$str .= "?>/n"; 被解释成结尾标记前有注释，注释的内容是 //$str .= "，而 ?> 后面的 /n"; 会被解释作 PHP 块外的内容按 HTML 输出出去！结果是给 $str .= "?>/n"; 这行添加 // 成注释后，反而多了个 ?> 的结束标记，造成原来真正的结束标记成了意料之外的（unexpected）了。
+PHP 解释器允许在结束标记前使用单行注释。例如：
 
-解决办法就是直接删掉这一行即可。
+```php
+//$str .= "?>\n";
+```
 
-PHP 开始和结束标记所在行别写其它东西，是个好习惯。
+被解释为：
 
+- 结束标记前有注释，注释的内容是 `//$str .= "`。
+- 而 `?>` 后面的 `\n";` 会被解释为 PHP 块外的内容，并按 HTML 输出。
 
----
-*原文链接: https://www.snowpeak.fun/cn/article/detail/a_solution_to_unexpected_end_in_php/*
+结果是，给 `$str .= "?>\n";` 这行添加 `//` 成注释后，反而多了一个 `?>` 的结束标记，导致原来的真正结束标记变成了意料之外的（`unexpected`）。
+
+## 解决办法
+
+- 直接删除问题行：
+
+```php
+//$str .= "?>\n";
+```
+
+- 遵循良好的编码习惯：
+  - PHP 开始和结束标记所在行不要写其他内容。
+
+- 修改 `php.ini` 配置：
+  - 设置 `short_open_tag = On`。

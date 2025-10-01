@@ -6,10 +6,6 @@
 
 ---------
 
-## [JavaScript 压缩和格式化](/cn/article/detail/javascript_compressor_and_formatter/)
-
-分类: [客户端技术](/cn/article/category/client_side_technology/) 2008-12-30 14:00:00 阅读(2389)
-
 以前找到过压缩 Javascript 代码的程序，一直在用，感觉效果不错。
 
 <http://javascriptcompressor.com/>
@@ -27,10 +23,6 @@
 遇到特别大的 JS 文件时，浏览器会报耗时过长，选不停止，最终它能完成执行。
 
 这两套程序都是用纯 JavaScript 写的，可以下载下来离线使用，很方便。
-
-
-
-
 
 ---
 *原文链接: https://www.snowpeak.fun/cn/article/detail/javascript_compressor_and_formatter/*

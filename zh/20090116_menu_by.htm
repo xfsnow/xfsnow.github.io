@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="zh"><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"><title>雪峰博客</title><meta name="description" content="分享AI和云计算技术的最新动态与实践经验，以及其它有趣的话题。"><meta name="keywords" content="AI, GitHub Copilot, Azure云, 云计算, 前端技术, 后端技术, Web开发, 软件工程"><link rel="stylesheet" href="/assets/css/style.min.css"><link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.7.2/css/all.css"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/default.min.css"><script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/highlight.min.js"></script></head><body><nav class="navbar"><div class="nav-container"><div class="nav-logo"><h2><i class="fas fa-snowflake"></i> Snowpeak</h2></div><div class="nav-menu"><a href="/" class="nav-link">首页</a><a href="/zh/page_1.htm" class="nav-link">文章</a><a href="/#tools" class="nav-link">工具</a><a href="/zh/about.htm" class="nav-link">关于</a><a href="/en/" class="nav-link lang-switch"><i class="fas fa-globe"></i> English</a></div><div class="nav-toggle" id="mobile-menu"><span class="bar"></span><span class="bar"></span><span class="bar"></span></div></div></nav><header class="article-header"><div class="container"><h1>浮动层菜单</h1><div class="article-meta"><span><i class="fas fa-calendar"></i> 发布时间: 2009-01-16 16:49:00</span><span><i class="fas fa-clock"></i> 阅读约需: 22 分钟 </span><span><i class="fas fa-tag"></i> 分类: 软件工具</span></div></div></header><main class="article-container"><h2><a href="/cn/article/detail/menu_by_floating_layer/">浮动层菜单</a></h2><p>分类: <a href="/cn/article/category/client_side_technology/">客户端技术</a> 2009-01-16 16:49:00 阅读(2593)</p><p>最近做了一个通用的浮动层菜单替代函数，可以方便地把传统的 SELECT 单选菜单替换成时尚的浮动层菜单。</p><h3>源码</h3><h4>DivMenu.css</h4> <pre><code>a.divmenu, a.divmenu:hover  {
+<!DOCTYPE html><html lang="zh"><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"><title>雪峰博客</title><meta name="description" content="分享AI和云计算技术的最新动态与实践经验，以及其它有趣的话题。"><meta name="keywords" content="AI, GitHub Copilot, Azure云, 云计算, 前端技术, 后端技术, Web开发, 软件工程"><link rel="stylesheet" href="/assets/css/style.min.css"><link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.7.2/css/all.css"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/default.min.css"><script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/highlight.min.js"></script></head><body><nav class="navbar"><div class="nav-container"><div class="nav-logo"><h2><i class="fas fa-snowflake"></i> Snowpeak</h2></div><div class="nav-menu"><a href="/" class="nav-link">首页</a><a href="/zh/page_1.htm" class="nav-link">文章</a><a href="/#tools" class="nav-link">工具</a><a href="/zh/about.htm" class="nav-link">关于</a><a href="/en/" class="nav-link lang-switch"><i class="fas fa-globe"></i> English</a></div><div class="nav-toggle" id="mobile-menu"><span class="bar"></span><span class="bar"></span><span class="bar"></span></div></div></nav><header class="article-header"><div class="container"><h1>浮动层菜单</h1><div class="article-meta"><span><i class="fas fa-calendar"></i> 发布时间: 2009-01-16 16:49:00</span><span><i class="fas fa-clock"></i> 阅读约需: 22 分钟 </span><span><i class="fas fa-tag"></i> 分类: 前端技术</span></div></div></header><main class="article-container"><p>最近做了一个通用的通用浮动层菜单替代函数，可以方便地把传统的 SELECT 单选菜单替换成时尚的浮动层菜单。</p><h2>源码</h2><h3>DivMenu.css</h3> <pre><code class="language-css">a.divmenu, a.divmenu:hover  {
     padding: 1px 1px 1px 3px;
     border: 1px solid #9999CC;
     color:#000;
@@ -53,7 +53,7 @@ a.divmenu:hover span {
     display:block;
     background-color: #9cf;
 }
-</code></pre> <h4>DivMenu.js</h4> <pre><code>//因为替换出来的链接上要使用全局的事件处理函数，所以这个程序想用完全匿名函数还不太方便，先定义一个全局对象吧
+</code></pre> <h3>DivMenu.js</h3> <pre><code class="language-javascript">//因为替换出来的链接上要使用全局的事件处理函数，所以这个程序想用完全匿名函数还不太方便，先定义一个全局对象吧
 //先把一个简单的注册事件处理函数的对象封装在这里
 var DivMenu =
 {
@@ -66,7 +66,7 @@ var DivMenu =
         }
         else if (document.attachEvent)
         {
-            element.attachEvent("on" + eventType, handler);
+            element.attachEvent(&quot;on&quot; + eventType, handler);
         };
 
     },
@@ -80,50 +80,50 @@ var DivMenu =
             x += e.offsetLeft;
             y += e.offsetTop;
         }
-        return {"x": x, "y": y};
+        return {&quot;x&quot;: x, &quot;y&quot;: y};
     },
     //show 的这个参数是最初 SELECT 表单项的 id 如 city，而找位置要找替换 SELECT 的 a 元素 如 city_a，它显示出的菜单层则是 city_div
     show : function (sourceId)
     {
         var sourceobj = document.getElementById(sourceId+'_a');
-        var panelId = "divmenu_panel";
+        var panelId = &quot;divmenu_panel&quot;;
         var panel= document.getElementById(panelId);
         if (!panel)
         {
-            panel= document.createElement("div");
-            panel.className = "divmenu_panel";
+            panel= document.createElement(&quot;div&quot;);
+            panel.className = &quot;divmenu_panel&quot;;
             panel.id=panelId;
             document.body.appendChild(panel);
         }
         panel.innerHTML = document.getElementById(sourceId+'_div').innerHTML;
         //FF 中还得再加上位于层上时要显示此层，否则会在移到菜单层上时又隐藏了。到目前不需要 FF 中使用 contains 方法了，所以把前面页给 FF 定义的 contains 方法也注释掉。
-        //panel.setAttribute('onmouseover',"DivMenu.show('" + sourceId +"');");
+        //panel.setAttribute('onmouseover',&quot;DivMenu.show('&quot; + sourceId +&quot;');&quot;);
 
         //和发起元素左对齐
         var xy = this.getAbsPoint(sourceobj);
-        panel.style.left = xy.x + "px";
+        panel.style.left = xy.x + &quot;px&quot;;
         //纵向加发起元素的高度
-        panel.style.top = (xy.y + sourceobj.offsetHeight) + "px";
-        panel.style.display = "block";
-        if (navigator.appName == "Microsoft Internet Explorer")
+        panel.style.top = (xy.y + sourceobj.offsetHeight) + &quot;px&quot;;
+        panel.style.display = &quot;block&quot;;
+        if (navigator.appName == &quot;Microsoft Internet Explorer&quot;)
         {
             //为解决 IE6 下 SELECT 挡住 DIV 层的问题，加个 IFRAME 层
-            var iframeId = "divmenu_panel_iframe";
+            var iframeId = &quot;divmenu_panel_iframe&quot;;
             var iframe_dom = document.getElementById(iframeId);
             if(!iframe_dom) //不存在 自动生成 iframe
             {
-                var tmpIframeDom    = document.createElement("IFRAME");
+                var tmpIframeDom    = document.createElement(&quot;IFRAME&quot;);
                 tmpIframeDom.id     = iframeId;
                 document.body.appendChild(tmpIframeDom);
                 iframe_dom = document.getElementById(iframeId);
-                iframe_dom.src  = "about:blank";    //javascript:void(0);  about:blank
-                iframe_dom.style.position = "absolute";
-                iframe_dom.style.scrolling = "no";
+                iframe_dom.src  = &quot;about:blank&quot;;    //javascript:void(0);  about:blank
+                iframe_dom.style.position = &quot;absolute&quot;;
+                iframe_dom.style.scrolling = &quot;no&quot;;
                 iframe_dom.style.frameBorder = 0;
-                //iframe_dom.style.backgroundColor = "#ff0000"; //加个背景色只为调试用
+                //iframe_dom.style.backgroundColor = &quot;#ff0000&quot;; //加个背景色只为调试用
             }
-            //隐藏层的方式 hide() 会把此 IFRAME 设置成 display = "none"，所以每次显示菜单层时要再把 IFRAME 设置成 display = "block"。
-            iframe_dom.style.display = "block";
+            //隐藏层的方式 hide() 会把此 IFRAME 设置成 display = &quot;none&quot;，所以每次显示菜单层时要再把 IFRAME 设置成 display = &quot;block&quot;。
+            iframe_dom.style.display = &quot;block&quot;;
             //再定成和菜单层一样的宽和高及坐标
             iframe_dom.style.width = panel.offsetWidth;
             iframe_dom.style.height = panel.offsetHeight;
@@ -138,16 +138,16 @@ var DivMenu =
     {
         if (document.getElementById('divmenu_panel'))
         {
-            document.getElementById('divmenu_panel').style.display = "none";
+            document.getElementById('divmenu_panel').style.display = &quot;none&quot;;
         }
         //为解决 IE6 下 SELECT 挡住 DIV 层的问题，加个 IFRAME 层，隐藏菜单时还得把这个 IFRAME 也隐藏了
-        if (navigator.appName == "Microsoft Internet Explorer")
+        if (navigator.appName == &quot;Microsoft Internet Explorer&quot;)
         {
-            var iframeId = "divmenu_panel_iframe";
+            var iframeId = &quot;divmenu_panel_iframe&quot;;
             var iframe_dom = document.getElementById(iframeId);
             if(iframe_dom)  //确实存在时再隐藏
             {
-                iframe_dom.style.display = "none";
+                iframe_dom.style.display = &quot;none&quot;;
             }
         }
     },
@@ -157,10 +157,10 @@ var DivMenu =
         var formitem = document.getElementById(itemid);
         formitem.value = val;
         var nodeHint = document.getElementById(itemid+'_a');
-        //一个 a 元素形如 &lt;a id="purpose_a" class="divmenu" href='javascript:DivMenu.show("purpose")'&gt;&lt;span style="width: 6em;" class="menuhint"&gt;写字楼&lt;/span&gt;&lt;span&gt;▼&lt;input type="hidden" id="purpose" name="purpose" class="" value=""/&gt;&lt;/span&gt;&lt;/a&gt;，替换显示文字是把 a 的第1个子节点的文本换了，所以是
-        var nodeHint = nodeHint.firstChild; //取第1子节点，这时 nodeHint 是 &lt;span style="width: 6em;" class="menuhint"&gt;写字楼&lt;/span&gt; 了
+        //一个 a 元素形如 &lt;a id=&quot;purpose_a&quot; class=&quot;divmenu&quot; href='javascript:DivMenu.show(&quot;purpose&quot;)'&gt;&lt;span style=&quot;width: 6em;&quot; class=&quot;menuhint&quot;&gt;写字楼&lt;/span&gt;&lt;span&gt;▼&lt;input type=&quot;hidden&quot; id=&quot;purpose&quot; name=&quot;purpose&quot; class=&quot;&quot; value=&quot;&quot;/&gt;&lt;/span&gt;&lt;/a&gt;，替换显示文字是把 a 的第1个子节点的文本换了，所以是
+        var nodeHint = nodeHint.firstChild; //取第1子节点，这时 nodeHint 是 &lt;span style=&quot;width: 6em;&quot; class=&quot;menuhint&quot;&gt;写字楼&lt;/span&gt; 了
         var newHint = document.createTextNode(hint);    //用新的显示文字创建文本节点
-        nodeHint.replaceChild(newHint, nodeHint.firstChild);    //用 nodeHint 替换掉它的第1子节点，即“写字楼”这个文本节点
+        nodeHint.replaceChild(newHint, nodeHint.firstChild);    //用 nodeHint 替换掉它的第1子节点，即&quot;写字楼&quot;这个文本节点
     },
     //计算字符串的字节长度
     byteLength : function (s)
@@ -182,7 +182,7 @@ var DivMenu =
         for (var i=0; i&lt;arrMenu.length; i++)
         {
             //只把单选菜单替换，所以找那些是单选的菜单
-            //http://alex.zybar.net/javascript/IE/IE 确实不支持 hasAttribute() 和 hasAttributes() 这2个 DOM Level 2 的方法，可以用 attributes.length &gt; 0 替代 hasAttributes(), getAttribute(attrName) != null 替代 hasAttribute(attrName)。但是对于 multiple 这样没有值的属性，它不存在时 FF 返回的是 null 而 IE 返回的是 false，（它存在时 FF 返回空字符串，IE 返回 true）只好再凑合一下，还得用严格等于===，否则还不灵。对于 multiple 或 multiple="multiple" 都可行
+            //http://alex.zybar.net/javascript/IE/IE 确实不支持 hasAttribute() 和 hasAttributes() 这2个 DOM Level 2 的方法，可以用 attributes.length &gt; 0 替代 hasAttributes(), getAttribute(attrName) != null 替代 hasAttribute(attrName)。但是对于 multiple 这样没有值的属性，它不存在时 FF 返回的是 null 而 IE 返回的是 false，（它存在时 FF 返回空字符串，IE 返回 true）只好再凑合一下，还得用严格等于===，否则还不灵。对于 multiple 或 multiple=&quot;multiple&quot; 都可行
             var getMultiple = arrMenu[i].getAttribute('multiple');
             if ((null === getMultiple) || (false === getMultiple))
             {
@@ -261,11 +261,11 @@ var DivMenu =
                 {
                     if ('OPTGROUP' == objOptions[n].type)
                     {
-                        str += '&lt;div class="divmenu_group"&gt;'+objOptions[n].hint+'&lt;/div&gt;';
+                        str += '&lt;div class=&quot;divmenu_group&quot;&gt;'+objOptions[n].hint+'&lt;/div&gt;';
                     }
                     else if('OPTION' == objOptions[n].type)
                     {
-                        str += '&lt;a href="javascript:DivMenu.setInput("'+menuName+'", "'+objOptions[n].hint+'", "'+objOptions[n].value+'")"&gt;'+objOptions[n].hint+'&lt;/a&gt;';
+                        str += '&lt;a href=&quot;javascript:DivMenu.setInput(&quot;'+menuName+'&quot;, &quot;'+objOptions[n].hint+'&quot;, &quot;'+objOptions[n].value+'&quot;)&quot;&gt;'+objOptions[n].hint+'&lt;/a&gt;';
                     }
                     //找出显示文字中最长的字符串，来定 a 的宽度。JavaScript 数字符数时一个中文算1个字符，但是中文宽度比西文宽度大得多，所以通过数字数来定宽度不好。试直接比较 a 和创建的菜单层的宽度，二者取大值即可。但直接获取 ComputedStyle 也不灵，这些菜单 div 都是隐藏和绝对定位的，它的宽度IE 中ComputedStyle返回的是 auto，而 FF 返回的是整个窗口的宽度。但实际上，除了等宽型字体，每个西文字符的宽度也不一样，所以很难通过字符数来确定其宽度，传统 SELECT 是浏览器取到所有 option 的文字后解析并呈现的，而现在替换它成为 a 和 div 两个元素，确实有些麻烦。现在采用的是比较保险的做法，算出最大字符数 strLength ，然后设 width:'+strLength*0.6+'em，其中 0.6 只是经验系数，直接 width:'+strLength+'em过于宽了，再按 60% 缩小。
                     var thisLength = DivMenu.byteLength(objOptions[n].hint);
@@ -278,11 +278,12 @@ var DivMenu =
                 document.body.appendChild(nodeDiv);
 
                 //做替代 select 的 a 节点，并把它存在替换数组里，将用这个包括隐藏 input 的 a 替换掉原有的 select 节点
+                //做替代 select 的 a 节点，并把它存在替换数组里，将用这个包括隐藏 input 的 a 替换掉原有的 select 节点
                 var nodeHint = document.createElement('a');
                 nodeHint.id=menuName+'_a';
                 nodeHint.className='divmenu';
-                nodeHint.setAttribute('href', 'javascript:DivMenu.show("'+menuName+'")');
-                str = '&lt;span class="menuhint" style="width:'+strLength*0.6+'em"&gt;'+strHint+'&lt;/span&gt;&lt;span class="menuarrow"&gt;▼&lt;input type="hidden" name="'+menuName+'" id="'+menuName+'"'+((null == valSelected)? '':' value="'+valSelected+'"')+'&gt;&lt;/span&gt;';
+                nodeHint.setAttribute('href', 'javascript:DivMenu.show(&quot;'+menuName+'&quot;)');
+                str = '&lt;span class=&quot;menuhint&quot; style=&quot;width:'+strLength*0.6+'em&quot;&gt;'+strHint+'&lt;/span&gt;&lt;span class=&quot;menuarrow&quot;&gt;▼&lt;input type=&quot;hidden&quot; name=&quot;'+menuName+'&quot; id=&quot;'+menuName+'&quot;'+((null == valSelected)? '':' value=&quot;'+valSelected+'&quot;')+'&gt;&lt;/span&gt;';
                 nodeHint.innerHTML = str;
                 //先把新旧节点存在对象数组里，以备后面统一替换
                 var menuthis = {'node':arrMenu[i],'nodeNew':nodeHint};
@@ -300,13 +301,13 @@ var DivMenu =
 DivMenu.add(window, 'load', DivMenu.menuTransform);
 //传统菜单在点开时是占住焦点的，再在文档空白处点击一下才会收起菜单，所以完全重现传统菜单的使用习惯，也点一下文档再隐藏菜单
 DivMenu.add(document, 'click', DivMenu.hide);
-</code></pre> <h4>DivMenu.htm</h4> <pre><code>&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"&gt;
-&lt;html xmlns="http://www.w3.org/1999/xhtml"&gt;
+</code></pre> <h3>DivMenu.htm</h3> <pre><code class="language-html">&lt;!DOCTYPE html PUBLIC &quot;-//W3C//DTD XHTML 1.0 Strict//EN&quot; &quot;http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd&quot;&gt;
+&lt;html xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt;
 &lt;head&gt;
-&lt;meta http-equiv="Content-Type" content="text/html; charset=gb2312" /&gt;
+&lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=gb2312&quot; /&gt;
 &lt;title&gt;浮动层菜单&lt;/title&gt;
-&lt;script type="text/javascript" src="DivMenu.js"&gt;&lt;/script&gt;
-&lt;link href="DivMenu.css" rel="stylesheet" type="text/css" /&gt;
+&lt;script type=&quot;text/javascript&quot; src=&quot;DivMenu.js&quot;&gt;&lt;/script&gt;
+&lt;link href=&quot;DivMenu.css&quot; rel=&quot;stylesheet&quot; type=&quot;text/css&quot; /&gt;
 &lt;/head&gt;
 
 &lt;body&gt;
@@ -314,77 +315,77 @@ DivMenu.add(document, 'click', DivMenu.hide);
 &lt;p&gt;这是一个通用的浮动层菜单替代函数，可以方便地把传统的 SELECT 单选菜单替换成时尚的浮动层菜单。&lt;/p&gt;
 &lt;h3&gt;使用说明&lt;/h3&gt;
 &lt;p&gt;即仅需把附件中的 JS 文件和 CSS 文件引用到网页里，如：&lt;/p&gt;
-&lt;pre&gt;&lt;script type="text/javascript" src="DivMenu.js"&gt;&lt;/script&gt;
-&lt;link href="DivMenu.css" rel="stylesheet" type="text/css" /&gt; &lt;/pre&gt;
-&lt;h4&gt;&lt;a href="DivMenu.zip"&gt;下载源码打包&lt;/a&gt;&lt;/h4&gt;
+&lt;pre&gt;&lt;script type=&quot;text/javascript&quot; src=&quot;DivMenu.js&quot;&gt;&lt;/script&gt;
+&lt;link href=&quot;DivMenu.css&quot; rel=&quot;stylesheet&quot; type=&quot;text/css&quot; /&gt; &lt;/pre&gt;
+&lt;h4&gt;&lt;a href=&quot;DivMenu.zip&quot;&gt;下载源码打包&lt;/a&gt;&lt;/h4&gt;
 &lt;p&gt;其中 DivMenu.js 是经 Javascript compressor 压缩的精简版本，供生成实际使用。DivMenu_develop.js 是带详细注释的开发版，供学习研究。使用时可以参考 DivMenu.css 文件中的注释，自行修改样式定义。&lt;/p&gt;
-&lt;p&gt;JavaScript 程序已经实现免打扰（unobtrusive），即引用此 JS 文件的 HTML 文件无需任何其它调整。但还未实现完全匿名（anonymous），意思是此程序仍然创建了全局变量和若干网页节点，已经尽量做到少增加全局变量和节点，但使用时仍请注意变量命名冲突。此程序仅增加一个全局变量“DivMenu”，增加的网页节点比较多，对应替换掉的每个 SELECT 节点增加两个节点，名字分别是 SELECT 节点的 name 值加“_a”后缀和“_div”后缀，例如原有某 SELECT 节点的名字是“menu”，则新增的两个节点名字是“menu_a”和“menu_div”。&lt;/p&gt;
+&lt;p&gt;JavaScript 程序已经实现免打扰（unobtrusive），即引用此 JS 文件的 HTML 文件无需任何其它调整。但还未实现完全匿名（anonymous），意思是此程序仍然创建了全局变量和若干网页节点，已经尽量做到少增加全局变量和节点，但使用时仍请注意变量命名冲突。此程序仅增加一个全局变量&quot;DivMenu&quot;，增加的网页节点比较多，对应替换掉的每个 SELECT 节点增加两个节点，名字分别是 SELECT 节点的 name 值加&quot;_a&quot;后缀和&quot;_div&quot;后缀，例如原有某 SELECT 节点的名字是&quot;menu&quot;，则新增的两个节点名字是&quot;menu_a&quot;和&quot;menu_div&quot;。&lt;/p&gt;
 &lt;h3&gt;功能说明&lt;/h3&gt;
-&lt;form id="classic" method="post" action=""&gt;
+&lt;form id=&quot;classic&quot; method=&quot;post&quot; action=&quot;&quot;&gt;
   &lt;div&gt; 城市
-    &lt;select name="city"&gt;
-        &lt;option disabled="disabled"&gt;请选择城市&lt;/option&gt;
-        &lt;option value="beijing"&gt;北京&lt;/option&gt;
-        &lt;option value="tianjin"&gt;天津&lt;/option&gt;
-        &lt;optgroup label="河北省"&gt;
-        &lt;option value="shijiazhuang"&gt;石家庄&lt;/option&gt;
-        &lt;option value="tangshan"&gt;唐山&lt;/option&gt;
+    &lt;select name=&quot;city&quot;&gt;
+        &lt;option disabled=&quot;disabled&quot;&gt;请选择城市&lt;/option&gt;
+        &lt;option value=&quot;beijing&quot;&gt;北京&lt;/option&gt;
+        &lt;option value=&quot;tianjin&quot;&gt;天津&lt;/option&gt;
+        &lt;optgroup label=&quot;河北省&quot;&gt;
+        &lt;option value=&quot;shijiazhuang&quot;&gt;石家庄&lt;/option&gt;
+        &lt;option value=&quot;tangshan&quot;&gt;唐山&lt;/option&gt;
         &lt;/optgroup&gt;
-        &lt;optgroup label="浙江省"&gt;
-        &lt;option value="suzhou"&gt;苏州&lt;/option&gt;
-        &lt;option value="hangzhou"&gt;杭州&lt;/option&gt;
-        &lt;option value="ningbo"&gt;宁波&lt;/option&gt;
+        &lt;optgroup label=&quot;浙江省&quot;&gt;
+        &lt;option value=&quot;suzhou&quot;&gt;苏州&lt;/option&gt;
+        &lt;option value=&quot;hangzhou&quot;&gt;杭州&lt;/option&gt;
+        &lt;option value=&quot;ningbo&quot;&gt;宁波&lt;/option&gt;
         &lt;/optgroup&gt;
-      &lt;/select&gt;
+    &lt;/select&gt;
     类型
-    &lt;select name="purpose"&gt;
+    &lt;select name=&quot;purpose&quot;&gt;
       &lt;option&gt;请选择类型&lt;/option&gt;
-      &lt;option value="house" selected="selected" &gt;住宅&lt;/option&gt;
-      &lt;option value="economic"&gt;经济适用房&lt;/option&gt;
-      &lt;option value="villa"&gt;别墅&lt;/option&gt;
-      &lt;option value="building"&gt;写字楼&lt;/option&gt;
-      &lt;option value="shop"&gt;商铺&lt;/option&gt;
+      &lt;option value=&quot;house&quot; selected=&quot;selected&quot; &gt;住宅&lt;/option&gt;
+      &lt;option value=&quot;economic&quot;&gt;经济适用房&lt;/option&gt;
+      &lt;option value=&quot;villa&quot;&gt;别墅&lt;/option&gt;
+      &lt;option value=&quot;building&quot;&gt;写字楼&lt;/option&gt;
+      &lt;option value=&quot;shop&quot;&gt;商铺&lt;/option&gt;
     &lt;/select&gt;
     价格
-    &lt;select name="price"&gt;
-      &lt;option selected="selected" disabled="disabled"&gt;请选择价格&lt;/option&gt;
-      &lt;option value="0-1000"&gt;零到1000&lt;/option&gt;
-      &lt;option value="1000-2000"&gt;1000-2000&lt;/option&gt;
-      &lt;option value="2000-3000"&gt;2000-3000&lt;/option&gt;
-      &lt;option value="3000-4000"&gt;3000-4000&lt;/option&gt;
-      &lt;option value="4000-5000"&gt;4000-5000&lt;/option&gt;
-      &lt;option value="5000-6000"&gt;5000-6000&lt;/option&gt;
-      &lt;option value="6000-7000"&gt;6000-7000&lt;/option&gt;
-      &lt;option value="7000-8000"&gt;7000-8000&lt;/option&gt;
-      &lt;option value="8000-9000"&gt;8000-9000&lt;/option&gt;
-      &lt;option value="9000-10000"&gt;9000-10000&lt;/option&gt;
-      &lt;option value="" selected="selected"&gt;不限&lt;/option&gt;
+    &lt;select name=&quot;price&quot;&gt;
+      &lt;option selected=&quot;selected&quot; disabled=&quot;disabled&quot;&gt;请选择价格&lt;/option&gt;
+      &lt;option value=&quot;0-1000&quot;&gt;零到1000&lt;/option&gt;
+      &lt;option value=&quot;1000-2000&quot;&gt;1000-2000&lt;/option&gt;
+      &lt;option value=&quot;2000-3000&quot;&gt;2000-3000&lt;/option&gt;
+      &lt;option value=&quot;3000-4000&quot;&gt;3000-4000&lt;/option&gt;
+      &lt;option value=&quot;4000-5000&quot;&gt;4000-5000&lt;/option&gt;
+      &lt;option value=&quot;5000-6000&quot;&gt;5000-6000&lt;/option&gt;
+      &lt;option value=&quot;6000-7000&quot;&gt;6000-7000&lt;/option&gt;
+      &lt;option value=&quot;7000-8000&quot;&gt;7000-8000&lt;/option&gt;
+      &lt;option value=&quot;8000-9000&quot;&gt;8000-9000&lt;/option&gt;
+      &lt;option value=&quot;9000-10000&quot;&gt;9000-10000&lt;/option&gt;
+      &lt;option value=&quot;&quot; selected=&quot;selected&quot;&gt;不限&lt;/option&gt;
     &lt;/select&gt;
-    &lt;select name="nohint"&gt;
-      &lt;option value="0"&gt;零&lt;/option&gt;
-      &lt;option value="1000-2000"&gt;1000-2000&lt;/option&gt;
-      &lt;option value="2000-3000"&gt;2000-3000&lt;/option&gt;
-      &lt;option value="3000-4000"&gt;3000-4000&lt;/option&gt;
-      &lt;option value="4000-5000"&gt;4000-5000&lt;/option&gt;
-      &lt;option value="5000-6000"&gt;5000-6000&lt;/option&gt;
-      &lt;option value="6000-7000"&gt;6000-7000&lt;/option&gt;
-      &lt;option value="7000-8000"&gt;7000-8000&lt;/option&gt;
-      &lt;option value="8000-9000"&gt;8000-9000&lt;/option&gt;
-      &lt;option value="9000-10000"&gt;9000-10000&lt;/option&gt;
-      &lt;option value="10000-11000"&gt;10000-11000&lt;/option&gt;
+    &lt;select name=&quot;nohint&quot;&gt;
+      &lt;option value=&quot;0&quot;&gt;零&lt;/option&gt;
+      &lt;option value=&quot;1000-2000&quot;&gt;1000-2000&lt;/option&gt;
+      &lt;option value=&quot;2000-3000&quot;&gt;2000-3000&lt;/option&gt;
+      &lt;option value=&quot;3000-4000&quot;&gt;3000-4000&lt;/option&gt;
+      &lt;option value=&quot;4000-5000&quot;&gt;4000-5000&lt;/option&gt;
+      &lt;option value=&quot;5000-6000&quot;&gt;5000-6000&lt;/option&gt;
+      &lt;option value=&quot;6000-7000&quot;&gt;6000-7000&lt;/option&gt;
+      &lt;option value=&quot;7000-8000&quot;&gt;7000-8000&lt;/option&gt;
+      &lt;option value=&quot;8000-9000&quot;&gt;8000-9000&lt;/option&gt;
+      &lt;option value=&quot;9000-10000&quot;&gt;9000-10000&lt;/option&gt;
+      &lt;option value=&quot;10000-11000&quot;&gt;10000-11000&lt;/option&gt;
     &lt;/select&gt;
-    多选菜单不转换，多选菜单中的提示文字只能用 disabled="disabled" 来实现了。
-    &lt;select name="multi" multiple="multiple"&gt;
-      &lt;option disabled="disabled"&gt;若要选择多个，请住 Ctrl 键再选择&lt;/option&gt;
-      &lt;option value="house"&gt;多选1&lt;/option&gt;
-      &lt;option value="economic"&gt;多选2&lt;/option&gt;
-      &lt;option value="villa"&gt;多选3&lt;/option&gt;
-      &lt;option value="building"&gt;多选4&lt;/option&gt;
-      &lt;option value="shop"&gt;多选5&lt;/option&gt;
+    多选菜单不转换，多选菜单中的提示文字只能用 disabled=&quot;disabled&quot; 来实现了。
+    &lt;select name=&quot;multi&quot; multiple=&quot;multiple&quot;&gt;
+      &lt;option disabled=&quot;disabled&quot;&gt;若要选择多个，请住 Ctrl 键再选择&lt;/option&gt;
+      &lt;option value=&quot;house&quot;&gt;多选1&lt;/option&gt;
+      &lt;option value=&quot;economic&quot;&gt;多选2&lt;/option&gt;
+      &lt;option value=&quot;villa&quot;&gt;多选3&lt;/option&gt;
+      &lt;option value=&quot;building&quot;&gt;多选4&lt;/option&gt;
+      &lt;option value=&quot;shop&quot;&gt;多选5&lt;/option&gt;
     &lt;/select&gt;
     放一个多选菜单，用来演示多选菜单不会被替换，以及在 IE6 中浮动层可以正常显示在其它 SELECT 以上了。 &lt;/div&gt;
 &lt;/form&gt;
-以上是个实用的范例，几组经典的 SELECT 选择菜单，第一个是复杂带分组的，提示文字用  disabled="disabled" 的第一个 option 实现，后一个是简单的，提示文字用的是没有 value 属性的那个 option。实践发现 FF 可以正常处理 disabled="disabled" 或者仅 disabled 的 option，让它可以不可选的状态，而 IE 则无视任何disabled="disabled" 和 disabled，所以估计通常 IE 里的菜单想用提示文字都会用没有 value 属性或者 value=""的那个 option。可以看它的源码就是原来的 SELECT，不需要任何改动。
+以上是个实用的范例，几组经典的 SELECT 选择菜单，第一个是复杂带分组的，提示文字用  disabled=&quot;disabled&quot; 的第一个 option 实现，后一个是简单的，提示文字用的是没有 value 属性的那个 option。实践发现 FF 可以正常处理 disabled=&quot;disabled&quot; 或者仅 disabled 的 option，让它可以不可选的状态，而 IE 则无视任何disabled=&quot;disabled&quot; 和 disabled，所以估计通常 IE 里的菜单想用提示文字都会用没有 value 属性或者 value=&quot;&quot;的那个 option。可以看它的源码就是原来的 SELECT，不需要任何改动。
 &lt;p&gt;基本思路是把文档中原有的 SELECT 菜单转换成隐藏型的 INPUT 表单项，用 A 元素来做菜单的提示文字条和选项条，用 DIV 层做菜单，各个选项也用 A 元素来替代，点击时把值赋给隐藏型的 INPUT 表单项。&lt;/p&gt;
 &lt;p&gt;主要功能或限制包括：&lt;/p&gt;
 &lt;ol&gt;
@@ -399,4 +400,6 @@ DivMenu.add(document, 'click', DivMenu.hide);
 &lt;p&gt;欢迎试用，并提出意见建议，共用探讨改进。&lt;/p&gt;
 &lt;/body&gt;
 &lt;/html&gt;
-</code></pre> <h3>使用说明</h3><p>即仅需把上述的 JS 文件和 CSS 文件引用到网页里，如：</p><script type="text/javascript" src="DivMenu.js"></script><p><link href="DivMenu.css" rel="stylesheet" type="text/css"></p><p>其中 DivMenu.js 是经 Javascript compressor 压缩的精简版本，供生成实际使用。DivMenu_develop.js 是带详细注释的开发版，供学习研究。使用时可以参考 DivMenu.css 文件中的注释，自行修改样式定义。</p><p>JavaScript 程序已经实现免打扰（unobtrusive），即引用此 JS 文件的 HTML 文件无需任何其它调整。但还未实现完全匿名（anonymous），意思是此程序仍然创建了全局变量和若干网页节点，已经尽量做到少增加全局变量和节点，但使用时仍请注意变量命名冲突。此程序仅增加一个全局变量“DivMenu”，增加的网页节点比较多，对应替换掉的每个 SELECT 节点增加两个节点，名字分别是 SELECT 节点的 name 值加“_a”后缀和“_div”后缀，例如原有某 SELECT 节点的名字是“menu”，则新增的两个节点名字是“menu_a”和“menu_div”。</p><h3>功能说明</h3><p>基本思路是把文档中原有的 SELECT 菜单转换成隐藏型的 INPUT 表单项，用 A 元素来做菜单的提示文字条和选项条，用 DIV 层做菜单，各个选项也用 A 元素来替代，点击时把值赋给隐藏型的 INPUT 表单项。</p><p>主要功能或限制包括：</p><p>1. 所有使用习惯遵循传统的 SELECT 菜单。</p><p>2. 只有单选的 SELECT 菜单会被替换，多选菜单维持不变，因为通常多选菜单也不用浮动层菜单来替代。</p><p>3. 支持各种 SELECT 元素的特性，如把 disabled 的或者没有 value 的 option 作为提示文字条；用 optgroup 分组的选项也会在新菜单中分组。并且专门针对 IE 6 中 SELECT 挡住 DIV 层的 BUG 进行了修正。</p><p>4. 支持默认选中项。</p><p>5. 几乎支持普通菜单的所有功能，但是不支持额外的交互功能，如 JavaScript 实时创建的 Option 选项、联动选项等，比如选一个城市区县会相应变化这类的功能是不支持的。</p><p>6. 全部样式都用 CSS 定义，字号使用相对大小，无需改动即可适应多数网页。</p><p>7. 菜单位置和尺寸均设置成灵活的，可适应任意的网页排版和布局。做的时候考虑的是要能在替代的 A 元素中显示时，放得下最宽的选项文字，因而没有直接取原有 SELECT 框的宽度。因此菜单尺寸可能比原有的 SELECT 宽，使用时请注意。</p><hr><p><em>原文链接: https://www.snowpeak.fun/cn/article/detail/menu_by_floating_layer/</em></p></main><footer class="footer"><div class="container"><div class="footer-content"><div class="footer-section"><h3><i class="fas fa-snowflake"></i> Snowpeak</h3><p>分享AI和云计算技术的最新动态与实践经验，以及其它有趣的话题。</p><div class="social-links"><div class="social-platforms"><a href="https://github.com/xfsnow" target="_blank" class="social-link"><i class="fab fa-github"></i></a><a href="https://snowpeak.blog.csdn.net/" target="_blank" class="social-link"><i class="fas fa-blog"></i></a><a href="https://space.bilibili.com/701839928" target="_blank" class="social-link"><i class="fab fa-bilibili"></i></a><a href="https://www.linkedin.com/in/snowpeak" target="_blank" class="social-link"><i class="fab fa-linkedin"></i></a></div><div class="wechat-section"><div class="wechat-info"><span class="wechat-label">微信公众号</span><span class="wechat-name">技术温暖生活</span></div><img src="/assets/img/techwarm.jpg" alt="技术温暖生活" class="wechat-qr"></div></div></div><div class="footer-section"><h4>快速链接</h4><ul><li><a href="/#articles">文章</a></li><li><a href="/#tools">工具</a></li><li><a href="https://docs.github.com/en/pages" target="_blank">GitHub Pages</a></li></ul></div><div class="footer-section"><h4>技术栈</h4><ul><li>Python</li><li>GitHub Copilot</li><li>Claude Sonnet 4</li><li>HTML/CSS/JS</li><li>响应式设计</li></ul></div></div><div class="footer-bottom"><p>Copyright &copy; 2013-<script>document.write((new Date()).getFullYear());</script> 雪峰博客。运行在 GitHub Pages 上。 <a href="https://beian.miit.gov.cn" target="_blank" class="icp_beian">京ICP备2021007720号</a><a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=11010502052523" target="_blank" class="gongan_beian">京公网安备11010502052523号</a></p></div></div></footer><script src="/zh/index.js"></script><script src="/assets/js/blog.min.js"></script><script>hljs.highlightAll();</script></body></html>
+</code></pre> <h2>使用说明</h2><p>即仅需把上述的 JS 文件和 CSS 文件引用到网页里，如：</p> <pre><code class="language-html">&lt;script type=&quot;text/javascript&quot; src=&quot;DivMenu.js&quot;&gt;&lt;/script&gt;
+&lt;link href=&quot;DivMenu.css&quot; rel=&quot;stylesheet&quot; type=&quot;text/css&quot; /&gt;
+</code></pre> <p>其中 DivMenu.js 是经 Javascript compressor 压缩的精简版本，供生成实际使用。DivMenu_develop.js 是带详细注释的开发版，供学习研究。使用时可以参考 DivMenu.css 文件中的注释，自行修改样式定义。</p><p>JavaScript 程序已经实现免打扰（unobtrusive），即引用此 JS 文件的 HTML 文件无需任何其它调整。但还未实现完全匿名（anonymous），意思是此程序仍然创建了全局变量和若干网页节点，已经尽量做到少增加全局变量和节点，但使用时仍请注意变量命名冲突。此程序仅增加一个全局变量"DivMenu"，增加的网页节点比较多，对应替换掉的每个 SELECT 节点增加两个节点，名字分别是 SELECT 节点的 name 值加"_a"后缀和"_div"后缀，例如原有某 SELECT 节点的名字是"menu"，则新增的两个节点名字是"menu_a"和"menu_div"。</p><h2>功能说明</h2><p>基本思路是把文档中原有的 SELECT 菜单转换成隐藏型的 INPUT 表单项，用 A 元素来做菜单的提示文字条和选项条，用 DIV 层做菜单，各个选项也用 A 元素来替代，点击时把值赋给隐藏型的 INPUT 表单项。</p><p>主要功能或限制包括：</p><ol><li><p>所有使用习惯遵循传统的 SELECT 菜单。</p></li><li><p>只有单选的 SELECT 菜单会被替换，多选菜单维持不变，因为通常多选菜单也不用浮动层菜单来替代。</p></li><li><p>支持各种 SELECT 元素的特性，如把 disabled 的或者没有 value 的 option 作为提示文字条；用 optgroup 分组的选项也会在新菜单中分组。并且专门针对 IE 6 中 SELECT 挡住 DIV 层的 BUG 进行了修正。</p></li><li><p>支持默认选中项。</p></li><li><p>几乎支持普通菜单的所有功能，但是不支持额外的交互功能，如 JavaScript 实时创建的 Option 选项、联动选项等，比如选一个城市区县会相应变化这类的功能是不支持的。</p></li><li><p>全部样式都用 CSS 定义，字号使用相对大小，无需改动即可适应多数网页。</p></li><li><p>菜单位置和尺寸均设置成灵活的，可适应任意的网页排版和布局。做的时候考虑的是要能在替代的 A 元素中显示时，放得下最宽的选项文字，因而没有直接取原有 SELECT 框的宽度。因此菜单尺寸可能比原有的 SELECT 宽，使用时请注意。</p></li></ol><hr><p><em>原文链接: https://www.snowpeak.fun/cn/article/detail/menu_by_floating_layer/</em></p></main><footer class="footer"><div class="container"><div class="footer-content"><div class="footer-section"><h3><i class="fas fa-snowflake"></i> Snowpeak</h3><p>分享AI和云计算技术的最新动态与实践经验，以及其它有趣的话题。</p><div class="social-links"><div class="social-platforms"><a href="https://github.com/xfsnow" target="_blank" class="social-link"><i class="fab fa-github"></i></a><a href="https://snowpeak.blog.csdn.net/" target="_blank" class="social-link"><i class="fas fa-blog"></i></a><a href="https://space.bilibili.com/701839928" target="_blank" class="social-link"><i class="fab fa-bilibili"></i></a><a href="https://www.linkedin.com/in/snowpeak" target="_blank" class="social-link"><i class="fab fa-linkedin"></i></a></div><div class="wechat-section"><div class="wechat-info"><span class="wechat-label">微信公众号</span><span class="wechat-name">技术温暖生活</span></div><img src="/assets/img/techwarm.jpg" alt="技术温暖生活" class="wechat-qr"></div></div></div><div class="footer-section"><h4>快速链接</h4><ul><li><a href="/#articles">文章</a></li><li><a href="/#tools">工具</a></li><li><a href="https://docs.github.com/en/pages" target="_blank">GitHub Pages</a></li></ul></div><div class="footer-section"><h4>技术栈</h4><ul><li>Python</li><li>GitHub Copilot</li><li>Claude Sonnet 4</li><li>HTML/CSS/JS</li><li>响应式设计</li></ul></div></div><div class="footer-bottom"><p>Copyright &copy; 2013-<script>document.write((new Date()).getFullYear());</script> 雪峰博客。运行在 GitHub Pages 上。 <a href="https://beian.miit.gov.cn" target="_blank" class="icp_beian">京ICP备2021007720号</a><a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=11010502052523" target="_blank" class="gongan_beian">京公网安备11010502052523号</a></p></div></div></footer><script src="/zh/index.js"></script><script src="/assets/js/blog.min.js"></script><script>hljs.highlightAll();</script></body></html>

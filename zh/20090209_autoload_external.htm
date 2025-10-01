@@ -1,27 +1,27 @@
-<!DOCTYPE html><html lang="zh"><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"><title>雪峰博客</title><meta name="description" content="分享AI和云计算技术的最新动态与实践经验，以及其它有趣的话题。"><meta name="keywords" content="AI, GitHub Copilot, Azure云, 云计算, 前端技术, 后端技术, Web开发, 软件工程"><link rel="stylesheet" href="/assets/css/style.min.css"><link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.7.2/css/all.css"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/default.min.css"><script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/highlight.min.js"></script></head><body><nav class="navbar"><div class="nav-container"><div class="nav-logo"><h2><i class="fas fa-snowflake"></i> Snowpeak</h2></div><div class="nav-menu"><a href="/" class="nav-link">首页</a><a href="/zh/page_1.htm" class="nav-link">文章</a><a href="/#tools" class="nav-link">工具</a><a href="/zh/about.htm" class="nav-link">关于</a><a href="/en/" class="nav-link lang-switch"><i class="fas fa-globe"></i> English</a></div><div class="nav-toggle" id="mobile-menu"><span class="bar"></span><span class="bar"></span><span class="bar"></span></div></div></nav><header class="article-header"><div class="container"><h1>自动加载外部 JavaScript 文件</h1><div class="article-meta"><span><i class="fas fa-calendar"></i> 发布时间: 2009-02-09 17:29:00</span><span><i class="fas fa-clock"></i> 阅读约需: 2 分钟 </span><span><i class="fas fa-tag"></i> 分类: 软件工具</span></div></div></header><main class="article-container"><h2><a href="/cn/article/detail/autoload_external_javascript_files/">自动加载外部 JavaScript 文件</a></h2><p>分类: <a href="/cn/article/category/client_side_technology/">客户端技术</a> 2009-02-09 17:29:00 阅读(2486)</p><p>虽说标题叫《自动加载外部 JavaScript 文件》，其实还未达到 PHP 那样在程序中只要遇到新的类名就自动加载类定义文件的程度，还需要指定文件名才能加载外部 JavaScript 文件，但是这对 JavaScript 应该已经够了。如果外部 JavaScript 文件比较多时，用这个还是比较方便的。详细说明用使用方法请见源码中的注释。</p> <pre><code>/* Copyright 2009 Snowpeak.org
+<!DOCTYPE html><html lang="zh"><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"><title>雪峰博客</title><meta name="description" content="分享AI和云计算技术的最新动态与实践经验，以及其它有趣的话题。"><meta name="keywords" content="AI, GitHub Copilot, Azure云, 云计算, 前端技术, 后端技术, Web开发, 软件工程"><link rel="stylesheet" href="/assets/css/style.min.css"><link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.7.2/css/all.css"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/default.min.css"><script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/highlight.min.js"></script></head><body><nav class="navbar"><div class="nav-container"><div class="nav-logo"><h2><i class="fas fa-snowflake"></i> Snowpeak</h2></div><div class="nav-menu"><a href="/" class="nav-link">首页</a><a href="/zh/page_1.htm" class="nav-link">文章</a><a href="/#tools" class="nav-link">工具</a><a href="/zh/about.htm" class="nav-link">关于</a><a href="/en/" class="nav-link lang-switch"><i class="fas fa-globe"></i> English</a></div><div class="nav-toggle" id="mobile-menu"><span class="bar"></span><span class="bar"></span><span class="bar"></span></div></div></nav><header class="article-header"><div class="container"><h1>自动加载外部 JavaScript 文件</h1><div class="article-meta"><span><i class="fas fa-calendar"></i> 发布时间: 2009-02-09 17:29:00</span><span><i class="fas fa-clock"></i> 阅读约需: 2 分钟 </span><span><i class="fas fa-tag"></i> 分类: 前端技术</span></div></div></header><main class="article-container"><p>虽说标题叫《自动加载外部 JavaScript 文件》，其实还未达到 PHP 那样在程序中只要遇到新的类名就自动加载类定义文件的程度，还需要指定文件名才能加载外部 JavaScript 文件，但是这对 JavaScript 应该已经够了。如果外部 JavaScript 文件比较多时，用这个还是比较方便的。详细说明用使用方法请见源码中的注释。</p><h2>源码</h2><p>文件名: autoload.js</p> <pre><code class="language-javascript">/* Copyright 2009 Snowpeak.org
 * 文件名: autoload.js
 * 摘  要: 批量加载外部 JS 文件
-* 作  者: 薛峰
+* 作  者: snowpeak
 使用方法:
 在 HTML 页的 head 段内加上形如:
-&lt;script type="text/javascript" src="autoload.js?a,js/b,other/c"&gt;&lt;/script&gt;
+&lt;script type=&quot;text/javascript&quot; src=&quot;autoload.js?a,js/b,other/c&quot;&gt;&lt;/script&gt;
 外部 JS 文件路径罗列作 autoload.js? 后面的参数，用逗号分隔开，不用加 .js 后缀，这些路径应该是相对于引用它们的 HTML 页的，而非 autoload.js 这个文件。
 即可创建出相应的 script 标记:
-&lt;script type="text/javascript" src="a.js"/&gt;
-&lt;script type="text/javascript" src="js/b.js"/&gt;
-&lt;script type="text/javascript" src="other/c.js"/&gt;
+&lt;script type=&quot;text/javascript&quot; src=&quot;a.js&quot;/&gt;
+&lt;script type=&quot;text/javascript&quot; src=&quot;js/b.js&quot;/&gt;
+&lt;script type=&quot;text/javascript&quot; src=&quot;other/c.js&quot;/&gt;
 说明:
 1. 纯匿名函数，不添加任何全局变量。
 2. IE 和 Firefox 在加载 JS 文件后生成的 DOM 节点顺序都一样，如 autoload.js?a,b,c 生成的3个 script 标记顺序也是 a、b、c，但是相同它们执行的顺序却不同，IE 是顺序执行的，而 Firefox 是倒序执行，即 c、b、a 的顺序。
 */
 (function(){
- var scripts = document.getElementsByTagName("script");
+ var scripts = document.getElementsByTagName(&quot;script&quot;);
  //必须用 for 循环才能循环得到 scripts 数组的各个元素，用 for in 循环得到的是 scripts 数组自身的属性。
  for (var i=0;i&lt;scripts.length;i++)
  {
   if (scripts[i].src)
   {
-   //匹配 src 值带 autoload.js? 字样的，并记住其后的参数，如 src="autoload.js?a,ch04get" 中的 a,ch04get
+   //匹配 src 值带 autoload.js? 字样的，并记住其后的参数，如 src=&quot;autoload.js?a,ch04get&quot; 中的 a,ch04get
    var jsArgs = scripts[i].src.match(/autoload.js/?(/S+)/);
   }
  }
@@ -33,7 +33,7 @@
   for (i=0; i&lt;jsFiles.length;i++)
   {
    var oScript = document.createElement('script');
-   oScript.type = "text/javascript";
+   oScript.type = &quot;text/javascript&quot;;
    //默认外部 JS 文件的路径应该是相对于调用此 autoload.js 的 HTML 页的相对路径。再给文件名加上 .js 的后缀。
    oScript.src = jsFiles[i]+'.js';
    oHead.appendChild(oScript);
