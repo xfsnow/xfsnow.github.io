@@ -653,7 +653,7 @@ class BlogMaker:
 if __name__ == "__main__":
     blog_maker = BlogMaker('zh')
     blog_maker.main()
-    blog_maker.clearDuplicate()
+    # blog_maker.clearDuplicate()
 
     blog_maker = BlogMaker('en')
     blog_maker.main()

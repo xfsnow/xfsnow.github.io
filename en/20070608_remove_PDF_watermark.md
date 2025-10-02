@@ -2,11 +2,9 @@
 
 Published: *2007-06-08 16:01:00*
 
-Category: __Development__
+Category: __Tools__
 
 ---------
-
-## [How to Remove Watermarks on PDF](/en/article/detail/how_to_remove_watermarks_on_pdf/)
 
 ## Methods to Remove Watermarks from PDF Files
 

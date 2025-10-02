@@ -4,6 +4,8 @@ Published: *2009-07-06 17:41:00*
 
 Category: __Backend__
 
+Summary: This article discusses a specific scenario and solution for setting the iReport 3.5 interface to English.
+
 ---------
 
 iReport is a graphical tool for editing JasperReport. Under Simplified Chinese operating systems, its localization feature makes the interface a mix of Chinese and English, which looks messy.

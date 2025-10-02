@@ -2,7 +2,9 @@
 
 Published: *2007-12-07 15:23:00*
 
-Category: __Development__
+Category: __System__
+
+Summary: Tomcat 6 Configuration for Connecting SQL Server 2000 and MySQL 5 via JDBC Pool.
 
 ---------
 
