@@ -525,8 +525,9 @@ class BlogMaker:
 
         print(f"已清理 {md_file} 中的图片尺寸属性")
 
-    def fix(self, directory):   
-        for root, dirs, files in os.walk(directory):
+    def fix(self):   
+        directory = self.langPath
+        for root, dir, files in os.walk(directory):
             for file in files:
                 if file.endswith(".md"):
                     file_path = os.path.join(root, file)
@@ -553,6 +554,62 @@ class BlogMaker:
                     except Exception as e:
                         print(f"处理文件 {file_path} 时出错：{e}") 
 
+    def clearDuplicate(self):
+        """
+        遍历 /zh 目录下所有 .md 文件，查找具有重复文章标题的文件并输出文件名
+        """
+        import glob
+        
+        # 存储标题和文件名的映射
+        title_files = {}
+        directory = self.langPath
+        # 遍历 /zh 目录下所有 .md 文件
+        md_files = glob.glob(directory+"/*.md")
+        
+        for md_file in md_files:
+            try:
+                # 尝试以 utf-8 编码读取文件
+                try:
+                    with open(md_file, "r", encoding="utf-8") as f:
+                        content = f.read()
+                except UnicodeDecodeError:
+                    # 如果 utf-8 失败，尝试 gbk 编码
+                    with open(md_file, "r", encoding="gbk") as f:
+                        content = f.read()
+                
+                # 提取第一行作为标题（以 # 开头的行）
+                lines = content.split('\n')
+                title = None
+                for line in lines:
+                    if line.startswith('# '):
+                        title = line[2:].strip()  # 去掉 "# " 前缀
+                        break
+                
+                if title:
+                    # 如果标题已存在，则添加到重复列表中
+                    if title in title_files:
+                        title_files[title].append(md_file)
+                    else:
+                        title_files[title] = [md_file]
+                else:
+                    print(f"警告：文件 {md_file} 中未找到标题")
+                    
+            except Exception as e:
+                print(f"处理文件 {md_file} 时出错：{e}")
+        
+        # 输出重复标题的文件
+        duplicates_found = False
+        for title, files in title_files.items():
+            if len(files) > 1:
+                duplicates_found = True
+                print(f"发现重复标题 '{title}' 出现在以下文件中:")
+                for file in files:
+                    print(f"  {file}")
+                print()
+        
+        if not duplicates_found:
+            print("未发现重复标题的文件。")
+
     def main(self):
         # 处理文章索引
         zh_articles = self.index_article()
@@ -576,6 +633,7 @@ class BlogMaker:
 if __name__ == "__main__":
     blog_maker = BlogMaker('zh')
     blog_maker.main()
+    blog_maker.clearDuplicate()
 
-    # blog_maker = BlogMaker('en')
-    # blog_maker.main()
+    blog_maker = BlogMaker('en')
+    blog_maker.main()

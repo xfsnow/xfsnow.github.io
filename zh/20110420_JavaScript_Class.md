@@ -2,34 +2,31 @@
 
 发布时间: *2011-04-20 17:56:00*
 
-分类: __综合开发__
+分类: __前端技术__
 
 简介: 通过实例介绍了 JavaScript 内置的基于原型的类使用方法，并以此为基础循序渐进地讲解如何实现一个类生成器工具函数，以实现基于类的（类似面向对象语言的）类定义写法。
 
-原文链接: [https://snowpeak.blog.csdn.net/article/details/6336685](https://snowpeak.blog.csdn.net/article/details/6336685)
-
 ---------
 
-### 概述
+## 概述
 
-#### 谁适合看此文档？
+### 谁适合看此文档？
 
 本文深入讲解 JavaScript 的类有关知识，并介绍了一些改善 JavaScript 面向对象编程的高级功能。适用于对 JavaScript 比较熟悉的朋友，了解 JavaScript 基本语法，有一定的 JavaScript 开发经验。 
 
-#### 此文档有什么用？
+### 此文档有什么用？
 
 此文档介绍的内容适用于较大规模 JavaScript 开发，尤其是大量使用面向对象编程大量使用类的声明和继承等时候。 
 
-#### 意义
+### 意义
 
 从定义上说， JavaScript 是一种基于原型 (prototype-based)的面向对象（object-oriented）的脚本语言，它具有面向对象（Object Oriented）语言的全部主要功能，完全可以实现面向对象编程。由于 JavaScript 基于原型的这一特征，使用此语言自身支持的语法进行类的声明和继承，和使用其它主流面向对象语言的写法很不一样。创建一个使用方便的类生成器（Class Creator），以实现类似基于类的 (class-based) 编程语法继承，则会极大的便利面向对象的 JavaScript 编程，不仅可顺应程序员已经熟悉的类的继承思维方式，提高开发效率，还可以减少代码量，提高 JavaScript 程序解析和运行的效率。
 
-  
 当进行大规模 JavaScript 开发时会大量使用面向对象的写法，此时类生成器的作用更为重要，类生成器已经成为 JavaScript 基础类库不可缺少的核心组件，比如 Prototype 库的 [Class.create()](<http://api.prototypejs.org/language/Class/create/>) 和 extJs 的 [Ext.create()](<http://dev.sencha.com/deploy/dev/docs/source/ComponentMgr.html#method-Ext-create>) 和 [Ext.extend()](<http://dev.sencha.com/deploy/dev/docs/source/Ext.html#method-Ext-extend>) 。
 
-### JavaScript 内置的基于原型的类使用方法
+## JavaScript 内置的基于原型的类使用方法
 
-#### 类的声明
+### 类的声明
 
 JavaScript 本身就支持类的使用，只是它是基于原型的，它的写法和我们熟悉的那些语言的写法不一样。我们先来看一下 JavaScript 内置的类使用方法。以下实例以及说明来自《JavaScript权威指南》第五版（JavaScript: The Definitive Guide, 5th Edition），它的封面是一只犀牛，熟悉 JavaScript 的朋友根据它的封面把它亲切的称作"犀牛书"。
 
@@ -57,7 +54,7 @@ r.hasOwnProperty("area");   // false: area is an inherited property of r
 "area" in r;                // true: "area" is a property of r
 ```
 
-JavaScript 在使用 new 关键字实例化一个对象的原理核心是通过“原型” (prototype)。构造器是一个函数，它提供了这一“类”对象的名字，并且初始化那些每个实例都不同的属性值。构造器函数与一个 prototype 对象关联，使用此构造器函数初始化的每个对象实例都会拥有一套相同的来自此 prototype 的属性和方法。对象实例拥有 prototype 的属性和方法，并非是 prototype 的成员复制给每个实例，而是通过查找成员的过程实现的，即 JavaScript 在遇到调用某对象的成员时，先查找此对象自身的实例属性或实例方法，如果没找到，就继续向上查找此对象的类构造函数的 prototype 中的类属性或类方法。
+JavaScript 在使用 new 关键字实例化一个对象的原理核心是通过"原型" (prototype)。构造器是一个函数，它提供了这一"类"对象的名字，并且初始化那些每个实例都不同的属性值。构造器函数与一个 prototype 对象关联，使用此构造器函数初始化的每个对象实例都会拥有一套相同的来自此 prototype 的属性和方法。对象实例拥有 prototype 的属性和方法，并非是 prototype 的成员复制给每个实例，而是通过查找成员的过程实现的，即 JavaScript 在遇到调用某对象的成员时，先查找此对象自身的实例属性或实例方法，如果没找到，就继续向上查找此对象的类构造函数的 prototype 中的类属性或类方法。
 
 JavaScript 的这种机制有两个含义。一，使用 prototype 实现成员共享可以大量节省内存。二，由于成员是在运行时查找和调用的，即使在对象实例化后给 prototype 增加成员，对象实例也可使用这新增加的成员（当然并不建议这样做）。
 
@@ -65,7 +62,7 @@ JavaScript 的这种机制有两个含义。一，使用 prototype 实现成员�
 
 ![JavaScript 对象实例方法查找和调用演示](../assets/img/20110420_JavaScript_01.webp)
 
-#### 类的继承
+### 类的继承
 
 我们再以如下的例子来解释 JavaScript 原生支持的类继承用法。在前面类声明 Rectangle 的基础上，我们来继承出一个它的子类。
 
@@ -110,24 +107,22 @@ pr instanceof Rectangle               // true
 pr instanceof Object                  // true
 ```
 
-
-### 循序渐进做一个类生成器
+## 循序渐进做一个类生成器
 
 上述例子说明 JavaScript 完全支持类的声明和继承，只是确实用起来有些麻烦。了解主流 JavaScript 基础类库的朋友可能知道一些类生成器的用法，下面我们就来自己创建一个类生成器。
 
-  
 从本质上说，一个类生成器工具函数就是封装了前面讲到的 JavaScript 自身的类写法。先明确我们的目标，然后一步一步实现出来。
 
-1. 简化类定义写法，不再分别写构造函数和逐个定义 prototype 里的方法，传递进来简洁的 JSON 结构，转化成类定义。 作构造方法名，构造方法是可选的。
+1. 简化类定义写法，不再分别写构造函数和逐个定义 prototype 里的方法，传递进来简洁的 JSON 结构，转化成类定义。作构造方法名，构造方法是可选的。
 2. 基本的类继承，一次只能继承一个类
 3. 支持 instanceof 方法检测某对象是某类的实例
 4. 子类可以调用父类的方法，既可以调用父类不同名的方法，也可以调用父类的同名方法。
 
-####  第零步，先给我们的类生成器工具函数起个函数名
+### 第零步，先给我们的类生成器工具函数起个函数名
 
 这里再澄清一下，类生成器，它本质是一个工具函数，它接收的参数是一堆类定义相关的东西，返回的是一个用于实例化对象的类的构造函数，根据前面对 JavaScript 类使用的基本知识的介绍，它返回的这个构造函数也有其 prototype 对象及相关的属性和方法，只要 new 一下就能实例化出不同的对象实例。所以类生成器它自己不是一个类的定义，它是一个普通函数，按照常见的类库命名规则，这个函数名字应该全部小写，我们就叫它 classer 吧，意思是"制造 class 的工具"。
 
-#### 第一步，先简化类定义写法
+### 第一步，先简化类定义写法
 
 传递进来一个 JSON 结构，把它转化成类定义所需的构造函数和 prototype 对象及相关的属性和方法。其实就是把前面 JavaScript 分别声明构造函数和 prototype 方法的写法整理到一起而已。  
 我们约定以 __init 作构造方法名，并且构造方法是可选的。
@@ -173,8 +168,7 @@ animal instanceof Animal;  // true
 animal.getName();          // "animal"
 ```
 
-
-#### 第二步，实现类的继承
+### 第二步，实现类的继承
 
 这里采用李战的甘露模型的写法，只有一个参数时是类定义, 有二个参数时，前一个是基类，后一个是当前类的定义。
 
@@ -243,7 +237,7 @@ dog.getName()            // "dog"
 dog.bark()               // "woof"
 ```
 
-#### 最后我们来实现子类声明中调用父类成员
+### 最后我们来实现子类声明中调用父类成员
 
 在上述拼装 prototype 对象成员的过程中，父类的成员已经拼装成子类 prototype 对象，所以子类的方法声明已经可以直接使用父类的成员，除了子类某方法要调用父类的同名方法。现在我们借鉴 John Resig 的方案来解决这个问题。
 

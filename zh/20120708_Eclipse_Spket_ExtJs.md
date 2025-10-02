@@ -2,9 +2,9 @@
 
 发布时间: *2012-07-08 20:31:58*
 
-简介: 翻译整理自 Spket 官方网站的说明http://www.spket.com/extjs.htmlhttp://www.spket.com/jquery.htmlSpket 是一个支持各种主流 JavaScript 库的非常棒的 Eclipse 的 JavaScript 插件。支持JavaScript, XUL/XBL, Laszlo, SVG and Yahoo! Widg
+分类:__前端技术__
 
-原文链接: [https://snowpeak.blog.csdn.net/article/details/7727143](https://snowpeak.blog.csdn.net/article/details/7727143)
+简介: 
 
 ---------
 

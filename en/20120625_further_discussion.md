@@ -1,245 +1,228 @@
-# Further Discussion on Managing Hierarchical Data with Nested Set Model
+# A Further Discussion on Implementing Tree Structures with Nested Set Model
 
 Published: *2012-06-25 21:39:00*
 
 Category: __Database__
 
+Introduction: This article delves into the implementation of tree structures in relational databases using the Nested Set Model. Based on Mike Hillyer's classic model, performance is optimized by adding a node depth field, providing a complete implementation scheme for CRUD operations.
+
 ---------
 
-## [Further Discussion on Managing Hierarchical Data with Nested Set Model](/en/article/detail/further_discussion_on_managing_hierarchical_data_with_nested_set_model/)
+To implement tree structures in relational databases, besides the familiar and easily understood "Adjacency List Model", there is another "Nested Set Model". The basic theory can be found online, such as:
 
-Category: [Database](/en/article/category/database/) 2012-06-25 21:39:00 Read(8433)
-
-When we manage hierarchical data with relational database, we can use the Nested Set Model besides our familiar "Adjacency List Model". The fundamental theories of the Nested Set Model are easily found on the Internet. For example:
-
-Original article by Mike Hillyer:
+Mike Hillyer's original work:
 
 <http://mikehillyer.com/articles/managing-hierarchical-data-in-mysql/>
 
-A Chinese translation to the above article by Chen Jianping:
+Chen Jianping's translation of the above article:
 
 <http://www.cnblogs.com/chinaontology/archive/2010/03/10/NestedSetModel.html>
 
-And a downloadable PDF version of the above translation by Liu Min:
+And Liu Min's blog has a PDF document整理 of the above translated version that can be downloaded:
 
 <http://www.liumin.name/20071117/acts_as_nested_set/>
 
-This article explains the core theories of left and right values and helps us to understand the Nested Set Model from scratch. However, the article only uses two fields of left and right values and entails too many nested queries when involving node depth and thus reduces performance of SQL execution. I add one redundant field of depth to simplify complicated queries and improve performance, so that make it easier to adopt the good model in development and production environment.
+This article provides a detailed explanation of the core theory of left and right boundaries, making it easy for everyone to understand the "Nested Set Model" from scratch. However, the example in this article only uses the classic two fields of left and right boundaries. When it comes to node depth, there are too many nested queries, which greatly reduces the performance of SQL execution. Xuefeng combines some workaround solutions learned online and adds a redundant node depth field, reducing query complexity and improving execution performance, making it suitable for real development and production environments.
 
-My article is based on the above article. You are recommended to understand the basic mechanism of the Nested Set Model. Please refer to the above links if you wish.
+This article is based on the above articles, and reading this article requires understanding the basic principles of "Nested Set Model". If you don't understand yet, it is recommended to read the above documents first.
 
-We use hierarchical geographical data as our scenario. Let's look at SQL to create the table.
+The scenario case we use is hierarchical regional data. First, let's look at the SQL statement for creating the table:
 
+```sql
+CREATE TABLE `geo` (
+  `cid` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(20) NOT NULL,
+  `depth` int(11) NOT NULL,
+  `lft` int(11) NOT NULL,
+  `rgt` int(11) NOT NULL,
+  PRIMARY KEY (`cid`),
+  KEY `lft` (`lft`),
+  KEY `rgt` (`rgt`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8;
+```
 
-    CREATE TABLE  `geo` (
+I only added a depth field to Mike Hillyer's table structure to represent the node depth.
 
-      `cid` int(11) NOT NULL AUTO_INCREMENT,
+The following will introduce the main functional requirements of tree structures one by one.
 
-      `name` varchar(20) NOT NULL,
+## Inserting New Nodes
 
-      `depth` int(11) NOT NULL,
+First insert a root node. We agree that the depth of the root node is 1. When there is only one root node, its left and right boundaries are naturally 1 and 2, so:
 
-      `lft` int(11) NOT NULL,
+```sql
+INSERT INTO geo (name, depth, lft, rgt) VALUES ('根', 1, 1, 2);
+```
 
-      `rgt` int(11) NOT NULL,
+Let's insert a few child nodes one by one to familiarize ourselves with how inserting nodes affects existing nodes.
 
-      PRIMARY KEY (`cid`),
+The depth of a child node is the current node's depth + 1. According to the mathematical principle of the "Nested Set Model", the left boundary of a child node is the right boundary of the current node, and the right boundary of a child node is the right boundary of the current node plus 1. Also, the left and right boundaries of all nodes to the right of the current node are increased by 2. So:
 
-      KEY `lft` (`lft`),
+```sql
+INSERT INTO geo (name, depth, lft, rgt) VALUES ('北京', 1+1, 2, 2+1);
+UPDATE geo SET lft=lft+2 WHERE lft>2;
+UPDATE geo SET rgt=rgt+2 WHERE rgt>=2;
+```
 
-      KEY `rgt` (`rgt`)
+Insert another child node. At this time, the parent node is still the root node, but its rgt value has been updated to 4, while its depth is still 1, so:
 
-    ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 ;
+```sql
+INSERT INTO geo (name, depth, lft, rgt) VALUES ('天津', 1+1, 4, 4+1);
+UPDATE geo SET lft=lft+2 WHERE lft>4;
+UPDATE geo SET rgt=rgt+2 WHERE rgt>=4;
+```
 
-I add only one more field to indicate node depth based on the table structure of Mike Hillyer.
+Actually, to insert a child node, you only need to know the current node's rgt and depth, plus the name of the new child node, which can be made into a stored procedure. But the SQL logic is not particularly complex, and it can also be executed in a program as a transaction.
 
-Now let's see how we can achieve major needs for hierarchical data.
+Below I'll post the SQL for the sample data, which everyone can import directly. Those interested can continue to practice inserting new nodes themselves.
 
-#### Adding a new node
+```sql
+INSERT INTO `geo`
+ (`cid`, `name`, `depth`, `lft`, `rgt`)
+ VALUES
+(1, '根', 1, 1, 22),
+(2, '北京', 2, 2, 13),
+(3, '天津', 2, 14, 19),
+(4, '上海', 2, 20, 21),
+(5, '东城', 3, 3, 6),
+(6, '西城', 3, 7, 8),
+(7, '崇文', 3, 9, 10),
+(8, '和平', 3, 15, 16),
+(9, '宣武', 3, 11, 12),
+(10, '南开', 3, 17, 18),
+(11, '东华门', 4, 4, 5);
+```
 
-Let's add a root node, and we indicate our root node use 1 as depth. When we have only one root node, its left and right value are 1 and 2.
+## Querying All Leaf Nodes
 
+According to this model, leaf nodes are those nodes whose right boundary is 1 greater than their left boundary. The SQL statement is simple.
 
-    INSERT INTO geo (name, depth, lft, rgt) VALUES ('root', 1, 1, 2);
+```sql
+SELECT cid, name FROM geo WHERE rgt = lft + 1;
+```
 
-Now let's add a few more nodes and familiarize us with how newly added nodes influence existing nodes.
+## Getting a Single Path
 
-The depth of the child node is 1 more than the depth of the current node. According to the mathematical theory of the Nested Set Model, left value of the node equals right value of the current node, right value of the child node equals right value of the current node plus 1. All the nodes that located right to the current node increase their left and right nodes by 2.
+That is, querying a node and all its parent nodes. I uniformly replace the BETWEEN keyword with greater than or less than comparison operators. When including equals, it includes itself; when not including equals, it doesn't include itself.
 
+```sql
+SELECT parent.cid, parent.name FROM geo  AS node, geo AS parent
+	WHERE parent.lft <= node.lft AND node.lft <= parent.rgt AND node.name = '东华门'
+	ORDER BY parent.lft;
+```
 
-    INSERT INTO geo (name, depth, lft, rgt) VALUES ('Beijing', 1+1, 2, 2+1);
+Or more accurately using the primary key:
 
-    UPDATE geo SET lft=lft+2 WHERE lft>2;
+```sql
+SELECT parent.cid, parent.name FROM geo  AS node, geo AS parent
+	WHERE parent.lft <= node.lft AND node.lft <= parent.rgt AND node.cid = 11
+	ORDER BY parent.lft;
+```
 
-    UPDATE geo SET rgt=rgt+2 WHERE rgt>=2;
+## Querying Node Depth
 
-Let's add one more child node. Now current node is still the root node, but its right value is 4 now and its depth is still 1.
+Now we can directly use the redundant depth field instead of complex nested queries.
 
+```sql
+SELECT depth FROM geo WHERE name='南开';
+```
 
-    INSERT INTO geo (name, depth, lft, rgt) VALUES ('Tianjin', 1+1, 4, 4+1);
-    UPDATE geo SET lft=lft+2 WHERE lft>4;
-    UPDATE geo SET rgt=rgt+2 WHERE rgt>=4;
+## The Entire Tree and Depth
 
+```sql
+SELECT depth, name FROM depth;
+```
 
-Actually, we only need to know the right value and depth of the current node and the name of new node. We can make a stored procedure, but the logic of the SQL is not very complicated, so we can also execute the statements within transaction.
+With some formatting:
 
-Below is the SQL of our sample table. If you are interested, you can continue to add more nodes as an exercise.
+```sql
+SELECT depth, CONCAT( REPEAT('- ', depth - 1), name) AS name FROM geo ORDER BY lft;
+```
 
+## Subtree and Depth
 
-    INSERT INTO `geo`
+First, use the left and right boundaries of the subtree's starting point as conditions. For example, Beijing's lft=2, rgt=11. Nested queries are not needed, but an additional query may be required.
 
-     (`cid`, `name`, `depth`, `lft`, `rgt`)
+```sql
+SELECT depth, CONCAT( REPEAT('- ', depth - 1), name) AS name FROM geo WHERE lft>=2 AND rgt<=11 ORDER BY lft;
+```
 
-     VALUES
+Using nested queries, with the subtree's starting point ID as the condition, such as Tianjin's cid=3:
 
-    (1, 'root', 1, 1, 22),
+```sql
+SELECT n.depth, CONCAT( REPEAT('- ', n.depth - 1), n.name) AS name
+FROM geo AS n , geo AS s
+WHERE s.cid=3 AND n.lft>=s.lft AND n.rgt<=s.rgt ORDER BY n.lft;
+```
 
-    (2, 'Beijing', 2, 2, 13),
+## Direct Child Nodes
 
-    (3, 'Tianjin', 2, 14, 19),
+That is, the direct subordinates of a node. Also use the redundant depth field to simplify the query.
 
-    (4, 'Shanghai', 2, 20, 21),
+First, use the node's left and right boundaries and depth as conditions. For example, the root's lft=1, rgt=20, depth=1. Nested queries are not needed, but an additional query may be required.
 
-    (5, 'Dongcheng', 3, 3, 6),
+```sql
+SELECT cid, depth, name FROM geo WHERE lft>1 AND rgt<22 AND depth=1+1 ORDER BY lft;
+```
 
-    (6, 'Xicheng', 3, 7, 8),
+Using nested queries, with the subtree's starting point ID as the condition, such as the root's cid=1, Beijing's cid=2:
 
-    (7, 'Chongwen', 3, 9, 10),
+```sql
+SELECT n.cid, n.depth, n.name
+FROM geo AS n, geo AS s
+WHERE s.cid=2 AND n.lft>=s.lft AND n.rgt<=s.rgt AND n.depth=s.depth+1 ORDER BY n.lft;
+```
 
-    (8, 'Heping', 3, 15, 16),
+## Direct Parent Node
 
-    (9, 'Xuanwu', 3, 11, 12),
+It's essentially LIMIT 1 of a single path. Of course, not including itself, use < instead of <=. Using the primary key ID is still the fastest.
 
-    (10, 'Nankai', 3, 17, 18),
+```sql
+SELECT parent.cid, parent.name FROM geo AS node, geo AS parent
+	WHERE parent.lft < node.lft AND node.lft < parent.rgt AND node.cid = 11
+	ORDER BY parent.lft DESC LIMIT 1;
+```
 
-    (11, 'Donghuamen', 4, 4, 5);
+## Total Number of Child Nodes
 
-#### Finding all the Leaf Nodes
+Calculate using the node's own lft and rgt. According to the nested model, each child node uses two numbers, so the total number of child nodes is (rgt-lft-1)/2. For example, Beijing's rgt=13, lft=2, so its total number of child nodes is (13-2-1)/2 = 5.
 
-According to the model, leaf nodes are the node that have right value 1 bigger than its left value. So the SQL is very simple.。
+## Number of Direct Child Nodes and Whether There Are Child Nodes
 
+First, use the node's left and right boundaries and depth as conditions. For example, the root's lft=1, rgt=20. Nested queries are not needed, but an additional query may be required.
 
-    SELECT cid, name FROM geo WHERE rgt = lft + 1;
+```sql
+SELECT count(1) AS num FROM geo WHERE lft>1 AND rgt<22 AND depth=1+1;
+```
 
-#### Retrieving a Single Path
+Using nested queries, with the node ID as the condition, such as Beijing's cid=2:
 
-Let's find one node with all its superior nodes. Here I use comparative operands instead of BETWEEN keyword. The result will include the current node itself if we use equal sign and will not include the current node if not.
+```sql
+SELECT count(1) AS num
+FROM geo AS n , geo AS s
+WHERE s.cid=2 AND n.lft>=s.lft AND n.rgt<=s.rgt AND n.depth=s.depth+1;
+```
 
+## Deleting Nodes
 
-    SELECT parent.cid, parent.name FROM geo  AS node, geo AS parent
-    	WHERE parent.lft <= node.lft AND node.lft <= parent.rgt AND node.name = 'Donghuamen'
-    	ORDER BY parent.lft;
+To simplify the logic, I only handle deleting leaf nodes or entire subtrees, not handling the problem of orphaned nodes caused by deleting middle-level nodes. In actual business, usually more nodes are added and fewer are deleted, and many projects don't delete nodes at all.
 
-Or we can use primary key for more accurate query.
+First, calculate the offset caused by deleting related nodes. For example, to delete Xicheng, lft=7, rgt=8, offset = 8-7+1 = 2:
 
+```sql
+//Delete the current node and its child nodes to be deleted
+DELETE FROM geo WHERE lft>=7 AND rgt<=8;
 
-    SELECT parent.cid, parent.name FROM geo  AS node, geo AS parent
-    	WHERE parent.lft <= node.lft AND node.lft <= parent.rgt AND node.cid = 11
-    	ORDER BY parent.lft;
+//Recalibrate the left boundary of all nodes whose left boundary is greater than the deleted node's right boundary
+UPDATE geo SET lft=lft-2 WHERE lft>8;
 
-#### Finding the Depth of the Nodes
+//Same as above, recalibrate the right boundary of all nodes whose right boundary is greater than the deleted node's right boundary
+UPDATE geo SET rgt=rgt-2 WHERE rgt>8;
+```
 
-Now we can use our redundant field, depth, without complicated nested queries.
+## Sibling Node Reordering
 
-
-    SELECT depth FROM geo WHERE name='Nankai';
-
-#### Retrieving the whole tree with Depth
-
-
-    SELECT depth, name FROM depth;
-
-Let's make it with format.
-
-
-    SELECT depth, CONCAT( REPEAT('- ', depth - 1), name) AS name FROM geo ORDER BY lft;
-
-#### Depth of a Sub-Tree
-
-We use left and right of the starting node as condition, for example, Beijing with lft=2 and rgt=11. Thus, we can avoid nested query, but we need one more query to know the left and right.
-
-
-    SELECT depth, CONCAT( REPEAT('- ', depth - 1), name) AS name FROM geo WHERE lft>=2 AND rgt<=11 ORDER BY lft;
-
-We use primary key, for example, Tianjin with cid=3, as condition with nested query.
-
-
-    SELECT n.depth, CONCAT( REPEAT('- ', n.depth - 1), n.name) AS name
-
-    FROM geo AS n , geo AS s
-
-    WHERE s.cid=3 AND n.lft>=s.lft AND n.rgt<=s.rgt ORDER BY n.lft;
-
-#### The Immediate Subordinates of a Node
-
-We are finding direct children of one node. We can still use depth field to simplify query.
-
-We use left, right and depth of the starting node as condition, for example, root with lft=1, rgt=20, depth=1. Thus, we can avoid nested query, but we need one more query to know the left and right.
-
-
-    SELECT cid, depth, name FROM geo WHERE lft>1 AND rgt<22 AND depth=1+1 ORDER BY lft;
-
-We use primary key, for example, Beijing with cid=2, as condition with nested query.
-
-
-    SELECT n.cid, n.depth, n.name
-
-    FROM geo AS n, geo AS s
-
-    WHERE s.cid=2 AND n.lft>=s.lft AND n.rgt<=s.rgt AND n.depth=s.depth+1 ORDER BY n.lft;
-
-#### The Immediate Parent Node
-
-We add LIMIT 1 after querying the single path. Of course the result should exclude the node itself, so we use < instead of <= . It's fast to use primary key.
-
-
-    SELECT parent.cid, parent.name FROM geo AS node, geo AS parent
-    	WHERE parent.lft < node.lft AND node.lft < parent.rgt AND node.cid = 11
-    	ORDER BY parent.lft DESC LIMIT 1;
-
-#### Number of All Subordinates
-
-We can calculate with left and right of the current node. According to the Nested Set Model, each node uses two integers, so the number of all subordinates equals (right-left-1) / 2. For example, Beijing with rgt=13 and lft=2, its all subordinates accounts to (13-2-1)/2 = 5.
-
-#### Number of Immediate Subordinates
-
-We use left, right and depth of the starting node as condition, for example, root with lft=1, rgt=20, depth=1. Thus, we can avoid nested query, but we need one more query to know the left and right.
-
-
-    SELECT count(1) AS num FROM geo WHERE lft>1 AND rgt<22 AND depth=1+1;
-
-We use primary key, for example, Beijing with cid=2, as condition with nested query.
-
-
-    SELECT count(1) AS num
-
-    FROM geo AS n , geo AS s
-
-    WHERE s.cid=2 AND n.lft>=s.lft AND n.rgt<=s.rgt AND n.depth=s.depth+1;
-
-
-#### Deleting a Node
-
-In order to simplify logic, we only delete leaf node, or delete a sub-tree entirely. We don't deal with deleting middle nodes which can cause orphan nodes. In real production, we usually add nodes and rarely delete nodes. We even don't need to delete nodes in some projects.
-
-We first calculate the offset caused by deleting a node. We use Xicheng as an example its lft=7, rgt=8, and its offset = 8-7+1 = 2.
-
-
-    //Delete current node and its all subordinates
-
-    DELETE FROM geo WHERE lft>=7 AND rgt<=8;
-
-    //Readjust left value of all nodes with left value larger than the deleted node
-    UPDATE geo SET lft=lft-2 WHERE lft>8;
-
-    //Readjust right value of all nodes with right value larger than the deleted node
-
-    UPDATE geo SET rgt=rgt-2 WHERE rgt>8;
-
-#### Moving nodes of the Same Depth
-
-We manage to deal with sorting when reading data while we don't change the order of nodes with writing. Basically, all the above SQL statements are ordered by lft, i.e., ordered by the time when they are added. Quite often we need to display nodes of same depth ordered by their letters or Chinese phonetic alphabet. The solution is simple. If we deal with English data, we just order the nodes by name. If we deal with Chinese, we use one more redundant field to store Chinese phonetic alphabet and order result by it when reading.
+Generally, sibling node reordering doesn't require write operations. We only handle the sorting of the retrieved results. The above SQL is all sorted by lft, that is, sorted by the order of addition. However, usually when displaying sibling child nodes, they need to be sorted alphabetically or phonetically. The solution is: if the display is in English, sort directly by English; if the display is in Chinese, add a redundant field to store the pinyin when adding records, and sort by pinyin when retrieving.
 
 
 ---
-*原文链接: https://www.snowpeak.fun/en/article/detail/further_discussion_on_managing_hierarchical_data_with_nested_set_model/*
+*Original Link: https://www.snowpeak.fun/en/article/detail/further_discussion_on_managing_hierarchical_data_with_nested_set_model/*
