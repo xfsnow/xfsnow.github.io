@@ -322,6 +322,26 @@ class BlogMaker:
         if normalized_category in standard_categories:
             return normalized_category
             
+        # 中文分类映射到标准英文分类
+        chinese_to_english = {
+            '系统': 'System',
+            '系统管理': 'System',
+            '软件工具': 'Tools',
+            '数据库': 'Database',
+            '前端技术': 'Frontend',
+            '后端技术': 'Backend',
+            '网络': 'Network',
+            '编程语言': 'Programming',
+            '云计算': 'Cloud Computing',
+            'AI': 'AI',
+            'Azure云': 'Azure',
+            '综合开发': 'Development'
+        }
+        
+        # 检查是否是中文分类
+        if normalized_category in chinese_to_english:
+            return chinese_to_english[normalized_category]
+            
         # 尝试模糊匹配
         for standard in standard_categories:
             if normalized_category.lower() == standard.lower():

@@ -2,7 +2,7 @@
 
 Published: *2023-05-08 14:44:11*
 
-Category: __System Administration__
+Category: __System__
 
 Summary: It's now common for developers to deploy their own personal websites and register their own domain names, but deploying an email server isn't that simple. The free version of Tencent Enterprise Email can also bind domains, and with just a few simple steps, you can have your own domain email!
 

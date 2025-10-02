@@ -45,8 +45,8 @@ Where is your code 先GitHub。连接到前面刚刚提交的GitHub源码库。
 
 Configure页选Starter template。最后来到Review页，我们看到以下一个起始的流水线样子。
 
-![Graphical user interface, text, application, email Description
-automatically generated](../assets/img/20230123_Azure_DevOps_Coverage_03.png)
+![Graphical user interface, text, application, email Description automatically
+generated](../assets/img/20230123_Azure_DevOps_Coverage_03.png)
 
 把现有的 2 条script 任务删掉。点右上角的Show assistant，在Tasks中点击 .NET Core，如下图所示，先添加一个build任务。
 
@@ -64,4 +64,78 @@ generated](../assets/img/20230123_Azure_DevOps_Coverage_05.png)
 
 最后点击右上角Save and run按钮，按提示commit到源码库并执行。
 
-- [ ] 待续
+## 查看代码覆盖率报告
+
+等待流水线执行完成后，我们可以在Azure Pipeline的界面中查看代码覆盖率报告。
+
+在流水线运行详情页，找到Tests选项卡，点击进入。
+
+![Graphical user interface, application Description automatically
+generated](../assets/img/20230123_Azure_DevOps_Coverage_06.png)
+
+在Tests选项卡中，可以看到测试结果的汇总信息，包括通过的测试数量、失败的测试数量等。向下滚动，可以看到Code Coverage部分。
+
+![Graphical user interface, text, application, email Description automatically
+generated](../assets/img/20230123_Azure_DevOps_Coverage_07.png)
+
+点击Code Coverage区域，可以展开详细信息，包括行覆盖率、分支覆盖率等指标。
+
+## 配置代码覆盖率阈值
+
+为了确保代码质量，我们可以在流水线中设置代码覆盖率的阈值。如果实际覆盖率低于设定的阈值，流水线将失败。
+
+在Azure Pipeline的YAML文件中，我们可以添加如下配置：
+
+```yaml
+- task: DotNetCoreCLI@2
+  displayName: 'dotnet test'
+  inputs:
+    command: test
+    projects: '**/*.csproj'
+    arguments: '--configuration $(BuildConfiguration) --collect:"XPlat Code Coverage" -- DataCollectionRunSettings.DataCollectors.DataCollector.Configuration.Format=cobertura'
+    publishTestResults: true
+    failTaskOnFailedTests: true
+
+- task: PublishCodeCoverageResults@1
+  displayName: 'Publish code coverage'
+  inputs:
+    codeCoverageTool: Cobertura
+    summaryFileLocation: '$(Agent.TempDirectory)/**/coverage.cobertura.xml'
+    failIfCoverageEmpty: true
+```
+
+## 使用SonarCloud进一步分析
+
+除了Azure Pipeline自带的代码覆盖率功能，我们还可以集成SonarCloud来获得更详细的代码质量分析。
+
+首先在SonarCloud上创建项目，然后在Azure Pipeline中添加SonarCloud分析任务：
+
+```yaml
+- task: SonarCloudPrepare@1
+  inputs:
+    SonarCloud: 'SonarCloudConnection'
+    organization: 'your-organization'
+    scannerMode: 'MSBuild'
+    projectKey: 'your-project-key'
+    projectName: 'Your Project Name'
+
+- task: SonarCloudAnalyze@1
+
+- task: SonarCloudPublish@1
+  inputs:
+    pollingTimeoutSec: '300'
+```
+
+这样就可以在SonarCloud中查看更详细的代码质量报告，包括代码覆盖率、重复代码、代码异味等指标。
+
+## 总结
+
+通过本文的介绍，我们了解了如何在Azure Pipeline中配置和显示代码覆盖率报告。代码覆盖率是衡量软件测试质量的重要指标，通过在CI/CD流水线中集成代码覆盖率检查，可以帮助团队持续改进代码质量。
+
+主要步骤包括：
+1. 在项目中配置coverlet.collector包
+2. 在Azure Pipeline中配置测试和代码覆盖率发布任务
+3. 在流水线结果中查看代码覆盖率报告
+4. 可选地配置覆盖率阈值和集成SonarCloud进行更深入的分析
+
+通过这些实践，团队可以更好地监控和提高代码质量，确保软件交付的可靠性。

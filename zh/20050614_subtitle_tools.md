@@ -2,13 +2,12 @@
 
 发布时间: *2005-06-14 10:00:00*
 
-分类: __多媒体与字幕__
+分类: __软件工具__
+
+简介: 雪峰推荐字幕工具——Subtitle Workshop 和 SubCreator， 都是字幕制作工具。
 
 ---------
 
-## [雪峰推荐字幕工具](/cn/article/detail/snowpeak_recommends_subtitle_tools/)
-
-分类: [多媒体与字幕](/cn/article/category/multimedia_subtitle/) 2005-06-14 10:00:00 阅读(7205)
 
 ## 快捷键的准备
 

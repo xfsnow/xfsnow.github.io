@@ -2,7 +2,7 @@
 
 Published: *2008-12-30 14:00:00*
 
-Category: __Client Side Technology__
+Category: __Frontend__
 
 ---------
 

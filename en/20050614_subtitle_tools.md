@@ -4,9 +4,9 @@ Published: *2005-06-14 10:00:00*
 
 Category: __Tools__
 
----------
+Summary: Snowpeak recommends two subtitle tools. 
 
-## [Snowpeak Recommends Subtitle Tools](/cn/article/detail/snowpeak_recommends_subtitle_tools/)
+---------
 
 
 ## Shortcut Key Preparation

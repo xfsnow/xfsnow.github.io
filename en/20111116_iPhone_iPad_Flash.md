@@ -2,7 +2,7 @@
 
 Published: *2011-11-16 22:36:29*
 
-Category: __Software Tools__
+Category: __Tools__
 
 Summary: iPhone and iPad do not natively support Flash. One approach is to install Flash-supporting apps like Frash. I came across a method introduced by foreign friends that allows Flash playback without jailbreaking or installing applications, and I'm translating it here to share with everyone.
 

@@ -2,7 +2,7 @@
 
 Published: *2008-06-18 11:12:00*
 
-Category: __System Administration__
+Category: __System__
 
 Summary: This article discusses a specific scenario and solution for the error "Apache2 service cannot start. Specific error: 1."
 

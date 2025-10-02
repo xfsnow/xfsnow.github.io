@@ -2,7 +2,7 @@
 
 发布时间: *2012-05-21 20:00:41*
 
-分类: __系统管理__
+分类: __系统__
 
 简介: 本文介绍了如何在Windows环境下为PHP的socket功能启用SSL支持，解决"Unable to find the socket transport "ssl""的报错问题。
 

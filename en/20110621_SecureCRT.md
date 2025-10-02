@@ -2,7 +2,7 @@
 
 Published: *2011-06-21 15:10:00*
 
-Category: __Software Tools__
+Category: __Tools__
 
 Introduction: SecureCRT is a commonly used remote access tool for Windows, but it needs to be configured properly to display Chinese correctly.
 

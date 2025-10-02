@@ -2,7 +2,7 @@
 
 Published: *2011-06-09 14:06:00*
 
-Category: __Backend Technology__
+Category: __Backend__
 
 Summary: When PhpMyAdmin cannot export data, it can be resolved this way.
 

@@ -2,7 +2,7 @@
 
 Published: *2008-10-24 17:41:00*
 
-Category: __Frontend Technology__
+Category: __Frontend__
 
 Summary: The previous version of the JavaScript URL parser avoided using loops but relied heavily on regular expressions for replacements. While this approach might not necessarily improve performance compared to loops, it made the code overly complex. This time, we attempt a more concise method that avoids both loops and regular expressions.
 

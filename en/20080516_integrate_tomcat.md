@@ -2,7 +2,7 @@
 
 Published: *2008-05-16 17:35:00*
 
-Category: __System Operation__
+Category: __System__
 
 Summary: This article introduces the main methods and steps to integrate Tomcat 5.5.25 into IIS 5.1.
 
