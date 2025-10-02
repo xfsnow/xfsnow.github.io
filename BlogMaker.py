@@ -311,14 +311,24 @@ class BlogMaker:
             return None
 
     def map_category(self, category: str):
-        # 从 self.getLang() 中获取分类映射
-        category_display_map = self.getLang().get('categoryMap', {})
-        # 再反转键与值，得到中文为键，英文为值的映射
-        default_category = 'Tools'
-        if not category_display_map:
-            return default_category
-        category_display_map = {v: k for k, v in category_display_map.items()}
-        return category_display_map.get(category, default_category)  # 默认返回 'Tools' 分类
+        # 直接返回标准化的分类标识符，不需要额外映射
+        # 标准分类标识符列表
+        standard_categories = ['AI', 'Azure', 'Development', 'Tools', 'Cloud Computing', 
+                              'Backend', 'Database', 'Frontend', 'System', 'Network', 'Programming']
+        
+        # 去除空格并首字母大写规范化
+        normalized_category = category.strip()
+        # 如果是标准分类，直接返回
+        if normalized_category in standard_categories:
+            return normalized_category
+            
+        # 尝试模糊匹配
+        for standard in standard_categories:
+            if normalized_category.lower() == standard.lower():
+                return standard
+                
+        # 如果无法匹配，返回默认分类
+        return 'Tools'  # 默认返回 'Tools' 分类
 
     def infer_category_from_content(self, content: str, filename: str):
         """从内容或文件名推断分类"""
@@ -515,6 +525,34 @@ class BlogMaker:
 
         print(f"已清理 {md_file} 中的图片尺寸属性")
 
+    def fix(self, directory):   
+        for root, dirs, files in os.walk(directory):
+            for file in files:
+                if file.endswith(".md"):
+                    file_path = os.path.join(root, file)
+                    try:
+                        # 使用 utf-8 编码读取文件，如果失败则尝试其他编码
+                        try:
+                            with open(file_path, "r", encoding="utf-8") as f:
+                                content = f.read()
+                        except UnicodeDecodeError:
+                            # 如果utf-8失败，尝试使用gbk编码
+                            with open(file_path, "r", encoding="gbk") as f:
+                                content = f.read()
+                        
+                        # 替换内容
+                        # content = content.replace("发布时间:", "Published:")
+                        # content = content.replace("分类:", "Category:")
+                        content = content.replace("__人工智能__", "__AI__")
+                        
+                        # 使用 utf-8 编码写入文件
+                        with open(file_path, "w", encoding="utf-8") as f:
+                            f.write(content)
+                            
+                        print(f"修改文件：{file_path}")
+                    except Exception as e:
+                        print(f"处理文件 {file_path} 时出错：{e}") 
+
     def main(self):
         # 处理文章索引
         zh_articles = self.index_article()
@@ -539,5 +577,5 @@ if __name__ == "__main__":
     blog_maker = BlogMaker('zh')
     blog_maker.main()
 
-    blog_maker = BlogMaker('en')
-    blog_maker.main()
+    # blog_maker = BlogMaker('en')
+    # blog_maker.main()

@@ -2,6 +2,8 @@
 
 发布时间: *2025-02-12 18:01:01*
 
+分类: __AI__
+
 简介: DeepSeek 是杭州深度求索人工智能基础技术研究有限公司发布的开源大模型，最近是持续火爆，使得官方服务经常不可用。网上各种本地部署和私有部署的文章已经很多，这里我们提供一个全部基于 Azure 的私有部署方案。
 
 原文链接: [https://snowpeak.blog.csdn.net/article/details/145597507](https://snowpeak.blog.csdn.net/article/details/145597507)
