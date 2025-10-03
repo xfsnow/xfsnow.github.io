@@ -4,11 +4,10 @@ Published: *2008-03-27 09:30:00*
 
 Category: __Frontend__
 
-Recently, I came across many simplified-to-traditional Chinese conversion programs online. However, most of them only cover around 3,000 commonly used characters. Here, I have organized the characters more comprehensively and clarified the logic. The main idea is to create two strings containing the simplified and traditional versions of the main Chinese characters and find the corresponding character by position.
-
-Original link: [https://snowpeak.blog.csdn.net/article/details/2221935](https://snowpeak.blog.csdn.net/article/details/2221935)
+Summary: A simplified and traditional Chinese converter written in JavaScript.
 
 ---------
+Recently, I came across many simplified-to-traditional Chinese conversion programs online. However, most of them only cover around 3,000 commonly used characters. Here, I have organized the characters more comprehensively and clarified the logic. The main idea is to create two strings containing the simplified and traditional versions of the main Chinese characters and find the corresponding character by position.
 
 Based on suggestions from Lang Tao <https://blog.csdn.net/lt1129lt>, I removed characters that are identical in both simplified and traditional forms and added a filter to exclude non-Chinese characters. This optimization reduced runtime to about 30% of the original. The new source code can be found here:
 
@@ -55,3 +54,4 @@ Traditional
 </html>
 ```
 
+Original link: [https://snowpeak.blog.csdn.net/article/details/2221935](https://snowpeak.blog.csdn.net/article/details/2221935)

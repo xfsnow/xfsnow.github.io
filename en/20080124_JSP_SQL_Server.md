@@ -4,9 +4,11 @@ Published: *2008-01-24 20:03:00*
 
 Category: __Development__
 
+Summary: This article describes how to create images with JSP reading image data in SQL Server 2000.
+
 ---------
 
-## [Create Images with JSP Reading Image data in SQL Server 2000](/en/article/detail/create_images_with_jsp_reading_image_data_in_sql_server_2000/)
+## Create Images with JSP Reading Image data in SQL Server 2000
 
 ### Environment
 
@@ -83,7 +85,6 @@ java.io.IOException: [Microsoft][SQLServer 2000 Driver for JDBC]Object has been 
 I spent a lot of time figuring out that as long as the field name photo is placed last, it will work, but it won't work if it's not placed last. According to online research, the reason is said to be a problem with the JDBC database driver for SQL Server 2000.
 
 I hope this can help others. Friends who understand this matter are welcome to discuss it together.
-
 
 
 ---

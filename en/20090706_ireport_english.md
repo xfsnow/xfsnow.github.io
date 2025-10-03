@@ -27,6 +27,3 @@ default_options="-J-Xms256m -J-Xmx512m -J-Dfile.encoding=UTF-8 -J-Dorg.netbeans.
 After this change, when you start iReport again, the interface will be in English.
 
 The principle is that under Simplified Chinese operating systems, the JVM typically detects the system property user.language=zh, and iReport uses this system property value at startup. By specifying -J-Duser.language=en as a startup parameter for iReport, I explicitly set the user language to English, thus making the interface appear in English.
-
----
-*原文链接: https://www.snowpeak.fun/en/article/detail/set_ireport_35_to_english_ui/*

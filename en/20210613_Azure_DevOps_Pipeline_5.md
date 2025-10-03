@@ -6,8 +6,6 @@ Category: __Azure__
 
 Summary: This is the final part of the series on combining multiple repositories with Azure DevOps pipeline. In our previous posts, we have included two source repositories of front-end and back-end projects, built the two projects, and combined the artifacts from front-end and back-end together. In this final post, we will deploy the artifacts to Azure App Service.
 
-Original article: [https://snowpeak.blog.csdn.net/article/details/118493083](https://snowpeak.blog.csdn.net/article/details/118493083)
-
 ---------
 
 This is the final part of the series on combining multiple repositories with Azure DevOps pipeline. In our previous posts, we have included two source repositories of front-end and back-end projects, built the two projects, and combined the artifacts from front-end and back-end together. In this final post, we will deploy the artifacts to Azure App Service.

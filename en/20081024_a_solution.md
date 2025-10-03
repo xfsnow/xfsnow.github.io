@@ -4,6 +4,8 @@ Published: *2008-10-24 17:35:00*
 
 Category: __Backend__
 
+Summary: This article describes a solution to the PHP error `syntax error, unexpected $end`.
+
 ---------
 
 When PHP encounters the error `syntax error, unexpected $end`, the debugging steps are as follows:
@@ -51,9 +53,3 @@ As a result, adding `//` to `$str .= "?>\n";` to make it a comment inadvertently
 
 - Modify the `php.ini` configuration:
   - Set `short_open_tag = On`.
-
----
-
-*Original article by CSDN blogger "Pompeii" under CC 4.0 BY-SA license. Please include the original link and this statement when sharing.*
-
-Original Link: [https://blog.csdn.net/Pompeii/article/details/19818167](https://blog.csdn.net/Pompeii/article/details/19818167)

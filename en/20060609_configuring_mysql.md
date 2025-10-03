@@ -4,6 +4,8 @@ Published: *2006-06-09 11:15:00*
 
 Category: __Backend__
 
+Summary: This article describes how to configure MySQL 4.1 with JRun 4 using the Connector/J driver.
+
 ---------
 
 ## [Configuring MySQL 4.1 with JRun 4 using the Connector/J driver](/en/article/detail/configuring_mysql_41_with_jrun_4_using_the_connectorj_driver/)

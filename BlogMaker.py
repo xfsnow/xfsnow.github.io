@@ -91,7 +91,7 @@ class BlogMaker:
             markdownPath = os.path.join(self.langPath, article['filename'].replace('.htm', '.md'))
             # markdownPath 去掉开头 / 符
             markdownPath = markdownPath.lstrip('/')
-            print(f"正在处理文章: {markdownPath}")
+            # print(f"正在处理文章: {markdownPath}")
             # exit()
             if not os.path.exists(markdownPath):
                 print(f"文章文件 {markdownPath} 不存在")
@@ -177,7 +177,6 @@ class BlogMaker:
         # 取第一个 --------- 以后的内容为文章正文
         # 使用正则表达式匹配第一个 '---' 之后的内容
         content = re.split(r'^-+\s*$', content, maxsplit=1, flags=re.MULTILINE)
-        # print(content)
         content = content[1] if len(content) > 1 else content[0]  # 取第二部分作为正文
 
         # 使用 markdown 库将 Markdown 转换为 HTML
@@ -477,7 +476,6 @@ class BlogMaker:
         media_dir = 'media'
         if os.path.exists(media_dir):
             image_files = glob.glob(os.path.join(media_dir, 'image*'))
-            print(image_files)
             workPath = os.path.dirname(os.path.abspath(__file__)) + '/' + self.langPath + '/'
             # 读取 markdown 文件内容
             md_file = workPath + target_file
@@ -564,7 +562,8 @@ class BlogMaker:
                         # 替换内容
                         # content = content.replace("发布时间:", "Published:")
                         # content = content.replace("分类:", "Category:")
-                        content = content.replace("__人工智能__", "__AI__")
+                        # content = content.replace("__人工智能__", "__AI__")
+                        content = content.replace("Introduction: ", "Summary: ")
                         
                         # 使用 utf-8 编码写入文件
                         with open(file_path, "w", encoding="utf-8") as f:
@@ -657,3 +656,4 @@ if __name__ == "__main__":
 
     blog_maker = BlogMaker('en')
     blog_maker.main()
+    # blog_maker.fix()

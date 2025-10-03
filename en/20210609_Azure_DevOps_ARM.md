@@ -4,7 +4,7 @@ Published: *2021-09-09 10:01:44*
 
 Category: __Azure__
 
-Introduction: While using pipelines in DevOps to deploy applications is the most common scenario for automated deployment, there is also automated deployment of infrastructure resources. Especially after adopting cloud computing platforms, combining infrastructure-as-code approaches can more conveniently integrate cloud resource management into DevOps pipelines, achieving overall automated deployment from resources to applications using DevOps. Today, using Azure cloud as an example, we introduce a basic automated cloud resource management solution.
+Summary: While using pipelines in DevOps to deploy applications is the most common scenario for automated deployment, there is also automated deployment of infrastructure resources. Especially after adopting cloud computing platforms, combining infrastructure-as-code approaches can more conveniently integrate cloud resource management into DevOps pipelines, achieving overall automated deployment from resources to applications using DevOps. Today, using Azure cloud as an example, we introduce a basic automated cloud resource management solution.
 
 ---------
 

@@ -6,8 +6,6 @@ Category: __Frontend__
 
 Summary: Measuring HTML, CSS, and JavaScript proficiency through developers' thoughts and approaches. Often, how you perceive a technology and how you apply it best reflects your technical level.
 
-Original Link: [https://snowpeak.blog.csdn.net/article/details/5727001](https://snowpeak.blog.csdn.net/article/details/5727001)
-
 ---
 
 What we're discussing here are not test questions, but rather 3 articles recently encountered online, written by several foreign experts, that measure HTML, CSS, and JavaScript proficiency from developers' thoughts and approaches.
@@ -128,5 +126,4 @@ Can skillfully use JavaScript to create complex interactive effects, understand 
 Have deep understanding of JavaScript language features, can develop complex frameworks and libraries, and have in-depth research and contributions to the language itself.
 
 ## Conclusion
-
 As these articles point out, improving technical skills is not just about mastering more syntax and features, but more importantly, understanding the essence of technology and having the right approach to using it. No matter what level you're at, the key is to maintain a learning attitude and continuously improve your technical skills.

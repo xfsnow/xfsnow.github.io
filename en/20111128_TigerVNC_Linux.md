@@ -4,7 +4,7 @@ Published: *2011-11-28 17:40:00*
 
 Category: __System__
 
-Introduction: This article describes how to configure remote desktop services using TigerVNC on Linux systems, including server-side configuration, client connections, and secure connection methods via SSH tunneling.
+Summary: This article describes how to configure remote desktop services using TigerVNC on Linux systems, including server-side configuration, client connections, and secure connection methods via SSH tunneling.
 
 ---------
 

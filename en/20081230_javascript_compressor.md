@@ -4,6 +4,8 @@ Published: *2008-12-30 14:00:00*
 
 Category: __Frontend__
 
+Summary: This article introduces two JavaScript compressor and formatter programs.
+
 ---------
 
 I had previously found a program for compressing JavaScript code and had been using it consistently, feeling that the effect was quite good.

@@ -4,6 +4,8 @@ Published: *2005-07-18 18:19:00*
 
 Category: __Tools__
 
+Summary: Snowpeak introduces the main process and tools for extracting subtitles from DVD.
+
 ---
 
 ## [Main Process and Tools for Extracting Subtitles from DVD](/en/article/detail/main_steps_and_tools_to_extract_subtitle_from_dvd/)
@@ -33,5 +35,3 @@ Here is a brief introduction to each step and the software tools used.
     Convert the srt subtitle file to SSA or ASS format. You can still use Subtitle Workshop to convert the file format, but for creating effects, I always use a text editor to write them by hand.
     For a text editor, I recommend UltraEdit.
 
----
-*Original link: https://www.snowpeak.fun/en/article/detail/main_steps_and_tools_to_extract_subtitle_from_dvd/*

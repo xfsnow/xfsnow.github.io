@@ -4,7 +4,7 @@ Published: *2012-07-08 20:31:58*
 
 Category: __Frontend__
 
-Introduction: This article introduces how to install the Spket plugin in Eclipse and configure it to support code completion for ExtJs4.1 and jQuery. Through detailed step-by-step instructions, it helps developers improve JavaScript development efficiency.
+Summary: This article introduces how to install the Spket plugin in Eclipse and configure it to support code completion for ExtJs4.1 and jQuery. Through detailed step-by-step instructions, it helps developers improve JavaScript development efficiency.
 
 Original link: [https://snowpeak.blog.csdn.net/article/details/7727874](https://snowpeak.blog.csdn.net/article/details/7727874)
 

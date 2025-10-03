@@ -34,7 +34,3 @@ devpts /dev/pts devpts gid=5,mode=620 0 0
 sysfs /sys sysfs defaults 0 0
 proc /proc proc defaults 0 0
 ```
-
-
----
-*Original link: https://www.snowpeak.fun/cn/article/detail/disable_access_time_to_boost_hard_disk_performance/*

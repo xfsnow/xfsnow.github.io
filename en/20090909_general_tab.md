@@ -4,7 +4,7 @@ Published: *2009-09-09 15:29:00*
 
 Category: __Frontend__
 
-Summary: A pure CSS+JS universal tab
+Summary: This article discusses a specific scenario and solution for creating a universal tab.
 
 ---------
 
@@ -175,6 +175,3 @@ width:25%; is only used for the default 4 tabs. When the number of tabs is not 4
 </body>
 </html>
 ```
-
----
-*Original link: https://www.snowpeak.fun/en/article/detail/general_tab_with_pure_css_and_js/*

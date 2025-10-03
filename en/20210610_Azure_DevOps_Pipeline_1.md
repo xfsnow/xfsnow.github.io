@@ -6,8 +6,6 @@ Category: __Azure__
 
 Summary: Azure DevOps, as an end-to-end tool chain for DevOps on the Microsoft Cloud, provides commonly used modules for developing main features, especially the CI and CD that are automated by the Repos source repository combined with the Pipelines pipeline. This article guides you through Azure Pipelines, familiarizes you with basic YAML file usage, and integrates the docking of pipelines and release lines.
 
-Original article: [https://snowpeak.blog.csdn.net/article/details/118493083](https://snowpeak.blog.csdn.net/article/details/118493083)
-
 ---------
 
 Azure DevOps, as an end-to-end tool chain for DevOps on the Microsoft Cloud, provides commonly used modules for developing the main features commonly used today, especially the CI and CD that are automated by the Repos source repository combined with the Pipelines pipeline. As current Web applications evolve, separated front and back architectures have become mainstream. Front-end and back-end source code are typically developed by two teams and stored in two source repositories, while automated integration and deployment often require unified deployment to a single resource environment. To implement this common scenario, today we'll take you through the pipelines of Azure Pipelines, familiarize yourself with the basic usage of YAML files, and integrate the docking of pipelines and release lines.

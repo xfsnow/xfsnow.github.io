@@ -6,8 +6,6 @@ Category: __Azure__
 
 Summary: The source and target are ready, let's configure the CI pipeline first. We will create a pipeline to build the back-end project and save the build artifacts.
 
-Original article: [https://snowpeak.blog.csdn.net/article/details/118493083](https://snowpeak.blog.csdn.net/article/details/118493083)
-
 ---------
 
 ## Configure the CI pipeline

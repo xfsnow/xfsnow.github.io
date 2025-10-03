@@ -6,8 +6,6 @@ Category: __Azure__
 
 Summary: This is the 4th part of the series on combining multiple repositories with Azure DevOps pipeline. In our last post, we have included the two source repositories of front-end and back-end projects. In this post, we will continue to build the front-end project and combine the artifacts from front-end and back-end together.
 
-Original article: [https://snowpeak.blog.csdn.net/article/details/118493083](https://snowpeak.blog.csdn.net/article/details/118493083)
-
 ---------
 
 This is the 4th part of the series on combining multiple repositories with Azure DevOps pipeline. In our last post, we have included the two source repositories of front-end and back-end projects. In this post, we will continue to build the front-end project and combine the artifacts from front-end and back-end together.

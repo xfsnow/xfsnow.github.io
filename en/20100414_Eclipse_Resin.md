@@ -4,7 +4,7 @@ Published: *2010-04-14 22:36:00*
 
 Category: __Backend__
 
-Summary: Eclipse 3.5 + Resin 2.1.17 or Resin 3.1.10 has been tested.
+Summary: This article provides a solution for using Resin in Eclipse without the Resin plugin.
 
 ## I. Resin Configuration
 

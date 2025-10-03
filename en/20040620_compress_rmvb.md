@@ -4,6 +4,8 @@ Published: *2004-06-20 20:42:00*
 
 Category: __Tools__
 
+Summary: Compressing RMVB with Helix Producer
+
 ---------
 
 Most movie and animation files popular on the internet nowadays are in RMVB format, which has the following advantages:

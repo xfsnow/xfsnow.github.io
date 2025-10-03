@@ -123,6 +123,3 @@ The implementation principle of this universal scrolling bar is based on the fol
 2. Write HTML code according to the example structure
 3. Adjust the container height and list item styles as needed
 4. Add JavaScript code to control the scrolling effect
-
----
-*Original link: https://www.snowpeak.fun/en/article/detail/css_javascript_universal_scrolling_bar/*

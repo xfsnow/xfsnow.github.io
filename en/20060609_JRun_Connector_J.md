@@ -4,9 +4,8 @@ Published: *2006-06-09 11:15:00*
 
 Category: __Database__
 
-Introduction: MySQL has released a new JDBC driver called Connector/J. The previous MySQL configuration for JDBC data sources in JRun no longer works. The following configuration method has been tested successfully. Environment: Windows 2000 Advanced Server (SP4) + JRun 4.0.5.27373 + MySQL 4.0.16. The MySQL Connector/J JDBC driver used is mysql-connector-j.
+Summary: MySQL has released a new JDBC driver called Connector/J. The previous MySQL configuration for JDBC data sources in JRun no longer works. The following configuration method has been tested successfully. Environment: Windows 2000 Advanced Server (SP4) + JRun 4.0.5.27373 + MySQL 4.0.16. The MySQL Connector/J JDBC driver used is mysql-connector-j.
 
-Original link: [https://snowpeak.blog.csdn.net/article/details/782259](https://snowpeak.blog.csdn.net/article/details/782259)
 
 ---------
 

@@ -4,7 +4,7 @@ Published: *2012-02-25 18:03:26*
 
 Category: __System__
 
-Introduction: As time goes by, most of the documentation available online for installing Memcache on Windows has become outdated. Here Xuefeng briefly introduces the installation and configuration methods for the latest version.
+Summary: As time goes by, most of the documentation available online for installing Memcache on Windows has become outdated. Here Xuefeng briefly introduces the installation and configuration methods for the latest version.
 
 ---------
 

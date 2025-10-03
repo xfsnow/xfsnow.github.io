@@ -6,7 +6,6 @@ Category: __Azure__
 
 Summary: Azure DevOps currently only provides SaaS services in Microsoft Azure's overseas regions, and has not yet been released in Azure China regions. Actually, Azure DevOps can manage various cloud and application deployment environments and platforms, and can conveniently connect to Azure China regions through Service Connections, as well as other special Azure regions such as US Government Cloud, Germany regions, etc. This article will guide you step by step to configure China region subscriptions and establish connections from Azure DevOps to China region subscriptions.
 
-Original article: [https://snowpeak.blog.csdn.net/article/details/117301972](https://snowpeak.blog.csdn.net/article/details/117301972)
 
 ---------
 

@@ -4,7 +4,7 @@ Published: *2012-06-25 21:39:00*
 
 Category: __Database__
 
-Introduction: This article delves into the implementation of tree structures in relational databases using the Nested Set Model. Based on Mike Hillyer's classic model, performance is optimized by adding a node depth field, providing a complete implementation scheme for CRUD operations.
+Summary: This article delves into the implementation of tree structures in relational databases using the Nested Set Model. Based on Mike Hillyer's classic model, performance is optimized by adding a node depth field, providing a complete implementation scheme for CRUD operations.
 
 ---------
 

@@ -4,7 +4,7 @@ Published: *2016-03-13 22:37:47*
 
 Category: __Development__
 
-Introduction: This tutorial introduces how to implement simplified user-system binding through WeChat web authorization. Using the OAuth2.0 interface, users can achieve automatic login without repeated logins, enhancing user experience. The article details the association process between WeChat user OpenID and system user UserId, as well as the implementation method of silent authorization mode.
+Summary: This tutorial introduces how to implement simplified user-system binding through WeChat web authorization. Using the OAuth2.0 interface, users can achieve automatic login without repeated logins, enhancing user experience. The article details the association process between WeChat user OpenID and system user UserId, as well as the implementation method of silent authorization mode.
 
 Original link: [https://snowpeak.blog.csdn.net/article/details/50880884](https://snowpeak.blog.csdn.net/article/details/50880884)
 

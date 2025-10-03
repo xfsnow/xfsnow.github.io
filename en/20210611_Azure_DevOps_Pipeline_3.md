@@ -6,8 +6,6 @@ Category: __Azure__
 
 Summary: This is the 3rd part of the series on combining multiple repositories with Azure DevOps pipeline. In this post, we will introduce the second source repository (front-end project) into our existing pipeline and configure it to work with the back-end project.
 
-Original article: [https://snowpeak.blog.csdn.net/article/details/118493083](https://snowpeak.blog.csdn.net/article/details/118493083)
-
 ---------
 
 ## Introduce the second source repository

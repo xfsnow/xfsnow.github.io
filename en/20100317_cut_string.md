@@ -70,6 +70,3 @@ The core idea of this solution is based on the characteristic that Chinese chara
 1. Call the `cutMultibyte(String splitStr, int extract)` method
 2. Pass in the string to be truncated and the byte count
 3. The method will return a byte-truncated string without breaking Chinese characters
-
----
-*Original link: https://www.snowpeak.fun/en/article/detail/cut_string_with_chinese_by_byte_in_java/*

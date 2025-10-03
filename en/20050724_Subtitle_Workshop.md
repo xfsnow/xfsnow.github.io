@@ -4,9 +4,8 @@ Published: *2005-07-24 10:00:00*
 
 Category: __Tools__
 
-Summary: Official website: www.urusoft.net Size: 1 MB Registration: Free software Operating system: Windows 9x, ME, NT, 2000, XP Installation requirements: Requires codecs needed to play the video files you want to subtitle. Official download Local download This is a compressed program file extracted by Snowpeak, can be run directly after extraction without installation, interface has been changed to Chinese. After installation and first run, go to Settings > Language > Chinese Simpli
+Summary: Subtitle Workshop is a professional subtitle editor.
 
-Original Link: [https://snowpeak.blog.csdn.net/article/details/433102](https://snowpeak.blog.csdn.net/article/details/433102)
 
 ---------
 
@@ -61,3 +60,6 @@ Download and install RealOne codec, which can be downloaded from the following w
 <http://www.skycn.com/soft/14852.html>
 
 Change the file extension of the RM/RMVB file you want SW to open to .avi, then use CTRL+P to open the video file.
+
+
+Original Link: [https://snowpeak.blog.csdn.net/article/details/433102](https://snowpeak.blog.csdn.net/article/details/433102)

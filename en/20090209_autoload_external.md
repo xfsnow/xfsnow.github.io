@@ -4,6 +4,8 @@ Published: *2009-02-09 17:29:00*
 
 Category: __Frontend__
 
+Summary: This article is a JavaScript file that can be used to batch load external JavaScript files.
+
 ---------
 
 Although the title is "Autoload External JavaScript Files", it hasn't reached the level of PHP where class definition files are automatically loaded when new class names are encountered in the program. It still requires specifying file names to load external JavaScript files, but this should be sufficient for JavaScript. When there are many external JavaScript files, this is quite convenient. For detailed instructions on usage, please see the comments in the source code.

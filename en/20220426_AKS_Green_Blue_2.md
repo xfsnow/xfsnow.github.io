@@ -6,8 +6,6 @@ Category: __Azure__
 
 Summary: In the first part of this series, we introduced the basic concepts of AKS blue-green deployment and explained how to deploy related resources and integrate Application Gateway with AKS. For those who missed the first part, you can click here to review. In this part, we will build upon the previous content to further explain how to deploy applications, how to deploy new AKS clusters, and how to switch between AKS versions.
 
-Original article: [https://snowpeak.blog.csdn.net/article/details/124430834](https://snowpeak.blog.csdn.net/article/details/124430834)
-
 ---------
 
 In the first part of this series, we introduced the basic concepts of AKS blue-green deployment and explained how to deploy related resources and integrate Application Gateway with AKS. For those who missed the first part, you can click [here to review](/zh/20220301_AKS.htm)。

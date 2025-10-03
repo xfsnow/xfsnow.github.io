@@ -4,7 +4,7 @@ Published: *2012-03-08 21:24:42*
 
 Category: __Database__
 
-Introduction: Based on a question and answer from Stack Overflow, this article explores the behavior characteristics of auto-increment IDs when inserting multiple records at once in MySQL. In normal circumstances, the LAST_INSERT_ID() function returns the ID of the first inserted record, and the IDs of other records are usually consecutive. However, in a specific replicated multi-master setup configuration, odd and even number distributions may occur.
+Summary: Based on a question and answer from Stack Overflow, this article explores the behavior characteristics of auto-increment IDs when inserting multiple records at once in MySQL. In normal circumstances, the LAST_INSERT_ID() function returns the ID of the first inserted record, and the IDs of other records are usually consecutive. However, in a specific replicated multi-master setup configuration, odd and even number distributions may occur.
 
 Original link: [https://snowpeak.blog.csdn.net/article/details/7334546](https://snowpeak.blog.csdn.net/article/details/7334546)
 

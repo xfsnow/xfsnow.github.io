@@ -4,6 +4,8 @@ Published: *2007-06-08 16:01:00*
 
 Category: __Tools__
 
+Summary: PDF files often contain watermarks, which can be removed using Adobe Acrobat Professional.
+
 ---------
 
 ## Methods to Remove Watermarks from PDF Files

@@ -4,7 +4,7 @@ Published: *2011-12-25 17:56:15*
 
 Category: __System__
 
-Introduction: This article documents the 10th anniversary of the snowpeak.org domain registration, reviewing the website's development journey from its creation in 2000 to the present, and the story behind the domain registration.
+Summary: This article documents the 10th anniversary of the snowpeak.org domain registration, reviewing the website's development journey from its creation in 2000 to the present, and the story behind the domain registration.
 
 ---------
 

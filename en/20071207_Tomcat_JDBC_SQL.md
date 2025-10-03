@@ -8,8 +8,6 @@ Summary: Tomcat 6 Configuration for Connecting SQL Server 2000 and MySQL 5 via J
 
 ---------
 
-## [Configure Tomcat 6 to Connect SQL Server 2000 and MySQL 5 with JDBC Pool](/en/article/detail/configure_tomcat_6_to_connect_sql_server_2000_and_mysql_5_with_jdbc_pool/)
-
 ## Tomcat 6 Configuration for Connecting SQL Server 2000 and MySQL 5 via JDBC Pool
 
 The Tomcat documentation and online resources can be quite confusing. After several days of testing, I successfully configured Tomcat 6 and would like to share the setup.

@@ -4,12 +4,9 @@ Published: *2006-11-23 16:33:00*
 
 Category: __Backend__
 
+Summary: This article introduces a new function for dynamically including ASP files.
+
 ---------
-
-## [Dynamically including ASP File Improved](/en/article/detail/dynamically_including_asp_file_improved/)
-
----
-*Link: https://www.snowpeak.fun/en/article/detail/dynamically_including_asp_file_improved/*
 
 ## Dynamically Including ASP Files: Enhancements
 

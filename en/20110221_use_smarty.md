@@ -39,6 +39,3 @@ class MySmarty extends Smarty
 ```
 
 Note: There was a logical error in the original code. The line `set_magic_quotes_runtime (true);` would never execute because it was after the `return` statement. I have fixed this issue in the modified code.
-
----
-*Original link: https://www.snowpeak.fun/cn/article/detail/use_smarty_with_magic_quotes_gpc_on/*

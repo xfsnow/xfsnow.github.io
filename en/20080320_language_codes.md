@@ -4,9 +4,7 @@ Published: *2008-03-20 17:53:00*
 
 Category: __Development__
 
-Introduction: Recently collected and organized some language codes and names for internationalization, sharing them here.
-
-Original link: [https://snowpeak.blog.csdn.net/article/details/2200674](https://snowpeak.blog.csdn.net/article/details/2200674)
+Summary: Recently collected and organized some language codes and names for internationalization, sharing them here.
 
 ---------
 

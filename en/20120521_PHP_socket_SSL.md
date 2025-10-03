@@ -4,7 +4,7 @@ Published: *2012-05-21 20:00:41*
 
 Category: __System__
 
-Introduction: This article describes how to enable SSL support for PHP socket functionality in a Windows environment, resolving the "Unable to find the socket transport "ssl"" error.
+Summary: This article describes how to enable SSL support for PHP socket functionality in a Windows environment, resolving the "Unable to find the socket transport "ssl"" error.
 
 ---------
 
