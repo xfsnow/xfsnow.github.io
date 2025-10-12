@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>浏览器端Python运行环境</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <!-- 添加Google Fonts中的中文字体支持 -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- 配置Tailwind -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#3B82F6',
+                        secondary: '#10B981',
+                        dark: '#1E293B',
+                        light: '#F8FAFC'
+                    },
+                    fontFamily: {
+                        'noto-sans': ['"Noto Sans SC"', 'sans-serif'],
+                        mono: ['Consolas', 'Monaco', 'monospace'],
+                    },
+                }
+            }
+        }
+    </script>
+    
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .content-auto {
+                content-visibility: auto;
+            }
+            .editor-height {
+                height: calc(50vh - 4rem);
+            }
+            .output-height {
+                height: calc(50vh - 4rem);
+            }
+            /* 添加绘图区域背景为白色的样式 */
+            .plot-background {
+                background-color: white;
+            }
+        }
+    </style>
+        <!-- 加载Pyodide -->
+    <script src="https://cdn.jsdelivr.net/pyodide/v0.28.3/full/pyodide.js"></script>
+    
+
+</head>
+<body class="bg-gray-100 text-dark">
+    <header class="bg-primary text-white shadow-md">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <h1 class="text-2xl font-bold">
+                <i class="fa fa-python mr-2"></i>浏览器端Python运行环境
+            </h1>
+            <div class="text-sm bg-white/20 px-3 py-1 rounded-full">
+                支持 matplotlib, numpy, math
+            </div>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-4 py-6">
+        <!-- 代码编辑器区域 -->
+        <div class="mb-6">
+            <div class="flex justify-between items-center mb-2">
+                <h2 class="text-xl font-semibold">代码编辑器</h2>
+                <button id="runBtn" class="bg-secondary hover:bg-secondary/90 text-white px-4 py-2 rounded-md flex items-center transition-all">
+                    <i class="fa fa-play mr-2"></i>运行代码
+                </button>
+            </div>
+            <div class="border border-gray-300 rounded-lg overflow-hidden shadow-sm">
+                <textarea id="codeEditor" class="w-full editor-height p-4 font-mono text-sm bg-white focus:outline-none focus:ring-2 focus:ring-primary/50 resize-none noto-sans" placeholder="在这里输入Python代码...">
+import numpy as np
+import matplotlib.pyplot as plt
+import math
+
+# 示例：绘制正弦和余弦曲线
+x = np.linspace(0, 2 * math.pi, 100)
+y_sin = np.sin(x)
+y_cos = np.cos(x)
+
+plt.figure(figsize=(10, 6))
+plt.plot(x, y_sin, label='sin(x)')
+plt.plot(x, y_cos, label='cos(x)')
+# 添加中文标签测试
+plt.xlabel('x轴')
+plt.ylabel('y轴')
+plt.title('正弦和余弦曲线')
+plt.legend()
+plt.grid(True)
+plt.show()
+                </textarea>
+            </div>
+        </div>
+
+        <!-- 输出结果区域 -->
+        <div>
+            <h2 class="text-xl font-semibold mb-2">输出结果</h2>
+            <div class="border border-gray-300 rounded-lg overflow-hidden shadow-sm">
+                <div id="output" class="w-full output-height p-4 font-mono text-sm bg-white text-dark overflow-auto plot-background noto-sans">
+                    <div class="text-gray-400 italic">
+                        <i class="fa fa-info-circle mr-1"></i>代码运行结果将显示在这里...
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-dark text-white/70 py-4 mt-6">
+        <div class="container mx-auto px-4 text-center text-sm">
+            基于 Pyodide 实现 | 在浏览器中安全运行 Python 代码
+        </div>
+    </footer>
+
+    <script>
+        let pyodide;
+        const outputDiv = document.getElementById('output');
+        const codeEditor = document.getElementById('codeEditor');
+        const runBtn = document.getElementById('runBtn');
+
+        // 初始化Pyodide
+        async function initPyodide() {
+            try {
+                outputDiv.innerHTML = '<div><i class="fa fa-spinner fa-spin mr-2"></i>正在加载Python环境和所需库，请稍候...</div>';
+                
+                // 加载Pyodide
+                // pyodide = await loadPyodide({
+                //     indexURL: "https://cdn.jsdelivr.net/pyodide/v0.24.1/full/"
+                // });
+                
+                pyodide = await loadPyodide();
+                // 安装所需的库
+                await pyodide.loadPackage(['numpy', 'matplotlib', 'micropip']);
+                
+                // 配置matplotlib在浏览器中显示
+                pyodide.runPython(`
+                    import matplotlib
+                    matplotlib.use('Agg')
+                    import matplotlib.pyplot as plt
+                    from io import BytesIO, StringIO
+                    import base64
+                    import warnings
+                    
+                    # 忽略matplotlib agg后端警告，因为在浏览器环境中这是正常的
+                    warnings.filterwarnings("ignore", "Matplotlib is currently using agg")
+                    
+                    # 增强中文字体支持
+                    # 设置多个备选字体，确保在不同系统中都能正确显示中文
+                    plt.rcParams['font.sans-serif'] = [
+                        'Microsoft YaHei',    # Windows雅黑
+                        'SimHei',             # 黑体
+                        'STHeiti',            # 华文黑体
+                        'Arial Unicode MS',   # 跨平台Unicode字体
+                        'DejaVu Sans',        # matplotlib默认字体
+                        'sans-serif'          # 通用备选
+                    ]
+                    plt.rcParams['axes.unicode_minus'] = False  # 正确显示负号
+                    
+                    # 设置图形背景为白色
+                    plt.rcParams['figure.facecolor'] = 'white'
+                    plt.rcParams['axes.facecolor'] = 'white'
+                    plt.rcParams['savefig.facecolor'] = 'white'
+                    
+                    # 设置字体大小，确保清晰可读
+                    plt.rcParams['font.size'] = 12
+                    plt.rcParams['axes.titlesize'] = 14
+                    plt.rcParams['axes.labelsize'] = 12
+                    
+                    # 重定向输出
+                    import sys
+                    sys.stdout = StringIO()
+                    sys.stderr = StringIO()
+                    
+                    # 自定义显示函数
+                    def show_plot(fig=None):
+                        if fig is None:
+                            fig = plt.gcf()
+                        buf = BytesIO()
+                        # 保存图像时明确指定背景色和DPI
+                        fig.savefig(buf, format='png', bbox_inches='tight', 
+                                   facecolor='white', edgecolor='none', dpi=100)
+                        buf.seek(0)
+                        img_str = base64.b64encode(buf.read()).decode('utf-8')
+                        return img_str
+                `);
+                
+                outputDiv.innerHTML = '<div class="text-green-400"><i class="fa fa-check-circle mr-2"></i>Python环境已加载完成，可以运行代码了！</div>';
+                runBtn.disabled = false;
+            } catch (error) {
+                outputDiv.innerHTML = `<div class="text-red-400"><i class="fa fa-exclamation-circle mr-2"></i>加载失败: ${error.message}</div>`;
+                console.error("Pyodide初始化失败:", error);
+            }
+        }
+
+        // 运行Python代码
+        async function runPythonCode() {
+            if (!pyodide) {
+                outputDiv.innerHTML = '<div class="text-red-400"><i class="fa fa-exclamation-circle mr-2"></i>Python环境尚未加载完成，请稍候...</div>';
+                return;
+            }
+
+            const code = codeEditor.value.trim();
+            if (!code) {
+                outputDiv.innerHTML = '<div class="text-yellow-400"><i class="fa fa-warning mr-2"></i>请输入Python代码后再运行</div>';
+                return;
+            }
+
+            try {
+                outputDiv.innerHTML = '<div class="text-yellow-400"><i class="fa fa-spinner fa-spin mr-2"></i>正在执行代码...</div>';
+                
+                // 重置输出缓冲区
+                pyodide.runPython("sys.stdout.seek(0); sys.stdout.truncate()");
+                pyodide.runPython("sys.stderr.seek(0); sys.stderr.truncate()");
+                
+                // 执行用户代码
+                const result = await pyodide.runPythonAsync(code);
+                
+                // 获取输出
+                const stdout = pyodide.runPython("sys.stdout.getvalue()");
+                let stderr = pyodide.runPython("sys.stderr.getvalue()");
+                
+                // 过滤掉matplotlib的agg后端警告，因为在浏览器环境中这是正常的
+                if (stderr) {
+                    stderr = stderr.replace(/UserWarning: Matplotlib is currently using agg, which is a non-GUI backend, so cannot show the figure.\s*/g, '');
+                    // 如果过滤后stderr为空，则设为null避免显示空的错误信息
+                    if (stderr.trim() === '') {
+                        stderr = null;
+                    }
+                }
+                
+                // 检查是否有图表需要显示
+                const has_plots = pyodide.runPython("len(plt.get_fignums()) > 0");
+                let plotHtml = "";
+                
+                if (has_plots) {
+                    // 获取图表
+                    const img_str = pyodide.runPython("show_plot()");
+                    plotHtml = `<div class="mt-4 plot-background"><img src="data:image/png;base64,${img_str}" class="max-w-full h-auto rounded border border-gray-600"></div>`;
+                    
+                    // 清除当前图表，为下一次绘制做准备
+                    pyodide.runPython("plt.close('all')");
+                }
+                
+                // 显示结果
+                let outputHtml = "";
+                if (stdout) {
+                    outputHtml += `<div class="mb-2">${stdout}</div>`;
+                }
+                if (stderr) {
+                    outputHtml += `<div class="mb-2 text-red-400">${stderr}</div>`;
+                }
+                if (result !== undefined && result !== null) {
+                    outputHtml += `<div class="mb-2 text-green-400">结果: ${result}</div>`;
+                }
+                outputHtml += plotHtml;
+                
+                outputDiv.innerHTML = outputHtml;
+                
+            } catch (error) {
+                outputDiv.innerHTML = `<div class="text-red-400"><i class="fa fa-exclamation-circle mr-2"></i>执行错误: ${error.message}</div>`;
+                console.error("代码执行错误:", error);
+            }
+        }
+
+        // 页面加载完成后初始化
+        window.addEventListener('load', initPyodide);
+        
+        // 绑定运行按钮事件
+        runBtn.addEventListener('click', runPythonCode);
+        
+        // 支持Ctrl+Enter运行代码
+        codeEditor.addEventListener('keydown', (e) => {
+            if (e.ctrlKey && e.key === 'Enter') {
+                runPythonCode();
+                e.preventDefault();
+            }
+        });
+    </script>
+</body>
+</html>
