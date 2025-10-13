@@ -53,57 +53,47 @@ window.addEventListener("load", function() {
     
     // 格式化AI响应内容
     static formatAIResponse(content) {
-      // 先处理Python代码块，将其替换为占位符
+      // 首先提取并保存所有Python代码块
       const pythonBlocks = [];
-      let placeholderContent = content.replace(/```(?:\s*python\s*|\s*python\s*\n)([\s\S]*?)```/g, (match, p1) => {
-        // 去除代码块内容前后的空白字符，但保留内部结构和换行符
-        const trimmedContent = p1.trim();
-        pythonBlocks.push(trimmedContent);
+      let placeholderContent = content.replace(/```(?:\s*python\s*|\s*python\s*\n)([\s\S]*?)```/gs, (match, p1) => {
+        const cleanedCode = p1.trim(); // 清理首尾空白
+        pythonBlocks.push(cleanedCode);
         return `{{PYTHON_BLOCK_${pythonBlocks.length - 1}}}`;
       });
-      
-      // 转义HTML特殊字符
+
+      // 对非代码部分进行HTML转义
       let formattedContent = placeholderContent
         .replace(/&/g, '&amp;')
         .replace(/</g, '&lt;')
         .replace(/>/g, '&gt;');
-      
-      // 处理普通代码块 ``` ... ```（在Python代码块恢复之前）
-      formattedContent = formattedContent.replace(/```([\s\S]*?)```/g, '<pre><code>$1</code></pre>');
-      
-      // 处理行内代码 `...`
-      formattedContent = formattedContent.replace(/`([^`]+)`/g, '<code>$1</code>');
-      
-      // 处理加粗 **...**
-      formattedContent = formattedContent.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
-      
-      // 处理换行（在恢复Python代码块之前应用）
-      formattedContent = formattedContent.replace(/\n/g, '<br>');
-      
-      // 恢复Python代码块为textarea（在所有格式化之后）
+
+      // 处理其他Markdown语法
+      formattedContent = formattedContent
+        .replace(/```([\s\S]*?)```/gs, '<pre><code>$1</code></pre>') // 普通代码块
+        .replace(/`([^`]+)`/g, '<code>$1</code>') // 行内代码
+        .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>') // 加粗
+        .replace(/\n/g, '<br>'); // 换行
+
+      // 最后，将保存的Python代码块替换为可执行的文本区域
       formattedContent = formattedContent.replace(/\{\{PYTHON_BLOCK_(\d+)\}\}/g, (match, index) => {
         const blockContent = pythonBlocks[index];
-        // 计算行数以设置合适的行高
-        const lines = blockContent.split('\n').length;
-        // 直接将内容放入textarea的value中，确保命令立即显示
-        return `<textarea class="ggb-code-block" rows="${Math.max(lines, 3)}">${blockContent}</textarea><div class="ggb-execute-container"><button class="ggb-execute-btn" data-ggb-execute><span class="ggb-execute-icon"></span>执行代码</button></div>`;
+        const lines = Math.max(blockContent.split('\n').length, 3);
+        return `<textarea class="ggb-code-block" rows="${lines}">${blockContent}</textarea><div class="ggb-execute-container"><button class="ggb-execute-btn" data-ggb-execute><span class="ggb-execute-icon"></span>执行代码</button></div>`;
       });
-      
+
       return formattedContent;
     }
-    
+
     // 提取Python代码
     static extractPythonCode(response) {
-      // 使用正则表达式提取```python和```之间的内容，允许python关键字和代码块标记之间有换行符
-      const regex = /```(?:\s*python\s*|\s*python\s*\n)([\s\S]*?)```/g;
-      let match;
+      const regex = /```(?:\s*python\s*|\s*python\s*\n)([\s\S]*?)```/gs;
       const codes = [];
-      
+      let match;
+
       while ((match = regex.exec(response)) !== null) {
-        const codeBlock = match[1].trim();
-        codes.push(codeBlock);
+        codes.push(match[1].trim());
       }
-      
+
       return codes;
     }
   }
@@ -845,6 +835,15 @@ window.addEventListener("load", function() {
         chatHistory.pop();
       }
       
+      // 创建通用的API调用完成回调函数
+      const handleApiComplete = (response) => {
+        this.displayMessage(response, 'ai');
+        const codes = AiBase.extractPythonCode(response);
+        if (codes.length > 0) {
+          console.log('AI响应中提取到Python代码:', codes);
+        }
+      };
+
       // 根据选择的模型调用相应的API
       switch (selectedModel) {
         case 'azure-openai':
@@ -864,14 +863,7 @@ window.addEventListener("load", function() {
           azureAI.callAPI(
             message,
             (content, sender, isThinking) => this.displayMessage(content, sender, isThinking),
-            (response) => {
-              this.displayMessage(response, 'ai');
-              // 提取Python代码
-              const codes = AiBase.extractPythonCode(response);
-              if (codes.length > 0) {
-                console.log('Python代码提取完成:', codes);
-              }
-            },
+            handleApiComplete,
             (error) => this.displayMessage(error, 'ai'),
             tempImage // 传递图片数据
           );
@@ -881,13 +873,7 @@ window.addEventListener("load", function() {
           qwenAI.callAPI(
             message,
             (content, sender, isThinking) => this.displayMessage(content, sender, isThinking),
-            (response) => {
-              this.displayMessage(response, 'ai');
-              console.log('API response:', response);
-              // 提取Python代码
-              const codes = AiBase.extractPythonCode(response);
-              console.log('Python代码解析完成:', codes);
-            },
+            handleApiComplete,
             (error) => this.displayMessage(error, 'ai'),
             tempImage // 传递图片数据
           );
@@ -898,14 +884,7 @@ window.addEventListener("load", function() {
           deepSeekAI.callAPI(
             message,
             (content, sender, isThinking) => this.displayMessage(content, sender, isThinking),
-            (response) => {
-              this.displayMessage(response, 'ai');
-              // 提取Python代码
-              const codes = AiBase.extractPythonCode(response);
-              if (codes.length > 0) {
-                console.log('Python代码提取完成:', codes);
-              }
-            },
+            handleApiComplete,
             (error) => this.displayMessage(error, 'ai')
           );
           break;
@@ -941,9 +920,15 @@ window.addEventListener("load", function() {
         messageDiv.classList.add('ai-thinking');
       }
       
-      // 如果是AI消息且不是思考中状态，则格式化内容
+      // 如果是AI消息且不是思考中状态，则格式化内容并提取Python代码
       if (sender === 'ai' && !isThinking) {
         messageDiv.innerHTML = AiBase.formatAIResponse(message);
+        
+        // 提取并记录Python代码
+        const codes = AiBase.extractPythonCode(message);
+        if (codes.length > 0) {
+          console.log('AI响应中提取到Python代码:', codes);
+        }
       } else {
         messageDiv.textContent = message;
       }
