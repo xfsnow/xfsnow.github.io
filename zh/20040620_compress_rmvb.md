@@ -4,6 +4,8 @@
 
 分类: __软件工具__
 
+简介: Helix Producer 是 RealNetworks 公司的 Helix Producer 压缩工具，用于将 RMVB 文件压缩为 RealVideo 9 格式。本文绍Helix Producer压缩RMVB的基本方法。
+
 ---------
 
 

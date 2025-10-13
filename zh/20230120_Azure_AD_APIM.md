@@ -4,7 +4,7 @@
 
 分类: __Azure__
 
-简介: Azure API Management是微软云Azure上托管的API网关服务，具备完备的API管理功能。在安全方面，可以和Azure Active Directory紧密集成，提供客户端OAuth 2.0的验证机制。官方文档<https://docs.microsoft.com/en-us/azure/api-management/api-management-howto-protect-backend-with-aad>有些简略，这里详细讲解验证机制和配置流程。
+简介: Azure API Management是微软云Azure上托管的API网关服务，具备完备的API管理功能。在安全方面，可以和Azure Active Directory紧密集成，提供客户端OAuth 2.0的验证机制。官方文档有些简略，这里详细讲解验证机制和配置流程。
 
 -------------------------------------
 

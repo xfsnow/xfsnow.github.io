@@ -182,6 +182,7 @@ const userContent = [
 ### 多模型支持
 
 ChatGGB 支持多种主流 AI 模型：
+
 1. **DeepSeek**：适合中文场景的开源大模型
 2. **通义千问**：阿里巴巴的千问系列模型，支持图像理解
 3. **Azure OpenAI**：微软 Azure 平台的 OpenAI 服务

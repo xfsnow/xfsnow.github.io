@@ -2,15 +2,14 @@
 
 发布时间: *2005-07-24 10:00:00*
 
-简介: 官方站点：www.urusoft.net体积：1 MB注册：免费软件运行系统：Windows 9x, ME, NT, 2000, XP 安装需要：需要播放你要做的影片所需的解码器。 官方站点下载本地下载 这是雪峰提取压缩的程序文件，不用安装直接解压后即可运行，界面已经变成中文。安装完成后第一次运行，可 Settings > Language > Chinese Simpli
-
 分类: __软件工具__
 
-原文链接: [https://snowpeak.blog.csdn.net/article/details/433102](https://snowpeak.blog.csdn.net/article/details/433102)
+
+简介: Subtitle Workshop 是一款免费、轻量但功能强大的字幕编辑工具，支持多语言界面与五十余种常见字幕格式，提供便捷的时间轴标注与自定义快捷键，并可同时处理原文与译文字幕。本文介绍其基本设置、常用操作与RM/RMVB影片的兼容方法，适合字幕入门与进阶用户参考。
 
 ---------
 
-官方站点：[www.urusoft.net](<http://www.urusoft.net>)
+官方站点：<http://www.urusoft.net>
 
 体积：1 MB
 

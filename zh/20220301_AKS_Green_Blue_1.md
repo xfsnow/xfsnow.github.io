@@ -4,9 +4,7 @@
 
 分类: __Azure__
 
-简介: Azure Kubernetes 服务 (AKS)是微软云Azure上托管的Kubernetes 群集，可以用于快速部署Kubernetes 群集，结合Azure其它服务和功能，简化日常运维，轻松实现业务应用的弹性。当前Kubernetes 社区蓬勃发展，版本升级比较频繁。AKS托管的版本升级功能，可以一键式地把AKS集群 原地升级，对集群内的工作节点逐个滚动升级，对于小规模或非关键业务集群来说，使用AKS的托管升级功能非常方便。对于大规模的集群，或者关键业务应用来说，前述一键式原地升级的方法，存在升级整体
-
-原文链接: [https://snowpeak.blog.csdn.net/article/details/118493083](https://snowpeak.blog.csdn.net/article/details/118493083)
+简介: Azure Kubernetes 服务 (AKS)是微软云Azure上托管的Kubernetes 群集，可以用于快速部署Kubernetes 群集，结合Azure其它服务和功能，简化日常运维，轻松实现业务应用的弹性。本文介绍一种可以实现蓝绿部署实现版本升级的方案，进一步提高基于 AKS 部分应用系统的可用性。
 
 ---------
 

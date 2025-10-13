@@ -183,6 +183,7 @@ The project supports multiple AI models through a model selection mechanism, all
 ### Multi-Model Support
 
 ChatGGB supports multiple mainstream AI models:
+
 1. **DeepSeek**: Open-source large model suitable for Chinese scenarios
 2. **Qwen**: Alibaba's Qwen series models, supporting image understanding
 3. **Azure OpenAI**: Microsoft Azure platform's OpenAI service

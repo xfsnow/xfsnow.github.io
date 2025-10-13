@@ -4,9 +4,7 @@
 
 分类: __Azure__
 
-简介: Azure DevOps是微软Azure云平台上端到端的企业级研发管理平台，其中Azure Pipelines是使用流水线实现CI/CD的核心服务。Azure App Service是一个为开发人员提供的完全托管的平台即服务 (PaaS) 产品。Spring Boot是当前Java应用最主流的开发框架。本文以一个基本的实例，详细讲解使用Azure Pipelines创建和编辑流水线，把Java Spring 应用构建并部署到 Azure App Service..........
-
-原文链接: [https://snowpeak.blog.csdn.net/article/details/125759341](https://snowpeak.blog.csdn.net/article/details/125759341)
+简介: Azure DevOps是微软Azure云平台上端到端的企业级研发管理平台，其中Azure Pipelines是使用流水线实现CI/CD的核心服务。Azure App Service是一个为开发人员提供的完全托管的平台即服务 (PaaS) 产品。Spring Boot是当前Java应用最主流的开发框架。本文以一个基本的实例，详细讲解使用Azure Pipelines创建和编辑流水线，把Java Spring 应用构建并部署到 Azure App Service。
 
 ---------
 
@@ -14,7 +12,7 @@ Azure DevOps是微软Azure云平台上端到端的企业级研发管理平台，
 
 ## Java Spring 演示代码
 
-源码在这里 [GitHub - xfsnow/SpringTomcat: A demo project of Spring Boot running in Tomcat deployed to Azure App Service with Azure DevOps.](<https://github.com/xfsnow/SpringTomcat> "GitHub - xfsnow/SpringTomcat: A demo project of Spring Boot running in Tomcat deployed to Azure App Service with Azure DevOps.")，请 fork 到自己的GitHub里以便后面练习使用。或者以此为参考，直接使用Visual Studio Code中Spring Initializr 创建默认的Maven Project 也行，注意打包模式要选择war包，因为我们要使用外部的Tomcat Server，而不使用Spring Boot内置的Tomcat Server。pom.xml 中有以下配置项需注意：
+源码在这里 [GitHub - xfsnow/SpringTomcat: A demo project of Spring Boot running in Tomcat deployed to Azure App Service with Azure DevOps.](https://github.com/xfsnow/SpringTomcat)，请 fork 到自己的GitHub里以便后面练习使用。或者以此为参考，直接使用Visual Studio Code中Spring Initializr 创建默认的Maven Project 也行，注意打包模式要选择war包，因为我们要使用外部的Tomcat Server，而不使用Spring Boot内置的Tomcat Server。pom.xml 中有以下配置项需注意：
 
 
 ```xml
