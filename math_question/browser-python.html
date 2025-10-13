@@ -128,10 +128,6 @@ plt.show()
                 outputDiv.innerHTML = '<div><i class="fa fa-spinner fa-spin mr-2"></i>正在加载Python环境和所需库，请稍候...</div>';
                 
                 // 加载Pyodide
-                // pyodide = await loadPyodide({
-                //     indexURL: "https://cdn.jsdelivr.net/pyodide/v0.24.1/full/"
-                // });
-                
                 pyodide = await loadPyodide();
                 // 安装所需的库
                 await pyodide.loadPackage(['numpy', 'matplotlib', 'micropip']);
@@ -147,6 +143,7 @@ plt.show()
                     
                     # 忽略matplotlib agg后端警告，因为在浏览器环境中这是正常的
                     warnings.filterwarnings("ignore", "Matplotlib is currently using agg")
+                    warnings.filterwarnings("ignore", "FigureCanvasAgg is non-interactive")
                     
                     # 增强中文字体支持
                     # 设置多个备选字体，确保在不同系统中都能正确显示中文
