@@ -462,7 +462,9 @@ window.addEventListener("load", function() {
           }
           
           // 加载Pyodide
-          this.pyodide = await loadPyodide();
+          this.pyodide = await loadPyodide({
+            indexURL: './pyodide/'
+          });
           
           // 安装必要的包
           await this.pyodide.loadPackage(['numpy', 'matplotlib']);
@@ -920,15 +922,12 @@ window.addEventListener("load", function() {
         messageDiv.classList.add('ai-thinking');
       }
       
-      // 如果是AI消息且不是思考中状态，则格式化内容并提取Python代码
+      // 如果是AI消息且不是思考中状态，则格式化内容
       if (sender === 'ai' && !isThinking) {
         messageDiv.innerHTML = AiBase.formatAIResponse(message);
-        
-        // 提取并记录Python代码
-        const codes = AiBase.extractPythonCode(message);
-        if (codes.length > 0) {
-          console.log('AI响应中提取到Python代码:', codes);
-        }
+      } else if (sender === 'ai' && isThinking) {
+        // 对于思考中的消息，也进行格式化处理
+        messageDiv.innerHTML = AiBase.formatAIResponse(message);
       } else {
         messageDiv.textContent = message;
       }
