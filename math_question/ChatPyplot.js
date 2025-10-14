@@ -1,3 +1,25 @@
+// 动态加载 Pyodide
+function loadPyodideScript() {
+  // 获取当前域名
+  const hostname = window.location.hostname;
+  let pyodideScriptSrc = 'pyodide/pyodide.js';
+  
+  // 根据域名决定加载源
+  if (hostname.startsWith('www.')) {
+    pyodideScriptSrc = 'https://cdn.jsdelivr.net/pyodide/v0.28.3/full/pyodide.js';
+  }
+  
+  // 创建 script 标签并添加到页面
+  const script = document.createElement('script');
+  script.src = pyodideScriptSrc;
+  document.head.appendChild(script);
+  
+  return script;
+}
+
+// 调用函数加载 Pyodide
+loadPyodideScript();
+
 // 等待页面加载完成
 window.addEventListener("load", function() {
   // AI基类
@@ -462,9 +484,10 @@ window.addEventListener("load", function() {
           }
           
           // 加载Pyodide
-          this.pyodide = await loadPyodide({
-            indexURL: './pyodide/'
-          });
+          // this.pyodide = await loadPyodide({
+          //   indexURL: './pyodide/'
+          // });
+          this.pyodide = await loadPyodide();
           
           // 安装必要的包
           await this.pyodide.loadPackage(['numpy', 'matplotlib']);
