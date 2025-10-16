@@ -200,3 +200,41 @@ GeoGebra 画的图效果实在不灵，多数情况都画得差太多。尝试�
 - 检查跨设备的响应式设计
 
 这个改造将创建一个功能强大的基于浏览器的 Python 绘图工具，它使用 AI 生成代码并通过 Pyodide 在浏览器中直接执行，无需后端服务器。
+
+要想要画图可以支持中文，需要在 AI 响应的内容中添加中文字体，并加载中文字体。
+```python
+import matplotlib.pyplot as plt
+import numpy as np
+from matplotlib.font_manager import FontProperties
+from pyodide.http import pyfetch
+
+# 1. 加载中文字体文件
+async def load_font():
+    font_url = "pyodide/NotoSansSC-Regular.otf "
+    response = await pyfetch(font_url)
+    if response.status == 200:
+        return await response.bytes()
+    else:
+        raise Exception(f"字体加载失败，状态码: {response.status}")
+
+# 2. 写入虚拟文件系统
+font_data = await load_font()
+font_path = '/tmp/NotoSansSC-Regular.otf '
+with open(font_path, 'wb') as f:
+    f.write(font_data)
+
+# 3. 初始化字体属性（关键：后续直接传递给文本对象）
+chinese_font = FontProperties(fname=font_path, size=14)  # 明确指定字体路径和大小
+
+# 创建图形
+fig, ax = plt.subplots(figsize=(6, 6))
+
+# 关键修正：标题指定字体属性
+plt.title("测试标题", fontproperties=chinese_font)
+
+plt.xlabel("X轴", fontproperties=chinese_font)
+plt.ylabel("Y轴", fontproperties=chinese_font)
+plt.show()
+```
+
+这一版终于可以正常显示中文了。

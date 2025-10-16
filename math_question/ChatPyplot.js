@@ -494,27 +494,70 @@ window.addEventListener("load", function() {
           
           // 配置matplotlib
           this.pyodide.runPython(`
-            import matplotlib
-            matplotlib.use('Agg')  # 使用非交互式后端
-            import matplotlib.pyplot as plt
-            from io import BytesIO
-            import base64
-            
-            # 配置中文字体支持
-            plt.rcParams['font.sans-serif'] = ['Microsoft YaHei', 'SimHei', 'STHeiti', 'Arial Unicode MS', 'DejaVu Sans', 'sans-serif']
-            plt.rcParams['axes.unicode_minus'] = False
-            plt.rcParams['figure.facecolor'] = 'white'
-            plt.rcParams['axes.facecolor'] = 'white'
-            plt.rcParams['savefig.facecolor'] = 'white'
-            
-            def show_plot():
-                buf = BytesIO()
-                plt.savefig(buf, format='png', bbox_inches='tight', facecolor='white', edgecolor='none', dpi=100)
-                buf.seek(0)
-                img_str = base64.b64encode(buf.read()).decode('utf-8')
-                plt.close()  # 关闭图形以释放内存
-                return img_str
-          `);
+import matplotlib
+matplotlib.use('Agg')
+import matplotlib.pyplot as plt
+from matplotlib.font_manager import FontProperties
+from io import BytesIO, StringIO
+import base64
+import sys
+from pyodide.http import pyfetch
+
+# 1. 加载中文字体文件（同步方式）
+def load_font():
+    font_url = "pyodide/NotoSansSC-Regular.ttf"
+    response = pyfetch(font_url)
+    # 在Pyodide中，即使不使用await，也可以通过.result()获取结果
+    result = response.syncify()
+    if result.status == 200:
+        return result.bytes()
+    else:
+        raise Exception(f"字体加载失败，状态码: {result.status}")
+
+# 2. 执行字体加载并写入虚拟文件系统
+try:
+    font_data = load_font()
+    font_path = '/tmp/NotoSansSC-Regular.ttf'
+    with open(font_path, 'wb') as f:
+        f.write(font_data)
+
+    # 3. 初始化字体属性（关键：后续直接传递给文本对象）
+    chinese_font = FontProperties(fname=font_path)
+
+    # 4. 配置 matplotlib 使用加载的中文字体
+    plt.rcParams['font.family'] = chinese_font.get_name()
+except Exception as e:
+    # 如果字体加载失败，使用默认字体设置
+    plt.rcParams['font.sans-serif'] = ['DejaVu Sans', 'Bitstream Vera Sans', 'Arial Unicode MS', 'sans-serif']
+    plt.rcParams['axes.unicode_minus'] = False
+
+plt.rcParams['axes.unicode_minus'] = False  # 解决负号显示异常
+
+# 设置图形背景为白色
+plt.rcParams['figure.facecolor'] = 'white'
+plt.rcParams['axes.facecolor'] = 'white'
+plt.rcParams['savefig.facecolor'] = 'white'
+
+# 设置字体大小，确保清晰可读
+plt.rcParams['font.size'] = 12
+plt.rcParams['axes.titlesize'] = 14
+plt.rcParams['axes.labelsize'] = 12
+
+# 重定向输出
+import sys
+sys.stdout = StringIO()
+sys.stderr = StringIO()
+
+# 自定义显示函数
+def show_plot(fig=None):
+    if fig is None:
+        fig = plt.gcf()
+    buf = BytesIO()
+    # 保存图像时明确指定背景色和DPI
+    fig.savefig(buf, format='png', bbox_inches='tight', facecolor='white', edgecolor='none', dpi=100)
+    buf.seek(0)
+    img_str = base64.b64encode(buf.read()).decode('utf-8')
+    return img_str`);
           
           this.isInitialized = true;
           
