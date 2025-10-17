@@ -201,11 +201,13 @@ User configuration information is persistently stored through localStorage, incl
 The ChatGGB project combines AI technology with GeoGebra mathematical software, providing users with a new way of mathematical learning and research. The project adopts a modular design with good scalability and maintainability, supporting multiple AI models and image understanding functions.
 
 Through this project, we can see:
+
 1. The great potential of AI technology in the field of education
 2. The powerful capabilities of frontend technology in implementing complex interactions
 3. The important role of open-source technology in promoting educational innovation
 
 In the future, this project can be further expanded, for example:
+
 1. Adding support for more AI models
 2. Providing richer visualization effects
 3. Enhancing interactivity and user experience
