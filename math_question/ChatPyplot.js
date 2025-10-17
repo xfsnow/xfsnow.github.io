@@ -466,6 +466,7 @@ window.addEventListener("load", function() {
   class PyodideManager {
     constructor() {
       this.fontPath = '/NotoSansSC-Regular.otf'; // 字体文件路径
+      this.fontUrl = 'https://fonts.gstatic.com/ea/notosanssc/v1/NotoSansSC-Regular.otf';
       this.pyodide = null;
       this.isInitialized = false;
       this.initPromise = null;
@@ -494,7 +495,7 @@ window.addEventListener("load", function() {
           // 先将字体文件写入Pyodide的虚拟文件系统
           const fontPath = this.fontPath;
           try {
-            const fontResponse = await fetch('pyodide' + fontPath);
+            const fontResponse = await fetch(this.fontUrl);
             if (fontResponse.ok) {
               const fontArrayBuffer = await fontResponse.arrayBuffer();
               const fontData = new Uint8Array(fontArrayBuffer);
