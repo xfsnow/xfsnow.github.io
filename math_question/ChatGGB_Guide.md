@@ -21,7 +21,7 @@ ChatGGB 是一个结合 GeoGebra 数学软件与 AI 对话功能的智能工具�
 ## 快速开始
 
 ### 1. 访问应用
-打开浏览器，访问应用地址：https://www.snowpeak.org/math_question/ggb.htm
+打开浏览器，访问应用地址：<https://www.snowpeak.org/math_question/ggb.htm>
 
 ### 2. 配置 AI 模型
 首次使用需要配置 AI 模型：
@@ -37,7 +37,8 @@ ChatGGB 是一个结合 GeoGebra 数学软件与 AI 对话功能的智能工具�
 1. 在底部输入框中输入数学问题或指令
 2. 按 Enter 键或点击"发送"按钮发送消息
 3. AI 将分析问题并生成回答及 GeoGebra 命令
-4. 命令会自动在 GeoGebra 画板上执行，生成相应图形
+4. 用户点击“执行命令”按钮后命令会在 GeoGebra 画板上执行，生成相应图形
+5. 用户还可以自行修改命令并执行，以获得更优化的图形
 
 ### 4. 上传图片
 1. 点击输入框下方的图片图标（◪）选择图片文件
