@@ -465,6 +465,7 @@ window.addEventListener("load", function() {
   // Pyodide管理类
   class PyodideManager {
     constructor() {
+      this.fontPath = '/NotoSansSC-Regular.otf'; // 字体文件路径
       this.pyodide = null;
       this.isInitialized = false;
       this.initPromise = null;
@@ -484,9 +485,6 @@ window.addEventListener("load", function() {
           }
           
           // 加载Pyodide
-          // this.pyodide = await loadPyodide({
-          //   indexURL: './pyodide/'
-          // });
           this.pyodide = await loadPyodide();
           
           // 安装必要的包
@@ -494,12 +492,13 @@ window.addEventListener("load", function() {
           
           // 配置matplotlib
           // 先将字体文件写入Pyodide的虚拟文件系统
+          const fontPath = this.fontPath;
           try {
-            const fontResponse = await fetch('pyodide/NotoSansSC-Regular.otf');
+            const fontResponse = await fetch('pyodide' + fontPath);
             if (fontResponse.ok) {
               const fontArrayBuffer = await fontResponse.arrayBuffer();
               const fontData = new Uint8Array(fontArrayBuffer);
-              this.pyodide.FS.writeFile('/NotoSansSC-Regular.otf', fontData);
+              this.pyodide.FS.writeFile(fontPath, fontData);
               console.log("字体文件已写入Pyodide文件系统");
             } else {
               console.log("无法获取字体文件，状态码:", fontResponse.status);
@@ -509,35 +508,25 @@ window.addEventListener("load", function() {
           }
           
           this.pyodide.runPython(`
-import matplotlib
-matplotlib.use('Agg')
-import matplotlib.pyplot as plt
-from matplotlib.font_manager import FontProperties
 from io import BytesIO, StringIO
+import matplotlib
+import matplotlib.font_manager as fm
+import matplotlib.pyplot as plt
 import base64
-import sys
 import os
+import sys
+matplotlib.use('Agg')
 
-# 尝试加载本地字体文件
 try:
     print("检查字体文件是否存在...")
     # 检查字体文件是否存在于Pyodide的虚拟文件系统中
-    if os.path.exists('/NotoSansSC-Regular.otf'):
+    if os.path.exists('${fontPath}'):
         print("字体文件存在，开始加载...")
-        # 注册本地字体文件
-        import matplotlib.font_manager as fm
-        fm.fontManager.addfont('/NotoSansSC-Regular.otf')
-        font_name = fm.FontProperties(fname='/NotoSansSC-Regular.otf').get_name()
+        fm.fontManager.addfont('${fontPath}')
+        font_name = fm.FontProperties(fname='${fontPath}').get_name()
         plt.rcParams['font.family'] = font_name
         print(f"成功加载本地中文字体: {font_name}")
-    else:
-        print("字体文件不存在，使用默认字体")
-        # 使用默认支持中文的字体
-        plt.rcParams['font.family'] = 'DejaVu Sans'
-        print("使用默认字体")
 except Exception as e:
-    print(f"字体加载异常: {e}")
-    # 如果字体加载失败，使用默认字体设置
     plt.rcParams['font.sans-serif'] = ['DejaVu Sans', 'Bitstream Vera Sans', 'Arial Unicode MS', 'sans-serif']
     print(f"字体加载失败，使用默认字体: {e}")
 
@@ -596,21 +585,22 @@ def show_plot(fig=None):
       }
       
       try {
+        const fontPath = this.fontPath;
         // 在执行用户代码前，确保字体设置正确
         this.pyodide.runPython(`
 # 确保每次执行代码前都设置正确的中文字体
+import matplotlib.font_manager as fm
 import matplotlib.pyplot as plt
 import os
 
 # 检查字体文件是否存在并设置字体
-if os.path.exists('/NotoSansSC-Regular.otf'):
+if os.path.exists('${fontPath}'):
     try:
-        import matplotlib.font_manager as fm
         # 检查字体是否已注册
         font_files = [f.fname for f in fm.fontManager.ttflist]
-        if '/NotoSansSC-Regular.otf' not in font_files:
-            fm.fontManager.addfont('/NotoSansSC-Regular.otf')
-        font_name = fm.FontProperties(fname='/NotoSansSC-Regular.otf').get_name()
+        if '${fontPath}' not in font_files:
+            fm.fontManager.addfont('${fontPath}')
+        font_name = fm.FontProperties(fname='${fontPath}').get_name()
         plt.rcParams['font.family'] = font_name
     except Exception as e:
         print(f"设置中文字体时出错: {e}")
