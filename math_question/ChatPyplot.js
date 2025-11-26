@@ -100,7 +100,7 @@ window.addEventListener("load", function() {
       formattedContent = formattedContent.replace(/\{\{PYTHON_BLOCK_(\d+)\}\}/g, (match, index) => {
         const blockContent = pythonBlocks[index];
         const lines = Math.max(blockContent.split('\n').length, 3);
-        return `<textarea class="ggb-code-block" rows="${lines}">${blockContent}</textarea><div class="ggb-execute-container"><button class="ggb-execute-btn" data-ggb-execute><span class="ggb-execute-icon"></span>执行代码</button></div>`;
+        return `<textarea class="pyplot-code-block" rows="${lines}">${blockContent}</textarea><div class="pyplot-execute-container"><button class="pyplot-execute-btn" data-pyplot-execute><span class="pyplot-execute-icon"></span>执行代码</button></div>`;
       });
 
       return formattedContent;
@@ -806,7 +806,7 @@ plt.rcParams['axes.unicode_minus'] = False`);
       // 绑定聊天容器的点击事件，用于处理Python代码执行按钮
       this.chatContainer.addEventListener('click', (e) => {
         // 检查点击的是否是代码执行按钮
-        if (e.target && e.target.matches('[data-ggb-execute]')) {
+        if (e.target && e.target.matches('[data-pyplot-execute]')) {
           this.handleCodeExecute(e.target);
         }
       });
@@ -815,8 +815,8 @@ plt.rcParams['axes.unicode_minus'] = False`);
     // 处理Python代码执行
     async handleCodeExecute(buttonElement) {
       // 获取包含代码的textarea元素
-      const textareaElement = buttonElement.closest('.ggb-execute-container').previousElementSibling;
-      if (textareaElement && textareaElement.classList.contains('ggb-code-block')) {
+      const textareaElement = buttonElement.closest('.pyplot-execute-container').previousElementSibling;
+      if (textareaElement && textareaElement.classList.contains('pyplot-code-block')) {
         // 执行代码
         const code = textareaElement.value;
         await this.executePythonCode(code);
@@ -984,7 +984,7 @@ plt.rcParams['axes.unicode_minus'] = False`);
       }
       
       // 保存当前选择的模型
-      localStorage.setItem('ggbCurrentModel', selectedModel);
+      localStorage.setItem('pyplotCurrentModel', selectedModel);
     }
     
     // 显示用户消息（包括可能的图片）
@@ -1077,13 +1077,13 @@ plt.rcParams['axes.unicode_minus'] = False`);
         azureModel: this.azureModelInput.value,
         systemPrompt: this.systemPrompt.value
       };
-      localStorage.setItem('ggbSettings', JSON.stringify(settings));
+      localStorage.setItem('pyplotSettings', JSON.stringify(settings));
       alert('设置已保存！');
     }
 
     // 加载设置从localStorage
     loadSettings() {
-      const settings = JSON.parse(localStorage.getItem('ggbSettings')) || {};
+      const settings = JSON.parse(localStorage.getItem('pyplotSettings')) || {};
       this.deepSeekApiKeyInput.value = settings.deepseekApiKey || '';
       this.qwenApiKeyInput.value = settings.qwenApiKey || '';
       this.azureApiKeyInput.value = settings.azureApiKey || '';
@@ -1092,7 +1092,7 @@ plt.rcParams['axes.unicode_minus'] = False`);
       this.systemPrompt.value = settings.systemPrompt || '';
       
       // 加载当前选择的模型
-      const currentModel = localStorage.getItem('ggbCurrentModel');
+      const currentModel = localStorage.getItem('pyplotCurrentModel');
       if (currentModel) {
         this.modelSelect.value = currentModel;
       }

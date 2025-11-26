@@ -1,3 +1,4 @@
+ChatPyplot.css
 /* 布局样式 */
 body {
   margin: 0;
@@ -23,7 +24,7 @@ body {
   box-sizing: border-box;
 }
 
-.ggb-panel {
+.pyplot-panel {
   padding: 10px;
   position: relative;
   width: 620px;
@@ -34,7 +35,7 @@ body {
 }
 
 /* 标题样式 */
-.ggb-title {
+.pyplot-title {
   margin: 0 0 15px 0;
   color: #333;
   font-size: 24px;
@@ -82,7 +83,7 @@ body {
 }
 
 /* 命令输入区域 */
-#ggb-commands {
+#matplotlib-commands {
   width: 100%;
   min-height: 300px;
   font-family: monospace;
@@ -321,7 +322,7 @@ pre code {
 }
 
 /* Python代码块样式 */
-.ggb-code-block {
+.pyplot-code-block {
   background-color: #f8f9fa;
   border: 1px solid #e9ecef;
   border-radius: 8px;
@@ -342,26 +343,26 @@ pre code {
   max-width: 100%;
 }
 
-.ggb-code-block:focus {
+.pyplot-code-block:focus {
   outline: none;
   border-color: #80bdff;
   box-shadow: 0 0 0 0.2rem rgba(0,123,255,.25);
 }
 
-.ggb-code-block code {
+.pyplot-code-block code {
   background-color: transparent;
   padding: 0;
   font-size: 13px;
 }
 
-/* GeoGebra执行按钮容器 */
-.ggb-execute-container {
+/* Python执行按钮容器 */
+.pyplot-execute-container {
   margin: 10px 0;
   text-align: left;
 }
 
-/* GeoGebra执行按钮样式 */
-.ggb-execute-btn {
+/* Python执行按钮样式 */
+.pyplot-execute-btn {
   display: inline-flex;
   align-items: center;
   background-color: #28a745;
@@ -377,17 +378,17 @@ pre code {
   margin-right: 10px;
 }
 
-.ggb-execute-btn:hover {
+.pyplot-execute-btn:hover {
   background-color: #218838;
   transform: translateY(-1px);
 }
 
-.ggb-execute-btn:active {
+.pyplot-execute-btn:active {
   transform: translateY(0);
 }
 
-/* GeoGebra执行按钮图标 */
-.ggb-execute-icon {
+/* Python执行按钮图标 */
+.pyplot-execute-icon {
   display: inline-block;
   width: 0;
   height: 0;

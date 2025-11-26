@@ -1,5 +1,5 @@
 var math_question = {
-  "exportTime": "2025-09-23T12:51:38.308Z",
+  "exportTime": "2025-11-26T02:34:28.981Z",
   "description": "数学题库数据",
   "questions": [
     {
@@ -64,6 +64,15 @@ var math_question = {
       "category": "geometry",
       "difficulty": "medium",
       "createTime": "2025-09-23 12:50:42"
+    },
+    {
+      "id": 1764123730840,
+      "title": "求证：AD平分∠BAE",
+      "content": "在$\\triangle ABC$中，$BD=DC=AC$，$E$是$DC$的中点，求证：$AD$平分$\\angle BAE$。\n![img](q1764123730840_q.webp)",
+      "answer": "## 💡解答\n要证明 \\( AD \\) 平分 \\( \\angle BAE \\)，我们可以通过**构造全等三角形**，将角的关系转化为边的关系来证明。\n\n### 步骤1：构造辅助线\n延长 \\( AE \\) 到点 \\( G \\)，使 \\( EG = AE \\)，连接 \\( DG \\)。\n![img](q1764123730840_a.webp)\n### 步骤2：证明 \\( \\triangle DGE \\cong \\triangle CAE \\)\n已知 \\( E \\) 是 \\( DC \\) 的中点，所以 \\( DE = CE \\)。\n在 \\( \\triangle DGE \\) 和 \\( \\triangle CAE \\) 中：\n- \\( DE = CE \\)（已证）；\n- \\( \\angle DEG = \\angle CEA \\)（对顶角相等）；\n- \\( EG = AE \\)（构造的辅助线）。\n\n根据**SAS（边角边）全等判定定理**，可得 \\( \\triangle DGE \\cong \\triangle CAE \\)。\n\n### 步骤3：推导边与角的关系\n由 \\( \\triangle DGE \\cong \\triangle CAE \\)，可得：\n- \\( DG = AC \\)（全等三角形对应边相等）；\n- \\( \\angle GDE = \\angle C \\)（全等三角形对应角相等）。\n\n又因为 \\( BD = DC = AC \\)，所以 \\( DG = DC = BD \\)，且 \\( \\angle ADC = \\angle CAD \\)（等腰三角形 \\( \\triangle ACD \\) 中，等边对等角）。\n\n### 步骤4：证明 \\( \\angle BAD = \\angle GAD \\)\n因为 \\( \\angle ADB \\) 是 \\( \\triangle ADC \\) 的外角，所以 \\( \\angle ADB = \\angle C + \\angle CAD \\)（三角形外角等于不相邻两内角和）。\n又因为 \\( \\angle GDE = \\angle C \\)，\\( \\angle ADC = \\angle CAD \\)，所以 \\( \\angle ADG = \\angle GDE + \\angle ADC = \\angle C + \\angle CAD = \\angle ADB \\)。\n\n在 \\( \\triangle ABD \\) 和 \\( \\triangle AGD \\) 中：\n- \\( BD = GD \\)（已证）；\n- \\( \\angle ADB = \\angle ADG \\)（已证）；\n- \\( AD = AD \\)（公共边）。\n\n根据**SAS（边角边）全等判定定理**，可得 \\( \\triangle ABD \\cong \\triangle AGD \\)。\n\n因此，\\( \\angle BAD = \\angle GAD \\)（全等三角形对应角相等），即 \\( AD \\) 平分 \\( \\angle BAE \\)。\n\n综上，\\( AD \\) 平分 \\( \\angle BAE \\)，得证。\n\n附 GeoGebra 绘图命令：\n```geogebra\nB = (0, 0)\nC = (6, 0)\nD = (3, 0)\nA = (4.5, 3*sqrt(3)/2)\nE = Midpoint(D, C)\nG = Reflect(A, E)\nSegment(A, B)\nSegment(B, C)\nSegment(C, A)\nSegment(A, D)\nSegment(A, E)\nSegment(E, G)\nSegment(D, G)\nText(\"A\", A, true, true, 0, 1)\nText(\"B\", B, true, true, 0, -1)\nText(\"C\", C, true, true, 0, -1)\nText(\"D\", D, true, true, 0, -1)\nText(\"E\", E, true, true, -1, -1)\nText(\"G\", G, true, true, 0, -1)\n\ntheta = Slider[0, pi, 0.01]\nA = (6 - 3*cos(theta), 3*sin(theta))\nStartAnimation[theta, true]\n```",
+      "category": "geometry",
+      "difficulty": "medium",
+      "createTime": "2025-11-26 02:22:10"
     }
   ]
 };
