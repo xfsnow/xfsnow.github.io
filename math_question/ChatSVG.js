@@ -53,16 +53,27 @@ window.addEventListener("load", function() {
     
     // 格式化AI响应内容
     static formatAIResponse(content) {
+      // 检查内容是否已经被格式化（包含我们添加的特定类名或属性）
+      if (typeof content === 'string' && 
+          (content.includes('svg-code-block') && content.includes('svg-execute-container') ||
+           content.includes('data-svg-execute'))) {
+        // 内容似乎已经被格式化，直接返回
+        return content;
+      }
+      
+      // 深拷贝内容以避免修改原始内容
+      let processedContent = content;
+      
       // 首先提取并保存所有SVG代码块
       const svgBlocks = [];
-      let placeholderContent = content.replace(/```(?:\s*svg\s*|\s*svg\s*\n)([\s\S]*?)```/gs, (match, p1) => {
+      processedContent = processedContent.replace(/```(?:\s*svg\s*|\s*svg\s*\n)([\s\S]*?)```/gs, (match, p1) => {
         const cleanedCode = p1.trim(); // 清理首尾空白
         svgBlocks.push(cleanedCode);
         return `{{SVG_BLOCK_${svgBlocks.length - 1}}}`;
       });
 
-      // 对非代码部分进行HTML转义
-      let formattedContent = placeholderContent
+      // 对非代码部分进行HTML转义（仅处理纯文本部分）
+      let formattedContent = processedContent
         .replace(/&/g, '&amp;')
         .replace(/</g, '&lt;')
         .replace(/>/g, '&gt;');
@@ -78,7 +89,12 @@ window.addEventListener("load", function() {
       formattedContent = formattedContent.replace(/\{\{SVG_BLOCK_(\d+)\}\}/g, (match, index) => {
         const blockContent = svgBlocks[index];
         const lines = Math.max(blockContent.split('\n').length, 3);
-        return `<textarea class="svg-code-block" rows="${lines}">${blockContent}</textarea><div class="svg-execute-container"><button class="svg-execute-btn" data-svg-execute><span class="svg-execute-icon"></span>执行代码</button></div>`;
+        // 确保代码块内容正确转义
+        const escapedContent = blockContent
+          .replace(/&/g, '&amp;')
+          .replace(/</g, '&lt;')
+          .replace(/>/g, '&gt;');
+        return `<textarea class="svg-code-block" rows="${lines}">${escapedContent}</textarea><div class="svg-execute-container"><button class="svg-execute-btn" data-svg-execute><span class="svg-execute-icon"></span>执行代码</button></div>`;
       });
 
       return formattedContent;
@@ -728,11 +744,14 @@ window.addEventListener("load", function() {
     // 处理SVG代码执行
     handleCodeExecute(buttonElement) {
       // 获取包含代码的textarea元素
-      const textareaElement = buttonElement.closest('.svg-execute-container').previousElementSibling;
-      if (textareaElement && textareaElement.classList.contains('svg-code-block')) {
-        // 执行代码
-        const code = textareaElement.value;
-        this.executeSvgCode(code);
+      const container = buttonElement.closest('.svg-execute-container');
+      if (container) {
+        const textareaElement = container.previousElementSibling;
+        if (textareaElement && textareaElement.classList.contains('svg-code-block')) {
+          // 执行代码
+          const code = textareaElement.value;
+          this.executeSvgCode(code);
+        }
       }
     }
     
@@ -921,13 +940,13 @@ window.addEventListener("load", function() {
         messageDiv.classList.add('ai-thinking');
       }
       
-      // 如果是AI消息且不是思考中状态，则格式化内容
-      if (sender === 'ai' && !isThinking) {
-        messageDiv.innerHTML = AiBase.formatAIResponse(message);
-      } else if (sender === 'ai' && isThinking) {
-        // 对于思考中的消息，也进行格式化处理
-        messageDiv.innerHTML = AiBase.formatAIResponse(message);
+      // 统一处理：所有AI消息（无论是否在思考）都使用formatAIResponse进行格式化
+      if (sender === 'ai') {
+        // 确保消息内容是字符串类型
+        const messageContent = typeof message === 'string' ? message : String(message);
+        messageDiv.innerHTML = AiBase.formatAIResponse(messageContent);
       } else {
+        // 非AI消息（如用户消息）直接设置文本内容
         messageDiv.textContent = message;
       }
       
@@ -949,7 +968,7 @@ window.addEventListener("load", function() {
         
         if (messageDiv.classList.contains('user-message')) {
           // 对于用户消息，我们需要检查是否包含图片
-          const textContent = messageDiv.querySelector('p').textContent;
+          const textContent = messageDiv.querySelector('p') ? messageDiv.querySelector('p').textContent : messageDiv.textContent;
           const imgElement = messageDiv.querySelector('img');
           
           // 构造用户消息内容
@@ -966,8 +985,44 @@ window.addEventListener("load", function() {
             history.push({ role: 'user', content: content });
           }
         } else if (messageDiv.classList.contains('ai-message')) {
-          // 对于AI消息，获取纯文本内容（去除HTML标签）
-          const textContent = messageDiv.textContent;
+          // 对于AI消息，我们需要从已格式化的HTML中提取原始内容
+          let textContent = '';
+          
+          // 遍历消息div的所有子节点
+          for (let i = 0; i < messageDiv.childNodes.length; i++) {
+            const node = messageDiv.childNodes[i];
+            
+            if (node.nodeType === Node.TEXT_NODE) {
+              // 文本节点直接添加
+              textContent += node.textContent;
+            } else if (node.nodeType === Node.ELEMENT_NODE) {
+              if (node.classList.contains('svg-code-block')) {
+                // 这是SVG代码块textarea
+                const svgCode = node.value;
+                textContent += `\`\`\`svg\n${svgCode}\n\`\`\``;
+              } else if (node.tagName === 'TEXTAREA' && node.classList.contains('ggb-code-block')) {
+                // 这是GeoGebra代码块（如果有的话）
+                const ggbCode = node.value;
+                textContent += `\`\`\`geogebra\n${ggbCode}\n\`\`\``;
+              } else if (node.tagName === 'PRE') {
+                // 这是普通代码块
+                const codeElement = node.querySelector('code');
+                if (codeElement) {
+                  const codeText = codeElement.textContent;
+                  textContent += `\`\`\`\n${codeText}\n\`\`\``;
+                } else {
+                  textContent += node.textContent;
+                }
+              } else if (node.classList.contains('svg-execute-container')) {
+                // 这是执行按钮容器，跳过它
+                continue;
+              } else {
+                // 其他元素直接获取文本内容
+                textContent += node.textContent;
+              }
+            }
+          }
+          
           history.push({ role: 'assistant', content: textContent });
         }
       });
