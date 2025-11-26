@@ -378,6 +378,10 @@ document.addEventListener('DOMContentLoaded', function() {
         toggleButton.innerHTML = '<i class="fas fa-times"></i> 取消添加';
         toggleButton.classList.remove('btn-success');
         toggleButton.classList.add('btn-secondary');
+        
+        // 清空预览区域
+        document.getElementById('contentPreview').innerHTML = '';
+        document.getElementById('answerPreview').innerHTML = '';
       } else {
         // 隐藏添加题目区域
         this.addQuestionArea.style.display = 'none';
@@ -402,6 +406,10 @@ document.addEventListener('DOMContentLoaded', function() {
       
       // 清空表单
       this.clearAddQuestionForm();
+      
+      // 清空预览区域
+      document.getElementById('contentPreview').innerHTML = '';
+      document.getElementById('answerPreview').innerHTML = '';
     }
 
     // 清空添加题目表单
@@ -443,6 +451,10 @@ document.addEventListener('DOMContentLoaded', function() {
       this.cancelAddQuestion();
       
       alert('题目添加成功！');
+      
+      // 清空预览区域
+      document.getElementById('contentPreview').innerHTML = '';
+      document.getElementById('answerPreview').innerHTML = '';
     }
 
     // 切换编辑模式
