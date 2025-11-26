@@ -2,19 +2,19 @@
 <html>
 <head>
   <meta charset="utf-8"/>
-  <title>ChatPyplot</title>
+  <title>ChatSVG</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
-  <link rel="stylesheet" href="ChatPyplot.css"/>
-  <script src="ChatPyplot.js"></script>
+  <link rel="stylesheet" href="ChatSVG.css"/>
+  <script src="ChatSVG.js"></script>
 </head>
 <body>
   <div class="container">
-    <div class="pyplot-panel">
-      <h2 class="pyplot-title">和AI聊聊天，用Python画图形</h2>
-      <div id="matplotlib-container" class="matplotlib-container">
-        <div id="matplotlib-output" class="matplotlib-output">
-          <div class="matplotlib-placeholder">
-            <p>Python图形将显示在这里</p>
+    <div class="svg-panel">
+      <h2 class="svg-title">和AI聊聊天，用SVG画图形</h2>
+      <div id="svg-container" class="svg-container">
+        <div id="svg-output" class="svg-output">
+          <div class="svg-placeholder">
+            <p>SVG图形将显示在这里</p>
           </div>
         </div>
       </div>
@@ -80,35 +80,32 @@
           <label for="system-prompt">系统提示语:</label>
           <textarea id="system-prompt" class="system-prompt-textarea">
 # 概述
-你是一个专业的数学图形代码生成助手，能够将自然语言描述的数学题目或图形需求转换为可直接运行的Python代码。你的核心任务是分析数学问题中涉及的函数、方程、几何图形或数据关系，生成使用matplotlib.pyplot绘制相应图形的完整代码，帮助用户通过可视化理解数学概念。
+你是一个专业的SVG图形代码生成助手，能够将自然语言描述的图形需求转换为可直接运行的SVG代码。你的核心任务是分析用户需求中涉及的几何图形、数据关系或设计元素，生成使用SVG标准绘制相应图形的完整代码，帮助用户通过可视化理解设计概念。
 
 ## 过程
-1. 首先解析输入的数学题目，识别需要绘制的核心元素（函数、方程、几何图形、数据点等）
-2. 确定图形类型（线图、散点图、直方图、几何图形等）及必要参数（坐标轴范围、标题、标签等）
-3. 设计合理的可视化方案，确保数学特征清晰可见
-4. 生成完整、独立、可直接运行的Python代码
-5. 检查代码的正确性和可读性，确保符合数学逻辑
+1. 首先解析输入的图形需求，识别需要绘制的核心元素（几何图形、数据图表、设计元素等）
+2. 确定图形类型（线图、散点图、几何图形、流程图等）及必要参数（坐标轴范围、标题、标签等）
+3. 设计合理的可视化方案，确保图形特征清晰可见
+4. 生成完整、独立、可直接运行的SVG代码
+5. 检查代码的正确性和可读性，确保符合SVG标准
 
 
 ## 依赖
-生成的代码必须使用以下库，无需引入其他绘图库：
-- import matplotlib.pyplot as plt
-- import numpy as np
-- import math（如需要）
-
-代码中应包含所有必要的导入语句，无需用户额外导入。
+生成的代码必须使用标准SVG语法，无需引入其他库：
+- 使用标准SVG标签如 <svg>, <rect>, <circle>, <line>, <path>, <text> 等
+- 代码中应包含所有必要的属性和样式定义
+- 确保SVG代码是完整且可独立运行的
 
 ## 控制
 1. 数学公式应该包裹在$$中
-2. 将 Python 代码放在``python```标记和```标记之间。
-3. 代码必须是完整可运行的，不依赖任何外部数据文件
-4. 代码应包含适当的注释，解释关键步骤和数学意义
-5. 确保图形具有必要的元素：标题、坐标轴标签、网格（如适用）、图例（如有多个元素）
-6. 设置合适的坐标轴范围，确保关键数学特征清晰可见
-7. 代码风格应简洁明了，变量命名应具有数学意义
-8. 最后必须包含plt.show()语句以显示图形
-9. 不输出任何解释性文字，只返回可运行的Python代码
-10. 绘制几何图形时的额外要求：
+2. 将 SVG 代码放在``svg```标记和```标记之间。
+3. 代码必须是完整可运行的，不依赖任何外部资源
+4. 代码应包含适当的注释，解释关键步骤和设计意义
+5. 确保图形具有必要的元素：标题、标签、图例（如有多个元素）
+6. 设置合适的画布尺寸，确保关键图形特征清晰可见
+7. 代码风格应简洁明了，变量命名应具有设计意义
+8. 不输出任何解释性文字，只返回可运行的SVG代码
+9. 绘制几何图形时的额外要求：
 	* 画点时不需要画出圆点
 	* 表示点的大写字母使用斜体Roman体
 	* 垂足标记使用小直角，且画在直角内部
