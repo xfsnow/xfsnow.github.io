@@ -82,6 +82,103 @@ body {
   display: none;
 }
 
+/* 缩放控制按钮样式 */
+.zoom-controls {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 10px 0;
+  flex-shrink: 0;
+}
+
+.zoom-btn {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 1px solid #ddd;
+  background-color: #f8f9fa;
+  color: #333;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  position: relative;
+}
+
+/* 放大镜样式 */
+.zoom-btn::before {
+  content: "";
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  border: 2px solid #333;
+  border-radius: 50%;
+  top: 7px;
+  left: 7px;
+}
+
+/* 放大镜手柄样式 */
+.zoom-btn::after {
+  content: "";
+  position: absolute;
+  width: 2px;
+  height: 8px;
+  background-color: #333;
+  top: 17px;
+  left: 17px;
+  transform: rotate(-45deg);
+}
+
+/* 放大按钮加号 */
+#zoom-in span::before {
+  content: "";
+  position: absolute;
+  width: 8px;
+  height: 2px;
+  background-color: #333;
+  top: 12px;
+  left: 11px;
+}
+
+#zoom-in span::after {
+  content: "";
+  position: absolute;
+  width: 2px;
+  height: 8px;
+  background-color: #333;
+  top: 9px;
+  left: 14px;
+}
+
+/* 缩小按钮减号 */
+#zoom-out span::before {
+  content: "";
+  position: absolute;
+  width: 8px;
+  height: 2px;
+  background-color: #333;
+  top: 12px;
+  left: 11px;
+}
+
+/* 重置按钮样式 */
+#zoom-reset {
+  font-size: 16px;
+}
+
+.zoom-btn:hover {
+  background-color: #e9ecef;
+  transform: scale(1.1);
+}
+
+.zoom-btn:active {
+  transform: scale(0.95);
+}
+
 /* 命令输入区域 */
 #svg-commands {
   width: 100%;

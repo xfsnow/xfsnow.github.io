@@ -445,6 +445,8 @@ window.addEventListener("load", function() {
     constructor() {
       this.svgContainer = null;
       this.isInitialized = false;
+      this.currentScale = 1; // 当前缩放比例
+      this.scaleStep = 0.1;  // 缩放步长
     }
     
     init() {
@@ -452,7 +454,34 @@ window.addEventListener("load", function() {
       if (this.svgContainer) {
         this.svgContainer.innerHTML = '<div class="svg-placeholder"><p>SVG环境已就绪，可以执行代码了</p></div>';
         this.isInitialized = true;
+        this.currentScale = 1;
       }
+    }
+    
+    // 设置SVG容器的缩放
+    setScale(scale) {
+      this.currentScale = Math.max(0.1, Math.min(scale, 5)); // 限制缩放范围在0.1到5之间
+      const svgElement = this.svgContainer.querySelector('svg');
+      if (svgElement) {
+        svgElement.style.transform = `scale(${this.currentScale})`;
+        svgElement.style.transformOrigin = 'center center';
+        svgElement.style.transition = 'transform 0.2s ease';
+      }
+    }
+    
+    // 放大
+    zoomIn() {
+      this.setScale(this.currentScale + this.scaleStep);
+    }
+    
+    // 缩小
+    zoomOut() {
+      this.setScale(this.currentScale - this.scaleStep);
+    }
+    
+    // 重置缩放
+    resetZoom() {
+      this.setScale(1);
     }
     
     runCode(code) {
@@ -474,6 +503,12 @@ window.addEventListener("load", function() {
           // 清空容器并添加SVG元素
           this.svgContainer.innerHTML = '';
           this.svgContainer.appendChild(svgElement);
+          
+          // 重置缩放
+          this.currentScale = 1;
+          svgElement.style.transform = 'scale(1)';
+          svgElement.style.transformOrigin = 'center center';
+          
           return {
             success: true,
             message: '代码执行成功'
@@ -573,6 +608,11 @@ window.addEventListener("load", function() {
       this.closeSettingsBtn = document.getElementById('close-settings');
       this.saveSettingsBtn = document.getElementById('save-settings');
       this.imageAttachmentBtn = document.getElementById('image-attachment-btn');
+      
+      // 缩放控制按钮
+      this.zoomInBtn = document.getElementById('zoom-in');
+      this.zoomOutBtn = document.getElementById('zoom-out');
+      this.zoomResetBtn = document.getElementById('zoom-reset');
     }
     
     // 绑定事件
@@ -664,6 +704,25 @@ window.addEventListener("load", function() {
           this.handleCodeExecute(e.target);
         }
       });
+      
+      // 绑定缩放控制按钮事件
+      if (this.zoomInBtn) {
+        this.zoomInBtn.addEventListener('click', () => {
+          this.svgManager.zoomIn();
+        });
+      }
+      
+      if (this.zoomOutBtn) {
+        this.zoomOutBtn.addEventListener('click', () => {
+          this.svgManager.zoomOut();
+        });
+      }
+      
+      if (this.zoomResetBtn) {
+        this.zoomResetBtn.addEventListener('click', () => {
+          this.svgManager.resetZoom();
+        });
+      }
     }
     
     // 处理SVG代码执行
