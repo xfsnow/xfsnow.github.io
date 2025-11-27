@@ -116,7 +116,7 @@ Processing triggers for man-db (2.8.3-2ubuntu0.1) ...
 Creating debugging pod node-debugger-aks-nodepool1-40474697-vmss000000-5bw76 with container debugger on node aks-nodepool1-40474697-vmss000000.
 If you don't see a command prompt, try pressing enter.
 root@aks-nodepool1-40474697-vmss000000:/#
-</code></pre> <ol><li>In this privileged container, run the chroot /host command to get an isolated root path and safely interact with the worker node session. Note that after switching the root path, commands need to use absolute paths and cannot use command shortcuts. You can use exec bash to switch from dash to bash to restore normal commands. For example:</li></ol> <pre><code>root@aks-nodepool1-40474697-vmss000000:/# chroot /host
+</code></pre> <ol start="2"><li>In this privileged container, run the chroot /host command to get an isolated root path and safely interact with the worker node session. Note that after switching the root path, commands need to use absolute paths and cannot use command shortcuts. You can use exec bash to switch from dash to bash to restore normal commands. For example:</li></ol> <pre><code>root@aks-nodepool1-40474697-vmss000000:/# chroot /host
 # exec bash
 root@aks-nodepool1-40474697-vmss000000:/# cowsay -l
 Cow files in /usr/share/cowsay/cows:
