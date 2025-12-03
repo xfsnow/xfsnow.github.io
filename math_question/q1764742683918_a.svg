@@ -1,0 +1,36 @@
+<svg width="500" height="300" xmlns="http://www.w3.org/2000/svg">
+  <!-- 线段AB -->
+  <line x1="100" y1="200" x2="400" y2="200" stroke="black" stroke-width="2"/>
+  
+  <!-- 点A, B, C -->
+  <text x="95" y="215" font-family="serif" font-style="italic" font-size="16">A</text>
+  <text x="405" y="215" font-family="serif" font-style="italic" font-size="16">B</text>
+  <text x="200" y="215" font-family="serif" font-style="italic" font-size="16">C</text>
+  
+  <!-- 等边三角形ACF（上方，边长100） -->
+  <!-- A(100,200), C(200,200) => AC = 100 -->
+  <!-- F坐标：中点(150,200)，高=100 * √3 / 2 ≈ 86.6 -->
+  <polygon points="100,200 200,200 150,113.4" fill="none" stroke="black" stroke-width="2"/>
+  <text x="145" y="105" font-family="serif" font-style="italic" font-size="16">F</text>
+
+  <!-- 等边三角形BCE（上方，边长200） -->
+  <!-- C(200,200), B(400,200) => CB = 200 -->
+  <!-- E坐标：中点(300,200)，高=200 * √3 / 2 ≈ 173.2 -->
+  <polygon points="200,200 400,200 300,26.8" fill="none" stroke="black" stroke-width="2"/>
+  <text x="295" y="18" font-family="serif" font-style="italic" font-size="16">E</text>
+
+  <!-- 连接AE和BF（实线） -->
+  <line x1="100" y1="200" x2="300" y2="26.8" stroke="black" stroke-width="2"/>
+  <line x1="400" y1="200" x2="150" y2="113.4" stroke="black" stroke-width="2"/>
+
+  <!-- AE中点M: ((100+300)/2, (200+26.8)/2) = (200, 113.4) -->
+  <text x="195" y="108" font-family="serif" font-style="italic" font-size="14">M</text>
+
+  <!-- BF中点N: ((400+150)/2, (200+113.4)/2) = (275, 156.7) -->
+  <text x="270" y="152" font-family="serif" font-style="italic" font-size="14">N</text>
+
+  <!-- 连接CM（蓝色）、CN（红色）、MN（黑色） -->
+  <line x1="200" y1="200" x2="200" y2="113.4" stroke="blue" stroke-width="2"/>
+  <line x1="200" y1="200" x2="275" y2="156.7" stroke="red" stroke-width="2"/>
+  <line x1="200" y1="113.4" x2="275" y2="156.7" stroke="black" stroke-width="2"/>
+</svg>
