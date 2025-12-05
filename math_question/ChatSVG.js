@@ -518,7 +518,37 @@ window.addEventListener("load", function() {
         if (svgElement) {
           // 清空容器并添加SVG元素
           this.svgContainer.innerHTML = '';
+          
+          // 直接将SVG元素添加到容器中
           this.svgContainer.appendChild(svgElement);
+          
+          // 手动执行SVG中的脚本
+          const scripts = svgElement.querySelectorAll('script');
+          scripts.forEach(script => {
+            let scriptContent = '';
+            
+            // 处理不同的脚本内容类型
+            if (script.src) {
+              // 外部脚本，暂时不处理
+              return;
+            } else if (script.childNodes.length > 0) {
+              // 内联脚本（包括CDATA节）
+              scriptContent = script.childNodes[0].nodeValue || '';
+            } else {
+              // 其他情况
+              scriptContent = script.textContent || script.innerText || '';
+            }
+            
+            if (scriptContent) {
+              // 使用Function构造器执行脚本（比eval更安全）
+              try {
+                const scriptFunc = new Function(scriptContent);
+                scriptFunc.call(svgElement);
+              } catch (evalError) {
+                console.error('SVG脚本执行出错:', evalError);
+              }
+            }
+          });
           
           // 重置缩放
           this.currentScale = 1;
