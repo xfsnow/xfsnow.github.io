@@ -1,0 +1,7646 @@
+! function() {
+    var e = {
+            "../../../Framework/src/cubismdefaultparameterid.ts": function(e, t, r) {
+                "use strict";
+                var i, a = this && this.__createBinding || (Object.create ? function(e, t, r, i) {
+                        void 0 === i && (i = r);
+                        var a = Object.getOwnPropertyDescriptor(t, r);
+                        (!a || ("get" in a ? !t.__esModule : a.writable || a.configurable)) && (a = {
+                            enumerable: !0,
+                            get: function() {
+                                return t[r]
+                            }
+                        }), Object.defineProperty(e, i, a)
+                    } : function(e, t, r, i) {
+                        void 0 === i && (i = r), e[i] = t[r]
+                    }),
+                    o = this && this.__setModuleDefault || (Object.create ? function(e, t) {
+                        Object.defineProperty(e, "default", {
+                            enumerable: !0,
+                            value: t
+                        })
+                    } : function(e, t) {
+                        e.default = t
+                    }),
+                    s = this && this.__importStar || function(e) {
+                        if (e && e.__esModule) return e;
+                        var t = {};
+                        if (null != e)
+                            for (var r in e) "default" !== r && Object.prototype.hasOwnProperty.call(e, r) && a(t, e, r);
+                        return o(t, e), t
+                    };
+                Object.defineProperty(t, "__esModule", {
+                    value: !0
+                }), t.Live2DCubismFramework = t.CubismDefaultParameterId = void 0, t.CubismDefaultParameterId = Object.freeze({
+                    HitAreaPrefix: "HitArea",
+                    HitAreaHead: "Head",
+                    HitAreaBody: "Body",
+                    PartsIdCore: "Parts01Core",
+                    PartsArmPrefix: "Parts01Arm_",
+                    PartsArmLPrefix: "Parts01ArmL_",
+                    PartsArmRPrefix: "Parts01ArmR_",
+                    ParamAngleX: "ParamAngleX",
+                    ParamAngleY: "ParamAngleY",
+                    ParamAngleZ: "ParamAngleZ",
+                    ParamEyeLOpen: "ParamEyeLOpen",
+                    ParamEyeLSmile: "ParamEyeLSmile",
+                    ParamEyeROpen: "ParamEyeROpen",
+                    ParamEyeRSmile: "ParamEyeRSmile",
+                    ParamEyeBallX: "ParamEyeBallX",
+                    ParamEyeBallY: "ParamEyeBallY",
+                    ParamEyeBallForm: "ParamEyeBallForm",
+                    ParamBrowLY: "ParamBrowLY",
+                    ParamBrowRY: "ParamBrowRY",
+                    ParamBrowLX: "ParamBrowLX",
+                    ParamBrowRX: "ParamBrowRX",
+                    ParamBrowLAngle: "ParamBrowLAngle",
+                    ParamBrowRAngle: "ParamBrowRAngle",
+                    ParamBrowLForm: "ParamBrowLForm",
+                    ParamBrowRForm: "ParamBrowRForm",
+                    ParamMouthForm: "ParamMouthForm",
+                    ParamMouthOpenY: "ParamMouthOpenY",
+                    ParamCheek: "ParamCheek",
+                    ParamBodyAngleX: "ParamBodyAngleX",
+                    ParamBodyAngleY: "ParamBodyAngleY",
+                    ParamBodyAngleZ: "ParamBodyAngleZ",
+                    ParamBreath: "ParamBreath",
+                    ParamArmLA: "ParamArmLA",
+                    ParamArmRA: "ParamArmRA",
+                    ParamArmLB: "ParamArmLB",
+                    ParamArmRB: "ParamArmRB",
+                    ParamHandL: "ParamHandL",
+                    ParamHandR: "ParamHandR",
+                    ParamHairFront: "ParamHairFront",
+                    ParamHairSide: "ParamHairSide",
+                    ParamHairBack: "ParamHairBack",
+                    ParamHairFluffy: "ParamHairFluffy",
+                    ParamShoulderY: "ParamShoulderY",
+                    ParamBustX: "ParamBustX",
+                    ParamBustY: "ParamBustY",
+                    ParamBaseX: "ParamBaseX",
+                    ParamBaseY: "ParamBaseY",
+                    ParamNONE: "NONE:"
+                });
+                var n, u = s(r( /*! ./cubismdefaultparameterid */ "../../../Framework/src/cubismdefaultparameterid.ts"));
+                (n = i = t.Live2DCubismFramework || (t.Live2DCubismFramework = {})).HitAreaBody = u.CubismDefaultParameterId.HitAreaBody, n.HitAreaHead = u.CubismDefaultParameterId.HitAreaHead, n.HitAreaPrefix = u.CubismDefaultParameterId.HitAreaPrefix, n.ParamAngleX = u.CubismDefaultParameterId.ParamAngleX, n.ParamAngleY = u.CubismDefaultParameterId.ParamAngleY, n.ParamAngleZ = u.CubismDefaultParameterId.ParamAngleZ, n.ParamArmLA = u.CubismDefaultParameterId.ParamArmLA, n.ParamArmLB = u.CubismDefaultParameterId.ParamArmLB, n.ParamArmRA = u.CubismDefaultParameterId.ParamArmRA, n.ParamArmRB = u.CubismDefaultParameterId.ParamArmRB, n.ParamBaseX = u.CubismDefaultParameterId.ParamBaseX, n.ParamBaseY = u.CubismDefaultParameterId.ParamBaseY, n.ParamBodyAngleX = u.CubismDefaultParameterId.ParamBodyAngleX, n.ParamBodyAngleY = u.CubismDefaultParameterId.ParamBodyAngleY, n.ParamBodyAngleZ = u.CubismDefaultParameterId.ParamBodyAngleZ, n.ParamBreath = u.CubismDefaultParameterId.ParamBreath, n.ParamBrowLAngle = u.CubismDefaultParameterId.ParamBrowLAngle, n.ParamBrowLForm = u.CubismDefaultParameterId.ParamBrowLForm, n.ParamBrowLX = u.CubismDefaultParameterId.ParamBrowLX, n.ParamBrowLY = u.CubismDefaultParameterId.ParamBrowLY, n.ParamBrowRAngle = u.CubismDefaultParameterId.ParamBrowRAngle, n.ParamBrowRForm = u.CubismDefaultParameterId.ParamBrowRForm, n.ParamBrowRX = u.CubismDefaultParameterId.ParamBrowRX, n.ParamBrowRY = u.CubismDefaultParameterId.ParamBrowRY, n.ParamBustX = u.CubismDefaultParameterId.ParamBustX, n.ParamBustY = u.CubismDefaultParameterId.ParamBustY, n.ParamCheek = u.CubismDefaultParameterId.ParamCheek, n.ParamEyeBallForm = u.CubismDefaultParameterId.ParamEyeBallForm, n.ParamEyeBallX = u.CubismDefaultParameterId.ParamEyeBallX, n.ParamEyeBallY = u.CubismDefaultParameterId.ParamEyeBallY, n.ParamEyeLOpen = u.CubismDefaultParameterId.ParamEyeLOpen, n.ParamEyeLSmile = u.CubismDefaultParameterId.ParamEyeLSmile, n.ParamEyeROpen = u.CubismDefaultParameterId.ParamEyeROpen, n.ParamEyeRSmile = u.CubismDefaultParameterId.ParamEyeRSmile, n.ParamHairBack = u.CubismDefaultParameterId.ParamHairBack, n.ParamHairFluffy = u.CubismDefaultParameterId.ParamHairFluffy, n.ParamHairFront = u.CubismDefaultParameterId.ParamHairFront, n.ParamHairSide = u.CubismDefaultParameterId.ParamHairSide, n.ParamHandL = u.CubismDefaultParameterId.ParamHandL, n.ParamHandR = u.CubismDefaultParameterId.ParamHandR, n.ParamMouthForm = u.CubismDefaultParameterId.ParamMouthForm, n.ParamMouthOpenY = u.CubismDefaultParameterId.ParamMouthOpenY, n.ParamNONE = u.CubismDefaultParameterId.ParamNONE, n.ParamShoulderY = u.CubismDefaultParameterId.ParamShoulderY, n.PartsArmLPrefix = u.CubismDefaultParameterId.PartsArmLPrefix, n.PartsArmPrefix = u.CubismDefaultParameterId.PartsArmPrefix, n.PartsArmRPrefix = u.CubismDefaultParameterId.PartsArmRPrefix, n.PartsIdCore = u.CubismDefaultParameterId.PartsIdCore
+            },
+            "../../../Framework/src/cubismframeworkconfig.ts": function(e, t) {
+                "use strict";
+                Object.defineProperty(t, "__esModule", {
+                    value: !0
+                }), t.CSM_LOG_LEVEL = t.CSM_LOG_LEVEL_OFF = t.CSM_LOG_LEVEL_ERROR = t.CSM_LOG_LEVEL_WARNING = t.CSM_LOG_LEVEL_INFO = t.CSM_LOG_LEVEL_DEBUG = t.CSM_LOG_LEVEL_VERBOSE = void 0, t.CSM_LOG_LEVEL_VERBOSE = 0, t.CSM_LOG_LEVEL_DEBUG = 1, t.CSM_LOG_LEVEL_INFO = 2, t.CSM_LOG_LEVEL_WARNING = 3, t.CSM_LOG_LEVEL_ERROR = 4, t.CSM_LOG_LEVEL_OFF = 5, t.CSM_LOG_LEVEL = t.CSM_LOG_LEVEL_VERBOSE
+            },
+            "../../../Framework/src/cubismmodelsettingjson.ts": function(e, t, r) {
+                "use strict";
+                var i, a, o, s = this && this.__extends || (i = function(e, t) {
+                        return (i = Object.setPrototypeOf || ({
+                            __proto__: []
+                        }) instanceof Array && function(e, t) {
+                            e.__proto__ = t
+                        } || function(e, t) {
+                            for (var r in t) Object.prototype.hasOwnProperty.call(t, r) && (e[r] = t[r])
+                        })(e, t)
+                    }, function(e, t) {
+                        if ("function" != typeof t && null !== t) throw TypeError("Class extends value " + String(t) + " is not a constructor or null");
+
+                        function r() {
+                            this.constructor = e
+                        }
+                        i(e, t), e.prototype = null === t ? Object.create(t) : (r.prototype = t.prototype, new r)
+                    }),
+                    n = this && this.__createBinding || (Object.create ? function(e, t, r, i) {
+                        void 0 === i && (i = r);
+                        var a = Object.getOwnPropertyDescriptor(t, r);
+                        (!a || ("get" in a ? !t.__esModule : a.writable || a.configurable)) && (a = {
+                            enumerable: !0,
+                            get: function() {
+                                return t[r]
+                            }
+                        }), Object.defineProperty(e, i, a)
+                    } : function(e, t, r, i) {
+                        void 0 === i && (i = r), e[i] = t[r]
+                    }),
+                    u = this && this.__setModuleDefault || (Object.create ? function(e, t) {
+                        Object.defineProperty(e, "default", {
+                            enumerable: !0,
+                            value: t
+                        })
+                    } : function(e, t) {
+                        e.default = t
+                    }),
+                    l = this && this.__importStar || function(e) {
+                        if (e && e.__esModule) return e;
+                        var t = {};
+                        if (null != e)
+                            for (var r in e) "default" !== r && Object.prototype.hasOwnProperty.call(e, r) && n(t, e, r);
+                        return u(t, e), t
+                    };
+                Object.defineProperty(t, "__esModule", {
+                    value: !0
+                }), t.Live2DCubismFramework = t.CubismModelSettingJson = void 0;
+                var c, h = r( /*! ./icubismmodelsetting */ "../../../Framework/src/icubismmodelsetting.ts"),
+                    p = r( /*! ./live2dcubismframework */ "../../../Framework/src/live2dcubismframework.ts"),
+                    m = r( /*! ./type/csmvector */ "../../../Framework/src/type/csmvector.ts"),
+                    d = r( /*! ./utils/cubismjson */ "../../../Framework/src/utils/cubismjson.ts"),
+                    g = "FileReferences",
+                    f = "UserData",
+                    y = "Name",
+                    v = "File",
+                    $ = "Sound",
+                    b = "FadeInTime",
+                    M = "FadeOutTime",
+                    C = "LipSync",
+                    S = "EyeBlink";
+                (c = a || (a = {}))[c.FrequestNode_Groups = 0] = "FrequestNode_Groups", c[c.FrequestNode_Moc = 1] = "FrequestNode_Moc", c[c.FrequestNode_Motions = 2] = "FrequestNode_Motions", c[c.FrequestNode_Expressions = 3] = "FrequestNode_Expressions", c[c.FrequestNode_Textures = 4] = "FrequestNode_Textures", c[c.FrequestNode_Physics = 5] = "FrequestNode_Physics", c[c.FrequestNode_Pose = 6] = "FrequestNode_Pose", c[c.FrequestNode_HitAreas = 7] = "FrequestNode_HitAreas";
+                var w = function(e) {
+                    function t(t, r) {
+                        var i = e.call(this) || this;
+                        return i._json = d.CubismJson.create(t, r), i._json && (i._jsonValue = new m.csmVector, i._jsonValue.pushBack(i._json.getRoot().getValueByString("Groups")), i._jsonValue.pushBack(i._json.getRoot().getValueByString(g).getValueByString("Moc")), i._jsonValue.pushBack(i._json.getRoot().getValueByString(g).getValueByString("Motions")), i._jsonValue.pushBack(i._json.getRoot().getValueByString(g).getValueByString("Expressions")), i._jsonValue.pushBack(i._json.getRoot().getValueByString(g).getValueByString("Textures")), i._jsonValue.pushBack(i._json.getRoot().getValueByString(g).getValueByString("Physics")), i._jsonValue.pushBack(i._json.getRoot().getValueByString(g).getValueByString("Pose")), i._jsonValue.pushBack(i._json.getRoot().getValueByString("HitAreas"))), i
+                    }
+                    return s(t, e), t.prototype.release = function() {
+                        d.CubismJson.delete(this._json), this._jsonValue = null
+                    }, t.prototype.GetJson = function() {
+                        return this._json
+                    }, t.prototype.getModelFileName = function() {
+                        return this.isExistModelFile() ? this._jsonValue.at(a.FrequestNode_Moc).getRawString() : ""
+                    }, t.prototype.getTextureCount = function() {
+                        return this.isExistTextureFiles() ? this._jsonValue.at(a.FrequestNode_Textures).getSize() : 0
+                    }, t.prototype.getTextureDirectory = function() {
+                        for (var e = this._jsonValue.at(a.FrequestNode_Textures).getValueByIndex(0).getRawString().split("/"), t = e.length - 1, r = "", i = 0; i < t; i++) r += e[i], i < t - 1 && (r += "/");
+                        return r
+                    }, t.prototype.getTextureFileName = function(e) {
+                        return this._jsonValue.at(a.FrequestNode_Textures).getValueByIndex(e).getRawString()
+                    }, t.prototype.getHitAreasCount = function() {
+                        return this.isExistHitAreas() ? this._jsonValue.at(a.FrequestNode_HitAreas).getSize() : 0
+                    }, t.prototype.getHitAreaId = function(e) {
+                        return p.CubismFramework.getIdManager().getId(this._jsonValue.at(a.FrequestNode_HitAreas).getValueByIndex(e).getValueByString("Id").getRawString())
+                    }, t.prototype.getHitAreaName = function(e) {
+                        return this._jsonValue.at(a.FrequestNode_HitAreas).getValueByIndex(e).getValueByString(y).getRawString()
+                    }, t.prototype.getPhysicsFileName = function() {
+                        return this.isExistPhysicsFile() ? this._jsonValue.at(a.FrequestNode_Physics).getRawString() : ""
+                    }, t.prototype.getPoseFileName = function() {
+                        return this.isExistPoseFile() ? this._jsonValue.at(a.FrequestNode_Pose).getRawString() : ""
+                    }, t.prototype.getExpressionCount = function() {
+                        return this.isExistExpressionFile() ? this._jsonValue.at(a.FrequestNode_Expressions).getSize() : 0
+                    }, t.prototype.getExpressionName = function(e) {
+                        return this._jsonValue.at(a.FrequestNode_Expressions).getValueByIndex(e).getValueByString(y).getRawString()
+                    }, t.prototype.getExpressionFileName = function(e) {
+                        return this._jsonValue.at(a.FrequestNode_Expressions).getValueByIndex(e).getValueByString(v).getRawString()
+                    }, t.prototype.getMotionGroupCount = function() {
+                        return this.isExistMotionGroups() ? this._jsonValue.at(a.FrequestNode_Motions).getKeys().getSize() : 0
+                    }, t.prototype.getMotionGroupName = function(e) {
+                        return this.isExistMotionGroups() ? this._jsonValue.at(a.FrequestNode_Motions).getKeys().at(e) : null
+                    }, t.prototype.getMotionCount = function(e) {
+                        return this.isExistMotionGroupName(e) ? this._jsonValue.at(a.FrequestNode_Motions).getValueByString(e).getSize() : 0
+                    }, t.prototype.getMotionFileName = function(e, t) {
+                        return this.isExistMotionGroupName(e) ? this._jsonValue.at(a.FrequestNode_Motions).getValueByString(e).getValueByIndex(t).getValueByString(v).getRawString() : ""
+                    }, t.prototype.getMotionSoundFileName = function(e, t) {
+                        return this.isExistMotionSoundFile(e, t) ? this._jsonValue.at(a.FrequestNode_Motions).getValueByString(e).getValueByIndex(t).getValueByString($).getRawString() : ""
+                    }, t.prototype.getMotionFadeInTimeValue = function(e, t) {
+                        return this.isExistMotionFadeIn(e, t) ? this._jsonValue.at(a.FrequestNode_Motions).getValueByString(e).getValueByIndex(t).getValueByString(b).toFloat() : -1
+                    }, t.prototype.getMotionFadeOutTimeValue = function(e, t) {
+                        return this.isExistMotionFadeOut(e, t) ? this._jsonValue.at(a.FrequestNode_Motions).getValueByString(e).getValueByIndex(t).getValueByString(M).toFloat() : -1
+                    }, t.prototype.getUserDataFile = function() {
+                        return this.isExistUserDataFile() ? this._json.getRoot().getValueByString(g).getValueByString(f).getRawString() : ""
+                    }, t.prototype.getLayoutMap = function(e) {
+                        var t = this._json.getRoot().getValueByString("Layout").getMap();
+                        if (null == t) return !1;
+                        for (var r = !1, i = t.begin(); i.notEqual(t.end()); i.preIncrement()) e.setValue(i.ptr().first, i.ptr().second.toFloat()), r = !0;
+                        return r
+                    }, t.prototype.getEyeBlinkParameterCount = function() {
+                        if (!this.isExistEyeBlinkParameters()) return 0;
+                        for (var e = 0, t = 0; t < this._jsonValue.at(a.FrequestNode_Groups).getSize(); t++) {
+                            var r = this._jsonValue.at(a.FrequestNode_Groups).getValueByIndex(t);
+                            if (!(r.isNull() || r.isError()) && r.getValueByString(y).getRawString() == S) {
+                                e = r.getValueByString("Ids").getVector().getSize();
+                                break
+                            }
+                        }
+                        return e
+                    }, t.prototype.getEyeBlinkParameterId = function(e) {
+                        if (!this.isExistEyeBlinkParameters()) return null;
+                        for (var t = 0; t < this._jsonValue.at(a.FrequestNode_Groups).getSize(); t++) {
+                            var r = this._jsonValue.at(a.FrequestNode_Groups).getValueByIndex(t);
+                            if (!(r.isNull() || r.isError()) && r.getValueByString(y).getRawString() == S) return p.CubismFramework.getIdManager().getId(r.getValueByString("Ids").getValueByIndex(e).getRawString())
+                        }
+                        return null
+                    }, t.prototype.getLipSyncParameterCount = function() {
+                        if (!this.isExistLipSyncParameters()) return 0;
+                        for (var e = 0, t = 0; t < this._jsonValue.at(a.FrequestNode_Groups).getSize(); t++) {
+                            var r = this._jsonValue.at(a.FrequestNode_Groups).getValueByIndex(t);
+                            if (!(r.isNull() || r.isError()) && r.getValueByString(y).getRawString() == C) {
+                                e = r.getValueByString("Ids").getVector().getSize();
+                                break
+                            }
+                        }
+                        return e
+                    }, t.prototype.getLipSyncParameterId = function(e) {
+                        if (!this.isExistLipSyncParameters()) return null;
+                        for (var t = 0; t < this._jsonValue.at(a.FrequestNode_Groups).getSize(); t++) {
+                            var r = this._jsonValue.at(a.FrequestNode_Groups).getValueByIndex(t);
+                            if (!(r.isNull() || r.isError()) && r.getValueByString(y).getRawString() == C) return p.CubismFramework.getIdManager().getId(r.getValueByString("Ids").getValueByIndex(e).getRawString())
+                        }
+                        return null
+                    }, t.prototype.isExistModelFile = function() {
+                        var e = this._jsonValue.at(a.FrequestNode_Moc);
+                        return !e.isNull() && !e.isError()
+                    }, t.prototype.isExistTextureFiles = function() {
+                        var e = this._jsonValue.at(a.FrequestNode_Textures);
+                        return !e.isNull() && !e.isError()
+                    }, t.prototype.isExistHitAreas = function() {
+                        var e = this._jsonValue.at(a.FrequestNode_HitAreas);
+                        return !e.isNull() && !e.isError()
+                    }, t.prototype.isExistPhysicsFile = function() {
+                        var e = this._jsonValue.at(a.FrequestNode_Physics);
+                        return !e.isNull() && !e.isError()
+                    }, t.prototype.isExistPoseFile = function() {
+                        var e = this._jsonValue.at(a.FrequestNode_Pose);
+                        return !e.isNull() && !e.isError()
+                    }, t.prototype.isExistExpressionFile = function() {
+                        var e = this._jsonValue.at(a.FrequestNode_Expressions);
+                        return !e.isNull() && !e.isError()
+                    }, t.prototype.isExistMotionGroups = function() {
+                        var e = this._jsonValue.at(a.FrequestNode_Motions);
+                        return !e.isNull() && !e.isError()
+                    }, t.prototype.isExistMotionGroupName = function(e) {
+                        var t = this._jsonValue.at(a.FrequestNode_Motions).getValueByString(e);
+                        return !t.isNull() && !t.isError()
+                    }, t.prototype.isExistMotionSoundFile = function(e, t) {
+                        var r = this._jsonValue.at(a.FrequestNode_Motions).getValueByString(e).getValueByIndex(t).getValueByString($);
+                        return !r.isNull() && !r.isError()
+                    }, t.prototype.isExistMotionFadeIn = function(e, t) {
+                        var r = this._jsonValue.at(a.FrequestNode_Motions).getValueByString(e).getValueByIndex(t).getValueByString(b);
+                        return !r.isNull() && !r.isError()
+                    }, t.prototype.isExistMotionFadeOut = function(e, t) {
+                        var r = this._jsonValue.at(a.FrequestNode_Motions).getValueByString(e).getValueByIndex(t).getValueByString(M);
+                        return !r.isNull() && !r.isError()
+                    }, t.prototype.isExistUserDataFile = function() {
+                        var e = this._json.getRoot().getValueByString(g).getValueByString(f);
+                        return !e.isNull() && !e.isError()
+                    }, t.prototype.isExistEyeBlinkParameters = function() {
+                        if (this._jsonValue.at(a.FrequestNode_Groups).isNull() || this._jsonValue.at(a.FrequestNode_Groups).isError()) return !1;
+                        for (var e = 0; e < this._jsonValue.at(a.FrequestNode_Groups).getSize(); ++e)
+                            if (this._jsonValue.at(a.FrequestNode_Groups).getValueByIndex(e).getValueByString(y).getRawString() == S) return !0;
+                        return !1
+                    }, t.prototype.isExistLipSyncParameters = function() {
+                        if (this._jsonValue.at(a.FrequestNode_Groups).isNull() || this._jsonValue.at(a.FrequestNode_Groups).isError()) return !1;
+                        for (var e = 0; e < this._jsonValue.at(a.FrequestNode_Groups).getSize(); ++e)
+                            if (this._jsonValue.at(a.FrequestNode_Groups).getValueByIndex(e).getValueByString(y).getRawString() == C) return !0;
+                        return !1
+                    }, t
+                }(h.ICubismModelSetting);
+                t.CubismModelSettingJson = w;
+                var P, I = l(r( /*! ./cubismmodelsettingjson */ "../../../Framework/src/cubismmodelsettingjson.ts"));
+                (P = o = t.Live2DCubismFramework || (t.Live2DCubismFramework = {})).CubismModelSettingJson = I.CubismModelSettingJson
+            },
+            "../../../Framework/src/effect/cubismbreath.ts": function(e, t, r) {
+                "use strict";
+                var i, a = this && this.__createBinding || (Object.create ? function(e, t, r, i) {
+                        void 0 === i && (i = r);
+                        var a = Object.getOwnPropertyDescriptor(t, r);
+                        (!a || ("get" in a ? !t.__esModule : a.writable || a.configurable)) && (a = {
+                            enumerable: !0,
+                            get: function() {
+                                return t[r]
+                            }
+                        }), Object.defineProperty(e, i, a)
+                    } : function(e, t, r, i) {
+                        void 0 === i && (i = r), e[i] = t[r]
+                    }),
+                    o = this && this.__setModuleDefault || (Object.create ? function(e, t) {
+                        Object.defineProperty(e, "default", {
+                            enumerable: !0,
+                            value: t
+                        })
+                    } : function(e, t) {
+                        e.default = t
+                    }),
+                    s = this && this.__importStar || function(e) {
+                        if (e && e.__esModule) return e;
+                        var t = {};
+                        if (null != e)
+                            for (var r in e) "default" !== r && Object.prototype.hasOwnProperty.call(e, r) && a(t, e, r);
+                        return o(t, e), t
+                    };
+                Object.defineProperty(t, "__esModule", {
+                    value: !0
+                }), t.Live2DCubismFramework = t.BreathParameterData = t.CubismBreath = void 0;
+                var n = function() {
+                    function e() {
+                        this._currentTime = 0
+                    }
+                    return e.create = function() {
+                        return new e
+                    }, e.delete = function(e) {
+                        null != e && (e = null)
+                    }, e.prototype.setParameters = function(e) {
+                        this._breathParameters = e
+                    }, e.prototype.getParameters = function() {
+                        return this._breathParameters
+                    }, e.prototype.updateParameters = function(e, t) {
+                        this._currentTime += t;
+                        for (var r = 6.28318 * this._currentTime, i = 0; i < this._breathParameters.getSize(); ++i) {
+                            var a = this._breathParameters.at(i);
+                            e.addParameterValueById(a.parameterId, a.offset + a.peak * Math.sin(r / a.cycle), a.weight)
+                        }
+                    }, e
+                }();
+                t.CubismBreath = n, t.BreathParameterData = function e(t, r, i, a, o) {
+                    this.parameterId = void 0 == t ? null : t, this.offset = void 0 == r ? 0 : r, this.peak = void 0 == i ? 0 : i, this.cycle = void 0 == a ? 0 : a, this.weight = void 0 == o ? 0 : o
+                };
+                var u, l = s(r( /*! ./cubismbreath */ "../../../Framework/src/effect/cubismbreath.ts"));
+                (u = i = t.Live2DCubismFramework || (t.Live2DCubismFramework = {})).BreathParameterData = l.BreathParameterData, u.CubismBreath = l.CubismBreath
+            },
+            "../../../Framework/src/effect/cubismeyeblink.ts": function(e, t, r) {
+                "use strict";
+                var i, a, o = this && this.__createBinding || (Object.create ? function(e, t, r, i) {
+                        void 0 === i && (i = r);
+                        var a = Object.getOwnPropertyDescriptor(t, r);
+                        (!a || ("get" in a ? !t.__esModule : a.writable || a.configurable)) && (a = {
+                            enumerable: !0,
+                            get: function() {
+                                return t[r]
+                            }
+                        }), Object.defineProperty(e, i, a)
+                    } : function(e, t, r, i) {
+                        void 0 === i && (i = r), e[i] = t[r]
+                    }),
+                    s = this && this.__setModuleDefault || (Object.create ? function(e, t) {
+                        Object.defineProperty(e, "default", {
+                            enumerable: !0,
+                            value: t
+                        })
+                    } : function(e, t) {
+                        e.default = t
+                    }),
+                    n = this && this.__importStar || function(e) {
+                        if (e && e.__esModule) return e;
+                        var t = {};
+                        if (null != e)
+                            for (var r in e) "default" !== r && Object.prototype.hasOwnProperty.call(e, r) && o(t, e, r);
+                        return s(t, e), t
+                    };
+                Object.defineProperty(t, "__esModule", {
+                    value: !0
+                }), t.Live2DCubismFramework = t.EyeState = t.CubismEyeBlink = void 0;
+                var u, l = r( /*! ../type/csmvector */ "../../../Framework/src/type/csmvector.ts"),
+                    c = function() {
+                        function e(e) {
+                            if (this._blinkingState = i.EyeState_First, this._nextBlinkingTime = 0, this._stateStartTimeSeconds = 0, this._blinkingIntervalSeconds = 4, this._closingSeconds = .1, this._closedSeconds = .05, this._openingSeconds = .15, this._userTimeSeconds = 0, this._parameterIds = new l.csmVector, null != e)
+                                for (var t = 0; t < e.getEyeBlinkParameterCount(); ++t) this._parameterIds.pushBack(e.getEyeBlinkParameterId(t))
+                        }
+                        return e.create = function(t) {
+                            return void 0 === t && (t = null), new e(t)
+                        }, e.delete = function(e) {
+                            null != e && (e = null)
+                        }, e.prototype.setBlinkingInterval = function(e) {
+                            this._blinkingIntervalSeconds = e
+                        }, e.prototype.setBlinkingSetting = function(e, t, r) {
+                            this._closingSeconds = e, this._closedSeconds = t, this._openingSeconds = r
+                        }, e.prototype.setParameterIds = function(e) {
+                            this._parameterIds = e
+                        }, e.prototype.getParameterIds = function() {
+                            return this._parameterIds
+                        }, e.prototype.updateParameters = function(t, r) {
+                            this._userTimeSeconds += r;
+                            var a, o = 0;
+                            switch (this._blinkingState) {
+                                case i.EyeState_Closing:
+                                    (o = (this._userTimeSeconds - this._stateStartTimeSeconds) / this._closingSeconds) >= 1 && (o = 1, this._blinkingState = i.EyeState_Closed, this._stateStartTimeSeconds = this._userTimeSeconds), a = 1 - o;
+                                    break;
+                                case i.EyeState_Closed:
+                                    (o = (this._userTimeSeconds - this._stateStartTimeSeconds) / this._closedSeconds) >= 1 && (this._blinkingState = i.EyeState_Opening, this._stateStartTimeSeconds = this._userTimeSeconds), a = 0;
+                                    break;
+                                case i.EyeState_Opening:
+                                    (o = (this._userTimeSeconds - this._stateStartTimeSeconds) / this._openingSeconds) >= 1 && (o = 1, this._blinkingState = i.EyeState_Interval, this._nextBlinkingTime = this.determinNextBlinkingTiming()), a = o;
+                                    break;
+                                case i.EyeState_Interval:
+                                    this._nextBlinkingTime < this._userTimeSeconds && (this._blinkingState = i.EyeState_Closing, this._stateStartTimeSeconds = this._userTimeSeconds), a = 1;
+                                    break;
+                                case i.EyeState_First:
+                                default:
+                                    this._blinkingState = i.EyeState_Interval, this._nextBlinkingTime = this.determinNextBlinkingTiming(), a = 1
+                            }
+                            e.CloseIfZero || (a = -a);
+                            for (var s = 0; s < this._parameterIds.getSize(); ++s) t.setParameterValueById(this._parameterIds.at(s), a)
+                        }, e.prototype.determinNextBlinkingTiming = function() {
+                            return this._userTimeSeconds + Math.random() * (2 * this._blinkingIntervalSeconds - 1)
+                        }, e.CloseIfZero = !0, e
+                    }();
+                t.CubismEyeBlink = c, (u = i = t.EyeState || (t.EyeState = {}))[u.EyeState_First = 0] = "EyeState_First", u[u.EyeState_Interval = 1] = "EyeState_Interval", u[u.EyeState_Closing = 2] = "EyeState_Closing", u[u.EyeState_Closed = 3] = "EyeState_Closed", u[u.EyeState_Opening = 4] = "EyeState_Opening";
+                var h, p = n(r( /*! ./cubismeyeblink */ "../../../Framework/src/effect/cubismeyeblink.ts"));
+                (h = a = t.Live2DCubismFramework || (t.Live2DCubismFramework = {})).CubismEyeBlink = p.CubismEyeBlink, h.EyeState = p.EyeState
+            },
+            "../../../Framework/src/effect/cubismpose.ts": function(e, t, r) {
+                "use strict";
+                var i, a = this && this.__createBinding || (Object.create ? function(e, t, r, i) {
+                        void 0 === i && (i = r);
+                        var a = Object.getOwnPropertyDescriptor(t, r);
+                        (!a || ("get" in a ? !t.__esModule : a.writable || a.configurable)) && (a = {
+                            enumerable: !0,
+                            get: function() {
+                                return t[r]
+                            }
+                        }), Object.defineProperty(e, i, a)
+                    } : function(e, t, r, i) {
+                        void 0 === i && (i = r), e[i] = t[r]
+                    }),
+                    o = this && this.__setModuleDefault || (Object.create ? function(e, t) {
+                        Object.defineProperty(e, "default", {
+                            enumerable: !0,
+                            value: t
+                        })
+                    } : function(e, t) {
+                        e.default = t
+                    }),
+                    s = this && this.__importStar || function(e) {
+                        if (e && e.__esModule) return e;
+                        var t = {};
+                        if (null != e)
+                            for (var r in e) "default" !== r && Object.prototype.hasOwnProperty.call(e, r) && a(t, e, r);
+                        return o(t, e), t
+                    };
+                Object.defineProperty(t, "__esModule", {
+                    value: !0
+                }), t.Live2DCubismFramework = t.PartData = t.CubismPose = void 0;
+                var n = r( /*! ../live2dcubismframework */ "../../../Framework/src/live2dcubismframework.ts"),
+                    u = r( /*! ../type/csmvector */ "../../../Framework/src/type/csmvector.ts"),
+                    l = r( /*! ../utils/cubismjson */ "../../../Framework/src/utils/cubismjson.ts"),
+                    c = "FadeInTime",
+                    h = "Link",
+                    p = function() {
+                        function e() {
+                            this._fadeTimeSeconds = .5, this._lastModel = null, this._partGroups = new u.csmVector, this._partGroupCounts = new u.csmVector
+                        }
+                        return e.create = function(t, r) {
+                            var i = new e,
+                                a = l.CubismJson.create(t, r),
+                                o = a.getRoot();
+                            !o.getValueByString(c).isNull() && (i._fadeTimeSeconds = o.getValueByString(c).toFloat(.5), i._fadeTimeSeconds <= 0 && (i._fadeTimeSeconds = .5));
+                            for (var s = o.getValueByString("Groups"), u = s.getSize(), p = 0; p < u; ++p) {
+                                for (var d = s.getValueByIndex(p), g = d.getSize(), f = 0, y = 0; y < g; ++y) {
+                                    var v = d.getValueByIndex(y),
+                                        $ = new m,
+                                        b = n.CubismFramework.getIdManager().getId(v.getValueByString("Id").getRawString());
+                                    if ($.partId = b, !v.getValueByString(h).isNull())
+                                        for (var M = v.getValueByString(h), C = M.getSize(), S = 0; S < C; ++S) {
+                                            var w = new m,
+                                                P = n.CubismFramework.getIdManager().getId(M.getValueByIndex(S).getString());
+                                            w.partId = P, $.link.pushBack(w)
+                                        }
+                                    i._partGroups.pushBack($.clone()), ++f
+                                }
+                                i._partGroupCounts.pushBack(f)
+                            }
+                            return l.CubismJson.delete(a), i
+                        }, e.delete = function(e) {
+                            null != e && (e = null)
+                        }, e.prototype.updateParameters = function(e, t) {
+                            e != this._lastModel && this.reset(e), this._lastModel = e, t < 0 && (t = 0);
+                            for (var r = 0, i = 0; i < this._partGroupCounts.getSize(); i++) {
+                                var a = this._partGroupCounts.at(i);
+                                this.doFade(e, t, r, a), r += a
+                            }
+                            this.copyPartOpacities(e)
+                        }, e.prototype.reset = function(e) {
+                            for (var t = 0, r = 0; r < this._partGroupCounts.getSize(); ++r) {
+                                for (var i = this._partGroupCounts.at(r), a = t; a < t + i; ++a) {
+                                    this._partGroups.at(a).initialize(e);
+                                    var o = this._partGroups.at(a).partIndex,
+                                        s = this._partGroups.at(a).parameterIndex;
+                                    if (!(o < 0)) {
+                                        e.setPartOpacityByIndex(o, a == t ? 1 : 0), e.setParameterValueByIndex(s, a == t ? 1 : 0);
+                                        for (var n = 0; n < this._partGroups.at(a).link.getSize(); ++n) this._partGroups.at(a).link.at(n).initialize(e)
+                                    }
+                                }
+                                t += i
+                            }
+                        }, e.prototype.copyPartOpacities = function(e) {
+                            for (var t = 0; t < this._partGroups.getSize(); ++t) {
+                                var r = this._partGroups.at(t);
+                                if (0 != r.link.getSize())
+                                    for (var i = this._partGroups.at(t).partIndex, a = e.getPartOpacityByIndex(i), o = 0; o < r.link.getSize(); ++o) {
+                                        var s = r.link.at(o).partIndex;
+                                        !(s < 0) && e.setPartOpacityByIndex(s, a)
+                                    }
+                            }
+                        }, e.prototype.doFade = function(e, t, r, i) {
+                            for (var a = -1, o = 1, s = r; s < r + i; ++s) {
+                                var n = this._partGroups.at(s).partIndex,
+                                    u = this._partGroups.at(s).parameterIndex;
+                                if (e.getParameterValueByIndex(u) > .001) {
+                                    if (a >= 0) break;
+                                    a = s, o = e.getPartOpacityByIndex(n), (o += t / this._fadeTimeSeconds) > 1 && (o = 1)
+                                }
+                            }
+                            a < 0 && (a = 0, o = 1);
+                            for (var s = r; s < r + i; ++s) {
+                                var l = this._partGroups.at(s).partIndex;
+                                if (a == s) e.setPartOpacityByIndex(l, o);
+                                else {
+                                    var c = e.getPartOpacityByIndex(l),
+                                        h = void 0;
+                                    (1 - (h = o < .5 ? -.5 * o / .5 + 1 : (1 - o) * .5 / .5)) * (1 - o) > .15 && (h = 1 - .15 / (1 - o)), c > h && (c = h), e.setPartOpacityByIndex(l, c)
+                                }
+                            }
+                        }, e
+                    }();
+                t.CubismPose = p;
+                var m = function() {
+                    function e(e) {
+                        if (this.parameterIndex = 0, this.partIndex = 0, this.link = new u.csmVector, void 0 != e) {
+                            this.partId = e.partId;
+                            for (var t = e.link.begin(); t.notEqual(e.link.end()); t.preIncrement()) this.link.pushBack(t.ptr().clone())
+                        }
+                    }
+                    return e.prototype.assignment = function(e) {
+                        this.partId = e.partId;
+                        for (var t = e.link.begin(); t.notEqual(e.link.end()); t.preIncrement()) this.link.pushBack(t.ptr().clone());
+                        return this
+                    }, e.prototype.initialize = function(e) {
+                        this.parameterIndex = e.getParameterIndex(this.partId), this.partIndex = e.getPartIndex(this.partId), e.setParameterValueByIndex(this.parameterIndex, 1)
+                    }, e.prototype.clone = function() {
+                        var t = new e;
+                        t.partId = this.partId, t.parameterIndex = this.parameterIndex, t.partIndex = this.partIndex, t.link = new u.csmVector;
+                        for (var r = this.link.begin(); r.notEqual(this.link.end()); r.increment()) t.link.pushBack(r.ptr().clone());
+                        return t
+                    }, e
+                }();
+                t.PartData = m;
+                var d, g = s(r( /*! ./cubismpose */ "../../../Framework/src/effect/cubismpose.ts"));
+                (d = i = t.Live2DCubismFramework || (t.Live2DCubismFramework = {})).CubismPose = g.CubismPose, d.PartData = g.PartData
+            },
+            "../../../Framework/src/icubismmodelsetting.ts": function(e, t, r) {
+                "use strict";
+                var i, a = this && this.__createBinding || (Object.create ? function(e, t, r, i) {
+                        void 0 === i && (i = r);
+                        var a = Object.getOwnPropertyDescriptor(t, r);
+                        (!a || ("get" in a ? !t.__esModule : a.writable || a.configurable)) && (a = {
+                            enumerable: !0,
+                            get: function() {
+                                return t[r]
+                            }
+                        }), Object.defineProperty(e, i, a)
+                    } : function(e, t, r, i) {
+                        void 0 === i && (i = r), e[i] = t[r]
+                    }),
+                    o = this && this.__setModuleDefault || (Object.create ? function(e, t) {
+                        Object.defineProperty(e, "default", {
+                            enumerable: !0,
+                            value: t
+                        })
+                    } : function(e, t) {
+                        e.default = t
+                    }),
+                    s = this && this.__importStar || function(e) {
+                        if (e && e.__esModule) return e;
+                        var t = {};
+                        if (null != e)
+                            for (var r in e) "default" !== r && Object.prototype.hasOwnProperty.call(e, r) && a(t, e, r);
+                        return o(t, e), t
+                    };
+                Object.defineProperty(t, "__esModule", {
+                    value: !0
+                }), t.Live2DCubismFramework = t.ICubismModelSetting = void 0, t.ICubismModelSetting = function e() {};
+                var n, u = s(r( /*! ./icubismmodelsetting */ "../../../Framework/src/icubismmodelsetting.ts"));
+                (n = i = t.Live2DCubismFramework || (t.Live2DCubismFramework = {})).ICubismModelSetting = u.ICubismModelSetting
+            },
+            "../../../Framework/src/id/cubismid.ts": function(e, t, r) {
+                "use strict";
+                var i, a = this && this.__createBinding || (Object.create ? function(e, t, r, i) {
+                        void 0 === i && (i = r);
+                        var a = Object.getOwnPropertyDescriptor(t, r);
+                        (!a || ("get" in a ? !t.__esModule : a.writable || a.configurable)) && (a = {
+                            enumerable: !0,
+                            get: function() {
+                                return t[r]
+                            }
+                        }), Object.defineProperty(e, i, a)
+                    } : function(e, t, r, i) {
+                        void 0 === i && (i = r), e[i] = t[r]
+                    }),
+                    o = this && this.__setModuleDefault || (Object.create ? function(e, t) {
+                        Object.defineProperty(e, "default", {
+                            enumerable: !0,
+                            value: t
+                        })
+                    } : function(e, t) {
+                        e.default = t
+                    }),
+                    s = this && this.__importStar || function(e) {
+                        if (e && e.__esModule) return e;
+                        var t = {};
+                        if (null != e)
+                            for (var r in e) "default" !== r && Object.prototype.hasOwnProperty.call(e, r) && a(t, e, r);
+                        return o(t, e), t
+                    };
+                Object.defineProperty(t, "__esModule", {
+                    value: !0
+                }), t.Live2DCubismFramework = t.CubismId = void 0;
+                var n = r( /*! ../type/csmstring */ "../../../Framework/src/type/csmstring.ts"),
+                    u = function() {
+                        function e(e) {
+                            if ("string" == typeof e) {
+                                this._id = new n.csmString(e);
+                                return
+                            }
+                            this._id = e
+                        }
+                        return e.prototype.getString = function() {
+                            return this._id
+                        }, e.prototype.isEqual = function(t) {
+                            return "string" == typeof t ? this._id.isEqual(t) : t instanceof n.csmString ? this._id.isEqual(t.s) : t instanceof e && this._id.isEqual(t._id.s)
+                        }, e.prototype.isNotEqual = function(t) {
+                            return "string" == typeof t ? !this._id.isEqual(t) : t instanceof n.csmString ? !this._id.isEqual(t.s) : t instanceof e && !this._id.isEqual(t._id.s)
+                        }, e
+                    }();
+                t.CubismId = u;
+                var l, c = s(r( /*! ./cubismid */ "../../../Framework/src/id/cubismid.ts"));
+                (l = i = t.Live2DCubismFramework || (t.Live2DCubismFramework = {})).CubismId = c.CubismId
+            },
+            "../../../Framework/src/id/cubismidmanager.ts": function(e, t, r) {
+                "use strict";
+                var i, a = this && this.__createBinding || (Object.create ? function(e, t, r, i) {
+                        void 0 === i && (i = r);
+                        var a = Object.getOwnPropertyDescriptor(t, r);
+                        (!a || ("get" in a ? !t.__esModule : a.writable || a.configurable)) && (a = {
+                            enumerable: !0,
+                            get: function() {
+                                return t[r]
+                            }
+                        }), Object.defineProperty(e, i, a)
+                    } : function(e, t, r, i) {
+                        void 0 === i && (i = r), e[i] = t[r]
+                    }),
+                    o = this && this.__setModuleDefault || (Object.create ? function(e, t) {
+                        Object.defineProperty(e, "default", {
+                            enumerable: !0,
+                            value: t
+                        })
+                    } : function(e, t) {
+                        e.default = t
+                    }),
+                    s = this && this.__importStar || function(e) {
+                        if (e && e.__esModule) return e;
+                        var t = {};
+                        if (null != e)
+                            for (var r in e) "default" !== r && Object.prototype.hasOwnProperty.call(e, r) && a(t, e, r);
+                        return o(t, e), t
+                    };
+                Object.defineProperty(t, "__esModule", {
+                    value: !0
+                }), t.Live2DCubismFramework = t.CubismIdManager = void 0;
+                var n = r( /*! ../type/csmvector */ "../../../Framework/src/type/csmvector.ts"),
+                    u = r( /*! ./cubismid */ "../../../Framework/src/id/cubismid.ts"),
+                    l = function() {
+                        function e() {
+                            this._ids = new n.csmVector
+                        }
+                        return e.prototype.release = function() {
+                            for (var e = 0; e < this._ids.getSize(); ++e) this._ids.set(e, void 0);
+                            this._ids = null
+                        }, e.prototype.registerIds = function(e) {
+                            for (var t = 0; t < e.length; t++) this.registerId(e[t])
+                        }, e.prototype.registerId = function(e) {
+                            var t = null;
+                            return "string" != typeof e ? this.registerId(e.s) : null != (t = this.findId(e)) ? t : (t = new u.CubismId(e), this._ids.pushBack(t), t)
+                        }, e.prototype.getId = function(e) {
+                            return this.registerId(e)
+                        }, e.prototype.isExist = function(e) {
+                            return "string" == typeof e ? null != this.findId(e) : this.isExist(e.s)
+                        }, e.prototype.findId = function(e) {
+                            for (var t = 0; t < this._ids.getSize(); ++t)
+                                if (this._ids.at(t).getString().isEqual(e)) return this._ids.at(t);
+                            return null
+                        }, e
+                    }();
+                t.CubismIdManager = l;
+                var c, h = s(r( /*! ./cubismidmanager */ "../../../Framework/src/id/cubismidmanager.ts"));
+                (c = i = t.Live2DCubismFramework || (t.Live2DCubismFramework = {})).CubismIdManager = h.CubismIdManager
+            },
+            "../../../Framework/src/live2dcubismframework.ts": function(e, t, r) {
+                "use strict";
+                var i, a, o = this && this.__createBinding || (Object.create ? function(e, t, r, i) {
+                        void 0 === i && (i = r);
+                        var a = Object.getOwnPropertyDescriptor(t, r);
+                        (!a || ("get" in a ? !t.__esModule : a.writable || a.configurable)) && (a = {
+                            enumerable: !0,
+                            get: function() {
+                                return t[r]
+                            }
+                        }), Object.defineProperty(e, i, a)
+                    } : function(e, t, r, i) {
+                        void 0 === i && (i = r), e[i] = t[r]
+                    }),
+                    s = this && this.__setModuleDefault || (Object.create ? function(e, t) {
+                        Object.defineProperty(e, "default", {
+                            enumerable: !0,
+                            value: t
+                        })
+                    } : function(e, t) {
+                        e.default = t
+                    }),
+                    n = this && this.__importStar || function(e) {
+                        if (e && e.__esModule) return e;
+                        var t = {};
+                        if (null != e)
+                            for (var r in e) "default" !== r && Object.prototype.hasOwnProperty.call(e, r) && o(t, e, r);
+                        return s(t, e), t
+                    };
+                Object.defineProperty(t, "__esModule", {
+                    value: !0
+                }), t.Live2DCubismFramework = t.LogLevel = t.Option = t.CubismFramework = t.csmDelete = t.Constant = t.strtod = void 0;
+                var u = r( /*! ./id/cubismidmanager */ "../../../Framework/src/id/cubismidmanager.ts"),
+                    l = r( /*! ./rendering/cubismrenderer */ "../../../Framework/src/rendering/cubismrenderer.ts"),
+                    c = r( /*! ./utils/cubismdebug */ "../../../Framework/src/utils/cubismdebug.ts"),
+                    h = r( /*! ./utils/cubismjson */ "../../../Framework/src/utils/cubismjson.ts");
+                t.strtod = function e(t, r) {
+                    for (var i = 0, a = 1;; a++) {
+                        var o = t.slice(a - 1, a);
+                        if ("e" != o && "-" != o && "E" != o) {
+                            if (isNaN(Number(t.substring(0, a)))) break;
+                            i = a
+                        }
+                    }
+                    var s = parseFloat(t);
+                    return isNaN(s) && (s = NaN), r[0] = t.slice(i), s
+                };
+                var p = !1,
+                    m = !1,
+                    d = null,
+                    g = null;
+                t.Constant = Object.freeze({
+                    vertexOffset: 0,
+                    vertexStep: 2
+                }), t.csmDelete = function e(t) {
+                    t && (t = void 0)
+                };
+                var f = function() {
+                    function e() {}
+                    return e.startUp = function(e) {
+                        if (void 0 === e && (e = null), p) return (0, c.CubismLogInfo)("CubismFramework.startUp() is already done."), p;
+                        null != (d = e) && Live2DCubismCore.Logging.csmSetLogFunction(d.logFunction), p = !0;
+                        var t = Live2DCubismCore.Version.csmGetVersion();
+                        return (0, c.CubismLogInfo)("Live2D Cubism Core version: {0}.{1}.{2} ({3})", ("00" + ((4278190080 & t) >> 24)).slice(-2), ("00" + ((16711680 & t) >> 16)).slice(-2), ("0000" + (65535 & t)).slice(-4), t), (0, c.CubismLogInfo)("CubismFramework.startUp() is complete."), p
+                    }, e.cleanUp = function() {
+                        p = !1, m = !1, d = null, g = null
+                    }, e.initialize = function() {
+                        if ((0, c.CSM_ASSERT)(p), !p) {
+                            (0, c.CubismLogWarning)("CubismFramework is not started.");
+                            return
+                        }
+                        if (m) {
+                            (0, c.CubismLogWarning)("CubismFramework.initialize() skipped, already initialized.");
+                            return
+                        }
+                        h.Value.staticInitializeNotForClientCall(), g = new u.CubismIdManager, m = !0, (0, c.CubismLogInfo)("CubismFramework.initialize() is complete.")
+                    }, e.dispose = function() {
+                        if ((0, c.CSM_ASSERT)(p), !p) {
+                            (0, c.CubismLogWarning)("CubismFramework is not started.");
+                            return
+                        }
+                        if (!m) {
+                            (0, c.CubismLogWarning)("CubismFramework.dispose() skipped, not initialized.");
+                            return
+                        }
+                        h.Value.staticReleaseNotForClientCall(), g.release(), g = null, l.CubismRenderer.staticRelease(), m = !1, (0, c.CubismLogInfo)("CubismFramework.dispose() is complete.")
+                    }, e.isStarted = function() {
+                        return p
+                    }, e.isInitialized = function() {
+                        return m
+                    }, e.coreLogFunction = function(e) {
+                        Live2DCubismCore.Logging.csmGetLogFunction() && Live2DCubismCore.Logging.csmGetLogFunction()(e)
+                    }, e.getLoggingLevel = function() {
+                        return null != d ? d.loggingLevel : i.LogLevel_Off
+                    }, e.getIdManager = function() {
+                        return g
+                    }, e
+                }();
+                t.CubismFramework = f, t.Option = function e() {}, (y = i = t.LogLevel || (t.LogLevel = {}))[y.LogLevel_Verbose = 0] = "LogLevel_Verbose", y[y.LogLevel_Debug = 1] = "LogLevel_Debug", y[y.LogLevel_Info = 2] = "LogLevel_Info", y[y.LogLevel_Warning = 3] = "LogLevel_Warning", y[y.LogLevel_Error = 4] = "LogLevel_Error", y[y.LogLevel_Off = 5] = "LogLevel_Off";
+                var y, v, $ = n(r( /*! ./live2dcubismframework */ "../../../Framework/src/live2dcubismframework.ts"));
+                (v = a = t.Live2DCubismFramework || (t.Live2DCubismFramework = {})).Constant = $.Constant, v.csmDelete = $.csmDelete, v.CubismFramework = $.CubismFramework
+            },
+            "../../../Framework/src/math/cubismmath.ts": function(e, t, r) {
+                "use strict";
+                var i, a = this && this.__createBinding || (Object.create ? function(e, t, r, i) {
+                        void 0 === i && (i = r);
+                        var a = Object.getOwnPropertyDescriptor(t, r);
+                        (!a || ("get" in a ? !t.__esModule : a.writable || a.configurable)) && (a = {
+                            enumerable: !0,
+                            get: function() {
+                                return t[r]
+                            }
+                        }), Object.defineProperty(e, i, a)
+                    } : function(e, t, r, i) {
+                        void 0 === i && (i = r), e[i] = t[r]
+                    }),
+                    o = this && this.__setModuleDefault || (Object.create ? function(e, t) {
+                        Object.defineProperty(e, "default", {
+                            enumerable: !0,
+                            value: t
+                        })
+                    } : function(e, t) {
+                        e.default = t
+                    }),
+                    s = this && this.__importStar || function(e) {
+                        if (e && e.__esModule) return e;
+                        var t = {};
+                        if (null != e)
+                            for (var r in e) "default" !== r && Object.prototype.hasOwnProperty.call(e, r) && a(t, e, r);
+                        return o(t, e), t
+                    };
+                Object.defineProperty(t, "__esModule", {
+                    value: !0
+                }), t.Live2DCubismFramework = t.CubismMath = void 0;
+                var n = r( /*! ./cubismvector2 */ "../../../Framework/src/math/cubismvector2.ts"),
+                    u = function() {
+                        function e() {}
+                        return e.range = function(e, t, r) {
+                            return e < t ? e = t : e > r && (e = r), e
+                        }, e.sin = function(e) {
+                            return Math.sin(e)
+                        }, e.cos = function(e) {
+                            return Math.cos(e)
+                        }, e.abs = function(e) {
+                            return Math.abs(e)
+                        }, e.sqrt = function(e) {
+                            return Math.sqrt(e)
+                        }, e.cbrt = function(e) {
+                            if (0 === e) return e;
+                            var t, r = e,
+                                i = r < 0;
+                            return i && (r = -r), r === 1 / 0 ? t = 1 / 0 : (t = Math.exp(Math.log(r) / 3), t = (r / (t * t) + 2 * t) / 3), i ? -t : t
+                        }, e.getEasingSine = function(e) {
+                            return e < 0 ? 0 : e > 1 ? 1 : .5 - .5 * this.cos(e * Math.PI)
+                        }, e.max = function(e, t) {
+                            return e > t ? e : t
+                        }, e.min = function(e, t) {
+                            return e > t ? t : e
+                        }, e.degreesToRadian = function(e) {
+                            return e / 180 * Math.PI
+                        }, e.radianToDegrees = function(e) {
+                            return 180 * e / Math.PI
+                        }, e.directionToRadian = function(e, t) {
+                            for (var r = Math.atan2(t.y, t.x), i = r - Math.atan2(e.y, e.x); i < -Math.PI;) i += 2 * Math.PI;
+                            for (; i > Math.PI;) i -= 2 * Math.PI;
+                            return i
+                        }, e.directionToDegrees = function(e, t) {
+                            var r = this.directionToRadian(e, t),
+                                i = this.radianToDegrees(r);
+                            return t.x - e.x > 0 && (i = -i), i
+                        }, e.radianToDirection = function(e) {
+                            var t = new n.CubismVector2;
+                            return t.x = this.sin(e), t.y = this.cos(e), t
+                        }, e.quadraticEquation = function(t, r, i) {
+                            return this.abs(t) < e.Epsilon ? this.abs(r) < e.Epsilon ? -i : -i / r : -(r + this.sqrt(r * r - 4 * t * i)) / (2 * t)
+                        }, e.cardanoAlgorithmForBezier = function(t, r, i, a) {
+                            if (this.sqrt(t) < e.Epsilon) return this.range(this.quadraticEquation(r, i, a), 0, 1);
+                            var o = r / t,
+                                s = i / t,
+                                n = (3 * s - o * o) / 3,
+                                u = n / 3,
+                                l = (2 * o * o * o - 9 * o * s + 27 * (a / t)) / 27,
+                                c = l / 2,
+                                h = c * c + u * u * u;
+                            if (h < 0) {
+                                var p = -n / 3,
+                                    m = this.sqrt(p * p * p),
+                                    d = Math.acos(this.range(-l / (2 * m), -1, 1)),
+                                    g = 2 * this.cbrt(m),
+                                    f = g * this.cos(d / 3) - o / 3;
+                                if (.51 > this.abs(f - .5)) return this.range(f, 0, 1);
+                                var y = g * this.cos((d + 2 * Math.PI) / 3) - o / 3;
+                                if (.51 > this.abs(y - .5)) return this.range(y, 0, 1);
+                                var v = g * this.cos((d + 4 * Math.PI) / 3) - o / 3;
+                                return this.range(v, 0, 1)
+                            }
+                            if (0 == h) {
+                                var $, b = 2 * ($ = c < 0 ? this.cbrt(-c) : -this.cbrt(c)) - o / 3;
+                                if (.51 > this.abs(b - .5)) return this.range(b, 0, 1);
+                                var y = -$ - o / 3;
+                                return this.range(y, 0, 1)
+                            }
+                            var M = this.sqrt(h),
+                                C = this.cbrt(M - c),
+                                S = this.cbrt(M + c);
+                            return this.range(C - S - o / 3, 0, 1)
+                        }, e.Epsilon = 1e-5, e
+                    }();
+                t.CubismMath = u;
+                var l, c = s(r( /*! ./cubismmath */ "../../../Framework/src/math/cubismmath.ts"));
+                (l = i = t.Live2DCubismFramework || (t.Live2DCubismFramework = {})).CubismMath = c.CubismMath
+            },
+            "../../../Framework/src/math/cubismmatrix44.ts": function(e, t, r) {
+                "use strict";
+                var i, a = this && this.__createBinding || (Object.create ? function(e, t, r, i) {
+                        void 0 === i && (i = r);
+                        var a = Object.getOwnPropertyDescriptor(t, r);
+                        (!a || ("get" in a ? !t.__esModule : a.writable || a.configurable)) && (a = {
+                            enumerable: !0,
+                            get: function() {
+                                return t[r]
+                            }
+                        }), Object.defineProperty(e, i, a)
+                    } : function(e, t, r, i) {
+                        void 0 === i && (i = r), e[i] = t[r]
+                    }),
+                    o = this && this.__setModuleDefault || (Object.create ? function(e, t) {
+                        Object.defineProperty(e, "default", {
+                            enumerable: !0,
+                            value: t
+                        })
+                    } : function(e, t) {
+                        e.default = t
+                    }),
+                    s = this && this.__importStar || function(e) {
+                        if (e && e.__esModule) return e;
+                        var t = {};
+                        if (null != e)
+                            for (var r in e) "default" !== r && Object.prototype.hasOwnProperty.call(e, r) && a(t, e, r);
+                        return o(t, e), t
+                    };
+                Object.defineProperty(t, "__esModule", {
+                    value: !0
+                }), t.Live2DCubismFramework = t.CubismMatrix44 = void 0;
+                var n = function() {
+                    function e() {
+                        this._tr = new Float32Array(16), this.loadIdentity()
+                    }
+                    return e.multiply = function(e, t, r) {
+                        for (var i = new Float32Array([0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, ]), a = 0; a < 4; ++a)
+                            for (var o = 0; o < 4; ++o)
+                                for (var s = 0; s < 4; ++s) i[o + 4 * a] += e[s + 4 * a] * t[o + 4 * s];
+                        for (var a = 0; a < 16; ++a) r[a] = i[a]
+                    }, e.prototype.loadIdentity = function() {
+                        var e = new Float32Array([1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, ]);
+                        this.setMatrix(e)
+                    }, e.prototype.setMatrix = function(e) {
+                        for (var t = 0; t < 16; ++t) this._tr[t] = e[t]
+                    }, e.prototype.getArray = function() {
+                        return this._tr
+                    }, e.prototype.getScaleX = function() {
+                        return this._tr[0]
+                    }, e.prototype.getScaleY = function() {
+                        return this._tr[5]
+                    }, e.prototype.getTranslateX = function() {
+                        return this._tr[12]
+                    }, e.prototype.getTranslateY = function() {
+                        return this._tr[13]
+                    }, e.prototype.transformX = function(e) {
+                        return this._tr[0] * e + this._tr[12]
+                    }, e.prototype.transformY = function(e) {
+                        return this._tr[5] * e + this._tr[13]
+                    }, e.prototype.invertTransformX = function(e) {
+                        return (e - this._tr[12]) / this._tr[0]
+                    }, e.prototype.invertTransformY = function(e) {
+                        return (e - this._tr[13]) / this._tr[5]
+                    }, e.prototype.translateRelative = function(t, r) {
+                        var i = new Float32Array([1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, t, r, 0, 1, ]);
+                        e.multiply(i, this._tr, this._tr)
+                    }, e.prototype.translate = function(e, t) {
+                        this._tr[12] = e, this._tr[13] = t
+                    }, e.prototype.translateX = function(e) {
+                        this._tr[12] = e
+                    }, e.prototype.translateY = function(e) {
+                        this._tr[13] = e
+                    }, e.prototype.scaleRelative = function(t, r) {
+                        var i = new Float32Array([t, 0, 0, 0, 0, r, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, ]);
+                        e.multiply(i, this._tr, this._tr)
+                    }, e.prototype.scale = function(e, t) {
+                        this._tr[0] = e, this._tr[5] = t
+                    }, e.prototype.multiplyByMatrix = function(t) {
+                        e.multiply(t.getArray(), this._tr, this._tr)
+                    }, e.prototype.clone = function() {
+                        for (var t = new e, r = 0; r < this._tr.length; r++) t._tr[r] = this._tr[r];
+                        return t
+                    }, e
+                }();
+                t.CubismMatrix44 = n;
+                var u, l = s(r( /*! ./cubismmatrix44 */ "../../../Framework/src/math/cubismmatrix44.ts"));
+                (u = i = t.Live2DCubismFramework || (t.Live2DCubismFramework = {})).CubismMatrix44 = l.CubismMatrix44
+            },
+            "../../../Framework/src/math/cubismmodelmatrix.ts": function(e, t, r) {
+                "use strict";
+                var i, a, o = this && this.__extends || (i = function(e, t) {
+                        return (i = Object.setPrototypeOf || ({
+                            __proto__: []
+                        }) instanceof Array && function(e, t) {
+                            e.__proto__ = t
+                        } || function(e, t) {
+                            for (var r in t) Object.prototype.hasOwnProperty.call(t, r) && (e[r] = t[r])
+                        })(e, t)
+                    }, function(e, t) {
+                        if ("function" != typeof t && null !== t) throw TypeError("Class extends value " + String(t) + " is not a constructor or null");
+
+                        function r() {
+                            this.constructor = e
+                        }
+                        i(e, t), e.prototype = null === t ? Object.create(t) : (r.prototype = t.prototype, new r)
+                    }),
+                    s = this && this.__createBinding || (Object.create ? function(e, t, r, i) {
+                        void 0 === i && (i = r);
+                        var a = Object.getOwnPropertyDescriptor(t, r);
+                        (!a || ("get" in a ? !t.__esModule : a.writable || a.configurable)) && (a = {
+                            enumerable: !0,
+                            get: function() {
+                                return t[r]
+                            }
+                        }), Object.defineProperty(e, i, a)
+                    } : function(e, t, r, i) {
+                        void 0 === i && (i = r), e[i] = t[r]
+                    }),
+                    n = this && this.__setModuleDefault || (Object.create ? function(e, t) {
+                        Object.defineProperty(e, "default", {
+                            enumerable: !0,
+                            value: t
+                        })
+                    } : function(e, t) {
+                        e.default = t
+                    }),
+                    u = this && this.__importStar || function(e) {
+                        if (e && e.__esModule) return e;
+                        var t = {};
+                        if (null != e)
+                            for (var r in e) "default" !== r && Object.prototype.hasOwnProperty.call(e, r) && s(t, e, r);
+                        return n(t, e), t
+                    };
+                Object.defineProperty(t, "__esModule", {
+                    value: !0
+                }), t.Live2DCubismFramework = t.CubismModelMatrix = void 0;
+                var l = function(e) {
+                    function t(t, r) {
+                        var i = e.call(this) || this;
+                        return i._width = void 0 !== t ? t : 0, i._height = void 0 !== r ? r : 0, i.setHeight(2), i
+                    }
+                    return o(t, e), t.prototype.setWidth = function(e) {
+                        var t = e / this._width;
+                        this.scale(t, t)
+                    }, t.prototype.setHeight = function(e) {
+                        var t = e / this._height;
+                        this.scale(t, t)
+                    }, t.prototype.setPosition = function(e, t) {
+                        this.translate(e, t)
+                    }, t.prototype.setCenterPosition = function(e, t) {
+                        this.centerX(e), this.centerY(t)
+                    }, t.prototype.top = function(e) {
+                        this.setY(e)
+                    }, t.prototype.bottom = function(e) {
+                        var t = this._height * this.getScaleY();
+                        this.translateY(e - t)
+                    }, t.prototype.left = function(e) {
+                        this.setX(e)
+                    }, t.prototype.right = function(e) {
+                        var t = this._width * this.getScaleX();
+                        this.translateX(e - t)
+                    }, t.prototype.centerX = function(e) {
+                        var t = this._width * this.getScaleX();
+                        this.translateX(e - t / 2)
+                    }, t.prototype.setX = function(e) {
+                        this.translateX(e)
+                    }, t.prototype.centerY = function(e) {
+                        var t = this._height * this.getScaleY();
+                        this.translateY(e - t / 2)
+                    }, t.prototype.setY = function(e) {
+                        this.translateY(e)
+                    }, t.prototype.setupFromLayout = function(e) {
+                        for (var t = e.begin(); t.notEqual(e.end()); t.preIncrement()) {
+                            var r = t.ptr().first,
+                                i = t.ptr().second;
+                            "width" == r ? this.setWidth(i) : "height" == r && this.setHeight(i)
+                        }
+                        for (var t = e.begin(); t.notEqual(e.end()); t.preIncrement()) {
+                            var r = t.ptr().first,
+                                i = t.ptr().second;
+                            "x" == r ? this.setX(i) : "y" == r ? this.setY(i) : "center_x" == r ? this.centerX(i) : "center_y" == r ? this.centerY(i) : "top" == r ? this.top(i) : "bottom" == r ? this.bottom(i) : "left" == r ? this.left(i) : "right" == r && this.right(i)
+                        }
+                    }, t
+                }(r( /*! ./cubismmatrix44 */ "../../../Framework/src/math/cubismmatrix44.ts").CubismMatrix44);
+                t.CubismModelMatrix = l;
+                var c, h = u(r( /*! ./cubismmodelmatrix */ "../../../Framework/src/math/cubismmodelmatrix.ts"));
+                (c = a = t.Live2DCubismFramework || (t.Live2DCubismFramework = {})).CubismModelMatrix = h.CubismModelMatrix
+            },
+            "../../../Framework/src/math/cubismtargetpoint.ts": function(e, t, r) {
+                "use strict";
+                var i, a = this && this.__createBinding || (Object.create ? function(e, t, r, i) {
+                        void 0 === i && (i = r);
+                        var a = Object.getOwnPropertyDescriptor(t, r);
+                        (!a || ("get" in a ? !t.__esModule : a.writable || a.configurable)) && (a = {
+                            enumerable: !0,
+                            get: function() {
+                                return t[r]
+                            }
+                        }), Object.defineProperty(e, i, a)
+                    } : function(e, t, r, i) {
+                        void 0 === i && (i = r), e[i] = t[r]
+                    }),
+                    o = this && this.__setModuleDefault || (Object.create ? function(e, t) {
+                        Object.defineProperty(e, "default", {
+                            enumerable: !0,
+                            value: t
+                        })
+                    } : function(e, t) {
+                        e.default = t
+                    }),
+                    s = this && this.__importStar || function(e) {
+                        if (e && e.__esModule) return e;
+                        var t = {};
+                        if (null != e)
+                            for (var r in e) "default" !== r && Object.prototype.hasOwnProperty.call(e, r) && a(t, e, r);
+                        return o(t, e), t
+                    };
+                Object.defineProperty(t, "__esModule", {
+                    value: !0
+                }), t.Live2DCubismFramework = t.CubismTargetPoint = void 0;
+                var n = r( /*! ./cubismmath */ "../../../Framework/src/math/cubismmath.ts"),
+                    u = function() {
+                        function e() {
+                            this._faceTargetX = 0, this._faceTargetY = 0, this._faceX = 0, this._faceY = 0, this._faceVX = 0, this._faceVY = 0, this._lastTimeSeconds = 0, this._userTimeSeconds = 0
+                        }
+                        return e.prototype.update = function(e) {
+                            this._userTimeSeconds += e;
+                            if (0 == this._lastTimeSeconds) {
+                                this._lastTimeSeconds = this._userTimeSeconds;
+                                return
+                            }
+                            var t = (this._userTimeSeconds - this._lastTimeSeconds) * 30;
+                            this._lastTimeSeconds = this._userTimeSeconds;
+                            var r = .13333333333333333 * t / 4.5,
+                                i = this._faceTargetX - this._faceX,
+                                a = this._faceTargetY - this._faceY;
+                            if (!(.01 >= n.CubismMath.abs(i) && .01 >= n.CubismMath.abs(a))) {
+                                var o = n.CubismMath.sqrt(i * i + a * a),
+                                    s = .13333333333333333 * i / o - this._faceVX,
+                                    u = .13333333333333333 * a / o - this._faceVY,
+                                    l = n.CubismMath.sqrt(s * s + u * u);
+                                (l < -r || l > r) && (s *= r / l, u *= r / l), this._faceVX += s, this._faceVY += u;
+                                var c = .5 * (n.CubismMath.sqrt(r * r + 16 * r * o - 8 * r * o) - r),
+                                    h = n.CubismMath.sqrt(this._faceVX * this._faceVX + this._faceVY * this._faceVY);
+                                h > c && (this._faceVX *= c / h, this._faceVY *= c / h), this._faceX += this._faceVX, this._faceY += this._faceVY
+                            }
+                        }, e.prototype.getX = function() {
+                            return this._faceX
+                        }, e.prototype.getY = function() {
+                            return this._faceY
+                        }, e.prototype.set = function(e, t) {
+                            this._faceTargetX = e, this._faceTargetY = t
+                        }, e
+                    }();
+                t.CubismTargetPoint = u;
+                var l, c = s(r( /*! ./cubismtargetpoint */ "../../../Framework/src/math/cubismtargetpoint.ts"));
+                (l = i = t.Live2DCubismFramework || (t.Live2DCubismFramework = {})).CubismTargetPoint = c.CubismTargetPoint
+            },
+            "../../../Framework/src/math/cubismvector2.ts": function(e, t, r) {
+                "use strict";
+                var i, a = this && this.__createBinding || (Object.create ? function(e, t, r, i) {
+                        void 0 === i && (i = r);
+                        var a = Object.getOwnPropertyDescriptor(t, r);
+                        (!a || ("get" in a ? !t.__esModule : a.writable || a.configurable)) && (a = {
+                            enumerable: !0,
+                            get: function() {
+                                return t[r]
+                            }
+                        }), Object.defineProperty(e, i, a)
+                    } : function(e, t, r, i) {
+                        void 0 === i && (i = r), e[i] = t[r]
+                    }),
+                    o = this && this.__setModuleDefault || (Object.create ? function(e, t) {
+                        Object.defineProperty(e, "default", {
+                            enumerable: !0,
+                            value: t
+                        })
+                    } : function(e, t) {
+                        e.default = t
+                    }),
+                    s = this && this.__importStar || function(e) {
+                        if (e && e.__esModule) return e;
+                        var t = {};
+                        if (null != e)
+                            for (var r in e) "default" !== r && Object.prototype.hasOwnProperty.call(e, r) && a(t, e, r);
+                        return o(t, e), t
+                    };
+                Object.defineProperty(t, "__esModule", {
+                    value: !0
+                }), t.Live2DCubismFramework = t.CubismVector2 = void 0;
+                var n = function() {
+                    function e(e, t) {
+                        this.x = e, this.y = t, this.x = void 0 == e ? 0 : e, this.y = void 0 == t ? 0 : t
+                    }
+                    return e.prototype.add = function(t) {
+                        var r = new e(0, 0);
+                        return r.x = this.x + t.x, r.y = this.y + t.y, r
+                    }, e.prototype.substract = function(t) {
+                        var r = new e(0, 0);
+                        return r.x = this.x - t.x, r.y = this.y - t.y, r
+                    }, e.prototype.multiply = function(t) {
+                        var r = new e(0, 0);
+                        return r.x = this.x * t.x, r.y = this.y * t.y, r
+                    }, e.prototype.multiplyByScaler = function(t) {
+                        return this.multiply(new e(t, t))
+                    }, e.prototype.division = function(t) {
+                        var r = new e(0, 0);
+                        return r.x = this.x / t.x, r.y = this.y / t.y, r
+                    }, e.prototype.divisionByScalar = function(t) {
+                        return this.division(new e(t, t))
+                    }, e.prototype.getLength = function() {
+                        return Math.sqrt(this.x * this.x + this.y * this.y)
+                    }, e.prototype.getDistanceWith = function(e) {
+                        return Math.sqrt((this.x - e.x) * (this.x - e.x) + (this.y - e.y) * (this.y - e.y))
+                    }, e.prototype.dot = function(e) {
+                        return this.x * e.x + this.y * e.y
+                    }, e.prototype.normalize = function() {
+                        var e = Math.pow(this.x * this.x + this.y * this.y, .5);
+                        this.x = this.x / e, this.y = this.y / e
+                    }, e.prototype.isEqual = function(e) {
+                        return this.x == e.x && this.y == e.y
+                    }, e.prototype.isNotEqual = function(e) {
+                        return !this.isEqual(e)
+                    }, e
+                }();
+                t.CubismVector2 = n;
+                var u, l = s(r( /*! ./cubismvector2 */ "../../../Framework/src/math/cubismvector2.ts"));
+                (u = i = t.Live2DCubismFramework || (t.Live2DCubismFramework = {})).CubismVector2 = l.CubismVector2
+            },
+            "../../../Framework/src/math/cubismviewmatrix.ts": function(e, t, r) {
+                "use strict";
+                var i, a, o = this && this.__extends || (i = function(e, t) {
+                        return (i = Object.setPrototypeOf || ({
+                            __proto__: []
+                        }) instanceof Array && function(e, t) {
+                            e.__proto__ = t
+                        } || function(e, t) {
+                            for (var r in t) Object.prototype.hasOwnProperty.call(t, r) && (e[r] = t[r])
+                        })(e, t)
+                    }, function(e, t) {
+                        if ("function" != typeof t && null !== t) throw TypeError("Class extends value " + String(t) + " is not a constructor or null");
+
+                        function r() {
+                            this.constructor = e
+                        }
+                        i(e, t), e.prototype = null === t ? Object.create(t) : (r.prototype = t.prototype, new r)
+                    }),
+                    s = this && this.__createBinding || (Object.create ? function(e, t, r, i) {
+                        void 0 === i && (i = r);
+                        var a = Object.getOwnPropertyDescriptor(t, r);
+                        (!a || ("get" in a ? !t.__esModule : a.writable || a.configurable)) && (a = {
+                            enumerable: !0,
+                            get: function() {
+                                return t[r]
+                            }
+                        }), Object.defineProperty(e, i, a)
+                    } : function(e, t, r, i) {
+                        void 0 === i && (i = r), e[i] = t[r]
+                    }),
+                    n = this && this.__setModuleDefault || (Object.create ? function(e, t) {
+                        Object.defineProperty(e, "default", {
+                            enumerable: !0,
+                            value: t
+                        })
+                    } : function(e, t) {
+                        e.default = t
+                    }),
+                    u = this && this.__importStar || function(e) {
+                        if (e && e.__esModule) return e;
+                        var t = {};
+                        if (null != e)
+                            for (var r in e) "default" !== r && Object.prototype.hasOwnProperty.call(e, r) && s(t, e, r);
+                        return n(t, e), t
+                    };
+                Object.defineProperty(t, "__esModule", {
+                    value: !0
+                }), t.Live2DCubismFramework = t.CubismViewMatrix = void 0;
+                var l = r( /*! ./cubismmatrix44 */ "../../../Framework/src/math/cubismmatrix44.ts"),
+                    c = function(e) {
+                        function t() {
+                            var t = e.call(this) || this;
+                            return t._screenLeft = 0, t._screenRight = 0, t._screenTop = 0, t._screenBottom = 0, t._maxLeft = 0, t._maxRight = 0, t._maxTop = 0, t._maxBottom = 0, t._maxScale = 0, t._minScale = 0, t
+                        }
+                        return o(t, e), t.prototype.adjustTranslate = function(e, t) {
+                            this._tr[0] * this._maxLeft + (this._tr[12] + e) > this._screenLeft && (e = this._screenLeft - this._tr[0] * this._maxLeft - this._tr[12]), this._tr[0] * this._maxRight + (this._tr[12] + e) < this._screenRight && (e = this._screenRight - this._tr[0] * this._maxRight - this._tr[12]), this._tr[5] * this._maxTop + (this._tr[13] + t) < this._screenTop && (t = this._screenTop - this._tr[5] * this._maxTop - this._tr[13]), this._tr[5] * this._maxBottom + (this._tr[13] + t) > this._screenBottom && (t = this._screenBottom - this._tr[5] * this._maxBottom - this._tr[13]);
+                            var r = new Float32Array([1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, e, t, 0, 1, ]);
+                            l.CubismMatrix44.multiply(r, this._tr, this._tr)
+                        }, t.prototype.adjustScale = function(e, t, r) {
+                            var i = this.getMaxScale(),
+                                a = this.getMinScale(),
+                                o = r * this._tr[0];
+                            o < a ? this._tr[0] > 0 && (r = a / this._tr[0]) : o > i && this._tr[0] > 0 && (r = i / this._tr[0]);
+                            var s = new Float32Array([1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, e, t, 0, 1, ]),
+                                n = new Float32Array([r, 0, 0, 0, 0, r, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, ]),
+                                u = new Float32Array([1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -e, -t, 0, 1, ]);
+                            l.CubismMatrix44.multiply(u, this._tr, this._tr), l.CubismMatrix44.multiply(n, this._tr, this._tr), l.CubismMatrix44.multiply(s, this._tr, this._tr)
+                        }, t.prototype.setScreenRect = function(e, t, r, i) {
+                            this._screenLeft = e, this._screenRight = t, this._screenBottom = r, this._screenTop = i
+                        }, t.prototype.setMaxScreenRect = function(e, t, r, i) {
+                            this._maxLeft = e, this._maxRight = t, this._maxTop = i, this._maxBottom = r
+                        }, t.prototype.setMaxScale = function(e) {
+                            this._maxScale = e
+                        }, t.prototype.setMinScale = function(e) {
+                            this._minScale = e
+                        }, t.prototype.getMaxScale = function() {
+                            return this._maxScale
+                        }, t.prototype.getMinScale = function() {
+                            return this._minScale
+                        }, t.prototype.isMaxScale = function() {
+                            return this.getScaleX() >= this._maxScale
+                        }, t.prototype.isMinScale = function() {
+                            return this.getScaleX() <= this._minScale
+                        }, t.prototype.getScreenLeft = function() {
+                            return this._screenLeft
+                        }, t.prototype.getScreenRight = function() {
+                            return this._screenRight
+                        }, t.prototype.getScreenBottom = function() {
+                            return this._screenBottom
+                        }, t.prototype.getScreenTop = function() {
+                            return this._screenTop
+                        }, t.prototype.getMaxLeft = function() {
+                            return this._maxLeft
+                        }, t.prototype.getMaxRight = function() {
+                            return this._maxRight
+                        }, t.prototype.getMaxBottom = function() {
+                            return this._maxBottom
+                        }, t.prototype.getMaxTop = function() {
+                            return this._maxTop
+                        }, t
+                    }(l.CubismMatrix44);
+                t.CubismViewMatrix = c;
+                var h, p = u(r( /*! ./cubismviewmatrix */ "../../../Framework/src/math/cubismviewmatrix.ts"));
+                (h = a = t.Live2DCubismFramework || (t.Live2DCubismFramework = {})).CubismViewMatrix = p.CubismViewMatrix
+            },
+            "../../../Framework/src/model/cubismmoc.ts": function(e, t, r) {
+                "use strict";
+                var i, a = this && this.__createBinding || (Object.create ? function(e, t, r, i) {
+                        void 0 === i && (i = r);
+                        var a = Object.getOwnPropertyDescriptor(t, r);
+                        (!a || ("get" in a ? !t.__esModule : a.writable || a.configurable)) && (a = {
+                            enumerable: !0,
+                            get: function() {
+                                return t[r]
+                            }
+                        }), Object.defineProperty(e, i, a)
+                    } : function(e, t, r, i) {
+                        void 0 === i && (i = r), e[i] = t[r]
+                    }),
+                    o = this && this.__setModuleDefault || (Object.create ? function(e, t) {
+                        Object.defineProperty(e, "default", {
+                            enumerable: !0,
+                            value: t
+                        })
+                    } : function(e, t) {
+                        e.default = t
+                    }),
+                    s = this && this.__importStar || function(e) {
+                        if (e && e.__esModule) return e;
+                        var t = {};
+                        if (null != e)
+                            for (var r in e) "default" !== r && Object.prototype.hasOwnProperty.call(e, r) && a(t, e, r);
+                        return o(t, e), t
+                    };
+                Object.defineProperty(t, "__esModule", {
+                    value: !0
+                }), t.Live2DCubismFramework = t.CubismMoc = void 0;
+                var n = r( /*! ../utils/cubismdebug */ "../../../Framework/src/utils/cubismdebug.ts"),
+                    u = r( /*! ./cubismmodel */ "../../../Framework/src/model/cubismmodel.ts"),
+                    l = function() {
+                        function e(e) {
+                            this._moc = e, this._modelCount = 0, this._mocVersion = 0
+                        }
+                        return e.create = function(t) {
+                            var r = null,
+                                i = Live2DCubismCore.Moc.fromArrayBuffer(t);
+                            return i && ((r = new e(i))._mocVersion = Live2DCubismCore.Version.csmGetMocVersion(i, t)), r
+                        }, e.delete = function(e) {
+                            e._moc._release(), e._moc = null, e = null
+                        }, e.prototype.createModel = function() {
+                            var e = null,
+                                t = Live2DCubismCore.Model.fromMoc(this._moc);
+                            return t && ((e = new u.CubismModel(t)).initialize(), ++this._modelCount), e
+                        }, e.prototype.deleteModel = function(e) {
+                            null != e && (e.release(), e = null, --this._modelCount)
+                        }, e.prototype.release = function() {
+                            (0, n.CSM_ASSERT)(0 == this._modelCount), this._moc._release(), this._moc = null
+                        }, e.prototype.getLatestMocVersion = function() {
+                            return Live2DCubismCore.Version.csmGetLatestMocVersion()
+                        }, e.prototype.getMocVersion = function() {
+                            return this._mocVersion
+                        }, e
+                    }();
+                t.CubismMoc = l;
+                var c, h = s(r( /*! ./cubismmoc */ "../../../Framework/src/model/cubismmoc.ts"));
+                (c = i = t.Live2DCubismFramework || (t.Live2DCubismFramework = {})).CubismMoc = h.CubismMoc
+            },
+            "../../../Framework/src/model/cubismmodel.ts": function(e, t, r) {
+                "use strict";
+                var i, a = this && this.__createBinding || (Object.create ? function(e, t, r, i) {
+                        void 0 === i && (i = r);
+                        var a = Object.getOwnPropertyDescriptor(t, r);
+                        (!a || ("get" in a ? !t.__esModule : a.writable || a.configurable)) && (a = {
+                            enumerable: !0,
+                            get: function() {
+                                return t[r]
+                            }
+                        }), Object.defineProperty(e, i, a)
+                    } : function(e, t, r, i) {
+                        void 0 === i && (i = r), e[i] = t[r]
+                    }),
+                    o = this && this.__setModuleDefault || (Object.create ? function(e, t) {
+                        Object.defineProperty(e, "default", {
+                            enumerable: !0,
+                            value: t
+                        })
+                    } : function(e, t) {
+                        e.default = t
+                    }),
+                    s = this && this.__importStar || function(e) {
+                        if (e && e.__esModule) return e;
+                        var t = {};
+                        if (null != e)
+                            for (var r in e) "default" !== r && Object.prototype.hasOwnProperty.call(e, r) && a(t, e, r);
+                        return o(t, e), t
+                    };
+                Object.defineProperty(t, "__esModule", {
+                    value: !0
+                }), t.Live2DCubismFramework = t.CubismModel = t.DrawableColorData = void 0;
+                var n = r( /*! ../live2dcubismframework */ "../../../Framework/src/live2dcubismframework.ts"),
+                    u = r( /*! ../rendering/cubismrenderer */ "../../../Framework/src/rendering/cubismrenderer.ts"),
+                    l = r( /*! ../type/csmmap */ "../../../Framework/src/type/csmmap.ts"),
+                    c = r( /*! ../type/csmvector */ "../../../Framework/src/type/csmvector.ts"),
+                    h = r( /*! ../utils/cubismdebug */ "../../../Framework/src/utils/cubismdebug.ts"),
+                    p = function e() {
+                        this.isOverwritten = !1, this.Color = new u.CubismTextureColor
+                    };
+                t.DrawableColorData = p;
+                var m = function() {
+                    function e(e) {
+                        this._model = e, this._parameterValues = null, this._parameterMaximumValues = null, this._parameterMinimumValues = null, this._partOpacities = null, this._savedParameters = new c.csmVector, this._parameterIds = new c.csmVector, this._drawableIds = new c.csmVector, this._partIds = new c.csmVector, this._isOverwrittenModelMultiplyColors = !1, this._isOverwrittenModelScreenColors = !1, this._userMultiplyColors = null, this._userScreenColors = null, this._notExistPartId = new l.csmMap, this._notExistParameterId = new l.csmMap, this._notExistParameterValues = new l.csmMap, this._notExistPartOpacities = new l.csmMap
+                    }
+                    return e.prototype.update = function() {
+                        this._model.update(), this._model.drawables.resetDynamicFlags()
+                    }, e.prototype.getCanvasWidth = function() {
+                        return null == this._model ? 0 : this._model.canvasinfo.CanvasWidth / this._model.canvasinfo.PixelsPerUnit
+                    }, e.prototype.getCanvasHeight = function() {
+                        return null == this._model ? 0 : this._model.canvasinfo.CanvasHeight / this._model.canvasinfo.PixelsPerUnit
+                    }, e.prototype.saveParameters = function() {
+                        for (var e = this._model.parameters.count, t = this._savedParameters.getSize(), r = 0; r < e; ++r) r < t ? this._savedParameters.set(r, this._parameterValues[r]) : this._savedParameters.pushBack(this._parameterValues[r])
+                    }, e.prototype.getMultiplyColor = function(e) {
+                        return this.getOverwriteFlagForModelMultiplyColors() || this.getOverwriteFlagForDrawableMultiplyColors(e) ? this._userMultiplyColors.at(e).Color : this.getDrawableMultiplyColor(e)
+                    }, e.prototype.getScreenColor = function(e) {
+                        return this.getOverwriteFlagForModelScreenColors() || this.getOverwriteFlagForDrawableScreenColors(e) ? this._userScreenColors.at(e).Color : this.getDrawableScreenColor(e)
+                    }, e.prototype.setMultiplyColorByTextureColor = function(e, t) {
+                        this.setMultiplyColorByRGBA(e, t.R, t.G, t.B, t.A)
+                    }, e.prototype.setMultiplyColorByRGBA = function(e, t, r, i, a) {
+                        void 0 === a && (a = 1), this._userMultiplyColors.at(e).Color.R = t, this._userMultiplyColors.at(e).Color.G = r, this._userMultiplyColors.at(e).Color.B = i, this._userMultiplyColors.at(e).Color.A = a
+                    }, e.prototype.setScreenColorByTextureColor = function(e, t) {
+                        this.setScreenColorByRGBA(e, t.R, t.G, t.B, t.A)
+                    }, e.prototype.setScreenColorByRGBA = function(e, t, r, i, a) {
+                        void 0 === a && (a = 1), this._userScreenColors.at(e).Color.R = t, this._userScreenColors.at(e).Color.G = r, this._userScreenColors.at(e).Color.B = i, this._userScreenColors.at(e).Color.A = a
+                    }, e.prototype.getOverwriteFlagForModelMultiplyColors = function() {
+                        return this._isOverwrittenModelMultiplyColors
+                    }, e.prototype.getOverwriteFlagForModelScreenColors = function() {
+                        return this._isOverwrittenModelScreenColors
+                    }, e.prototype.setOverwriteFlagForModelMultiplyColors = function(e) {
+                        this._isOverwrittenModelMultiplyColors = e
+                    }, e.prototype.setOverwriteFlagForModelScreenColors = function(e) {
+                        this._isOverwrittenModelScreenColors = e
+                    }, e.prototype.getOverwriteFlagForDrawableMultiplyColors = function(e) {
+                        return this._userMultiplyColors.at(e).isOverwritten
+                    }, e.prototype.getOverwriteFlagForDrawableScreenColors = function(e) {
+                        return this._userMultiplyColors.at(e).isOverwritten
+                    }, e.prototype.setOverwriteFlagForDrawableMultiplyColors = function(e, t) {
+                        this._userMultiplyColors.at(e).isOverwritten = t
+                    }, e.prototype.setOverwriteFlagForDrawableScreenColors = function(e, t) {
+                        this._userScreenColors.at(e).isOverwritten = t
+                    }, e.prototype.getModel = function() {
+                        return this._model
+                    }, e.prototype.getPartIndex = function(e) {
+                        var t, r = this._model.parts.count;
+                        for (t = 0; t < r; ++t)
+                            if (e == this._partIds.at(t)) return t;
+                        return this._notExistPartId.isExist(e) ? this._notExistPartId.getValue(e) : (t = r + this._notExistPartId.getSize(), this._notExistPartId.setValue(e, t), this._notExistPartOpacities.appendKey(t), t)
+                    }, e.prototype.getPartCount = function() {
+                        return this._model.parts.count
+                    }, e.prototype.setPartOpacityByIndex = function(e, t) {
+                        if (this._notExistPartOpacities.isExist(e)) {
+                            this._notExistPartOpacities.setValue(e, t);
+                            return
+                        }(0, h.CSM_ASSERT)(0 <= e && e < this.getPartCount()), this._partOpacities[e] = t
+                    }, e.prototype.setPartOpacityById = function(e, t) {
+                        var r = this.getPartIndex(e);
+                        !(r < 0) && this.setPartOpacityByIndex(r, t)
+                    }, e.prototype.getPartOpacityByIndex = function(e) {
+                        return this._notExistPartOpacities.isExist(e) ? this._notExistPartOpacities.getValue(e) : ((0, h.CSM_ASSERT)(0 <= e && e < this.getPartCount()), this._partOpacities[e])
+                    }, e.prototype.getPartOpacityById = function(e) {
+                        var t = this.getPartIndex(e);
+                        return t < 0 ? 0 : this.getPartOpacityByIndex(t)
+                    }, e.prototype.getParameterIndex = function(e) {
+                        var t, r = this._model.parameters.count;
+                        for (t = 0; t < r; ++t)
+                            if (e == this._parameterIds.at(t)) return t;
+                        return this._notExistParameterId.isExist(e) ? this._notExistParameterId.getValue(e) : (t = this._model.parameters.count + this._notExistParameterId.getSize(), this._notExistParameterId.setValue(e, t), this._notExistParameterValues.appendKey(t), t)
+                    }, e.prototype.getParameterCount = function() {
+                        return this._model.parameters.count
+                    }, e.prototype.getParameterType = function(e) {
+                        return this._model.parameters.types[e]
+                    }, e.prototype.getParameterMaximumValue = function(e) {
+                        return this._model.parameters.maximumValues[e]
+                    }, e.prototype.getParameterMinimumValue = function(e) {
+                        return this._model.parameters.minimumValues[e]
+                    }, e.prototype.getParameterDefaultValue = function(e) {
+                        return this._model.parameters.defaultValues[e]
+                    }, e.prototype.getParameterValueByIndex = function(e) {
+                        return this._notExistParameterValues.isExist(e) ? this._notExistParameterValues.getValue(e) : ((0, h.CSM_ASSERT)(0 <= e && e < this.getParameterCount()), this._parameterValues[e])
+                    }, e.prototype.getParameterValueById = function(e) {
+                        var t = this.getParameterIndex(e);
+                        return this.getParameterValueByIndex(t)
+                    }, e.prototype.setParameterValueByIndex = function(e, t, r) {
+                        if (void 0 === r && (r = 1), this._notExistParameterValues.isExist(e)) {
+                            this._notExistParameterValues.setValue(e, 1 == r ? t : this._notExistParameterValues.getValue(e) * (1 - r) + t * r);
+                            return
+                        }(0, h.CSM_ASSERT)(0 <= e && e < this.getParameterCount()), this._model.parameters.maximumValues[e] < t && (t = this._model.parameters.maximumValues[e]), this._model.parameters.minimumValues[e] > t && (t = this._model.parameters.minimumValues[e]), this._parameterValues[e] = 1 == r ? t : this._parameterValues[e] = this._parameterValues[e] * (1 - r) + t * r
+                    }, e.prototype.setParameterValueById = function(e, t, r) {
+                        void 0 === r && (r = 1);
+                        var i = this.getParameterIndex(e);
+                        this.setParameterValueByIndex(i, t, r)
+                    }, e.prototype.addParameterValueByIndex = function(e, t, r) {
+                        void 0 === r && (r = 1), this.setParameterValueByIndex(e, this.getParameterValueByIndex(e) + t * r)
+                    }, e.prototype.addParameterValueById = function(e, t, r) {
+                        void 0 === r && (r = 1);
+                        var i = this.getParameterIndex(e);
+                        this.addParameterValueByIndex(i, t, r)
+                    }, e.prototype.multiplyParameterValueById = function(e, t, r) {
+                        void 0 === r && (r = 1);
+                        var i = this.getParameterIndex(e);
+                        this.multiplyParameterValueByIndex(i, t, r)
+                    }, e.prototype.multiplyParameterValueByIndex = function(e, t, r) {
+                        void 0 === r && (r = 1), this.setParameterValueByIndex(e, this.getParameterValueByIndex(e) * (1 + (t - 1) * r))
+                    }, e.prototype.getDrawableIndex = function(e) {
+                        for (var t = this._model.drawables.count, r = 0; r < t; ++r)
+                            if (this._drawableIds.at(r) == e) return r;
+                        return -1
+                    }, e.prototype.getDrawableCount = function() {
+                        return this._model.drawables.count
+                    }, e.prototype.getDrawableId = function(e) {
+                        var t = this._model.drawables.ids;
+                        return n.CubismFramework.getIdManager().getId(t[e])
+                    }, e.prototype.getDrawableRenderOrders = function() {
+                        return this._model.drawables.renderOrders
+                    }, e.prototype.getDrawableTextureIndices = function(e) {
+                        return this.getDrawableTextureIndex(e)
+                    }, e.prototype.getDrawableTextureIndex = function(e) {
+                        return this._model.drawables.textureIndices[e]
+                    }, e.prototype.getDrawableDynamicFlagVertexPositionsDidChange = function(e) {
+                        var t = this._model.drawables.dynamicFlags;
+                        return Live2DCubismCore.Utils.hasVertexPositionsDidChangeBit(t[e])
+                    }, e.prototype.getDrawableVertexIndexCount = function(e) {
+                        return this._model.drawables.indexCounts[e]
+                    }, e.prototype.getDrawableVertexCount = function(e) {
+                        return this._model.drawables.vertexCounts[e]
+                    }, e.prototype.getDrawableVertices = function(e) {
+                        return this.getDrawableVertexPositions(e)
+                    }, e.prototype.getDrawableVertexIndices = function(e) {
+                        return this._model.drawables.indices[e]
+                    }, e.prototype.getDrawableVertexPositions = function(e) {
+                        return this._model.drawables.vertexPositions[e]
+                    }, e.prototype.getDrawableVertexUvs = function(e) {
+                        return this._model.drawables.vertexUvs[e]
+                    }, e.prototype.getDrawableOpacity = function(e) {
+                        return this._model.drawables.opacities[e]
+                    }, e.prototype.getDrawableMultiplyColor = function(e) {
+                        var t = this._model.drawables.multiplyColors,
+                            r = 4 * e,
+                            i = new u.CubismTextureColor;
+                        return i.R = t[r], i.G = t[r + 1], i.B = t[r + 2], i.A = t[r + 3], i
+                    }, e.prototype.getDrawableScreenColor = function(e) {
+                        var t = this._model.drawables.screenColors,
+                            r = 4 * e,
+                            i = new u.CubismTextureColor;
+                        return i.R = t[r], i.G = t[r + 1], i.B = t[r + 2], i.A = t[r + 3], i
+                    }, e.prototype.getDrawableParentPartIndex = function(e) {
+                        return this._model.drawables.parentPartIndices[e]
+                    }, e.prototype.getDrawableCulling = function(e) {
+                        var t = this._model.drawables.constantFlags;
+                        return !Live2DCubismCore.Utils.hasIsDoubleSidedBit(t[e])
+                    }, e.prototype.getDrawableBlendMode = function(e) {
+                        var t = this._model.drawables.constantFlags;
+                        return Live2DCubismCore.Utils.hasBlendAdditiveBit(t[e]) ? u.CubismBlendMode.CubismBlendMode_Additive : Live2DCubismCore.Utils.hasBlendMultiplicativeBit(t[e]) ? u.CubismBlendMode.CubismBlendMode_Multiplicative : u.CubismBlendMode.CubismBlendMode_Normal
+                    }, e.prototype.getDrawableInvertedMaskBit = function(e) {
+                        var t = this._model.drawables.constantFlags;
+                        return Live2DCubismCore.Utils.hasIsInvertedMaskBit(t[e])
+                    }, e.prototype.getDrawableMasks = function() {
+                        return this._model.drawables.masks
+                    }, e.prototype.getDrawableMaskCounts = function() {
+                        return this._model.drawables.maskCounts
+                    }, e.prototype.isUsingMasking = function() {
+                        for (var e = 0; e < this._model.drawables.count; ++e)
+                            if (!(this._model.drawables.maskCounts[e] <= 0)) return !0;
+                        return !1
+                    }, e.prototype.getDrawableDynamicFlagIsVisible = function(e) {
+                        var t = this._model.drawables.dynamicFlags;
+                        return Live2DCubismCore.Utils.hasIsVisibleBit(t[e])
+                    }, e.prototype.getDrawableDynamicFlagVisibilityDidChange = function(e) {
+                        var t = this._model.drawables.dynamicFlags;
+                        return Live2DCubismCore.Utils.hasVisibilityDidChangeBit(t[e])
+                    }, e.prototype.getDrawableDynamicFlagOpacityDidChange = function(e) {
+                        var t = this._model.drawables.dynamicFlags;
+                        return Live2DCubismCore.Utils.hasOpacityDidChangeBit(t[e])
+                    }, e.prototype.getDrawableDynamicFlagRenderOrderDidChange = function(e) {
+                        var t = this._model.drawables.dynamicFlags;
+                        return Live2DCubismCore.Utils.hasRenderOrderDidChangeBit(t[e])
+                    }, e.prototype.getDrawableDynamicFlagBlendColorDidChange = function(e) {
+                        var t = this._model.drawables.dynamicFlags;
+                        return Live2DCubismCore.Utils.hasBlendColorDidChangeBit(t[e])
+                    }, e.prototype.loadParameters = function() {
+                        var e = this._model.parameters.count,
+                            t = this._savedParameters.getSize();
+                        e > t && (e = t);
+                        for (var r = 0; r < e; ++r) this._parameterValues[r] = this._savedParameters.at(r)
+                    }, e.prototype.initialize = function() {
+                        (0, h.CSM_ASSERT)(this._model), this._parameterValues = this._model.parameters.values, this._partOpacities = this._model.parts.opacities, this._parameterMaximumValues = this._model.parameters.maximumValues, this._parameterMinimumValues = this._model.parameters.minimumValues;
+                        var e = this._model.parameters.ids,
+                            t = this._model.parameters.count;
+                        this._parameterIds.prepareCapacity(t);
+                        for (var r = 0; r < t; ++r) this._parameterIds.pushBack(n.CubismFramework.getIdManager().getId(e[r]));
+                        var i = this._model.parts.ids,
+                            a = this._model.parts.count;
+                        this._partIds.prepareCapacity(a);
+                        for (var r = 0; r < a; ++r) this._partIds.pushBack(n.CubismFramework.getIdManager().getId(i[r]));
+                        var o = this._model.drawables.ids,
+                            s = this._model.drawables.count;
+                        this._userMultiplyColors = new c.csmVector, this._userMultiplyColors.updateSize(s, p, !0), this._userScreenColors = new c.csmVector, this._userScreenColors.updateSize(s, p, !0), this._drawableIds.prepareCapacity(s);
+                        for (var r = 0; r < s; ++r) this._drawableIds.pushBack(n.CubismFramework.getIdManager().getId(o[r])), this.setMultiplyColorByRGBA(r, 1, 1, 1, 1), this.setScreenColorByRGBA(r, 0, 0, 0, 1)
+                    }, e.prototype.release = function() {
+                        this._model.release(), this._model = null
+                    }, e
+                }();
+                t.CubismModel = m;
+                var d, g = s(r( /*! ./cubismmodel */ "../../../Framework/src/model/cubismmodel.ts"));
+                (d = i = t.Live2DCubismFramework || (t.Live2DCubismFramework = {})).CubismModel = g.CubismModel
+            },
+            "../../../Framework/src/model/cubismmodeluserdata.ts": function(e, t, r) {
+                "use strict";
+                var i, a = this && this.__createBinding || (Object.create ? function(e, t, r, i) {
+                        void 0 === i && (i = r);
+                        var a = Object.getOwnPropertyDescriptor(t, r);
+                        (!a || ("get" in a ? !t.__esModule : a.writable || a.configurable)) && (a = {
+                            enumerable: !0,
+                            get: function() {
+                                return t[r]
+                            }
+                        }), Object.defineProperty(e, i, a)
+                    } : function(e, t, r, i) {
+                        void 0 === i && (i = r), e[i] = t[r]
+                    }),
+                    o = this && this.__setModuleDefault || (Object.create ? function(e, t) {
+                        Object.defineProperty(e, "default", {
+                            enumerable: !0,
+                            value: t
+                        })
+                    } : function(e, t) {
+                        e.default = t
+                    }),
+                    s = this && this.__importStar || function(e) {
+                        if (e && e.__esModule) return e;
+                        var t = {};
+                        if (null != e)
+                            for (var r in e) "default" !== r && Object.prototype.hasOwnProperty.call(e, r) && a(t, e, r);
+                        return o(t, e), t
+                    };
+                Object.defineProperty(t, "__esModule", {
+                    value: !0
+                }), t.Live2DCubismFramework = t.CubismModelUserData = t.CubismModelUserDataNode = void 0;
+                var n = r( /*! ../live2dcubismframework */ "../../../Framework/src/live2dcubismframework.ts"),
+                    u = r( /*! ../type/csmstring */ "../../../Framework/src/type/csmstring.ts"),
+                    l = r( /*! ../type/csmvector */ "../../../Framework/src/type/csmvector.ts"),
+                    c = r( /*! ./cubismmodeluserdatajson */ "../../../Framework/src/model/cubismmodeluserdatajson.ts"),
+                    h = function e() {};
+                t.CubismModelUserDataNode = h;
+                var p = function() {
+                    function e() {
+                        this._userDataNodes = new l.csmVector, this._artMeshUserDataNode = new l.csmVector
+                    }
+                    return e.create = function(t, r) {
+                        var i = new e;
+                        return i.parseUserData(t, r), i
+                    }, e.delete = function(e) {
+                        null != e && (e.release(), e = null)
+                    }, e.prototype.getArtMeshUserDatas = function() {
+                        return this._artMeshUserDataNode
+                    }, e.prototype.parseUserData = function(e, t) {
+                        for (var r = new c.CubismModelUserDataJson(e, t), i = n.CubismFramework.getIdManager().getId("ArtMesh"), a = r.getUserDataCount(), o = 0; o < a; o++) {
+                            var s = new h;
+                            s.targetId = r.getUserDataId(o), s.targetType = n.CubismFramework.getIdManager().getId(r.getUserDataTargetType(o)), s.value = new u.csmString(r.getUserDataValue(o)), this._userDataNodes.pushBack(s), s.targetType == i && this._artMeshUserDataNode.pushBack(s)
+                        }
+                        r.release(), r = void 0
+                    }, e.prototype.release = function() {
+                        for (var e = 0; e < this._userDataNodes.getSize(); ++e) this._userDataNodes.set(e, null);
+                        this._userDataNodes = null
+                    }, e
+                }();
+                t.CubismModelUserData = p;
+                var m, d = s(r( /*! ./cubismmodeluserdata */ "../../../Framework/src/model/cubismmodeluserdata.ts"));
+                (m = i = t.Live2DCubismFramework || (t.Live2DCubismFramework = {})).CubismModelUserData = d.CubismModelUserData, m.CubismModelUserDataNode = d.CubismModelUserDataNode
+            },
+            "../../../Framework/src/model/cubismmodeluserdatajson.ts": function(e, t, r) {
+                "use strict";
+                var i, a = this && this.__createBinding || (Object.create ? function(e, t, r, i) {
+                        void 0 === i && (i = r);
+                        var a = Object.getOwnPropertyDescriptor(t, r);
+                        (!a || ("get" in a ? !t.__esModule : a.writable || a.configurable)) && (a = {
+                            enumerable: !0,
+                            get: function() {
+                                return t[r]
+                            }
+                        }), Object.defineProperty(e, i, a)
+                    } : function(e, t, r, i) {
+                        void 0 === i && (i = r), e[i] = t[r]
+                    }),
+                    o = this && this.__setModuleDefault || (Object.create ? function(e, t) {
+                        Object.defineProperty(e, "default", {
+                            enumerable: !0,
+                            value: t
+                        })
+                    } : function(e, t) {
+                        e.default = t
+                    }),
+                    s = this && this.__importStar || function(e) {
+                        if (e && e.__esModule) return e;
+                        var t = {};
+                        if (null != e)
+                            for (var r in e) "default" !== r && Object.prototype.hasOwnProperty.call(e, r) && a(t, e, r);
+                        return o(t, e), t
+                    };
+                Object.defineProperty(t, "__esModule", {
+                    value: !0
+                }), t.Live2DCubismFramework = t.CubismModelUserDataJson = void 0;
+                var n = r( /*! ../live2dcubismframework */ "../../../Framework/src/live2dcubismframework.ts"),
+                    u = r( /*! ../utils/cubismjson */ "../../../Framework/src/utils/cubismjson.ts"),
+                    l = "Meta",
+                    c = "UserData",
+                    h = function() {
+                        function e(e, t) {
+                            this._json = u.CubismJson.create(e, t)
+                        }
+                        return e.prototype.release = function() {
+                            u.CubismJson.delete(this._json)
+                        }, e.prototype.getUserDataCount = function() {
+                            return this._json.getRoot().getValueByString(l).getValueByString("UserDataCount").toInt()
+                        }, e.prototype.getTotalUserDataSize = function() {
+                            return this._json.getRoot().getValueByString(l).getValueByString("TotalUserDataSize").toInt()
+                        }, e.prototype.getUserDataTargetType = function(e) {
+                            return this._json.getRoot().getValueByString(c).getValueByIndex(e).getValueByString("Target").getRawString()
+                        }, e.prototype.getUserDataId = function(e) {
+                            return n.CubismFramework.getIdManager().getId(this._json.getRoot().getValueByString(c).getValueByIndex(e).getValueByString("Id").getRawString())
+                        }, e.prototype.getUserDataValue = function(e) {
+                            return this._json.getRoot().getValueByString(c).getValueByIndex(e).getValueByString("Value").getRawString()
+                        }, e
+                    }();
+                t.CubismModelUserDataJson = h;
+                var p, m = s(r( /*! ./cubismmodeluserdatajson */ "../../../Framework/src/model/cubismmodeluserdatajson.ts"));
+                (p = i = t.Live2DCubismFramework || (t.Live2DCubismFramework = {})).CubismModelUserDataJson = m.CubismModelUserDataJson
+            },
+            "../../../Framework/src/model/cubismusermodel.ts": function(e, t, r) {
+                "use strict";
+                var i, a = this && this.__createBinding || (Object.create ? function(e, t, r, i) {
+                        void 0 === i && (i = r);
+                        var a = Object.getOwnPropertyDescriptor(t, r);
+                        (!a || ("get" in a ? !t.__esModule : a.writable || a.configurable)) && (a = {
+                            enumerable: !0,
+                            get: function() {
+                                return t[r]
+                            }
+                        }), Object.defineProperty(e, i, a)
+                    } : function(e, t, r, i) {
+                        void 0 === i && (i = r), e[i] = t[r]
+                    }),
+                    o = this && this.__setModuleDefault || (Object.create ? function(e, t) {
+                        Object.defineProperty(e, "default", {
+                            enumerable: !0,
+                            value: t
+                        })
+                    } : function(e, t) {
+                        e.default = t
+                    }),
+                    s = this && this.__importStar || function(e) {
+                        if (e && e.__esModule) return e;
+                        var t = {};
+                        if (null != e)
+                            for (var r in e) "default" !== r && Object.prototype.hasOwnProperty.call(e, r) && a(t, e, r);
+                        return o(t, e), t
+                    };
+                Object.defineProperty(t, "__esModule", {
+                    value: !0
+                }), t.Live2DCubismFramework = t.CubismUserModel = void 0;
+                var n = r( /*! ../effect/cubismbreath */ "../../../Framework/src/effect/cubismbreath.ts"),
+                    u = r( /*! ../effect/cubismeyeblink */ "../../../Framework/src/effect/cubismeyeblink.ts"),
+                    l = r( /*! ../effect/cubismpose */ "../../../Framework/src/effect/cubismpose.ts"),
+                    c = r( /*! ../live2dcubismframework */ "../../../Framework/src/live2dcubismframework.ts"),
+                    h = r( /*! ../math/cubismmodelmatrix */ "../../../Framework/src/math/cubismmodelmatrix.ts"),
+                    p = r( /*! ../math/cubismtargetpoint */ "../../../Framework/src/math/cubismtargetpoint.ts"),
+                    m = r( /*! ../motion/cubismexpressionmotion */ "../../../Framework/src/motion/cubismexpressionmotion.ts"),
+                    d = r( /*! ../motion/cubismmotion */ "../../../Framework/src/motion/cubismmotion.ts"),
+                    g = r( /*! ../motion/cubismmotionmanager */ "../../../Framework/src/motion/cubismmotionmanager.ts"),
+                    f = r( /*! ../physics/cubismphysics */ "../../../Framework/src/physics/cubismphysics.ts"),
+                    y = r( /*! ../rendering/cubismrenderer_webgl */ "../../../Framework/src/rendering/cubismrenderer_webgl.ts"),
+                    v = r( /*! ../utils/cubismdebug */ "../../../Framework/src/utils/cubismdebug.ts"),
+                    $ = r( /*! ./cubismmoc */ "../../../Framework/src/model/cubismmoc.ts"),
+                    b = r( /*! ./cubismmodeluserdata */ "../../../Framework/src/model/cubismmodeluserdata.ts"),
+                    M = function() {
+                        function e() {
+                            this.loadMotion = function(e, t, r, i) {
+                                return d.CubismMotion.create(e, t, i)
+                            }, this._moc = null, this._model = null, this._motionManager = null, this._expressionManager = null, this._eyeBlink = null, this._breath = null, this._modelMatrix = null, this._pose = null, this._dragManager = null, this._physics = null, this._modelUserData = null, this._initialized = !1, this._updating = !1, this._opacity = 1, this._lipsync = !0, this._lastLipSyncValue = 0, this._dragX = 0, this._dragY = 0, this._accelerationX = 0, this._accelerationY = 0, this._accelerationZ = 0, this._debugMode = !1, this._renderer = null, this._motionManager = new g.CubismMotionManager, this._motionManager.setEventCallback(e.cubismDefaultMotionEventCallback, this), this._expressionManager = new g.CubismMotionManager, this._dragManager = new p.CubismTargetPoint
+                        }
+                        return e.prototype.isInitialized = function() {
+                            return this._initialized
+                        }, e.prototype.setInitialized = function(e) {
+                            this._initialized = e
+                        }, e.prototype.isUpdating = function() {
+                            return this._updating
+                        }, e.prototype.setUpdating = function(e) {
+                            this._updating = e
+                        }, e.prototype.setDragging = function(e, t) {
+                            this._dragManager.set(e, t)
+                        }, e.prototype.setAcceleration = function(e, t, r) {
+                            this._accelerationX = e, this._accelerationY = t, this._accelerationZ = r
+                        }, e.prototype.getModelMatrix = function() {
+                            return this._modelMatrix
+                        }, e.prototype.setOpacity = function(e) {
+                            this._opacity = e
+                        }, e.prototype.getOpacity = function() {
+                            return this._opacity
+                        }, e.prototype.loadModel = function(e) {
+                            if (this._moc = $.CubismMoc.create(e), null == this._moc) {
+                                (0, v.CubismLogError)("Failed to CubismMoc.create().");
+                                return
+                            }
+                            if (this._model = this._moc.createModel(), null == this._model) {
+                                (0, v.CubismLogError)("Failed to CreateModel().");
+                                return
+                            }
+                            this._model.saveParameters(), this._modelMatrix = new h.CubismModelMatrix(this._model.getCanvasWidth(), this._model.getCanvasHeight())
+                        }, e.prototype.loadExpression = function(e, t, r) {
+                            return m.CubismExpressionMotion.create(e, t)
+                        }, e.prototype.loadPose = function(e, t) {
+                            this._pose = l.CubismPose.create(e, t)
+                        }, e.prototype.loadUserData = function(e, t) {
+                            this._modelUserData = b.CubismModelUserData.create(e, t)
+                        }, e.prototype.loadPhysics = function(e, t) {
+                            this._physics = f.CubismPhysics.create(e, t)
+                        }, e.prototype.isHit = function(e, t, r) {
+                            var i = this._model.getDrawableIndex(e);
+                            if (i < 0) return !1;
+                            for (var a = this._model.getDrawableVertexCount(i), o = this._model.getDrawableVertices(i), s = o[0], n = o[0], u = o[1], l = o[1], h = 1; h < a; ++h) {
+                                var p = o[c.Constant.vertexOffset + h * c.Constant.vertexStep],
+                                    m = o[c.Constant.vertexOffset + h * c.Constant.vertexStep + 1];
+                                p < s && (s = p), p > n && (n = p), m < u && (u = m), m > l && (l = m)
+                            }
+                            var d = this._modelMatrix.invertTransformX(t),
+                                g = this._modelMatrix.invertTransformY(r);
+                            return s <= d && d <= n && u <= g && g <= l
+                        }, e.prototype.getModel = function() {
+                            return this._model
+                        }, e.prototype.getRenderer = function() {
+                            return this._renderer
+                        }, e.prototype.createRenderer = function() {
+                            this._renderer && this.deleteRenderer(), this._renderer = new y.CubismRenderer_WebGL, this._renderer.initialize(this._model)
+                        }, e.prototype.deleteRenderer = function() {
+                            null != this._renderer && (this._renderer.release(), this._renderer = null)
+                        }, e.prototype.motionEventFired = function(e) {
+                            (0, v.CubismLogInfo)("{0}", e.s)
+                        }, e.cubismDefaultMotionEventCallback = function(e, t, r) {
+                            var i = r;
+                            null != i && i.motionEventFired(t)
+                        }, e.prototype.release = function() {
+                            null != this._motionManager && (this._motionManager.release(), this._motionManager = null), null != this._expressionManager && (this._expressionManager.release(), this._expressionManager = null), null != this._moc && (this._moc.deleteModel(this._model), this._moc.release(), this._moc = null), this._modelMatrix = null, l.CubismPose.delete(this._pose), u.CubismEyeBlink.delete(this._eyeBlink), n.CubismBreath.delete(this._breath), this._dragManager = null, f.CubismPhysics.delete(this._physics), b.CubismModelUserData.delete(this._modelUserData), this.deleteRenderer()
+                        }, e
+                    }();
+                t.CubismUserModel = M;
+                var C, S = s(r( /*! ./cubismusermodel */ "../../../Framework/src/model/cubismusermodel.ts"));
+                (C = i = t.Live2DCubismFramework || (t.Live2DCubismFramework = {})).CubismUserModel = S.CubismUserModel
+            },
+            "../../../Framework/src/motion/acubismmotion.ts": function(e, t, r) {
+                "use strict";
+                var i, a = this && this.__createBinding || (Object.create ? function(e, t, r, i) {
+                        void 0 === i && (i = r);
+                        var a = Object.getOwnPropertyDescriptor(t, r);
+                        (!a || ("get" in a ? !t.__esModule : a.writable || a.configurable)) && (a = {
+                            enumerable: !0,
+                            get: function() {
+                                return t[r]
+                            }
+                        }), Object.defineProperty(e, i, a)
+                    } : function(e, t, r, i) {
+                        void 0 === i && (i = r), e[i] = t[r]
+                    }),
+                    o = this && this.__setModuleDefault || (Object.create ? function(e, t) {
+                        Object.defineProperty(e, "default", {
+                            enumerable: !0,
+                            value: t
+                        })
+                    } : function(e, t) {
+                        e.default = t
+                    }),
+                    s = this && this.__importStar || function(e) {
+                        if (e && e.__esModule) return e;
+                        var t = {};
+                        if (null != e)
+                            for (var r in e) "default" !== r && Object.prototype.hasOwnProperty.call(e, r) && a(t, e, r);
+                        return o(t, e), t
+                    };
+                Object.defineProperty(t, "__esModule", {
+                    value: !0
+                }), t.Live2DCubismFramework = t.ACubismMotion = void 0;
+                var n = r( /*! ../math/cubismmath */ "../../../Framework/src/math/cubismmath.ts"),
+                    u = r( /*! ../type/csmvector */ "../../../Framework/src/type/csmvector.ts"),
+                    l = r( /*! ../utils/cubismdebug */ "../../../Framework/src/utils/cubismdebug.ts"),
+                    c = function() {
+                        function e() {
+                            var e = this;
+                            this.setFinishedMotionHandler = function(t) {
+                                return e._onFinishedMotion = t
+                            }, this.getFinishedMotionHandler = function() {
+                                return e._onFinishedMotion
+                            }, this._fadeInSeconds = -1, this._fadeOutSeconds = -1, this._weight = 1, this._offsetSeconds = 0, this._firedEventValues = new u.csmVector
+                        }
+                        return e.delete = function(e) {
+                            e.release(), e = null
+                        }, e.prototype.release = function() {
+                            this._weight = 0
+                        }, e.prototype.updateParameters = function(e, t, r) {
+                            if (!(!t.isAvailable() || t.isFinished())) {
+                                if (!t.isStarted()) {
+                                    t.setIsStarted(!0), t.setStartTime(r - this._offsetSeconds), t.setFadeInStartTime(r);
+                                    var i = this.getDuration();
+                                    0 > t.getEndTime() && t.setEndTime(i <= 0 ? -1 : t.getStartTime() + i)
+                                }
+                                var a, o = this._weight;
+                                o = o * (0 == this._fadeInSeconds ? 1 : n.CubismMath.getEasingSine((r - t.getFadeInStartTime()) / this._fadeInSeconds)) * (0 == this._fadeOutSeconds || 0 > t.getEndTime() ? 1 : n.CubismMath.getEasingSine((t.getEndTime() - r) / this._fadeOutSeconds)), t.setState(r, o), (0, l.CSM_ASSERT)(0 <= o && o <= 1), this.doUpdateParameters(e, r, o, t), t.getEndTime() > 0 && t.getEndTime() < r && t.setIsFinished(!0)
+                            }
+                        }, e.prototype.setFadeInTime = function(e) {
+                            this._fadeInSeconds = e
+                        }, e.prototype.setFadeOutTime = function(e) {
+                            this._fadeOutSeconds = e
+                        }, e.prototype.getFadeOutTime = function() {
+                            return this._fadeOutSeconds
+                        }, e.prototype.getFadeInTime = function() {
+                            return this._fadeInSeconds
+                        }, e.prototype.setWeight = function(e) {
+                            this._weight = e
+                        }, e.prototype.getWeight = function() {
+                            return this._weight
+                        }, e.prototype.getDuration = function() {
+                            return -1
+                        }, e.prototype.getLoopDuration = function() {
+                            return -1
+                        }, e.prototype.setOffsetTime = function(e) {
+                            this._offsetSeconds = e
+                        }, e.prototype.getFiredEvent = function(e, t) {
+                            return this._firedEventValues
+                        }, e
+                    }();
+                t.ACubismMotion = c;
+                var h, p = s(r( /*! ./acubismmotion */ "../../../Framework/src/motion/acubismmotion.ts"));
+                (h = i = t.Live2DCubismFramework || (t.Live2DCubismFramework = {})).ACubismMotion = p.ACubismMotion
+            },
+            "../../../Framework/src/motion/cubismexpressionmotion.ts": function(e, t, r) {
+                "use strict";
+                var i, a, o, s = this && this.__extends || (i = function(e, t) {
+                        return (i = Object.setPrototypeOf || ({
+                            __proto__: []
+                        }) instanceof Array && function(e, t) {
+                            e.__proto__ = t
+                        } || function(e, t) {
+                            for (var r in t) Object.prototype.hasOwnProperty.call(t, r) && (e[r] = t[r])
+                        })(e, t)
+                    }, function(e, t) {
+                        if ("function" != typeof t && null !== t) throw TypeError("Class extends value " + String(t) + " is not a constructor or null");
+
+                        function r() {
+                            this.constructor = e
+                        }
+                        i(e, t), e.prototype = null === t ? Object.create(t) : (r.prototype = t.prototype, new r)
+                    }),
+                    n = this && this.__createBinding || (Object.create ? function(e, t, r, i) {
+                        void 0 === i && (i = r);
+                        var a = Object.getOwnPropertyDescriptor(t, r);
+                        (!a || ("get" in a ? !t.__esModule : a.writable || a.configurable)) && (a = {
+                            enumerable: !0,
+                            get: function() {
+                                return t[r]
+                            }
+                        }), Object.defineProperty(e, i, a)
+                    } : function(e, t, r, i) {
+                        void 0 === i && (i = r), e[i] = t[r]
+                    }),
+                    u = this && this.__setModuleDefault || (Object.create ? function(e, t) {
+                        Object.defineProperty(e, "default", {
+                            enumerable: !0,
+                            value: t
+                        })
+                    } : function(e, t) {
+                        e.default = t
+                    }),
+                    l = this && this.__importStar || function(e) {
+                        if (e && e.__esModule) return e;
+                        var t = {};
+                        if (null != e)
+                            for (var r in e) "default" !== r && Object.prototype.hasOwnProperty.call(e, r) && n(t, e, r);
+                        return u(t, e), t
+                    };
+                Object.defineProperty(t, "__esModule", {
+                    value: !0
+                }), t.Live2DCubismFramework = t.ExpressionParameter = t.ExpressionBlendType = t.CubismExpressionMotion = void 0;
+                var c, h = r( /*! ../live2dcubismframework */ "../../../Framework/src/live2dcubismframework.ts"),
+                    p = r( /*! ../type/csmvector */ "../../../Framework/src/type/csmvector.ts"),
+                    m = r( /*! ../utils/cubismjson */ "../../../Framework/src/utils/cubismjson.ts"),
+                    d = r( /*! ./acubismmotion */ "../../../Framework/src/motion/acubismmotion.ts"),
+                    g = "Parameters",
+                    f = "Blend",
+                    y = function(e) {
+                        function t() {
+                            var t = e.call(this) || this;
+                            return t._parameters = new p.csmVector, t
+                        }
+                        return s(t, e), t.create = function(e, r) {
+                            var i = new t,
+                                o = m.CubismJson.create(e, r),
+                                s = o.getRoot();
+                            i.setFadeInTime(s.getValueByString("FadeInTime").toFloat(1)), i.setFadeOutTime(s.getValueByString("FadeOutTime").toFloat(1));
+                            var n = s.getValueByString(g).getSize();
+                            i._parameters.prepareCapacity(n);
+                            for (var u = 0; u < n; ++u) {
+                                var l = s.getValueByString(g).getValueByIndex(u),
+                                    c = h.CubismFramework.getIdManager().getId(l.getValueByString("Id").getRawString()),
+                                    p = l.getValueByString("Value").toFloat(),
+                                    d = void 0;
+                                d = l.getValueByString(f).isNull() || "Add" == l.getValueByString(f).getString() ? a.ExpressionBlendType_Add : "Multiply" == l.getValueByString(f).getString() ? a.ExpressionBlendType_Multiply : "Overwrite" == l.getValueByString(f).getString() ? a.ExpressionBlendType_Overwrite : a.ExpressionBlendType_Add;
+                                var y = new v;
+                                y.parameterId = c, y.blendType = d, y.value = p, i._parameters.pushBack(y)
+                            }
+                            return m.CubismJson.delete(o), i
+                        }, t.prototype.doUpdateParameters = function(e, t, r, i) {
+                            for (var o = 0; o < this._parameters.getSize(); ++o) {
+                                var s = this._parameters.at(o);
+                                switch (s.blendType) {
+                                    case a.ExpressionBlendType_Add:
+                                        e.addParameterValueById(s.parameterId, s.value, r);
+                                        break;
+                                    case a.ExpressionBlendType_Multiply:
+                                        e.multiplyParameterValueById(s.parameterId, s.value, r);
+                                        break;
+                                    case a.ExpressionBlendType_Overwrite:
+                                        e.setParameterValueById(s.parameterId, s.value, r)
+                                }
+                            }
+                        }, t
+                    }(d.ACubismMotion);
+                t.CubismExpressionMotion = y, (c = a = t.ExpressionBlendType || (t.ExpressionBlendType = {}))[c.ExpressionBlendType_Add = 0] = "ExpressionBlendType_Add", c[c.ExpressionBlendType_Multiply = 1] = "ExpressionBlendType_Multiply", c[c.ExpressionBlendType_Overwrite = 2] = "ExpressionBlendType_Overwrite";
+                var v = function e() {};
+                t.ExpressionParameter = v;
+                var $, b = l(r( /*! ./cubismexpressionmotion */ "../../../Framework/src/motion/cubismexpressionmotion.ts"));
+                ($ = o = t.Live2DCubismFramework || (t.Live2DCubismFramework = {})).CubismExpressionMotion = b.CubismExpressionMotion, $.ExpressionBlendType = b.ExpressionBlendType, $.ExpressionParameter = b.ExpressionParameter
+            },
+            "../../../Framework/src/motion/cubismmotion.ts": function(e, t, r) {
+                "use strict";
+                var i, a, o = this && this.__extends || (i = function(e, t) {
+                        return (i = Object.setPrototypeOf || ({
+                            __proto__: []
+                        }) instanceof Array && function(e, t) {
+                            e.__proto__ = t
+                        } || function(e, t) {
+                            for (var r in t) Object.prototype.hasOwnProperty.call(t, r) && (e[r] = t[r])
+                        })(e, t)
+                    }, function(e, t) {
+                        if ("function" != typeof t && null !== t) throw TypeError("Class extends value " + String(t) + " is not a constructor or null");
+
+                        function r() {
+                            this.constructor = e
+                        }
+                        i(e, t), e.prototype = null === t ? Object.create(t) : (r.prototype = t.prototype, new r)
+                    }),
+                    s = this && this.__createBinding || (Object.create ? function(e, t, r, i) {
+                        void 0 === i && (i = r);
+                        var a = Object.getOwnPropertyDescriptor(t, r);
+                        (!a || ("get" in a ? !t.__esModule : a.writable || a.configurable)) && (a = {
+                            enumerable: !0,
+                            get: function() {
+                                return t[r]
+                            }
+                        }), Object.defineProperty(e, i, a)
+                    } : function(e, t, r, i) {
+                        void 0 === i && (i = r), e[i] = t[r]
+                    }),
+                    n = this && this.__setModuleDefault || (Object.create ? function(e, t) {
+                        Object.defineProperty(e, "default", {
+                            enumerable: !0,
+                            value: t
+                        })
+                    } : function(e, t) {
+                        e.default = t
+                    }),
+                    u = this && this.__importStar || function(e) {
+                        if (e && e.__esModule) return e;
+                        var t = {};
+                        if (null != e)
+                            for (var r in e) "default" !== r && Object.prototype.hasOwnProperty.call(e, r) && s(t, e, r);
+                        return n(t, e), t
+                    };
+                Object.defineProperty(t, "__esModule", {
+                    value: !0
+                }), t.Live2DCubismFramework = t.CubismMotion = void 0;
+                var l = r( /*! ../live2dcubismframework */ "../../../Framework/src/live2dcubismframework.ts"),
+                    c = r( /*! ../math/cubismmath */ "../../../Framework/src/math/cubismmath.ts"),
+                    h = r( /*! ../type/csmstring */ "../../../Framework/src/type/csmstring.ts"),
+                    p = r( /*! ../utils/cubismdebug */ "../../../Framework/src/utils/cubismdebug.ts"),
+                    m = r( /*! ./acubismmotion */ "../../../Framework/src/motion/acubismmotion.ts"),
+                    d = r( /*! ./cubismmotioninternal */ "../../../Framework/src/motion/cubismmotioninternal.ts"),
+                    g = r( /*! ./cubismmotionjson */ "../../../Framework/src/motion/cubismmotionjson.ts");
+
+                function f(e, t, r) {
+                    var i = new d.CubismMotionPoint;
+                    return i.time = e.time + (t.time - e.time) * r, i.value = e.value + (t.value - e.value) * r, i
+                }
+
+                function y(e, t) {
+                    var r = (t - e[0].time) / (e[1].time - e[0].time);
+                    return r < 0 && (r = 0), e[0].value + (e[1].value - e[0].value) * r
+                }
+
+                function v(e, t) {
+                    var r = (t - e[0].time) / (e[3].time - e[0].time);
+                    r < 0 && (r = 0);
+                    var i = f(e[0], e[1], r),
+                        a = f(e[1], e[2], r),
+                        o = f(e[2], e[3], r),
+                        s = f(i, a, r),
+                        n = f(a, o, r);
+                    return f(s, n, r).value
+                }
+
+                function $(e, t) {
+                    for (var r = t, i = e[0].time, a = e[3].time, o = e[1].time, s = e[2].time, n = 0, u = 1, l = 0, c = 0; c < 20; ++c) {
+                        if (r < i + .01) {
+                            l = n;
+                            break
+                        }
+                        if (a - .01 < r) {
+                            l = u;
+                            break
+                        }
+                        var h = (o + s) * .5,
+                            p = ((o = (i + o) * .5) + h) * .5,
+                            m = ((s = (a + s) * .5) + h) * .5;
+                        if (r < (h = (p + m) * .5)) {
+                            if (u = (n + u) * .5, h - .01 < r) {
+                                l = u;
+                                break
+                            }
+                            a = h, s = p
+                        } else {
+                            if (n = (n + u) * .5, r < h + .01) {
+                                l = n;
+                                break
+                            }
+                            i = h, o = m
+                        }
+                    }
+                    20 == c && (l = (n + u) * .5), l < 0 && (l = 0), l > 1 && (l = 1);
+                    var d = f(e[0], e[1], l),
+                        g = f(e[1], e[2], l),
+                        y = f(e[2], e[3], l),
+                        v = f(d, g, l),
+                        $ = f(g, y, l);
+                    return f(v, $, l).value
+                }
+
+                function b(e, t) {
+                    var r = e[0].time,
+                        i = e[3].time,
+                        a = e[1].time,
+                        o = e[2].time,
+                        s = c.CubismMath.cardanoAlgorithmForBezier(i - 3 * o + 3 * a - r, 3 * o - 6 * a + 3 * r, 3 * a - 3 * r, r - t),
+                        n = f(e[0], e[1], s),
+                        u = f(e[1], e[2], s),
+                        l = f(e[2], e[3], s),
+                        h = f(n, u, s),
+                        p = f(u, l, s);
+                    return f(h, p, s).value
+                }
+
+                function M(e, t) {
+                    return e[0].value
+                }
+
+                function C(e, t) {
+                    return e[1].value
+                }
+
+                function S(e, t, r) {
+                    for (var i = e.curves.at(t), a = -1, o = i.baseSegmentIndex + i.segmentCount, s = 0, n = i.baseSegmentIndex; n < o; ++n)
+                        if (s = e.segments.at(n).basePointIndex + (e.segments.at(n).segmentType == d.CubismMotionSegmentType.CubismMotionSegmentType_Bezier ? 3 : 1), e.points.at(s).time > r) {
+                            a = n;
+                            break
+                        } if (-1 == a) return e.points.at(s).value;
+                    var u = e.segments.at(a);
+                    return u.evaluate(e.points.get(u.basePointIndex), r)
+                }
+                var w = function(e) {
+                    function t() {
+                        var t = e.call(this) || this;
+                        return t._sourceFrameRate = 30, t._loopDurationSeconds = -1, t._isLoop = !1, t._isLoopFadeIn = !0, t._lastWeight = 0, t._motionData = null, t._modelCurveIdEyeBlink = null, t._modelCurveIdLipSync = null, t._eyeBlinkParameterIds = null, t._lipSyncParameterIds = null, t
+                    }
+                    return o(t, e), t.create = function(e, r, i) {
+                        var a = new t;
+                        return a.parse(e, r), a._sourceFrameRate = a._motionData.fps, a._loopDurationSeconds = a._motionData.duration, a._onFinishedMotion = i, a
+                    }, t.prototype.doUpdateParameters = function(e, t, r, i) {
+                        null == this._modelCurveIdEyeBlink && (this._modelCurveIdEyeBlink = l.CubismFramework.getIdManager().getId("EyeBlink")), null == this._modelCurveIdLipSync && (this._modelCurveIdLipSync = l.CubismFramework.getIdManager().getId("LipSync"));
+                        var a, o, s, n = t - i.getStartTime();
+                        n < 0 && (n = 0);
+                        var u = Number.MAX_VALUE,
+                            h = Number.MAX_VALUE,
+                            m = 0,
+                            g = 0;
+                        this._eyeBlinkParameterIds.getSize() > 64 && (0, p.CubismLogDebug)("too many eye blink targets : {0}", this._eyeBlinkParameterIds.getSize()), this._lipSyncParameterIds.getSize() > 64 && (0, p.CubismLogDebug)("too many lip sync targets : {0}", this._lipSyncParameterIds.getSize());
+                        var f = this._fadeInSeconds <= 0 ? 1 : c.CubismMath.getEasingSine((t - i.getFadeInStartTime()) / this._fadeInSeconds),
+                            y = this._fadeOutSeconds <= 0 || 0 > i.getEndTime() ? 1 : c.CubismMath.getEasingSine((i.getEndTime() - t) / this._fadeOutSeconds),
+                            v = n;
+                        if (this._isLoop)
+                            for (; v > this._motionData.duration;) v -= this._motionData.duration;
+                        var $ = this._motionData.curves;
+                        for (o = 0; o < this._motionData.curveCount && $.at(o).type == d.CubismMotionCurveTarget.CubismMotionCurveTarget_Model; ++o) a = S(this._motionData, o, v), $.at(o).id == this._modelCurveIdEyeBlink ? h = a : $.at(o).id == this._modelCurveIdLipSync && (u = a);
+                        for (var b = 0; o < this._motionData.curveCount && $.at(o).type == d.CubismMotionCurveTarget.CubismMotionCurveTarget_Parameter; ++o)
+                            if (b++, -1 != (s = e.getParameterIndex($.at(o).id))) {
+                                var M = e.getParameterValueByIndex(s);
+                                if (a = S(this._motionData, o, v), h != Number.MAX_VALUE) {
+                                    for (var C = 0; C < this._eyeBlinkParameterIds.getSize() && C < 64; ++C)
+                                        if (this._eyeBlinkParameterIds.at(C) == $.at(o).id) {
+                                            a *= h, g |= 1 << C;
+                                            break
+                                        }
+                                }
+                                if (u != Number.MAX_VALUE) {
+                                    for (var C = 0; C < this._lipSyncParameterIds.getSize() && C < 64; ++C)
+                                        if (this._lipSyncParameterIds.at(C) == $.at(o).id) {
+                                            a += u, m |= 1 << C;
+                                            break
+                                        }
+                                }
+                                var w = void 0;
+                                if ($.at(o).fadeInTime < 0 && $.at(o).fadeOutTime < 0) w = M + (a - M) * r;
+                                else {
+                                    var P = void 0,
+                                        I = void 0;
+                                    P = $.at(o).fadeInTime < 0 ? f : 0 == $.at(o).fadeInTime ? 1 : c.CubismMath.getEasingSine((t - i.getFadeInStartTime()) / $.at(o).fadeInTime), I = $.at(o).fadeOutTime < 0 ? y : 0 == $.at(o).fadeOutTime || 0 > i.getEndTime() ? 1 : c.CubismMath.getEasingSine((i.getEndTime() - t) / $.at(o).fadeOutTime), w = M + (a - M) * (this._weight * P * I)
+                                }
+                                e.setParameterValueByIndex(s, w, 1)
+                            } if (h != Number.MAX_VALUE)
+                            for (var C = 0; C < this._eyeBlinkParameterIds.getSize() && C < 64; ++C) {
+                                var M = e.getParameterValueById(this._eyeBlinkParameterIds.at(C));
+                                if (!(g >> C & 1)) {
+                                    var w = M + (h - M) * r;
+                                    e.setParameterValueById(this._eyeBlinkParameterIds.at(C), w)
+                                }
+                            }
+                        if (u != Number.MAX_VALUE)
+                            for (var C = 0; C < this._lipSyncParameterIds.getSize() && C < 64; ++C) {
+                                var M = e.getParameterValueById(this._lipSyncParameterIds.at(C));
+                                if (!(m >> C & 1)) {
+                                    var w = M + (u - M) * r;
+                                    e.setParameterValueById(this._lipSyncParameterIds.at(C), w)
+                                }
+                            }
+                        for (; o < this._motionData.curveCount && $.at(o).type == d.CubismMotionCurveTarget.CubismMotionCurveTarget_PartOpacity; ++o) - 1 != (s = e.getParameterIndex($.at(o).id)) && (a = S(this._motionData, o, v), e.setParameterValueByIndex(s, a));
+                        n >= this._motionData.duration && (this._isLoop ? (i.setStartTime(t), this._isLoopFadeIn && i.setFadeInStartTime(t)) : (this._onFinishedMotion && this._onFinishedMotion(this), i.setIsFinished(!0))), this._lastWeight = r
+                    }, t.prototype.setIsLoop = function(e) {
+                        this._isLoop = e
+                    }, t.prototype.isLoop = function() {
+                        return this._isLoop
+                    }, t.prototype.setIsLoopFadeIn = function(e) {
+                        this._isLoopFadeIn = e
+                    }, t.prototype.isLoopFadeIn = function() {
+                        return this._isLoopFadeIn
+                    }, t.prototype.getDuration = function() {
+                        return this._isLoop ? -1 : this._loopDurationSeconds
+                    }, t.prototype.getLoopDuration = function() {
+                        return this._loopDurationSeconds
+                    }, t.prototype.setParameterFadeInTime = function(e, t) {
+                        for (var r = this._motionData.curves, i = 0; i < this._motionData.curveCount; ++i)
+                            if (e == r.at(i).id) {
+                                r.at(i).fadeInTime = t;
+                                return
+                            }
+                    }, t.prototype.setParameterFadeOutTime = function(e, t) {
+                        for (var r = this._motionData.curves, i = 0; i < this._motionData.curveCount; ++i)
+                            if (e == r.at(i).id) {
+                                r.at(i).fadeOutTime = t;
+                                return
+                            }
+                    }, t.prototype.getParameterFadeInTime = function(e) {
+                        for (var t = this._motionData.curves, r = 0; r < this._motionData.curveCount; ++r)
+                            if (e == t.at(r).id) return t.at(r).fadeInTime;
+                        return -1
+                    }, t.prototype.getParameterFadeOutTime = function(e) {
+                        for (var t = this._motionData.curves, r = 0; r < this._motionData.curveCount; ++r)
+                            if (e == t.at(r).id) return t.at(r).fadeOutTime;
+                        return -1
+                    }, t.prototype.setEffectIds = function(e, t) {
+                        this._eyeBlinkParameterIds = e, this._lipSyncParameterIds = t
+                    }, t.prototype.release = function() {
+                        this._motionData = void 0, this._motionData = null
+                    }, t.prototype.parse = function(e, t) {
+                        this._motionData = new d.CubismMotionData;
+                        var r = new g.CubismMotionJson(e, t);
+                        this._motionData.duration = r.getMotionDuration(), this._motionData.loop = r.isMotionLoop(), this._motionData.curveCount = r.getMotionCurveCount(), this._motionData.fps = r.getMotionFps(), this._motionData.eventCount = r.getEventCount();
+                        var i = r.getEvaluationOptionFlag(g.EvaluationOptionFlag.EvaluationOptionFlag_AreBeziersRistricted);
+                        r.isExistMotionFadeInTime() ? this._fadeInSeconds = 0 > r.getMotionFadeInTime() ? 1 : r.getMotionFadeInTime() : this._fadeInSeconds = 1, r.isExistMotionFadeOutTime() ? this._fadeOutSeconds = 0 > r.getMotionFadeOutTime() ? 1 : r.getMotionFadeOutTime() : this._fadeOutSeconds = 1, this._motionData.curves.updateSize(this._motionData.curveCount, d.CubismMotionCurve, !0), this._motionData.segments.updateSize(r.getMotionTotalSegmentCount(), d.CubismMotionSegment, !0), this._motionData.points.updateSize(r.getMotionTotalPointCount(), d.CubismMotionPoint, !0), this._motionData.events.updateSize(this._motionData.eventCount, d.CubismMotionEvent, !0);
+                        for (var a = 0, o = 0, s = 0; s < this._motionData.curveCount; ++s) {
+                            "Model" == r.getMotionCurveTarget(s) ? this._motionData.curves.at(s).type = d.CubismMotionCurveTarget.CubismMotionCurveTarget_Model : "Parameter" == r.getMotionCurveTarget(s) ? this._motionData.curves.at(s).type = d.CubismMotionCurveTarget.CubismMotionCurveTarget_Parameter : "PartOpacity" == r.getMotionCurveTarget(s) ? this._motionData.curves.at(s).type = d.CubismMotionCurveTarget.CubismMotionCurveTarget_PartOpacity : (0, p.CubismLogWarning)('Warning : Unable to get segment type from Curve! The number of "CurveCount" may be incorrect!'), this._motionData.curves.at(s).id = r.getMotionCurveId(s), this._motionData.curves.at(s).baseSegmentIndex = o, this._motionData.curves.at(s).fadeInTime = r.isExistMotionCurveFadeInTime(s) ? r.getMotionCurveFadeInTime(s) : -1, this._motionData.curves.at(s).fadeOutTime = r.isExistMotionCurveFadeOutTime(s) ? r.getMotionCurveFadeOutTime(s) : -1;
+                            for (var n = 0; n < r.getMotionCurveSegmentCount(s);) {
+                                0 == n ? (this._motionData.segments.at(o).basePointIndex = a, this._motionData.points.at(a).time = r.getMotionCurveSegment(s, n), this._motionData.points.at(a).value = r.getMotionCurveSegment(s, n + 1), a += 1, n += 2) : this._motionData.segments.at(o).basePointIndex = a - 1;
+                                var u = r.getMotionCurveSegment(s, n);
+                                switch (u) {
+                                    case d.CubismMotionSegmentType.CubismMotionSegmentType_Linear:
+                                        this._motionData.segments.at(o).segmentType = d.CubismMotionSegmentType.CubismMotionSegmentType_Linear, this._motionData.segments.at(o).evaluate = y, this._motionData.points.at(a).time = r.getMotionCurveSegment(s, n + 1), this._motionData.points.at(a).value = r.getMotionCurveSegment(s, n + 2), a += 1, n += 3;
+                                        break;
+                                    case d.CubismMotionSegmentType.CubismMotionSegmentType_Bezier:
+                                        this._motionData.segments.at(o).segmentType = d.CubismMotionSegmentType.CubismMotionSegmentType_Bezier, i ? this._motionData.segments.at(o).evaluate = v : this._motionData.segments.at(o).evaluate = b, this._motionData.points.at(a).time = r.getMotionCurveSegment(s, n + 1), this._motionData.points.at(a).value = r.getMotionCurveSegment(s, n + 2), this._motionData.points.at(a + 1).time = r.getMotionCurveSegment(s, n + 3), this._motionData.points.at(a + 1).value = r.getMotionCurveSegment(s, n + 4), this._motionData.points.at(a + 2).time = r.getMotionCurveSegment(s, n + 5), this._motionData.points.at(a + 2).value = r.getMotionCurveSegment(s, n + 6), a += 3, n += 7;
+                                        break;
+                                    case d.CubismMotionSegmentType.CubismMotionSegmentType_Stepped:
+                                        this._motionData.segments.at(o).segmentType = d.CubismMotionSegmentType.CubismMotionSegmentType_Stepped, this._motionData.segments.at(o).evaluate = M, this._motionData.points.at(a).time = r.getMotionCurveSegment(s, n + 1), this._motionData.points.at(a).value = r.getMotionCurveSegment(s, n + 2), a += 1, n += 3;
+                                        break;
+                                    case d.CubismMotionSegmentType.CubismMotionSegmentType_InverseStepped:
+                                        this._motionData.segments.at(o).segmentType = d.CubismMotionSegmentType.CubismMotionSegmentType_InverseStepped, this._motionData.segments.at(o).evaluate = C, this._motionData.points.at(a).time = r.getMotionCurveSegment(s, n + 1), this._motionData.points.at(a).value = r.getMotionCurveSegment(s, n + 2), a += 1, n += 3;
+                                        break;
+                                    default:
+                                        (0, p.CSM_ASSERT)(0)
+                                }++this._motionData.curves.at(s).segmentCount, ++o
+                            }
+                        }
+                        for (var l = 0; l < r.getEventCount(); ++l) this._motionData.events.at(l).fireTime = r.getEventTime(l), this._motionData.events.at(l).value = r.getEventValue(l);
+                        r.release(), r = void 0, r = null
+                    }, t.prototype.getFiredEvent = function(e, t) {
+                        this._firedEventValues.updateSize(0);
+                        for (var r = 0; r < this._motionData.eventCount; ++r) this._motionData.events.at(r).fireTime > e && this._motionData.events.at(r).fireTime <= t && this._firedEventValues.pushBack(new h.csmString(this._motionData.events.at(r).value.s));
+                        return this._firedEventValues
+                    }, t
+                }(m.ACubismMotion);
+                t.CubismMotion = w;
+                var P, I = u(r( /*! ./cubismmotion */ "../../../Framework/src/motion/cubismmotion.ts"));
+                (P = a = t.Live2DCubismFramework || (t.Live2DCubismFramework = {})).CubismMotion = I.CubismMotion
+            },
+            "../../../Framework/src/motion/cubismmotioninternal.ts": function(e, t, r) {
+                "use strict";
+                var i, a, o, s = this && this.__createBinding || (Object.create ? function(e, t, r, i) {
+                        void 0 === i && (i = r);
+                        var a = Object.getOwnPropertyDescriptor(t, r);
+                        (!a || ("get" in a ? !t.__esModule : a.writable || a.configurable)) && (a = {
+                            enumerable: !0,
+                            get: function() {
+                                return t[r]
+                            }
+                        }), Object.defineProperty(e, i, a)
+                    } : function(e, t, r, i) {
+                        void 0 === i && (i = r), e[i] = t[r]
+                    }),
+                    n = this && this.__setModuleDefault || (Object.create ? function(e, t) {
+                        Object.defineProperty(e, "default", {
+                            enumerable: !0,
+                            value: t
+                        })
+                    } : function(e, t) {
+                        e.default = t
+                    }),
+                    u = this && this.__importStar || function(e) {
+                        if (e && e.__esModule) return e;
+                        var t = {};
+                        if (null != e)
+                            for (var r in e) "default" !== r && Object.prototype.hasOwnProperty.call(e, r) && s(t, e, r);
+                        return n(t, e), t
+                    };
+                Object.defineProperty(t, "__esModule", {
+                    value: !0
+                }), t.Live2DCubismFramework = t.CubismMotionData = t.CubismMotionEvent = t.CubismMotionCurve = t.CubismMotionSegment = t.CubismMotionPoint = t.CubismMotionSegmentType = t.CubismMotionCurveTarget = void 0;
+                var l, c, h = r( /*! ../type/csmvector */ "../../../Framework/src/type/csmvector.ts");
+                (l = i = t.CubismMotionCurveTarget || (t.CubismMotionCurveTarget = {}))[l.CubismMotionCurveTarget_Model = 0] = "CubismMotionCurveTarget_Model", l[l.CubismMotionCurveTarget_Parameter = 1] = "CubismMotionCurveTarget_Parameter", l[l.CubismMotionCurveTarget_PartOpacity = 2] = "CubismMotionCurveTarget_PartOpacity", (c = a = t.CubismMotionSegmentType || (t.CubismMotionSegmentType = {}))[c.CubismMotionSegmentType_Linear = 0] = "CubismMotionSegmentType_Linear", c[c.CubismMotionSegmentType_Bezier = 1] = "CubismMotionSegmentType_Bezier", c[c.CubismMotionSegmentType_Stepped = 2] = "CubismMotionSegmentType_Stepped", c[c.CubismMotionSegmentType_InverseStepped = 3] = "CubismMotionSegmentType_InverseStepped", t.CubismMotionPoint = function e() {
+                    this.time = 0, this.value = 0
+                }, t.CubismMotionSegment = function e() {
+                    this.evaluate = null, this.basePointIndex = 0, this.segmentType = 0
+                };
+                var p = function e() {
+                    this.type = i.CubismMotionCurveTarget_Model, this.segmentCount = 0, this.baseSegmentIndex = 0, this.fadeInTime = 0, this.fadeOutTime = 0
+                };
+                t.CubismMotionCurve = p, t.CubismMotionEvent = function e() {
+                    this.fireTime = 0
+                }, t.CubismMotionData = function e() {
+                    this.duration = 0, this.loop = !1, this.curveCount = 0, this.eventCount = 0, this.fps = 0, this.curves = new h.csmVector, this.segments = new h.csmVector, this.points = new h.csmVector, this.events = new h.csmVector
+                };
+                var m, d = u(r( /*! ./cubismmotioninternal */ "../../../Framework/src/motion/cubismmotioninternal.ts"));
+                (m = o = t.Live2DCubismFramework || (t.Live2DCubismFramework = {})).CubismMotionCurve = d.CubismMotionCurve, m.CubismMotionCurveTarget = d.CubismMotionCurveTarget, m.CubismMotionData = d.CubismMotionData, m.CubismMotionEvent = d.CubismMotionEvent, m.CubismMotionPoint = d.CubismMotionPoint, m.CubismMotionSegment = d.CubismMotionSegment, m.CubismMotionSegmentType = d.CubismMotionSegmentType
+            },
+            "../../../Framework/src/motion/cubismmotionjson.ts": function(e, t, r) {
+                "use strict";
+                var i, a, o = this && this.__createBinding || (Object.create ? function(e, t, r, i) {
+                        void 0 === i && (i = r);
+                        var a = Object.getOwnPropertyDescriptor(t, r);
+                        (!a || ("get" in a ? !t.__esModule : a.writable || a.configurable)) && (a = {
+                            enumerable: !0,
+                            get: function() {
+                                return t[r]
+                            }
+                        }), Object.defineProperty(e, i, a)
+                    } : function(e, t, r, i) {
+                        void 0 === i && (i = r), e[i] = t[r]
+                    }),
+                    s = this && this.__setModuleDefault || (Object.create ? function(e, t) {
+                        Object.defineProperty(e, "default", {
+                            enumerable: !0,
+                            value: t
+                        })
+                    } : function(e, t) {
+                        e.default = t
+                    }),
+                    n = this && this.__importStar || function(e) {
+                        if (e && e.__esModule) return e;
+                        var t = {};
+                        if (null != e)
+                            for (var r in e) "default" !== r && Object.prototype.hasOwnProperty.call(e, r) && o(t, e, r);
+                        return s(t, e), t
+                    };
+                Object.defineProperty(t, "__esModule", {
+                    value: !0
+                }), t.Live2DCubismFramework = t.EvaluationOptionFlag = t.CubismMotionJson = void 0;
+                var u, l = r( /*! ../live2dcubismframework */ "../../../Framework/src/live2dcubismframework.ts"),
+                    c = r( /*! ../type/csmstring */ "../../../Framework/src/type/csmstring.ts"),
+                    h = r( /*! ../utils/cubismjson */ "../../../Framework/src/utils/cubismjson.ts"),
+                    p = "Meta",
+                    m = "Curves",
+                    d = "FadeInTime",
+                    g = "FadeOutTime",
+                    f = "Segments",
+                    y = "UserData",
+                    v = function() {
+                        function e(e, t) {
+                            this._json = h.CubismJson.create(e, t)
+                        }
+                        return e.prototype.release = function() {
+                            h.CubismJson.delete(this._json)
+                        }, e.prototype.getMotionDuration = function() {
+                            return this._json.getRoot().getValueByString(p).getValueByString("Duration").toFloat()
+                        }, e.prototype.isMotionLoop = function() {
+                            return this._json.getRoot().getValueByString(p).getValueByString("Loop").toBoolean()
+                        }, e.prototype.getEvaluationOptionFlag = function(e) {
+                            return i.EvaluationOptionFlag_AreBeziersRistricted == e && this._json.getRoot().getValueByString(p).getValueByString("AreBeziersRestricted").toBoolean()
+                        }, e.prototype.getMotionCurveCount = function() {
+                            return this._json.getRoot().getValueByString(p).getValueByString("CurveCount").toInt()
+                        }, e.prototype.getMotionFps = function() {
+                            return this._json.getRoot().getValueByString(p).getValueByString("Fps").toFloat()
+                        }, e.prototype.getMotionTotalSegmentCount = function() {
+                            return this._json.getRoot().getValueByString(p).getValueByString("TotalSegmentCount").toInt()
+                        }, e.prototype.getMotionTotalPointCount = function() {
+                            return this._json.getRoot().getValueByString(p).getValueByString("TotalPointCount").toInt()
+                        }, e.prototype.isExistMotionFadeInTime = function() {
+                            return !this._json.getRoot().getValueByString(p).getValueByString(d).isNull()
+                        }, e.prototype.isExistMotionFadeOutTime = function() {
+                            return !this._json.getRoot().getValueByString(p).getValueByString(g).isNull()
+                        }, e.prototype.getMotionFadeInTime = function() {
+                            return this._json.getRoot().getValueByString(p).getValueByString(d).toFloat()
+                        }, e.prototype.getMotionFadeOutTime = function() {
+                            return this._json.getRoot().getValueByString(p).getValueByString(g).toFloat()
+                        }, e.prototype.getMotionCurveTarget = function(e) {
+                            return this._json.getRoot().getValueByString(m).getValueByIndex(e).getValueByString("Target").getRawString()
+                        }, e.prototype.getMotionCurveId = function(e) {
+                            return l.CubismFramework.getIdManager().getId(this._json.getRoot().getValueByString(m).getValueByIndex(e).getValueByString("Id").getRawString())
+                        }, e.prototype.isExistMotionCurveFadeInTime = function(e) {
+                            return !this._json.getRoot().getValueByString(m).getValueByIndex(e).getValueByString(d).isNull()
+                        }, e.prototype.isExistMotionCurveFadeOutTime = function(e) {
+                            return !this._json.getRoot().getValueByString(m).getValueByIndex(e).getValueByString(g).isNull()
+                        }, e.prototype.getMotionCurveFadeInTime = function(e) {
+                            return this._json.getRoot().getValueByString(m).getValueByIndex(e).getValueByString(d).toFloat()
+                        }, e.prototype.getMotionCurveFadeOutTime = function(e) {
+                            return this._json.getRoot().getValueByString(m).getValueByIndex(e).getValueByString(g).toFloat()
+                        }, e.prototype.getMotionCurveSegmentCount = function(e) {
+                            return this._json.getRoot().getValueByString(m).getValueByIndex(e).getValueByString(f).getVector().getSize()
+                        }, e.prototype.getMotionCurveSegment = function(e, t) {
+                            return this._json.getRoot().getValueByString(m).getValueByIndex(e).getValueByString(f).getValueByIndex(t).toFloat()
+                        }, e.prototype.getEventCount = function() {
+                            return this._json.getRoot().getValueByString(p).getValueByString("UserDataCount").toInt()
+                        }, e.prototype.getTotalEventValueSize = function() {
+                            return this._json.getRoot().getValueByString(p).getValueByString("TotalUserDataSize").toInt()
+                        }, e.prototype.getEventTime = function(e) {
+                            return this._json.getRoot().getValueByString(y).getValueByIndex(e).getValueByString("Time").toFloat()
+                        }, e.prototype.getEventValue = function(e) {
+                            return new c.csmString(this._json.getRoot().getValueByString(y).getValueByIndex(e).getValueByString("Value").getRawString())
+                        }, e
+                    }();
+                t.CubismMotionJson = v, (u = i = t.EvaluationOptionFlag || (t.EvaluationOptionFlag = {}))[u.EvaluationOptionFlag_AreBeziersRistricted = 0] = "EvaluationOptionFlag_AreBeziersRistricted";
+                var $, b = n(r( /*! ./cubismmotionjson */ "../../../Framework/src/motion/cubismmotionjson.ts"));
+                ($ = a = t.Live2DCubismFramework || (t.Live2DCubismFramework = {})).CubismMotionJson = b.CubismMotionJson
+            },
+            "../../../Framework/src/motion/cubismmotionmanager.ts": function(e, t, r) {
+                "use strict";
+                var i, a, o = this && this.__extends || (i = function(e, t) {
+                        return (i = Object.setPrototypeOf || ({
+                            __proto__: []
+                        }) instanceof Array && function(e, t) {
+                            e.__proto__ = t
+                        } || function(e, t) {
+                            for (var r in t) Object.prototype.hasOwnProperty.call(t, r) && (e[r] = t[r])
+                        })(e, t)
+                    }, function(e, t) {
+                        if ("function" != typeof t && null !== t) throw TypeError("Class extends value " + String(t) + " is not a constructor or null");
+
+                        function r() {
+                            this.constructor = e
+                        }
+                        i(e, t), e.prototype = null === t ? Object.create(t) : (r.prototype = t.prototype, new r)
+                    }),
+                    s = this && this.__createBinding || (Object.create ? function(e, t, r, i) {
+                        void 0 === i && (i = r);
+                        var a = Object.getOwnPropertyDescriptor(t, r);
+                        (!a || ("get" in a ? !t.__esModule : a.writable || a.configurable)) && (a = {
+                            enumerable: !0,
+                            get: function() {
+                                return t[r]
+                            }
+                        }), Object.defineProperty(e, i, a)
+                    } : function(e, t, r, i) {
+                        void 0 === i && (i = r), e[i] = t[r]
+                    }),
+                    n = this && this.__setModuleDefault || (Object.create ? function(e, t) {
+                        Object.defineProperty(e, "default", {
+                            enumerable: !0,
+                            value: t
+                        })
+                    } : function(e, t) {
+                        e.default = t
+                    }),
+                    u = this && this.__importStar || function(e) {
+                        if (e && e.__esModule) return e;
+                        var t = {};
+                        if (null != e)
+                            for (var r in e) "default" !== r && Object.prototype.hasOwnProperty.call(e, r) && s(t, e, r);
+                        return n(t, e), t
+                    };
+                Object.defineProperty(t, "__esModule", {
+                    value: !0
+                }), t.Live2DCubismFramework = t.CubismMotionManager = void 0;
+                var l = function(e) {
+                    function t() {
+                        var t = e.call(this) || this;
+                        return t._currentPriority = 0, t._reservePriority = 0, t
+                    }
+                    return o(t, e), t.prototype.getCurrentPriority = function() {
+                        return this._currentPriority
+                    }, t.prototype.getReservePriority = function() {
+                        return this._reservePriority
+                    }, t.prototype.setReservePriority = function(e) {
+                        this._reservePriority = e
+                    }, t.prototype.startMotionPriority = function(t, r, i) {
+                        return i == this._reservePriority && (this._reservePriority = 0), this._currentPriority = i, e.prototype.startMotion.call(this, t, r, this._userTimeSeconds)
+                    }, t.prototype.updateMotion = function(t, r) {
+                        this._userTimeSeconds += r;
+                        var i = e.prototype.doUpdateMotion.call(this, t, this._userTimeSeconds);
+                        return this.isFinished() && (this._currentPriority = 0), i
+                    }, t.prototype.reserveMotion = function(e) {
+                        return !(e <= this._reservePriority) && !(e <= this._currentPriority) && (this._reservePriority = e, !0)
+                    }, t
+                }(r( /*! ./cubismmotionqueuemanager */ "../../../Framework/src/motion/cubismmotionqueuemanager.ts").CubismMotionQueueManager);
+                t.CubismMotionManager = l;
+                var c, h = u(r( /*! ./cubismmotionmanager */ "../../../Framework/src/motion/cubismmotionmanager.ts"));
+                (c = a = t.Live2DCubismFramework || (t.Live2DCubismFramework = {})).CubismMotionManager = h.CubismMotionManager
+            },
+            "../../../Framework/src/motion/cubismmotionqueueentry.ts": function(e, t, r) {
+                "use strict";
+                var i, a = this && this.__createBinding || (Object.create ? function(e, t, r, i) {
+                        void 0 === i && (i = r);
+                        var a = Object.getOwnPropertyDescriptor(t, r);
+                        (!a || ("get" in a ? !t.__esModule : a.writable || a.configurable)) && (a = {
+                            enumerable: !0,
+                            get: function() {
+                                return t[r]
+                            }
+                        }), Object.defineProperty(e, i, a)
+                    } : function(e, t, r, i) {
+                        void 0 === i && (i = r), e[i] = t[r]
+                    }),
+                    o = this && this.__setModuleDefault || (Object.create ? function(e, t) {
+                        Object.defineProperty(e, "default", {
+                            enumerable: !0,
+                            value: t
+                        })
+                    } : function(e, t) {
+                        e.default = t
+                    }),
+                    s = this && this.__importStar || function(e) {
+                        if (e && e.__esModule) return e;
+                        var t = {};
+                        if (null != e)
+                            for (var r in e) "default" !== r && Object.prototype.hasOwnProperty.call(e, r) && a(t, e, r);
+                        return o(t, e), t
+                    };
+                Object.defineProperty(t, "__esModule", {
+                    value: !0
+                }), t.Live2DCubismFramework = t.CubismMotionQueueEntry = void 0;
+                var n = r( /*! ./acubismmotion */ "../../../Framework/src/motion/acubismmotion.ts"),
+                    u = function() {
+                        function e() {
+                            this._autoDelete = !1, this._motion = null, this._available = !0, this._finished = !1, this._started = !1, this._startTimeSeconds = -1, this._fadeInStartTimeSeconds = 0, this._endTimeSeconds = -1, this._stateTimeSeconds = 0, this._stateWeight = 0, this._lastEventCheckSeconds = 0, this._motionQueueEntryHandle = this, this._fadeOutSeconds = 0, this._isTriggeredFadeOut = !1
+                        }
+                        return e.prototype.release = function() {
+                            this._autoDelete && this._motion && n.ACubismMotion.delete(this._motion)
+                        }, e.prototype.setFadeOut = function(e) {
+                            this._fadeOutSeconds = e, this._isTriggeredFadeOut = !0
+                        }, e.prototype.startFadeOut = function(e, t) {
+                            var r = t + e;
+                            this._isTriggeredFadeOut = !0, (this._endTimeSeconds < 0 || r < this._endTimeSeconds) && (this._endTimeSeconds = r)
+                        }, e.prototype.isFinished = function() {
+                            return this._finished
+                        }, e.prototype.isStarted = function() {
+                            return this._started
+                        }, e.prototype.getStartTime = function() {
+                            return this._startTimeSeconds
+                        }, e.prototype.getFadeInStartTime = function() {
+                            return this._fadeInStartTimeSeconds
+                        }, e.prototype.getEndTime = function() {
+                            return this._endTimeSeconds
+                        }, e.prototype.setStartTime = function(e) {
+                            this._startTimeSeconds = e
+                        }, e.prototype.setFadeInStartTime = function(e) {
+                            this._fadeInStartTimeSeconds = e
+                        }, e.prototype.setEndTime = function(e) {
+                            this._endTimeSeconds = e
+                        }, e.prototype.setIsFinished = function(e) {
+                            this._finished = e
+                        }, e.prototype.setIsStarted = function(e) {
+                            this._started = e
+                        }, e.prototype.isAvailable = function() {
+                            return this._available
+                        }, e.prototype.setIsAvailable = function(e) {
+                            this._available = e
+                        }, e.prototype.setState = function(e, t) {
+                            this._stateTimeSeconds = e, this._stateWeight = t
+                        }, e.prototype.getStateTime = function() {
+                            return this._stateTimeSeconds
+                        }, e.prototype.getStateWeight = function() {
+                            return this._stateWeight
+                        }, e.prototype.getLastCheckEventSeconds = function() {
+                            return this._lastEventCheckSeconds
+                        }, e.prototype.setLastCheckEventSeconds = function(e) {
+                            this._lastEventCheckSeconds = e
+                        }, e.prototype.isTriggeredFadeOut = function() {
+                            return this._isTriggeredFadeOut
+                        }, e.prototype.getFadeOutSeconds = function() {
+                            return this._fadeOutSeconds
+                        }, e
+                    }();
+                t.CubismMotionQueueEntry = u;
+                var l, c = s(r( /*! ./cubismmotionqueueentry */ "../../../Framework/src/motion/cubismmotionqueueentry.ts"));
+                (l = i = t.Live2DCubismFramework || (t.Live2DCubismFramework = {})).CubismMotionQueueEntry = c.CubismMotionQueueEntry
+            },
+            "../../../Framework/src/motion/cubismmotionqueuemanager.ts": function(e, t, r) {
+                "use strict";
+                var i, a = this && this.__createBinding || (Object.create ? function(e, t, r, i) {
+                        void 0 === i && (i = r);
+                        var a = Object.getOwnPropertyDescriptor(t, r);
+                        (!a || ("get" in a ? !t.__esModule : a.writable || a.configurable)) && (a = {
+                            enumerable: !0,
+                            get: function() {
+                                return t[r]
+                            }
+                        }), Object.defineProperty(e, i, a)
+                    } : function(e, t, r, i) {
+                        void 0 === i && (i = r), e[i] = t[r]
+                    }),
+                    o = this && this.__setModuleDefault || (Object.create ? function(e, t) {
+                        Object.defineProperty(e, "default", {
+                            enumerable: !0,
+                            value: t
+                        })
+                    } : function(e, t) {
+                        e.default = t
+                    }),
+                    s = this && this.__importStar || function(e) {
+                        if (e && e.__esModule) return e;
+                        var t = {};
+                        if (null != e)
+                            for (var r in e) "default" !== r && Object.prototype.hasOwnProperty.call(e, r) && a(t, e, r);
+                        return o(t, e), t
+                    };
+                Object.defineProperty(t, "__esModule", {
+                    value: !0
+                }), t.Live2DCubismFramework = t.InvalidMotionQueueEntryHandleValue = t.CubismMotionQueueManager = void 0;
+                var n = r( /*! ./cubismmotionqueueentry */ "../../../Framework/src/motion/cubismmotionqueueentry.ts"),
+                    u = r( /*! ../type/csmvector */ "../../../Framework/src/type/csmvector.ts"),
+                    l = function() {
+                        function e() {
+                            this._userTimeSeconds = 0, this._eventCallBack = null, this._eventCustomData = null, this._motions = new u.csmVector
+                        }
+                        return e.prototype.release = function() {
+                            for (var e = 0; e < this._motions.getSize(); ++e) this._motions.at(e) && (this._motions.at(e).release(), this._motions.set(e, null));
+                            this._motions = null
+                        }, e.prototype.startMotion = function(e, r, i) {
+                            if (null == e) return t.InvalidMotionQueueEntryHandleValue;
+                            for (var a = null, o = 0; o < this._motions.getSize(); ++o) null != (a = this._motions.at(o)) && a.setFadeOut(a._motion.getFadeOutTime());
+                            return (a = new n.CubismMotionQueueEntry)._autoDelete = r, a._motion = e, this._motions.pushBack(a), a._motionQueueEntryHandle
+                        }, e.prototype.isFinished = function() {
+                            for (var e = this._motions.begin(); e.notEqual(this._motions.end());) {
+                                var t = e.ptr();
+                                if (null == t) {
+                                    e = this._motions.erase(e);
+                                    continue
+                                }
+                                if (null == t._motion) {
+                                    t.release(), t = null, e = this._motions.erase(e);
+                                    continue
+                                }
+                                if (!t.isFinished()) return !1;
+                                e.preIncrement()
+                            }
+                            return !0
+                        }, e.prototype.isFinishedByHandle = function(e) {
+                            for (var t = this._motions.begin(); t.notEqual(this._motions.end()); t.increment()) {
+                                var r = t.ptr();
+                                if (null != r && r._motionQueueEntryHandle == e && !r.isFinished()) return !1
+                            }
+                            return !0
+                        }, e.prototype.stopAllMotions = function() {
+                            for (var e = this._motions.begin(); e.notEqual(this._motions.end());) {
+                                var t = e.ptr();
+                                if (null == t) {
+                                    e = this._motions.erase(e);
+                                    continue
+                                }
+                                t.release(), t = null, e = this._motions.erase(e)
+                            }
+                        }, e.prototype.getCubismMotionQueueEntry = function(e) {
+                            for (var t = this._motions.begin(); t.notEqual(this._motions.end()); t.preIncrement()) {
+                                var r = t.ptr();
+                                if (null != r && r._motionQueueEntryHandle == e) return r
+                            }
+                            return null
+                        }, e.prototype.setEventCallback = function(e, t) {
+                            void 0 === t && (t = null), this._eventCallBack = e, this._eventCustomData = t
+                        }, e.prototype.doUpdateMotion = function(e, t) {
+                            for (var r = !1, i = this._motions.begin(); i.notEqual(this._motions.end());) {
+                                var a = i.ptr();
+                                if (null == a) {
+                                    i = this._motions.erase(i);
+                                    continue
+                                }
+                                var o = a._motion;
+                                if (null == o) {
+                                    a.release(), a = null, i = this._motions.erase(i);
+                                    continue
+                                }
+                                o.updateParameters(e, a, t), r = !0;
+                                for (var s = o.getFiredEvent(a.getLastCheckEventSeconds() - a.getStartTime(), t - a.getStartTime()), n = 0; n < s.getSize(); ++n) this._eventCallBack(this, s.at(n), this._eventCustomData);
+                                a.setLastCheckEventSeconds(t), a.isFinished() ? (a.release(), a = null, i = this._motions.erase(i)) : (a.isTriggeredFadeOut() && a.startFadeOut(a.getFadeOutSeconds(), t), i.preIncrement())
+                            }
+                            return r
+                        }, e
+                    }();
+                t.CubismMotionQueueManager = l, t.InvalidMotionQueueEntryHandleValue = -1;
+                var c, h = s(r( /*! ./cubismmotionqueuemanager */ "../../../Framework/src/motion/cubismmotionqueuemanager.ts"));
+                (c = i = t.Live2DCubismFramework || (t.Live2DCubismFramework = {})).CubismMotionQueueManager = h.CubismMotionQueueManager, c.InvalidMotionQueueEntryHandleValue = h.InvalidMotionQueueEntryHandleValue
+            },
+            "../../../Framework/src/physics/cubismphysics.ts": function(e, t, r) {
+                "use strict";
+                var i, a = this && this.__createBinding || (Object.create ? function(e, t, r, i) {
+                        void 0 === i && (i = r);
+                        var a = Object.getOwnPropertyDescriptor(t, r);
+                        (!a || ("get" in a ? !t.__esModule : a.writable || a.configurable)) && (a = {
+                            enumerable: !0,
+                            get: function() {
+                                return t[r]
+                            }
+                        }), Object.defineProperty(e, i, a)
+                    } : function(e, t, r, i) {
+                        void 0 === i && (i = r), e[i] = t[r]
+                    }),
+                    o = this && this.__setModuleDefault || (Object.create ? function(e, t) {
+                        Object.defineProperty(e, "default", {
+                            enumerable: !0,
+                            value: t
+                        })
+                    } : function(e, t) {
+                        e.default = t
+                    }),
+                    s = this && this.__importStar || function(e) {
+                        if (e && e.__esModule) return e;
+                        var t = {};
+                        if (null != e)
+                            for (var r in e) "default" !== r && Object.prototype.hasOwnProperty.call(e, r) && a(t, e, r);
+                        return o(t, e), t
+                    };
+                Object.defineProperty(t, "__esModule", {
+                    value: !0
+                }), t.Live2DCubismFramework = t.PhysicsOutput = t.Options = t.CubismPhysics = void 0;
+                var n = r( /*! ../math/cubismmath */ "../../../Framework/src/math/cubismmath.ts"),
+                    u = r( /*! ../math/cubismvector2 */ "../../../Framework/src/math/cubismvector2.ts"),
+                    l = r( /*! ../type/csmvector */ "../../../Framework/src/type/csmvector.ts"),
+                    c = r( /*! ./cubismphysicsinternal */ "../../../Framework/src/physics/cubismphysicsinternal.ts"),
+                    h = r( /*! ./cubismphysicsjson */ "../../../Framework/src/physics/cubismphysicsjson.ts"),
+                    p = "Angle",
+                    m = function() {
+                        function e() {
+                            this._physicsRig = null, this._options = new d, this._options.gravity.y = -1, this._options.gravity.x = 0, this._options.wind.x = 0, this._options.wind.y = 0, this._currentRigOutputs = new l.csmVector, this._previousRigOutputs = new l.csmVector, this._currentRemainTime = 0, this._parameterCaches = null, this._parameterInputCaches = null
+                        }
+                        return e.create = function(t, r) {
+                            var i = new e;
+                            return i.parse(t, r), i._physicsRig.gravity.y = 0, i
+                        }, e.delete = function(e) {
+                            null != e && (e.release(), e = null)
+                        }, e.prototype.parse = function(e, t) {
+                            this._physicsRig = new c.CubismPhysicsRig;
+                            var r = new h.CubismPhysicsJson(e, t);
+                            this._physicsRig.gravity = r.getGravity(), this._physicsRig.wind = r.getWind(), this._physicsRig.subRigCount = r.getSubRigCount(), this._physicsRig.fps = r.getFps(), this._physicsRig.settings.updateSize(this._physicsRig.subRigCount, c.CubismPhysicsSubRig, !0), this._physicsRig.inputs.updateSize(r.getTotalInputCount(), c.CubismPhysicsInput, !0), this._physicsRig.outputs.updateSize(r.getTotalOutputCount(), c.CubismPhysicsOutput, !0), this._physicsRig.particles.updateSize(r.getVertexCount(), c.CubismPhysicsParticle, !0), this._currentRigOutputs.clear(), this._previousRigOutputs.clear();
+                            for (var i = 0, a = 0, o = 0, s = 0; s < this._physicsRig.settings.getSize(); ++s) {
+                                this._physicsRig.settings.at(s).normalizationPosition.minimum = r.getNormalizationPositionMinimumValue(s), this._physicsRig.settings.at(s).normalizationPosition.maximum = r.getNormalizationPositionMaximumValue(s), this._physicsRig.settings.at(s).normalizationPosition.defalut = r.getNormalizationPositionDefaultValue(s), this._physicsRig.settings.at(s).normalizationAngle.minimum = r.getNormalizationAngleMinimumValue(s), this._physicsRig.settings.at(s).normalizationAngle.maximum = r.getNormalizationAngleMaximumValue(s), this._physicsRig.settings.at(s).normalizationAngle.defalut = r.getNormalizationAngleDefaultValue(s), this._physicsRig.settings.at(s).inputCount = r.getInputCount(s), this._physicsRig.settings.at(s).baseInputIndex = i;
+                                for (var n = 0; n < this._physicsRig.settings.at(s).inputCount; ++n) this._physicsRig.inputs.at(i + n).sourceParameterIndex = -1, this._physicsRig.inputs.at(i + n).weight = r.getInputWeight(s, n), this._physicsRig.inputs.at(i + n).reflect = r.getInputReflect(s, n), "X" == r.getInputType(s, n) ? (this._physicsRig.inputs.at(i + n).type = c.CubismPhysicsSource.CubismPhysicsSource_X, this._physicsRig.inputs.at(i + n).getNormalizedParameterValue = f) : "Y" == r.getInputType(s, n) ? (this._physicsRig.inputs.at(i + n).type = c.CubismPhysicsSource.CubismPhysicsSource_Y, this._physicsRig.inputs.at(i + n).getNormalizedParameterValue = y) : r.getInputType(s, n) == p && (this._physicsRig.inputs.at(i + n).type = c.CubismPhysicsSource.CubismPhysicsSource_Angle, this._physicsRig.inputs.at(i + n).getNormalizedParameterValue = v), this._physicsRig.inputs.at(i + n).source.targetType = c.CubismPhysicsTargetType.CubismPhysicsTargetType_Parameter, this._physicsRig.inputs.at(i + n).source.id = r.getInputSourceId(s, n);
+                                i += this._physicsRig.settings.at(s).inputCount, this._physicsRig.settings.at(s).outputCount = r.getOutputCount(s), this._physicsRig.settings.at(s).baseOutputIndex = a;
+                                var u = new g;
+                                u.outputs.resize(this._physicsRig.settings.at(s).outputCount);
+                                var l = new g;
+                                l.outputs.resize(this._physicsRig.settings.at(s).outputCount);
+                                for (var n = 0; n < this._physicsRig.settings.at(s).outputCount; ++n) u.outputs[n] = 0, l.outputs[n] = 0, this._physicsRig.outputs.at(a + n).destinationParameterIndex = -1, this._physicsRig.outputs.at(a + n).vertexIndex = r.getOutputVertexIndex(s, n), this._physicsRig.outputs.at(a + n).angleScale = r.getOutputAngleScale(s, n), this._physicsRig.outputs.at(a + n).weight = r.getOutputWeight(s, n), this._physicsRig.outputs.at(a + n).destination.targetType = c.CubismPhysicsTargetType.CubismPhysicsTargetType_Parameter, this._physicsRig.outputs.at(a + n).destination.id = r.getOutputDestinationId(s, n), "X" == r.getOutputType(s, n) ? (this._physicsRig.outputs.at(a + n).type = c.CubismPhysicsSource.CubismPhysicsSource_X, this._physicsRig.outputs.at(a + n).getValue = $, this._physicsRig.outputs.at(a + n).getScale = C) : "Y" == r.getOutputType(s, n) ? (this._physicsRig.outputs.at(a + n).type = c.CubismPhysicsSource.CubismPhysicsSource_Y, this._physicsRig.outputs.at(a + n).getValue = b, this._physicsRig.outputs.at(a + n).getScale = S) : r.getOutputType(s, n) == p && (this._physicsRig.outputs.at(a + n).type = c.CubismPhysicsSource.CubismPhysicsSource_Angle, this._physicsRig.outputs.at(a + n).getValue = M, this._physicsRig.outputs.at(a + n).getScale = w), this._physicsRig.outputs.at(a + n).reflect = r.getOutputReflect(s, n);
+                                this._currentRigOutputs.pushBack(u), this._previousRigOutputs.pushBack(l), a += this._physicsRig.settings.at(s).outputCount, this._physicsRig.settings.at(s).particleCount = r.getParticleCount(s), this._physicsRig.settings.at(s).baseParticleIndex = o;
+                                for (var n = 0; n < this._physicsRig.settings.at(s).particleCount; ++n) this._physicsRig.particles.at(o + n).mobility = r.getParticleMobility(s, n), this._physicsRig.particles.at(o + n).delay = r.getParticleDelay(s, n), this._physicsRig.particles.at(o + n).acceleration = r.getParticleAcceleration(s, n), this._physicsRig.particles.at(o + n).radius = r.getParticleRadius(s, n), this._physicsRig.particles.at(o + n).position = r.getParticlePosition(s, n);
+                                o += this._physicsRig.settings.at(s).particleCount
+                            }
+                            this.initialize(), r.release(), r = void 0, r = null
+                        }, e.prototype.stabilization = function(e) {
+                            var t, r, i, a, o, s, l, c, h, p, m, d, g, f, y, v, $ = new u.CubismVector2;
+                            g = e.getModel().parameters.values, f = e.getModel().parameters.maximumValues, y = e.getModel().parameters.minimumValues, v = e.getModel().parameters.defaultValues, (null !== (r = null === (t = this._parameterCaches) || void 0 === t ? void 0 : t.length) && void 0 !== r ? r : 0) < e.getParameterCount() && (this._parameterCaches = new Float32Array(e.getParameterCount())), (null !== (a = null === (i = this._parameterInputCaches) || void 0 === i ? void 0 : i.length) && void 0 !== a ? a : 0) < e.getParameterCount() && (this._parameterInputCaches = new Float32Array(e.getParameterCount()));
+                            for (var b = 0; b < e.getParameterCount(); ++b) this._parameterCaches[b] = g[b], this._parameterInputCaches[b] = g[b];
+                            for (var M = 0; M < this._physicsRig.subRigCount; ++M) {
+                                o = {
+                                    angle: 0
+                                }, $.x = 0, $.y = 0, h = this._physicsRig.settings.at(M), p = this._physicsRig.inputs.get(h.baseInputIndex), m = this._physicsRig.outputs.get(h.baseOutputIndex), d = this._physicsRig.particles.get(h.baseParticleIndex);
+                                for (var C = 0; C < h.inputCount; ++C) s = p[C].weight / 100, -1 == p[C].sourceParameterIndex && (p[C].sourceParameterIndex = e.getParameterIndex(p[C].source.id)), p[C].getNormalizedParameterValue($, o, g[p[C].sourceParameterIndex], y[p[C].sourceParameterIndex], f[p[C].sourceParameterIndex], v[p[C].sourceParameterIndex], h.normalizationPosition, h.normalizationAngle, p[C].reflect, s), this._parameterCaches[p[C].sourceParameterIndex] = g[p[C].sourceParameterIndex];
+                                l = n.CubismMath.degreesToRadian(-o.angle), $.x = $.x * n.CubismMath.cos(l) - $.y * n.CubismMath.sin(l), $.y = $.x * n.CubismMath.sin(l) + $.y * n.CubismMath.cos(l), I(d, h.particleCount, $, o.angle, this._options.wind, .001 * h.normalizationPosition.maximum);
+                                for (var C = 0; C < h.outputCount; ++C) {
+                                    var S = m[C].vertexIndex;
+                                    if (-1 == m[C].destinationParameterIndex && (m[C].destinationParameterIndex = e.getParameterIndex(m[C].destination.id)), !(S < 1) && !(S >= h.particleCount)) {
+                                        var w = new u.CubismVector2;
+                                        w = d[S].position.substract(d[S - 1].position), c = m[C].getValue(w, d, S, m[C].reflect, this._options.gravity), this._currentRigOutputs.at(M).outputs[C] = c, this._previousRigOutputs.at(M).outputs[C] = c;
+                                        var P = m[C].destinationParameterIndex,
+                                            B = !Float32Array.prototype.slice && "subarray" in Float32Array.prototype ? JSON.parse(JSON.stringify(g.subarray(P))) : g.slice(P);
+                                        x(B, y[P], f[P], c, m[C]);
+                                        for (var L = P, F = 0; L < this._parameterCaches.length; L++, F++) g[L] = this._parameterCaches[L] = B[F]
+                                    }
+                                }
+                            }
+                        }, e.prototype.evaluate = function(e, t) {
+                            var r, i, a, o, s, l, c, h, p, m, d, g, f, y, v, $, b, M = new u.CubismVector2;
+                            if (!(0 >= t)) {
+                                if (this._currentRemainTime += t, this._currentRemainTime > 5 && (this._currentRemainTime = 0), f = e.getModel().parameters.values, y = e.getModel().parameters.maximumValues, v = e.getModel().parameters.minimumValues, $ = e.getModel().parameters.defaultValues, (null !== (i = null === (r = this._parameterCaches) || void 0 === r ? void 0 : r.length) && void 0 !== i ? i : 0) < e.getParameterCount() && (this._parameterCaches = new Float32Array(e.getParameterCount())), (null !== (o = null === (a = this._parameterInputCaches) || void 0 === a ? void 0 : a.length) && void 0 !== o ? o : 0) < e.getParameterCount()) {
+                                    this._parameterInputCaches = new Float32Array(e.getParameterCount());
+                                    for (var C = 0; C < e.getParameterCount(); ++C) this._parameterInputCaches[C] = f[C]
+                                }
+                                for (b = this._physicsRig.fps > 0 ? 1 / this._physicsRig.fps : t; this._currentRemainTime >= b;) {
+                                    for (var S = 0; S < this._physicsRig.subRigCount; ++S) {
+                                        p = this._physicsRig.settings.at(S), d = this._physicsRig.outputs.get(p.baseOutputIndex);
+                                        for (var w = 0; w < p.outputCount; ++w) this._previousRigOutputs.at(S).outputs[w] = this._currentRigOutputs.at(S).outputs[w]
+                                    }
+                                    for (var I = b / this._currentRemainTime, C = 0; C < e.getParameterCount(); ++C) this._parameterCaches[C] = this._parameterInputCaches[C] * (1 - I) + f[C] * I, this._parameterInputCaches[C] = this._parameterCaches[C];
+                                    for (var S = 0; S < this._physicsRig.subRigCount; ++S) {
+                                        s = {
+                                            angle: 0
+                                        }, M.x = 0, M.y = 0, p = this._physicsRig.settings.at(S), m = this._physicsRig.inputs.get(p.baseInputIndex), d = this._physicsRig.outputs.get(p.baseOutputIndex), g = this._physicsRig.particles.get(p.baseParticleIndex);
+                                        for (var w = 0; w < p.inputCount; ++w) l = m[w].weight / 100, -1 == m[w].sourceParameterIndex && (m[w].sourceParameterIndex = e.getParameterIndex(m[w].source.id)), m[w].getNormalizedParameterValue(M, s, this._parameterCaches[m[w].sourceParameterIndex], v[m[w].sourceParameterIndex], y[m[w].sourceParameterIndex], $[m[w].sourceParameterIndex], p.normalizationPosition, p.normalizationAngle, m[w].reflect, l);
+                                        c = n.CubismMath.degreesToRadian(-s.angle), M.x = M.x * n.CubismMath.cos(c) - M.y * n.CubismMath.sin(c), M.y = M.x * n.CubismMath.sin(c) + M.y * n.CubismMath.cos(c), P(g, p.particleCount, M, s.angle, this._options.wind, .001 * p.normalizationPosition.maximum, b, 5);
+                                        for (var w = 0; w < p.outputCount; ++w) {
+                                            var B = d[w].vertexIndex;
+                                            if (-1 == d[w].destinationParameterIndex && (d[w].destinationParameterIndex = e.getParameterIndex(d[w].destination.id)), !(B < 1) && !(B >= p.particleCount)) {
+                                                var L = new u.CubismVector2;
+                                                L.x = g[B].position.x - g[B - 1].position.x, L.y = g[B].position.y - g[B - 1].position.y, h = d[w].getValue(L, g, B, d[w].reflect, this._options.gravity), this._currentRigOutputs.at(S).outputs[w] = h;
+                                                var F = d[w].destinationParameterIndex,
+                                                    V = !Float32Array.prototype.slice && "subarray" in Float32Array.prototype ? JSON.parse(JSON.stringify(this._parameterCaches.subarray(F))) : this._parameterCaches.slice(F);
+                                                x(V, v[F], y[F], h, d[w]);
+                                                for (var N = F, _ = 0; N < this._parameterCaches.length; N++, _++) this._parameterCaches[N] = V[_]
+                                            }
+                                        }
+                                    }
+                                    this._currentRemainTime -= b
+                                }
+                                var D = this._currentRemainTime / b;
+                                this.interpolate(e, D)
+                            }
+                        }, e.prototype.interpolate = function(e, t) {
+                            a = e.getModel().parameters.values, o = e.getModel().parameters.maximumValues, s = e.getModel().parameters.minimumValues;
+                            for (var r, i, a, o, s, n = 0; n < this._physicsRig.subRigCount; ++n) {
+                                i = this._physicsRig.settings.at(n), r = this._physicsRig.outputs.get(i.baseOutputIndex);
+                                for (var u = 0; u < i.outputCount; ++u)
+                                    if (-1 != r[u].destinationParameterIndex) {
+                                        var l = r[u].destinationParameterIndex,
+                                            c = !Float32Array.prototype.slice && "subarray" in Float32Array.prototype ? JSON.parse(JSON.stringify(a.subarray(l))) : a.slice(l);
+                                        x(c, s[l], o[l], this._previousRigOutputs.at(n).outputs[u] * (1 - t) + this._currentRigOutputs.at(n).outputs[u] * t, r[u]);
+                                        for (var h = l, p = 0; h < a.length; h++, p++) a[h] = c[p]
+                                    }
+                            }
+                        }, e.prototype.setOptions = function(e) {
+                            this._options = e
+                        }, e.prototype.getOption = function() {
+                            return this._options
+                        }, e.prototype.release = function() {
+                            this._physicsRig = void 0, this._physicsRig = null
+                        }, e.prototype.initialize = function() {
+                            for (var e, t, r, i = 0; i < this._physicsRig.subRigCount; ++i) {
+                                t = this._physicsRig.settings.at(i), (e = this._physicsRig.particles.get(t.baseParticleIndex))[0].initialPosition = new u.CubismVector2(0, 0), e[0].lastPosition = new u.CubismVector2(e[0].initialPosition.x, e[0].initialPosition.y), e[0].lastGravity = new u.CubismVector2(0, -1), e[0].lastGravity.y *= -1, e[0].velocity = new u.CubismVector2(0, 0), e[0].force = new u.CubismVector2(0, 0);
+                                for (var a = 1; a < t.particleCount; ++a)(r = new u.CubismVector2(0, 0)).y = e[a].radius, e[a].initialPosition = new u.CubismVector2(e[a - 1].initialPosition.x + r.x, e[a - 1].initialPosition.y + r.y), e[a].position = new u.CubismVector2(e[a].initialPosition.x, e[a].initialPosition.y), e[a].lastPosition = new u.CubismVector2(e[a].initialPosition.x, e[a].initialPosition.y), e[a].lastGravity = new u.CubismVector2(0, -1), e[a].lastGravity.y *= -1, e[a].velocity = new u.CubismVector2(0, 0), e[a].force = new u.CubismVector2(0, 0)
+                            }
+                        }, e
+                    }();
+                t.CubismPhysics = m;
+                var d = function e() {
+                    this.gravity = new u.CubismVector2(0, 0), this.wind = new u.CubismVector2(0, 0)
+                };
+                t.Options = d;
+                var g = function e() {
+                    this.outputs = new l.csmVector(0)
+                };
+
+                function f(e, t, r, i, a, o, s, n, u, l) {
+                    e.x += B(r, i, a, o, s.minimum, s.maximum, s.defalut, u) * l
+                }
+
+                function y(e, t, r, i, a, o, s, n, u, l) {
+                    e.y += B(r, i, a, o, s.minimum, s.maximum, s.defalut, u) * l
+                }
+
+                function v(e, t, r, i, a, o, s, n, u, l) {
+                    t.angle += B(r, i, a, o, n.minimum, n.maximum, n.defalut, u) * l
+                }
+
+                function $(e, t, r, i, a) {
+                    var o = e.x;
+                    return i && (o *= -1), o
+                }
+
+                function b(e, t, r, i, a) {
+                    var o = e.y;
+                    return i && (o *= -1), o
+                }
+
+                function M(e, t, r, i, a) {
+                    var o;
+                    return a = r >= 2 ? t[r - 1].position.substract(t[r - 2].position) : a.multiplyByScaler(-1), o = n.CubismMath.directionToRadian(a, e), i && (o *= -1), o
+                }
+
+                function C(e, t) {
+                    return JSON.parse(JSON.stringify(e.x))
+                }
+
+                function S(e, t) {
+                    return JSON.parse(JSON.stringify(e.y))
+                }
+
+                function w(e, t) {
+                    return JSON.parse(JSON.stringify(t))
+                }
+
+                function P(e, t, r, i, a, o, s, l) {
+                    var c, h, p, m, d = new u.CubismVector2(0, 0),
+                        g = new u.CubismVector2(0, 0),
+                        f = new u.CubismVector2(0, 0),
+                        y = new u.CubismVector2(0, 0);
+                    e[0].position = new u.CubismVector2(r.x, r.y), c = n.CubismMath.degreesToRadian(i), (m = n.CubismMath.radianToDirection(c)).normalize();
+                    for (var v = 1; v < t; ++v) e[v].force = m.multiplyByScaler(e[v].acceleration).add(a), e[v].lastPosition = new u.CubismVector2(e[v].position.x, e[v].position.y), h = e[v].delay * s * 30, d = e[v].position.substract(e[v - 1].position), p = n.CubismMath.directionToRadian(e[v].lastGravity, m) / l, d.x = n.CubismMath.cos(p) * d.x - d.y * n.CubismMath.sin(p), d.y = n.CubismMath.sin(p) * d.x + d.y * n.CubismMath.cos(p), e[v].position = e[v - 1].position.add(d), g = e[v].velocity.multiplyByScaler(h), f = e[v].force.multiplyByScaler(h).multiplyByScaler(h), e[v].position = e[v].position.add(g).add(f), (y = e[v].position.substract(e[v - 1].position)).normalize(), e[v].position = e[v - 1].position.add(y.multiplyByScaler(e[v].radius)), n.CubismMath.abs(e[v].position.x) < o && (e[v].position.x = 0), 0 != h && (e[v].velocity = e[v].position.substract(e[v].lastPosition), e[v].velocity = e[v].velocity.divisionByScalar(h), e[v].velocity = e[v].velocity.multiplyByScaler(e[v].mobility)), e[v].force = new u.CubismVector2(0, 0), e[v].lastGravity = new u.CubismVector2(m.x, m.y)
+                }
+
+                function I(e, t, r, i, a, o) {
+                    var s, l, c = new u.CubismVector2(0, 0);
+                    e[0].position = new u.CubismVector2(r.x, r.y), s = n.CubismMath.degreesToRadian(i), (l = n.CubismMath.radianToDirection(s)).normalize();
+                    for (var h = 1; h < t; ++h) e[h].force = l.multiplyByScaler(e[h].acceleration).add(a), e[h].lastPosition = new u.CubismVector2(e[h].position.x, e[h].position.y), e[h].velocity = new u.CubismVector2(0, 0), (c = e[h].force).normalize(), c = c.multiplyByScaler(e[h].radius), e[h].position = e[h - 1].position.add(c), n.CubismMath.abs(e[h].position.x) < o && (e[h].position.x = 0), e[h].force = new u.CubismVector2(0, 0), e[h].lastGravity = new u.CubismVector2(l.x, l.y)
+                }
+
+                function x(e, t, r, i, a) {
+                    var o, s, n;
+                    (s = i * (o = a.getScale(a.translationScale, a.angleScale))) < t ? (s < a.valueBelowMinimum && (a.valueBelowMinimum = s), s = t) : s > r && (s > a.valueExceededMaximum && (a.valueExceededMaximum = s), s = r), (n = a.weight / 100) >= 1 || (s = e[0] * (1 - n) + s * n), e[0] = s
+                }
+
+                function B(e, t, r, i, a, o, s, u) {
+                    var l = 0,
+                        c = n.CubismMath.max(r, t);
+                    c < e && (e = c);
+                    var h = n.CubismMath.min(r, t);
+                    h > e && (e = h);
+                    var p, m, d, g, f, y, v, $, b = n.CubismMath.min(a, o),
+                        M = n.CubismMath.max(a, o),
+                        C = s,
+                        S = (p = h, m = c, n.CubismMath.min(p, m) + (d = p, g = m, f = n.CubismMath.max(d, g), y = n.CubismMath.min(d, g), n.CubismMath.abs(f - y) / 2)),
+                        w = e - S;
+                    switch ($ = 0, (v = w) > 0 ? $ = 1 : v < 0 && ($ = -1), $) {
+                        case 1:
+                            var P = M - C,
+                                I = c - S;
+                            0 != I && (l = w * (P / I), l += C);
+                            break;
+                        case -1:
+                            var P = b - C,
+                                I = h - S;
+                            0 != I && (l = w * (P / I), l += C);
+                            break;
+                        case 0:
+                            l = C
+                    }
+                    return u ? l : -1 * l
+                }
+                t.PhysicsOutput = g;
+                var L, F = s(r( /*! ./cubismphysics */ "../../../Framework/src/physics/cubismphysics.ts"));
+                (L = i = t.Live2DCubismFramework || (t.Live2DCubismFramework = {})).CubismPhysics = F.CubismPhysics, L.Options = F.Options
+            },
+            "../../../Framework/src/physics/cubismphysicsinternal.ts": function(e, t, r) {
+                "use strict";
+                var i, a, o, s = this && this.__createBinding || (Object.create ? function(e, t, r, i) {
+                        void 0 === i && (i = r);
+                        var a = Object.getOwnPropertyDescriptor(t, r);
+                        (!a || ("get" in a ? !t.__esModule : a.writable || a.configurable)) && (a = {
+                            enumerable: !0,
+                            get: function() {
+                                return t[r]
+                            }
+                        }), Object.defineProperty(e, i, a)
+                    } : function(e, t, r, i) {
+                        void 0 === i && (i = r), e[i] = t[r]
+                    }),
+                    n = this && this.__setModuleDefault || (Object.create ? function(e, t) {
+                        Object.defineProperty(e, "default", {
+                            enumerable: !0,
+                            value: t
+                        })
+                    } : function(e, t) {
+                        e.default = t
+                    }),
+                    u = this && this.__importStar || function(e) {
+                        if (e && e.__esModule) return e;
+                        var t = {};
+                        if (null != e)
+                            for (var r in e) "default" !== r && Object.prototype.hasOwnProperty.call(e, r) && s(t, e, r);
+                        return n(t, e), t
+                    };
+                Object.defineProperty(t, "__esModule", {
+                    value: !0
+                }), t.Live2DCubismFramework = t.CubismPhysicsRig = t.CubismPhysicsOutput = t.CubismPhysicsInput = t.CubismPhysicsSubRig = t.CubismPhysicsParticle = t.CubismPhysicsNormalization = t.CubismPhysicsParameter = t.PhysicsJsonEffectiveForces = t.CubismPhysicsSource = t.CubismPhysicsTargetType = void 0;
+                var l, c, h = r( /*! ../math/cubismvector2 */ "../../../Framework/src/math/cubismvector2.ts"),
+                    p = r( /*! ../type/csmvector */ "../../../Framework/src/type/csmvector.ts");
+                (l = i = t.CubismPhysicsTargetType || (t.CubismPhysicsTargetType = {}))[l.CubismPhysicsTargetType_Parameter = 0] = "CubismPhysicsTargetType_Parameter", (c = a = t.CubismPhysicsSource || (t.CubismPhysicsSource = {}))[c.CubismPhysicsSource_X = 0] = "CubismPhysicsSource_X", c[c.CubismPhysicsSource_Y = 1] = "CubismPhysicsSource_Y", c[c.CubismPhysicsSource_Angle = 2] = "CubismPhysicsSource_Angle", t.PhysicsJsonEffectiveForces = function e() {
+                    this.gravity = new h.CubismVector2(0, 0), this.wind = new h.CubismVector2(0, 0)
+                };
+                var m = function e() {};
+                t.CubismPhysicsParameter = m;
+                var d = function e() {};
+                t.CubismPhysicsNormalization = d, t.CubismPhysicsParticle = function e() {
+                    this.initialPosition = new h.CubismVector2(0, 0), this.position = new h.CubismVector2(0, 0), this.lastPosition = new h.CubismVector2(0, 0), this.lastGravity = new h.CubismVector2(0, 0), this.force = new h.CubismVector2(0, 0), this.velocity = new h.CubismVector2(0, 0)
+                }, t.CubismPhysicsSubRig = function e() {
+                    this.normalizationPosition = new d, this.normalizationAngle = new d
+                }, t.CubismPhysicsInput = function e() {
+                    this.source = new m
+                }, t.CubismPhysicsOutput = function e() {
+                    this.destination = new m, this.translationScale = new h.CubismVector2(0, 0)
+                }, t.CubismPhysicsRig = function e() {
+                    this.settings = new p.csmVector, this.inputs = new p.csmVector, this.outputs = new p.csmVector, this.particles = new p.csmVector, this.gravity = new h.CubismVector2(0, 0), this.wind = new h.CubismVector2(0, 0), this.fps = 0
+                };
+                var g, f = u(r( /*! ./cubismphysicsinternal */ "../../../Framework/src/physics/cubismphysicsinternal.ts"));
+                (g = o = t.Live2DCubismFramework || (t.Live2DCubismFramework = {})).CubismPhysicsInput = f.CubismPhysicsInput, g.CubismPhysicsNormalization = f.CubismPhysicsNormalization, g.CubismPhysicsOutput = f.CubismPhysicsOutput, g.CubismPhysicsParameter = f.CubismPhysicsParameter, g.CubismPhysicsParticle = f.CubismPhysicsParticle, g.CubismPhysicsRig = f.CubismPhysicsRig, g.CubismPhysicsSource = f.CubismPhysicsSource, g.CubismPhysicsSubRig = f.CubismPhysicsSubRig, g.CubismPhysicsTargetType = f.CubismPhysicsTargetType, g.PhysicsJsonEffectiveForces = f.PhysicsJsonEffectiveForces
+            },
+            "../../../Framework/src/physics/cubismphysicsjson.ts": function(e, t, r) {
+                "use strict";
+                var i, a = this && this.__createBinding || (Object.create ? function(e, t, r, i) {
+                        void 0 === i && (i = r);
+                        var a = Object.getOwnPropertyDescriptor(t, r);
+                        (!a || ("get" in a ? !t.__esModule : a.writable || a.configurable)) && (a = {
+                            enumerable: !0,
+                            get: function() {
+                                return t[r]
+                            }
+                        }), Object.defineProperty(e, i, a)
+                    } : function(e, t, r, i) {
+                        void 0 === i && (i = r), e[i] = t[r]
+                    }),
+                    o = this && this.__setModuleDefault || (Object.create ? function(e, t) {
+                        Object.defineProperty(e, "default", {
+                            enumerable: !0,
+                            value: t
+                        })
+                    } : function(e, t) {
+                        e.default = t
+                    }),
+                    s = this && this.__importStar || function(e) {
+                        if (e && e.__esModule) return e;
+                        var t = {};
+                        if (null != e)
+                            for (var r in e) "default" !== r && Object.prototype.hasOwnProperty.call(e, r) && a(t, e, r);
+                        return o(t, e), t
+                    };
+                Object.defineProperty(t, "__esModule", {
+                    value: !0
+                }), t.Live2DCubismFramework = t.CubismPhysicsJson = void 0;
+                var n = r( /*! ../live2dcubismframework */ "../../../Framework/src/live2dcubismframework.ts"),
+                    u = r( /*! ../math/cubismvector2 */ "../../../Framework/src/math/cubismvector2.ts"),
+                    l = r( /*! ../utils/cubismjson */ "../../../Framework/src/utils/cubismjson.ts"),
+                    c = "Position",
+                    h = "Angle",
+                    p = "Type",
+                    m = "Meta",
+                    d = "EffectiveForces",
+                    g = "Gravity",
+                    f = "Wind",
+                    y = "PhysicsSettings",
+                    v = "Normalization",
+                    $ = "Minimum",
+                    b = "Maximum",
+                    M = "Default",
+                    C = "Reflect",
+                    S = "Weight",
+                    w = "Input",
+                    P = "Output",
+                    I = "Vertices",
+                    x = function() {
+                        function e(e, t) {
+                            this._json = l.CubismJson.create(e, t)
+                        }
+                        return e.prototype.release = function() {
+                            l.CubismJson.delete(this._json)
+                        }, e.prototype.getGravity = function() {
+                            var e = new u.CubismVector2(0, 0);
+                            return e.x = this._json.getRoot().getValueByString(m).getValueByString(d).getValueByString(g).getValueByString("X").toFloat(), e.y = this._json.getRoot().getValueByString(m).getValueByString(d).getValueByString(g).getValueByString("Y").toFloat(), e
+                        }, e.prototype.getWind = function() {
+                            var e = new u.CubismVector2(0, 0);
+                            return e.x = this._json.getRoot().getValueByString(m).getValueByString(d).getValueByString(f).getValueByString("X").toFloat(), e.y = this._json.getRoot().getValueByString(m).getValueByString(d).getValueByString(f).getValueByString("Y").toFloat(), e
+                        }, e.prototype.getFps = function() {
+                            return this._json.getRoot().getValueByString(m).getValueByString("Fps").toFloat(0)
+                        }, e.prototype.getSubRigCount = function() {
+                            return this._json.getRoot().getValueByString(m).getValueByString("PhysicsSettingCount").toInt()
+                        }, e.prototype.getTotalInputCount = function() {
+                            return this._json.getRoot().getValueByString(m).getValueByString("TotalInputCount").toInt()
+                        }, e.prototype.getTotalOutputCount = function() {
+                            return this._json.getRoot().getValueByString(m).getValueByString("TotalOutputCount").toInt()
+                        }, e.prototype.getVertexCount = function() {
+                            return this._json.getRoot().getValueByString(m).getValueByString("VertexCount").toInt()
+                        }, e.prototype.getNormalizationPositionMinimumValue = function(e) {
+                            return this._json.getRoot().getValueByString(y).getValueByIndex(e).getValueByString(v).getValueByString(c).getValueByString($).toFloat()
+                        }, e.prototype.getNormalizationPositionMaximumValue = function(e) {
+                            return this._json.getRoot().getValueByString(y).getValueByIndex(e).getValueByString(v).getValueByString(c).getValueByString(b).toFloat()
+                        }, e.prototype.getNormalizationPositionDefaultValue = function(e) {
+                            return this._json.getRoot().getValueByString(y).getValueByIndex(e).getValueByString(v).getValueByString(c).getValueByString(M).toFloat()
+                        }, e.prototype.getNormalizationAngleMinimumValue = function(e) {
+                            return this._json.getRoot().getValueByString(y).getValueByIndex(e).getValueByString(v).getValueByString(h).getValueByString($).toFloat()
+                        }, e.prototype.getNormalizationAngleMaximumValue = function(e) {
+                            return this._json.getRoot().getValueByString(y).getValueByIndex(e).getValueByString(v).getValueByString(h).getValueByString(b).toFloat()
+                        }, e.prototype.getNormalizationAngleDefaultValue = function(e) {
+                            return this._json.getRoot().getValueByString(y).getValueByIndex(e).getValueByString(v).getValueByString(h).getValueByString(M).toFloat()
+                        }, e.prototype.getInputCount = function(e) {
+                            return this._json.getRoot().getValueByString(y).getValueByIndex(e).getValueByString(w).getVector().getSize()
+                        }, e.prototype.getInputWeight = function(e, t) {
+                            return this._json.getRoot().getValueByString(y).getValueByIndex(e).getValueByString(w).getValueByIndex(t).getValueByString(S).toFloat()
+                        }, e.prototype.getInputReflect = function(e, t) {
+                            return this._json.getRoot().getValueByString(y).getValueByIndex(e).getValueByString(w).getValueByIndex(t).getValueByString(C).toBoolean()
+                        }, e.prototype.getInputType = function(e, t) {
+                            return this._json.getRoot().getValueByString(y).getValueByIndex(e).getValueByString(w).getValueByIndex(t).getValueByString(p).getRawString()
+                        }, e.prototype.getInputSourceId = function(e, t) {
+                            return n.CubismFramework.getIdManager().getId(this._json.getRoot().getValueByString(y).getValueByIndex(e).getValueByString(w).getValueByIndex(t).getValueByString("Source").getValueByString("Id").getRawString())
+                        }, e.prototype.getOutputCount = function(e) {
+                            return this._json.getRoot().getValueByString(y).getValueByIndex(e).getValueByString(P).getVector().getSize()
+                        }, e.prototype.getOutputVertexIndex = function(e, t) {
+                            return this._json.getRoot().getValueByString(y).getValueByIndex(e).getValueByString(P).getValueByIndex(t).getValueByString("VertexIndex").toInt()
+                        }, e.prototype.getOutputAngleScale = function(e, t) {
+                            return this._json.getRoot().getValueByString(y).getValueByIndex(e).getValueByString(P).getValueByIndex(t).getValueByString("Scale").toFloat()
+                        }, e.prototype.getOutputWeight = function(e, t) {
+                            return this._json.getRoot().getValueByString(y).getValueByIndex(e).getValueByString(P).getValueByIndex(t).getValueByString(S).toFloat()
+                        }, e.prototype.getOutputDestinationId = function(e, t) {
+                            return n.CubismFramework.getIdManager().getId(this._json.getRoot().getValueByString(y).getValueByIndex(e).getValueByString(P).getValueByIndex(t).getValueByString("Destination").getValueByString("Id").getRawString())
+                        }, e.prototype.getOutputType = function(e, t) {
+                            return this._json.getRoot().getValueByString(y).getValueByIndex(e).getValueByString(P).getValueByIndex(t).getValueByString(p).getRawString()
+                        }, e.prototype.getOutputReflect = function(e, t) {
+                            return this._json.getRoot().getValueByString(y).getValueByIndex(e).getValueByString(P).getValueByIndex(t).getValueByString(C).toBoolean()
+                        }, e.prototype.getParticleCount = function(e) {
+                            return this._json.getRoot().getValueByString(y).getValueByIndex(e).getValueByString(I).getVector().getSize()
+                        }, e.prototype.getParticleMobility = function(e, t) {
+                            return this._json.getRoot().getValueByString(y).getValueByIndex(e).getValueByString(I).getValueByIndex(t).getValueByString("Mobility").toFloat()
+                        }, e.prototype.getParticleDelay = function(e, t) {
+                            return this._json.getRoot().getValueByString(y).getValueByIndex(e).getValueByString(I).getValueByIndex(t).getValueByString("Delay").toFloat()
+                        }, e.prototype.getParticleAcceleration = function(e, t) {
+                            return this._json.getRoot().getValueByString(y).getValueByIndex(e).getValueByString(I).getValueByIndex(t).getValueByString("Acceleration").toFloat()
+                        }, e.prototype.getParticleRadius = function(e, t) {
+                            return this._json.getRoot().getValueByString(y).getValueByIndex(e).getValueByString(I).getValueByIndex(t).getValueByString("Radius").toFloat()
+                        }, e.prototype.getParticlePosition = function(e, t) {
+                            var r = new u.CubismVector2(0, 0);
+                            return r.x = this._json.getRoot().getValueByString(y).getValueByIndex(e).getValueByString(I).getValueByIndex(t).getValueByString(c).getValueByString("X").toFloat(), r.y = this._json.getRoot().getValueByString(y).getValueByIndex(e).getValueByString(I).getValueByIndex(t).getValueByString(c).getValueByString("Y").toFloat(), r
+                        }, e
+                    }();
+                t.CubismPhysicsJson = x;
+                var B, L = s(r( /*! ./cubismphysicsjson */ "../../../Framework/src/physics/cubismphysicsjson.ts"));
+                (B = i = t.Live2DCubismFramework || (t.Live2DCubismFramework = {})).CubismPhysicsJson = L.CubismPhysicsJson
+            },
+            "../../../Framework/src/rendering/cubismrenderer.ts": function(e, t, r) {
+                "use strict";
+                var i, a, o = this && this.__createBinding || (Object.create ? function(e, t, r, i) {
+                        void 0 === i && (i = r);
+                        var a = Object.getOwnPropertyDescriptor(t, r);
+                        (!a || ("get" in a ? !t.__esModule : a.writable || a.configurable)) && (a = {
+                            enumerable: !0,
+                            get: function() {
+                                return t[r]
+                            }
+                        }), Object.defineProperty(e, i, a)
+                    } : function(e, t, r, i) {
+                        void 0 === i && (i = r), e[i] = t[r]
+                    }),
+                    s = this && this.__setModuleDefault || (Object.create ? function(e, t) {
+                        Object.defineProperty(e, "default", {
+                            enumerable: !0,
+                            value: t
+                        })
+                    } : function(e, t) {
+                        e.default = t
+                    }),
+                    n = this && this.__importStar || function(e) {
+                        if (e && e.__esModule) return e;
+                        var t = {};
+                        if (null != e)
+                            for (var r in e) "default" !== r && Object.prototype.hasOwnProperty.call(e, r) && o(t, e, r);
+                        return s(t, e), t
+                    };
+                Object.defineProperty(t, "__esModule", {
+                    value: !0
+                }), t.Live2DCubismFramework = t.CubismTextureColor = t.CubismBlendMode = t.CubismRenderer = void 0;
+                var u, l = r( /*! ../math/cubismmatrix44 */ "../../../Framework/src/math/cubismmatrix44.ts"),
+                    c = function() {
+                        function e() {
+                            this._isCulling = !1, this._isPremultipliedAlpha = !1, this._anisotropy = 0, this._model = null, this._modelColor = new h, this._mvpMatrix4x4 = new l.CubismMatrix44, this._mvpMatrix4x4.loadIdentity()
+                        }
+                        return e.create = function() {
+                            return null
+                        }, e.delete = function(e) {
+                            e = null
+                        }, e.prototype.initialize = function(e) {
+                            this._model = e
+                        }, e.prototype.drawModel = function() {
+                            null != this.getModel() && this.doDrawModel()
+                        }, e.prototype.setMvpMatrix = function(e) {
+                            this._mvpMatrix4x4.setMatrix(e.getArray())
+                        }, e.prototype.getMvpMatrix = function() {
+                            return this._mvpMatrix4x4
+                        }, e.prototype.setModelColor = function(e, t, r, i) {
+                            e < 0 ? e = 0 : e > 1 && (e = 1), t < 0 ? t = 0 : t > 1 && (t = 1), r < 0 ? r = 0 : r > 1 && (r = 1), i < 0 ? i = 0 : i > 1 && (i = 1), this._modelColor.R = e, this._modelColor.G = t, this._modelColor.B = r, this._modelColor.A = i
+                        }, e.prototype.getModelColor = function() {
+                            return JSON.parse(JSON.stringify(this._modelColor))
+                        }, e.prototype.setIsPremultipliedAlpha = function(e) {
+                            this._isPremultipliedAlpha = e
+                        }, e.prototype.isPremultipliedAlpha = function() {
+                            return this._isPremultipliedAlpha
+                        }, e.prototype.setIsCulling = function(e) {
+                            this._isCulling = e
+                        }, e.prototype.isCulling = function() {
+                            return this._isCulling
+                        }, e.prototype.setAnisotropy = function(e) {
+                            this._anisotropy = e
+                        }, e.prototype.getAnisotropy = function() {
+                            return this._anisotropy
+                        }, e.prototype.getModel = function() {
+                            return this._model
+                        }, e
+                    }();
+                t.CubismRenderer = c, (u = i = t.CubismBlendMode || (t.CubismBlendMode = {}))[u.CubismBlendMode_Normal = 0] = "CubismBlendMode_Normal", u[u.CubismBlendMode_Additive = 1] = "CubismBlendMode_Additive", u[u.CubismBlendMode_Multiplicative = 2] = "CubismBlendMode_Multiplicative";
+                var h = function e() {
+                    this.R = 1, this.G = 1, this.B = 1, this.A = 1
+                };
+                t.CubismTextureColor = h;
+                var p, m = n(r( /*! ./cubismrenderer */ "../../../Framework/src/rendering/cubismrenderer.ts"));
+                (p = a = t.Live2DCubismFramework || (t.Live2DCubismFramework = {})).CubismBlendMode = m.CubismBlendMode, p.CubismRenderer = m.CubismRenderer, p.CubismTextureColor = m.CubismTextureColor
+            },
+            "../../../Framework/src/rendering/cubismrenderer_webgl.ts": function(e, t, r) {
+                "use strict";
+                var i, a, o, s, n, u, l = this && this.__extends || (i = function(e, t) {
+                        return (i = Object.setPrototypeOf || ({
+                            __proto__: []
+                        }) instanceof Array && function(e, t) {
+                            e.__proto__ = t
+                        } || function(e, t) {
+                            for (var r in t) Object.prototype.hasOwnProperty.call(t, r) && (e[r] = t[r])
+                        })(e, t)
+                    }, function(e, t) {
+                        if ("function" != typeof t && null !== t) throw TypeError("Class extends value " + String(t) + " is not a constructor or null");
+
+                        function r() {
+                            this.constructor = e
+                        }
+                        i(e, t), e.prototype = null === t ? Object.create(t) : (r.prototype = t.prototype, new r)
+                    }),
+                    c = this && this.__createBinding || (Object.create ? function(e, t, r, i) {
+                        void 0 === i && (i = r);
+                        var a = Object.getOwnPropertyDescriptor(t, r);
+                        (!a || ("get" in a ? !t.__esModule : a.writable || a.configurable)) && (a = {
+                            enumerable: !0,
+                            get: function() {
+                                return t[r]
+                            }
+                        }), Object.defineProperty(e, i, a)
+                    } : function(e, t, r, i) {
+                        void 0 === i && (i = r), e[i] = t[r]
+                    }),
+                    h = this && this.__setModuleDefault || (Object.create ? function(e, t) {
+                        Object.defineProperty(e, "default", {
+                            enumerable: !0,
+                            value: t
+                        })
+                    } : function(e, t) {
+                        e.default = t
+                    }),
+                    p = this && this.__importStar || function(e) {
+                        if (e && e.__esModule) return e;
+                        var t = {};
+                        if (null != e)
+                            for (var r in e) "default" !== r && Object.prototype.hasOwnProperty.call(e, r) && c(t, e, r);
+                        return h(t, e), t
+                    };
+                Object.defineProperty(t, "__esModule", {
+                    value: !0
+                }), t.Live2DCubismFramework = t.CubismRenderer_WebGL = t.fragmentShaderSrcMaskInvertedPremultipliedAlpha = t.fragmentShaderSrcMaskPremultipliedAlpha = t.fragmentShaderSrcPremultipliedAlpha = t.vertexShaderSrcMasked = t.vertexShaderSrc = t.fragmentShaderSrcsetupMask = t.vertexShaderSrcSetupMask = t.ShaderNames = t.CubismShaderSet = t.CubismShader_WebGL = t.CubismClippingContext = t.CubismRenderTextureResource = t.CubismClippingManager_WebGL = void 0;
+                var m = r( /*! ../live2dcubismframework */ "../../../Framework/src/live2dcubismframework.ts"),
+                    d = r( /*! ../math/cubismmatrix44 */ "../../../Framework/src/math/cubismmatrix44.ts"),
+                    g = r( /*! ../type/csmmap */ "../../../Framework/src/type/csmmap.ts"),
+                    f = r( /*! ../type/csmrectf */ "../../../Framework/src/type/csmrectf.ts"),
+                    y = r( /*! ../type/csmvector */ "../../../Framework/src/type/csmvector.ts"),
+                    v = r( /*! ../utils/cubismdebug */ "../../../Framework/src/utils/cubismdebug.ts"),
+                    $ = r( /*! ./cubismrenderer */ "../../../Framework/src/rendering/cubismrenderer.ts"),
+                    b = function() {
+                        function e() {
+                            this._maskRenderTexture = null, this._colorBuffer = null, this._currentFrameNo = 0, this._clippingMaskBufferSize = 256, this._clippingContextListForMask = new y.csmVector, this._clippingContextListForDraw = new y.csmVector, this._channelColors = new y.csmVector, this._tmpBoundsOnModel = new f.csmRect, this._tmpMatrix = new d.CubismMatrix44, this._tmpMatrixForMask = new d.CubismMatrix44, this._tmpMatrixForDraw = new d.CubismMatrix44, this._maskTexture = null;
+                            var e = new $.CubismTextureColor;
+                            e.R = 1, e.G = 0, e.B = 0, e.A = 0, this._channelColors.pushBack(e), (e = new $.CubismTextureColor).R = 0, e.G = 1, e.B = 0, e.A = 0, this._channelColors.pushBack(e), (e = new $.CubismTextureColor).R = 0, e.G = 0, e.B = 1, e.A = 0, this._channelColors.pushBack(e), (e = new $.CubismTextureColor).R = 0, e.G = 0, e.B = 0, e.A = 1, this._channelColors.pushBack(e)
+                        }
+                        return e.prototype.getChannelFlagAsColor = function(e) {
+                            return this._channelColors.at(e)
+                        }, e.prototype.getMaskRenderTexture = function() {
+                            var e = 0;
+                            if (this._maskTexture && 0 != this._maskTexture.texture && (this._maskTexture.frameNo = this._currentFrameNo, e = this._maskTexture.texture), 0 == e) {
+                                var t = this._clippingMaskBufferSize;
+                                this._colorBuffer = this.gl.createTexture(), this.gl.bindTexture(this.gl.TEXTURE_2D, this._colorBuffer), this.gl.texImage2D(this.gl.TEXTURE_2D, 0, this.gl.RGBA, t, t, 0, this.gl.RGBA, this.gl.UNSIGNED_BYTE, null), this.gl.texParameteri(this.gl.TEXTURE_2D, this.gl.TEXTURE_WRAP_S, this.gl.CLAMP_TO_EDGE), this.gl.texParameteri(this.gl.TEXTURE_2D, this.gl.TEXTURE_WRAP_T, this.gl.CLAMP_TO_EDGE), this.gl.texParameteri(this.gl.TEXTURE_2D, this.gl.TEXTURE_MIN_FILTER, this.gl.LINEAR), this.gl.texParameteri(this.gl.TEXTURE_2D, this.gl.TEXTURE_MAG_FILTER, this.gl.LINEAR), this.gl.bindTexture(this.gl.TEXTURE_2D, null), e = this.gl.createFramebuffer(), this.gl.bindFramebuffer(this.gl.FRAMEBUFFER, e), this.gl.framebufferTexture2D(this.gl.FRAMEBUFFER, this.gl.COLOR_ATTACHMENT0, this.gl.TEXTURE_2D, this._colorBuffer, 0), this.gl.bindFramebuffer(this.gl.FRAMEBUFFER, s), this._maskTexture = new M(this._currentFrameNo, e)
+                            }
+                            return e
+                        }, e.prototype.setGL = function(e) {
+                            this.gl = e
+                        }, e.prototype.calcClippedDrawTotalBounds = function(e, t) {
+                            for (var r = Number.MAX_VALUE, i = Number.MAX_VALUE, a = Number.MIN_VALUE, o = Number.MIN_VALUE, s = t._clippedDrawableIndexList.length, n = 0; n < s; n++) {
+                                for (var u = t._clippedDrawableIndexList[n], l = e.getDrawableVertexCount(u), c = e.getDrawableVertices(u), h = Number.MAX_VALUE, p = Number.MAX_VALUE, d = Number.MIN_VALUE, g = Number.MIN_VALUE, f = l * m.Constant.vertexStep, y = m.Constant.vertexOffset; y < f; y += m.Constant.vertexStep) {
+                                    var v = c[y],
+                                        $ = c[y + 1];
+                                    v < h && (h = v), v > d && (d = v), $ < p && (p = $), $ > g && (g = $)
+                                }
+                                if (h != Number.MAX_VALUE) {
+                                    if (h < r && (r = h), p < i && (i = p), d > a && (a = d), g > o && (o = g), r == Number.MAX_VALUE) t._allClippedDrawRect.x = 0, t._allClippedDrawRect.y = 0, t._allClippedDrawRect.width = 0, t._allClippedDrawRect.height = 0, t._isUsing = !1;
+                                    else {
+                                        t._isUsing = !0;
+                                        var b = a - r,
+                                            M = o - i;
+                                        t._allClippedDrawRect.x = r, t._allClippedDrawRect.y = i, t._allClippedDrawRect.width = b, t._allClippedDrawRect.height = M
+                                    }
+                                }
+                            }
+                        }, e.prototype.release = function() {
+                            for (var e = 0; e < this._clippingContextListForMask.getSize(); e++) this._clippingContextListForMask.at(e) && (this._clippingContextListForMask.at(e).release(), this._clippingContextListForMask.set(e, void 0)), this._clippingContextListForMask.set(e, null);
+                            this._clippingContextListForMask = null;
+                            for (var e = 0; e < this._clippingContextListForDraw.getSize(); e++) this._clippingContextListForDraw.set(e, null);
+                            this._clippingContextListForDraw = null, this._maskTexture && (this.gl.deleteFramebuffer(this._maskTexture.texture), this._maskTexture = null);
+                            for (var e = 0; e < this._channelColors.getSize(); e++) this._channelColors.set(e, null);
+                            this._channelColors = null, this.gl.deleteTexture(this._colorBuffer), this._colorBuffer = null
+                        }, e.prototype.initialize = function(e, t, r, i) {
+                            for (var a = 0; a < t; a++) {
+                                if (i[a] <= 0) {
+                                    this._clippingContextListForDraw.pushBack(null);
+                                    continue
+                                }
+                                var o = this.findSameClip(r[a], i[a]);
+                                null == o && (o = new C(this, r[a], i[a]), this._clippingContextListForMask.pushBack(o)), o.addClippedDrawable(a), this._clippingContextListForDraw.pushBack(o)
+                            }
+                        }, e.prototype.setupClippingContext = function(e, t) {
+                            this._currentFrameNo++;
+                            for (var r = 0, i = 0; i < this._clippingContextListForMask.getSize(); i++) {
+                                var a = this._clippingContextListForMask.at(i);
+                                this.calcClippedDrawTotalBounds(e, a), a._isUsing && r++
+                            }
+                            if (r > 0) {
+                                this.gl.viewport(0, 0, this._clippingMaskBufferSize, this._clippingMaskBufferSize), this._maskRenderTexture = this.getMaskRenderTexture(), t.getMvpMatrix(), t.preDraw(), this.setupLayoutBounds(r), this.gl.bindFramebuffer(this.gl.FRAMEBUFFER, this._maskRenderTexture), this.gl.clearColor(1, 1, 1, 1), this.gl.clear(this.gl.COLOR_BUFFER_BIT);
+                                for (var i = 0; i < this._clippingContextListForMask.getSize(); i++) {
+                                    var n = this._clippingContextListForMask.at(i),
+                                        u = n._allClippedDrawRect,
+                                        l = n._layoutBounds;
+                                    this._tmpBoundsOnModel.setRect(u), this._tmpBoundsOnModel.expand(.05 * u.width, .05 * u.height);
+                                    var c = l.width / this._tmpBoundsOnModel.width,
+                                        h = l.height / this._tmpBoundsOnModel.height;
+                                    this._tmpMatrix.loadIdentity(), this._tmpMatrix.translateRelative(-1, -1), this._tmpMatrix.scaleRelative(2, 2), this._tmpMatrix.translateRelative(l.x, l.y), this._tmpMatrix.scaleRelative(c, h), this._tmpMatrix.translateRelative(-this._tmpBoundsOnModel.x, -this._tmpBoundsOnModel.y), this._tmpMatrixForMask.setMatrix(this._tmpMatrix.getArray()), this._tmpMatrix.loadIdentity(), this._tmpMatrix.translateRelative(l.x, l.y), this._tmpMatrix.scaleRelative(c, h), this._tmpMatrix.translateRelative(-this._tmpBoundsOnModel.x, -this._tmpBoundsOnModel.y), this._tmpMatrixForDraw.setMatrix(this._tmpMatrix.getArray()), n._matrixForMask.setMatrix(this._tmpMatrixForMask.getArray()), n._matrixForDraw.setMatrix(this._tmpMatrixForDraw.getArray());
+                                    for (var p = n._clippingIdCount, m = 0; m < p; m++) {
+                                        var d = n._clippingIdList[m];
+                                        e.getDrawableDynamicFlagVertexPositionsDidChange(d) && (t.setIsCulling(!1 != e.getDrawableCulling(d)), t.setClippingContextBufferForMask(n), t.drawMesh(e.getDrawableTextureIndex(d), e.getDrawableVertexIndexCount(d), e.getDrawableVertexCount(d), e.getDrawableVertexIndices(d), e.getDrawableVertices(d), e.getDrawableVertexUvs(d), e.getMultiplyColor(d), e.getScreenColor(d), e.getDrawableOpacity(d), $.CubismBlendMode.CubismBlendMode_Normal, !1))
+                                    }
+                                }
+                                this.gl.bindFramebuffer(this.gl.FRAMEBUFFER, s), t.setClippingContextBufferForMask(null), this.gl.viewport(o[0], o[1], o[2], o[3])
+                            }
+                        }, e.prototype.findSameClip = function(e, t) {
+                            for (var r = 0; r < this._clippingContextListForMask.getSize(); r++) {
+                                var i = this._clippingContextListForMask.at(r),
+                                    a = i._clippingIdCount;
+                                if (a == t) {
+                                    for (var o = 0, s = 0; s < a; s++)
+                                        for (var n = i._clippingIdList[s], u = 0; u < a; u++)
+                                            if (e[u] == n) {
+                                                o++;
+                                                break
+                                            } if (o == a) return i
+                                }
+                            }
+                            return null
+                        }, e.prototype.setupLayoutBounds = function(e) {
+                            var t = e / 4,
+                                r = e % 4;
+                            t = ~~t, r = ~~r;
+                            for (var i = 0, a = 0; a < 4; a++) {
+                                var o = t + (a < r ? 1 : 0);
+                                if (0 == o);
+                                else if (1 == o) {
+                                    var s = this._clippingContextListForMask.at(i++);
+                                    s._layoutChannelNo = a, s._layoutBounds.x = 0, s._layoutBounds.y = 0, s._layoutBounds.width = 1, s._layoutBounds.height = 1
+                                } else if (2 == o)
+                                    for (var n = 0; n < o; n++) {
+                                        var u = n % 2;
+                                        u = ~~u;
+                                        var l = this._clippingContextListForMask.at(i++);
+                                        l._layoutChannelNo = a, l._layoutBounds.x = .5 * u, l._layoutBounds.y = 0, l._layoutBounds.width = .5, l._layoutBounds.height = 1
+                                    } else if (o <= 4)
+                                        for (var n = 0; n < o; n++) {
+                                            var u = n % 2,
+                                                c = n / 2;
+                                            u = ~~u, c = ~~c;
+                                            var l = this._clippingContextListForMask.at(i++);
+                                            l._layoutChannelNo = a, l._layoutBounds.x = .5 * u, l._layoutBounds.y = .5 * c, l._layoutBounds.width = .5, l._layoutBounds.height = .5
+                                        } else if (o <= 9)
+                                            for (var n = 0; n < o; n++) {
+                                                var u = n % 3,
+                                                    c = n / 3;
+                                                u = ~~u, c = ~~c;
+                                                var l = this._clippingContextListForMask.at(i++);
+                                                l._layoutChannelNo = a, l._layoutBounds.x = u / 3, l._layoutBounds.y = c / 3, l._layoutBounds.width = 1 / 3, l._layoutBounds.height = 1 / 3
+                                            } else {
+                                                (0, v.CubismLogError)("not supported mask count : {0}", o);
+                                                for (var h = 0; h < o; h++) {
+                                                    var l = this._clippingContextListForMask.at(i++);
+                                                    l._layoutChannelNo = 0, l._layoutBounds.x = 0, l._layoutBounds.y = 0, l._layoutBounds.width = 1, l._layoutBounds.height = 1
+                                                }
+                                            }
+                            }
+                        }, e.prototype.getColorBuffer = function() {
+                            return this._colorBuffer
+                        }, e.prototype.getClippingContextListForDraw = function() {
+                            return this._clippingContextListForDraw
+                        }, e.prototype.setClippingMaskBufferSize = function(e) {
+                            this._clippingMaskBufferSize = e
+                        }, e.prototype.getClippingMaskBufferSize = function() {
+                            return this._clippingMaskBufferSize
+                        }, e
+                    }();
+                t.CubismClippingManager_WebGL = b;
+                var M = function e(t, r) {
+                    this.frameNo = t, this.texture = r
+                };
+                t.CubismRenderTextureResource = M;
+                var C = function() {
+                    function e(e, t, r) {
+                        this._owner = e, this._clippingIdList = t, this._clippingIdCount = r, this._allClippedDrawRect = new f.csmRect, this._layoutBounds = new f.csmRect, this._clippedDrawableIndexList = [], this._matrixForMask = new d.CubismMatrix44, this._matrixForDraw = new d.CubismMatrix44
+                    }
+                    return e.prototype.release = function() {
+                        null != this._layoutBounds && (this._layoutBounds = null), null != this._allClippedDrawRect && (this._allClippedDrawRect = null), null != this._clippedDrawableIndexList && (this._clippedDrawableIndexList = null)
+                    }, e.prototype.addClippedDrawable = function(e) {
+                        this._clippedDrawableIndexList.push(e)
+                    }, e.prototype.getClippingManager = function() {
+                        return this._owner
+                    }, e.prototype.setGl = function(e) {
+                        this._owner.setGL(e)
+                    }, e
+                }();
+                t.CubismClippingContext = C;
+                var S = function() {
+                    function e() {
+                        this._shaderSets = new y.csmVector
+                    }
+                    return e.getInstance = function() {
+                        return null == a && (a = new e), a
+                    }, e.deleteInstance = function() {
+                        a && (a.release(), a = null)
+                    }, e.prototype.release = function() {
+                        this.releaseShaderProgram()
+                    }, e.prototype.setupShaderProgram = function(e, t, r, i, a, o, s, u, l, c, h, p, m, d, g) {
+                        if (m || (0, v.CubismLogError)("NoPremultipliedAlpha is not allowed"), 0 == this._shaderSets.getSize() && this.generateShaders(), null != e.getClippingContextBufferForMask()) {
+                            var f, y, b, M, C = this._shaderSets.at(n.ShaderNames_SetupMask);
+                            this.gl.useProgram(C.shaderProgram), this.gl.activeTexture(this.gl.TEXTURE0), this.gl.bindTexture(this.gl.TEXTURE_2D, t), this.gl.uniform1i(C.samplerTexture0Location, 0), null == s.vertex && (s.vertex = this.gl.createBuffer()), this.gl.bindBuffer(this.gl.ARRAY_BUFFER, s.vertex), this.gl.bufferData(this.gl.ARRAY_BUFFER, i, this.gl.DYNAMIC_DRAW), this.gl.enableVertexAttribArray(C.attributePositionLocation), this.gl.vertexAttribPointer(C.attributePositionLocation, 2, this.gl.FLOAT, !1, 0, 0), null == s.uv && (s.uv = this.gl.createBuffer()), this.gl.bindBuffer(this.gl.ARRAY_BUFFER, s.uv), this.gl.bufferData(this.gl.ARRAY_BUFFER, o, this.gl.DYNAMIC_DRAW), this.gl.enableVertexAttribArray(C.attributeTexCoordLocation), this.gl.vertexAttribPointer(C.attributeTexCoordLocation, 2, this.gl.FLOAT, !1, 0, 0);
+                            var S = e.getClippingContextBufferForMask()._layoutChannelNo,
+                                w = e.getClippingContextBufferForMask().getClippingManager().getChannelFlagAsColor(S);
+                            this.gl.uniform4f(C.uniformChannelFlagLocation, w.R, w.G, w.B, w.A), this.gl.uniformMatrix4fv(C.uniformClipMatrixLocation, !1, e.getClippingContextBufferForMask()._matrixForMask.getArray());
+                            var I = e.getClippingContextBufferForMask()._layoutBounds;
+                            this.gl.uniform4f(C.uniformBaseColorLocation, 2 * I.x - 1, 2 * I.y - 1, 2 * I.getRight() - 1, 2 * I.getBottom() - 1), this.gl.uniform4f(C.uniformMultiplyColorLocation, h.R, h.G, h.B, h.A), this.gl.uniform4f(C.uniformScreenColorLocation, p.R, p.G, p.B, p.A), f = this.gl.ZERO, y = this.gl.ONE_MINUS_SRC_COLOR, b = this.gl.ZERO, M = this.gl.ONE_MINUS_SRC_ALPHA
+                        } else {
+                            var x = null != e.getClippingContextBufferForDraw(),
+                                B = x ? g ? 2 : 1 : 0,
+                                C = new P;
+                            switch (l) {
+                                case $.CubismBlendMode.CubismBlendMode_Normal:
+                                default:
+                                    C = this._shaderSets.at(n.ShaderNames_NormalPremultipliedAlpha + B), f = this.gl.ONE, y = this.gl.ONE_MINUS_SRC_ALPHA, b = this.gl.ONE, M = this.gl.ONE_MINUS_SRC_ALPHA;
+                                    break;
+                                case $.CubismBlendMode.CubismBlendMode_Additive:
+                                    C = this._shaderSets.at(n.ShaderNames_AddPremultipliedAlpha + B), f = this.gl.ONE, y = this.gl.ONE, b = this.gl.ZERO, M = this.gl.ONE;
+                                    break;
+                                case $.CubismBlendMode.CubismBlendMode_Multiplicative:
+                                    C = this._shaderSets.at(n.ShaderNames_MultPremultipliedAlpha + B), f = this.gl.DST_COLOR, y = this.gl.ONE_MINUS_SRC_ALPHA, b = this.gl.ZERO, M = this.gl.ONE
+                            }
+                            if (this.gl.useProgram(C.shaderProgram), null == s.vertex && (s.vertex = this.gl.createBuffer()), this.gl.bindBuffer(this.gl.ARRAY_BUFFER, s.vertex), this.gl.bufferData(this.gl.ARRAY_BUFFER, i, this.gl.DYNAMIC_DRAW), this.gl.enableVertexAttribArray(C.attributePositionLocation), this.gl.vertexAttribPointer(C.attributePositionLocation, 2, this.gl.FLOAT, !1, 0, 0), null == s.uv && (s.uv = this.gl.createBuffer()), this.gl.bindBuffer(this.gl.ARRAY_BUFFER, s.uv), this.gl.bufferData(this.gl.ARRAY_BUFFER, o, this.gl.DYNAMIC_DRAW), this.gl.enableVertexAttribArray(C.attributeTexCoordLocation), this.gl.vertexAttribPointer(C.attributeTexCoordLocation, 2, this.gl.FLOAT, !1, 0, 0), x) {
+                                this.gl.activeTexture(this.gl.TEXTURE1);
+                                var L = e.getClippingContextBufferForDraw().getClippingManager().getColorBuffer();
+                                this.gl.bindTexture(this.gl.TEXTURE_2D, L), this.gl.uniform1i(C.samplerTexture1Location, 1), this.gl.uniformMatrix4fv(C.uniformClipMatrixLocation, !1, e.getClippingContextBufferForDraw()._matrixForDraw.getArray());
+                                var S = e.getClippingContextBufferForDraw()._layoutChannelNo,
+                                    w = e.getClippingContextBufferForDraw().getClippingManager().getChannelFlagAsColor(S);
+                                this.gl.uniform4f(C.uniformChannelFlagLocation, w.R, w.G, w.B, w.A)
+                            }
+                            this.gl.activeTexture(this.gl.TEXTURE0), this.gl.bindTexture(this.gl.TEXTURE_2D, t), this.gl.uniform1i(C.samplerTexture0Location, 0), this.gl.uniformMatrix4fv(C.uniformMatrixLocation, !1, d.getArray()), this.gl.uniform4f(C.uniformBaseColorLocation, c.R, c.G, c.B, c.A), this.gl.uniform4f(C.uniformMultiplyColorLocation, h.R, h.G, h.B, h.A), this.gl.uniform4f(C.uniformScreenColorLocation, p.R, p.G, p.B, p.A)
+                        }
+                        null == s.index && (s.index = this.gl.createBuffer()), this.gl.bindBuffer(this.gl.ELEMENT_ARRAY_BUFFER, s.index), this.gl.bufferData(this.gl.ELEMENT_ARRAY_BUFFER, a, this.gl.DYNAMIC_DRAW), this.gl.blendFuncSeparate(f, y, b, M)
+                    }, e.prototype.releaseShaderProgram = function() {
+                        for (var e = 0; e < this._shaderSets.getSize(); e++) this.gl.deleteProgram(this._shaderSets.at(e).shaderProgram), this._shaderSets.at(e).shaderProgram = 0, this._shaderSets.set(e, void 0), this._shaderSets.set(e, null)
+                    }, e.prototype.generateShaders = function() {
+                        for (var e = 0; e < 10; e++) this._shaderSets.pushBack(new P);
+                        this._shaderSets.at(0).shaderProgram = this.loadShaderProgram(t.vertexShaderSrcSetupMask, t.fragmentShaderSrcsetupMask), this._shaderSets.at(1).shaderProgram = this.loadShaderProgram(t.vertexShaderSrc, t.fragmentShaderSrcPremultipliedAlpha), this._shaderSets.at(2).shaderProgram = this.loadShaderProgram(t.vertexShaderSrcMasked, t.fragmentShaderSrcMaskPremultipliedAlpha), this._shaderSets.at(3).shaderProgram = this.loadShaderProgram(t.vertexShaderSrcMasked, t.fragmentShaderSrcMaskInvertedPremultipliedAlpha), this._shaderSets.at(4).shaderProgram = this._shaderSets.at(1).shaderProgram, this._shaderSets.at(5).shaderProgram = this._shaderSets.at(2).shaderProgram, this._shaderSets.at(6).shaderProgram = this._shaderSets.at(3).shaderProgram, this._shaderSets.at(7).shaderProgram = this._shaderSets.at(1).shaderProgram, this._shaderSets.at(8).shaderProgram = this._shaderSets.at(2).shaderProgram, this._shaderSets.at(9).shaderProgram = this._shaderSets.at(3).shaderProgram, this._shaderSets.at(0).attributePositionLocation = this.gl.getAttribLocation(this._shaderSets.at(0).shaderProgram, "a_position"), this._shaderSets.at(0).attributeTexCoordLocation = this.gl.getAttribLocation(this._shaderSets.at(0).shaderProgram, "a_texCoord"), this._shaderSets.at(0).samplerTexture0Location = this.gl.getUniformLocation(this._shaderSets.at(0).shaderProgram, "s_texture0"), this._shaderSets.at(0).uniformClipMatrixLocation = this.gl.getUniformLocation(this._shaderSets.at(0).shaderProgram, "u_clipMatrix"), this._shaderSets.at(0).uniformChannelFlagLocation = this.gl.getUniformLocation(this._shaderSets.at(0).shaderProgram, "u_channelFlag"), this._shaderSets.at(0).uniformBaseColorLocation = this.gl.getUniformLocation(this._shaderSets.at(0).shaderProgram, "u_baseColor"), this._shaderSets.at(0).uniformMultiplyColorLocation = this.gl.getUniformLocation(this._shaderSets.at(0).shaderProgram, "u_multiplyColor"), this._shaderSets.at(0).uniformScreenColorLocation = this.gl.getUniformLocation(this._shaderSets.at(0).shaderProgram, "u_screenColor"), this._shaderSets.at(1).attributePositionLocation = this.gl.getAttribLocation(this._shaderSets.at(1).shaderProgram, "a_position"), this._shaderSets.at(1).attributeTexCoordLocation = this.gl.getAttribLocation(this._shaderSets.at(1).shaderProgram, "a_texCoord"), this._shaderSets.at(1).samplerTexture0Location = this.gl.getUniformLocation(this._shaderSets.at(1).shaderProgram, "s_texture0"), this._shaderSets.at(1).uniformMatrixLocation = this.gl.getUniformLocation(this._shaderSets.at(1).shaderProgram, "u_matrix"), this._shaderSets.at(1).uniformBaseColorLocation = this.gl.getUniformLocation(this._shaderSets.at(1).shaderProgram, "u_baseColor"), this._shaderSets.at(1).uniformMultiplyColorLocation = this.gl.getUniformLocation(this._shaderSets.at(1).shaderProgram, "u_multiplyColor"), this._shaderSets.at(1).uniformScreenColorLocation = this.gl.getUniformLocation(this._shaderSets.at(1).shaderProgram, "u_screenColor"), this._shaderSets.at(2).attributePositionLocation = this.gl.getAttribLocation(this._shaderSets.at(2).shaderProgram, "a_position"), this._shaderSets.at(2).attributeTexCoordLocation = this.gl.getAttribLocation(this._shaderSets.at(2).shaderProgram, "a_texCoord"), this._shaderSets.at(2).samplerTexture0Location = this.gl.getUniformLocation(this._shaderSets.at(2).shaderProgram, "s_texture0"), this._shaderSets.at(2).samplerTexture1Location = this.gl.getUniformLocation(this._shaderSets.at(2).shaderProgram, "s_texture1"), this._shaderSets.at(2).uniformMatrixLocation = this.gl.getUniformLocation(this._shaderSets.at(2).shaderProgram, "u_matrix"), this._shaderSets.at(2).uniformClipMatrixLocation = this.gl.getUniformLocation(this._shaderSets.at(2).shaderProgram, "u_clipMatrix"), this._shaderSets.at(2).uniformChannelFlagLocation = this.gl.getUniformLocation(this._shaderSets.at(2).shaderProgram, "u_channelFlag"), this._shaderSets.at(2).uniformBaseColorLocation = this.gl.getUniformLocation(this._shaderSets.at(2).shaderProgram, "u_baseColor"), this._shaderSets.at(2).uniformMultiplyColorLocation = this.gl.getUniformLocation(this._shaderSets.at(2).shaderProgram, "u_multiplyColor"), this._shaderSets.at(2).uniformScreenColorLocation = this.gl.getUniformLocation(this._shaderSets.at(2).shaderProgram, "u_screenColor"), this._shaderSets.at(3).attributePositionLocation = this.gl.getAttribLocation(this._shaderSets.at(3).shaderProgram, "a_position"), this._shaderSets.at(3).attributeTexCoordLocation = this.gl.getAttribLocation(this._shaderSets.at(3).shaderProgram, "a_texCoord"), this._shaderSets.at(3).samplerTexture0Location = this.gl.getUniformLocation(this._shaderSets.at(3).shaderProgram, "s_texture0"), this._shaderSets.at(3).samplerTexture1Location = this.gl.getUniformLocation(this._shaderSets.at(3).shaderProgram, "s_texture1"), this._shaderSets.at(3).uniformMatrixLocation = this.gl.getUniformLocation(this._shaderSets.at(3).shaderProgram, "u_matrix"), this._shaderSets.at(3).uniformClipMatrixLocation = this.gl.getUniformLocation(this._shaderSets.at(3).shaderProgram, "u_clipMatrix"), this._shaderSets.at(3).uniformChannelFlagLocation = this.gl.getUniformLocation(this._shaderSets.at(3).shaderProgram, "u_channelFlag"), this._shaderSets.at(3).uniformBaseColorLocation = this.gl.getUniformLocation(this._shaderSets.at(3).shaderProgram, "u_baseColor"), this._shaderSets.at(3).uniformMultiplyColorLocation = this.gl.getUniformLocation(this._shaderSets.at(3).shaderProgram, "u_multiplyColor"), this._shaderSets.at(3).uniformScreenColorLocation = this.gl.getUniformLocation(this._shaderSets.at(3).shaderProgram, "u_screenColor"), this._shaderSets.at(4).attributePositionLocation = this.gl.getAttribLocation(this._shaderSets.at(4).shaderProgram, "a_position"), this._shaderSets.at(4).attributeTexCoordLocation = this.gl.getAttribLocation(this._shaderSets.at(4).shaderProgram, "a_texCoord"), this._shaderSets.at(4).samplerTexture0Location = this.gl.getUniformLocation(this._shaderSets.at(4).shaderProgram, "s_texture0"), this._shaderSets.at(4).uniformMatrixLocation = this.gl.getUniformLocation(this._shaderSets.at(4).shaderProgram, "u_matrix"), this._shaderSets.at(4).uniformBaseColorLocation = this.gl.getUniformLocation(this._shaderSets.at(4).shaderProgram, "u_baseColor"), this._shaderSets.at(4).uniformMultiplyColorLocation = this.gl.getUniformLocation(this._shaderSets.at(4).shaderProgram, "u_multiplyColor"), this._shaderSets.at(4).uniformScreenColorLocation = this.gl.getUniformLocation(this._shaderSets.at(4).shaderProgram, "u_screenColor"), this._shaderSets.at(5).attributePositionLocation = this.gl.getAttribLocation(this._shaderSets.at(5).shaderProgram, "a_position"), this._shaderSets.at(5).attributeTexCoordLocation = this.gl.getAttribLocation(this._shaderSets.at(5).shaderProgram, "a_texCoord"), this._shaderSets.at(5).samplerTexture0Location = this.gl.getUniformLocation(this._shaderSets.at(5).shaderProgram, "s_texture0"), this._shaderSets.at(5).samplerTexture1Location = this.gl.getUniformLocation(this._shaderSets.at(5).shaderProgram, "s_texture1"), this._shaderSets.at(5).uniformMatrixLocation = this.gl.getUniformLocation(this._shaderSets.at(5).shaderProgram, "u_matrix"), this._shaderSets.at(5).uniformClipMatrixLocation = this.gl.getUniformLocation(this._shaderSets.at(5).shaderProgram, "u_clipMatrix"), this._shaderSets.at(5).uniformChannelFlagLocation = this.gl.getUniformLocation(this._shaderSets.at(5).shaderProgram, "u_channelFlag"), this._shaderSets.at(5).uniformBaseColorLocation = this.gl.getUniformLocation(this._shaderSets.at(5).shaderProgram, "u_baseColor"), this._shaderSets.at(5).uniformMultiplyColorLocation = this.gl.getUniformLocation(this._shaderSets.at(5).shaderProgram, "u_multiplyColor"), this._shaderSets.at(5).uniformScreenColorLocation = this.gl.getUniformLocation(this._shaderSets.at(5).shaderProgram, "u_screenColor"), this._shaderSets.at(6).attributePositionLocation = this.gl.getAttribLocation(this._shaderSets.at(6).shaderProgram, "a_position"), this._shaderSets.at(6).attributeTexCoordLocation = this.gl.getAttribLocation(this._shaderSets.at(6).shaderProgram, "a_texCoord"), this._shaderSets.at(6).samplerTexture0Location = this.gl.getUniformLocation(this._shaderSets.at(6).shaderProgram, "s_texture0"), this._shaderSets.at(6).samplerTexture1Location = this.gl.getUniformLocation(this._shaderSets.at(6).shaderProgram, "s_texture1"), this._shaderSets.at(6).uniformMatrixLocation = this.gl.getUniformLocation(this._shaderSets.at(6).shaderProgram, "u_matrix"), this._shaderSets.at(6).uniformClipMatrixLocation = this.gl.getUniformLocation(this._shaderSets.at(6).shaderProgram, "u_clipMatrix"), this._shaderSets.at(6).uniformChannelFlagLocation = this.gl.getUniformLocation(this._shaderSets.at(6).shaderProgram, "u_channelFlag"), this._shaderSets.at(6).uniformBaseColorLocation = this.gl.getUniformLocation(this._shaderSets.at(6).shaderProgram, "u_baseColor"), this._shaderSets.at(6).uniformMultiplyColorLocation = this.gl.getUniformLocation(this._shaderSets.at(6).shaderProgram, "u_multiplyColor"), this._shaderSets.at(6).uniformScreenColorLocation = this.gl.getUniformLocation(this._shaderSets.at(6).shaderProgram, "u_screenColor"), this._shaderSets.at(7).attributePositionLocation = this.gl.getAttribLocation(this._shaderSets.at(7).shaderProgram, "a_position"), this._shaderSets.at(7).attributeTexCoordLocation = this.gl.getAttribLocation(this._shaderSets.at(7).shaderProgram, "a_texCoord"), this._shaderSets.at(7).samplerTexture0Location = this.gl.getUniformLocation(this._shaderSets.at(7).shaderProgram, "s_texture0"), this._shaderSets.at(7).uniformMatrixLocation = this.gl.getUniformLocation(this._shaderSets.at(7).shaderProgram, "u_matrix"), this._shaderSets.at(7).uniformBaseColorLocation = this.gl.getUniformLocation(this._shaderSets.at(7).shaderProgram, "u_baseColor"), this._shaderSets.at(7).uniformMultiplyColorLocation = this.gl.getUniformLocation(this._shaderSets.at(7).shaderProgram, "u_multiplyColor"), this._shaderSets.at(7).uniformScreenColorLocation = this.gl.getUniformLocation(this._shaderSets.at(7).shaderProgram, "u_screenColor"), this._shaderSets.at(8).attributePositionLocation = this.gl.getAttribLocation(this._shaderSets.at(8).shaderProgram, "a_position"), this._shaderSets.at(8).attributeTexCoordLocation = this.gl.getAttribLocation(this._shaderSets.at(8).shaderProgram, "a_texCoord"), this._shaderSets.at(8).samplerTexture0Location = this.gl.getUniformLocation(this._shaderSets.at(8).shaderProgram, "s_texture0"), this._shaderSets.at(8).samplerTexture1Location = this.gl.getUniformLocation(this._shaderSets.at(8).shaderProgram, "s_texture1"), this._shaderSets.at(8).uniformMatrixLocation = this.gl.getUniformLocation(this._shaderSets.at(8).shaderProgram, "u_matrix"), this._shaderSets.at(8).uniformClipMatrixLocation = this.gl.getUniformLocation(this._shaderSets.at(8).shaderProgram, "u_clipMatrix"), this._shaderSets.at(8).uniformChannelFlagLocation = this.gl.getUniformLocation(this._shaderSets.at(8).shaderProgram, "u_channelFlag"), this._shaderSets.at(8).uniformBaseColorLocation = this.gl.getUniformLocation(this._shaderSets.at(8).shaderProgram, "u_baseColor"), this._shaderSets.at(8).uniformMultiplyColorLocation = this.gl.getUniformLocation(this._shaderSets.at(8).shaderProgram, "u_multiplyColor"), this._shaderSets.at(8).uniformScreenColorLocation = this.gl.getUniformLocation(this._shaderSets.at(8).shaderProgram, "u_screenColor"), this._shaderSets.at(9).attributePositionLocation = this.gl.getAttribLocation(this._shaderSets.at(9).shaderProgram, "a_position"), this._shaderSets.at(9).attributeTexCoordLocation = this.gl.getAttribLocation(this._shaderSets.at(9).shaderProgram, "a_texCoord"), this._shaderSets.at(9).samplerTexture0Location = this.gl.getUniformLocation(this._shaderSets.at(9).shaderProgram, "s_texture0"), this._shaderSets.at(9).samplerTexture1Location = this.gl.getUniformLocation(this._shaderSets.at(9).shaderProgram, "s_texture1"), this._shaderSets.at(9).uniformMatrixLocation = this.gl.getUniformLocation(this._shaderSets.at(9).shaderProgram, "u_matrix"), this._shaderSets.at(9).uniformClipMatrixLocation = this.gl.getUniformLocation(this._shaderSets.at(9).shaderProgram, "u_clipMatrix"), this._shaderSets.at(9).uniformChannelFlagLocation = this.gl.getUniformLocation(this._shaderSets.at(9).shaderProgram, "u_channelFlag"), this._shaderSets.at(9).uniformBaseColorLocation = this.gl.getUniformLocation(this._shaderSets.at(9).shaderProgram, "u_baseColor"), this._shaderSets.at(9).uniformMultiplyColorLocation = this.gl.getUniformLocation(this._shaderSets.at(9).shaderProgram, "u_multiplyColor"), this._shaderSets.at(9).uniformScreenColorLocation = this.gl.getUniformLocation(this._shaderSets.at(9).shaderProgram, "u_screenColor")
+                    }, e.prototype.loadShaderProgram = function(e, t) {
+                        var r = this.gl.createProgram(),
+                            i = this.compileShaderSource(this.gl.VERTEX_SHADER, e);
+                        if (!i) return (0, v.CubismLogError)("Vertex shader compile error!"), 0;
+                        var a = this.compileShaderSource(this.gl.FRAGMENT_SHADER, t);
+                        return a ? (this.gl.attachShader(r, i), this.gl.attachShader(r, a), this.gl.linkProgram(r), this.gl.getProgramParameter(r, this.gl.LINK_STATUS)) ? (this.gl.deleteShader(i), this.gl.deleteShader(a), r) : ((0, v.CubismLogError)("Failed to link program: {0}", r), this.gl.deleteShader(i), i = 0, this.gl.deleteShader(a), a = 0, r && (this.gl.deleteProgram(r), r = 0), 0) : ((0, v.CubismLogError)("Vertex shader compile error!"), 0)
+                    }, e.prototype.compileShaderSource = function(e, t) {
+                        var r = this.gl.createShader(e);
+                        if (this.gl.shaderSource(r, t), this.gl.compileShader(r), !r) {
+                            var i = this.gl.getShaderInfoLog(r);
+                            (0, v.CubismLogError)("Shader compile log: {0} ", i)
+                        }
+                        return this.gl.getShaderParameter(r, this.gl.COMPILE_STATUS) ? r : (this.gl.deleteShader(r), null)
+                    }, e.prototype.setGl = function(e) {
+                        this.gl = e
+                    }, e
+                }();
+                t.CubismShader_WebGL = S;
+                var w, P = function e() {};
+                t.CubismShaderSet = P, (w = n = t.ShaderNames || (t.ShaderNames = {}))[w.ShaderNames_SetupMask = 0] = "ShaderNames_SetupMask", w[w.ShaderNames_NormalPremultipliedAlpha = 1] = "ShaderNames_NormalPremultipliedAlpha", w[w.ShaderNames_NormalMaskedPremultipliedAlpha = 2] = "ShaderNames_NormalMaskedPremultipliedAlpha", w[w.ShaderNames_NomralMaskedInvertedPremultipliedAlpha = 3] = "ShaderNames_NomralMaskedInvertedPremultipliedAlpha", w[w.ShaderNames_AddPremultipliedAlpha = 4] = "ShaderNames_AddPremultipliedAlpha", w[w.ShaderNames_AddMaskedPremultipliedAlpha = 5] = "ShaderNames_AddMaskedPremultipliedAlpha", w[w.ShaderNames_AddMaskedPremultipliedAlphaInverted = 6] = "ShaderNames_AddMaskedPremultipliedAlphaInverted", w[w.ShaderNames_MultPremultipliedAlpha = 7] = "ShaderNames_MultPremultipliedAlpha", w[w.ShaderNames_MultMaskedPremultipliedAlpha = 8] = "ShaderNames_MultMaskedPremultipliedAlpha", w[w.ShaderNames_MultMaskedPremultipliedAlphaInverted = 9] = "ShaderNames_MultMaskedPremultipliedAlphaInverted", t.vertexShaderSrcSetupMask = "attribute vec4     a_position;attribute vec2     a_texCoord;varying vec2       v_texCoord;varying vec4       v_myPos;uniform mat4       u_clipMatrix;void main(){   gl_Position = u_clipMatrix * a_position;   v_myPos = u_clipMatrix * a_position;   v_texCoord = a_texCoord;   v_texCoord.y = 1.0 - v_texCoord.y;}", t.fragmentShaderSrcsetupMask = "precision mediump float;varying vec2       v_texCoord;varying vec4       v_myPos;uniform vec4       u_baseColor;uniform vec4       u_channelFlag;uniform sampler2D  s_texture0;void main(){   float isInside =        step(u_baseColor.x, v_myPos.x/v_myPos.w)       * step(u_baseColor.y, v_myPos.y/v_myPos.w)       * step(v_myPos.x/v_myPos.w, u_baseColor.z)       * step(v_myPos.y/v_myPos.w, u_baseColor.w);   gl_FragColor = u_channelFlag * texture2D(s_texture0, v_texCoord).a * isInside;}", t.vertexShaderSrc = "attribute vec4     a_position;attribute vec2     a_texCoord;varying vec2       v_texCoord;uniform mat4       u_matrix;void main(){   gl_Position = u_matrix * a_position;   v_texCoord = a_texCoord;   v_texCoord.y = 1.0 - v_texCoord.y;}", t.vertexShaderSrcMasked = "attribute vec4     a_position;attribute vec2     a_texCoord;varying vec2       v_texCoord;varying vec4       v_clipPos;uniform mat4       u_matrix;uniform mat4       u_clipMatrix;void main(){   gl_Position = u_matrix * a_position;   v_clipPos = u_clipMatrix * a_position;   v_texCoord = a_texCoord;   v_texCoord.y = 1.0 - v_texCoord.y;}", t.fragmentShaderSrcPremultipliedAlpha = "precision mediump float;varying vec2       v_texCoord;uniform vec4       u_baseColor;uniform sampler2D  s_texture0;uniform vec4       u_multiplyColor;uniform vec4       u_screenColor;void main(){   vec4 texColor = texture2D(s_texture0, v_texCoord);   texColor.rgb = texColor.rgb * u_multiplyColor.rgb;   texColor.rgb = (texColor.rgb + u_screenColor.rgb * texColor.a) - (texColor.rgb * u_screenColor.rgb);   vec4 color = texColor * u_baseColor;   gl_FragColor = vec4(color.rgb, color.a);}", t.fragmentShaderSrcMaskPremultipliedAlpha = "precision mediump float;varying vec2       v_texCoord;varying vec4       v_clipPos;uniform vec4       u_baseColor;uniform vec4       u_channelFlag;uniform sampler2D  s_texture0;uniform sampler2D  s_texture1;uniform vec4       u_multiplyColor;uniform vec4       u_screenColor;void main(){   vec4 texColor = texture2D(s_texture0, v_texCoord);   texColor.rgb = texColor.rgb * u_multiplyColor.rgb;   texColor.rgb = (texColor.rgb + u_screenColor.rgb * texColor.a) - (texColor.rgb * u_screenColor.rgb);   vec4 col_formask = texColor * u_baseColor;   vec4 clipMask = (1.0 - texture2D(s_texture1, v_clipPos.xy / v_clipPos.w)) * u_channelFlag;   float maskVal = clipMask.r + clipMask.g + clipMask.b + clipMask.a;   col_formask = col_formask * maskVal;   gl_FragColor = col_formask;}", t.fragmentShaderSrcMaskInvertedPremultipliedAlpha = "precision mediump float;varying vec2      v_texCoord;varying vec4      v_clipPos;uniform sampler2D s_texture0;uniform sampler2D s_texture1;uniform vec4      u_channelFlag;uniform vec4      u_baseColor;uniform vec4      u_multiplyColor;uniform vec4      u_screenColor;void main(){   vec4 texColor = texture2D(s_texture0, v_texCoord);   texColor.rgb = texColor.rgb * u_multiplyColor.rgb;   texColor.rgb = (texColor.rgb + u_screenColor.rgb * texColor.a) - (texColor.rgb * u_screenColor.rgb);   vec4 col_formask = texColor * u_baseColor;   vec4 clipMask = (1.0 - texture2D(s_texture1, v_clipPos.xy / v_clipPos.w)) * u_channelFlag;   float maskVal = clipMask.r + clipMask.g + clipMask.b + clipMask.a;   col_formask = col_formask * (1.0 - maskVal);   gl_FragColor = col_formask;}";
+                var I = function(e) {
+                    function t() {
+                        var t = e.call(this) || this;
+                        return t._clippingContextBufferForMask = null, t._clippingContextBufferForDraw = null, t._clippingManager = new b, t.firstDraw = !0, t._textures = new g.csmMap, t._sortedDrawableIndexList = new y.csmVector, t._bufferData = {
+                            vertex: WebGLBuffer = null,
+                            uv: WebGLBuffer = null,
+                            index: WebGLBuffer = null
+                        }, t._textures.prepareCapacity(32, !0), t
+                    }
+                    return l(t, e), t.prototype.initialize = function(t) {
+                        t.isUsingMasking() && (this._clippingManager = new b, this._clippingManager.initialize(t, t.getDrawableCount(), t.getDrawableMasks(), t.getDrawableMaskCounts())), this._sortedDrawableIndexList.resize(t.getDrawableCount(), 0), e.prototype.initialize.call(this, t)
+                    }, t.prototype.bindTexture = function(e, t) {
+                        this._textures.setValue(e, t)
+                    }, t.prototype.getBindedTextures = function() {
+                        return this._textures
+                    }, t.prototype.setClippingMaskBufferSize = function(e) {
+                        this._clippingManager.release(), this._clippingManager = void 0, this._clippingManager = null, this._clippingManager = new b, this._clippingManager.setClippingMaskBufferSize(e), this._clippingManager.initialize(this.getModel(), this.getModel().getDrawableCount(), this.getModel().getDrawableMasks(), this.getModel().getDrawableMaskCounts())
+                    }, t.prototype.getClippingMaskBufferSize = function() {
+                        return this._clippingManager.getClippingMaskBufferSize()
+                    }, t.prototype.release = function() {
+                        this._clippingManager.release(), this._clippingManager = void 0, this._clippingManager = null, this.gl.deleteBuffer(this._bufferData.vertex), this._bufferData.vertex = null, this.gl.deleteBuffer(this._bufferData.uv), this._bufferData.uv = null, this.gl.deleteBuffer(this._bufferData.index), this._bufferData.index = null, this._bufferData = null, this._textures = null
+                    }, t.prototype.doDrawModel = function() {
+                        null != this._clippingManager && (this.preDraw(), this._clippingManager.setupClippingContext(this.getModel(), this)), this.preDraw();
+                        for (var e = this.getModel().getDrawableCount(), t = this.getModel().getDrawableRenderOrders(), r = 0; r < e; ++r) {
+                            var i = t[r];
+                            this._sortedDrawableIndexList.set(i, r)
+                        }
+                        for (var r = 0; r < e; ++r) {
+                            var a = this._sortedDrawableIndexList.at(r);
+                            this.getModel().getDrawableDynamicFlagIsVisible(a) && (this.setClippingContextBufferForDraw(null != this._clippingManager ? this._clippingManager.getClippingContextListForDraw().at(a) : null), this.setIsCulling(this.getModel().getDrawableCulling(a)), this.drawMesh(this.getModel().getDrawableTextureIndex(a), this.getModel().getDrawableVertexIndexCount(a), this.getModel().getDrawableVertexCount(a), this.getModel().getDrawableVertexIndices(a), this.getModel().getDrawableVertices(a), this.getModel().getDrawableVertexUvs(a), this.getModel().getMultiplyColor(a), this.getModel().getScreenColor(a), this.getModel().getDrawableOpacity(a), this.getModel().getDrawableBlendMode(a), this.getModel().getDrawableInvertedMaskBit(a)))
+                        }
+                    }, t.prototype.drawMesh = function(e, t, r, i, a, o, s, n, u, l, c) {
+                        this.isCulling() ? this.gl.enable(this.gl.CULL_FACE) : this.gl.disable(this.gl.CULL_FACE), this.gl.frontFace(this.gl.CCW);
+                        var h, p = this.getModelColor();
+                        null == this.getClippingContextBufferForMask() && (p.A *= u, this.isPremultipliedAlpha() && (p.R *= p.A, p.G *= p.A, p.B *= p.A)), h = null != this._textures.getValue(e) ? this._textures.getValue(e) : null, S.getInstance().setupShaderProgram(this, h, r, a, i, o, this._bufferData, u, l, p, s, n, this.isPremultipliedAlpha(), this.getMvpMatrix(), c), this.gl.drawElements(this.gl.TRIANGLES, t, this.gl.UNSIGNED_SHORT, 0), this.gl.useProgram(null), this.setClippingContextBufferForDraw(null), this.setClippingContextBufferForMask(null)
+                    }, t.doStaticRelease = function() {
+                        S.deleteInstance()
+                    }, t.prototype.setRenderState = function(e, t) {
+                        s = e, o = t
+                    }, t.prototype.preDraw = function() {
+                        if (this.firstDraw && (this.firstDraw = !1), this.gl.disable(this.gl.SCISSOR_TEST), this.gl.disable(this.gl.STENCIL_TEST), this.gl.disable(this.gl.DEPTH_TEST), this.gl.frontFace(this.gl.CW), this.gl.enable(this.gl.BLEND), this.gl.colorMask(!0, !0, !0, !0), this.gl.bindBuffer(this.gl.ARRAY_BUFFER, null), this.gl.bindBuffer(this.gl.ELEMENT_ARRAY_BUFFER, null), this.getAnisotropy() > 0 && this._extension)
+                            for (var e = 0; e < this._textures.getSize(); ++e) this.gl.bindTexture(this.gl.TEXTURE_2D, this._textures.getValue(e)), this.gl.texParameterf(this.gl.TEXTURE_2D, this._extension.TEXTURE_MAX_ANISOTROPY_EXT, this.getAnisotropy())
+                    }, t.prototype.setClippingContextBufferForMask = function(e) {
+                        this._clippingContextBufferForMask = e
+                    }, t.prototype.getClippingContextBufferForMask = function() {
+                        return this._clippingContextBufferForMask
+                    }, t.prototype.setClippingContextBufferForDraw = function(e) {
+                        this._clippingContextBufferForDraw = e
+                    }, t.prototype.getClippingContextBufferForDraw = function() {
+                        return this._clippingContextBufferForDraw
+                    }, t.prototype.startUp = function(e) {
+                        this.gl = e, this._clippingManager.setGL(e), S.getInstance().setGl(e), this._extension = this.gl.getExtension("EXT_texture_filter_anisotropic") || this.gl.getExtension("WEBKIT_EXT_texture_filter_anisotropic") || this.gl.getExtension("MOZ_EXT_texture_filter_anisotropic")
+                    }, t
+                }($.CubismRenderer);
+                t.CubismRenderer_WebGL = I, $.CubismRenderer.staticRelease = function() {
+                    I.doStaticRelease()
+                };
+                var x, B = p(r( /*! ./cubismrenderer_webgl */ "../../../Framework/src/rendering/cubismrenderer_webgl.ts"));
+                (x = u = t.Live2DCubismFramework || (t.Live2DCubismFramework = {})).CubismClippingContext = B.CubismClippingContext, x.CubismClippingManager_WebGL = B.CubismClippingManager_WebGL, x.CubismRenderTextureResource = B.CubismRenderTextureResource, x.CubismRenderer_WebGL = B.CubismRenderer_WebGL, x.CubismShaderSet = B.CubismShaderSet, x.CubismShader_WebGL = B.CubismShader_WebGL, x.ShaderNames = B.ShaderNames
+            },
+            "../../../Framework/src/type/csmmap.ts": function(e, t, r) {
+                "use strict";
+                var i, a = this && this.__createBinding || (Object.create ? function(e, t, r, i) {
+                        void 0 === i && (i = r);
+                        var a = Object.getOwnPropertyDescriptor(t, r);
+                        (!a || ("get" in a ? !t.__esModule : a.writable || a.configurable)) && (a = {
+                            enumerable: !0,
+                            get: function() {
+                                return t[r]
+                            }
+                        }), Object.defineProperty(e, i, a)
+                    } : function(e, t, r, i) {
+                        void 0 === i && (i = r), e[i] = t[r]
+                    }),
+                    o = this && this.__setModuleDefault || (Object.create ? function(e, t) {
+                        Object.defineProperty(e, "default", {
+                            enumerable: !0,
+                            value: t
+                        })
+                    } : function(e, t) {
+                        e.default = t
+                    }),
+                    s = this && this.__importStar || function(e) {
+                        if (e && e.__esModule) return e;
+                        var t = {};
+                        if (null != e)
+                            for (var r in e) "default" !== r && Object.prototype.hasOwnProperty.call(e, r) && a(t, e, r);
+                        return o(t, e), t
+                    };
+                Object.defineProperty(t, "__esModule", {
+                    value: !0
+                }), t.Live2DCubismFramework = t.iterator = t.csmMap = t.csmPair = void 0;
+                var n = r( /*! ../utils/cubismdebug */ "../../../Framework/src/utils/cubismdebug.ts"),
+                    u = function e(t, r) {
+                        this.first = void 0 == t ? null : t, this.second = void 0 == r ? null : r
+                    };
+                t.csmPair = u;
+                var l = function() {
+                    function e(e) {
+                        void 0 != e ? e < 1 ? (this._keyValues = [], this._dummyValue = null, this._size = 0) : (this._keyValues = Array(e), this._size = e) : (this._keyValues = [], this._dummyValue = null, this._size = 0)
+                    }
+                    return e.prototype.release = function() {
+                        this.clear()
+                    }, e.prototype.appendKey = function(e) {
+                        this.prepareCapacity(this._size + 1, !1), this._keyValues[this._size] = new u(e), this._size += 1
+                    }, e.prototype.getValue = function(e) {
+                        for (var t = -1, r = 0; r < this._size; r++)
+                            if (this._keyValues[r].first == e) {
+                                t = r;
+                                break
+                            } return t >= 0 ? this._keyValues[t].second : (this.appendKey(e), this._keyValues[this._size - 1].second)
+                    }, e.prototype.setValue = function(e, t) {
+                        for (var r = -1, i = 0; i < this._size; i++)
+                            if (this._keyValues[i].first == e) {
+                                r = i;
+                                break
+                            } r >= 0 ? this._keyValues[r].second = t : (this.appendKey(e), this._keyValues[this._size - 1].second = t)
+                    }, e.prototype.isExist = function(e) {
+                        for (var t = 0; t < this._size; t++)
+                            if (this._keyValues[t].first == e) return !0;
+                        return !1
+                    }, e.prototype.clear = function() {
+                        this._keyValues = void 0, this._keyValues = null, this._keyValues = [], this._size = 0
+                    }, e.prototype.getSize = function() {
+                        return this._size
+                    }, e.prototype.prepareCapacity = function(t, r) {
+                        t > this._keyValues.length && (0 == this._keyValues.length ? (!r && t < e.DefaultSize && (t = e.DefaultSize), this._keyValues.length = t) : (!r && t < 2 * this._keyValues.length && (t = 2 * this._keyValues.length), this._keyValues.length = t))
+                    }, e.prototype.begin = function() {
+                        return new c(this, 0)
+                    }, e.prototype.end = function() {
+                        return new c(this, this._size)
+                    }, e.prototype.erase = function(e) {
+                        var t = e._index;
+                        return t < 0 || this._size <= t ? e : (this._keyValues.splice(t, 1), --this._size, new c(this, t))
+                    }, e.prototype.dumpAsInt = function() {
+                        for (var e = 0; e < this._size; e++)(0, n.CubismLogDebug)("{0} ,", this._keyValues[e]), (0, n.CubismLogDebug)("\n")
+                    }, e.DefaultSize = 10, e
+                }();
+                t.csmMap = l;
+                var c = function() {
+                    function e(e, t) {
+                        this._map = void 0 != e ? e : new l, this._index = void 0 != t ? t : 0
+                    }
+                    return e.prototype.set = function(e) {
+                        return this._index = e._index, this._map = e._map, this
+                    }, e.prototype.preIncrement = function() {
+                        return ++this._index, this
+                    }, e.prototype.preDecrement = function() {
+                        return --this._index, this
+                    }, e.prototype.increment = function() {
+                        return new e(this._map, this._index++)
+                    }, e.prototype.decrement = function() {
+                        var t = new e(this._map, this._index);
+                        return this._map = t._map, this._index = t._index, this
+                    }, e.prototype.ptr = function() {
+                        return this._map._keyValues[this._index]
+                    }, e.prototype.notEqual = function(e) {
+                        return this._index != e._index || this._map != e._map
+                    }, e
+                }();
+                t.iterator = c;
+                var h, p = s(r( /*! ./csmmap */ "../../../Framework/src/type/csmmap.ts"));
+                (h = i = t.Live2DCubismFramework || (t.Live2DCubismFramework = {})).csmMap = p.csmMap, h.csmPair = p.csmPair, h.iterator = p.iterator
+            },
+            "../../../Framework/src/type/csmrectf.ts": function(e, t, r) {
+                "use strict";
+                var i, a = this && this.__createBinding || (Object.create ? function(e, t, r, i) {
+                        void 0 === i && (i = r);
+                        var a = Object.getOwnPropertyDescriptor(t, r);
+                        (!a || ("get" in a ? !t.__esModule : a.writable || a.configurable)) && (a = {
+                            enumerable: !0,
+                            get: function() {
+                                return t[r]
+                            }
+                        }), Object.defineProperty(e, i, a)
+                    } : function(e, t, r, i) {
+                        void 0 === i && (i = r), e[i] = t[r]
+                    }),
+                    o = this && this.__setModuleDefault || (Object.create ? function(e, t) {
+                        Object.defineProperty(e, "default", {
+                            enumerable: !0,
+                            value: t
+                        })
+                    } : function(e, t) {
+                        e.default = t
+                    }),
+                    s = this && this.__importStar || function(e) {
+                        if (e && e.__esModule) return e;
+                        var t = {};
+                        if (null != e)
+                            for (var r in e) "default" !== r && Object.prototype.hasOwnProperty.call(e, r) && a(t, e, r);
+                        return o(t, e), t
+                    };
+                Object.defineProperty(t, "__esModule", {
+                    value: !0
+                }), t.Live2DCubismFramework = t.csmRect = void 0;
+                var n = function() {
+                    function e(e, t, r, i) {
+                        this.x = e, this.y = t, this.width = r, this.height = i
+                    }
+                    return e.prototype.getCenterX = function() {
+                        return this.x + .5 * this.width
+                    }, e.prototype.getCenterY = function() {
+                        return this.y + .5 * this.height
+                    }, e.prototype.getRight = function() {
+                        return this.x + this.width
+                    }, e.prototype.getBottom = function() {
+                        return this.y + this.height
+                    }, e.prototype.setRect = function(e) {
+                        this.x = e.x, this.y = e.y, this.width = e.width, this.height = e.height
+                    }, e.prototype.expand = function(e, t) {
+                        this.x -= e, this.y -= t, this.width += 2 * e, this.height += 2 * t
+                    }, e
+                }();
+                t.csmRect = n;
+                var u, l = s(r( /*! ./csmrectf */ "../../../Framework/src/type/csmrectf.ts"));
+                (u = i = t.Live2DCubismFramework || (t.Live2DCubismFramework = {})).csmRect = l.csmRect
+            },
+            "../../../Framework/src/type/csmstring.ts": function(e, t, r) {
+                "use strict";
+                var i, a = this && this.__createBinding || (Object.create ? function(e, t, r, i) {
+                        void 0 === i && (i = r);
+                        var a = Object.getOwnPropertyDescriptor(t, r);
+                        (!a || ("get" in a ? !t.__esModule : a.writable || a.configurable)) && (a = {
+                            enumerable: !0,
+                            get: function() {
+                                return t[r]
+                            }
+                        }), Object.defineProperty(e, i, a)
+                    } : function(e, t, r, i) {
+                        void 0 === i && (i = r), e[i] = t[r]
+                    }),
+                    o = this && this.__setModuleDefault || (Object.create ? function(e, t) {
+                        Object.defineProperty(e, "default", {
+                            enumerable: !0,
+                            value: t
+                        })
+                    } : function(e, t) {
+                        e.default = t
+                    }),
+                    s = this && this.__importStar || function(e) {
+                        if (e && e.__esModule) return e;
+                        var t = {};
+                        if (null != e)
+                            for (var r in e) "default" !== r && Object.prototype.hasOwnProperty.call(e, r) && a(t, e, r);
+                        return o(t, e), t
+                    };
+                Object.defineProperty(t, "__esModule", {
+                    value: !0
+                }), t.Live2DCubismFramework = t.csmString = void 0;
+                var n = function() {
+                    function e(e) {
+                        this.s = e
+                    }
+                    return e.prototype.append = function(e, t) {
+                        return this.s += void 0 !== t ? e.substr(0, t) : e, this
+                    }, e.prototype.expansion = function(e, t) {
+                        for (var r = 0; r < e; r++) this.append(t);
+                        return this
+                    }, e.prototype.getBytes = function() {
+                        return encodeURIComponent(this.s).replace(/%../g, "x").length
+                    }, e.prototype.getLength = function() {
+                        return this.s.length
+                    }, e.prototype.isLess = function(e) {
+                        return this.s < e.s
+                    }, e.prototype.isGreat = function(e) {
+                        return this.s > e.s
+                    }, e.prototype.isEqual = function(e) {
+                        return this.s == e
+                    }, e.prototype.isEmpty = function() {
+                        return 0 == this.s.length
+                    }, e
+                }();
+                t.csmString = n;
+                var u, l = s(r( /*! ./csmstring */ "../../../Framework/src/type/csmstring.ts"));
+                (u = i = t.Live2DCubismFramework || (t.Live2DCubismFramework = {})).csmString = l.csmString
+            },
+            "../../../Framework/src/type/csmvector.ts": function(e, t, r) {
+                "use strict";
+                var i, a = this && this.__createBinding || (Object.create ? function(e, t, r, i) {
+                        void 0 === i && (i = r);
+                        var a = Object.getOwnPropertyDescriptor(t, r);
+                        (!a || ("get" in a ? !t.__esModule : a.writable || a.configurable)) && (a = {
+                            enumerable: !0,
+                            get: function() {
+                                return t[r]
+                            }
+                        }), Object.defineProperty(e, i, a)
+                    } : function(e, t, r, i) {
+                        void 0 === i && (i = r), e[i] = t[r]
+                    }),
+                    o = this && this.__setModuleDefault || (Object.create ? function(e, t) {
+                        Object.defineProperty(e, "default", {
+                            enumerable: !0,
+                            value: t
+                        })
+                    } : function(e, t) {
+                        e.default = t
+                    }),
+                    s = this && this.__importStar || function(e) {
+                        if (e && e.__esModule) return e;
+                        var t = {};
+                        if (null != e)
+                            for (var r in e) "default" !== r && Object.prototype.hasOwnProperty.call(e, r) && a(t, e, r);
+                        return o(t, e), t
+                    };
+                Object.defineProperty(t, "__esModule", {
+                    value: !0
+                }), t.Live2DCubismFramework = t.iterator = t.csmVector = void 0;
+                var n = function() {
+                    function e(e) {
+                        void 0 === e && (e = 0), e < 1 ? (this._ptr = [], this._capacity = 0, this._size = 0) : (this._ptr = Array(e), this._capacity = e, this._size = 0)
+                    }
+                    return e.prototype.at = function(e) {
+                        return this._ptr[e]
+                    }, e.prototype.set = function(e, t) {
+                        this._ptr[e] = t
+                    }, e.prototype.get = function(e) {
+                        void 0 === e && (e = 0);
+                        for (var t = [], r = e; r < this._size; r++) t.push(this._ptr[r]);
+                        return t
+                    }, e.prototype.pushBack = function(t) {
+                        this._size >= this._capacity && this.prepareCapacity(0 == this._capacity ? e.s_defaultSize : 2 * this._capacity), this._ptr[this._size++] = t
+                    }, e.prototype.clear = function() {
+                        this._ptr.length = 0, this._size = 0
+                    }, e.prototype.getSize = function() {
+                        return this._size
+                    }, e.prototype.assign = function(e, t) {
+                        this._size < e && this.prepareCapacity(e);
+                        for (var r = 0; r < e; r++) this._ptr[r] = t;
+                        this._size = e
+                    }, e.prototype.resize = function(e, t) {
+                        void 0 === t && (t = null), this.updateSize(e, t, !0)
+                    }, e.prototype.updateSize = function(e, t, r) {
+                        if (void 0 === t && (t = null), void 0 === r && (r = !0), this._size < e) {
+                            if (this.prepareCapacity(e), r)
+                                for (var i = this._size; i < e; i++) "function" == typeof t ? this._ptr[i] = JSON.parse(JSON.stringify(new t)) : this._ptr[i] = t;
+                            else
+                                for (var i = this._size; i < e; i++) this._ptr[i] = t
+                        } else {
+                            var a = this._size - e;
+                            this._ptr.splice(this._size - a, a)
+                        }
+                        this._size = e
+                    }, e.prototype.insert = function(e, t, r) {
+                        var i = e._index,
+                            a = t._index,
+                            o = r._index,
+                            s = o - a;
+                        this.prepareCapacity(this._size + s);
+                        var n = this._size - i;
+                        if (n > 0)
+                            for (var u = 0; u < n; u++) this._ptr.splice(i + u, 0, null);
+                        for (var u = a; u < o; u++, i++) this._ptr[i] = t._vector._ptr[u];
+                        this._size = this._size + s
+                    }, e.prototype.remove = function(e) {
+                        return !(e < 0) && !(this._size <= e) && (this._ptr.splice(e, 1), --this._size, !0)
+                    }, e.prototype.erase = function(e) {
+                        var t = e._index;
+                        return t < 0 || this._size <= t ? e : (this._ptr.splice(t, 1), --this._size, new u(this, t))
+                    }, e.prototype.prepareCapacity = function(e) {
+                        e > this._capacity && (0 == this._capacity ? (this._ptr = Array(e), this._capacity = e) : (this._ptr.length = e, this._capacity = e))
+                    }, e.prototype.begin = function() {
+                        return 0 == this._size ? this.end() : new u(this, 0)
+                    }, e.prototype.end = function() {
+                        return new u(this, this._size)
+                    }, e.prototype.getOffset = function(t) {
+                        var r = new e;
+                        return r._ptr = this.get(t), r._size = this.get(t).length, r._capacity = this.get(t).length, r
+                    }, e.s_defaultSize = 10, e
+                }();
+                t.csmVector = n;
+                var u = function() {
+                    function e(e, t) {
+                        this._vector = void 0 != e ? e : null, this._index = void 0 != t ? t : 0
+                    }
+                    return e.prototype.set = function(e) {
+                        return this._index = e._index, this._vector = e._vector, this
+                    }, e.prototype.preIncrement = function() {
+                        return ++this._index, this
+                    }, e.prototype.preDecrement = function() {
+                        return --this._index, this
+                    }, e.prototype.increment = function() {
+                        return new e(this._vector, this._index++)
+                    }, e.prototype.decrement = function() {
+                        return new e(this._vector, this._index--)
+                    }, e.prototype.ptr = function() {
+                        return this._vector._ptr[this._index]
+                    }, e.prototype.substitution = function(e) {
+                        return this._index = e._index, this._vector = e._vector, this
+                    }, e.prototype.notEqual = function(e) {
+                        return this._index != e._index || this._vector != e._vector
+                    }, e
+                }();
+                t.iterator = u;
+                var l, c = s(r( /*! ./csmvector */ "../../../Framework/src/type/csmvector.ts"));
+                (l = i = t.Live2DCubismFramework || (t.Live2DCubismFramework = {})).csmVector = c.csmVector, l.iterator = c.iterator
+            },
+            "../../../Framework/src/utils/cubismdebug.ts": function(e, t, r) {
+                "use strict";
+                var i, a = this && this.__createBinding || (Object.create ? function(e, t, r, i) {
+                        void 0 === i && (i = r);
+                        var a = Object.getOwnPropertyDescriptor(t, r);
+                        (!a || ("get" in a ? !t.__esModule : a.writable || a.configurable)) && (a = {
+                            enumerable: !0,
+                            get: function() {
+                                return t[r]
+                            }
+                        }), Object.defineProperty(e, i, a)
+                    } : function(e, t, r, i) {
+                        void 0 === i && (i = r), e[i] = t[r]
+                    }),
+                    o = this && this.__setModuleDefault || (Object.create ? function(e, t) {
+                        Object.defineProperty(e, "default", {
+                            enumerable: !0,
+                            value: t
+                        })
+                    } : function(e, t) {
+                        e.default = t
+                    }),
+                    s = this && this.__importStar || function(e) {
+                        if (e && e.__esModule) return e;
+                        var t = {};
+                        if (null != e)
+                            for (var r in e) "default" !== r && Object.prototype.hasOwnProperty.call(e, r) && a(t, e, r);
+                        return o(t, e), t
+                    };
+                Object.defineProperty(t, "__esModule", {
+                    value: !0
+                }), t.Live2DCubismFramework = t.CubismDebug = t.CubismLogError = t.CubismLogWarning = t.CubismLogInfo = t.CubismLogDebug = t.CubismLogVerbose = t.CSM_ASSERT = t.CubismLogPrintIn = t.CubismLogPrint = void 0;
+                var n = r( /*! ../cubismframeworkconfig */ "../../../Framework/src/cubismframeworkconfig.ts"),
+                    u = r( /*! ../live2dcubismframework */ "../../../Framework/src/live2dcubismframework.ts"),
+                    l = function(e, t, r) {
+                        p.print(e, "[CSM]" + t, r)
+                    };
+                t.CubismLogPrint = l;
+                var c = function(e, r, i) {
+                    (0, t.CubismLogPrint)(e, r + "\n", i)
+                };
+                t.CubismLogPrintIn = c;
+                var h = function(e) {
+                    console.assert(e)
+                };
+                t.CSM_ASSERT = h, n.CSM_LOG_LEVEL <= n.CSM_LOG_LEVEL_VERBOSE ? (t.CubismLogVerbose = function(e) {
+                    for (var r = [], i = 1; i < arguments.length; i++) r[i - 1] = arguments[i];
+                    (0, t.CubismLogPrintIn)(u.LogLevel.LogLevel_Verbose, "[V]" + e, r)
+                }, t.CubismLogDebug = function(e) {
+                    for (var r = [], i = 1; i < arguments.length; i++) r[i - 1] = arguments[i];
+                    (0, t.CubismLogPrintIn)(u.LogLevel.LogLevel_Debug, "[D]" + e, r)
+                }, t.CubismLogInfo = function(e) {
+                    for (var r = [], i = 1; i < arguments.length; i++) r[i - 1] = arguments[i];
+                    (0, t.CubismLogPrintIn)(u.LogLevel.LogLevel_Info, "[I]" + e, r)
+                }, t.CubismLogWarning = function(e) {
+                    for (var r = [], i = 1; i < arguments.length; i++) r[i - 1] = arguments[i];
+                    (0, t.CubismLogPrintIn)(u.LogLevel.LogLevel_Warning, "[W]" + e, r)
+                }, t.CubismLogError = function(e) {
+                    for (var r = [], i = 1; i < arguments.length; i++) r[i - 1] = arguments[i];
+                    (0, t.CubismLogPrintIn)(u.LogLevel.LogLevel_Error, "[E]" + e, r)
+                }) : n.CSM_LOG_LEVEL == n.CSM_LOG_LEVEL_DEBUG ? (t.CubismLogDebug = function(e) {
+                    for (var r = [], i = 1; i < arguments.length; i++) r[i - 1] = arguments[i];
+                    (0, t.CubismLogPrintIn)(u.LogLevel.LogLevel_Debug, "[D]" + e, r)
+                }, t.CubismLogInfo = function(e) {
+                    for (var r = [], i = 1; i < arguments.length; i++) r[i - 1] = arguments[i];
+                    (0, t.CubismLogPrintIn)(u.LogLevel.LogLevel_Info, "[I]" + e, r)
+                }, t.CubismLogWarning = function(e) {
+                    for (var r = [], i = 1; i < arguments.length; i++) r[i - 1] = arguments[i];
+                    (0, t.CubismLogPrintIn)(u.LogLevel.LogLevel_Warning, "[W]" + e, r)
+                }, t.CubismLogError = function(e) {
+                    for (var r = [], i = 1; i < arguments.length; i++) r[i - 1] = arguments[i];
+                    (0, t.CubismLogPrintIn)(u.LogLevel.LogLevel_Error, "[E]" + e, r)
+                }) : n.CSM_LOG_LEVEL == n.CSM_LOG_LEVEL_INFO ? (t.CubismLogInfo = function(e) {
+                    for (var r = [], i = 1; i < arguments.length; i++) r[i - 1] = arguments[i];
+                    (0, t.CubismLogPrintIn)(u.LogLevel.LogLevel_Info, "[I]" + e, r)
+                }, t.CubismLogWarning = function(e) {
+                    for (var r = [], i = 1; i < arguments.length; i++) r[i - 1] = arguments[i];
+                    (0, t.CubismLogPrintIn)(u.LogLevel.LogLevel_Warning, "[W]" + e, r)
+                }, t.CubismLogError = function(e) {
+                    for (var r = [], i = 1; i < arguments.length; i++) r[i - 1] = arguments[i];
+                    (0, t.CubismLogPrintIn)(u.LogLevel.LogLevel_Error, "[E]" + e, r)
+                }) : n.CSM_LOG_LEVEL == n.CSM_LOG_LEVEL_WARNING ? (t.CubismLogWarning = function(e) {
+                    for (var r = [], i = 1; i < arguments.length; i++) r[i - 1] = arguments[i];
+                    (0, t.CubismLogPrintIn)(u.LogLevel.LogLevel_Warning, "[W]" + e, r)
+                }, t.CubismLogError = function(e) {
+                    for (var r = [], i = 1; i < arguments.length; i++) r[i - 1] = arguments[i];
+                    (0, t.CubismLogPrintIn)(u.LogLevel.LogLevel_Error, "[E]" + e, r)
+                }) : n.CSM_LOG_LEVEL == n.CSM_LOG_LEVEL_ERROR && (t.CubismLogError = function(e) {
+                    for (var r = [], i = 1; i < arguments.length; i++) r[i - 1] = arguments[i];
+                    (0, t.CubismLogPrintIn)(u.LogLevel.LogLevel_Error, "[E]" + e, r)
+                });
+                var p = function() {
+                    function e() {}
+                    return e.print = function(e, t, r) {
+                        if (!(e < u.CubismFramework.getLoggingLevel())) {
+                            var i = u.CubismFramework.coreLogFunction;
+                            i && i(t.replace(/\{(\d+)\}/g, function(e, t) {
+                                return r[t]
+                            }))
+                        }
+                    }, e.dumpBytes = function(e, t, r) {
+                        for (var i = 0; i < r; i++) i % 16 == 0 && i > 0 ? this.print(e, "\n") : i % 8 == 0 && i > 0 && this.print(e, "  "), this.print(e, "{0} ", [255 & t[i]]);
+                        this.print(e, "\n")
+                    }, e
+                }();
+                t.CubismDebug = p;
+                var m, d = s(r( /*! ./cubismdebug */ "../../../Framework/src/utils/cubismdebug.ts"));
+                (m = i = t.Live2DCubismFramework || (t.Live2DCubismFramework = {})).CubismDebug = d.CubismDebug
+            },
+            "../../../Framework/src/utils/cubismjson.ts": function(e, t, r) {
+                "use strict";
+                var i, a, o = this && this.__extends || (i = function(e, t) {
+                        return (i = Object.setPrototypeOf || ({
+                            __proto__: []
+                        }) instanceof Array && function(e, t) {
+                            e.__proto__ = t
+                        } || function(e, t) {
+                            for (var r in t) Object.prototype.hasOwnProperty.call(t, r) && (e[r] = t[r])
+                        })(e, t)
+                    }, function(e, t) {
+                        if ("function" != typeof t && null !== t) throw TypeError("Class extends value " + String(t) + " is not a constructor or null");
+
+                        function r() {
+                            this.constructor = e
+                        }
+                        i(e, t), e.prototype = null === t ? Object.create(t) : (r.prototype = t.prototype, new r)
+                    }),
+                    s = this && this.__createBinding || (Object.create ? function(e, t, r, i) {
+                        void 0 === i && (i = r);
+                        var a = Object.getOwnPropertyDescriptor(t, r);
+                        (!a || ("get" in a ? !t.__esModule : a.writable || a.configurable)) && (a = {
+                            enumerable: !0,
+                            get: function() {
+                                return t[r]
+                            }
+                        }), Object.defineProperty(e, i, a)
+                    } : function(e, t, r, i) {
+                        void 0 === i && (i = r), e[i] = t[r]
+                    }),
+                    n = this && this.__setModuleDefault || (Object.create ? function(e, t) {
+                        Object.defineProperty(e, "default", {
+                            enumerable: !0,
+                            value: t
+                        })
+                    } : function(e, t) {
+                        e.default = t
+                    }),
+                    u = this && this.__importStar || function(e) {
+                        if (e && e.__esModule) return e;
+                        var t = {};
+                        if (null != e)
+                            for (var r in e) "default" !== r && Object.prototype.hasOwnProperty.call(e, r) && s(t, e, r);
+                        return n(t, e), t
+                    };
+                Object.defineProperty(t, "__esModule", {
+                    value: !0
+                }), t.Live2DCubismFramework = t.JsonMap = t.JsonArray = t.JsonNullvalue = t.JsonError = t.JsonString = t.JsonBoolean = t.JsonFloat = t.CubismJson = t.Value = void 0;
+                var l = r( /*! ../live2dcubismframework */ "../../../Framework/src/live2dcubismframework.ts"),
+                    c = r( /*! ../type/csmmap */ "../../../Framework/src/type/csmmap.ts"),
+                    h = r( /*! ../type/csmstring */ "../../../Framework/src/type/csmstring.ts"),
+                    p = r( /*! ../type/csmvector */ "../../../Framework/src/type/csmvector.ts"),
+                    m = r( /*! ./cubismdebug */ "../../../Framework/src/utils/cubismdebug.ts"),
+                    d = "Error: type mismatch",
+                    g = function() {
+                        function e() {}
+                        return e.prototype.getRawString = function(e, t) {
+                            return this.getString(e, t)
+                        }, e.prototype.toInt = function(e) {
+                            return void 0 === e && (e = 0), e
+                        }, e.prototype.toFloat = function(e) {
+                            return void 0 === e && (e = 0), e
+                        }, e.prototype.toBoolean = function(e) {
+                            return void 0 === e && (e = !1), e
+                        }, e.prototype.getSize = function() {
+                            return 0
+                        }, e.prototype.getArray = function(e) {
+                            return void 0 === e && (e = null), e
+                        }, e.prototype.getVector = function(e) {
+                            return void 0 === e && (e = new p.csmVector), e
+                        }, e.prototype.getMap = function(e) {
+                            return e
+                        }, e.prototype.getValueByIndex = function(t) {
+                            return e.errorValue.setErrorNotForClientCall(d)
+                        }, e.prototype.getValueByString = function(t) {
+                            return e.nullValue.setErrorNotForClientCall(d)
+                        }, e.prototype.getKeys = function() {
+                            return e.s_dummyKeys
+                        }, e.prototype.isError = function() {
+                            return !1
+                        }, e.prototype.isNull = function() {
+                            return !1
+                        }, e.prototype.isBool = function() {
+                            return !1
+                        }, e.prototype.isFloat = function() {
+                            return !1
+                        }, e.prototype.isString = function() {
+                            return !1
+                        }, e.prototype.isArray = function() {
+                            return !1
+                        }, e.prototype.isMap = function() {
+                            return !1
+                        }, e.prototype.equals = function(e) {
+                            return !1
+                        }, e.prototype.isStatic = function() {
+                            return !1
+                        }, e.prototype.setErrorNotForClientCall = function(e) {
+                            return b.errorValue
+                        }, e.staticInitializeNotForClientCall = function() {
+                            v.trueValue = new v(!0), v.falseValue = new v(!1), e.errorValue = new b("ERROR", !0), e.nullValue = new M, e.s_dummyKeys = new p.csmVector
+                        }, e.staticReleaseNotForClientCall = function() {
+                            v.trueValue = null, v.falseValue = null, e.errorValue = null, e.nullValue = null, e.s_dummyKeys = null
+                        }, e
+                    }();
+                t.Value = g;
+                var f = function() {
+                    function e(e, t) {
+                        this._parseCallback = I.CubismJsonExtension.parseJsonObject, this._error = null, this._lineCount = 0, this._root = null, void 0 != e && this.parseBytes(e, t, this._parseCallback)
+                    }
+                    return e.create = function(t, r) {
+                        var i = new e;
+                        return i.parseBytes(t, r, i._parseCallback) ? i : (e.delete(i), null)
+                    }, e.delete = function(e) {
+                        e = null
+                    }, e.prototype.getRoot = function() {
+                        return this._root
+                    }, e.arrayBufferToString = function(e) {
+                        for (var t = new Uint8Array(e), r = "", i = 0, a = t.length; i < a; ++i) r += "%" + this.pad(t[i].toString(16));
+                        return decodeURIComponent(r)
+                    }, e.pad = function(e) {
+                        return e.length < 2 ? "0" + e : e
+                    }, e.prototype.parseBytes = function(t, r, i) {
+                        var a = e.arrayBufferToString(t);
+                        if (void 0 == i ? this._root = this.parseValue(a, r, 0, [, ]) : this._root = i(JSON.parse(a), new S), this._error) {
+                            var o = "\0";
+                            return o = "Json parse error : @line " + (this._lineCount + 1) + "\n", this._root = new $(o), (0, m.CubismLogInfo)("{0}", this._root.getRawString()), !1
+                        }
+                        return null != this._root || (this._root = new b(new h.csmString(this._error), !1), !1)
+                    }, e.prototype.getParseError = function() {
+                        return this._error
+                    }, e.prototype.checkEndOfFile = function() {
+                        return this._root.getArray()[1].equals("EOF")
+                    }, e.prototype.parseValue = function(e, t, r, i) {
+                        if (this._error) return null;
+                        for (var a, o = null, s = r; s < t; s++) {
+                            var n = e[s];
+                            switch (n) {
+                                case "-":
+                                case ".":
+                                case "0":
+                                case "1":
+                                case "2":
+                                case "3":
+                                case "4":
+                                case "5":
+                                case "6":
+                                case "7":
+                                case "8":
+                                case "9":
+                                    var u = [, ];
+                                    return a = (0, l.strtod)(e.slice(s), u), i[0] = e.indexOf(u[0]), new y(a);
+                                case '"':
+                                    return new $(this.parseString(e, t, s + 1, i));
+                                case "[":
+                                    return this.parseArray(e, t, s + 1, i);
+                                case "{":
+                                    return this.parseObject(e, t, s + 1, i);
+                                case "n":
+                                    return s + 3 < t ? (o = new M, i[0] = s + 4) : this._error = "parse null", o;
+                                case "t":
+                                    return s + 3 < t ? (o = v.trueValue, i[0] = s + 4) : this._error = "parse true", o;
+                                case "f":
+                                    return s + 4 < t ? (o = v.falseValue, i[0] = s + 5) : this._error = "illegal ',' position", o;
+                                case ",":
+                                    return this._error = "illegal ',' position", null;
+                                case "]":
+                                    return i[0] = s, null;
+                                case "\n":
+                                    this._lineCount++
+                            }
+                        }
+                        return this._error = "illegal end of value", null
+                    }, e.prototype.parseString = function(e, t, r, i) {
+                        if (this._error) return null;
+                        for (var a, o, s = r, n = new h.csmString(""), u = r; s < t; s++) switch (a = e[s]) {
+                            case '"':
+                                return i[0] = s + 1, n.append(e.slice(u), s - u), n.s;
+                            case "//":
+                                if (++s - 1 > u && n.append(e.slice(u), s - u), u = s + 1, s < t) switch (o = e[s]) {
+                                    case "\\":
+                                        n.expansion(1, "\\");
+                                        break;
+                                    case '"':
+                                        n.expansion(1, '"');
+                                        break;
+                                    case "/":
+                                        n.expansion(1, "/");
+                                        break;
+                                    case "b":
+                                        n.expansion(1, "\b");
+                                        break;
+                                    case "f":
+                                        n.expansion(1, "\f");
+                                        break;
+                                    case "n":
+                                        n.expansion(1, "\n");
+                                        break;
+                                    case "r":
+                                        n.expansion(1, "\r");
+                                        break;
+                                    case "t":
+                                        n.expansion(1, "  ");
+                                        break;
+                                    case "u":
+                                        this._error = "parse string/unicord escape not supported"
+                                } else this._error = "parse string/escape error"
+                        }
+                        return this._error = "parse string/illegal end", null
+                    }, e.prototype.parseObject = function(e, t, r, i) {
+                        if (this._error) return null;
+                        for (var a = new S, o = "", s = r, n = "", u = [, ], l = !1; s < t; s++) {
+                            FOR_LOOP: for (; s < t; s++) switch (n = e[s]) {
+                                case '"':
+                                    if (o = this.parseString(e, t, s + 1, u), this._error) return null;
+                                    s = u[0], l = !0;
+                                    break FOR_LOOP;
+                                case "}":
+                                    return i[0] = s + 1, a;
+                                case ":":
+                                    this._error = "illegal ':' position";
+                                    break;
+                                case "\n":
+                                    this._lineCount++
+                            }
+                            if (!l) return this._error = "key not found",
+                            null;l = !1;FOR_LOOP2: for (; s < t; s++) switch (n = e[s]) {
+                                case ":":
+                                    l = !0, s++;
+                                    break FOR_LOOP2;
+                                case "}":
+                                    this._error = "illegal '}' position";
+                                    break;
+                                case "\n":
+                                    this._lineCount++
+                            }
+                            if (!l) return this._error = "':' not found",
+                            null;
+                            var c = this.parseValue(e, t, s, u);
+                            if (this._error) return null;s = u[0],
+                            a.put(o, c);FOR_LOOP3: for (; s < t; s++) switch (n = e[s]) {
+                                case ",":
+                                    break FOR_LOOP3;
+                                case "}":
+                                    return i[0] = s + 1, a;
+                                case "\n":
+                                    this._lineCount++
+                            }
+                        }
+                        return this._error = "illegal end of perseObject", null
+                    }, e.prototype.parseArray = function(e, t, r, i) {
+                        if (this._error) return null;
+                        for (var a, o = new C, s = r, n = [, ]; s < t; s++) {
+                            var u = this.parseValue(e, t, s, n);
+                            if (this._error) return null;
+                            s = n[0], u && o.add(u);
+                            FOR_LOOP: for (; s < t; s++) switch (a = e[s]) {
+                                case ",":
+                                    break FOR_LOOP;
+                                case "]":
+                                    return i[0] = s + 1, o;
+                                case "\n":
+                                    ++this._lineCount
+                            }
+                        }
+                        return o = void 0, this._error = "illegal end of parseObject", null
+                    }, e
+                }();
+                t.CubismJson = f;
+                var y = function(e) {
+                    function t(t) {
+                        var r = e.call(this) || this;
+                        return r._value = t, r
+                    }
+                    return o(t, e), t.prototype.isFloat = function() {
+                        return !0
+                    }, t.prototype.getString = function(e, t) {
+                        return this._value = parseFloat("\0"), this._stringBuffer = "\0", this._stringBuffer
+                    }, t.prototype.toInt = function(e) {
+                        return void 0 === e && (e = 0), parseInt(this._value.toString())
+                    }, t.prototype.toFloat = function(e) {
+                        return void 0 === e && (e = 0), this._value
+                    }, t.prototype.equals = function(e) {
+                        return !("number" != typeof e || Math.round(e)) && e == this._value
+                    }, t
+                }(g);
+                t.JsonFloat = y;
+                var v = function(e) {
+                    function t(t) {
+                        var r = e.call(this) || this;
+                        return r._boolValue = t, r
+                    }
+                    return o(t, e), t.prototype.isBool = function() {
+                        return !0
+                    }, t.prototype.toBoolean = function(e) {
+                        return void 0 === e && (e = !1), this._boolValue
+                    }, t.prototype.getString = function(e, t) {
+                        return this._stringBuffer = this._boolValue ? "true" : "false", this._stringBuffer
+                    }, t.prototype.equals = function(e) {
+                        return "boolean" == typeof e && e == this._boolValue
+                    }, t.prototype.isStatic = function() {
+                        return !0
+                    }, t
+                }(g);
+                t.JsonBoolean = v;
+                var $ = function(e) {
+                    function t(t) {
+                        var r = e.call(this) || this;
+                        return "string" == typeof t && (r._stringBuffer = t), t instanceof h.csmString && (r._stringBuffer = t.s), r
+                    }
+                    return o(t, e), t.prototype.isString = function() {
+                        return !0
+                    }, t.prototype.getString = function(e, t) {
+                        return this._stringBuffer
+                    }, t.prototype.equals = function(e) {
+                        return "string" == typeof e ? this._stringBuffer == e : e instanceof h.csmString && this._stringBuffer == e.s
+                    }, t
+                }(g);
+                t.JsonString = $;
+                var b = function(e) {
+                    function t(t, r) {
+                        var i = this;
+                        return (i = e.call(this, t) || this)._isStatic = r, i
+                    }
+                    return o(t, e), t.prototype.isStatic = function() {
+                        return this._isStatic
+                    }, t.prototype.setErrorNotForClientCall = function(e) {
+                        return this._stringBuffer = e, this
+                    }, t.prototype.isError = function() {
+                        return !0
+                    }, t
+                }($);
+                t.JsonError = b;
+                var M = function(e) {
+                    function t() {
+                        var t = e.call(this) || this;
+                        return t._stringBuffer = "NullValue", t
+                    }
+                    return o(t, e), t.prototype.isNull = function() {
+                        return !0
+                    }, t.prototype.getString = function(e, t) {
+                        return this._stringBuffer
+                    }, t.prototype.isStatic = function() {
+                        return !0
+                    }, t.prototype.setErrorNotForClientCall = function(e) {
+                        return this._stringBuffer = e, b.nullValue
+                    }, t
+                }(g);
+                t.JsonNullvalue = M;
+                var C = function(e) {
+                    function t() {
+                        var t = e.call(this) || this;
+                        return t._array = new p.csmVector, t
+                    }
+                    return o(t, e), t.prototype.release = function() {
+                        for (var e = this._array.begin(); e.notEqual(this._array.end()); e.preIncrement()) {
+                            var t = e.ptr();
+                            t && !t.isStatic() && (t = void 0, t = null)
+                        }
+                    }, t.prototype.isArray = function() {
+                        return !0
+                    }, t.prototype.getValueByIndex = function(e) {
+                        if (e < 0 || this._array.getSize() <= e) return g.errorValue.setErrorNotForClientCall("Error: index out of bounds");
+                        var t = this._array.at(e);
+                        return null == t ? g.nullValue : t
+                    }, t.prototype.getValueByString = function(e) {
+                        return g.errorValue.setErrorNotForClientCall(d)
+                    }, t.prototype.getString = function(e, t) {
+                        for (var r = this._array.begin(); r.notEqual(this._array.end()); r.increment()) {
+                            var i = r.ptr();
+                            this._stringBuffer += t + "" + i.getString(t + " ") + "\n"
+                        }
+                        return this._stringBuffer = t + "[\n" + t + "]\n", this._stringBuffer
+                    }, t.prototype.add = function(e) {
+                        this._array.pushBack(e)
+                    }, t.prototype.getVector = function(e) {
+                        return void 0 === e && (e = null), this._array
+                    }, t.prototype.getSize = function() {
+                        return this._array.getSize()
+                    }, t
+                }(g);
+                t.JsonArray = C;
+                var S = function(e) {
+                    function t() {
+                        var t = e.call(this) || this;
+                        return t._map = new c.csmMap, t
+                    }
+                    return o(t, e), t.prototype.release = function() {
+                        for (var e = this._map.begin(); e.notEqual(this._map.end());) {
+                            var t = e.ptr().second;
+                            t && !t.isStatic() && (t = void 0, t = null), e.preIncrement()
+                        }
+                    }, t.prototype.isMap = function() {
+                        return !0
+                    }, t.prototype.getValueByString = function(e) {
+                        if (e instanceof h.csmString) {
+                            var t = this._map.getValue(e.s);
+                            return null == t ? g.nullValue : t
+                        }
+                        for (var r = this._map.begin(); r.notEqual(this._map.end()); r.preIncrement())
+                            if (r.ptr().first == e) {
+                                if (null == r.ptr().second) return g.nullValue;
+                                return r.ptr().second
+                            } return g.nullValue
+                    }, t.prototype.getValueByIndex = function(e) {
+                        return g.errorValue.setErrorNotForClientCall(d)
+                    }, t.prototype.getString = function(e, t) {
+                        this._stringBuffer = t + "{\n";
+                        for (var r = this._map.begin(); r.notEqual(this._map.end());) {
+                            var i = r.ptr().first,
+                                a = r.ptr().second;
+                            this._stringBuffer += t + " " + i + " : " + a.getString(t + "   ") + " \n", r.preIncrement()
+                        }
+                        return this._stringBuffer += t + "}\n", this._stringBuffer
+                    }, t.prototype.getMap = function(e) {
+                        return this._map
+                    }, t.prototype.put = function(e, t) {
+                        this._map.setValue(e, t)
+                    }, t.prototype.getKeys = function() {
+                        if (!this._keys) {
+                            this._keys = new p.csmVector;
+                            for (var e = this._map.begin(); e.notEqual(this._map.end());) {
+                                var t = e.ptr().first;
+                                this._keys.pushBack(t), e.preIncrement()
+                            }
+                        }
+                        return this._keys
+                    }, t.prototype.getSize = function() {
+                        return this._keys.getSize()
+                    }, t
+                }(g);
+                t.JsonMap = S;
+                var w, P = u(r( /*! ./cubismjson */ "../../../Framework/src/utils/cubismjson.ts")),
+                    I = r( /*! ./cubismjsonextension */ "../../../Framework/src/utils/cubismjsonextension.ts");
+                (w = a = t.Live2DCubismFramework || (t.Live2DCubismFramework = {})).CubismJson = P.CubismJson, w.JsonArray = P.JsonArray, w.JsonBoolean = P.JsonBoolean, w.JsonError = P.JsonError, w.JsonFloat = P.JsonFloat, w.JsonMap = P.JsonMap, w.JsonNullvalue = P.JsonNullvalue, w.JsonString = P.JsonString, w.Value = P.Value
+            },
+            "../../../Framework/src/utils/cubismjsonextension.ts": function(e, t, r) {
+                "use strict";
+                Object.defineProperty(t, "__esModule", {
+                    value: !0
+                }), t.CubismJsonExtension = void 0;
+                var i = r( /*! ./cubismjson */ "../../../Framework/src/utils/cubismjson.ts"),
+                    a = function() {
+                        function e() {}
+                        return e.parseJsonObject = function(t, r) {
+                            return Object.keys(t).forEach(function(a) {
+                                "boolean" == typeof t[a] ? r.put(a, new i.JsonBoolean(t[a])) : "string" == typeof t[a] ? r.put(a, new i.JsonString(t[a])) : "number" == typeof t[a] ? r.put(a, new i.JsonFloat(t[a])) : t[a] instanceof Array ? r.put(a, e.parseJsonArray(t[a])) : t[a] instanceof Object ? r.put(a, e.parseJsonObject(t[a], new i.JsonMap)) : null == t[a] ? r.put(a, new i.JsonNullvalue) : r.put(a, t[a])
+                            }), r
+                        }, e.parseJsonArray = function(e) {
+                            var t = this,
+                                r = new i.JsonArray;
+                            return Object.keys(e).forEach(function(a) {
+                                var o = Number(a);
+                                if ("number" == typeof o) "boolean" == typeof e[o] ? r.add(new i.JsonBoolean(e[o])) : "string" == typeof e[o] ? r.add(new i.JsonString(e[o])) : "number" == typeof e[o] ? r.add(new i.JsonFloat(e[o])) : e[a] instanceof Array ? r.add(t.parseJsonArray(e[a])) : e[a] instanceof Object ? r.add(t.parseJsonObject(e[a], new i.JsonMap)) : null == e[a] ? r.add(new i.JsonNullvalue) : r.add(e[a]);
+                                else if (e[a] instanceof Array) r.add(t.parseJsonArray(e[a]));
+                                else if (e[a] instanceof Object) r.add(t.parseJsonObject(e[a], new i.JsonMap));
+                                else if (null == e[a]) r.add(new i.JsonNullvalue);
+                                else
+                                    for (var s = 0; s < e[a].length; s++) r.add(e[a][s])
+                            }), r
+                        }, e
+                    }();
+                t.CubismJsonExtension = a
+            },
+            "./src/azureai.ts": function(e, t, r) {
+                "use strict";
+                var i = this && this.__awaiter || function(e, t, r, i) {
+                        return new(r || (r = Promise))(function(a, o) {
+                            function s(e) {
+                                try {
+                                    u(i.next(e))
+                                } catch (t) {
+                                    o(t)
+                                }
+                            }
+
+                            function n(e) {
+                                try {
+                                    u(i.throw(e))
+                                } catch (t) {
+                                    o(t)
+                                }
+                            }
+
+                            function u(e) {
+                                var t;
+                                e.done ? a(e.value) : ((t = e.value) instanceof r ? t : new r(function(e) {
+                                    e(t)
+                                })).then(s, n)
+                            }
+                            u((i = i.apply(e, t || [])).next())
+                        })
+                    },
+                    a = this && this.__generator || function(e, t) {
+                        var r, i, a, o, s = {
+                            label: 0,
+                            sent: function() {
+                                if (1 & a[0]) throw a[1];
+                                return a[1]
+                            },
+                            trys: [],
+                            ops: []
+                        };
+                        return o = {
+                            next: n(0),
+                            throw: n(1),
+                            return: n(2)
+                        }, "function" == typeof Symbol && (o[Symbol.iterator] = function() {
+                            return this
+                        }), o;
+
+                        function n(n) {
+                            return function(u) {
+                                return function n(u) {
+                                    if (r) throw TypeError("Generator is already executing.");
+                                    for (; o && (o = 0, u[0] && (s = 0)), s;) try {
+                                        if (r = 1, i && (a = 2 & u[0] ? i.return : u[0] ? i.throw || ((a = i.return) && a.call(i), 0) : i.next) && !(a = a.call(i, u[1])).done) return a;
+                                        switch (i = 0, a && (u = [2 & u[0], a.value]), u[0]) {
+                                            case 0:
+                                            case 1:
+                                                a = u;
+                                                break;
+                                            case 4:
+                                                return s.label++, {
+                                                    value: u[1],
+                                                    done: !1
+                                                };
+                                            case 5:
+                                                s.label++, i = u[1], u = [0];
+                                                continue;
+                                            case 7:
+                                                u = s.ops.pop(), s.trys.pop();
+                                                continue;
+                                            default:
+                                                if (!(a = (a = s.trys).length > 0 && a[a.length - 1]) && (6 === u[0] || 2 === u[0])) {
+                                                    s = 0;
+                                                    continue
+                                                }
+                                                if (3 === u[0] && (!a || u[1] > a[0] && u[1] < a[3])) {
+                                                    s.label = u[1];
+                                                    break
+                                                }
+                                                if (6 === u[0] && s.label < a[1]) {
+                                                    s.label = a[1], a = u;
+                                                    break
+                                                }
+                                                if (a && s.label < a[2]) {
+                                                    s.label = a[2], s.ops.push(u);
+                                                    break
+                                                }
+                                                a[2] && s.ops.pop(), s.trys.pop();
+                                                continue
+                                        }
+                                        u = t.call(e, s)
+                                    } catch (l) {
+                                        u = [6, l], i = 0
+                                    } finally {
+                                        r = a = 0
+                                    }
+                                    if (5 & u[0]) throw u[1];
+                                    return {
+                                        value: u[0] ? u[1] : void 0,
+                                        done: !0
+                                    }
+                                }([n, u])
+                            }
+                        }
+                    };
+                Object.defineProperty(t, "__esModule", {
+                    value: !0
+                }), t.AzureAi = void 0;
+                var o = r( /*! ./lapppal */ "./src/lapppal.ts"),
+                    s = r( /*! webm-to-wav-converter */ "./node_modules/webm-to-wav-converter/index.js"),
+                    n = r( /*! ./languagetovoicemapping */ "./src/languagetovoicemapping.ts"),
+                    u = function() {
+                        function e() {
+                            var e = document.getElementById("config").value;
+                            if ("" !== e) {
+                                var t = JSON.parse(e);
+                                this._openaiurl = t.openaiurl, this._openaipikey = t.openaipikey, this._ttsregion = t.ttsregion, this._ttsapikey = t.ttsapikey
+                            }
+                            this._inProgress = !1
+                        }
+                        return e.prototype.getOpenAiAnswer = function(e) {
+                            return i(this, void 0, void 0, function() {
+                                var t, r, i, s, n, u;
+                                return a(this, function(a) {
+                                    switch (a.label) {
+                                        case 0:
+                                            if (void 0 === this._openaiurl || this._inProgress || "" === e) return [2, ""];
+                                            return this._inProgress = !0, t = document.getElementById("conversations").value, o.LAppPal.printMessage(e), r = t + "\n\n## " + e, i = {
+                                                // prompt: "##".concat(r, "\n\n"),
+                                                messages: [{"role": "user", "content": "##".concat(r, "\n\n")}],
+                                                max_tokens: 4000,
+                                                temperature: 0,
+                                                frequency_penalty: 0,
+                                                presence_penalty: 0,
+                                                top_p: 1,
+                                                stop: ["#", ";"]
+                                            }, [4, fetch(this._openaiurl, {
+                                                method: "POST",
+                                                headers: {
+                                                    "Content-Type": "application/json",
+                                                    "api-key": this._openaipikey
+                                                },
+                                                body: JSON.stringify(i)
+                                            })];
+                                        case 1:
+                                            return [4, (s = a.sent()).json()];
+                                        case 2:
+                                            return u = (n = a.sent()).choices[0].text, o.LAppPal.printMessage(u), document.getElementById("reply").value = u, document.getElementById("conversations").value = t + "\n\n" + u, [2, u]
+                                    }
+                                })
+                            })
+                        }, e.prototype.getSpeechUrl = function(e, t) {
+                            return i(this, void 0, void 0, function() {
+                                var r, i, s, u, l, c, h;
+                                return a(this, function(a) {
+                                    switch (a.label) {
+                                        case 0:
+                                            if (void 0 === this._ttsregion) return [2];
+                                            return (r = new Headers).set("Content-Type", "application/ssml+xml"), r.set("X-Microsoft-OutputFormat", "riff-8khz-16bit-mono-pcm"), r.set("Ocp-Apim-Subscription-Key", this._ttsapikey), i = n.LANGUAGE_TO_VOICE_MAPPING_LIST.find(function(t) {
+                                                return t.voice.startsWith(e) && !1 === t.IsMale
+                                            }).voice, s = "\n<speak version='1.0' xml:lang='".concat(e, "'>\n  <voice xml:lang='").concat(e, "' xml:gender='Female' name='").concat(i, "'>\n    ").concat(t, "\n  </voice>\n</speak>"), [4, fetch("https://".concat(this._ttsregion, ".tts.speech.microsoft.com/cognitiveservices/v1"), {
+                                                method: "POST",
+                                                headers: r,
+                                                body: s
+                                            })];
+                                        case 1:
+                                            return [4, (u = a.sent()).blob()];
+                                        case 2:
+                                            return l = a.sent(), c = window.URL.createObjectURL(l), (h = document.getElementById("voice")).src = c, o.LAppPal.printMessage("Load Text to Speech url"), this._inProgress = !1, [2, c]
+                                    }
+                                })
+                            })
+                        }, e.prototype.getTextFromSpeech = function(e, t) {
+                            return i(this, void 0, void 0, function() {
+                                var r, i, n, u;
+                                return a(this, function(a) {
+                                    switch (a.label) {
+                                        case 0:
+                                            if (void 0 === this._ttsregion) return [2, ""];
+                                            return o.LAppPal.printMessage(e), (r = new Headers).set("Accept", "application/json;text/xml"), r.set("Content-Type", "audio/wav; codecs=audio/pcm; samplerate=16000"), r.set("Ocp-Apim-Subscription-Key", this._ttsapikey), [4, (0, s.getWaveBlob)(t, !1)];
+                                        case 1:
+                                            return i = a.sent(), [4, fetch("https://".concat(this._ttsregion, ".stt.speech.microsoft.com/speech/recognition/conversation/cognitiveservices/v1?language=").concat(e), {
+                                                method: "POST",
+                                                headers: r,
+                                                body: i
+                                            })];
+                                        case 2:
+                                            return [4, (n = a.sent()).json()];
+                                        case 3:
+                                            return [2, (u = a.sent()).DisplayText]
+                                    }
+                                })
+                            })
+                        }, e
+                    }();
+                t.AzureAi = u
+            },
+            "./src/languagetovoicemapping.ts": function(e, t) {
+                "use strict";
+                Object.defineProperty(t, "__esModule", {
+                    value: !0
+                }), t.LANGUAGE_TO_VOICE_MAPPING_LIST = void 0, t.LANGUAGE_TO_VOICE_MAPPING_LIST = [{
+                    voice: "af-ZA-AdriNeural",
+                    IsMale: !1
+                }, {
+                    voice: "af-ZA-WillemNeural",
+                    IsMale: !0
+                }, {
+                    voice: "am-ET-AmehaNeural",
+                    IsMale: !0
+                }, {
+                    voice: "am-ET-MekdesNeural",
+                    IsMale: !1
+                }, {
+                    voice: "ar-AE-FatimaNeural",
+                    IsMale: !1
+                }, {
+                    voice: "ar-AE-HamdanNeural",
+                    IsMale: !0
+                }, {
+                    voice: "ar-BH-AliNeural",
+                    IsMale: !0
+                }, {
+                    voice: "ar-BH-LailaNeural",
+                    IsMale: !1
+                }, {
+                    voice: "ar-DZ-AminaNeural",
+                    IsMale: !1
+                }, {
+                    voice: "ar-DZ-IsmaelNeural",
+                    IsMale: !0
+                }, {
+                    voice: "ar-EG-SalmaNeural",
+                    IsMale: !1
+                }, {
+                    voice: "ar-EG-ShakirNeural",
+                    IsMale: !0
+                }, {
+                    voice: "ar-IQ-BasselNeural",
+                    IsMale: !0
+                }, {
+                    voice: "ar-IQ-RanaNeural",
+                    IsMale: !1
+                }, {
+                    voice: "ar-JO-SanaNeural",
+                    IsMale: !1
+                }, {
+                    voice: "ar-JO-TaimNeural",
+                    IsMale: !0
+                }, {
+                    voice: "ar-KW-FahedNeural",
+                    IsMale: !0
+                }, {
+                    voice: "ar-KW-NouraNeural",
+                    IsMale: !1
+                }, {
+                    voice: "ar-LB-LaylaNeural",
+                    IsMale: !1
+                }, {
+                    voice: "ar-LB-RamiNeural",
+                    IsMale: !0
+                }, {
+                    voice: "ar-LY-ImanNeural",
+                    IsMale: !1
+                }, {
+                    voice: "ar-LY-OmarNeural",
+                    IsMale: !0
+                }, {
+                    voice: "ar-MA-JamalNeural",
+                    IsMale: !0
+                }, {
+                    voice: "ar-MA-MounaNeural",
+                    IsMale: !1
+                }, {
+                    voice: "ar-OM-AbdullahNeural",
+                    IsMale: !0
+                }, {
+                    voice: "ar-OM-AyshaNeural",
+                    IsMale: !1
+                }, {
+                    voice: "ar-QA-AmalNeural",
+                    IsMale: !1
+                }, {
+                    voice: "ar-QA-MoazNeural",
+                    IsMale: !0
+                }, {
+                    voice: "ar-SA-HamedNeural",
+                    IsMale: !0
+                }, {
+                    voice: "ar-SA-ZariyahNeural",
+                    IsMale: !1
+                }, {
+                    voice: "ar-SY-AmanyNeural",
+                    IsMale: !1
+                }, {
+                    voice: "ar-SY-LaithNeural",
+                    IsMale: !0
+                }, {
+                    voice: "ar-TN-HediNeural",
+                    IsMale: !0
+                }, {
+                    voice: "ar-TN-ReemNeural",
+                    IsMale: !1
+                }, {
+                    voice: "ar-YE-MaryamNeural",
+                    IsMale: !1
+                }, {
+                    voice: "ar-YE-SalehNeural",
+                    IsMale: !0
+                }, {
+                    voice: "az-AZ-BabekNeural",
+                    IsMale: !0
+                }, {
+                    voice: "az-AZ-BanuNeural",
+                    IsMale: !1
+                }, {
+                    voice: "bg-BG-BorislavNeural",
+                    IsMale: !0
+                }, {
+                    voice: "bg-BG-KalinaNeural",
+                    IsMale: !1
+                }, {
+                    voice: "bn-BD-NabanitaNeural",
+                    IsMale: !1
+                }, {
+                    voice: "bn-BD-PradeepNeural",
+                    IsMale: !0
+                }, {
+                    voice: "bn-IN-BashkarNeural",
+                    IsMale: !0
+                }, {
+                    voice: "bn-IN-TanishaaNeural",
+                    IsMale: !1
+                }, {
+                    voice: "bs-BA-GoranNeural",
+                    IsMale: !0
+                }, {
+                    voice: "bs-BA-VesnaNeural",
+                    IsMale: !1
+                }, {
+                    voice: "ca-ES-AlbaNeural",
+                    IsMale: !1
+                }, {
+                    voice: "ca-ES-EnricNeural",
+                    IsMale: !0
+                }, {
+                    voice: "ca-ES-JoanaNeural",
+                    IsMale: !1
+                }, {
+                    voice: "cs-CZ-AntoninNeural",
+                    IsMale: !0
+                }, {
+                    voice: "cs-CZ-VlastaNeural",
+                    IsMale: !1
+                }, {
+                    voice: "cy-GB-AledNeural",
+                    IsMale: !0
+                }, {
+                    voice: "cy-GB-NiaNeural",
+                    IsMale: !1
+                }, {
+                    voice: "da-DK-ChristelNeural",
+                    IsMale: !1
+                }, {
+                    voice: "da-DK-JeppeNeural",
+                    IsMale: !0
+                }, {
+                    voice: "de-AT-IngridNeural",
+                    IsMale: !1
+                }, {
+                    voice: "de-AT-JonasNeural",
+                    IsMale: !0
+                }, {
+                    voice: "de-CH-JanNeural",
+                    IsMale: !0
+                }, {
+                    voice: "de-CH-LeniNeural",
+                    IsMale: !1
+                }, {
+                    voice: "de-DE-AmalaNeural",
+                    IsMale: !1
+                }, {
+                    voice: "de-DE-BerndNeural",
+                    IsMale: !0
+                }, {
+                    voice: "de-DE-ChristophNeural",
+                    IsMale: !0
+                }, {
+                    voice: "de-DE-ConradNeural",
+                    IsMale: !0
+                }, {
+                    voice: "de-DE-ElkeNeural",
+                    IsMale: !1
+                }, {
+                    voice: "de-DE-GiselaNeural",
+                    IsMale: !1
+                }, {
+                    voice: "de-DE-KasperNeural",
+                    IsMale: !0
+                }, {
+                    voice: "de-DE-KatjaNeural",
+                    IsMale: !1
+                }, {
+                    voice: "de-DE-KillianNeural",
+                    IsMale: !0
+                }, {
+                    voice: "de-DE-KlarissaNeural",
+                    IsMale: !1
+                }, {
+                    voice: "de-DE-KlausNeural",
+                    IsMale: !0
+                }, {
+                    voice: "de-DE-LouisaNeural",
+                    IsMale: !1
+                }, {
+                    voice: "de-DE-MajaNeural",
+                    IsMale: !1
+                }, {
+                    voice: "de-DE-RalfNeural",
+                    IsMale: !0
+                }, {
+                    voice: "de-DE-TanjaNeural",
+                    IsMale: !1
+                }, {
+                    voice: "el-GR-AthinaNeural",
+                    IsMale: !1
+                }, {
+                    voice: "el-GR-NestorasNeural",
+                    IsMale: !0
+                }, {
+                    voice: "en-AU-AnnetteNeural",
+                    IsMale: !1
+                }, {
+                    voice: "en-AU-CarlyNeural",
+                    IsMale: !1
+                }, {
+                    voice: "en-AU-DarrenNeural",
+                    IsMale: !0
+                }, {
+                    voice: "en-AU-DuncanNeural",
+                    IsMale: !0
+                }, {
+                    voice: "en-AU-ElsieNeural",
+                    IsMale: !1
+                }, {
+                    voice: "en-AU-FreyaNeural",
+                    IsMale: !1
+                }, {
+                    voice: "en-AU-JoanneNeural",
+                    IsMale: !1
+                }, {
+                    voice: "en-AU-KenNeural",
+                    IsMale: !0
+                }, {
+                    voice: "en-AU-KimNeural",
+                    IsMale: !1
+                }, {
+                    voice: "en-AU-NatashaNeural",
+                    IsMale: !1
+                }, {
+                    voice: "en-AU-NeilNeural",
+                    IsMale: !0
+                }, {
+                    voice: "en-AU-TimNeural",
+                    IsMale: !0
+                }, {
+                    voice: "en-AU-TinaNeural",
+                    IsMale: !1
+                }, {
+                    voice: "en-AU-WilliamNeural",
+                    IsMale: !0
+                }, {
+                    voice: "en-CA-ClaraNeural",
+                    IsMale: !1
+                }, {
+                    voice: "en-CA-LiamNeural",
+                    IsMale: !0
+                }, {
+                    voice: "en-GB-AbbiNeural",
+                    IsMale: !1
+                }, {
+                    voice: "en-GB-AlfieNeural",
+                    IsMale: !0
+                }, {
+                    voice: "en-GB-BellaNeural",
+                    IsMale: !1
+                }, {
+                    voice: "en-GB-ElliotNeural",
+                    IsMale: !0
+                }, {
+                    voice: "en-GB-EthanNeural",
+                    IsMale: !0
+                }, {
+                    voice: "en-GB-HollieNeural",
+                    IsMale: !1
+                }, {
+                    voice: "en-GB-LibbyNeural",
+                    IsMale: !1
+                }, {
+                    voice: "en-GB-MaisieNeural",
+                    IsMale: !1
+                }, {
+                    voice: "en-GB-NoahNeural",
+                    IsMale: !0
+                }, {
+                    voice: "en-GB-OliverNeural",
+                    IsMale: !0
+                }, {
+                    voice: "en-GB-OliviaNeural",
+                    IsMale: !1
+                }, {
+                    voice: "en-GB-RyanNeural",
+                    IsMale: !0
+                }, {
+                    voice: "en-GB-SoniaNeural",
+                    IsMale: !1
+                }, {
+                    voice: "en-GB-ThomasNeural",
+                    IsMale: !0
+                }, {
+                    voice: "en-HK-SamNeural",
+                    IsMale: !0
+                }, {
+                    voice: "en-HK-YanNeural",
+                    IsMale: !1
+                }, {
+                    voice: "en-IE-ConnorNeural",
+                    IsMale: !0
+                }, {
+                    voice: "en-IE-EmilyNeural",
+                    IsMale: !1
+                }, {
+                    voice: "en-IN-NeerjaNeural",
+                    IsMale: !1
+                }, {
+                    voice: "en-IN-PrabhatNeural",
+                    IsMale: !0
+                }, {
+                    voice: "en-KE-AsiliaNeural",
+                    IsMale: !1
+                }, {
+                    voice: "en-KE-ChilembaNeural",
+                    IsMale: !0
+                }, {
+                    voice: "en-NG-AbeoNeural",
+                    IsMale: !0
+                }, {
+                    voice: "en-NG-EzinneNeural",
+                    IsMale: !1
+                }, {
+                    voice: "en-NZ-MitchellNeural",
+                    IsMale: !0
+                }, {
+                    voice: "en-NZ-MollyNeural",
+                    IsMale: !1
+                }, {
+                    voice: "en-PH-JamesNeural",
+                    IsMale: !0
+                }, {
+                    voice: "en-PH-RosaNeural",
+                    IsMale: !1
+                }, {
+                    voice: "en-SG-LunaNeural",
+                    IsMale: !1
+                }, {
+                    voice: "en-SG-WayneNeural",
+                    IsMale: !0
+                }, {
+                    voice: "en-TZ-ElimuNeural",
+                    IsMale: !0
+                }, {
+                    voice: "en-TZ-ImaniNeural",
+                    IsMale: !1
+                }, {
+                    voice: "en-US-AmberNeural",
+                    IsMale: !1
+                }, {
+                    voice: "en-US-AnaNeural",
+                    IsMale: !1
+                }, {
+                    voice: "en-US-AriaNeural",
+                    IsMale: !1
+                }, {
+                    voice: "en-US-AshleyNeural",
+                    IsMale: !1
+                }, {
+                    voice: "en-US-BrandonNeural",
+                    IsMale: !0
+                }, {
+                    voice: "en-US-ChristopherNeural",
+                    IsMale: !0
+                }, {
+                    voice: "en-US-CoraNeural",
+                    IsMale: !1
+                }, {
+                    voice: "en-US-DavisNeural",
+                    IsMale: !0
+                }, {
+                    voice: "en-US-ElizabethNeural",
+                    IsMale: !1
+                }, {
+                    voice: "en-US-EricNeural",
+                    IsMale: !0
+                }, {
+                    voice: "en-US-GuyNeural",
+                    IsMale: !0
+                }, {
+                    voice: "en-US-JacobNeural",
+                    IsMale: !0
+                }, {
+                    voice: "en-US-JaneNeural",
+                    IsMale: !1
+                }, {
+                    voice: "en-US-JasonNeural",
+                    IsMale: !0
+                }, {
+                    voice: "en-US-JennyMultilingualNeural",
+                    IsMale: !1
+                }, {
+                    voice: "en-US-JennyNeural",
+                    IsMale: !1
+                }, {
+                    voice: "en-US-MichelleNeural",
+                    IsMale: !1
+                }, {
+                    voice: "en-US-MonicaNeural",
+                    IsMale: !1
+                }, {
+                    voice: "en-US-NancyNeural",
+                    IsMale: !1
+                }, {
+                    voice: "en-US-RogerNeural",
+                    IsMale: !0
+                }, {
+                    voice: "en-US-SaraNeural",
+                    IsMale: !1
+                }, {
+                    voice: "en-US-SteffanNeural",
+                    IsMale: !0
+                }, {
+                    voice: "en-US-TonyNeural",
+                    IsMale: !0
+                }, {
+                    voice: "en-ZA-LeahNeural",
+                    IsMale: !1
+                }, {
+                    voice: "en-ZA-LukeNeural",
+                    IsMale: !0
+                }, {
+                    voice: "es-AR-ElenaNeural",
+                    IsMale: !1
+                }, {
+                    voice: "es-AR-TomasNeural",
+                    IsMale: !0
+                }, {
+                    voice: "es-BO-MarceloNeural",
+                    IsMale: !0
+                }, {
+                    voice: "es-BO-SofiaNeural",
+                    IsMale: !1
+                }, {
+                    voice: "es-CL-CatalinaNeural",
+                    IsMale: !1
+                }, {
+                    voice: "es-CL-LorenzoNeural",
+                    IsMale: !0
+                }, {
+                    voice: "es-CO-GonzaloNeural",
+                    IsMale: !0
+                }, {
+                    voice: "es-CO-SalomeNeural",
+                    IsMale: !1
+                }, {
+                    voice: "es-CR-JuanNeural",
+                    IsMale: !0
+                }, {
+                    voice: "es-CR-MariaNeural",
+                    IsMale: !1
+                }, {
+                    voice: "es-CU-BelkysNeural",
+                    IsMale: !1
+                }, {
+                    voice: "es-CU-ManuelNeural",
+                    IsMale: !0
+                }, {
+                    voice: "es-DO-EmilioNeural",
+                    IsMale: !0
+                }, {
+                    voice: "es-DO-RamonaNeural",
+                    IsMale: !1
+                }, {
+                    voice: "es-EC-AndreaNeural",
+                    IsMale: !1
+                }, {
+                    voice: "es-EC-LuisNeural",
+                    IsMale: !0
+                }, {
+                    voice: "es-ES-AbrilNeural",
+                    IsMale: !1
+                }, {
+                    voice: "es-ES-AlvaroNeural",
+                    IsMale: !0
+                }, {
+                    voice: "es-ES-ArnauNeural",
+                    IsMale: !0
+                }, {
+                    voice: "es-ES-DarioNeural",
+                    IsMale: !0
+                }, {
+                    voice: "es-ES-EliasNeural",
+                    IsMale: !0
+                }, {
+                    voice: "es-ES-ElviraNeural",
+                    IsMale: !1
+                }, {
+                    voice: "es-ES-EstrellaNeural",
+                    IsMale: !1
+                }, {
+                    voice: "es-ES-IreneNeural",
+                    IsMale: !1
+                }, {
+                    voice: "es-ES-LaiaNeural",
+                    IsMale: !1
+                }, {
+                    voice: "es-ES-LiaNeural",
+                    IsMale: !1
+                }, {
+                    voice: "es-ES-NilNeural",
+                    IsMale: !0
+                }, {
+                    voice: "es-ES-SaulNeural",
+                    IsMale: !0
+                }, {
+                    voice: "es-ES-TeoNeural",
+                    IsMale: !0
+                }, {
+                    voice: "es-ES-TrianaNeural",
+                    IsMale: !1
+                }, {
+                    voice: "es-ES-VeraNeural",
+                    IsMale: !1
+                }, {
+                    voice: "es-GQ-JavierNeural",
+                    IsMale: !0
+                }, {
+                    voice: "es-GQ-TeresaNeural",
+                    IsMale: !1
+                }, {
+                    voice: "es-GT-AndresNeural",
+                    IsMale: !0
+                }, {
+                    voice: "es-GT-MartaNeural",
+                    IsMale: !1
+                }, {
+                    voice: "es-HN-CarlosNeural",
+                    IsMale: !0
+                }, {
+                    voice: "es-HN-KarlaNeural",
+                    IsMale: !1
+                }, {
+                    voice: "es-MX-BeatrizNeural",
+                    IsMale: !1
+                }, {
+                    voice: "es-MX-CandelaNeural",
+                    IsMale: !1
+                }, {
+                    voice: "es-MX-CarlotaNeural",
+                    IsMale: !1
+                }, {
+                    voice: "es-MX-CecilioNeural",
+                    IsMale: !0
+                }, {
+                    voice: "es-MX-DaliaNeural",
+                    IsMale: !1
+                }, {
+                    voice: "es-MX-GerardoNeural",
+                    IsMale: !0
+                }, {
+                    voice: "es-MX-JorgeNeural",
+                    IsMale: !0
+                }, {
+                    voice: "es-MX-LarissaNeural",
+                    IsMale: !1
+                }, {
+                    voice: "es-MX-LibertoNeural",
+                    IsMale: !0
+                }, {
+                    voice: "es-MX-LucianoNeural",
+                    IsMale: !0
+                }, {
+                    voice: "es-MX-MarinaNeural",
+                    IsMale: !1
+                }, {
+                    voice: "es-MX-NuriaNeural",
+                    IsMale: !1
+                }, {
+                    voice: "es-MX-PelayoNeural",
+                    IsMale: !0
+                }, {
+                    voice: "es-MX-RenataNeural",
+                    IsMale: !1
+                }, {
+                    voice: "es-MX-YagoNeural",
+                    IsMale: !0
+                }, {
+                    voice: "es-NI-FedericoNeural",
+                    IsMale: !0
+                }, {
+                    voice: "es-NI-YolandaNeural",
+                    IsMale: !1
+                }, {
+                    voice: "es-PA-MargaritaNeural",
+                    IsMale: !1
+                }, {
+                    voice: "es-PA-RobertoNeural",
+                    IsMale: !0
+                }, {
+                    voice: "es-PE-AlexNeural",
+                    IsMale: !0
+                }, {
+                    voice: "es-PE-CamilaNeural",
+                    IsMale: !1
+                }, {
+                    voice: "es-PR-KarinaNeural",
+                    IsMale: !1
+                }, {
+                    voice: "es-PR-VictorNeural",
+                    IsMale: !0
+                }, {
+                    voice: "es-PY-MarioNeural",
+                    IsMale: !0
+                }, {
+                    voice: "es-PY-TaniaNeural",
+                    IsMale: !1
+                }, {
+                    voice: "es-SV-LorenaNeural",
+                    IsMale: !1
+                }, {
+                    voice: "es-SV-RodrigoNeural",
+                    IsMale: !0
+                }, {
+                    voice: "es-US-AlonsoNeural",
+                    IsMale: !0
+                }, {
+                    voice: "es-US-PalomaNeural",
+                    IsMale: !1
+                }, {
+                    voice: "es-UY-MateoNeural",
+                    IsMale: !0
+                }, {
+                    voice: "es-UY-ValentinaNeural",
+                    IsMale: !1
+                }, {
+                    voice: "es-VE-PaolaNeural",
+                    IsMale: !1
+                }, {
+                    voice: "es-VE-SebastianNeural",
+                    IsMale: !0
+                }, {
+                    voice: "et-EE-AnuNeural",
+                    IsMale: !1
+                }, {
+                    voice: "et-EE-KertNeural",
+                    IsMale: !0
+                }, {
+                    voice: "eu-ES-AinhoaNeural",
+                    IsMale: !1
+                }, {
+                    voice: "eu-ES-AnderNeural",
+                    IsMale: !0
+                }, {
+                    voice: "fa-IR-DilaraNeural",
+                    IsMale: !1
+                }, {
+                    voice: "fa-IR-FaridNeural",
+                    IsMale: !0
+                }, {
+                    voice: "fi-FI-HarriNeural",
+                    IsMale: !0
+                }, {
+                    voice: "fi-FI-NooraNeural",
+                    IsMale: !1
+                }, {
+                    voice: "fi-FI-SelmaNeural",
+                    IsMale: !1
+                }, {
+                    voice: "fil-PH-AngeloNeural",
+                    IsMale: !0
+                }, {
+                    voice: "fil-PH-BlessicaNeural",
+                    IsMale: !1
+                }, {
+                    voice: "fr-BE-CharlineNeural",
+                    IsMale: !1
+                }, {
+                    voice: "fr-BE-GerardNeural",
+                    IsMale: !0
+                }, {
+                    voice: "fr-CA-AntoineNeural",
+                    IsMale: !0
+                }, {
+                    voice: "fr-CA-JeanNeural",
+                    IsMale: !0
+                }, {
+                    voice: "fr-CA-SylvieNeural",
+                    IsMale: !1
+                }, {
+                    voice: "fr-CH-ArianeNeural",
+                    IsMale: !1
+                }, {
+                    voice: "fr-CH-FabriceNeural",
+                    IsMale: !0
+                }, {
+                    voice: "fr-FR-AlainNeural",
+                    IsMale: !0
+                }, {
+                    voice: "fr-FR-BrigitteNeural",
+                    IsMale: !1
+                }, {
+                    voice: "fr-FR-CelesteNeural",
+                    IsMale: !1
+                }, {
+                    voice: "fr-FR-ClaudeNeural",
+                    IsMale: !0
+                }, {
+                    voice: "fr-FR-CoralieNeural",
+                    IsMale: !1
+                }, {
+                    voice: "fr-FR-DeniseNeural",
+                    IsMale: !1
+                }, {
+                    voice: "fr-FR-EloiseNeural",
+                    IsMale: !1
+                }, {
+                    voice: "fr-FR-HenriNeural",
+                    IsMale: !0
+                }, {
+                    voice: "fr-FR-JacquelineNeural",
+                    IsMale: !1
+                }, {
+                    voice: "fr-FR-JeromeNeural",
+                    IsMale: !0
+                }, {
+                    voice: "fr-FR-JosephineNeural",
+                    IsMale: !1
+                }, {
+                    voice: "fr-FR-MauriceNeural",
+                    IsMale: !0
+                }, {
+                    voice: "fr-FR-YvesNeural",
+                    IsMale: !0
+                }, {
+                    voice: "fr-FR-YvetteNeural",
+                    IsMale: !1
+                }, {
+                    voice: "ga-IE-ColmNeural",
+                    IsMale: !0
+                }, {
+                    voice: "ga-IE-OrlaNeural",
+                    IsMale: !1
+                }, {
+                    voice: "gl-ES-RoiNeural",
+                    IsMale: !0
+                }, {
+                    voice: "gl-ES-SabelaNeural",
+                    IsMale: !1
+                }, {
+                    voice: "gu-IN-DhwaniNeural",
+                    IsMale: !1
+                }, {
+                    voice: "gu-IN-NiranjanNeural",
+                    IsMale: !0
+                }, {
+                    voice: "he-IL-AvriNeural",
+                    IsMale: !0
+                }, {
+                    voice: "he-IL-HilaNeural",
+                    IsMale: !1
+                }, {
+                    voice: "hi-IN-MadhurNeural",
+                    IsMale: !0
+                }, {
+                    voice: "hi-IN-SwaraNeural",
+                    IsMale: !1
+                }, {
+                    voice: "hr-HR-GabrijelaNeural",
+                    IsMale: !1
+                }, {
+                    voice: "hr-HR-SreckoNeural",
+                    IsMale: !0
+                }, {
+                    voice: "hu-HU-NoemiNeural",
+                    IsMale: !1
+                }, {
+                    voice: "hu-HU-TamasNeural",
+                    IsMale: !0
+                }, {
+                    voice: "hy-AM-AnahitNeural",
+                    IsMale: !1
+                }, {
+                    voice: "hy-AM-HaykNeural",
+                    IsMale: !0
+                }, {
+                    voice: "id-ID-ArdiNeural",
+                    IsMale: !0
+                }, {
+                    voice: "id-ID-GadisNeural",
+                    IsMale: !1
+                }, {
+                    voice: "is-IS-GudrunNeural",
+                    IsMale: !1
+                }, {
+                    voice: "is-IS-GunnarNeural",
+                    IsMale: !0
+                }, {
+                    voice: "it-IT-BenignoNeural",
+                    IsMale: !0
+                }, {
+                    voice: "it-IT-CalimeroNeural",
+                    IsMale: !0
+                }, {
+                    voice: "it-IT-CataldoNeural",
+                    IsMale: !0
+                }, {
+                    voice: "it-IT-DiegoNeural",
+                    IsMale: !0
+                }, {
+                    voice: "it-IT-ElsaNeural",
+                    IsMale: !1
+                }, {
+                    voice: "it-IT-FabiolaNeural",
+                    IsMale: !1
+                }, {
+                    voice: "it-IT-FiammaNeural",
+                    IsMale: !1
+                }, {
+                    voice: "it-IT-GianniNeural",
+                    IsMale: !0
+                }, {
+                    voice: "it-IT-ImeldaNeural",
+                    IsMale: !1
+                }, {
+                    voice: "it-IT-IrmaNeural",
+                    IsMale: !1
+                }, {
+                    voice: "it-IT-IsabellaNeural",
+                    IsMale: !1
+                }, {
+                    voice: "it-IT-LisandroNeural",
+                    IsMale: !0
+                }, {
+                    voice: "it-IT-PalmiraNeural",
+                    IsMale: !1
+                }, {
+                    voice: "it-IT-PierinaNeural",
+                    IsMale: !1
+                }, {
+                    voice: "it-IT-RinaldoNeural",
+                    IsMale: !0
+                }, {
+                    voice: "ja-JP-AoiNeural",
+                    IsMale: !1
+                }, {
+                    voice: "ja-JP-DaichiNeural",
+                    IsMale: !0
+                }, {
+                    voice: "ja-JP-KeitaNeural",
+                    IsMale: !0
+                }, {
+                    voice: "ja-JP-MayuNeural",
+                    IsMale: !1
+                }, {
+                    voice: "ja-JP-NanamiNeural",
+                    IsMale: !1
+                }, {
+                    voice: "ja-JP-NaokiNeural",
+                    IsMale: !0
+                }, {
+                    voice: "ja-JP-ShioriNeural",
+                    IsMale: !1
+                }, {
+                    voice: "jv-ID-DimasNeural",
+                    IsMale: !0
+                }, {
+                    voice: "jv-ID-SitiNeural",
+                    IsMale: !1
+                }, {
+                    voice: "ka-GE-EkaNeural",
+                    IsMale: !1
+                }, {
+                    voice: "ka-GE-GiorgiNeural",
+                    IsMale: !0
+                }, {
+                    voice: "kk-KZ-AigulNeural",
+                    IsMale: !1
+                }, {
+                    voice: "kk-KZ-DauletNeural",
+                    IsMale: !0
+                }, {
+                    voice: "km-KH-PisethNeural",
+                    IsMale: !0
+                }, {
+                    voice: "km-KH-SreymomNeural",
+                    IsMale: !1
+                }, {
+                    voice: "kn-IN-GaganNeural",
+                    IsMale: !0
+                }, {
+                    voice: "kn-IN-SapnaNeural",
+                    IsMale: !1
+                }, {
+                    voice: "ko-KR-BongJinNeural",
+                    IsMale: !0
+                }, {
+                    voice: "ko-KR-GookMinNeural",
+                    IsMale: !0
+                }, {
+                    voice: "ko-KR-InJoonNeural",
+                    IsMale: !0
+                }, {
+                    voice: "ko-KR-JiMinNeural",
+                    IsMale: !1
+                }, {
+                    voice: "ko-KR-SeoHyeonNeural",
+                    IsMale: !1
+                }, {
+                    voice: "ko-KR-SoonBokNeural",
+                    IsMale: !1
+                }, {
+                    voice: "ko-KR-SunHiNeural",
+                    IsMale: !1
+                }, {
+                    voice: "ko-KR-YuJinNeural",
+                    IsMale: !1
+                }, {
+                    voice: "lo-LA-ChanthavongNeural",
+                    IsMale: !0
+                }, {
+                    voice: "lo-LA-KeomanyNeural",
+                    IsMale: !1
+                }, {
+                    voice: "lt-LT-LeonasNeural",
+                    IsMale: !0
+                }, {
+                    voice: "lt-LT-OnaNeural",
+                    IsMale: !1
+                }, {
+                    voice: "lv-LV-EveritaNeural",
+                    IsMale: !1
+                }, {
+                    voice: "lv-LV-NilsNeural",
+                    IsMale: !0
+                }, {
+                    voice: "mk-MK-AleksandarNeural",
+                    IsMale: !0
+                }, {
+                    voice: "mk-MK-MarijaNeural",
+                    IsMale: !1
+                }, {
+                    voice: "ml-IN-MidhunNeural",
+                    IsMale: !0
+                }, {
+                    voice: "ml-IN-SobhanaNeural",
+                    IsMale: !1
+                }, {
+                    voice: "mn-MN-BataaNeural",
+                    IsMale: !0
+                }, {
+                    voice: "mn-MN-YesuiNeural",
+                    IsMale: !1
+                }, {
+                    voice: "mr-IN-AarohiNeural",
+                    IsMale: !1
+                }, {
+                    voice: "mr-IN-ManoharNeural",
+                    IsMale: !0
+                }, {
+                    voice: "ms-MY-OsmanNeural",
+                    IsMale: !0
+                }, {
+                    voice: "ms-MY-YasminNeural",
+                    IsMale: !1
+                }, {
+                    voice: "mt-MT-GraceNeural",
+                    IsMale: !1
+                }, {
+                    voice: "mt-MT-JosephNeural",
+                    IsMale: !0
+                }, {
+                    voice: "my-MM-NilarNeural",
+                    IsMale: !1
+                }, {
+                    voice: "my-MM-ThihaNeural",
+                    IsMale: !0
+                }, {
+                    voice: "nb-NO-FinnNeural",
+                    IsMale: !0
+                }, {
+                    voice: "nb-NO-IselinNeural",
+                    IsMale: !1
+                }, {
+                    voice: "nb-NO-PernilleNeural",
+                    IsMale: !1
+                }, {
+                    voice: "ne-NP-HemkalaNeural",
+                    IsMale: !1
+                }, {
+                    voice: "ne-NP-SagarNeural",
+                    IsMale: !0
+                }, {
+                    voice: "nl-BE-ArnaudNeural",
+                    IsMale: !0
+                }, {
+                    voice: "nl-BE-DenaNeural",
+                    IsMale: !1
+                }, {
+                    voice: "nl-NL-ColetteNeural",
+                    IsMale: !1
+                }, {
+                    voice: "nl-NL-FennaNeural",
+                    IsMale: !1
+                }, {
+                    voice: "nl-NL-MaartenNeural",
+                    IsMale: !0
+                }, {
+                    voice: "pl-PL-AgnieszkaNeural",
+                    IsMale: !1
+                }, {
+                    voice: "pl-PL-MarekNeural",
+                    IsMale: !0
+                }, {
+                    voice: "pl-PL-ZofiaNeural",
+                    IsMale: !1
+                }, {
+                    voice: "ps-AF-GulNawazNeural",
+                    IsMale: !0
+                }, {
+                    voice: "ps-AF-LatifaNeural",
+                    IsMale: !1
+                }, {
+                    voice: "pt-BR-AntonioNeural",
+                    IsMale: !0
+                }, {
+                    voice: "pt-BR-BrendaNeural",
+                    IsMale: !1
+                }, {
+                    voice: "pt-BR-DonatoNeural",
+                    IsMale: !0
+                }, {
+                    voice: "pt-BR-ElzaNeural",
+                    IsMale: !1
+                }, {
+                    voice: "pt-BR-FabioNeural",
+                    IsMale: !0
+                }, {
+                    voice: "pt-BR-FranciscaNeural",
+                    IsMale: !1
+                }, {
+                    voice: "pt-BR-GiovannaNeural",
+                    IsMale: !1
+                }, {
+                    voice: "pt-BR-HumbertoNeural",
+                    IsMale: !0
+                }, {
+                    voice: "pt-BR-JulioNeural",
+                    IsMale: !0
+                }, {
+                    voice: "pt-BR-LeilaNeural",
+                    IsMale: !1
+                }, {
+                    voice: "pt-BR-LeticiaNeural",
+                    IsMale: !1
+                }, {
+                    voice: "pt-BR-ManuelaNeural",
+                    IsMale: !1
+                }, {
+                    voice: "pt-BR-NicolauNeural",
+                    IsMale: !0
+                }, {
+                    voice: "pt-BR-ValerioNeural",
+                    IsMale: !0
+                }, {
+                    voice: "pt-BR-YaraNeural",
+                    IsMale: !1
+                }, {
+                    voice: "pt-PT-DuarteNeural",
+                    IsMale: !0
+                }, {
+                    voice: "pt-PT-FernandaNeural",
+                    IsMale: !1
+                }, {
+                    voice: "pt-PT-RaquelNeural",
+                    IsMale: !1
+                }, {
+                    voice: "ro-RO-AlinaNeural",
+                    IsMale: !1
+                }, {
+                    voice: "ro-RO-EmilNeural",
+                    IsMale: !0
+                }, {
+                    voice: "ru-RU-DariyaNeural",
+                    IsMale: !1
+                }, {
+                    voice: "ru-RU-DmitryNeural",
+                    IsMale: !0
+                }, {
+                    voice: "ru-RU-SvetlanaNeural",
+                    IsMale: !1
+                }, {
+                    voice: "si-LK-SameeraNeural",
+                    IsMale: !0
+                }, {
+                    voice: "si-LK-ThiliniNeural",
+                    IsMale: !1
+                }, {
+                    voice: "sk-SK-LukasNeural",
+                    IsMale: !0
+                }, {
+                    voice: "sk-SK-ViktoriaNeural",
+                    IsMale: !1
+                }, {
+                    voice: "sl-SI-PetraNeural",
+                    IsMale: !1
+                }, {
+                    voice: "sl-SI-RokNeural",
+                    IsMale: !0
+                }, {
+                    voice: "so-SO-MuuseNeural",
+                    IsMale: !0
+                }, {
+                    voice: "so-SO-UbaxNeural",
+                    IsMale: !1
+                }, {
+                    voice: "sq-AL-AnilaNeural",
+                    IsMale: !1
+                }, {
+                    voice: "sq-AL-IlirNeural",
+                    IsMale: !0
+                }, {
+                    voice: "sr-RS-NicholasNeural",
+                    IsMale: !0
+                }, {
+                    voice: "sr-RS-SophieNeural",
+                    IsMale: !1
+                }, {
+                    voice: "su-ID-JajangNeural",
+                    IsMale: !0
+                }, {
+                    voice: "su-ID-TutiNeural",
+                    IsMale: !1
+                }, {
+                    voice: "sv-SE-HilleviNeural",
+                    IsMale: !1
+                }, {
+                    voice: "sv-SE-MattiasNeural",
+                    IsMale: !0
+                }, {
+                    voice: "sv-SE-SofieNeural",
+                    IsMale: !1
+                }, {
+                    voice: "sw-KE-RafikiNeural",
+                    IsMale: !0
+                }, {
+                    voice: "sw-KE-ZuriNeural",
+                    IsMale: !1
+                }, {
+                    voice: "sw-TZ-DaudiNeural",
+                    IsMale: !0
+                }, {
+                    voice: "sw-TZ-RehemaNeural",
+                    IsMale: !1
+                }, {
+                    voice: "ta-IN-PallaviNeural",
+                    IsMale: !1
+                }, {
+                    voice: "ta-IN-ValluvarNeural",
+                    IsMale: !0
+                }, {
+                    voice: "ta-LK-KumarNeural",
+                    IsMale: !0
+                }, {
+                    voice: "ta-LK-SaranyaNeural",
+                    IsMale: !1
+                }, {
+                    voice: "ta-MY-KaniNeural",
+                    IsMale: !1
+                }, {
+                    voice: "ta-MY-SuryaNeural",
+                    IsMale: !0
+                }, {
+                    voice: "ta-SG-AnbuNeural",
+                    IsMale: !0
+                }, {
+                    voice: "ta-SG-VenbaNeural",
+                    IsMale: !1
+                }, {
+                    voice: "te-IN-MohanNeural",
+                    IsMale: !0
+                }, {
+                    voice: "te-IN-ShrutiNeural",
+                    IsMale: !1
+                }, {
+                    voice: "th-TH-AcharaNeural",
+                    IsMale: !1
+                }, {
+                    voice: "th-TH-NiwatNeural",
+                    IsMale: !0
+                }, {
+                    voice: "th-TH-PremwadeeNeural",
+                    IsMale: !1
+                }, {
+                    voice: "tr-TR-AhmetNeural",
+                    IsMale: !0
+                }, {
+                    voice: "tr-TR-EmelNeural",
+                    IsMale: !1
+                }, {
+                    voice: "uk-UA-OstapNeural",
+                    IsMale: !0
+                }, {
+                    voice: "uk-UA-PolinaNeural",
+                    IsMale: !1
+                }, {
+                    voice: "ur-IN-GulNeural",
+                    IsMale: !1
+                }, {
+                    voice: "ur-IN-SalmanNeural",
+                    IsMale: !0
+                }, {
+                    voice: "ur-PK-AsadNeural",
+                    IsMale: !0
+                }, {
+                    voice: "ur-PK-UzmaNeural",
+                    IsMale: !1
+                }, {
+                    voice: "uz-UZ-MadinaNeural",
+                    IsMale: !1
+                }, {
+                    voice: "uz-UZ-SardorNeural",
+                    IsMale: !0
+                }, {
+                    voice: "vi-VN-HoaiMyNeural",
+                    IsMale: !1
+                }, {
+                    voice: "vi-VN-NamMinhNeural",
+                    IsMale: !0
+                }, {
+                    voice: "wuu-CN-XiaotongNeural",
+                    IsMale: !1
+                }, {
+                    voice: "wuu-CN-YunzheNeural",
+                    IsMale: !0
+                }, {
+                    voice: "yue-CN-XiaoMinNeural",
+                    IsMale: !1
+                }, {
+                    voice: "yue-CN-YunSongNeural",
+                    IsMale: !0
+                }, {
+                    voice: "zh-CN-XiaochenNeural",
+                    IsMale: !1
+                }, {
+                    voice: "zh-CN-XiaohanNeural",
+                    IsMale: !1
+                }, {
+                    voice: "zh-CN-XiaomengNeural",
+                    IsMale: !1
+                }, {
+                    voice: "zh-CN-XiaomoNeural",
+                    IsMale: !1
+                }, {
+                    voice: "zh-CN-XiaoqiuNeural",
+                    IsMale: !1
+                }, {
+                    voice: "zh-CN-XiaoruiNeural",
+                    IsMale: !1
+                }, {
+                    voice: "zh-CN-XiaoshuangNeural",
+                    IsMale: !1
+                }, {
+                    voice: "zh-CN-XiaoxiaoNeural",
+                    IsMale: !1
+                }, {
+                    voice: "zh-CN-XiaoxuanNeural",
+                    IsMale: !1
+                }, {
+                    voice: "zh-CN-XiaoyanNeural",
+                    IsMale: !1
+                }, {
+                    voice: "zh-CN-XiaoyiNeural",
+                    IsMale: !1
+                }, {
+                    voice: "zh-CN-XiaoyouNeural",
+                    IsMale: !1
+                }, {
+                    voice: "zh-CN-XiaozhenNeural",
+                    IsMale: !1
+                }, {
+                    voice: "zh-CN-YunfengNeural",
+                    IsMale: !0
+                }, {
+                    voice: "zh-CN-YunhaoNeural",
+                    IsMale: !0
+                }, {
+                    voice: "zh-CN-YunjianNeural",
+                    IsMale: !0
+                }, {
+                    voice: "zh-CN-YunxiaNeural",
+                    IsMale: !0
+                }, {
+                    voice: "zh-CN-YunxiNeural",
+                    IsMale: !0
+                }, {
+                    voice: "zh-CN-YunyangNeural",
+                    IsMale: !0
+                }, {
+                    voice: "zh-CN-YunyeNeural",
+                    IsMale: !0
+                }, {
+                    voice: "zh-CN-YunzeNeural",
+                    IsMale: !0
+                }, {
+                    voice: "zh-CN-henan-YundengNeural",
+                    IsMale: !0
+                }, {
+                    voice: "zh-CN-liaoning-XiaobeiNeural",
+                    IsMale: !1
+                }, {
+                    voice: "zh-CN-shaanxi-XiaoniNeural",
+                    IsMale: !1
+                }, {
+                    voice: "zh-CN-shandong-YunxiangNeural",
+                    IsMale: !0
+                }, {
+                    voice: "zh-CN-sichuan-YunxiNeural",
+                    IsMale: !0
+                }, {
+                    voice: "zh-HK-HiuGaaiNeural",
+                    IsMale: !1
+                }, {
+                    voice: "zh-HK-HiuMaanNeural",
+                    IsMale: !1
+                }, {
+                    voice: "zh-HK-WanLungNeural",
+                    IsMale: !0
+                }, {
+                    voice: "zh-TW-HsiaoChenNeural",
+                    IsMale: !1
+                }, {
+                    voice: "zh-TW-HsiaoYuNeural",
+                    IsMale: !1
+                }, {
+                    voice: "zh-TW-YunJheNeural",
+                    IsMale: !0
+                }, {
+                    voice: "zu-ZA-ThandoNeural",
+                    IsMale: !1
+                }, {
+                    voice: "zu-ZA-ThembaNeural",
+                    IsMale: !0
+                }, ]
+            },
+            "./src/lappdefine.ts": function(e, t, r) {
+                "use strict";
+                Object.defineProperty(t, "__esModule", {
+                    value: !0
+                }), t.RenderTargetHeight = t.RenderTargetWidth = t.CubismLoggingLevel = t.DebugTouchLogEnable = t.DebugLogEnable = t.PriorityForce = t.PriorityNormal = t.PriorityIdle = t.PriorityNone = t.HitAreaNameBody = t.HitAreaNameHead = t.MotionGroupTapBody = t.MotionGroupIdle = t.ModelDirSize = t.ModelDir = t.PowerImageName = t.GearImageName = t.BackImageName = t.ResourcesPath = t.ViewLogicalMaxTop = t.ViewLogicalMaxBottom = t.ViewLogicalMaxRight = t.ViewLogicalMaxLeft = t.ViewLogicalTop = t.ViewLogicalBottom = t.ViewLogicalRight = t.ViewLogicalLeft = t.ViewMinScale = t.ViewMaxScale = t.ViewScale = t.CanvasSize = void 0;
+                var i = r( /*! @framework/live2dcubismframework */ "../../../Framework/src/live2dcubismframework.ts");
+                t.CanvasSize = "auto", t.ViewScale = 1, t.ViewMaxScale = 2, t.ViewMinScale = .8, t.ViewLogicalLeft = -1, t.ViewLogicalRight = 1, t.ViewLogicalBottom = -1, t.ViewLogicalTop = 1, t.ViewLogicalMaxLeft = -2, t.ViewLogicalMaxRight = 2, t.ViewLogicalMaxBottom = -2, t.ViewLogicalMaxTop = 2, t.ResourcesPath = "./Resources/", t.BackImageName = "back_class_normal.png", t.GearImageName = "icon_gear.png", t.PowerImageName = "CloseNormal.png", t.ModelDir = ["Haru", "Hiyori", "Mark", "Natori", "Rice", "Mao"], t.ModelDirSize = t.ModelDir.length, t.MotionGroupIdle = "Idle", t.MotionGroupTapBody = "TapBody", t.HitAreaNameHead = "Head", t.HitAreaNameBody = "Body", t.PriorityNone = 0, t.PriorityIdle = 1, t.PriorityNormal = 2, t.PriorityForce = 3, t.DebugLogEnable = !0, t.DebugTouchLogEnable = !1, t.CubismLoggingLevel = i.LogLevel.LogLevel_Verbose, t.RenderTargetWidth = 1900, t.RenderTargetHeight = 1e3
+            },
+            "./src/lappdelegate.ts": function(e, t, r) {
+                "use strict";
+                var i = this && this.__createBinding || (Object.create ? function(e, t, r, i) {
+                        void 0 === i && (i = r);
+                        var a = Object.getOwnPropertyDescriptor(t, r);
+                        (!a || ("get" in a ? !t.__esModule : a.writable || a.configurable)) && (a = {
+                            enumerable: !0,
+                            get: function() {
+                                return t[r]
+                            }
+                        }), Object.defineProperty(e, i, a)
+                    } : function(e, t, r, i) {
+                        void 0 === i && (i = r), e[i] = t[r]
+                    }),
+                    a = this && this.__setModuleDefault || (Object.create ? function(e, t) {
+                        Object.defineProperty(e, "default", {
+                            enumerable: !0,
+                            value: t
+                        })
+                    } : function(e, t) {
+                        e.default = t
+                    }),
+                    o = this && this.__importStar || function(e) {
+                        if (e && e.__esModule) return e;
+                        var t = {};
+                        if (null != e)
+                            for (var r in e) "default" !== r && Object.prototype.hasOwnProperty.call(e, r) && i(t, e, r);
+                        return a(t, e), t
+                    };
+                Object.defineProperty(t, "__esModule", {
+                    value: !0
+                }), t.LAppDelegate = t.frameBuffer = t.gl = t.s_instance = t.canvas = void 0;
+                var s = r( /*! @framework/live2dcubismframework */ "../../../Framework/src/live2dcubismframework.ts"),
+                    n = o(r( /*! ./lappdefine */ "./src/lappdefine.ts")),
+                    u = r( /*! ./lapplive2dmanager */ "./src/lapplive2dmanager.ts"),
+                    l = r( /*! ./lapppal */ "./src/lapppal.ts"),
+                    c = r( /*! ./lapptexturemanager */ "./src/lapptexturemanager.ts"),
+                    h = r( /*! ./lappview */ "./src/lappview.ts");
+                t.canvas = null, t.s_instance = null, t.gl = null, t.frameBuffer = null;
+                var p = function() {
+                    function e() {
+                        this._captured = !1, this._mouseX = 0, this._mouseY = 0, this._isEnd = !1, this._cubismOption = new s.Option, this._view = new h.LAppView, this._textureManager = new c.LAppTextureManager
+                    }
+                    return e.getInstance = function() {
+                        return null == t.s_instance && (t.s_instance = new e), t.s_instance
+                    }, e.releaseInstance = function() {
+                        null != t.s_instance && t.s_instance.release(), t.s_instance = null
+                    }, e.prototype.initialize = function() {
+                        return (t.canvas = document.createElement("canvas"), "auto" === n.CanvasSize ? this._resizeCanvas() : (t.canvas.width = n.CanvasSize.width, t.canvas.height = n.CanvasSize.height), t.gl = t.canvas.getContext("webgl") || t.canvas.getContext("experimental-webgl"), t.gl) ? (document.body.appendChild(t.canvas), t.frameBuffer || (t.frameBuffer = t.gl.getParameter(t.gl.FRAMEBUFFER_BINDING)), t.gl.enable(t.gl.BLEND), t.gl.blendFunc(t.gl.SRC_ALPHA, t.gl.ONE_MINUS_SRC_ALPHA), "ontouchend" in t.canvas ? (t.canvas.ontouchstart = f, t.canvas.ontouchmove = y, t.canvas.ontouchend = v, t.canvas.ontouchcancel = $) : (t.canvas.onmousedown = m, t.canvas.onmousemove = d, t.canvas.onmouseup = g), this._view.initialize(), this.initializeCubism(), !0) : (alert("Cannot initialize WebGL. This browser does not support."), t.gl = null, document.body.innerHTML = "This browser does not support the <code>&lt;canvas&gt;</code> element.", !1)
+                    }, e.prototype.onResize = function() {
+                        this._resizeCanvas(), this._view.initialize(), this._view.initializeSprite();
+                        var e = [0, 0, t.canvas.width, t.canvas.height];
+                        t.gl.viewport(e[0], e[1], e[2], e[3])
+                    }, e.prototype.release = function() {
+                        this._textureManager.release(), this._textureManager = null, this._view.release(), this._view = null, u.LAppLive2DManager.releaseInstance(), s.CubismFramework.dispose()
+                    }, e.prototype.run = function() {
+                        var e = this,
+                            r = function() {
+                                null != t.s_instance && (l.LAppPal.updateTime(), t.gl.clearColor(0, 0, 0, 1), t.gl.enable(t.gl.DEPTH_TEST), t.gl.depthFunc(t.gl.LEQUAL), t.gl.clear(t.gl.COLOR_BUFFER_BIT | t.gl.DEPTH_BUFFER_BIT), t.gl.clearDepth(1), t.gl.enable(t.gl.BLEND), t.gl.blendFunc(t.gl.SRC_ALPHA, t.gl.ONE_MINUS_SRC_ALPHA), e._view.render(), requestAnimationFrame(r))
+                            };
+                        r()
+                    }, e.prototype.createShader = function() {
+                        var e = t.gl.createShader(t.gl.VERTEX_SHADER);
+                        if (null == e) return l.LAppPal.printMessage("failed to create vertexShader"), null;
+                        t.gl.shaderSource(e, "precision mediump float;attribute vec3 position;attribute vec2 uv;varying vec2 vuv;void main(void){   gl_Position = vec4(position, 1.0);   vuv = uv;}"), t.gl.compileShader(e);
+                        var r = t.gl.createShader(t.gl.FRAGMENT_SHADER);
+                        if (null == r) return l.LAppPal.printMessage("failed to create fragmentShader"), null;
+                        t.gl.shaderSource(r, "precision mediump float;varying vec2 vuv;uniform sampler2D texture;void main(void){   gl_FragColor = texture2D(texture, vuv);}"), t.gl.compileShader(r);
+                        var i = t.gl.createProgram();
+                        return t.gl.attachShader(i, e), t.gl.attachShader(i, r), t.gl.deleteShader(e), t.gl.deleteShader(r), t.gl.linkProgram(i), t.gl.useProgram(i), i
+                    }, e.prototype.getView = function() {
+                        return this._view
+                    }, e.prototype.getTextureManager = function() {
+                        return this._textureManager
+                    }, e.prototype.startVoiceConversation = function(e, t) {
+                        u.LAppLive2DManager.getInstance().startVoiceConversation(e, t)
+                    }, e.prototype.initializeCubism = function() {
+                        this._cubismOption.logFunction = l.LAppPal.printMessage, this._cubismOption.loggingLevel = n.CubismLoggingLevel, s.CubismFramework.startUp(this._cubismOption), s.CubismFramework.initialize(), u.LAppLive2DManager.getInstance(), l.LAppPal.updateTime(), this._view.initializeSprite()
+                    }, e.prototype._resizeCanvas = function() {
+                        t.canvas.width = window.innerWidth, t.canvas.height = window.innerHeight
+                    }, e
+                }();
+
+                function m(e) {
+                    if (!p.getInstance()._view) {
+                        l.LAppPal.printMessage("view notfound");
+                        return
+                    }
+                    p.getInstance()._captured = !0;
+                    var t = e.pageX,
+                        r = e.pageY;
+                    p.getInstance()._view.onTouchesBegan(t, r)
+                }
+
+                function d(e) {
+                    if (p.getInstance()._captured) {
+                        if (!p.getInstance()._view) {
+                            l.LAppPal.printMessage("view notfound");
+                            return
+                        }
+                        var t = e.target.getBoundingClientRect(),
+                            r = e.clientX - t.left,
+                            i = e.clientY - t.top;
+                        p.getInstance()._view.onTouchesMoved(r, i)
+                    }
+                }
+
+                function g(e) {
+                    if (p.getInstance()._captured = !1, !p.getInstance()._view) {
+                        l.LAppPal.printMessage("view notfound");
+                        return
+                    }
+                    var t = e.target.getBoundingClientRect(),
+                        r = e.clientX - t.left,
+                        i = e.clientY - t.top;
+                    p.getInstance()._view.onTouchesEnded(r, i)
+                }
+
+                function f(e) {
+                    if (!p.getInstance()._view) {
+                        l.LAppPal.printMessage("view notfound");
+                        return
+                    }
+                    p.getInstance()._captured = !0;
+                    var t = e.changedTouches[0].pageX,
+                        r = e.changedTouches[0].pageY;
+                    p.getInstance()._view.onTouchesBegan(t, r)
+                }
+
+                function y(e) {
+                    if (p.getInstance()._captured) {
+                        if (!p.getInstance()._view) {
+                            l.LAppPal.printMessage("view notfound");
+                            return
+                        }
+                        var t = e.target.getBoundingClientRect(),
+                            r = e.changedTouches[0].clientX - t.left,
+                            i = e.changedTouches[0].clientY - t.top;
+                        p.getInstance()._view.onTouchesMoved(r, i)
+                    }
+                }
+
+                function v(e) {
+                    if (p.getInstance()._captured = !1, !p.getInstance()._view) {
+                        l.LAppPal.printMessage("view notfound");
+                        return
+                    }
+                    var t = e.target.getBoundingClientRect(),
+                        r = e.changedTouches[0].clientX - t.left,
+                        i = e.changedTouches[0].clientY - t.top;
+                    p.getInstance()._view.onTouchesEnded(r, i)
+                }
+
+                function $(e) {
+                    if (p.getInstance()._captured = !1, !p.getInstance()._view) {
+                        l.LAppPal.printMessage("view notfound");
+                        return
+                    }
+                    var t = e.target.getBoundingClientRect(),
+                        r = e.changedTouches[0].clientX - t.left,
+                        i = e.changedTouches[0].clientY - t.top;
+                    p.getInstance()._view.onTouchesEnded(r, i)
+                }
+                t.LAppDelegate = p
+            },
+            "./src/lapplive2dmanager.ts": function(e, t, r) {
+                "use strict";
+                var i = this && this.__createBinding || (Object.create ? function(e, t, r, i) {
+                        void 0 === i && (i = r);
+                        var a = Object.getOwnPropertyDescriptor(t, r);
+                        (!a || ("get" in a ? !t.__esModule : a.writable || a.configurable)) && (a = {
+                            enumerable: !0,
+                            get: function() {
+                                return t[r]
+                            }
+                        }), Object.defineProperty(e, i, a)
+                    } : function(e, t, r, i) {
+                        void 0 === i && (i = r), e[i] = t[r]
+                    }),
+                    a = this && this.__setModuleDefault || (Object.create ? function(e, t) {
+                        Object.defineProperty(e, "default", {
+                            enumerable: !0,
+                            value: t
+                        })
+                    } : function(e, t) {
+                        e.default = t
+                    }),
+                    o = this && this.__importStar || function(e) {
+                        if (e && e.__esModule) return e;
+                        var t = {};
+                        if (null != e)
+                            for (var r in e) "default" !== r && Object.prototype.hasOwnProperty.call(e, r) && i(t, e, r);
+                        return a(t, e), t
+                    };
+                Object.defineProperty(t, "__esModule", {
+                    value: !0
+                }), t.LAppLive2DManager = t.s_instance = void 0;
+                var s = r( /*! @framework/math/cubismmatrix44 */ "../../../Framework/src/math/cubismmatrix44.ts"),
+                    n = r( /*! @framework/type/csmvector */ "../../../Framework/src/type/csmvector.ts"),
+                    u = r( /*! ./azureai */ "./src/azureai.ts"),
+                    l = o(r( /*! ./lappdefine */ "./src/lappdefine.ts")),
+                    c = r( /*! ./lappdelegate */ "./src/lappdelegate.ts"),
+                    h = r( /*! ./lappmodel */ "./src/lappmodel.ts"),
+                    p = r( /*! ./lapppal */ "./src/lapppal.ts");
+                t.s_instance = null;
+                var m = function() {
+                    function e() {
+                        this._finishedMotion = function(e) {
+                            p.LAppPal.printMessage("Motion Finished:"), console.log(e)
+                        }, this._viewMatrix = new s.CubismMatrix44, this._models = new n.csmVector, this._sceneIndex = 0, this.changeScene(this._sceneIndex)
+                    }
+                    return e.getInstance = function() {
+                        return null == t.s_instance && (t.s_instance = new e), t.s_instance
+                    }, e.releaseInstance = function() {
+                        null != t.s_instance && (t.s_instance = void 0), t.s_instance = null
+                    }, e.prototype.getModel = function(e) {
+                        return e < this._models.getSize() ? this._models.at(e) : null
+                    }, e.prototype.releaseAllModel = function() {
+                        for (var e = 0; e < this._models.getSize(); e++) this._models.at(e).release(), this._models.set(e, null);
+                        this._models.clear()
+                    }, e.prototype.onDrag = function(e, t) {
+                        for (var r = 0; r < this._models.getSize(); r++) {
+                            var i = this.getModel(r);
+                            i && i.setDragging(e, t)
+                        }
+                    }, e.prototype.onTap = function(e, t) {
+                        var r = this;
+                        l.DebugLogEnable && p.LAppPal.printMessage("[APP]tap point: {x: ".concat(e.toFixed(2), " y: ").concat(t.toFixed(2), "}"));
+                        for (var i = function(i) {
+                                if (a._models.at(i).hitTest(l.HitAreaNameHead, e, t)) l.DebugLogEnable && p.LAppPal.printMessage("[APP]hit area: [".concat(l.HitAreaNameHead, "]")), a._models.at(i).setRandomExpression();
+                                else if (a._models.at(i).hitTest(l.HitAreaNameBody, e, t)) {
+                                    l.DebugLogEnable && p.LAppPal.printMessage("[APP]hit area: [".concat(l.HitAreaNameBody, "]"));
+                                    var o = document.getElementById("prompt").value,
+                                        s = document.getElementById("language").value,
+                                        n = new u.AzureAi;
+                                    n.getOpenAiAnswer(o).then(function(e) {
+                                        return n.getSpeechUrl(s, e)
+                                    }).then(function(e) {
+                                        r._models.at(i)._wavFileHandler.loadWavFile(e), r._models.at(i).startRandomMotion(l.MotionGroupTapBody, l.PriorityNormal, r._finishedMotion)
+                                    })
+                                }
+                            }, a = this, o = 0; o < this._models.getSize(); o++) i(o)
+                    }, e.prototype.startVoiceConversation = function(e, t) {
+                        for (var r = this, i = function(i) {
+                                if (l.DebugLogEnable) {
+                                    p.LAppPal.printMessage("startConversation");
+                                    var a = new u.AzureAi;
+                                    a.getTextFromSpeech(e, t).then(function(e) {
+                                        return document.getElementById("prompt").value = e, a.getOpenAiAnswer(e)
+                                    }).then(function(t) {
+                                        return a.getSpeechUrl(e, t)
+                                    }).then(function(e) {
+                                        r._models.at(i)._wavFileHandler.loadWavFile(e), r._models.at(i).startRandomMotion(l.MotionGroupTapBody, l.PriorityNormal, r._finishedMotion)
+                                    })
+                                }
+                            }, a = 0; a < this._models.getSize(); a++) i(a)
+                    }, e.prototype.onUpdate = function() {
+                        for (var e = c.canvas.width, t = c.canvas.height, r = this._models.getSize(), i = 0; i < r; ++i) {
+                            var a = new s.CubismMatrix44,
+                                o = this.getModel(i);
+                            o.getModel() && (o.getModel().getCanvasWidth() > 1 && e < t ? (o.getModelMatrix().setWidth(2), a.scale(1, e / t)) : a.scale(t / e, 1), null != this._viewMatrix && a.multiplyByMatrix(this._viewMatrix)), o.update(), o.draw(a)
+                        }
+                    }, e.prototype.nextScene = function() {
+                        var e = (this._sceneIndex + 1) % l.ModelDirSize;
+                        this.changeScene(e)
+                    }, e.prototype.changeScene = function(e) {
+                        this._sceneIndex = e, l.DebugLogEnable && p.LAppPal.printMessage("[APP]model index: ".concat(this._sceneIndex));
+                        var t = l.ModelDir[e],
+                            r = l.ResourcesPath + t + "/",
+                            i = l.ModelDir[e];
+                        i += ".model3.json", this.releaseAllModel(), this._models.pushBack(new h.LAppModel), this._models.at(0).loadAssets(r, i)
+                    }, e.prototype.setViewMatrix = function(e) {
+                        for (var t = 0; t < 16; t++) this._viewMatrix.getArray()[t] = e.getArray()[t]
+                    }, e
+                }();
+                t.LAppLive2DManager = m
+            },
+            "./src/lappmodel.ts": function(e, t, r) {
+                "use strict";
+                var i, a, o = this && this.__extends || (i = function(e, t) {
+                        return (i = Object.setPrototypeOf || ({
+                            __proto__: []
+                        }) instanceof Array && function(e, t) {
+                            e.__proto__ = t
+                        } || function(e, t) {
+                            for (var r in t) Object.prototype.hasOwnProperty.call(t, r) && (e[r] = t[r])
+                        })(e, t)
+                    }, function(e, t) {
+                        if ("function" != typeof t && null !== t) throw TypeError("Class extends value " + String(t) + " is not a constructor or null");
+
+                        function r() {
+                            this.constructor = e
+                        }
+                        i(e, t), e.prototype = null === t ? Object.create(t) : (r.prototype = t.prototype, new r)
+                    }),
+                    s = this && this.__createBinding || (Object.create ? function(e, t, r, i) {
+                        void 0 === i && (i = r);
+                        var a = Object.getOwnPropertyDescriptor(t, r);
+                        (!a || ("get" in a ? !t.__esModule : a.writable || a.configurable)) && (a = {
+                            enumerable: !0,
+                            get: function() {
+                                return t[r]
+                            }
+                        }), Object.defineProperty(e, i, a)
+                    } : function(e, t, r, i) {
+                        void 0 === i && (i = r), e[i] = t[r]
+                    }),
+                    n = this && this.__setModuleDefault || (Object.create ? function(e, t) {
+                        Object.defineProperty(e, "default", {
+                            enumerable: !0,
+                            value: t
+                        })
+                    } : function(e, t) {
+                        e.default = t
+                    }),
+                    u = this && this.__importStar || function(e) {
+                        if (e && e.__esModule) return e;
+                        var t = {};
+                        if (null != e)
+                            for (var r in e) "default" !== r && Object.prototype.hasOwnProperty.call(e, r) && s(t, e, r);
+                        return n(t, e), t
+                    };
+                Object.defineProperty(t, "__esModule", {
+                    value: !0
+                }), t.LAppModel = void 0, r( /*! whatwg-fetch */ "./node_modules/whatwg-fetch/fetch.js");
+                var l, c = r( /*! @framework/cubismdefaultparameterid */ "../../../Framework/src/cubismdefaultparameterid.ts"),
+                    h = r( /*! @framework/cubismmodelsettingjson */ "../../../Framework/src/cubismmodelsettingjson.ts"),
+                    p = r( /*! @framework/effect/cubismbreath */ "../../../Framework/src/effect/cubismbreath.ts"),
+                    m = r( /*! @framework/effect/cubismeyeblink */ "../../../Framework/src/effect/cubismeyeblink.ts"),
+                    d = r( /*! @framework/live2dcubismframework */ "../../../Framework/src/live2dcubismframework.ts"),
+                    g = r( /*! @framework/model/cubismusermodel */ "../../../Framework/src/model/cubismusermodel.ts"),
+                    f = r( /*! @framework/motion/acubismmotion */ "../../../Framework/src/motion/acubismmotion.ts"),
+                    y = r( /*! @framework/motion/cubismmotionqueuemanager */ "../../../Framework/src/motion/cubismmotionqueuemanager.ts"),
+                    v = r( /*! @framework/type/csmmap */ "../../../Framework/src/type/csmmap.ts"),
+                    $ = r( /*! @framework/type/csmvector */ "../../../Framework/src/type/csmvector.ts"),
+                    b = r( /*! @framework/utils/cubismdebug */ "../../../Framework/src/utils/cubismdebug.ts"),
+                    M = u(r( /*! ./lappdefine */ "./src/lappdefine.ts")),
+                    C = r( /*! ./lappdelegate */ "./src/lappdelegate.ts"),
+                    S = r( /*! ./lapppal */ "./src/lapppal.ts"),
+                    w = r( /*! ./lappwavfilehandler */ "./src/lappwavfilehandler.ts");
+                (l = a || (a = {}))[l.LoadAssets = 0] = "LoadAssets", l[l.LoadModel = 1] = "LoadModel", l[l.WaitLoadModel = 2] = "WaitLoadModel", l[l.LoadExpression = 3] = "LoadExpression", l[l.WaitLoadExpression = 4] = "WaitLoadExpression", l[l.LoadPhysics = 5] = "LoadPhysics", l[l.WaitLoadPhysics = 6] = "WaitLoadPhysics", l[l.LoadPose = 7] = "LoadPose", l[l.WaitLoadPose = 8] = "WaitLoadPose", l[l.SetupEyeBlink = 9] = "SetupEyeBlink", l[l.SetupBreath = 10] = "SetupBreath", l[l.LoadUserData = 11] = "LoadUserData", l[l.WaitLoadUserData = 12] = "WaitLoadUserData", l[l.SetupEyeBlinkIds = 13] = "SetupEyeBlinkIds", l[l.SetupLipSyncIds = 14] = "SetupLipSyncIds", l[l.SetupLayout = 15] = "SetupLayout", l[l.LoadMotion = 16] = "LoadMotion", l[l.WaitLoadMotion = 17] = "WaitLoadMotion", l[l.CompleteInitialize = 18] = "CompleteInitialize", l[l.CompleteSetupModel = 19] = "CompleteSetupModel", l[l.LoadTexture = 20] = "LoadTexture", l[l.WaitLoadTexture = 21] = "WaitLoadTexture", l[l.CompleteSetup = 22] = "CompleteSetup";
+                var P = function(e) {
+                    function t() {
+                        var t = e.call(this) || this;
+                        return t._modelSetting = null, t._modelHomeDir = null, t._userTimeSeconds = 0, t._eyeBlinkIds = new $.csmVector, t._lipSyncIds = new $.csmVector, t._motions = new v.csmMap, t._expressions = new v.csmMap, t._hitArea = new $.csmVector, t._userArea = new $.csmVector, t._idParamAngleX = d.CubismFramework.getIdManager().getId(c.CubismDefaultParameterId.ParamAngleX), t._idParamAngleY = d.CubismFramework.getIdManager().getId(c.CubismDefaultParameterId.ParamAngleY), t._idParamAngleZ = d.CubismFramework.getIdManager().getId(c.CubismDefaultParameterId.ParamAngleZ), t._idParamEyeBallX = d.CubismFramework.getIdManager().getId(c.CubismDefaultParameterId.ParamEyeBallX), t._idParamEyeBallY = d.CubismFramework.getIdManager().getId(c.CubismDefaultParameterId.ParamEyeBallY), t._idParamBodyAngleX = d.CubismFramework.getIdManager().getId(c.CubismDefaultParameterId.ParamBodyAngleX), t._state = a.LoadAssets, t._expressionCount = 0, t._textureCount = 0, t._motionCount = 0, t._allMotionCount = 0, t._wavFileHandler = new w.LAppWavFileHandler, t
+                    }
+                    return o(t, e), t.prototype.loadAssets = function(e, t) {
+                        var r = this;
+                        this._modelHomeDir = e, fetch("".concat(this._modelHomeDir).concat(t)).then(function(e) {
+                            return e.arrayBuffer()
+                        }).then(function(e) {
+                            var t = new h.CubismModelSettingJson(e, e.byteLength);
+                            r._state = a.LoadModel, r.setupModel(t)
+                        })
+                    }, t.prototype.setupModel = function(e) {
+                        var t = this;
+                        if (this._updating = !0, this._initialized = !1, this._modelSetting = e, "" != this._modelSetting.getModelFileName()) {
+                            var r = this._modelSetting.getModelFileName();
+                            fetch("".concat(this._modelHomeDir).concat(r)).then(function(e) {
+                                return e.arrayBuffer()
+                            }).then(function(e) {
+                                t.loadModel(e), t._state = a.LoadExpression, i()
+                            }), this._state = a.WaitLoadModel
+                        } else S.LAppPal.printMessage("Model data does not exist.");
+                        var i = function() {
+                                if (t._modelSetting.getExpressionCount() > 0) {
+                                    for (var e = t._modelSetting.getExpressionCount(), r = 0; r < e; r++) ! function(r) {
+                                        var i = t._modelSetting.getExpressionName(r),
+                                            s = t._modelSetting.getExpressionFileName(r);
+                                        fetch("".concat(t._modelHomeDir).concat(s)).then(function(e) {
+                                            return e.arrayBuffer()
+                                        }).then(function(r) {
+                                            var s = t.loadExpression(r, r.byteLength, i);
+                                            null != t._expressions.getValue(i) && (f.ACubismMotion.delete(t._expressions.getValue(i)), t._expressions.setValue(i, null)), t._expressions.setValue(i, s), t._expressionCount++, t._expressionCount >= e && (t._state = a.LoadPhysics, o())
+                                        })
+                                    }(r);
+                                    t._state = a.WaitLoadExpression
+                                } else t._state = a.LoadPhysics, o()
+                            },
+                            o = function() {
+                                if ("" != t._modelSetting.getPhysicsFileName()) {
+                                    var e = t._modelSetting.getPhysicsFileName();
+                                    fetch("".concat(t._modelHomeDir).concat(e)).then(function(e) {
+                                        return e.arrayBuffer()
+                                    }).then(function(e) {
+                                        t.loadPhysics(e, e.byteLength), t._state = a.LoadPose, s()
+                                    }), t._state = a.WaitLoadPhysics
+                                } else t._state = a.LoadPose, s()
+                            },
+                            s = function() {
+                                if ("" != t._modelSetting.getPoseFileName()) {
+                                    var e = t._modelSetting.getPoseFileName();
+                                    fetch("".concat(t._modelHomeDir).concat(e)).then(function(e) {
+                                        return e.arrayBuffer()
+                                    }).then(function(e) {
+                                        t.loadPose(e, e.byteLength), t._state = a.SetupEyeBlink, n()
+                                    }), t._state = a.WaitLoadPose
+                                } else t._state = a.SetupEyeBlink, n()
+                            },
+                            n = function() {
+                                t._modelSetting.getEyeBlinkParameterCount() > 0 && (t._eyeBlink = m.CubismEyeBlink.create(t._modelSetting), t._state = a.SetupBreath), u()
+                            },
+                            u = function() {
+                                t._breath = p.CubismBreath.create();
+                                var e = new $.csmVector;
+                                e.pushBack(new p.BreathParameterData(t._idParamAngleX, 0, 15, 6.5345, .5)), e.pushBack(new p.BreathParameterData(t._idParamAngleY, 0, 8, 3.5345, .5)), e.pushBack(new p.BreathParameterData(t._idParamAngleZ, 0, 10, 5.5345, .5)), e.pushBack(new p.BreathParameterData(t._idParamBodyAngleX, 0, 4, 15.5345, .5)), e.pushBack(new p.BreathParameterData(d.CubismFramework.getIdManager().getId(c.CubismDefaultParameterId.ParamBreath), .5, .5, 3.2345, 1)), t._breath.setParameters(e), t._state = a.LoadUserData, l()
+                            },
+                            l = function() {
+                                if ("" != t._modelSetting.getUserDataFile()) {
+                                    var e = t._modelSetting.getUserDataFile();
+                                    fetch("".concat(t._modelHomeDir).concat(e)).then(function(e) {
+                                        return e.arrayBuffer()
+                                    }).then(function(e) {
+                                        t.loadUserData(e, e.byteLength), t._state = a.SetupEyeBlinkIds, h()
+                                    }), t._state = a.WaitLoadUserData
+                                } else t._state = a.SetupEyeBlinkIds, h()
+                            },
+                            h = function() {
+                                for (var e = t._modelSetting.getEyeBlinkParameterCount(), r = 0; r < e; ++r) t._eyeBlinkIds.pushBack(t._modelSetting.getEyeBlinkParameterId(r));
+                                t._state = a.SetupLipSyncIds, g()
+                            },
+                            g = function() {
+                                for (var e = t._modelSetting.getLipSyncParameterCount(), r = 0; r < e; ++r) t._lipSyncIds.pushBack(t._modelSetting.getLipSyncParameterId(r));
+                                t._state = a.SetupLayout, y()
+                            },
+                            y = function() {
+                                var e = new v.csmMap;
+                                if (null == t._modelSetting || null == t._modelMatrix) {
+                                    (0, b.CubismLogError)("Failed to setupLayout().");
+                                    return
+                                }
+                                t._modelSetting.getLayoutMap(e), t._modelMatrix.setupFromLayout(e), t._state = a.LoadMotion, M()
+                            },
+                            M = function() {
+                                t._state = a.WaitLoadMotion, t._model.saveParameters(), t._allMotionCount = 0, t._motionCount = 0;
+                                for (var e = [], r = t._modelSetting.getMotionGroupCount(), i = 0; i < r; i++) e[i] = t._modelSetting.getMotionGroupName(i), t._allMotionCount += t._modelSetting.getMotionCount(e[i]);
+                                for (var i = 0; i < r; i++) t.preLoadMotionGroup(e[i]);
+                                0 == r && (t._state = a.LoadTexture, t._motionManager.stopAllMotions(), t._updating = !1, t._initialized = !0, t.createRenderer(), t.setupTextures(), t.getRenderer().startUp(C.gl))
+                            }
+                    }, t.prototype.setupTextures = function() {
+                        var e = this;
+                        if (this._state == a.LoadTexture) {
+                            for (var t = this._modelSetting.getTextureCount(), r = function(r) {
+                                    if ("" == i._modelSetting.getTextureFileName(r)) return console.log("getTextureFileName null"), "continue";
+                                    var o = i._modelSetting.getTextureFileName(r);
+                                    o = i._modelHomeDir + o;
+                                    var s = function(i) {
+                                        e.getRenderer().bindTexture(r, i.id), e._textureCount++, e._textureCount >= t && (e._state = a.CompleteSetup)
+                                    };
+                                    C.LAppDelegate.getInstance().getTextureManager().createTextureFromPngFile(o, !0, s), i.getRenderer().setIsPremultipliedAlpha(!0)
+                                }, i = this, o = 0; o < t; o++) r(o);
+                            this._state = a.WaitLoadTexture
+                        }
+                    }, t.prototype.reloadRenderer = function() {
+                        this.deleteRenderer(), this.createRenderer(), this.setupTextures()
+                    }, t.prototype.update = function() {
+                        if (this._state == a.CompleteSetup) {
+                            var e = S.LAppPal.getDeltaTime();
+                            this._userTimeSeconds += e, this._dragManager.update(e), this._dragX = this._dragManager.getX(), this._dragY = this._dragManager.getY();
+                            var t = !1;
+                            if (this._model.loadParameters(), this._motionManager.isFinished() ? this.startRandomMotion(M.MotionGroupIdle, M.PriorityIdle) : t = this._motionManager.updateMotion(this._model, e), this._model.saveParameters(), t || null == this._eyeBlink || this._eyeBlink.updateParameters(this._model, e), null != this._expressionManager && this._expressionManager.updateMotion(this._model, e), this._model.addParameterValueById(this._idParamAngleX, 30 * this._dragX), this._model.addParameterValueById(this._idParamAngleY, 30 * this._dragY), this._model.addParameterValueById(this._idParamAngleZ, -(this._dragX * this._dragY * 30)), this._model.addParameterValueById(this._idParamBodyAngleX, 10 * this._dragX), this._model.addParameterValueById(this._idParamEyeBallX, this._dragX), this._model.addParameterValueById(this._idParamEyeBallY, this._dragY), null != this._breath && this._breath.updateParameters(this._model, e), null != this._physics && this._physics.evaluate(this._model, e), this._lipsync) {
+                                var r = 0;
+                                this._wavFileHandler.update(e), r = this._wavFileHandler.getRms();
+                                for (var i = 0; i < this._lipSyncIds.getSize(); ++i) this._model.addParameterValueById(this._lipSyncIds.at(i), r, .8)
+                            }
+                            null != this._pose && this._pose.updateParameters(this._model, e);
+                            var o = document.getElementById("voice");
+                            o.src !== this._audioSrc && (this._audioSrc = o.src, o.play()), this._model.update()
+                        }
+                    }, t.prototype.startMotion = function(e, t, r, i) {
+                        var a = this;
+                        if (r == M.PriorityForce) this._motionManager.setReservePriority(r);
+                        else if (!this._motionManager.reserveMotion(r)) return this._debugMode && S.LAppPal.printMessage("[APP]can't start motion."), y.InvalidMotionQueueEntryHandleValue;
+                        var o = this._modelSetting.getMotionFileName(e, t),
+                            s = "".concat(e, "_").concat(t),
+                            n = this._motions.getValue(s),
+                            u = !1;
+                        null == n ? fetch("".concat(this._modelHomeDir).concat(o)).then(function(e) {
+                            return e.arrayBuffer()
+                        }).then(function(r) {
+                            n = a.loadMotion(r, r.byteLength, null, i);
+                            var o = a._modelSetting.getMotionFadeInTimeValue(e, t);
+                            o >= 0 && n.setFadeInTime(o), (o = a._modelSetting.getMotionFadeOutTimeValue(e, t)) >= 0 && n.setFadeOutTime(o), n.setEffectIds(a._eyeBlinkIds, a._lipSyncIds), u = !0
+                        }) : n.setFinishedMotionHandler(i);
+                        var l = this._modelSetting.getMotionSoundFileName(e, t);
+                        if (0 != l.localeCompare("")) {
+                            var c = l;
+                            c = this._modelHomeDir + c, this._wavFileHandler.start(c)
+                        }
+                        return this._debugMode && S.LAppPal.printMessage("[APP]start motion: [".concat(e, "_").concat(t)), this._motionManager.startMotionPriority(n, u, r)
+                    }, t.prototype.startRandomMotion = function(e, t, r) {
+                        if (0 == this._modelSetting.getMotionCount(e)) return y.InvalidMotionQueueEntryHandleValue;
+                        var i = Math.floor(Math.random() * this._modelSetting.getMotionCount(e));
+                        return this.startMotion(e, i, t, r)
+                    }, t.prototype.setExpression = function(e) {
+                        var t = this._expressions.getValue(e);
+                        this._debugMode && S.LAppPal.printMessage("[APP]expression: [".concat(e, "]")), null != t ? this._expressionManager.startMotionPriority(t, !1, M.PriorityForce) : this._debugMode && S.LAppPal.printMessage("[APP]expression[".concat(e, "] is null"))
+                    }, t.prototype.setRandomExpression = function() {
+                        if (0 != this._expressions.getSize()) {
+                            for (var e = Math.floor(Math.random() * this._expressions.getSize()), t = 0; t < this._expressions.getSize(); t++)
+                                if (t == e) {
+                                    var r = this._expressions._keyValues[t].first;
+                                    this.setExpression(r);
+                                    return
+                                }
+                        }
+                    }, t.prototype.motionEventFired = function(e) {
+                        (0, b.CubismLogInfo)("{0} is fired on LAppModel!!", e.s)
+                    }, t.prototype.hitTest = function(e, t, r) {
+                        if (this._opacity < 1) return !1;
+                        for (var i = this._modelSetting.getHitAreasCount(), a = 0; a < i; a++)
+                            if (this._modelSetting.getHitAreaName(a) == e) {
+                                var o = this._modelSetting.getHitAreaId(a);
+                                return this.isHit(o, t, r)
+                            } return !1
+                    }, t.prototype.preLoadMotionGroup = function(e) {
+                        for (var t = this, r = function(r) {
+                                var o = i._modelSetting.getMotionFileName(e, r),
+                                    s = "".concat(e, "_").concat(r);
+                                i._debugMode && S.LAppPal.printMessage("[APP]load motion: ".concat(o, " => [").concat(s, "]")), fetch("".concat(i._modelHomeDir).concat(o)).then(function(e) {
+                                    return e.arrayBuffer()
+                                }).then(function(i) {
+                                    var o = t.loadMotion(i, i.byteLength, s),
+                                        n = t._modelSetting.getMotionFadeInTimeValue(e, r);
+                                    n >= 0 && o.setFadeInTime(n), (n = t._modelSetting.getMotionFadeOutTimeValue(e, r)) >= 0 && o.setFadeOutTime(n), o.setEffectIds(t._eyeBlinkIds, t._lipSyncIds), null != t._motions.getValue(s) && f.ACubismMotion.delete(t._motions.getValue(s)), t._motions.setValue(s, o), t._motionCount++, t._motionCount >= t._allMotionCount && (t._state = a.LoadTexture, t._motionManager.stopAllMotions(), t._updating = !1, t._initialized = !0, t.createRenderer(), t.setupTextures(), t.getRenderer().startUp(C.gl))
+                                })
+                            }, i = this, o = 0; o < this._modelSetting.getMotionCount(e); o++) r(o)
+                    }, t.prototype.releaseMotions = function() {
+                        this._motions.clear()
+                    }, t.prototype.releaseExpressions = function() {
+                        this._expressions.clear()
+                    }, t.prototype.doDraw = function() {
+                        if (null != this._model) {
+                            var e = [0, 0, C.canvas.width, C.canvas.height];
+                            this.getRenderer().setRenderState(C.frameBuffer, e), this.getRenderer().drawModel()
+                        }
+                    }, t.prototype.draw = function(e) {
+                        null != this._model && this._state == a.CompleteSetup && (e.multiplyByMatrix(this._modelMatrix), this.getRenderer().setMvpMatrix(e), this.doDraw())
+                    }, t
+                }(g.CubismUserModel);
+                t.LAppModel = P
+            },
+            "./src/lapppal.ts": function(e, t) {
+                "use strict";
+                Object.defineProperty(t, "__esModule", {
+                    value: !0
+                }), t.LAppPal = void 0;
+                var r = function() {
+                    function e() {}
+                    return e.loadFileAsBytes = function(e, t) {
+                        fetch(e).then(function(e) {
+                            return e.arrayBuffer()
+                        }).then(function(e) {
+                            return t(e, e.byteLength)
+                        })
+                    }, e.getDeltaTime = function() {
+                        return this.s_deltaTime
+                    }, e.updateTime = function() {
+                        this.s_currentFrame = Date.now(), this.s_deltaTime = (this.s_currentFrame - this.s_lastFrame) / 1e3, this.s_lastFrame = this.s_currentFrame
+                    }, e.printMessage = function(e) {
+                        console.log(e)
+                    }, e.lastUpdate = Date.now(), e.s_currentFrame = 0, e.s_lastFrame = 0, e.s_deltaTime = 0, e
+                }();
+                t.LAppPal = r
+            },
+            "./src/lappsprite.ts": function(e, t, r) {
+                "use strict";
+                Object.defineProperty(t, "__esModule", {
+                    value: !0
+                }), t.Rect = t.LAppSprite = void 0;
+                var i = r( /*! ./lappdelegate */ "./src/lappdelegate.ts"),
+                    a = function() {
+                        function e(e, t, r, i, a) {
+                            this._rect = new o, this._rect.left = e - .5 * r, this._rect.right = e + .5 * r, this._rect.up = t + .5 * i, this._rect.down = t - .5 * i, this._texture = a, this._vertexBuffer = null, this._uvBuffer = null, this._indexBuffer = null, this._positionLocation = null, this._uvLocation = null, this._textureLocation = null, this._positionArray = null, this._uvArray = null, this._indexArray = null, this._firstDraw = !0
+                        }
+                        return e.prototype.release = function() {
+                            this._rect = null, i.gl.deleteTexture(this._texture), this._texture = null, i.gl.deleteBuffer(this._uvBuffer), this._uvBuffer = null, i.gl.deleteBuffer(this._vertexBuffer), this._vertexBuffer = null, i.gl.deleteBuffer(this._indexBuffer), this._indexBuffer = null
+                        }, e.prototype.getTexture = function() {
+                            return this._texture
+                        }, e.prototype.render = function(e) {
+                            if (null != this._texture) {
+                                if (this._firstDraw) {
+                                    this._positionLocation = i.gl.getAttribLocation(e, "position"), i.gl.enableVertexAttribArray(this._positionLocation), this._uvLocation = i.gl.getAttribLocation(e, "uv"), i.gl.enableVertexAttribArray(this._uvLocation), this._textureLocation = i.gl.getUniformLocation(e, "texture"), i.gl.uniform1i(this._textureLocation, 0), this._uvArray = new Float32Array([1, 0, 0, 0, 0, 1, 1, 1]), this._uvBuffer = i.gl.createBuffer();
+                                    var t = i.canvas.width,
+                                        r = i.canvas.height;
+                                    this._positionArray = new Float32Array([(this._rect.right - .5 * t) / (.5 * t), (this._rect.up - .5 * r) / (.5 * r), (this._rect.left - .5 * t) / (.5 * t), (this._rect.up - .5 * r) / (.5 * r), (this._rect.left - .5 * t) / (.5 * t), (this._rect.down - .5 * r) / (.5 * r), (this._rect.right - .5 * t) / (.5 * t), (this._rect.down - .5 * r) / (.5 * r)]), this._vertexBuffer = i.gl.createBuffer(), this._indexArray = new Uint16Array([0, 1, 2, 3, 2, 0]), this._indexBuffer = i.gl.createBuffer(), this._firstDraw = !1
+                                }
+                                i.gl.bindBuffer(i.gl.ARRAY_BUFFER, this._uvBuffer), i.gl.bufferData(i.gl.ARRAY_BUFFER, this._uvArray, i.gl.STATIC_DRAW), i.gl.vertexAttribPointer(this._uvLocation, 2, i.gl.FLOAT, !1, 0, 0), i.gl.bindBuffer(i.gl.ARRAY_BUFFER, this._vertexBuffer), i.gl.bufferData(i.gl.ARRAY_BUFFER, this._positionArray, i.gl.STATIC_DRAW), i.gl.vertexAttribPointer(this._positionLocation, 2, i.gl.FLOAT, !1, 0, 0), i.gl.bindBuffer(i.gl.ELEMENT_ARRAY_BUFFER, this._indexBuffer), i.gl.bufferData(i.gl.ELEMENT_ARRAY_BUFFER, this._indexArray, i.gl.DYNAMIC_DRAW), i.gl.bindTexture(i.gl.TEXTURE_2D, this._texture), i.gl.drawElements(i.gl.TRIANGLES, this._indexArray.length, i.gl.UNSIGNED_SHORT, 0)
+                            }
+                        }, e.prototype.isHit = function(e, t) {
+                            var r = i.canvas.height - t;
+                            return e >= this._rect.left && e <= this._rect.right && r <= this._rect.up && r >= this._rect.down
+                        }, e
+                    }();
+                t.LAppSprite = a;
+                var o = function e() {};
+                t.Rect = o
+            },
+            "./src/lapptexturemanager.ts": function(e, t, r) {
+                "use strict";
+                Object.defineProperty(t, "__esModule", {
+                    value: !0
+                }), t.TextureInfo = t.LAppTextureManager = void 0;
+                var i = r( /*! @framework/type/csmvector */ "../../../Framework/src/type/csmvector.ts"),
+                    a = r( /*! ./lappdelegate */ "./src/lappdelegate.ts"),
+                    o = function() {
+                        function e() {
+                            this._textures = new i.csmVector
+                        }
+                        return e.prototype.release = function() {
+                            for (var e = this._textures.begin(); e.notEqual(this._textures.end()); e.preIncrement()) a.gl.deleteTexture(e.ptr().id);
+                            this._textures = null
+                        }, e.prototype.createTextureFromPngFile = function(e, t, r) {
+                            for (var i = this, o = function(i) {
+                                    if (i.ptr().fileName == e && i.ptr().usePremultply == t) return i.ptr().img = new Image, i.ptr().img.onload = function() {
+                                        return r(i.ptr())
+                                    }, i.ptr().img.src = e, {
+                                        value: void 0
+                                    }
+                                }, n = this._textures.begin(); n.notEqual(this._textures.end()); n.preIncrement()) {
+                                var u = o(n);
+                                if ("object" == typeof u) return u.value
+                            }
+                            var l = new Image;
+                            l.onload = function() {
+                                var o = a.gl.createTexture();
+                                a.gl.bindTexture(a.gl.TEXTURE_2D, o), a.gl.texParameteri(a.gl.TEXTURE_2D, a.gl.TEXTURE_MIN_FILTER, a.gl.LINEAR_MIPMAP_LINEAR), a.gl.texParameteri(a.gl.TEXTURE_2D, a.gl.TEXTURE_MAG_FILTER, a.gl.LINEAR), t && a.gl.pixelStorei(a.gl.UNPACK_PREMULTIPLY_ALPHA_WEBGL, 1), a.gl.texImage2D(a.gl.TEXTURE_2D, 0, a.gl.RGBA, a.gl.RGBA, a.gl.UNSIGNED_BYTE, l), a.gl.generateMipmap(a.gl.TEXTURE_2D), a.gl.bindTexture(a.gl.TEXTURE_2D, null);
+                                var n = new s;
+                                null != n && (n.fileName = e, n.width = l.width, n.height = l.height, n.id = o, n.img = l, n.usePremultply = t, i._textures.pushBack(n)), r(n)
+                            }, l.src = e
+                        }, e.prototype.releaseTextures = function() {
+                            for (var e = 0; e < this._textures.getSize(); e++) this._textures.set(e, null);
+                            this._textures.clear()
+                        }, e.prototype.releaseTextureByTexture = function(e) {
+                            for (var t = 0; t < this._textures.getSize(); t++)
+                                if (this._textures.at(t).id == e) {
+                                    this._textures.set(t, null), this._textures.remove(t);
+                                    break
+                                }
+                        }, e.prototype.releaseTextureByFilePath = function(e) {
+                            for (var t = 0; t < this._textures.getSize(); t++)
+                                if (this._textures.at(t).fileName == e) {
+                                    this._textures.set(t, null), this._textures.remove(t);
+                                    break
+                                }
+                        }, e
+                    }();
+                t.LAppTextureManager = o;
+                var s = function e() {
+                    this.id = null, this.width = 0, this.height = 0
+                };
+                t.TextureInfo = s
+            },
+            "./src/lappview.ts": function(e, t, r) {
+                "use strict";
+                var i = this && this.__createBinding || (Object.create ? function(e, t, r, i) {
+                        void 0 === i && (i = r);
+                        var a = Object.getOwnPropertyDescriptor(t, r);
+                        (!a || ("get" in a ? !t.__esModule : a.writable || a.configurable)) && (a = {
+                            enumerable: !0,
+                            get: function() {
+                                return t[r]
+                            }
+                        }), Object.defineProperty(e, i, a)
+                    } : function(e, t, r, i) {
+                        void 0 === i && (i = r), e[i] = t[r]
+                    }),
+                    a = this && this.__setModuleDefault || (Object.create ? function(e, t) {
+                        Object.defineProperty(e, "default", {
+                            enumerable: !0,
+                            value: t
+                        })
+                    } : function(e, t) {
+                        e.default = t
+                    }),
+                    o = this && this.__importStar || function(e) {
+                        if (e && e.__esModule) return e;
+                        var t = {};
+                        if (null != e)
+                            for (var r in e) "default" !== r && Object.prototype.hasOwnProperty.call(e, r) && i(t, e, r);
+                        return a(t, e), t
+                    };
+                Object.defineProperty(t, "__esModule", {
+                    value: !0
+                }), t.LAppView = void 0;
+                var s = r( /*! @framework/math/cubismmatrix44 */ "../../../Framework/src/math/cubismmatrix44.ts"),
+                    n = r( /*! @framework/math/cubismviewmatrix */ "../../../Framework/src/math/cubismviewmatrix.ts"),
+                    u = o(r( /*! ./lappdefine */ "./src/lappdefine.ts")),
+                    l = r( /*! ./lappdelegate */ "./src/lappdelegate.ts"),
+                    c = r( /*! ./lapplive2dmanager */ "./src/lapplive2dmanager.ts"),
+                    h = r( /*! ./lapppal */ "./src/lapppal.ts"),
+                    p = r( /*! ./lappsprite */ "./src/lappsprite.ts"),
+                    m = r( /*! ./touchmanager */ "./src/touchmanager.ts"),
+                    d = function() {
+                        function e() {
+                            this._programId = null, this._back = null, this._gear = null, this._touchManager = new m.TouchManager, this._deviceToScreen = new s.CubismMatrix44, this._viewMatrix = new n.CubismViewMatrix
+                        }
+                        return e.prototype.initialize = function() {
+                            var e = l.canvas.width,
+                                t = l.canvas.height,
+                                r = e / t,
+                                i = -r,
+                                a = r,
+                                o = u.ViewLogicalLeft,
+                                s = u.ViewLogicalRight;
+                            if (this._viewMatrix.setScreenRect(i, a, o, s), this._viewMatrix.scale(u.ViewScale, u.ViewScale), this._deviceToScreen.loadIdentity(), e > t) {
+                                var n = Math.abs(a - i);
+                                this._deviceToScreen.scaleRelative(n / e, -n / e)
+                            } else {
+                                var c = Math.abs(s - o);
+                                this._deviceToScreen.scaleRelative(c / t, -c / t)
+                            }
+                            this._deviceToScreen.translateRelative(-(.5 * e), -(.5 * t)), this._viewMatrix.setMaxScale(u.ViewMaxScale), this._viewMatrix.setMinScale(u.ViewMinScale), this._viewMatrix.setMaxScreenRect(u.ViewLogicalMaxLeft, u.ViewLogicalMaxRight, u.ViewLogicalMaxBottom, u.ViewLogicalMaxTop)
+                        }, e.prototype.release = function() {
+                            this._viewMatrix = null, this._touchManager = null, this._deviceToScreen = null, this._gear.release(), this._gear = null, this._back.release(), this._back = null, l.gl.deleteProgram(this._programId), this._programId = null
+                        }, e.prototype.render = function() {
+                            l.gl.useProgram(this._programId), this._back && this._back.render(this._programId), this._gear && this._gear.render(this._programId), l.gl.flush();
+                            var e = c.LAppLive2DManager.getInstance();
+                            e.setViewMatrix(this._viewMatrix), e.onUpdate()
+                        }, e.prototype.initializeSprite = function() {
+                            var e = this,
+                                t = l.canvas.width,
+                                r = l.canvas.height,
+                                i = l.LAppDelegate.getInstance().getTextureManager(),
+                                a = u.ResourcesPath,
+                                o = "";
+                            o = u.BackImageName;
+                            var s = function(i) {
+                                var a = 2 * i.width;
+                                e._back = new p.LAppSprite(.5 * t, .5 * r, a, .95 * r, i.id)
+                            };
+                            i.createTextureFromPngFile(a + o, !1, s), o = u.GearImageName;
+                            var n = function(i) {
+                                var a = t - .5 * i.width,
+                                    o = r - .5 * i.height,
+                                    s = i.width,
+                                    n = i.height;
+                                e._gear = new p.LAppSprite(a, o, s, n, i.id)
+                            };
+                            i.createTextureFromPngFile(a + o, !1, n), null == this._programId && (this._programId = l.LAppDelegate.getInstance().createShader())
+                        }, e.prototype.onTouchesBegan = function(e, t) {
+                            this._touchManager.touchesBegan(e, t)
+                        }, e.prototype.onTouchesMoved = function(e, t) {
+                            var r = this.transformViewX(this._touchManager.getX()),
+                                i = this.transformViewY(this._touchManager.getY());
+                            this._touchManager.touchesMoved(e, t), c.LAppLive2DManager.getInstance().onDrag(r, i)
+                        }, e.prototype.onTouchesEnded = function(e, t) {
+                            var r = c.LAppLive2DManager.getInstance();
+                            r.onDrag(0, 0);
+                            var i = this._deviceToScreen.transformX(this._touchManager.getX()),
+                                a = this._deviceToScreen.transformY(this._touchManager.getY());
+                            u.DebugTouchLogEnable && h.LAppPal.printMessage("[APP]touchesEnded x: ".concat(i, " y: ").concat(a)), r.onTap(i, a)
+                        }, e.prototype.transformViewX = function(e) {
+                            var t = this._deviceToScreen.transformX(e);
+                            return this._viewMatrix.invertTransformX(t)
+                        }, e.prototype.transformViewY = function(e) {
+                            var t = this._deviceToScreen.transformY(e);
+                            return this._viewMatrix.invertTransformY(t)
+                        }, e.prototype.transformScreenX = function(e) {
+                            return this._deviceToScreen.transformX(e)
+                        }, e.prototype.transformScreenY = function(e) {
+                            return this._deviceToScreen.transformY(e)
+                        }, e
+                    }();
+                t.LAppView = d
+            },
+            "./src/lappwavfilehandler.ts": function(e, t) {
+                "use strict";
+                var r = this && this.__awaiter || function(e, t, r, i) {
+                        return new(r || (r = Promise))(function(a, o) {
+                            function s(e) {
+                                try {
+                                    u(i.next(e))
+                                } catch (t) {
+                                    o(t)
+                                }
+                            }
+
+                            function n(e) {
+                                try {
+                                    u(i.throw(e))
+                                } catch (t) {
+                                    o(t)
+                                }
+                            }
+
+                            function u(e) {
+                                var t;
+                                e.done ? a(e.value) : ((t = e.value) instanceof r ? t : new r(function(e) {
+                                    e(t)
+                                })).then(s, n)
+                            }
+                            u((i = i.apply(e, t || [])).next())
+                        })
+                    },
+                    i = this && this.__generator || function(e, t) {
+                        var r, i, a, o, s = {
+                            label: 0,
+                            sent: function() {
+                                if (1 & a[0]) throw a[1];
+                                return a[1]
+                            },
+                            trys: [],
+                            ops: []
+                        };
+                        return o = {
+                            next: n(0),
+                            throw: n(1),
+                            return: n(2)
+                        }, "function" == typeof Symbol && (o[Symbol.iterator] = function() {
+                            return this
+                        }), o;
+
+                        function n(n) {
+                            return function(u) {
+                                return function n(u) {
+                                    if (r) throw TypeError("Generator is already executing.");
+                                    for (; o && (o = 0, u[0] && (s = 0)), s;) try {
+                                        if (r = 1, i && (a = 2 & u[0] ? i.return : u[0] ? i.throw || ((a = i.return) && a.call(i), 0) : i.next) && !(a = a.call(i, u[1])).done) return a;
+                                        switch (i = 0, a && (u = [2 & u[0], a.value]), u[0]) {
+                                            case 0:
+                                            case 1:
+                                                a = u;
+                                                break;
+                                            case 4:
+                                                return s.label++, {
+                                                    value: u[1],
+                                                    done: !1
+                                                };
+                                            case 5:
+                                                s.label++, i = u[1], u = [0];
+                                                continue;
+                                            case 7:
+                                                u = s.ops.pop(), s.trys.pop();
+                                                continue;
+                                            default:
+                                                if (!(a = (a = s.trys).length > 0 && a[a.length - 1]) && (6 === u[0] || 2 === u[0])) {
+                                                    s = 0;
+                                                    continue
+                                                }
+                                                if (3 === u[0] && (!a || u[1] > a[0] && u[1] < a[3])) {
+                                                    s.label = u[1];
+                                                    break
+                                                }
+                                                if (6 === u[0] && s.label < a[1]) {
+                                                    s.label = a[1], a = u;
+                                                    break
+                                                }
+                                                if (a && s.label < a[2]) {
+                                                    s.label = a[2], s.ops.push(u);
+                                                    break
+                                                }
+                                                a[2] && s.ops.pop(), s.trys.pop();
+                                                continue
+                                        }
+                                        u = t.call(e, s)
+                                    } catch (l) {
+                                        u = [6, l], i = 0
+                                    } finally {
+                                        r = a = 0
+                                    }
+                                    if (5 & u[0]) throw u[1];
+                                    return {
+                                        value: u[0] ? u[1] : void 0,
+                                        done: !0
+                                    }
+                                }([n, u])
+                            }
+                        }
+                    };
+                Object.defineProperty(t, "__esModule", {
+                    value: !0
+                }), t.ByteReader = t.WavFileInfo = t.LAppWavFileHandler = t.s_instance = void 0, t.s_instance = null;
+                var a = function() {
+                    function e() {
+                        var e = this;
+                        this._loadFiletoBytes = function(t, r) {
+                            e._byteReader._fileByte = t, e._byteReader._fileDataView = new DataView(e._byteReader._fileByte), e._byteReader._fileSize = r
+                        }, this._pcmData = null, this._userTimeSeconds = 0, this._lastRms = 0, this._sampleOffset = 0, this._wavFileInfo = new o, this._byteReader = new s
+                    }
+                    return e.getInstance = function() {
+                        return null == t.s_instance && (t.s_instance = new e), t.s_instance
+                    }, e.releaseInstance = function() {
+                        null != t.s_instance && (t.s_instance = void 0), t.s_instance = null
+                    }, e.prototype.update = function(e) {
+                        if (null == this._pcmData || this._sampleOffset >= this._wavFileInfo._samplesPerChannel) return this._lastRms = 0, !1;
+                        this._userTimeSeconds += e, (t = Math.floor(this._userTimeSeconds * this._wavFileInfo._samplingRate)) > this._wavFileInfo._samplesPerChannel && (t = this._wavFileInfo._samplesPerChannel), r = 0;
+                        for (var t, r, i = 0; i < this._wavFileInfo._numberOfChannels; i++)
+                            for (var a = this._sampleOffset; a < t; a++) {
+                                var o = this._pcmData[i][a];
+                                r += o * o
+                            }
+                        return r = Math.sqrt(r / (this._wavFileInfo._numberOfChannels * (t - this._sampleOffset))), this._lastRms = r, this._sampleOffset = t, !0
+                    }, e.prototype.start = function(e) {
+                        this._sampleOffset = 0, this._userTimeSeconds = 0, this._lastRms = 0
+                    }, e.prototype.getRms = function() {
+                        return this._lastRms
+                    }, e.prototype.loadWavFile = function(e) {
+                        var t = this,
+                            a = !1;
+                        return null != this._pcmData && this.releasePcmData(), r(t, void 0, void 0, function() {
+                            var o, s, n, u, l;
+                            return i(this, function(c) {
+                                switch (c.label) {
+                                    case 0:
+                                        return o = this._byteReader, [4, r(t, void 0, void 0, function() {
+                                            return i(this, function(t) {
+                                                return [2, fetch(e).then(function(e) {
+                                                    return e.arrayBuffer()
+                                                })]
+                                            })
+                                        })];
+                                    case 1:
+                                        if (o._fileByte = c.sent(), this._byteReader._fileDataView = new DataView(this._byteReader._fileByte), this._byteReader._fileSize = this._byteReader._fileByte.byteLength, this._byteReader._readOffset = 0, null == this._byteReader._fileByte || this._byteReader._fileSize < 4) return [2, !1];
+                                        this._wavFileInfo._fileName = e;
+                                        try {
+                                            if (!this._byteReader.getCheckSignature("RIFF")) throw a = !1, Error('Cannot find Signeture "RIFF".');
+                                            if (this._byteReader.get32LittleEndian(), !this._byteReader.getCheckSignature("WAVE")) throw a = !1, Error('Cannot find Signeture "WAVE".');
+                                            if (!this._byteReader.getCheckSignature("fmt ")) throw a = !1, Error('Cannot find Signeture "fmt".');
+                                            if (s = this._byteReader.get32LittleEndian(), 1 != this._byteReader.get16LittleEndian()) throw a = !1, Error("File is not linear PCM.");
+                                            for (this._wavFileInfo._numberOfChannels = this._byteReader.get16LittleEndian(), this._wavFileInfo._samplingRate = this._byteReader.get32LittleEndian(), this._byteReader.get32LittleEndian(), this._byteReader.get16LittleEndian(), this._wavFileInfo._bitsPerSample = this._byteReader.get16LittleEndian(), s > 16 && (this._byteReader._readOffset += s - 16); !this._byteReader.getCheckSignature("data") && this._byteReader._readOffset < this._byteReader._fileSize;) this._byteReader._readOffset += this._byteReader.get32LittleEndian() + 4;
+                                            if (this._byteReader._readOffset >= this._byteReader._fileSize) throw a = !1, Error('Cannot find "data" Chunk.');
+                                            for (u = 0, n = this._byteReader.get32LittleEndian(), this._wavFileInfo._samplesPerChannel = 8 * n / (this._wavFileInfo._bitsPerSample * this._wavFileInfo._numberOfChannels), this._pcmData = Array(this._wavFileInfo._numberOfChannels); u < this._wavFileInfo._numberOfChannels; u++) this._pcmData[u] = new Float32Array(this._wavFileInfo._samplesPerChannel);
+                                            for (l = 0; l < this._wavFileInfo._samplesPerChannel; l++)
+                                                for (u = 0; u < this._wavFileInfo._numberOfChannels; u++) this._pcmData[u][l] = this.getPcmSample();
+                                            a = !0
+                                        } catch (h) {
+                                            console.log(h)
+                                        }
+                                        return [2]
+                                }
+                            })
+                        }), a
+                    }, e.prototype.getPcmSample = function() {
+                        var e;
+                        switch (this._wavFileInfo._bitsPerSample) {
+                            case 8:
+                                e = this._byteReader.get8() - 128, e <<= 24;
+                                break;
+                            case 16:
+                                e = this._byteReader.get16LittleEndian() << 16;
+                                break;
+                            case 24:
+                                e = this._byteReader.get24LittleEndian() << 8;
+                                break;
+                            default:
+                                e = 0
+                        }
+                        return e / 2147483647
+                    }, e.prototype.releasePcmData = function() {
+                        for (var e = 0; e < this._wavFileInfo._numberOfChannels; e++) delete this._pcmData[e];
+                        delete this._pcmData, this._pcmData = null
+                    }, e
+                }();
+                t.LAppWavFileHandler = a;
+                var o = function e() {
+                    this._fileName = "", this._numberOfChannels = 0, this._bitsPerSample = 0, this._samplingRate = 0, this._samplesPerChannel = 0
+                };
+                t.WavFileInfo = o;
+                var s = function() {
+                    function e() {
+                        this._fileByte = null, this._fileDataView = null, this._fileSize = 0, this._readOffset = 0
+                    }
+                    return e.prototype.get8 = function() {
+                        var e = this._fileDataView.getUint8(this._readOffset);
+                        return this._readOffset++, e
+                    }, e.prototype.get16LittleEndian = function() {
+                        var e = this._fileDataView.getUint8(this._readOffset + 1) << 8 | this._fileDataView.getUint8(this._readOffset);
+                        return this._readOffset += 2, e
+                    }, e.prototype.get24LittleEndian = function() {
+                        var e = this._fileDataView.getUint8(this._readOffset + 2) << 16 | this._fileDataView.getUint8(this._readOffset + 1) << 8 | this._fileDataView.getUint8(this._readOffset);
+                        return this._readOffset += 3, e
+                    }, e.prototype.get32LittleEndian = function() {
+                        var e = this._fileDataView.getUint8(this._readOffset + 3) << 24 | this._fileDataView.getUint8(this._readOffset + 2) << 16 | this._fileDataView.getUint8(this._readOffset + 1) << 8 | this._fileDataView.getUint8(this._readOffset);
+                        return this._readOffset += 4, e
+                    }, e.prototype.getCheckSignature = function(e) {
+                        var t = new Uint8Array(4),
+                            r = new TextEncoder().encode(e);
+                        if (4 != e.length) return !1;
+                        for (var i = 0; i < 4; i++) t[i] = this.get8();
+                        return t[0] == r[0] && t[1] == r[1] && t[2] == r[2] && t[3] == r[3]
+                    }, e
+                }();
+                t.ByteReader = s
+            },
+            "./src/main.ts": function(e, t, r) {
+                "use strict";
+                var i = this && this.__createBinding || (Object.create ? function(e, t, r, i) {
+                        void 0 === i && (i = r);
+                        var a = Object.getOwnPropertyDescriptor(t, r);
+                        (!a || ("get" in a ? !t.__esModule : a.writable || a.configurable)) && (a = {
+                            enumerable: !0,
+                            get: function() {
+                                return t[r]
+                            }
+                        }), Object.defineProperty(e, i, a)
+                    } : function(e, t, r, i) {
+                        void 0 === i && (i = r), e[i] = t[r]
+                    }),
+                    a = this && this.__setModuleDefault || (Object.create ? function(e, t) {
+                        Object.defineProperty(e, "default", {
+                            enumerable: !0,
+                            value: t
+                        })
+                    } : function(e, t) {
+                        e.default = t
+                    }),
+                    o = this && this.__importStar || function(e) {
+                        if (e && e.__esModule) return e;
+                        var t = {};
+                        if (null != e)
+                            for (var r in e) "default" !== r && Object.prototype.hasOwnProperty.call(e, r) && i(t, e, r);
+                        return a(t, e), t
+                    };
+                Object.defineProperty(t, "__esModule", {
+                    value: !0
+                });
+                var s = r( /*! ./lappdelegate */ "./src/lappdelegate.ts"),
+                    n = o(r( /*! ./lappdefine */ "./src/lappdefine.ts"));
+                window.onload = function() {
+                    !1 != s.LAppDelegate.getInstance().initialize() && s.LAppDelegate.getInstance().run()
+                }, window.onbeforeunload = function() {
+                    return s.LAppDelegate.releaseInstance()
+                }, window.onresize = function() {
+                    "auto" === n.CanvasSize && s.LAppDelegate.getInstance().onResize()
+                }, window.startVoiceConversation = function(e, t) {
+                    s.LAppDelegate.getInstance().startVoiceConversation(e, t)
+                }
+            },
+            "./src/touchmanager.ts": function(e, t) {
+                "use strict";
+                Object.defineProperty(t, "__esModule", {
+                    value: !0
+                }), t.TouchManager = void 0;
+                var r = function() {
+                    function e() {
+                        this._startX = 0, this._startY = 0, this._lastX = 0, this._lastY = 0, this._lastX1 = 0, this._lastY1 = 0, this._lastX2 = 0, this._lastY2 = 0, this._lastTouchDistance = 0, this._deltaX = 0, this._deltaY = 0, this._scale = 1, this._touchSingle = !1, this._flipAvailable = !1
+                    }
+                    return e.prototype.getCenterX = function() {
+                        return this._lastX
+                    }, e.prototype.getCenterY = function() {
+                        return this._lastY
+                    }, e.prototype.getDeltaX = function() {
+                        return this._deltaX
+                    }, e.prototype.getDeltaY = function() {
+                        return this._deltaY
+                    }, e.prototype.getStartX = function() {
+                        return this._startX
+                    }, e.prototype.getStartY = function() {
+                        return this._startY
+                    }, e.prototype.getScale = function() {
+                        return this._scale
+                    }, e.prototype.getX = function() {
+                        return this._lastX
+                    }, e.prototype.getY = function() {
+                        return this._lastY
+                    }, e.prototype.getX1 = function() {
+                        return this._lastX1
+                    }, e.prototype.getY1 = function() {
+                        return this._lastY1
+                    }, e.prototype.getX2 = function() {
+                        return this._lastX2
+                    }, e.prototype.getY2 = function() {
+                        return this._lastY2
+                    }, e.prototype.isSingleTouch = function() {
+                        return this._touchSingle
+                    }, e.prototype.isFlickAvailable = function() {
+                        return this._flipAvailable
+                    }, e.prototype.disableFlick = function() {
+                        this._flipAvailable = !1
+                    }, e.prototype.touchesBegan = function(e, t) {
+                        this._lastX = e, this._lastY = t, this._startX = e, this._startY = t, this._lastTouchDistance = -1, this._flipAvailable = !0, this._touchSingle = !0
+                    }, e.prototype.touchesMoved = function(e, t) {
+                        this._lastX = e, this._lastY = t, this._lastTouchDistance = -1, this._touchSingle = !0
+                    }, e.prototype.getFlickDistance = function() {
+                        return this.calculateDistance(this._startX, this._startY, this._lastX, this._lastY)
+                    }, e.prototype.calculateDistance = function(e, t, r, i) {
+                        return Math.sqrt((e - r) * (e - r) + (t - i) * (t - i))
+                    }, e.prototype.calculateMovingAmount = function(e, t) {
+                        if (e > 0 != t > 0) return 0;
+                        var r = Math.abs(e),
+                            i = Math.abs(t);
+                        return (e > 0 ? 1 : -1) * (r < i ? r : i)
+                    }, e
+                }();
+                t.TouchManager = r
+            },
+            "./node_modules/webm-to-wav-converter/WavRecorder.js": function(e, t, r) {
+                let i = r( /*! ./wavBlobUtil */ "./node_modules/webm-to-wav-converter/wavBlobUtil.js"),
+                    a = r( /*! ./downloadUtil */ "./node_modules/webm-to-wav-converter/downloadUtil.js");
+                e.exports = class e {
+                    mediaRecorder;
+                    stream;
+                    __data;
+                    async start(e = {
+                        audio: !0,
+                        video: !1
+                    }) {
+                        if (this.mediaRecorder?.state === "recording") return !0;
+                        try {
+                            this.stream = await navigator.mediaDevices.getUserMedia(e || {
+                                audio: !0,
+                                video: !1
+                            }), this.mediaRecorder = new MediaRecorder(this.stream), this.mediaRecorder.ondataavailable = e => this.__data = e.data
+                        } catch (t) {
+                            return console.error(t), !1
+                        }
+                        return this.mediaRecorder?.start(), !0
+                    }
+                    stop() {
+                        if (this.mediaRecorder?.state !== "recording") return !0;
+                        this.mediaRecorder.stop(), this.mediaRecorder.onstop = () => {
+                            this.stream.getTracks().forEach(e => e.stop()), this.mediaRecorder = void 0, this.stream = void 0
+                        }
+                    }
+                    async download(e = null, t = !1, r) {
+                        if (this.__data) return await a(this.__data, t, e, r)
+                    }
+                    async getBlob(e = !1, t) {
+                        if (this.__data) return await i(this.__data, e, t)
+                    }
+                }
+            },
+            "./node_modules/webm-to-wav-converter/downloadUtil.js": function(e, t, r) {
+                let i = r( /*! ./wavBlobUtil */ "./node_modules/webm-to-wav-converter/wavBlobUtil.js");
+                async function a(e, t, r = null, a) {
+                    let o = await i(e, t, a),
+                        s = document.createElement("a");
+                    s.href = window.URL.createObjectURL(o), s.download = r || `recording('${t?"32bit":"16bit"}).wav`, s.style.display = "none", document.body.appendChild(s), s.click(), document.body.removeChild(s)
+                }
+                e.exports = a
+            },
+            "./node_modules/webm-to-wav-converter/index.js": function(e, t, r) {
+                e.exports.WavRecorder = r( /*! ./WavRecorder */ "./node_modules/webm-to-wav-converter/WavRecorder.js"), e.exports.getWaveBlob = r( /*! ./wavBlobUtil */ "./node_modules/webm-to-wav-converter/wavBlobUtil.js"), e.exports.downloadWav = r( /*! ./downloadUtil */ "./node_modules/webm-to-wav-converter/downloadUtil.js")
+            },
+            "./node_modules/webm-to-wav-converter/wavBlobUtil.js": function(e) {
+                function t(e, t, r) {
+                    for (let i = 0; i < e.length; ++i) t[r + i] = e.charCodeAt(i)
+                }
+
+                function r(e, t, r) {
+                    e = Math.floor(e), t[r + 0] = 255 & e, t[r + 1] = e >> 8 & 255
+                }
+
+                function i(e, t, r) {
+                    e = Math.floor(e), t[r + 0] = 255 & e, t[r + 1] = e >> 8 & 255, t[r + 2] = e >> 16 & 255, t[r + 3] = e >> 24 & 255
+                }
+
+                function a(e) {
+                    let t = new ArrayBuffer(4);
+                    new Float32Array(t)[0] = e;
+                    let r = new Uint32Array(t)[0];
+                    return 0 | r
+                }
+                async function o(e, t) {
+                    let r = e;
+                    r instanceof Blob || (r = new Blob([e]));
+                    let i = URL.createObjectURL(r),
+                        a = await fetch(i),
+                        o = await a.arrayBuffer(),
+                        s = new AudioContext(t),
+                        n = await s.decodeAudioData(o);
+                    return n
+                }
+                async function s(e, s, n) {
+                    let u = await o(e, n),
+                        l = u.length,
+                        c = u.numberOfChannels,
+                        h = u.sampleRate,
+                        p = s ? 32 : 16,
+                        m = l * c * (p / 8),
+                        d = new Uint8Array(44 + m),
+                        g = m;
+                    return t("RIFF", d, 0), i(28 + (8 + g), d, 4), t("WAVE", d, 8), t("fmt ", d, 12), i(16, d, 16), r(s ? 3 : 1, d, 20), r(c, d, 22), i(h, d, 24), i(h * c * p / 8, d, 28), r(c * p / 8, d, 32), i(p, d, 34), t("data", d, 36), i(g, d, 40), ! function e(t, o, s, n) {
+                        let u = 0,
+                            l = 0,
+                            c = t.length,
+                            h = t.numberOfChannels,
+                            p, m;
+                        for (u = 0; u < c; ++u)
+                            for (l = 0; l < h; ++l)
+                                if (p = t.getChannelData(l), 16 === n)(m = 32768 * p[u]) < -32768 ? m = -32768 : m > 32767 && (m = 32767), r(m, o, s), s += 2;
+                                else if (32 === n) m = a(p[u]), i(m, o, s), s += 4;
+                        else {
+                            console.log("Invalid bit depth for PCM encoding.");
+                            return
+                        }
+                    }(u, d, 44, p), new Blob([d], {
+                        type: "audio/wave"
+                    })
+                }
+                e.exports = s
+            },
+            "./node_modules/whatwg-fetch/fetch.js": function(e, t, r) {
+                "use strict";
+                r.r(t), r.d(t, {
+                    DOMException: function() {
+                        return M
+                    },
+                    Headers: function() {
+                        return c
+                    },
+                    Request: function() {
+                        return y
+                    },
+                    Response: function() {
+                        return $
+                    },
+                    fetch: function() {
+                        return S
+                    }
+                });
+                var i = "undefined" != typeof globalThis && globalThis || "undefined" != typeof self && self || void 0 !== i && i,
+                    a = {
+                        searchParams: "URLSearchParams" in i,
+                        iterable: "Symbol" in i && "iterator" in Symbol,
+                        blob: "FileReader" in i && "Blob" in i && function() {
+                            try {
+                                return new Blob, !0
+                            } catch (e) {
+                                return !1
+                            }
+                        }(),
+                        formData: "FormData" in i,
+                        arrayBuffer: "ArrayBuffer" in i
+                    };
+                if (a.arrayBuffer) var o = ["[object Int8Array]", "[object Uint8Array]", "[object Uint8ClampedArray]", "[object Int16Array]", "[object Uint16Array]", "[object Int32Array]", "[object Uint32Array]", "[object Float32Array]", "[object Float64Array]"],
+                    s = ArrayBuffer.isView || function(e) {
+                        return e && o.indexOf(Object.prototype.toString.call(e)) > -1
+                    };
+
+                function n(e) {
+                    if ("string" != typeof e && (e = String(e)), /[^a-z0-9\-#$%&'*+.^_`|~!]/i.test(e) || "" === e) throw TypeError('Invalid character in header field name: "' + e + '"');
+                    return e.toLowerCase()
+                }
+
+                function u(e) {
+                    return "string" != typeof e && (e = String(e)), e
+                }
+
+                function l(e) {
+                    var t = {
+                        next: function() {
+                            var t = e.shift();
+                            return {
+                                done: void 0 === t,
+                                value: t
+                            }
+                        }
+                    };
+                    return a.iterable && (t[Symbol.iterator] = function() {
+                        return t
+                    }), t
+                }
+
+                function c(e) {
+                    this.map = {}, e instanceof c ? e.forEach(function(e, t) {
+                        this.append(t, e)
+                    }, this) : Array.isArray(e) ? e.forEach(function(e) {
+                        this.append(e[0], e[1])
+                    }, this) : e && Object.getOwnPropertyNames(e).forEach(function(t) {
+                        this.append(t, e[t])
+                    }, this)
+                }
+
+                function h(e) {
+                    if (e.bodyUsed) return Promise.reject(TypeError("Already read"));
+                    e.bodyUsed = !0
+                }
+
+                function p(e) {
+                    return new Promise(function(t, r) {
+                        e.onload = function() {
+                            t(e.result)
+                        }, e.onerror = function() {
+                            r(e.error)
+                        }
+                    })
+                }
+
+                function m(e) {
+                    var t = new FileReader,
+                        r = p(t);
+                    return t.readAsArrayBuffer(e), r
+                }
+
+                function d(e) {
+                    if (e.slice) return e.slice(0);
+                    var t = new Uint8Array(e.byteLength);
+                    return t.set(new Uint8Array(e)), t.buffer
+                }
+
+                function g() {
+                    return this.bodyUsed = !1, this._initBody = function(e) {
+                        if (this.bodyUsed = this.bodyUsed, this._bodyInit = e, e) {
+                            if ("string" == typeof e) this._bodyText = e;
+                            else if (a.blob && Blob.prototype.isPrototypeOf(e)) this._bodyBlob = e;
+                            else if (a.formData && FormData.prototype.isPrototypeOf(e)) this._bodyFormData = e;
+                            else if (a.searchParams && URLSearchParams.prototype.isPrototypeOf(e)) this._bodyText = e.toString();
+                            else {
+                                var t;
+                                a.arrayBuffer && a.blob && (t = e) && DataView.prototype.isPrototypeOf(t) ? (this._bodyArrayBuffer = d(e.buffer), this._bodyInit = new Blob([this._bodyArrayBuffer])) : a.arrayBuffer && (ArrayBuffer.prototype.isPrototypeOf(e) || s(e)) ? this._bodyArrayBuffer = d(e) : this._bodyText = e = Object.prototype.toString.call(e)
+                            }
+                        } else this._bodyText = "";
+                        !this.headers.get("content-type") && ("string" == typeof e ? this.headers.set("content-type", "text/plain;charset=UTF-8") : this._bodyBlob && this._bodyBlob.type ? this.headers.set("content-type", this._bodyBlob.type) : a.searchParams && URLSearchParams.prototype.isPrototypeOf(e) && this.headers.set("content-type", "application/x-www-form-urlencoded;charset=UTF-8"))
+                    }, a.blob && (this.blob = function() {
+                        var e = h(this);
+                        if (e) return e;
+                        if (this._bodyBlob) return Promise.resolve(this._bodyBlob);
+                        if (this._bodyArrayBuffer) return Promise.resolve(new Blob([this._bodyArrayBuffer]));
+                        if (!this._bodyFormData) return Promise.resolve(new Blob([this._bodyText]));
+                        throw Error("could not read FormData body as blob")
+                    }, this.arrayBuffer = function() {
+                        if (!this._bodyArrayBuffer) return this.blob().then(m);
+                        var e = h(this);
+                        return e || (ArrayBuffer.isView(this._bodyArrayBuffer) ? Promise.resolve(this._bodyArrayBuffer.buffer.slice(this._bodyArrayBuffer.byteOffset, this._bodyArrayBuffer.byteOffset + this._bodyArrayBuffer.byteLength)) : Promise.resolve(this._bodyArrayBuffer))
+                    }), this.text = function() {
+                        var e, t, r, i = h(this);
+                        if (i) return i;
+                        if (this._bodyBlob) return e = this._bodyBlob, t = new FileReader, r = p(t), t.readAsText(e), r;
+                        if (this._bodyArrayBuffer) return Promise.resolve(function e(t) {
+                            for (var r = new Uint8Array(t), i = Array(r.length), a = 0; a < r.length; a++) i[a] = String.fromCharCode(r[a]);
+                            return i.join("")
+                        }(this._bodyArrayBuffer));
+                        if (!this._bodyFormData) return Promise.resolve(this._bodyText);
+                        throw Error("could not read FormData body as text")
+                    }, a.formData && (this.formData = function() {
+                        return this.text().then(v)
+                    }), this.json = function() {
+                        return this.text().then(JSON.parse)
+                    }, this
+                }
+                c.prototype.append = function(e, t) {
+                    e = n(e), t = u(t);
+                    var r = this.map[e];
+                    this.map[e] = r ? r + ", " + t : t
+                }, c.prototype.delete = function(e) {
+                    delete this.map[n(e)]
+                }, c.prototype.get = function(e) {
+                    return e = n(e), this.has(e) ? this.map[e] : null
+                }, c.prototype.has = function(e) {
+                    return this.map.hasOwnProperty(n(e))
+                }, c.prototype.set = function(e, t) {
+                    this.map[n(e)] = u(t)
+                }, c.prototype.forEach = function(e, t) {
+                    for (var r in this.map) this.map.hasOwnProperty(r) && e.call(t, this.map[r], r, this)
+                }, c.prototype.keys = function() {
+                    var e = [];
+                    return this.forEach(function(t, r) {
+                        e.push(r)
+                    }), l(e)
+                }, c.prototype.values = function() {
+                    var e = [];
+                    return this.forEach(function(t) {
+                        e.push(t)
+                    }), l(e)
+                }, c.prototype.entries = function() {
+                    var e = [];
+                    return this.forEach(function(t, r) {
+                        e.push([r, t])
+                    }), l(e)
+                }, a.iterable && (c.prototype[Symbol.iterator] = c.prototype.entries);
+                var f = ["DELETE", "GET", "HEAD", "OPTIONS", "POST", "PUT"];
+
+                function y(e, t) {
+                    if (!(this instanceof y)) throw TypeError('Please use the "new" operator, this DOM object constructor cannot be called as a function.');
+                    var r, i, a = (t = t || {}).body;
+                    if (e instanceof y) {
+                        if (e.bodyUsed) throw TypeError("Already read");
+                        this.url = e.url, this.credentials = e.credentials, t.headers || (this.headers = new c(e.headers)), this.method = e.method, this.mode = e.mode, this.signal = e.signal, a || null == e._bodyInit || (a = e._bodyInit, e.bodyUsed = !0)
+                    } else this.url = String(e);
+                    if (this.credentials = t.credentials || this.credentials || "same-origin", (t.headers || !this.headers) && (this.headers = new c(t.headers)), this.method = (i = (r = t.method || this.method || "GET").toUpperCase(), f.indexOf(i) > -1 ? i : r), this.mode = t.mode || this.mode || null, this.signal = t.signal || this.signal, this.referrer = null, ("GET" === this.method || "HEAD" === this.method) && a) throw TypeError("Body not allowed for GET or HEAD requests");
+                    if (this._initBody(a), ("GET" === this.method || "HEAD" === this.method) && ("no-store" === t.cache || "no-cache" === t.cache)) {
+                        var o = /([?&])_=[^&]*/;
+                        o.test(this.url) ? this.url = this.url.replace(o, "$1_=" + new Date().getTime()) : this.url += (/\?/.test(this.url) ? "&" : "?") + "_=" + new Date().getTime()
+                    }
+                }
+
+                function v(e) {
+                    var t = new FormData;
+                    return e.trim().split("&").forEach(function(e) {
+                        if (e) {
+                            var r = e.split("="),
+                                i = r.shift().replace(/\+/g, " "),
+                                a = r.join("=").replace(/\+/g, " ");
+                            t.append(decodeURIComponent(i), decodeURIComponent(a))
+                        }
+                    }), t
+                }
+
+                function $(e, t) {
+                    if (!(this instanceof $)) throw TypeError('Please use the "new" operator, this DOM object constructor cannot be called as a function.');
+                    t || (t = {}), this.type = "default", this.status = void 0 === t.status ? 200 : t.status, this.ok = this.status >= 200 && this.status < 300, this.statusText = void 0 === t.statusText ? "" : "" + t.statusText, this.headers = new c(t.headers), this.url = t.url || "", this._initBody(e)
+                }
+                y.prototype.clone = function() {
+                    return new y(this, {
+                        body: this._bodyInit
+                    })
+                }, g.call(y.prototype), g.call($.prototype), $.prototype.clone = function() {
+                    return new $(this._bodyInit, {
+                        status: this.status,
+                        statusText: this.statusText,
+                        headers: new c(this.headers),
+                        url: this.url
+                    })
+                }, $.error = function() {
+                    var e = new $(null, {
+                        status: 0,
+                        statusText: ""
+                    });
+                    return e.type = "error", e
+                };
+                var b = [301, 302, 303, 307, 308];
+                $.redirect = function(e, t) {
+                    if (-1 === b.indexOf(t)) throw RangeError("Invalid status code");
+                    return new $(null, {
+                        status: t,
+                        headers: {
+                            location: e
+                        }
+                    })
+                };
+                var M = i.DOMException;
+                try {
+                    new M
+                } catch (C) {
+                    (M = function(e, t) {
+                        this.message = e, this.name = t;
+                        var r = Error(e);
+                        this.stack = r.stack
+                    }).prototype = Object.create(Error.prototype), M.prototype.constructor = M
+                }
+
+                function S(e, t) {
+                    return new Promise(function(r, o) {
+                        var s = new y(e, t);
+                        if (s.signal && s.signal.aborted) return o(new M("Aborted", "AbortError"));
+                        var n = new XMLHttpRequest;
+
+                        function l() {
+                            n.abort()
+                        }
+                        n.onload = function() {
+                            var e, t, i = {
+                                status: n.status,
+                                statusText: n.statusText,
+                                headers: (e = n.getAllResponseHeaders() || "", t = new c, e.replace(/\r?\n[\t ]+/g, " ").split("\r").map(function(e) {
+                                    return 0 === e.indexOf("\n") ? e.substr(1, e.length) : e
+                                }).forEach(function(e) {
+                                    var r = e.split(":"),
+                                        i = r.shift().trim();
+                                    if (i) {
+                                        var a = r.join(":").trim();
+                                        t.append(i, a)
+                                    }
+                                }), t)
+                            };
+                            i.url = "responseURL" in n ? n.responseURL : i.headers.get("X-Request-URL");
+                            var a = "response" in n ? n.response : n.responseText;
+                            setTimeout(function() {
+                                r(new $(a, i))
+                            }, 0)
+                        }, n.onerror = function() {
+                            setTimeout(function() {
+                                o(TypeError("Network request failed"))
+                            }, 0)
+                        }, n.ontimeout = function() {
+                            setTimeout(function() {
+                                o(TypeError("Network request failed"))
+                            }, 0)
+                        }, n.onabort = function() {
+                            setTimeout(function() {
+                                o(new M("Aborted", "AbortError"))
+                            }, 0)
+                        }, n.open(s.method, function e(t) {
+                            try {
+                                return "" === t && i.location.href ? i.location.href : t
+                            } catch (r) {
+                                return t
+                            }
+                        }(s.url), !0), "include" === s.credentials ? n.withCredentials = !0 : "omit" === s.credentials && (n.withCredentials = !1), "responseType" in n && (a.blob ? n.responseType = "blob" : a.arrayBuffer && s.headers.get("Content-Type") && -1 !== s.headers.get("Content-Type").indexOf("application/octet-stream") && (n.responseType = "arraybuffer")), !t || "object" != typeof t.headers || t.headers instanceof c ? s.headers.forEach(function(e, t) {
+                            n.setRequestHeader(t, e)
+                        }) : Object.getOwnPropertyNames(t.headers).forEach(function(e) {
+                            n.setRequestHeader(e, u(t.headers[e]))
+                        }), s.signal && (s.signal.addEventListener("abort", l), n.onreadystatechange = function() {
+                            4 === n.readyState && s.signal.removeEventListener("abort", l)
+                        }), n.send(void 0 === s._bodyInit ? null : s._bodyInit)
+                    })
+                }
+                S.polyfill = !0, i.fetch || (i.fetch = S, i.Headers = c, i.Request = y, i.Response = $)
+            }
+        },
+        t = {};
+
+    function r(i) {
+        var a = t[i];
+        if (void 0 !== a) return a.exports;
+        var o = t[i] = {
+            exports: {}
+        };
+        return e[i].call(o.exports, o, o.exports, r), o.exports
+    }
+    r.d = function(e, t) {
+        for (var i in t) r.o(t, i) && !r.o(e, i) && Object.defineProperty(e, i, {
+            enumerable: !0,
+            get: t[i]
+        })
+    }, r.o = function(e, t) {
+        return Object.prototype.hasOwnProperty.call(e, t)
+    }, r.r = function(e) {
+        "undefined" != typeof Symbol && Symbol.toStringTag && Object.defineProperty(e, Symbol.toStringTag, {
+            value: "Module"
+        }), Object.defineProperty(e, "__esModule", {
+            value: !0
+        })
+    }, r("./src/main.ts")
+}();
