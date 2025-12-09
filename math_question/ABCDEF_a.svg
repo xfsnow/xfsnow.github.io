@@ -1,0 +1,31 @@
+<svg width="450" height="300" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <!-- 四边形ABCD -->
+  <polygon points="150,50 110,200 350,200 310,50" fill="none" stroke="black" stroke-width="2"/>
+  
+  <!-- 标注顶点A, B, C, D -->
+  <text x="145" y="45" font-family="serif" font-style="italic" font-size="14">A</text>
+  <text x="105" y="215" font-family="serif" font-style="italic" font-size="14">B</text>
+  <text x="355" y="215" font-family="serif" font-style="italic" font-size="14">C</text>
+  <text x="315" y="45" font-family="serif" font-style="italic" font-size="14">D</text>
+  
+  <!-- 点E在BC上，点F在CD上（修正位置） -->
+  <line x1="150" y1="50" x2="230" y2="200" stroke="black" stroke-width="1.5"/> <!-- AE -->
+  <line x1="150" y1="50" x2="330" y2="120" stroke="black" stroke-width="1.5"/> <!-- AF，F在CD边上 -->
+  <line x1="230" y1="200" x2="330" y2="120" stroke="black" stroke-width="1.5"/> <!-- EF -->
+  
+  <!-- 标注点E和F（F向右移） -->
+  <text x="225" y="215" font-family="serif" font-style="italic" font-size="14">E</text>
+  <text x="335" y="115" font-family="serif" font-style="italic" font-size="14">F</text>
+  
+  <!-- 辅助线：延长CB到G，使BG=DF -->
+  <!-- DF的长度约为 sqrt((330-310)^2 + (120-50)^2) = sqrt(400 + 4900) = sqrt(5300) ≈ 72.8 -->
+  <!-- CB是从(110,200)到(350,200)，沿此方向延长约72.8像素到点G -->
+  <!-- G点坐标约为(110-72.8, 200) = (37.2, 200) -->
+  <line x1="110" y1="200" x2="37" y2="200" stroke="black" stroke-width="1.5" stroke-dasharray="5,5"/> <!-- BG虚线 -->
+  <line x1="150" y1="50" x2="37" y2="200" stroke="black" stroke-width="1.5" stroke-dasharray="5,5"/> <!-- AG虚线 -->
+  
+  <!-- 标注点G -->
+  <text x="25" y="195" font-family="serif" font-style="italic" font-size="14">G</text>
+  
+  <!-- 辅助说明：不画坐标系、不加中文图例 -->
+</svg>
