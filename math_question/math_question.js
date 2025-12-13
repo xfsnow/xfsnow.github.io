@@ -238,6 +238,19 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // 创建题目卡片
     createQuestionCard(question, index) {
+      // 从id生成格式化的时间显示（东八区）
+      const date = new Date(question.id);
+      // 使用toLocaleString获取东八区时间
+      const formattedTime = date.toLocaleString('zh-CN', {
+        timeZone: 'Asia/Shanghai',
+        year: 'numeric',
+        month: '2-digit',
+        day: '2-digit',
+        hour: '2-digit',
+        minute: '2-digit',
+        second: '2-digit'
+      }).replace(/\//g, '-');
+
       const card = document.createElement('div');
       card.className = 'question-card';
       card.innerHTML = `
@@ -248,7 +261,7 @@ document.addEventListener('DOMContentLoaded', function() {
               <div class="question-meta">
                 分类: ${this.getCategoryName(question.category)} | 
                 难度: ${this.getDifficultyName(question.difficulty)} | 
-                创建时间: ${question.createTime}
+                创建时间: ${formattedTime}
               </div>
             </div>
             <div class="question-actions">
@@ -440,11 +453,10 @@ document.addEventListener('DOMContentLoaded', function() {
         content: content,
         answer: answer,
         category: category,
-        difficulty: difficulty,
-        createTime: new Date().toISOString().slice(0, 19).replace('T', ' ')
+        difficulty: difficulty
       };
       
-      this.mathQuestions.push(question);
+      this.mathQuestions.unshift(question);
       this.renderQuestions();
       
       // 取消添加题目（这会自动更新按钮状态）
@@ -590,7 +602,6 @@ document.addEventListener('DOMContentLoaded', function() {
               
               importData.questions.forEach((question, index) => {
                 question.id = maxId + index + 1;
-                question.createTime = question.createTime || new Date().toISOString().slice(0, 19).replace('T', ' ');
               });
               
               this.mathQuestions = [...this.mathQuestions, ...importData.questions];
