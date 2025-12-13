@@ -30,5 +30,8 @@
     "gulp-purgecss": "^7.0.2",
     "gulp-rename": "^2.1.0",
     "gulp-terser": "^2.1.0"
+  },
+  "dependencies": {
+    "deobfuscator": "^2.4.5"
   }
 }
