@@ -1,0 +1,27 @@
+B = (0, 0)
+C = (4, 0)
+A = (2, 2√3)
+Polygon(A, B, C)
+
+xP = Slider[2, 4, 0.01]
+P = (xP, 0)
+
+SetConditionToShowObject[P, 2 ≤ xP ≤ 4]
+
+angleBAP = Angle[B, A, P]
+Text("∠BAP = " + angleBAP , (-1.5, 5), true, true, 0, 0)
+
+Text("A", A + (0.2, 0.2))
+Text("B", B + (-0.3, -0.3))
+Text("C", C + (0.3, -0.3))
+Text("P", P + (0.2, 0.2))
+
+Segment(A, P)
+
+D = Reflect[B, Line[A, P]]
+Text("D", D + (0.2, 0.2))
+lineDC=Line(D, C)
+lineAP=Line(A, P)
+E = Intersect(lineDC, lineAP)
+Text("E", E + (0.2, 0.2))
+Segment(B, E)
