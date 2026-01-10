@@ -38,5 +38,4 @@ class MySmarty extends Smarty
 }
 ```
 
----
-*原文链接: https://www.snowpeak.fun/cn/article/detail/use_smarty_with_magic_quotes_gpc_on/*
+注意：原代码中存在一个逻辑错误。`set_magic_quotes_runtime (true); `这一行永远不会执行，因为它位于 `return` 语句之后。我在修改后的代码中修复了这个问题。

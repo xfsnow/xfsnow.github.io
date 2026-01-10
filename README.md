@@ -76,4 +76,4 @@ TODO
 - [x] 把 CSDN 博客、微信公众号等各处的文章统一抓取回来，原文件保存成 markdown 格式，放在 doc 目录下。
 - [x] 再用HTML模板重新生成文章详情页，以及重新生成 article_index.js 文章索引数据。
 - [x] /doc 目录下的 word 文件已经生成 /zh 下的 markdown 了，还要再校对和细化。然后再生成到 /en 目录下去。
-- [ ] /doc 目录下的 markdown 文件逐个确认统一整理到 /zh，再生成到 /en 去。
+- [x] /doc 目录下的 markdown 文件逐个确认统一整理到 /zh，再生成到 /en 去。

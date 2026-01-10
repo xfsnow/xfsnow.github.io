@@ -1,6 +1,6 @@
 {
-  "openaiurl": "https://<CHANGEHERE>.openai.azure.com/openai/deployments/<CHANGEHERE>/completions?api-version=2022-12-01",
-  "openaipikey": "",
-  "ttsregion": "",
-  "ttsapikey": ""
+  "openaiurl": "https://snowpeakopenai.openai.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2025-01-01-preview",
+  "openaipikey": "bf87468c9f18429bb8710fd5eae4aeb2",
+  "ttsregion": "eastus",
+  "ttsapikey": "e8acc9c41a10430d975c89825f19eca2"
 }
