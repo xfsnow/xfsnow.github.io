@@ -1,5 +1,5 @@
 # China's Moment of Clarity in AI: Even with Only 20% Chance of Success, We Must Lay Solid Foundations
-Publish Date: *2026-1-14 10:30:00*
+Published: *2026-01-14 10:30:00*
 
 Category: __AI__
 
