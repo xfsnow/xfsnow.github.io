@@ -1,0 +1,264 @@
+[
+  {
+    "unit":"Starter Unit 2",
+    "word": "what",
+    "phonetic": "/wɒt; wʌt/",
+    "partOfSpeech": "pron. & adj.",
+    "meaning": "什么",
+    "wordRootAffix": "源自古英语“hwæt”，无常见词根词缀，用于询问事物的名称、性质等",
+    "exampleSentences": [
+      "What's this in English?（这个用英语怎么说？）",
+      "What time is it now?（现在几点了？）"
+    ]
+  },
+  {
+    "unit":"Starter Unit 2",
+    "word": "is",
+    "phonetic": "/ɪz/",
+    "partOfSpeech": "v.",
+    "meaning": "是（be动词的第三人称单数现在式）",
+    "wordRootAffix": "源自古英语“is”，属于be动词变形，无词根词缀",
+    "exampleSentences": [
+      "This is a book.（这是一本书。）",
+      "He is my brother.（他是我的哥哥。）"
+    ]
+  },
+  {
+    "unit":"Starter Unit 2",
+    "word": "this",
+    "phonetic": "/ðɪs/",
+    "partOfSpeech": "pron. & adj.",
+    "meaning": "这；这个",
+    "wordRootAffix": "源自古英语“ðis”，无常见词根词缀，指代较近的人或事物",
+    "exampleSentences": [
+      "This is my pencil.（这是我的铅笔。）",
+      "What color is this pen?（这支钢笔是什么颜色的？）"
+    ]
+  },
+  {
+    "unit":"Starter Unit 2",
+    "word": "in",
+    "phonetic": "/ɪn/",
+    "partOfSpeech": "prep.",
+    "meaning": "在……里；用（某种语言）",
+    "wordRootAffix": "源自古英语“in”，无常见词根词缀，表位置、语言等",
+    "exampleSentences": [
+      "The book is in the bag.（书在书包里。）",
+      "Can you speak in English?（你能用英语说吗？）"
+    ]
+  },
+  {
+    "unit":"Starter Unit 2",
+    "word": "English",
+    "phonetic": "/ˈɪŋɡlɪʃ/",
+    "partOfSpeech": "n. 英语；adj. 英国的；英国人的",
+    "wordRootAffix": "源自“England”（英国）+ 后缀“-ish”（表语言/国籍），指“英国的语言或相关事物”",
+    "exampleSentences": [
+      "I study English every day.（我每天学习英语。）",
+      "She is an English teacher.（她是一位英语老师。）"
+    ]
+  },
+  {
+    "unit":"Starter Unit 2",
+    "word": "in English",
+    "phonetic": "/ɪn ˈɪŋɡlɪʃ/",
+    "partOfSpeech": "短语",
+    "meaning": "用英语",
+    "wordRootAffix": "由“in”（用）+ “English”（英语）构成，表“使用英语进行表达”",
+    "exampleSentences": [
+      "Say it in English.（用英语说它。）",
+      "Write your name in English.（用英语写你的名字。）"
+    ]
+  },
+  {
+    "unit":"Starter Unit 2",
+    "word": "map",
+    "phonetic": "/mæp/",
+    "partOfSpeech": "n.",
+    "meaning": "地图",
+    "wordRootAffix": "源自古法语“mappe”，无常见词根词缀，指“描绘地理信息的图表”",
+    "exampleSentences": [
+      "This is a map of China.（这是一张中国地图。）",
+      "Find Beijing on the map.（在地图上找到北京。）"
+    ]
+  },
+  {
+    "unit":"Starter Unit 2",
+    "word": "cup",
+    "phonetic": "/kʌp/",
+    "partOfSpeech": "n.",
+    "meaning": "杯子",
+    "wordRootAffix": "源自古英语“cupp”，无常见词根词缀，指“用于盛装液体的小型容器”",
+    "exampleSentences": [
+      "I have a red cup.（我有一个红色的杯子。）",
+      "She drank a cup of tea.（她喝了一杯茶。）"
+    ]
+  },
+  {
+    "unit":"Starter Unit 2",
+    "word": "ruler",
+    "phonetic": "/ˈruːlə(r)/",
+    "partOfSpeech": "n.",
+    "meaning": "尺子；直尺",
+    "wordRootAffix": "由“rule”（规则、测量）+ 后缀“-er”（表工具）构成，“用于测量或画直线的工具”",
+    "exampleSentences": [
+      "Pass me the ruler, please.（请把尺子递给我。）",
+      "This ruler is 30 centimeters long.（这把尺子长30厘米。）"
+    ]
+  },
+  {
+    "unit":"Starter Unit 2",
+    "word": "pen",
+    "phonetic": "/pen/",
+    "partOfSpeech": "n.",
+    "meaning": "钢笔",
+    "wordRootAffix": "源自古法语“penne”（羽毛），因古代用羽毛制笔而得名，无常见词根词缀",
+    "exampleSentences": [
+      "I write with a pen.（我用钢笔写字。）",
+      "This pen is made in Germany.（这支钢笔是德国制造的。）"
+    ]
+  },
+  {
+    "unit":"Starter Unit 2",
+    "word": "orange",
+    "phonetic": "/ˈɒrɪndʒ; ˈɒrəndʒ/",
+    "partOfSpeech": "n. 橙子；橘子；adj. 橙色的；橘黄色的",
+    "wordRootAffix": "源自阿拉伯语“nāranj”，无英语词根词缀，指“柑橘类水果或其颜色”",
+    "exampleSentences": [
+      "I eat an orange every morning.（我每天早上吃一个橙子。）",
+      "Her dress is orange.（她的裙子是橙色的。）"
+    ]
+  },
+  {
+    "unit":"Starter Unit 2",
+    "word": "jacket",
+    "phonetic": "/ˈdʒækɪt/",
+    "partOfSpeech": "n.",
+    "meaning": "夹克衫；短上衣",
+    "wordRootAffix": "源自古法语“jaquet”（短外套），无常见词根词缀，指“轻便的短款上衣”",
+    "exampleSentences": [
+      "Put on your jacket. It's cold outside.（穿上你的夹克衫，外面冷。）",
+      "This blue jacket is very nice.（这件蓝色的夹克衫很漂亮。）"
+    ]
+  },
+  {
+    "unit":"Starter Unit 2",
+    "word": "key",
+    "phonetic": "/kiː/",
+    "partOfSpeech": "n.",
+    "meaning": "钥匙；关键",
+    "wordRootAffix": "源自古英语“cǣg”，无常见词根词缀，核心含义“开启某物的工具”，引申为“关键”",
+    "exampleSentences": [
+      "Where is the key to the door?（门的钥匙在哪里？）",
+      "Hard work is the key to success.（努力是成功的关键。）"
+    ]
+  },
+  {
+    "unit":"Starter Unit 2",
+    "word": "quilt",
+    "phonetic": "/kwɪlt/",
+    "partOfSpeech": "n.",
+    "meaning": "被子；被褥",
+    "wordRootAffix": "源自古法语“cuilte”（床罩），无常见词根词缀，指“床上保暖用的厚织物”",
+    "exampleSentences": [
+      "The quilt is on the bed.（被子在床上。）",
+      "My mother made this quilt for me.（我妈妈为我做了这床被子。）"
+    ]
+  },
+  {
+    "unit":"Starter Unit 2",
+    "word": "it",
+    "phonetic": "/ɪt/",
+    "partOfSpeech": "pron.",
+    "meaning": "它",
+    "wordRootAffix": "源自古英语“hit”，无常见词根词缀，指代前文提到的单数事物、动物或抽象概念",
+    "exampleSentences": [
+      "It is a dog.（它是一只狗。）",
+      "It is raining outside.（外面在下雨。）"
+    ]
+  },
+  {
+    "unit":"Starter Unit 2",
+    "word": "a",
+    "phonetic": "/ə; eɪ/",
+    "partOfSpeech": "art.",
+    "meaning": "一（个、件……）",
+    "wordRootAffix": "源自古英语“ān”，不定冠词，用于辅音音素开头的单数可数名词前，无词根词缀",
+    "exampleSentences": [
+      "I have a book.（我有一本书。）",
+      "She is a student.（她是一名学生。）"
+    ]
+  },
+  {
+    "unit":"Starter Unit 2",
+    "word": "an",
+    "phonetic": "/æn; ən/",
+    "partOfSpeech": "art.",
+    "meaning": "一（个、件……）",
+    "wordRootAffix": "源自古英语“ān”，不定冠词，用于元音音素开头的单数可数名词前，无词根词缀",
+    "exampleSentences": [
+      "This is an apple.（这是一个苹果。）",
+      "He is an English teacher.（他是一位英语老师。）"
+    ]
+  },
+  {
+    "unit":"Starter Unit 2",
+    "word": "that",
+    "phonetic": "/ðæt/",
+    "partOfSpeech": "pron. & adj.",
+    "meaning": "那；那个",
+    "wordRootAffix": "源自古英语“ðæt”，无常见词根词缀，指代较远的人或事物",
+    "exampleSentences": [
+      "That is my schoolbag.（那是我的书包。）",
+      "What is that over there?（那边那个是什么？）"
+    ]
+  },
+  {
+    "unit":"Starter Unit 2",
+    "word": "spell",
+    "phonetic": "/spel/",
+    "partOfSpeech": "v.",
+    "meaning": "用字母拼；拼写",
+    "wordRootAffix": "源自古英语“spellian”，无常见词根词缀，指“逐个字母拼出单词”",
+    "exampleSentences": [
+      "Can you spell your name?（你能拼写你的名字吗？）",
+      "How do you spell “computer”?（“computer”怎么拼写？）"
+    ]
+  },
+  {
+    "unit":"Starter Unit 2",
+    "word": "please",
+    "phonetic": "/pliːz/",
+    "partOfSpeech": "interj. & v.",
+    "meaning": "请；使高兴",
+    "wordRootAffix": "源自古法语“plaire”（使高兴），无常见词根词缀，用于请求时表礼貌",
+    "exampleSentences": [
+      "Spell it, please.（请拼写它。）",
+      "Please pass the salt.（请把盐递给我。）"
+    ]
+  },
+  {
+    "unit":"Starter Unit 2",
+    "word": "NBA",
+    "phonetic": "/ˌen biː ˈeɪ/",
+    "partOfSpeech": "缩写",
+    "meaning": "美国职业篮球联赛",
+    "wordRootAffix": "是“National Basketball Association”的缩写，美国顶级篮球联赛",
+    "exampleSentences": [
+      "He likes watching NBA games.（他喜欢看NBA比赛。）",
+      "Many famous basketball players play in the NBA.（许多著名篮球运动员在NBA打球。）"
+    ]
+  },
+  {
+    "unit":"Starter Unit 2",
+    "word": "P",
+    "phonetic": "/piː/",
+    "partOfSpeech": "缩写",
+    "meaning": "停车（区）",
+    "wordRootAffix": "是“Parking”（停车）的缩写，用于标识停车场",
+    "exampleSentences": [
+      "You can park your car in the P area.（你可以把车停在停车区。）",
+      "The sign “P” means parking is allowed here.（“P”标志表示这里可以停车。）"
+    ]
+  }
+]

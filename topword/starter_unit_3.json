@@ -1,0 +1,266 @@
+[
+  {
+    "unit":"Starter Unit 3",
+    "word": "color",
+    "phonetic": "/ˈkʌlə(r)/ (美) /ˈkɒlə(r)/ (英)",
+    "partOfSpeech": "n. & v.",
+    "meaning": "颜色；给……着色",
+    "wordRootAffix": "源自古法语“color”，无常见词根词缀，名词表“视觉感知的色彩”，动词表“赋予色彩”",
+    "exampleSentences": [
+      "What color is your bag?（你的书包是什么颜色的？）",
+      "She likes to color pictures with crayons.（她喜欢用蜡笔给图画上色。）"
+    ]
+  },
+  {
+    "unit":"Starter Unit 3",
+    "word": "red",
+    "phonetic": "/red/",
+    "partOfSpeech": "adj. & n.",
+    "meaning": "红色（的）",
+    "wordRootAffix": "源自古英语“rēad”，无常见词根词缀，基础颜色词汇，表“像血或火一样的颜色”",
+    "exampleSentences": [
+      "The apple is red.（这个苹果是红色的。）",
+      "Her favorite color is red.（她最喜欢的颜色是红色。）"
+    ]
+  },
+  {
+    "unit":"Starter Unit 3",
+    "word": "yellow",
+    "phonetic": "/ˈjeləʊ/",
+    "partOfSpeech": "adj. & n.",
+    "meaning": "黄色（的）",
+    "exampleSentences": [
+      "The banana is yellow.（这个香蕉是黄色的。）",
+      "I have a yellow pencil case.（我有一个黄色的铅笔盒。）"
+    ],
+    "wordRootAffix": "源自古英语“geolu”，无常见词根词缀，基础颜色词汇，表“像阳光或柠檬一样的颜色”"
+  },
+  {
+    "unit":"Starter Unit 3",
+    "word": "green",
+    "phonetic": "/ɡriːn/",
+    "partOfSpeech": "adj. & n.",
+    "meaning": "绿色（的）",
+    "wordRootAffix": "源自古英语“grēne”，无常见词根词缀，基础颜色词汇，表“像草或树叶一样的颜色”",
+    "exampleSentences": [
+      "The grass is green in spring.（春天的草是绿色的。）",
+      "Green is the color of nature.（绿色是大自然的颜色。）"
+    ]
+  },
+  {
+    "unit":"Starter Unit 3",
+    "word": "blue",
+    "phonetic": "/bluː/",
+    "partOfSpeech": "adj. & n.",
+    "meaning": "蓝色（的）",
+    "wordRootAffix": "源自古法语“bleu”，无常见词根词缀，基础颜色词汇，表“像天空或大海一样的颜色”",
+    "exampleSentences": [
+      "The sky is blue on a sunny day.（晴天的天空是蓝色的。）",
+      "He wears a blue shirt today.（他今天穿了一件蓝色的衬衫。）"
+    ]
+  },
+  {
+    "unit":"Starter Unit 3",
+    "word": "black",
+    "phonetic": "/blæk/",
+    "partOfSpeech": "adj. & n.",
+    "meaning": "黑色（的）",
+    "wordRootAffix": "源自古英语“blæc”，无常见词根词缀，基础颜色词汇，表“没有光线的颜色”",
+    "exampleSentences": [
+      "My hair is black.（我的头发是黑色的。）",
+      "The cat is black and white.（这只猫是黑白相间的。）"
+    ]
+  },
+  {
+    "unit":"Starter Unit 3",
+    "word": "white",
+    "phonetic": "/waɪt/",
+    "partOfSpeech": "adj. & n.",
+    "meaning": "白色（的）",
+    "wordRootAffix": "源自古英语“hwīt”，无常见词根词缀，基础颜色词汇，表“像雪或牛奶一样的颜色”",
+    "exampleSentences": [
+      "The snow is white in winter.（冬天的雪是白色的。）",
+      "She has a white dress for the party.（她有一件白色的派对连衣裙。）"
+    ]
+  },
+  {
+    "unit":"Starter Unit 3",
+    "word": "purple",
+    "phonetic": "/ˈpɜːpl/",
+    "partOfSpeech": "adj. & n.",
+    "meaning": "紫色（的）",
+    "wordRootAffix": "源自古英语“purpul”，源自拉丁语“purpura”（紫螺），因紫螺分泌物可制紫色染料得名，无常见词缀",
+    "exampleSentences": [
+      "The grapes are purple.（这些葡萄是紫色的。）",
+      "Her bedroom wall is purple.（她的卧室墙是紫色的。）"
+    ]
+  },
+  {
+    "unit":"Starter Unit 3",
+    "word": "brown",
+    "phonetic": "/braʊn/",
+    "partOfSpeech": "adj. & n.",
+    "meaning": "棕色（的）；褐色（的）",
+    "wordRootAffix": "源自古英语“brūn”，无常见词根词缀，基础颜色词汇，表“像泥土或巧克力一样的颜色”",
+    "exampleSentences": [
+      "The bear is brown.（这只熊是棕色的。）",
+      "I like drinking brown tea.（我喜欢喝红茶。）"
+    ]
+  },
+  {
+    "unit":"Starter Unit 3",
+    "word": "pink",
+    "phonetic": "/pɪŋk/",
+    "partOfSpeech": "adj. & n.",
+    "meaning": "粉红色（的）",
+    "wordRootAffix": "源自古英语“pinke”（小手指），因小手指指甲旁皮肤呈粉色得名，无常见词缀",
+    "exampleSentences": [
+      "The flower is pink and very beautiful.（这朵花是粉色的，非常漂亮。）",
+      "Little girls often like pink things.（小女孩通常喜欢粉色的东西。）"
+    ]
+  },
+  {
+    "unit":"Starter Unit 3",
+    "word": "orange",
+    "phonetic": "/ˈɒrɪndʒ; ˈɒrəndʒ/",
+    "partOfSpeech": "adj. & n.",
+    "meaning": "橙色（的）；橘黄色（的）",
+    "wordRootAffix": "同Starter Unit 2，源自阿拉伯语“nāranj”，表“橙子的颜色”",
+    "exampleSentences": [
+      "The sunset is orange today.（今天的晚霞是橙色的。）",
+      "He has an orange bike.（他有一辆橙色的自行车。）"
+    ]
+  },
+  {
+    "unit":"Starter Unit 3",
+    "word": "and",
+    "phonetic": "/ænd; ən/",
+    "partOfSpeech": "conj.",
+    "meaning": "和；又；而且",
+    "wordRootAffix": "源自古英语“and”，无常见词根词缀，并列连词，连接单词、短语或句子",
+    "exampleSentences": [
+      "I like red and blue.（我喜欢红色和蓝色。）",
+      "She is tall and thin.（她又高又瘦。）"
+    ]
+  },
+  {
+    "unit":"Starter Unit 3",
+    "word": "UFO",
+    "phonetic": "/ˌjuː ef ˈəʊ/",
+    "partOfSpeech": "缩写",
+    "meaning": "不明飞行物",
+    "wordRootAffix": "是“Unidentified Flying Object”的缩写，“unidentified”（未识别的）+ “flying”（飞行的）+ “object”（物体）",
+    "exampleSentences": [
+      "Some people say they saw a UFO last night.（有人说昨晚看到了不明飞行物。）",
+      "Scientists are studying UFO reports.（科学家正在研究不明飞行物的报告。）"
+    ]
+  },
+  {
+    "unit":"Starter Unit 3",
+    "word": "S",
+    "phonetic": "/es/",
+    "partOfSpeech": "缩写",
+    "meaning": "小号的",
+    "wordRootAffix": "是“Small”（小的）的缩写，用于服装、物品尺寸标识",
+    "exampleSentences": [
+      "This T-shirt is size S.（这件T恤是S码的。）",
+      "I need a pair of shoes in size S.（我需要一双S码的鞋子。）"
+    ]
+  },
+  {
+    "unit":"Starter Unit 3",
+    "word": "M",
+    "phonetic": "/em/",
+    "partOfSpeech": "缩写",
+    "meaning": "中号的",
+    "wordRootAffix": "是“Medium”（中等的）的缩写，用于服装、物品尺寸标识",
+    "exampleSentences": [
+      "Her dress is size M.（她的连衣裙是M码的。）",
+      "I usually buy M size for my sweaters.（我买毛衣通常选M码。）"
+    ]
+  },
+  {
+    "unit":"Starter Unit 3",
+    "word": "L",
+    "phonetic": "/el/",
+    "partOfSpeech": "缩写",
+    "meaning": "大号的",
+    "wordRootAffix": "是“Large”（大的）的缩写，用于服装、物品尺寸标识",
+    "exampleSentences": [
+      "My father wears size L for his shirts.（我爸爸的衬衫穿L码。）",
+      "This jacket is too small; I need size L.（这件夹克太小了，我需要L码。）"
+    ]
+  },
+  {
+    "unit":"Starter Unit 3",
+    "word": "XL",
+    "phonetic": "/ˌeks ˈel/",
+    "partOfSpeech": "缩写",
+    "meaning": "特大号的",
+    "wordRootAffix": "是“Extra Large”（特大的）的缩写，“extra”（额外的）+ “large”（大的），用于尺寸标识",
+    "exampleSentences": [
+      "He needs an XL T-shirt because he is tall.（他需要XL码的T恤，因为他个子高。）",
+      "The store has no XL size in this style.（这家店这款没有XL码。）"
+    ]
+  },
+  {
+    "unit":"Starter Unit 3",
+    "word": "can",
+    "phonetic": "/kæn; kən/",
+    "partOfSpeech": "modal v.",
+    "meaning": "能；会",
+    "wordRootAffix": "源自古英语“cunnan”（知道、能够），情态动词，后接动词原形，无词根词缀",
+    "exampleSentences": [
+      "Can you say it in English?（你能用英语说它吗？）",
+      "I can draw a cat.（我会画猫。）"
+    ]
+  },
+  {
+    "unit":"Starter Unit 3",
+    "word": "say",
+    "phonetic": "/seɪ/",
+    "partOfSpeech": "v.",
+    "meaning": "说；讲",
+    "wordRootAffix": "源自古英语“secgan”，无常见词根词缀，表“用语言表达想法”",
+    "exampleSentences": [
+      "What did he say?（他说了什么？）",
+      "Please say your name again.（请再说一遍你的名字。）"
+    ]
+  },
+  {
+    "unit":"Starter Unit 3",
+    "word": "my",
+    "phonetic": "/maɪ/",
+    "partOfSpeech": "pron.",
+    "meaning": "我的",
+    "wordRootAffix": "源自古英语“mīn”，形容词性物主代词，修饰名词，无词根词缀",
+    "exampleSentences": [
+      "This is my school.（这是我的学校。）",
+      "My favorite color is green.（我最喜欢的颜色是绿色。）"
+    ]
+  },
+  {
+    "unit":"Starter Unit 3",
+    "word": "SB",
+    "phonetic": "/ˌes ˈbiː/",
+    "partOfSpeech": "缩写",
+    "meaning": "某人",
+    "wordRootAffix": "是“Somebody”（某人）的缩写，非正式用语，指代不确定的人",
+    "exampleSentences": [
+      "SB is knocking at the door.（有人在敲门。）",
+      "I saw SB walking in the park.（我看到有人在公园里散步。）"
+    ]
+  },
+  {
+    "unit":"Starter Unit 3",
+    "word": "CCTV",
+    "phonetic": "/ˌsiː siː tiː ˈviː/",
+    "partOfSpeech": "缩写",
+    "meaning": "中国中央电视台",
+    "wordRootAffix": "是“China Central Television”的缩写，中国国家主流媒体机构",
+    "exampleSentences": [
+      "We watch CCTV news every evening.（我们每天晚上看央视新闻。）",
+      "CCTV has many different channels.（央视有很多不同的频道。）"
+    ]
+  }
+]

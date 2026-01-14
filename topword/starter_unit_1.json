@@ -1,0 +1,230 @@
+[
+  {
+    "unit":"Starter Unit 1",
+    "word": "hello",
+    "phonetic": "/həˈləʊ/",
+    "partOfSpeech": "interj.",
+    "meaning": "喂；你好",
+    "wordRootAffix": "源自古英语“hāl”（健康的），后演变为问候语，无常见词根词缀",
+    "exampleSentences": [
+      "Hello! Nice to meet you.（你好！很高兴见到你。）",
+      "She said hello to her teacher when she entered the classroom.（她进教室时向老师问好。）"
+    ]
+  },
+  {
+    "unit":"Starter Unit 1",
+    "word": "hi",
+    "phonetic": "/haɪ/",
+    "partOfSpeech": "interj.",
+    "meaning": "嗨；喂",
+    "wordRootAffix": "源自英语口语化问候，是“hello”的简略形式，无词根词缀",
+    "exampleSentences": [
+      "Hi, my name is Tom.（嗨，我叫汤姆。）",
+      "Hi! How are you today?（嗨！你今天好吗？）"
+    ]
+  },
+  {
+    "unit":"Starter Unit 1",
+    "word": "good",
+    "phonetic": "/ɡʊd/",
+    "partOfSpeech": "adj.",
+    "meaning": "好的",
+    "wordRootAffix": "源自古英语“gōd”，无常见词根词缀，表“令人满意的、优质的”",
+    "exampleSentences": [
+      "This is a good book.（这是一本好书。）",
+      "She has a good friend in school.（她在学校有一个好朋友。）"
+    ]
+  },
+  {
+    "unit":"Starter Unit 1",
+    "word": "morning",
+    "phonetic": "/ˈmɔːnɪŋ/",
+    "partOfSpeech": "n.",
+    "meaning": "早晨；上午",
+    "wordRootAffix": "由“morn”（黎明）+ 后缀“-ing”（表时间段）构成，指“从日出到中午的时间”",
+    "exampleSentences": [
+      "Good morning, class!（早上好，同学们！）",
+      "I exercise every morning.（我每天早上锻炼。）"
+    ]
+  },
+  {
+    "unit":"Starter Unit 1",
+    "word": "good morning",
+    "phonetic": "/ɡʊd ˈmɔːnɪŋ/",
+    "partOfSpeech": "短语",
+    "meaning": "早上好",
+    "wordRootAffix": "由“good”（好的）+ “morning”（早晨）构成，是上午的常用问候语",
+    "exampleSentences": [
+      "Good morning, Mr. Li!（早上好，李老师！）",
+      "He says good morning to his parents every day.（他每天都向父母说早上好。）"
+    ]
+  },
+  {
+    "unit":"Starter Unit 1",
+    "word": "afternoon",
+    "phonetic": "/ˌɑːftəˈnuːn/",
+    "partOfSpeech": "n.",
+    "meaning": "下午",
+    "wordRootAffix": "前缀“after-”（在……之后）+ “noon”（中午），指“中午之后到傍晚的时间”",
+    "exampleSentences": [
+      "We have a math class in the afternoon.（我们下午有一节数学课。）",
+      "Good afternoon! How was your lunch?（下午好！你午饭吃得怎么样？）"
+    ]
+  },
+  {
+    "unit":"Starter Unit 1",
+    "word": "good afternoon",
+    "phonetic": "/ɡʊd ˌɑːftəˈnuːn/",
+    "partOfSpeech": "短语",
+    "meaning": "下午好",
+    "wordRootAffix": "由“good”（好的）+ “afternoon”（下午）构成，是下午的常用问候语",
+    "exampleSentences": [
+      "Good afternoon, everyone!（大家下午好！）",
+      "She greeted her neighbor with a good afternoon.（她向邻居问好，说了声下午好。）"
+    ]
+  },
+  {
+    "unit":"Starter Unit 1",
+    "word": "evening",
+    "phonetic": "/ˈiːvnɪŋ/",
+    "partOfSpeech": "n.",
+    "meaning": "晚上；傍晚",
+    "wordRootAffix": "源自古英语“æfnung”，由“æfen”（傍晚）+ 后缀“-ing”构成，指“傍晚到睡前的时间”",
+    "exampleSentences": [
+      "I watch TV in the evening.（我晚上看电视。）",
+      "Good evening! Would you like some tea?（晚上好！你想喝点茶吗？）"
+    ]
+  },
+  {
+    "unit":"Starter Unit 1",
+    "word": "good evening",
+    "phonetic": "/ɡʊd ˈiːvnɪŋ/",
+    "partOfSpeech": "短语",
+    "meaning": "晚上好",
+    "wordRootAffix": "由“good”（好的）+ “evening”（晚上）构成，是晚上见面时的问候语",
+    "exampleSentences": [
+      "Good evening, ladies and gentlemen!（女士们先生们，晚上好！）",
+      "He said good evening to his grandparents before dinner.（晚饭前他向爷爷奶奶说了晚上好。）"
+    ]
+  },
+  {
+    "unit":"Starter Unit 1",
+    "word": "how",
+    "phonetic": "/haʊ/",
+    "partOfSpeech": "adv.",
+    "meaning": "怎样；如何",
+    "wordRootAffix": "源自古英语“hū”，无常见词根词缀，用于询问方式、状态",
+    "exampleSentences": [
+      "How are you?（你好吗？）",
+      "How do you get to school?（你怎么去学校？）"
+    ]
+  },
+  {
+    "unit":"Starter Unit 1",
+    "word": "are",
+    "phonetic": "/ɑː(r); ə(r)/",
+    "partOfSpeech": "v.",
+    "meaning": "是（be动词的第二人称单复数现在式）",
+    "wordRootAffix": "源自古英语“eart”（第二人称），属于be动词变形，无词根词缀",
+    "exampleSentences": [
+      "You are my best friend.（你是我最好的朋友。）",
+      "They are in the classroom.（他们在教室里。）"
+    ]
+  },
+  {
+    "unit":"Starter Unit 1",
+    "word": "you",
+    "phonetic": "/juː; jʊ/",
+    "partOfSpeech": "pron.",
+    "meaning": "你；你们",
+    "wordRootAffix": "源自古英语“þū”（单数）/ “ġē”（复数），后统一为“you”，无词根词缀",
+    "exampleSentences": [
+      "How old are you?（你多大了？）",
+      "You are all good students.（你们都是好学生。）"
+    ]
+  },
+  {
+    "unit":"Starter Unit 1",
+    "word": "fine",
+    "phonetic": "/faɪn/",
+    "partOfSpeech": "adj.",
+    "meaning": "健康的；美好的",
+    "wordRootAffix": "源自古法语“fin”（结束的、美好的），无常见词根词缀，表“状态良好的”",
+    "exampleSentences": [
+      "I'm fine, thank you.（我很好，谢谢。）",
+      "It's a fine day today.（今天天气很好。）"
+    ]
+  },
+  {
+    "unit":"Starter Unit 1",
+    "word": "thanks",
+    "phonetic": "/θæŋks/",
+    "partOfSpeech": "interj. & n.",
+    "meaning": "感谢；谢谢",
+    "wordRootAffix": "是“thank”的复数形式，口语化表达感谢，无额外词根词缀",
+    "exampleSentences": [
+      "Thanks for your help.（谢谢你的帮助。）",
+      "Many thanks to everyone who supported me.（感谢所有支持我的人。）"
+    ]
+  },
+  {
+    "unit":"Starter Unit 1",
+    "word": "thank you",
+    "phonetic": "/θæŋk juː/",
+    "partOfSpeech": "短语",
+    "meaning": "谢谢你",
+    "wordRootAffix": "由“thank”（感谢）+ “you”（你）构成，是正式的感谢语",
+    "exampleSentences": [
+      "Thank you for the gift.（谢谢你的礼物。）",
+      "Thank you very much!（非常感谢你！）"
+    ]
+  },
+  {
+    "unit":"Starter Unit 1",
+    "word": "OK",
+    "phonetic": "/əʊˈkeɪ/",
+    "partOfSpeech": "interj. & adj. & adv.",
+    "meaning": "好；可以；行",
+    "wordRootAffix": "源自美式英语口语，是“oll korrect”（all correct）的缩写变体，无词根词缀",
+    "exampleSentences": [
+      "OK, let's go.（好的，我们走吧。）",
+      "Is it OK if I leave early?（我早点走可以吗？）"
+    ]
+  },
+  {
+    "unit":"Starter Unit 1",
+    "word": "HB",
+    "phonetic": "/ˌeɪtʃ ˈbiː/",
+    "partOfSpeech": "缩写",
+    "meaning": "（铅笔芯）硬黑",
+    "wordRootAffix": "“H”（hard，硬的）+ “B”（black，黑的），是铅笔芯硬度/黑度的标识",
+    "exampleSentences": [
+      "I need an HB pencil for the exam.（我考试需要一支HB铅笔。）",
+      "This HB pencil writes smoothly.（这支HB铅笔写起来很顺滑。）"
+    ]
+  },
+  {
+    "unit":"Starter Unit 1",
+    "word": "CD",
+    "phonetic": "/ˌsiː ˈdiː/",
+    "partOfSpeech": "缩写",
+    "meaning": "光盘；激光唱片",
+    "wordRootAffix": "是“Compact Disc”的缩写，“compact”（紧凑的）+ “disc”（圆盘），指小型存储光盘",
+    "exampleSentences": [
+      "I have a CD of English songs.（我有一张英文歌曲的光盘。）",
+      "He put the CD into the player and pressed play.（他把光盘放进播放器，按下了播放键。）"
+    ]
+  },
+  {
+    "unit":"Starter Unit 1",
+    "word": "BBC",
+    "phonetic": "/ˌbiː biː ˈsiː/",
+    "partOfSpeech": "缩写",
+    "meaning": "英国广播公司",
+    "wordRootAffix": "是“British Broadcasting Corporation”的缩写，英国国家广播电视机构",
+    "exampleSentences": [
+      "I listen to BBC news every morning.（我每天早上听BBC新闻。）",
+      "The BBC broadcasts programs in many languages.（BBC用多种语言播出节目。）"
+    ]
+  }
+]

@@ -1,0 +1,386 @@
+[
+  {
+    "unit": "Unit 4",
+    "word": "where",
+    "phonetic": "/weə(r)/",
+    "partOfSpeech": "adv. & conj.",
+    "meaning": "在哪里；到哪里",
+    "wordRootAffix": "源自古英语“hwǣr”，由“hwa”（谁）+ “ær”（在……地方）构成，用于询问地点",
+    "exampleSentences": [
+      "Where is my schoolbag?（我的书包在哪里？）",
+      "Where do you want to go this weekend?（这个周末你想去哪里？）"
+    ]
+  },
+  {
+    "unit": "Unit 4",
+    "word": "table",
+    "phonetic": "/ˈteɪbl/",
+    "partOfSpeech": "n. & v.",
+    "meaning": "桌子；台子；制表",
+    "wordRootAffix": "源自拉丁语“tabula”（平板），无常见词根词缀，指“平面的家具”",
+    "exampleSentences": [
+      "The book is on the table.（书在桌子上。）",
+      "She tables the data for her homework.（她为作业整理数据制表。）"
+    ]
+  },
+  {
+    "unit": "Unit 4",
+    "word": "bed",
+    "phonetic": "/bed/",
+    "partOfSpeech": "n. & v.",
+    "meaning": "床；睡觉",
+    "wordRootAffix": "源自古英语“bedd”，无常见词根词缀，指“供休息睡觉的家具”",
+    "exampleSentences": [
+      "My pen is under the bed.（我的钢笔在床底下。）",
+      "I go to bed at nine every night.（我每晚九点上床睡觉。）"
+    ]
+  },
+  {
+    "unit": "Unit 4",
+    "word": "bookcase",
+    "phonetic": "/ˈbʊkkeɪs/",
+    "partOfSpeech": "n.",
+    "meaning": "书架；书柜",
+    "wordRootAffix": "由“book”（书）+ “case”（柜子）构成，“存放书籍的柜子”",
+    "exampleSentences": [
+      "There are many storybooks in the bookcase.（书柜里有很多故事书。）",
+      "My dictionary is on the second shelf of the bookcase.（我的字典在书柜第二层。）"
+    ]
+  },
+  {
+    "unit": "Unit 4",
+    "word": "sofa",
+    "phonetic": "/ˈsəʊfə/",
+    "partOfSpeech": "n.",
+    "meaning": "沙发",
+    "wordRootAffix": "源自阿拉伯语“suffa”（长凳），无常见词根词缀，指“柔软的坐具”",
+    "exampleSentences": [
+      "The cat is on the sofa.（猫在沙发上。）",
+      "I like to read books on the sofa after dinner.（晚饭后我喜欢在沙发上看书。）"
+    ]
+  },
+  {
+    "unit": "Unit 4",
+    "word": "chair",
+    "phonetic": "/tʃeə(r)/",
+    "partOfSpeech": "n. & v.",
+    "meaning": "椅子；使入座",
+    "wordRootAffix": "源自古法语“chaire”，无常见词根词缀，指“有靠背的坐具”",
+    "exampleSentences": [
+      "My schoolbag is on the chair.（我的书包在椅子上。）",
+      "She chairs the meeting for the class.（她主持班级的会议。）"
+    ]
+  },
+  {
+    "unit": "Unit 4",
+    "word": "on",
+    "phonetic": "/ɒn; ɔːn/",
+    "partOfSpeech": "prep. & adv. & adj.",
+    "meaning": "在……上；通过；开着的",
+    "wordRootAffix": "源自古英语“on”，无常见词根词缀，表位置“在表面上”",
+    "exampleSentences": [
+      "The clock is on the wall.（钟表在墙上。）",
+      "The light is on in the classroom.（教室里的灯亮着。）"
+    ]
+  },
+  {
+    "unit": "Unit 4",
+    "word": "in",
+    "phonetic": "/ɪn/",
+    "partOfSpeech": "prep. & adv. & adj.",
+    "meaning": "在……里；进入；在内的",
+    "wordRootAffix": "同前序单元，源自古英语“in”，表位置“在内部”",
+    "exampleSentences": [
+      "The pen is in the pencil box.（钢笔在铅笔盒里。）",
+      "Come in, it's cold outside.（进来吧，外面冷。）"
+    ]
+  },
+  {
+    "unit": "Unit 4",
+    "word": "under",
+    "phonetic": "/ˈʌndə(r)/",
+    "partOfSpeech": "prep. & adv.",
+    "meaning": "在……下面；低于",
+    "wordRootAffix": "源自古英语“under”，无常见词根词缀，表位置“在下方”",
+    "exampleSentences": [
+      "The ball is under the table.（球在桌子底下。）",
+      "The temperature is under zero today.（今天气温在零度以下。）"
+    ]
+  },
+  {
+    "unit": "Unit 4",
+    "word": "come",
+    "phonetic": "/kʌm/",
+    "partOfSpeech": "v.",
+    "meaning": "来；来到；到达",
+    "wordRootAffix": "源自古英语“cuman”，无常见词根词缀，表“向说话者方向移动”",
+    "exampleSentences": [
+      "Come here, I have something to show you.（过来，我有东西给你看。）",
+      "She comes to school at seven every morning.（她每天早上七点来学校。）"
+    ]
+  },
+  {
+    "unit": "Unit 4",
+    "word": "come on",
+    "phonetic": "/kʌm ɒn/",
+    "partOfSpeech": "短语",
+    "meaning": "快点；加油；来吧",
+    "wordRootAffix": "由“come”（来）+ “on”（向前）构成，口语化表达，表催促、鼓励",
+    "exampleSentences": [
+      "Come on! We are late for class.（快点！我们上课要迟到了。）",
+      "Come on! You can win the game.（加油！你能赢得比赛。）"
+    ]
+  },
+  {
+    "unit": "Unit 4",
+    "word": "desk",
+    "phonetic": "/desk/",
+    "partOfSpeech": "n.",
+    "meaning": "书桌；办公桌",
+    "wordRootAffix": "源自古拉丁语“discus”（圆盘），后演变为“写字的桌子”，无常见词根词缀",
+    "exampleSentences": [
+      "My computer is on the desk.（我的电脑在书桌上。）",
+      "I do my homework at the desk every evening.（我每晚在书桌前做作业。）"
+    ]
+  },
+  {
+    "unit": "Unit 4",
+    "word": "think",
+    "phonetic": "/θɪŋk/",
+    "partOfSpeech": "v.",
+    "meaning": "认为；想；思考",
+    "wordRootAffix": "源自古英语“þencan”，无常见词根词缀，表“大脑进行思考、判断”",
+    "exampleSentences": [
+      "I think the book is on the bookcase.（我认为书在书柜上。）",
+      "She thinks hard about the math problem.（她认真思考这道数学题。）"
+    ]
+  },
+  {
+    "unit": "Unit 4",
+    "word": "room",
+    "phonetic": "/ruːm; rʊm/",
+    "partOfSpeech": "n. & v.",
+    "meaning": "房间；空间；居住",
+    "wordRootAffix": "源自古英语“rūm”，无常见词根词缀，指“房屋内的空间/独立房间”",
+    "exampleSentences": [
+      "This is my bedroom. It's a small room.（这是我的卧室，是个小房间。）",
+      "There is no room for another chair in the room.（房间里没地方再放一把椅子了。）"
+    ]
+  },
+  {
+    "unit": "Unit 4",
+    "word": "their",
+    "phonetic": "/ðeə(r)/",
+    "partOfSpeech": "pron.",
+    "meaning": "他/她/它们的（形容词性物主代词）",
+    "wordRootAffix": "源自古英语“hira”，是“they”的形容词性物主代词，修饰名词",
+    "exampleSentences": [
+      "Their room is big and clean.（他们的房间又大又干净。）",
+      "I see their books on the desk.（我看到他们的书在书桌上。）"
+    ]
+  },
+  {
+    "unit": "Unit 4",
+    "word": "hat",
+    "phonetic": "/hæt/",
+    "partOfSpeech": "n.",
+    "meaning": "帽子（有檐的）",
+    "wordRootAffix": "源自古英语“hæt”，无常见词根词缀，指“有帽檐的头部穿戴物”",
+    "exampleSentences": [
+      "Her hat is on the sofa.（她的帽子在沙发上。）",
+      "I wear a hat to go out in summer.（夏天出门我戴帽子。）"
+    ]
+  },
+  {
+    "unit": "Unit 4",
+    "word": "head",
+    "phonetic": "/hed/",
+    "partOfSpeech": "n. & v.",
+    "meaning": "头；头部；率领",
+    "wordRootAffix": "源自古英语“heafod”，无常见词根词缀，指“身体的头部”",
+    "exampleSentences": [
+      "She has a hat on her head.（她头上戴着一顶帽子。）",
+      "He heads the school basketball team.（他是学校篮球队的队长。）"
+    ]
+  },
+  {
+    "unit": "Unit 4",
+    "word": "yeah",
+    "phonetic": "/jeə/",
+    "partOfSpeech": "interj.",
+    "meaning": "是的；对",
+    "wordRootAffix": "口语化表达，是“yes”的变体，无词根词缀",
+    "exampleSentences": [
+      "Yeah, your pen is under the bed.（是的，你的钢笔在床底下。）",
+      "Yeah, I want to go to the park with you.（对，我想和你去公园。）"
+    ]
+  },
+  {
+    "unit": "Unit 4",
+    "word": "know",
+    "phonetic": "/nəʊ/",
+    "partOfSpeech": "v.",
+    "meaning": "知道；了解；认识",
+    "wordRootAffix": "源自古英语“cnāwan”，无常见词根词缀，表“知晓、熟悉”",
+    "exampleSentences": [
+      "I know where your schoolbag is.（我知道你的书包在哪里。）",
+      "Do you know the girl in red?（你认识那个穿红衣服的女孩吗？）"
+    ]
+  },
+  {
+    "unit": "Unit 4",
+    "word": "radio",
+    "phonetic": "/ˈreɪdiəʊ/",
+    "partOfSpeech": "n. & v.",
+    "meaning": "收音机；无线电广播；用无线电发送",
+    "wordRootAffix": "前缀“radio-”（无线电），无额外词根词缀，指“接收无线电信号的设备”",
+    "exampleSentences": [
+      "The radio is on the desk.（收音机在书桌上。）",
+      "We listen to the radio in the morning.（我们早上听收音机。）"
+    ]
+  },
+  {
+    "unit": "Unit 4",
+    "word": "clock",
+    "phonetic": "/klɒk/",
+    "partOfSpeech": "n. & v.",
+    "meaning": "时钟；计时",
+    "wordRootAffix": "源自古英语“cloce”（铃），后演变为“计时工具”，无常见词根词缀",
+    "exampleSentences": [
+      "The clock is on the wall of my room.（时钟在我房间的墙上。）",
+      "The game clock shows five minutes left.（比赛计时器显示还剩五分钟。）"
+    ]
+  },
+  {
+    "unit": "Unit 4",
+    "word": "tape",
+    "phonetic": "/teɪp/",
+    "partOfSpeech": "n. & v.",
+    "meaning": "磁带；胶带；录音；粘贴",
+    "wordRootAffix": "源自古法语“tapes”，无常见词根词缀，指“薄带状的物品”",
+    "exampleSentences": [
+      "I have a tape of English songs.（我有一盘英文歌曲的磁带。）",
+      "She tapes the picture on the wall.（她把画贴在墙上。）"
+    ]
+  },
+  {
+    "unit": "Unit 4",
+    "word": "player",
+    "phonetic": "/ˈpleɪə(r)/",
+    "partOfSpeech": "n.",
+    "meaning": "播放机；运动员；玩家",
+    "wordRootAffix": "由“play”（播放、玩）+ 后缀“-er”（表人/物）构成，“播放音频的设备/进行运动的人”",
+    "exampleSentences": [
+      "He is a good basketball player.（他是一名优秀的篮球运动员。）",
+      "The tape player is on the bookcase.（磁带播放机在书柜上。）"
+    ]
+  },
+  {
+    "unit": "Unit 4",
+    "word": "tape player",
+    "phonetic": "/teɪp ˈpleɪə(r)/",
+    "partOfSpeech": "短语",
+    "meaning": "磁带播放机",
+    "wordRootAffix": "由“tape”（磁带）+ “player”（播放机）构成，“播放磁带的设备”",
+    "exampleSentences": [
+      "My tape player is broken. Can you fix it?（我的磁带播放机坏了，你能修吗？）",
+      "We use the tape player to listen to English tapes in class.（我们在课堂上用磁带播放机听英语磁带。）"
+    ]
+  },
+  {
+    "unit": "Unit 4",
+    "word": "model",
+    "phonetic": "/ˈmɒdl/",
+    "partOfSpeech": "n. & v.",
+    "meaning": "模型；模特；模仿；建模",
+    "wordRootAffix": "源自拉丁语“modulus”（模式），无常见词根词缀，指“按比例缩小的复制品”",
+    "exampleSentences": [
+      "He has a model plane on his desk.（他书桌上有一个飞机模型。）",
+      "She models her dress after the fashion show.（她仿照时装秀做了自己的裙子。）"
+    ]
+  },
+  {
+    "unit": "Unit 4",
+    "word": "plane",
+    "phonetic": "/pleɪn/",
+    "partOfSpeech": "n. & adj. & v.",
+    "meaning": "飞机；平面的；刨平",
+    "wordRootAffix": "源自拉丁语“planus”（平的），后演变为“飞机”，无常见词根词缀",
+    "exampleSentences": [
+      "The model plane is blue and white.（这个飞机模型是蓝白相间的。）",
+      "We go to Beijing by plane.（我们坐飞机去北京。）"
+    ]
+  },
+  {
+    "unit": "Unit 4",
+    "word": "model plane",
+    "phonetic": "/ˈmɒdl pleɪn/",
+    "partOfSpeech": "短语",
+    "meaning": "飞机模型",
+    "wordRootAffix": "由“model”（模型）+ “plane”（飞机）构成，“按比例制作的飞机复制品”",
+    "exampleSentences": [
+      "I make a model plane with my father on weekends.（周末我和爸爸一起做飞机模型。）",
+      "The model plane is on the shelf of the bookcase.（飞机模型在书柜的架子上。）"
+    ]
+  },
+  {
+    "unit": "Unit 4",
+    "word": "tidy",
+    "phonetic": "/ˈtaɪdi/",
+    "partOfSpeech": "adj. & v.",
+    "meaning": "整洁的；整齐的；整理；收拾",
+    "wordRootAffix": "源自古法语“tidie”（合适的），无常见词根词缀，表“有序、不杂乱”",
+    "exampleSentences": [
+      "Her room is always tidy and clean.（她的房间总是整洁干净。）",
+      "Tidy your desk before you leave the classroom.（离开教室前整理好你的书桌。）"
+    ]
+  },
+  {
+    "unit": "Unit 4",
+    "word": "but",
+    "phonetic": "/bʌt; bət/",
+    "partOfSpeech": "conj. & prep. & adv.",
+    "meaning": "但是；除了；仅仅",
+    "wordRootAffix": "源自古英语“butan”，无常见词根词缀，表转折关系",
+    "exampleSentences": [
+      "My room is small but tidy.（我的房间小但是整洁。）",
+      "He has no friends but me.（他除了我没有别的朋友。）"
+    ]
+  },
+  {
+    "unit": "Unit 4",
+    "word": "our",
+    "phonetic": "/ˈaʊə(r)/",
+    "partOfSpeech": "pron.",
+    "meaning": "我们的（形容词性物主代词）",
+    "wordRootAffix": "源自古英语“ūser”，是“we”的形容词性物主代词，修饰名词",
+    "exampleSentences": [
+      "Our classroom is on the first floor.（我们的教室在一楼。）",
+      "We clean our room every Saturday.（我们每周六打扫我们的房间。）"
+    ]
+  },
+  {
+    "unit": "Unit 4",
+    "word": "everywhere",
+    "phonetic": "/ˈevriweə(r)/",
+    "partOfSpeech": "adv.",
+    "meaning": "处处；到处；各个地方",
+    "wordRootAffix": "由“every”（每个）+ “where”（地方）构成，表“所有地方”",
+    "exampleSentences": [
+      "His books are everywhere in the room.（他的书在房间里到处都是。）",
+      "I look for my pen everywhere but can't find it.（我到处找我的钢笔，但找不到。）"
+    ]
+  },
+  {
+    "unit": "Unit 4",
+    "word": "always",
+    "phonetic": "/ˈɔːlweɪz/",
+    "partOfSpeech": "adv.",
+    "meaning": "总是；一直；永远",
+    "wordRootAffix": "由“all”（全部）+ “ways”（方式）构成，表“在所有情况下都如此”",
+    "exampleSentences": [
+      "She always keeps her room tidy.（她总是保持房间整洁。）",
+      "My mother always gets up early in the morning.（我妈妈总是早上早起。）"
+    ]
+  }
+]

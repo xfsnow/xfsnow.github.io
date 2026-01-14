@@ -1,0 +1,326 @@
+[
+  {
+    "unit": "Unit 2",
+    "word": "family",
+    "phonetic": "/ˈfæməli/",
+    "partOfSpeech": "n.",
+    "meaning": "家；家庭",
+    "wordRootAffix": "源自拉丁语“familia”（家庭），无常见词根词缀，指“由亲属组成的群体”",
+    "exampleSentences": [
+      "This is a photo of my family.（这是我的一张全家福。）",
+      "I love my family very much.（我非常爱我的家人。）"
+    ]
+  },
+  {
+    "unit": "Unit 2",
+    "word": "those",
+    "phonetic": "/ðəʊz/",
+    "partOfSpeech": "pron. & adj.",
+    "meaning": "那些",
+    "wordRootAffix": "是“that”的复数形式，源自古英语“þā”，无词根词缀，指代较远的复数人/物",
+    "exampleSentences": [
+      "Who are those people over there?（那边那些人是谁？）",
+      "Those books are mine.（那些书是我的。）"
+    ]
+  },
+  {
+    "unit": "Unit 2",
+    "word": "who",
+    "phonetic": "/huː; hu/",
+    "partOfSpeech": "pron.",
+    "meaning": "谁；什么人",
+    "wordRootAffix": "源自古英语“hwā”，无常见词根词缀，用于询问人的身份",
+    "exampleSentences": [
+      "Who is that girl?（那个女孩是谁？）",
+      "Who are you talking to?（你在和谁说话？）"
+    ]
+  },
+  {
+    "unit": "Unit 2",
+    "word": "they",
+    "phonetic": "/ðeɪ/",
+    "partOfSpeech": "pron.",
+    "meaning": "他/她/它们",
+    "wordRootAffix": "源自古英语“hīe”，主格代词，指代复数人/物，无词根词缀",
+    "exampleSentences": [
+      "They are my grandparents.（他们是我的祖父母。）",
+      "They go to the park every Sunday.（他们每周日去公园。）"
+    ]
+  },
+  {
+    "unit": "Unit 2",
+    "word": "well",
+    "phonetic": "/wel/",
+    "partOfSpeech": "adv. & interj.",
+    "meaning": "很好地；嗯；好吧",
+    "wordRootAffix": "源自古英语“wel”，无常见词根词缀，副词表“程度好”，感叹词表回应",
+    "exampleSentences": [
+      "She sings very well.（她唱歌非常好。）",
+      "Well, let's start our class.（嗯，我们开始上课吧。）"
+    ]
+  },
+  {
+    "unit": "Unit 2",
+    "word": "have",
+    "phonetic": "/hæv; həv/",
+    "partOfSpeech": "v.",
+    "meaning": "有；拥有；吃；进行",
+    "wordRootAffix": "源自古英语“habban”，无常见词根词缀，核心含义“持有、具有”",
+    "exampleSentences": [
+      "I have a big family.（我有一个大家庭。）",
+      "We have breakfast at seven o'clock.（我们七点吃早饭。）"
+    ]
+  },
+  {
+    "unit": "Unit 2",
+    "word": "day",
+    "phonetic": "/deɪ/",
+    "partOfSpeech": "n.",
+    "meaning": "一天；一日；白天",
+    "wordRootAffix": "源自古英语“dæg”，无常见词根词缀，指“24小时的时间段或白天”",
+    "exampleSentences": [
+      "Have a good day!（祝你度过愉快的一天！）",
+      "The day is sunny and warm.（今天天气晴朗温暖。）"
+    ]
+  },
+  {
+    "unit": "Unit 2",
+    "word": "have a good day",
+    "phonetic": "/hæv ə ɡʊd deɪ/",
+    "partOfSpeech": "短语",
+    "meaning": "过得愉快；玩得开心",
+    "wordRootAffix": "由“have”（度过）+ “a good day”（美好的一天）构成，日常祝福用语",
+    "exampleSentences": [
+      "Goodbye! Have a good day!（再见！祝你过得愉快！）",
+      "Thank you, you too. Have a good day!（谢谢，你也一样。祝你愉快！）"
+    ]
+  },
+  {
+    "unit": "Unit 2",
+    "word": "bye",
+    "phonetic": "/baɪ/",
+    "partOfSpeech": "interj.",
+    "meaning": "再见",
+    "wordRootAffix": "是“goodbye”的简略形式，源自古英语“God be with ye”（愿上帝与你同在），无词根词缀",
+    "exampleSentences": [
+      "Bye! See you tomorrow.（再见！明天见。）",
+      "She waved and said bye to her friends.（她挥手向朋友们说再见。）"
+    ]
+  },
+  {
+    "unit": "Unit 2",
+    "word": "father",
+    "phonetic": "/ˈfɑːðə(r)/",
+    "partOfSpeech": "n.",
+    "meaning": "父亲；爸爸",
+    "wordRootAffix": "源自古英语“fæder”，无常见词根词缀，口语中也可称“dad”",
+    "exampleSentences": [
+      "My father is a doctor.（我的爸爸是一名医生。）",
+      "Father reads a newspaper every evening.（爸爸每天晚上看报纸。）"
+    ]
+  },
+  {
+    "unit": "Unit 2",
+    "word": "dad",
+    "phonetic": "/dæd/",
+    "partOfSpeech": "n.",
+    "meaning": "爸爸；爹爹（口语）",
+    "wordRootAffix": "口语化称呼，源自古英语“dæd”，无词根词缀，比“father”更亲切",
+    "exampleSentences": [
+      "Dad, can I watch TV now?（爸爸，我现在能看电视吗？）",
+      "My dad takes me to school every day.（我爸爸每天送我上学。）"
+    ]
+  },
+  {
+    "unit": "Unit 2",
+    "word": "mother",
+    "phonetic": "/ˈmʌðə(r)/",
+    "partOfSpeech": "n.",
+    "meaning": "母亲；妈妈",
+    "wordRootAffix": "源自古英语“mōdor”，无常见词根词缀，口语中也可称“mom”",
+    "exampleSentences": [
+      "My mother cooks delicious food for us.（我妈妈给我们做美味的饭菜。）",
+      "Mother is talking on the phone with her friend.（妈妈正在和她的朋友打电话。）"
+    ]
+  },
+  {
+    "unit": "Unit 2",
+    "word": "mom",
+    "phonetic": "/mɒm/ (美) /məm/",
+    "partOfSpeech": "n.",
+    "meaning": "妈妈（口语）",
+    "wordRootAffix": "美式口语化称呼，源自古英语“mōdor”的变体，无词根词缀，比“mother”更亲切",
+    "exampleSentences": [
+      "Mom, I love you!（妈妈，我爱你！）",
+      "Can you help me, mom?（妈妈，你能帮帮我吗？）"
+    ]
+  },
+  {
+    "unit": "Unit 2",
+    "word": "parent",
+    "phonetic": "/ˈpeərənt/",
+    "partOfSpeech": "n.",
+    "meaning": "父（母）亲",
+    "wordRootAffix": "源自拉丁语“parens”（父母），词根“par-”（生）+ 后缀“-ent”，指“父亲或母亲”",
+    "exampleSentences": [
+      "My parents are both teachers.（我的父母都是老师。）",
+      "Each student has a parent meeting every term.（每个学生每学期都有一次家长会。）"
+    ]
+  },
+  {
+    "unit": "Unit 2",
+    "word": "sister",
+    "phonetic": "/ˈsɪstə(r)/",
+    "partOfSpeech": "n.",
+    "meaning": "姐；妹",
+    "wordRootAffix": "源自古英语“sweostor”，无常见词根词缀，指“同父母的女性兄弟姐妹”",
+    "exampleSentences": [
+      "My sister is two years younger than me.（我的妹妹比我小两岁。）",
+      "I play with my sister every weekend.（我每周都和姐姐一起玩。）"
+    ]
+  },
+  {
+    "unit": "Unit 2",
+    "word": "brother",
+    "phonetic": "/ˈbrʌðə(r)/",
+    "partOfSpeech": "n.",
+    "meaning": "兄；弟",
+    "wordRootAffix": "源自古英语“broþor”，无常见词根词缀，指“同父母的男性兄弟姐妹”",
+    "exampleSentences": [
+      "My brother likes playing football.（我的哥哥喜欢踢足球。）",
+      "I share my toys with my little brother.（我和我的弟弟分享玩具。）"
+    ]
+  },
+  {
+    "unit": "Unit 2",
+    "word": "grandmother",
+    "phonetic": "/ˈɡrænmʌðə(r)/",
+    "partOfSpeech": "n.",
+    "meaning": "（外）祖母；奶奶；外婆",
+    "wordRootAffix": "由“grand-”（隔代的）+ “mother”（母亲）构成，指“父母的母亲”",
+    "exampleSentences": [
+      "My grandmother tells me stories every night.（我的奶奶每天晚上给我讲故事。）",
+      "I visit my grandmother every Sunday.（我每周日去看望外婆。）"
+    ]
+  },
+  {
+    "unit": "Unit 2",
+    "word": "grandma",
+    "phonetic": "/ˈɡrænmɑː/",
+    "partOfSpeech": "n.",
+    "meaning": "（外）祖母；奶奶；外婆（口语）",
+    "wordRootAffix": "口语化称呼，由“grand-”+ “ma”（妈妈的口语）构成，比“grandmother”更亲切",
+    "exampleSentences": [
+      "Grandma makes the best cookies.（奶奶做的饼干最好吃。）",
+      "I hug my grandma every time I see her.（每次见到外婆我都抱抱她。）"
+    ]
+  },
+  {
+    "unit": "Unit 2",
+    "word": "grandfather",
+    "phonetic": "/ˈɡrænfɑːðə(r)/",
+    "partOfSpeech": "n.",
+    "meaning": "（外）祖父；爷爷；外公",
+    "wordRootAffix": "由“grand-”（隔代的）+ “father”（父亲）构成，指“父母的父亲”",
+    "exampleSentences": [
+      "My grandfather likes fishing by the river.（我的爷爷喜欢在河边钓鱼。）",
+      "Grandfather taught me how to ride a bike.（外公教我骑自行车。）"
+    ]
+  },
+  {
+    "unit": "Unit 2",
+    "word": "grandpa",
+    "phonetic": "/ˈɡrænpɑː/",
+    "partOfSpeech": "n.",
+    "meaning": "（外）祖父；爷爷；外公（口语）",
+    "wordRootAffix": "口语化称呼，由“grand-”+ “pa”（爸爸的口语）构成，比“grandfather”更亲切",
+    "exampleSentences": [
+      "Grandpa plays chess with me every afternoon.（爷爷每天下午和我下棋。）",
+      "I go for a walk with my grandpa after dinner.（晚饭后我和外公散步。）"
+    ]
+  },
+  {
+    "unit": "Unit 2",
+    "word": "grandparent",
+    "phonetic": "/ˈɡrændpeərənt/",
+    "partOfSpeech": "n.",
+    "meaning": "祖父（母）；外祖父（母）",
+    "wordRootAffix": "由“grand-”（隔代的）+ “parent”（父母）构成，泛指祖父母/外祖父母",
+    "exampleSentences": [
+      "My grandparents live in the countryside.（我的祖父母住在乡下。）",
+      "We visit our grandparents on holidays.（我们假期去看望外祖父母。）"
+    ]
+  },
+  {
+    "unit": "Unit 2",
+    "word": "son",
+    "phonetic": "/sʌn/",
+    "partOfSpeech": "n.",
+    "meaning": "儿子",
+    "wordRootAffix": "源自古英语“sunu”，无常见词根词缀，指“父母的男性孩子”",
+    "exampleSentences": [
+      "They have a son and a daughter.（他们有一个儿子和一个女儿。）",
+      "His son is a student in middle school.（他的儿子是一名中学生。）"
+    ]
+  },
+  {
+    "unit": "Unit 2",
+    "word": "daughter",
+    "phonetic": "/ˈdɔːtə(r)/",
+    "partOfSpeech": "n.",
+    "meaning": "女儿",
+    "wordRootAffix": "源自古英语“dohtor”，无常见词根词缀，指“父母的女性孩子”",
+    "exampleSentences": [
+      "My daughter likes drawing pictures.（我的女儿喜欢画画。）",
+      "She is the only daughter in her family.（她是家里唯一的女儿。）"
+    ]
+  },
+  {
+    "unit": "Unit 2",
+    "word": "uncle",
+    "phonetic": "/ˈʌŋkl/",
+    "partOfSpeech": "n.",
+    "meaning": "舅父；叔父；伯父；姑父；姨父",
+    "wordRootAffix": "源自古法语“oncle”，无常见词根词缀，指“父母的兄弟或配偶的兄弟”",
+    "exampleSentences": [
+      "My uncle works in a hospital.（我的叔叔在医院工作。）",
+      "Uncle Li often takes us to the zoo.（李叔叔经常带我们去动物园。）"
+    ]
+  },
+  {
+    "unit": "Unit 2",
+    "word": "aunt",
+    "phonetic": "/ɑːnt/",
+    "partOfSpeech": "n.",
+    "meaning": "姑母；姨母；伯母；婶母；舅母",
+    "wordRootAffix": "源自古法语“ante”，无常见词根词缀，指“父母的姐妹或配偶的姐妹”",
+    "exampleSentences": [
+      "My aunt gives me a gift on my birthday.（我的姑姑在我生日时给我礼物。）",
+      "Aunt Wang is my mother's sister.（王阿姨是我妈妈的妹妹。）"
+    ]
+  },
+  {
+    "unit": "Unit 2",
+    "word": "cousin",
+    "phonetic": "/ˈkʌzn/",
+    "partOfSpeech": "n.",
+    "meaning": "堂兄（弟、姊、妹）；表兄（弟、姊、妹）",
+    "wordRootAffix": "源自古法语“cosin”，无常见词根词缀，指“叔伯姑舅姨的孩子”",
+    "exampleSentences": [
+      "My cousin is the same age as me.（我的表姐和我同岁。）",
+      "I play games with my cousin every holiday.（我每个假期都和堂兄玩游戏。）"
+    ]
+  },
+  {
+    "unit": "Unit 2",
+    "word": "here",
+    "phonetic": "/hɪə(r)/",
+    "partOfSpeech": "adv.",
+    "meaning": "这里；在这里",
+    "wordRootAffix": "源自古英语“hēr”，无常见词根词缀，表“所处的位置”",
+    "exampleSentences": [
+      "Here is a photo of my family.（这是我的一张全家福。）",
+      "Come here, please. I have something to tell you.（请到这里来，我有话要对你说。）"
+    ]
+  }
+]

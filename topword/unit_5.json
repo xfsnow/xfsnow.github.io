@@ -1,0 +1,458 @@
+[
+  {
+    "unit": "Unit 5",
+    "word": "do",
+    "phonetic": "/duː; də/",
+    "partOfSpeech": "v. & aux. v.",
+    "meaning": "做；干；助动词（无实义）",
+    "wordRootAffix": "源自古英语“dōn”，无常见词根词缀，实义动词表“执行动作”，助动词用于疑问句/否定句",
+    "exampleSentences": [
+      "What do you have for breakfast?（你早餐吃什么？）",
+      "I do my homework after school.（我放学后做作业。）"
+    ]
+  },
+  {
+    "unit": "Unit 5",
+    "word": "have",
+    "phonetic": "/hæv; həv/",
+    "partOfSpeech": "v.",
+    "meaning": "吃；喝；有；进行",
+    "wordRootAffix": "同前序单元，源自古英语“habban”，核心含义“持有、进行”，此处侧重“饮食”",
+    "exampleSentences": [
+      "I have milk and bread for breakfast.（我早餐喝牛奶、吃面包。）",
+      "Do you have lunch at school?（你在学校吃午饭吗？）"
+    ]
+  },
+  {
+    "unit": "Unit 5",
+    "word": "breakfast",
+    "phonetic": "/ˈbrekfəst/",
+    "partOfSpeech": "n.",
+    "meaning": "早餐；早饭",
+    "wordRootAffix": "由“break”（打破）+ “fast”（禁食）构成，“打破夜间禁食的第一餐”",
+    "exampleSentences": [
+      "Breakfast is important for our health.（早餐对我们的健康很重要。）",
+      "She eats breakfast at 7:00 every morning.（她每天早上7点吃早餐。）"
+    ]
+  },
+  {
+    "unit": "Unit 5",
+    "word": "lunch",
+    "phonetic": "/lʌntʃ/",
+    "partOfSpeech": "n.",
+    "meaning": "午餐；午饭",
+    "wordRootAffix": "源自西班牙语“lonja”（切片面包），后演变为“中午的正餐”，无常见词根词缀",
+    "exampleSentences": [
+      "We have lunch at 12:00 at school.（我们中午12点在学校吃午饭。）",
+      "My mother makes delicious lunch for me.（我妈妈给我做美味的午饭。）"
+    ]
+  },
+  {
+    "unit": "Unit 5",
+    "word": "dinner",
+    "phonetic": "/ˈdɪnə(r)/",
+    "partOfSpeech": "n.",
+    "meaning": "晚餐；正餐",
+    "wordRootAffix": "源自法语“dîner”（吃饭），无常见词根词缀，指“一天中最丰盛的一餐”",
+    "exampleSentences": [
+      "We have dinner with our family in the evening.（我们晚上和家人一起吃晚餐。）",
+      "What do you want for dinner tonight?（你今晚晚餐想吃什么？）"
+    ]
+  },
+  {
+    "unit": "Unit 5",
+    "word": "egg",
+    "phonetic": "/eɡ/",
+    "partOfSpeech": "n.",
+    "meaning": "蛋；鸡蛋",
+    "wordRootAffix": "源自古英语“æg”，无常见词根词缀，指“鸟类的蛋，尤指鸡蛋”",
+    "exampleSentences": [
+      "I eat an egg every morning for breakfast.（我每天早上早餐吃一个鸡蛋。）",
+      "The egg is rich in protein.（鸡蛋富含蛋白质。）"
+    ]
+  },
+  {
+    "unit": "Unit 5",
+    "word": "hamburger",
+    "phonetic": "/ˈhæmbɜːɡə(r)/",
+    "partOfSpeech": "n.",
+    "meaning": "汉堡包",
+    "wordRootAffix": "源自德语“Hamberger”（汉堡市），因起源于汉堡而得名，无英语词根词缀",
+    "exampleSentences": [
+      "He likes to eat hamburgers for lunch.（他午饭喜欢吃汉堡包。）",
+      "I buy a hamburger and a Coke at the restaurant.（我在餐馆买了一个汉堡包和一杯可乐。）"
+    ]
+  },
+  {
+    "unit": "Unit 5",
+    "word": "chicken",
+    "phonetic": "/ˈtʃɪkɪn/",
+    "partOfSpeech": "n.",
+    "meaning": "鸡肉；小鸡",
+    "wordRootAffix": "源自古英语“cicen”，无常见词根词缀，指“家禽鸡肉或幼鸡”",
+    "exampleSentences": [
+      "My mother cooks chicken for dinner.（我妈妈晚餐做鸡肉。）",
+      "There are some little chickens on the farm.（农场里有一些小鸡。）"
+    ]
+  },
+  {
+    "unit": "Unit 5",
+    "word": "fish",
+    "phonetic": "/fɪʃ/",
+    "partOfSpeech": "n. & v.",
+    "meaning": "鱼；鱼肉；钓鱼",
+    "wordRootAffix": "源自古英语“fisc”，单复数同形（表“鱼的数量”），无常见词根词缀",
+    "exampleSentences": [
+      "I like eating fish because it's delicious.（我喜欢吃鱼，因为它很美味。）",
+      "He goes fishing with his father on weekends.（他周末和爸爸一起去钓鱼。）"
+    ]
+  },
+  {
+    "unit": "Unit 5",
+    "word": "rice",
+    "phonetic": "/raɪs/",
+    "partOfSpeech": "n. （不可数名词）",
+    "meaning": "米饭；大米",
+    "wordRootAffix": "源自古英语“ris”，无常见词根词缀，指“稻谷加工后的粮食”",
+    "exampleSentences": [
+      "We eat rice every day in China.（在中国，我们每天都吃米饭。）",
+      "My mother cooks rice with vegetables.（我妈妈做蔬菜炒饭。）"
+    ]
+  },
+  {
+    "unit": "Unit 5",
+    "word": "noodle",
+    "phonetic": "/ˈnuːdl/",
+    "partOfSpeech": "n. (pl. noodles)",
+    "meaning": "面条",
+    "wordRootAffix": "源自德语“Nudel”，无常见词根词缀，常用复数形式“noodles”",
+    "exampleSentences": [
+      "I like to eat beef noodles for lunch.（我午饭喜欢吃牛肉面。）",
+      "She cooks noodles with eggs and tomatoes.（她做西红柿鸡蛋面。）"
+    ]
+  },
+  {
+    "unit": "Unit 5",
+    "word": "beef",
+    "phonetic": "/biːf/",
+    "partOfSpeech": "n. （不可数名词）",
+    "meaning": "牛肉",
+    "wordRootAffix": "源自古英语“bēf”，无常见词根词缀，指“牛的肉”",
+    "exampleSentences": [
+      "My father likes beef very much.（我爸爸非常喜欢吃牛肉。）",
+      "We have beef and potatoes for dinner tonight.（我们今晚晚餐吃牛肉和土豆。）"
+    ]
+  },
+  {
+    "unit": "Unit 5",
+    "word": "meat",
+    "phonetic": "/miːt/",
+    "partOfSpeech": "n. （不可数名词）",
+    "meaning": "肉；肉类",
+    "wordRootAffix": "源自古英语“mete”，无常见词根词缀，泛指“动物的肉”",
+    "exampleSentences": [
+      "He doesn't eat meat; he is a vegetarian.（他不吃肉，他是素食主义者。）",
+      "We need to buy some meat from the supermarket.（我们需要从超市买些肉。）"
+    ]
+  },
+  {
+    "unit": "Unit 5",
+    "word": "vegetable",
+    "phonetic": "/ˈvedʒtəbl/",
+    "partOfSpeech": "n.",
+    "meaning": "蔬菜",
+    "wordRootAffix": "源自拉丁语“vegetabilis”（有生命的），词根“veget-”（生长）+ 后缀“-able”，指“可食用的植物”",
+    "exampleSentences": [
+      "Eating more vegetables is good for health.（多吃蔬菜对健康有益。）",
+      "My favorite vegetables are tomatoes and carrots.（我最喜欢的蔬菜是西红柿和胡萝卜。）"
+    ]
+  },
+  {
+    "unit": "Unit 5",
+    "word": "fruit",
+    "phonetic": "/fruːt/",
+    "partOfSpeech": "n.",
+    "meaning": "水果",
+    "wordRootAffix": "源自古法语“fruit”，无常见词根词缀，指“植物的果实，可食用”",
+    "exampleSentences": [
+      "She eats some fruit after dinner every day.（她每天晚饭后吃一些水果。）",
+      "Apple, banana and orange are common fruits.（苹果、香蕉和橙子是常见的水果。）"
+    ]
+  },
+  {
+    "unit": "Unit 5",
+    "word": "apple",
+    "phonetic": "/ˈæpl/",
+    "partOfSpeech": "n.",
+    "meaning": "苹果",
+    "wordRootAffix": "源自古英语“æppel”，无常见词根词缀，指“苹果属水果”",
+    "exampleSentences": [
+      "An apple a day keeps the doctor away.（一天一苹果，医生远离我。）",
+      "I give my sister a red apple.（我给了我妹妹一个红苹果。）"
+    ]
+  },
+  {
+    "unit": "Unit 5",
+    "word": "banana",
+    "phonetic": "/bəˈnɑːnə/",
+    "partOfSpeech": "n.",
+    "meaning": "香蕉",
+    "wordRootAffix": "源自阿拉伯语“banan”，无英语词根词缀，指“香蕉属水果”",
+    "exampleSentences": [
+      "Bananas are my favorite fruit.（香蕉是我最喜欢的水果。）",
+      "I put a banana in my schoolbag for snacks.（我在书包里放了一根香蕉当零食。）"
+    ]
+  },
+  {
+    "unit": "Unit 5",
+    "word": "orange",
+    "phonetic": "/ˈɒrɪndʒ; ˈɒrəndʒ/",
+    "partOfSpeech": "n. & adj.",
+    "meaning": "橙子；橘子；橙色的",
+    "wordRootAffix": "同前序单元，源自阿拉伯语“nāranj”，指“柑橘类水果或其颜色”",
+    "exampleSentences": [
+      "I drink a glass of orange juice every morning.（我每天早上喝一杯橙汁。）",
+      "The orange is sweet and juicy.（这个橙子又甜又多汁。）"
+    ]
+  },
+  {
+    "unit": "Unit 5",
+    "word": "pear",
+    "phonetic": "/peə(r)/",
+    "partOfSpeech": "n.",
+    "meaning": "梨；梨子",
+    "wordRootAffix": "源自古英语“pere”，无常见词根词缀，指“梨属水果”",
+    "exampleSentences": [
+      "She buys some pears from the supermarket.（她从超市买了一些梨。）",
+      "The pear is soft and delicious.（这个梨又软又好吃。）"
+    ]
+  },
+  {
+    "unit": "Unit 5",
+    "word": "milk",
+    "phonetic": "/mɪlk/",
+    "partOfSpeech": "n. & v.",
+    "meaning": "牛奶；挤奶",
+    "wordRootAffix": "源自古英语“milc”，无常见词根词缀，指“奶牛分泌的奶”",
+    "exampleSentences": [
+      "I drink a bottle of milk every day.（我每天喝一瓶牛奶。）",
+      "Farmers milk cows in the morning.（农民们早上挤牛奶。）"
+    ]
+  },
+  {
+    "unit": "Unit 5",
+    "word": "bread",
+    "phonetic": "/bred/",
+    "partOfSpeech": "n. （不可数名词）",
+    "meaning": "面包",
+    "wordRootAffix": "源自古英语“brēad”，无常见词根词缀，指“小麦粉制作的发酵食品”",
+    "exampleSentences": [
+      "I eat bread with butter for breakfast.（我早餐吃黄油面包。）",
+      "My mother bakes fresh bread at home.（我妈妈在家烤新鲜面包。）"
+    ]
+  },
+  {
+    "unit": "Unit 5",
+    "word": "food",
+    "phonetic": "/fuːd/",
+    "partOfSpeech": "n.",
+    "meaning": "食物；食品",
+    "wordRootAffix": "源自古英语“fōda”，无常见词根词缀，泛指“可食用的东西”",
+    "exampleSentences": [
+      "We need food and water to live.（我们生存需要食物和水。）",
+      "Chinese food is very popular around the world.（中国食物在全世界都很受欢迎。）"
+    ]
+  },
+  {
+    "unit": "Unit 5",
+    "word": "want",
+    "phonetic": "/wɒnt; wɑːnt/",
+    "partOfSpeech": "v.",
+    "meaning": "想要；需要；缺乏",
+    "wordRootAffix": "源自古英语“wantan”，无常见词根词缀，表“渴望得到某物”",
+    "exampleSentences": [
+      "What do you want to eat for lunch?（你午饭想吃什么？）",
+      "I want a glass of milk and a piece of bread.（我想要一杯牛奶和一片面包。）"
+    ]
+  },
+  {
+    "unit": "Unit 5",
+    "word": "want to",
+    "phonetic": "/wɒnt tuː/",
+    "partOfSpeech": "短语",
+    "meaning": "想要做某事",
+    "wordRootAffix": "由“want”（想要）+ “to”（不定式符号）构成，后接动词原形",
+    "exampleSentences": [
+      "I want to eat noodles for dinner tonight.（我今晚晚餐想吃面条。）",
+      "She wants to buy some fruits from the store.（她想从商店买些水果。）"
+    ]
+  },
+  {
+    "unit": "Unit 5",
+    "word": "drink",
+    "phonetic": "/drɪŋk/",
+    "partOfSpeech": "v. & n.",
+    "meaning": "喝；饮；饮料",
+    "wordRootAffix": "源自古英语“drincan”，无常见词根词缀，指“摄入液体”",
+    "exampleSentences": [
+      "I drink water after exercise.（我运动后喝水。）",
+      "What kind of drink do you like?（你喜欢哪种饮料？）"
+    ]
+  },
+  {
+    "unit": "Unit 5",
+    "word": "juice",
+    "phonetic": "/dʒuːs/",
+    "partOfSpeech": "n.",
+    "meaning": "果汁；汁液",
+    "wordRootAffix": "源自拉丁语“jus”（汁、液），无常见词根词缀，指“水果或蔬菜压榨的汁”",
+    "exampleSentences": [
+      "She drinks orange juice every morning.（她每天早上喝橙汁。）",
+      "I make apple juice at home with a juicer.（我用榨汁机在家做苹果汁。）"
+    ]
+  },
+  {
+    "unit": "Unit 5",
+    "word": "Coke",
+    "phonetic": "/kəʊk/",
+    "partOfSpeech": "n.",
+    "meaning": "可乐；可口可乐",
+    "wordRootAffix": "源自“Coca-Cola”的缩写，无英语词根词缀，指“碳酸饮料”",
+    "exampleSentences": [
+      "He likes to drink Coke with hamburgers.（他喜欢配汉堡包喝可乐。）",
+      "I don't drink too much Coke because it's unhealthy.（我不喝太多可乐，因为它不健康。）"
+    ]
+  },
+  {
+    "unit": "Unit 5",
+    "word": "water",
+    "phonetic": "/ˈwɔːtə(r)/",
+    "partOfSpeech": "n. & v.",
+    "meaning": "水；浇水",
+    "wordRootAffix": "源自古英语“wæter”，无常见词根词缀，指“无色无味的液体”",
+    "exampleSentences": [
+      "We must drink enough water every day.（我们每天必须喝足够的水。）",
+      "My father waters the flowers every afternoon.（我爸爸每天下午浇花。）"
+    ]
+  },
+  {
+    "unit": "Unit 5",
+    "word": "healthy",
+    "phonetic": "/ˈhelθi/",
+    "partOfSpeech": "adj.",
+    "meaning": "健康的；有益健康的",
+    "wordRootAffix": "由“health”（健康）+ 后缀“-y”（表形容词）构成，“与健康相关的”",
+    "exampleSentences": [
+      "Eating more vegetables makes us healthy.（多吃蔬菜让我们健康。）",
+      "It's healthy to exercise every day.（每天运动很健康。）"
+    ]
+  },
+  {
+    "unit": "Unit 5",
+    "word": "unhealthy",
+    "phonetic": "/ʌnˈhelθi/",
+    "partOfSpeech": "adj.",
+    "meaning": "不健康的；有害健康的",
+    "wordRootAffix": "由前缀“un-”（否定）+ “healthy”（健康的）构成，“不符合健康的”",
+    "exampleSentences": [
+      "Eating too much fast food is unhealthy.（吃太多快餐是不健康的。）",
+      "Staying up late is unhealthy for teenagers.（熬夜对青少年不健康。）"
+    ]
+  },
+  {
+    "unit": "Unit 5",
+    "word": "delicious",
+    "phonetic": "/dɪˈlɪʃəs/",
+    "partOfSpeech": "adj.",
+    "meaning": "美味的；可口的",
+    "wordRootAffix": "源自拉丁语“deliciosus”（令人愉悦的），无常见词根词缀，表“味道好的”",
+    "exampleSentences": [
+      "My mother cooks delicious food for us.（我妈妈给我们做美味的食物。）",
+      "The chicken is very delicious. I want more.（这鸡肉太美味了，我还想吃。）"
+    ]
+  },
+  {
+    "unit": "Unit 5",
+    "word": "right",
+    "phonetic": "/raɪt/",
+    "partOfSpeech": "adj. & adv. & n. & v.",
+    "meaning": "正确的；右边；权利；纠正",
+    "wordRootAffix": "源自古英语“riht”，无常见词根词缀，此处侧重“正确的”",
+    "exampleSentences": [
+      "You are right; eating healthy food is important.（你是对的，吃健康的食物很重要。）",
+      "Turn right at the next corner.（在下一个拐角向右转。）"
+    ]
+  },
+  {
+    "unit": "Unit 5",
+    "word": "eat",
+    "phonetic": "/iːt/",
+    "partOfSpeech": "v.",
+    "meaning": "吃；进食",
+    "wordRootAffix": "源自古英语“etan”，无常见词根词缀，指“将食物放入口中咀嚼吞咽”",
+    "exampleSentences": [
+      "We eat three meals a day.（我们一天吃三顿饭。）",
+      "Don't eat too quickly; it's bad for your stomach.（不要吃得太快，对胃不好。）"
+    ]
+  },
+  {
+    "unit": "Unit 5",
+    "word": "eat out",
+    "phonetic": "/iːt aʊt/",
+    "partOfSpeech": "短语",
+    "meaning": "出去吃饭；下馆子",
+    "wordRootAffix": "由“eat”（吃）+ “out”（外面）构成，指“在餐馆而非家里吃饭”",
+    "exampleSentences": [
+      "We eat out with friends on weekends.（我们周末和朋友出去吃饭。）",
+      "My family eats out to celebrate my birthday.（我们家出去吃饭庆祝我的生日。）"
+    ]
+  },
+  {
+    "unit": "Unit 5",
+    "word": "sweet",
+    "phonetic": "/swiːt/",
+    "partOfSpeech": "adj. & n.",
+    "meaning": "甜的；甜食",
+    "wordRootAffix": "源自古英语“swēte”，无常见词根词缀，表“味道甜的”或“甜的食物”",
+    "exampleSentences": [
+      "The cake is very sweet. I like it.（这个蛋糕很甜，我喜欢。）",
+      "She doesn't eat too many sweets because they are bad for teeth.（她不吃太多甜食，因为对牙齿不好。）"
+    ]
+  },
+  {
+    "unit": "Unit 5",
+    "word": "ice cream",
+    "phonetic": "/aɪs kriːm/",
+    "partOfSpeech": "短语",
+    "meaning": "冰淇淋",
+    "wordRootAffix": "由“ice”（冰）+ “cream”（奶油）构成，指“冰与奶油制成的冷饮”",
+    "exampleSentences": [
+      "I eat ice cream in summer.（我夏天吃冰淇淋。）",
+      "She buys a cone of ice cream from the shop.（她从商店买了一个甜筒冰淇淋。）"
+    ]
+  },
+  {
+    "unit": "Unit 5",
+    "word": "candy",
+    "phonetic": "/ˈkændi/",
+    "partOfSpeech": "n.",
+    "meaning": "糖果",
+    "wordRootAffix": "源自阿拉伯语“qandī”（糖），无常见词根词缀，指“甜味的糖果类食品”",
+    "exampleSentences": [
+      "My mother doesn't let me eat too much candy.（我妈妈不让我吃太多糖果。）",
+      "She puts some candies in her bag as snacks.（她在包里放了一些糖果当零食。）"
+    ]
+  },
+  {
+    "unit": "Unit 5",
+    "word": "for",
+    "phonetic": "/fɔː(r); fə(r)/",
+    "partOfSpeech": "prep.",
+    "meaning": "为了；给；对；作为",
+    "wordRootAffix": "同前序单元，源自古英语“for”，此处侧重“作为（三餐）”",
+    "exampleSentences": [
+      "What do you have for breakfast?（你早餐吃什么？）",
+      "I prepare fruit for my family.（我为家人准备水果。）"
+    ]
+  }
+]

@@ -1,0 +1,530 @@
+[
+  {
+    "unit": "Unit 3",
+    "word": "pencil",
+    "phonetic": "/ˈpensl/",
+    "partOfSpeech": "n.",
+    "meaning": "铅笔",
+    "wordRootAffix": "源自拉丁语“penicillus”（小刷子），词根“pen-”（羽毛）+ 后缀“-cil”，因早期铅笔类似羽毛笔得名",
+    "exampleSentences": [
+      "This is my pencil. It's red.（这是我的铅笔，它是红色的。）",
+      "I need a pencil to write down the new words.（我需要一支铅笔来记新单词。）"
+    ]
+  },
+  {
+    "unit": "Unit 3",
+    "word": "book",
+    "phonetic": "/bʊk/",
+    "partOfSpeech": "n. & v.",
+    "meaning": "书；书籍；预订",
+    "wordRootAffix": "源自古英语“bōc”，无常见词根词缀，名词表“印刷的读物”，动词表“预约”",
+    "exampleSentences": [
+      "My English book is on the desk.（我的英语书在桌子上。）",
+      "She books a ticket for the movie online.（她在网上预订了一张电影票。）"
+    ]
+  },
+  {
+    "unit": "Unit 3",
+    "word": "eraser",
+    "phonetic": "/ɪˈreɪzə(r)/",
+    "partOfSpeech": "n.",
+    "meaning": "橡皮；橡皮擦",
+    "wordRootAffix": "由“erase”（擦掉）+ 后缀“-er”（表工具）构成，“用来擦掉字迹的工具”",
+    "exampleSentences": [
+      "I use an eraser to correct my mistakes.（我用橡皮改正我的错误。）",
+      "Her eraser is pink and shaped like a rabbit.（她的橡皮是粉色的，形状像兔子。）"
+    ]
+  },
+  {
+    "unit": "Unit 3",
+    "word": "box",
+    "phonetic": "/bɒks/",
+    "partOfSpeech": "n. & v.",
+    "meaning": "箱；盒；拳击",
+    "wordRootAffix": "源自古英语“box”，无常见词根词缀，名词表“方形容器”，动词表“拳击”",
+    "exampleSentences": [
+      "There are some pencils in the box.（盒子里有一些铅笔。）",
+      "He likes to box with his friends in PE class.（他喜欢在体育课上和朋友打拳击。）"
+    ]
+  },
+  {
+    "unit": "Unit 3",
+    "word": "pencil box",
+    "phonetic": "/ˈpensl bɒks/",
+    "partOfSpeech": "短语",
+    "meaning": "铅笔盒；文具盒",
+    "wordRootAffix": "由“pencil”（铅笔）+ “box”（盒子）构成，“装铅笔的盒子”",
+    "exampleSentences": [
+      "My pencil box is blue and has a cat on it.（我的铅笔盒是蓝色的，上面有一只猫。）",
+      "Put your eraser in the pencil box, please.（请把你的橡皮放进铅笔盒里。）"
+    ]
+  },
+  {
+    "unit": "Unit 3",
+    "word": "schoolbag",
+    "phonetic": "/ˈskuːlbæɡ/",
+    "partOfSpeech": "n.",
+    "meaning": "书包",
+    "wordRootAffix": "由“school”（学校）+ “bag”（包）构成，“上学用的包”",
+    "exampleSentences": [
+      "My schoolbag is heavy because it has many books.（我的书包很重，因为里面有很多书。）",
+      "She puts her pencil box into the schoolbag every morning.（她每天早上把铅笔盒放进书包里。）"
+    ]
+  },
+  {
+    "unit": "Unit 3",
+    "word": "dictionary",
+    "phonetic": "/ˈdɪkʃənri/",
+    "partOfSpeech": "n.",
+    "meaning": "词典；字典",
+    "wordRootAffix": "源自拉丁语“dictionarium”，词根“dict-”（说、写）+ 后缀“-ary”（表物品），“收录词汇的工具书”",
+    "exampleSentences": [
+      "I use an English-Chinese dictionary to look up new words.（我用英汉词典查新单词。）",
+      "This dictionary is very useful for my English study.（这本字典对我的英语学习很有用。）"
+    ]
+  },
+  {
+    "unit": "Unit 3",
+    "word": "his",
+    "phonetic": "/hɪz/",
+    "partOfSpeech": "pron.",
+    "meaning": "他的（名词性物主代词/形容词性物主代词）",
+    "wordRootAffix": "同Unit 1，源自古英语“his”，可修饰名词或单独作宾语/表语",
+    "exampleSentences": [
+      "This is his pen.（这是他的钢笔。）",
+      "The schoolbag is his.（这个书包是他的。）"
+    ]
+  },
+  {
+    "unit": "Unit 3",
+    "word": "mine",
+    "phonetic": "/maɪn/",
+    "partOfSpeech": "pron.",
+    "meaning": "我的（名词性物主代词）",
+    "wordRootAffix": "源自古英语“mīn”，是“my”的名词性形式，可单独使用，无需修饰名词",
+    "exampleSentences": [
+      "The book is mine, not yours.（这本书是我的，不是你的。）",
+      "Is this pencil mine? Yes, it is.（这支铅笔是我的吗？是的，它是。）"
+    ]
+  },
+  {
+    "unit": "Unit 3",
+    "word": "hers",
+    "phonetic": "/hɜːz/",
+    "partOfSpeech": "pron.",
+    "meaning": "她的（名词性物主代词）",
+    "wordRootAffix": "是“her”的名词性形式，源自古英语“hire”，可单独使用，无需修饰名词",
+    "exampleSentences": [
+      "The eraser is hers.（这块橡皮是她的。）",
+      "Is this schoolbag hers? No, it isn't.（这个书包是她的吗？不，不是。）"
+    ]
+  },
+  {
+    "unit": "Unit 3",
+    "word": "excuse",
+    "phonetic": "/ɪkˈskjuːz; ɪkˈskjuːs/",
+    "partOfSpeech": "v. & n.",
+    "meaning": "原谅；宽恕；借口；理由",
+    "wordRootAffix": "前缀“ex-”（出）+ 词根“cuse”（责备），“走出责备”即“原谅”",
+    "exampleSentences": [
+      "Excuse me, is this your pencil?（打扰一下，这是你的铅笔吗？）",
+      "He has no excuse for being late.（他迟到没有借口。）"
+    ]
+  },
+  {
+    "unit": "Unit 3",
+    "word": "me",
+    "phonetic": "/miː; mi/",
+    "partOfSpeech": "pron.",
+    "meaning": "我（宾格）",
+    "wordRootAffix": "源自古英语“mē”，是“I”的宾格形式，作动词或介词的宾语",
+    "exampleSentences": [
+      "Excuse me, can you help me?（打扰一下，你能帮我吗？）",
+      "My mother buys a book for me.（我妈妈给我买了一本书。）"
+    ]
+  },
+  {
+    "unit": "Unit 3",
+    "word": "excuse me",
+    "phonetic": "/ɪkˈskjuːz miː/",
+    "partOfSpeech": "短语",
+    "meaning": "劳驾；请原谅；打扰一下",
+    "wordRootAffix": "由“excuse”（原谅）+ “me”（我）构成，礼貌用语，用于打扰、求助或道歉",
+    "exampleSentences": [
+      "Excuse me, where is the library?（打扰一下，图书馆在哪里？）",
+      "Excuse me, I lost my schoolbag.（抱歉，我弄丢了我的书包。）"
+    ]
+  },
+  {
+    "unit": "Unit 3",
+    "word": "thank",
+    "phonetic": "/θæŋk/",
+    "partOfSpeech": "v. & n.",
+    "meaning": "感谢；谢谢",
+    "wordRootAffix": "源自古英语“þancian”，无常见词根词缀，表达感激之情",
+    "exampleSentences": [
+      "Thank you for your help.（谢谢你的帮助。）",
+      "I want to thank my teacher for her care.（我想感谢老师的关心。）"
+    ]
+  },
+  {
+    "unit": "Unit 3",
+    "word": "teacher",
+    "phonetic": "/ˈtiːtʃə(r)/",
+    "partOfSpeech": "n.",
+    "meaning": "教师；老师",
+    "wordRootAffix": "由“teach”（教）+ 后缀“-er”（表人）构成，“从事教学工作的人”",
+    "exampleSentences": [
+      "My English teacher is very kind.（我的英语老师非常和蔼。）",
+      "She wants to be a teacher when she grows up.（她长大后想成为一名老师。）"
+    ]
+  },
+  {
+    "unit": "Unit 3",
+    "word": "about",
+    "phonetic": "/əˈbaʊt/",
+    "partOfSpeech": "prep. & adv.",
+    "meaning": "关于；大约；到处",
+    "wordRootAffix": "前缀“a-”（在）+ “bout”（周围），表“关于”或“大概的数量/时间”",
+    "exampleSentences": [
+      "What about this dictionary?（这本字典怎么样？）",
+      "It's about three o'clock in the afternoon.（现在大约是下午三点。）"
+    ]
+  },
+  {
+    "unit": "Unit 3",
+    "word": "what about...",
+    "phonetic": "/wɒt əˈbaʊt/",
+    "partOfSpeech": "短语",
+    "meaning": "……怎么样；……好吗",
+    "wordRootAffix": "由“what”（什么）+ “about”（关于）构成，用于提出建议或询问看法",
+    "exampleSentences": [
+      "What about going to the library?（去图书馆怎么样？）",
+      "What about your pencil box? Is it lost?（你的铅笔盒呢？弄丢了吗？）"
+    ]
+  },
+  {
+    "unit": "Unit 3",
+    "word": "yours",
+    "phonetic": "/jɔːz/",
+    "partOfSpeech": "pron.",
+    "meaning": "你（们）的（名词性物主代词）",
+    "wordRootAffix": "是“your”的名词性形式，源自古英语“ēower”，可单独使用，无需修饰名词",
+    "exampleSentences": [
+      "Is this book yours?（这本书是你的吗？）",
+      "My pen is black, and yours is blue.（我的钢笔是黑色的，你的是蓝色的。）"
+    ]
+  },
+  {
+    "unit": "Unit 3",
+    "word": "for",
+    "phonetic": "/fɔː(r); fə(r)/",
+    "partOfSpeech": "prep. & conj.",
+    "meaning": "为了；给；对；因为",
+    "wordRootAffix": "源自古英语“for”，无常见词根词缀，表目的、对象或原因",
+    "exampleSentences": [
+      "This gift is for my teacher.（这份礼物是给我的老师的。）",
+      "Thank you for your dictionary.（谢谢你的字典。）"
+    ]
+  },
+  {
+    "unit": "Unit 3",
+    "word": "thank you for...",
+    "phonetic": "/θæŋk juː fɔː(r)/",
+    "partOfSpeech": "短语",
+    "meaning": "为……而感谢",
+    "wordRootAffix": "由“thank you”（谢谢你）+ “for”（为了）构成，用于感谢某人做的事或给的东西",
+    "exampleSentences": [
+      "Thank you for helping me find my schoolbag.（谢谢你帮我找到书包。）",
+      "Thank you for the nice pencil box.（谢谢你的漂亮铅笔盒。）"
+    ]
+  },
+  {
+    "unit": "Unit 3",
+    "word": "help",
+    "phonetic": "/help/",
+    "partOfSpeech": "v. & n.",
+    "meaning": "帮助；援助；帮忙",
+    "wordRootAffix": "源自古英语“helpan”，无常见词根词缀，指“给予支持或协助”",
+    "exampleSentences": [
+      "Can you help me find my eraser?（你能帮我找我的橡皮吗？）",
+      "Your help is very important to me.（你的帮助对我很重要。）"
+    ]
+  },
+  {
+    "unit": "Unit 3",
+    "word": "welcome",
+    "phonetic": "/ˈwelkəm/",
+    "partOfSpeech": "adj. & v. & interj.",
+    "meaning": "受欢迎的；欢迎；不客气",
+    "wordRootAffix": "由“well”（好）+ “come”（来）构成，表“受欢迎的”或回应感谢的“不客气”",
+    "exampleSentences": [
+      "You're welcome.（不客气。）",
+      "Welcome to our school library.（欢迎来到我们学校图书馆。）"
+    ]
+  },
+  {
+    "unit": "Unit 3",
+    "word": "computer",
+    "phonetic": "/kəmˈpjuːtə(r)/",
+    "partOfSpeech": "n.",
+    "meaning": "计算机；电脑",
+    "wordRootAffix": "前缀“com-”（共同）+ 词根“put-”（思考）+ 后缀“-er”（表机器），“能计算的机器”",
+    "exampleSentences": [
+      "There is a computer in the classroom.（教室里有一台电脑。）",
+      "I use the computer to look up information.（我用电脑查资料。）"
+    ]
+  },
+  {
+    "unit": "Unit 3",
+    "word": "game",
+    "phonetic": "/ɡeɪm/",
+    "partOfSpeech": "n.",
+    "meaning": "游戏；运动；比赛",
+    "wordRootAffix": "源自古英语“gamen”，无常见词根词缀，指“娱乐活动或竞技比赛”",
+    "exampleSentences": [
+      "He likes to play computer games after school.（他放学后喜欢玩电脑游戏。）",
+      "We have a basketball game this afternoon.（我们今天下午有一场篮球比赛。）"
+    ]
+  },
+  {
+    "unit": "Unit 3",
+    "word": "computer game",
+    "phonetic": "/kəmˈpjuːtə(r) ɡeɪm/",
+    "partOfSpeech": "短语",
+    "meaning": "电脑游戏",
+    "wordRootAffix": "由“computer”（电脑）+ “game”（游戏）构成，“在电脑上玩的游戏”",
+    "exampleSentences": [
+      "Don't play too many computer games.（不要玩太多电脑游戏。）",
+      "My brother has a new computer game.（我哥哥有一款新的电脑游戏。）"
+    ]
+  },
+  {
+    "unit": "Unit 3",
+    "word": "card",
+    "phonetic": "/kɑːd/",
+    "partOfSpeech": "n.",
+    "meaning": "卡片；纸牌",
+    "wordRootAffix": "源自古法语“carte”，无常见词根词缀，指“薄纸片制成的物品”",
+    "exampleSentences": [
+      "This is my ID card.（这是我的身份证。）",
+      "We play cards with our friends on weekends.（我们周末和朋友打牌。）"
+    ]
+  },
+  {
+    "unit": "Unit 3",
+    "word": "ID card",
+    "phonetic": "/ˌaɪ ˈdiː kɑːd/",
+    "partOfSpeech": "短语",
+    "meaning": "身份证；学生卡",
+    "wordRootAffix": "“ID”是“Identity Document”的缩写，“card”（卡片），指“证明身份的卡片”",
+    "exampleSentences": [
+      "Show me your ID card, please.（请出示你的身份证。）",
+      "I lost my school ID card yesterday.（我昨天弄丢了我的学生证。）"
+    ]
+  },
+  {
+    "unit": "Unit 3",
+    "word": "notebook",
+    "phonetic": "/ˈnəʊtbʊk/",
+    "partOfSpeech": "n.",
+    "meaning": "笔记本",
+    "wordRootAffix": "由“note”（笔记）+ “book”（本子）构成，“用来记笔记的本子”",
+    "exampleSentences": [
+      "I write down new words in my notebook.（我把新单词记在笔记本上。）",
+      "Her notebook is green with her name on it.（她的笔记本是绿色的，上面有她的名字。）"
+    ]
+  },
+  {
+    "unit": "Unit 3",
+    "word": "ring",
+    "phonetic": "/rɪŋ/",
+    "partOfSpeech": "n. & v.",
+    "meaning": "戒指；铃声；打电话；响铃",
+    "wordRootAffix": "源自古英语“hring”，无常见词根词缀，名词表“环形物品”，动词表“发出铃声”",
+    "exampleSentences": [
+      "This is my mother's ring.（这是我妈妈的戒指。）",
+      "The phone rings, and she answers it quickly.（电话响了，她赶紧接了。）"
+    ]
+  },
+  {
+    "unit": "Unit 3",
+    "word": "bag",
+    "phonetic": "/bæɡ/",
+    "partOfSpeech": "n.",
+    "meaning": "袋；包",
+    "wordRootAffix": "源自古挪威语“baggi”，无常见词根词缀，指“用来装东西的容器”",
+    "exampleSentences": [
+      "My pencil bag is in my schoolbag.（我的笔袋在书包里。）",
+      "She carries a small bag when she goes out.（她出门时拎着一个小包。）"
+    ]
+  },
+  {
+    "unit": "Unit 3",
+    "word": "in",
+    "phonetic": "/ɪn/",
+    "partOfSpeech": "prep. & adv.",
+    "meaning": "在……里；在……内；进入",
+    "wordRootAffix": "同Starter Unit 2，源自古英语“in”，表位置或状态",
+    "exampleSentences": [
+      "My dictionary is in the schoolbag.（我的字典在书包里。）",
+      "Come in, please.（请进。）"
+    ]
+  },
+  {
+    "unit": "Unit 3",
+    "word": "library",
+    "phonetic": "/ˈlaɪbrəri/",
+    "partOfSpeech": "n.",
+    "meaning": "图书馆；图书室",
+    "wordRootAffix": "源自拉丁语“liber”（书）+ 后缀“-ary”（表场所），“存放书籍的地方”",
+    "exampleSentences": [
+      "I go to the school library to read books.（我去学校图书馆看书。）",
+      "You can borrow books from the library.（你可以从图书馆借书。）"
+    ]
+  },
+  {
+    "unit": "Unit 3",
+    "word": "ask",
+    "phonetic": "/ɑːsk/",
+    "partOfSpeech": "v.",
+    "meaning": "询问；请求；要求",
+    "wordRootAffix": "源自古英语“ascian”，无常见词根词缀，指“提出问题或请求”",
+    "exampleSentences": [
+      "Ask the teacher for help, please.（请向老师求助。）",
+      "He asks me about the way to the library.（他问我去图书馆的路。）"
+    ]
+  },
+  {
+    "unit": "Unit 3",
+    "word": "ask...for...",
+    "phonetic": "/ɑːsk fɔː(r)/",
+    "partOfSpeech": "短语",
+    "meaning": "请求；恳求（给予）",
+    "wordRootAffix": "由“ask”（请求）+ “for”（为了）构成，“向某人索要某物”",
+    "exampleSentences": [
+      "You can ask the librarian for a dictionary.（你可以向图书管理员要一本字典。）",
+      "She asks her mother for a new schoolbag.（她向妈妈要一个新书包。）"
+    ]
+  },
+  {
+    "unit": "Unit 3",
+    "word": "find",
+    "phonetic": "/faɪnd/",
+    "partOfSpeech": "v.",
+    "meaning": "找到；发现",
+    "wordRootAffix": "源自古英语“findan”，无常见词根词缀，指“发现丢失的物品或新事物”",
+    "exampleSentences": [
+      "I find my eraser under the desk.（我在桌子底下找到了我的橡皮。）",
+      "She finds a notebook in the library.（她在图书馆里发现了一个笔记本。）"
+    ]
+  },
+  {
+    "unit": "Unit 3",
+    "word": "found",
+    "phonetic": "/faʊnd/",
+    "partOfSpeech": "v.",
+    "meaning": "找到；发现（find的过去式/过去分词）",
+    "wordRootAffix": "是“find”的变形，无额外词根词缀",
+    "exampleSentences": [
+      "He found his ID card yesterday.（他昨天找到了他的身份证。）",
+      "I have found my pencil box at last.（我终于找到了我的铅笔盒。）"
+    ]
+  },
+  {
+    "unit": "Unit 3",
+    "word": "some",
+    "phonetic": "/sʌm; səm/",
+    "partOfSpeech": "adj. & pron.",
+    "meaning": "一些；某些；若干",
+    "wordRootAffix": "源自古英语“sum”，无常见词根词缀，修饰可数/不可数名词表“部分”",
+    "exampleSentences": [
+      "There are some books in the bag.（包里有一些书。）",
+      "Can I have some paper, please?（请给我一些纸好吗？）"
+    ]
+  },
+  {
+    "unit": "Unit 3",
+    "word": "classroom",
+    "phonetic": "/ˈklɑːsruːm/",
+    "partOfSpeech": "n.",
+    "meaning": "教室",
+    "wordRootAffix": "由“class”（班级）+ “room”（房间）构成，“上课的房间”",
+    "exampleSentences": [
+      "Our classroom is big and bright.（我们的教室又大又明亮。）",
+      "I left my notebook in the classroom.（我把笔记本落在教室里了。）"
+    ]
+  },
+  {
+    "unit": "Unit 3",
+    "word": "e-mail",
+    "phonetic": "/ˈiːmeɪl/",
+    "partOfSpeech": "n. & v.",
+    "meaning": "电子邮件；给……发电子邮件",
+    "wordRootAffix": "由“e-”（电子的）+ “mail”（邮件）构成，“通过网络发送的邮件”",
+    "exampleSentences": [
+      "You can e-mail me at this address.（你可以往这个邮箱地址给我发邮件。）",
+      "I get an e-mail from my teacher today.（我今天收到了老师的一封电子邮件。）"
+    ]
+  },
+  {
+    "unit": "Unit 3",
+    "word": "call",
+    "phonetic": "/kɔːl/",
+    "partOfSpeech": "v. & n.",
+    "meaning": "打电话；称呼；电话；呼叫",
+    "wordRootAffix": "源自古英语“cweallan”，无常见词根词缀，指“通过电话沟通”或“命名”",
+    "exampleSentences": [
+      "Call me at 138xxxx7890 if you find my bag.（如果你找到我的包，请打138xxxx7890给我。）",
+      "We have a phone call from my uncle.（我们接到了叔叔的电话。）"
+    ]
+  },
+  {
+    "unit": "Unit 3",
+    "word": "lost",
+    "phonetic": "/lɒst; lɔːst/",
+    "partOfSpeech": "adj. & v.",
+    "meaning": "丢失的；迷路的；丢失（lose的过去式/过去分词）",
+    "wordRootAffix": "是“lose”的变形，源自古英语“losian”，表“物品丢失”或“人迷路”",
+    "exampleSentences": [
+      "I lost my schoolbag this morning.（我今天早上弄丢了我的书包。）",
+      "This is a lost and found box.（这是一个失物招领箱。）"
+    ]
+  },
+  {
+    "unit": "Unit 3",
+    "word": "found",
+    "phonetic": "/faʊnd/",
+    "partOfSpeech": "adj.",
+    "meaning": "找到的；寻回的",
+    "wordRootAffix": "对应“lost”，表“被找到的物品”",
+    "exampleSentences": [
+      "Look at the found notebook on the desk.（看看桌子上那本被捡到的笔记本。）",
+      "The found ID card is in the teacher's office.（捡到的身份证在老师办公室里。）"
+    ]
+  },
+  {
+    "unit": "Unit 3",
+    "word": "set",
+    "phonetic": "/set/",
+    "partOfSpeech": "n. & v.",
+    "meaning": "一套；一副；放置；设置",
+    "wordRootAffix": "源自古英语“settan”，无常见词根词缀，名词表“一组物品”，动词表“摆放”",
+    "exampleSentences": [
+      "This is a set of keys.（这是一串钥匙。）",
+      "She sets her schoolbag on the chair.（她把书包放在椅子上。）"
+    ]
+  },
+  {
+    "unit": "Unit 3",
+    "word": "a set of",
+    "phonetic": "/ə set ɒv/",
+    "partOfSpeech": "短语",
+    "meaning": "一套；一副；一组",
+    "wordRootAffix": "由“a”（一个）+ “set”（套）+ “of”（……的）构成，修饰复数名词表“一组”",
+    "exampleSentences": [
+      "I have a set of colored pencils.（我有一套彩色铅笔。）",
+      "He finds a set of keys in the classroom.（他在教室里捡到了一串钥匙。）"
+    ]
+  }
+]

@@ -1,0 +1,518 @@
+[
+  {
+    "unit": "Unit 7",
+    "word": "celebrate",
+    "phonetic": "/ˈselɪbreɪt/",
+    "partOfSpeech": "v.",
+    "meaning": "庆祝；庆贺",
+    "wordRootAffix": "前缀“celebr-”（著名的）+ 后缀“-ate”（表动词），“因重要事情而举行活动”即“庆祝”",
+    "exampleSentences": [
+      "We celebrate National Day on October 1st.（我们10月1日庆祝国庆节。）",
+      "They celebrate their grandmother's birthday with a big dinner.（他们用一顿丰盛的晚餐庆祝奶奶的生日。）"
+    ]
+  },
+  {
+    "unit": "Unit 7",
+    "word": "surprise",
+    "phonetic": "/səˈpraɪz/",
+    "partOfSpeech": "n. 惊奇；惊讶；v. 使感到意外",
+    "meaning": "惊奇；惊讶；使感到意外",
+    "wordRootAffix": "前缀“sur-”（超过）+ 词根“prise”（抓住），“突然抓住某人的注意力”即“使惊讶”",
+    "exampleSentences": [
+      "The birthday party was a big surprise for her.（这个生日派对对她来说是个大惊喜。）",
+      "His visit surprised all of us.（他的来访让我们所有人都感到意外。）"
+    ]
+  },
+  {
+    "unit": "Unit 7",
+    "word": "something",
+    "phonetic": "/ˈsʌmθɪŋ/",
+    "partOfSpeech": "pron.",
+    "meaning": "某事；某物",
+    "wordRootAffix": "由“some”（一些）+ “thing”（东西）构成，指“不确定的某事物”",
+    "exampleSentences": [
+      "I want to buy something special for my friend's birthday.（我想给朋友买个特别的生日礼物。）",
+      "There is something wrong with my bike.（我的自行车有点问题。）"
+    ]
+  },
+  {
+    "unit": "Unit 7",
+    "word": "sale",
+    "phonetic": "/seɪl/",
+    "partOfSpeech": "n.",
+    "meaning": "出售；销售",
+    "wordRootAffix": "源自拉丁语“salere”（出售），无常见词缀，指“商品售卖的行为或活动”",
+    "exampleSentences": [
+      "The store has a big sale on weekends.（这家商店周末大促销。）",
+      "This dress is on sale for 50 yuan.（这条裙子打折出售，只要50元。）"
+    ]
+  },
+  {
+    "unit": "Unit 7",
+    "word": "kilo",
+    "phonetic": "/ˈkiːləʊ/ (= kilogram, kilogramme /ˈkɪləɡræm/)",
+    "partOfSpeech": "n. (pl. kilos)",
+    "meaning": "千克；公斤",
+    "wordRootAffix": "源自希腊语“kilos”（千），是“kilogram”的缩写，用于表示重量单位",
+    "exampleSentences": [
+      "I need two kilos of apples.（我需要两公斤苹果。）",
+      "The meat costs 30 yuan per kilo.（这肉每公斤30元。）"
+    ]
+  },
+  {
+    "unit": "Unit 7",
+    "word": "yogurt",
+    "phonetic": "/ˈjɒɡət/ (= yoghurt)",
+    "partOfSpeech": "n. （不可数名词）",
+    "meaning": "酸奶",
+    "wordRootAffix": "源自土耳其语“yoğurt”，无英语词根词缀，为乳制品专有名词",
+    "exampleSentences": [
+      "She eats a bowl of yogurt for breakfast every day.（她每天早餐吃一碗酸奶。）",
+      "This yogurt has fresh fruit in it.（这款酸奶里有新鲜水果。）"
+    ]
+  },
+  {
+    "unit": "Unit 7",
+    "word": "total",
+    "phonetic": "/ˈtəʊtl/",
+    "partOfSpeech": "n. 总数；合计；adj. 总的；全体的",
+    "meaning": "总数；合计；总的；全体的",
+    "wordRootAffix": "源自拉丁语“totus”（全部的），无常见词缀，指“整体的总和或全部的”",
+    "exampleSentences": [
+      "The total of our bill is 120 yuan.（我们的账单总额是120元。）",
+      "The total number of students in our class is 45.（我们班的学生总数是45人。）"
+    ]
+  },
+  {
+    "unit": "Unit 7",
+    "word": "price",
+    "phonetic": "/praɪs/",
+    "partOfSpeech": "n.",
+    "meaning": "价格",
+    "wordRootAffix": "源自古法语“pris”（价值），无常见词缀，指“购买商品所需的钱数”",
+    "exampleSentences": [
+      "What's the price of this book?（这本书的价格是多少？）",
+      "The price of fruit is lower in summer.（夏天水果的价格更便宜。）"
+    ]
+  },
+  {
+    "unit": "Unit 7",
+    "word": "balloon",
+    "phonetic": "/bəˈluːn/",
+    "partOfSpeech": "n.",
+    "meaning": "气球",
+    "wordRootAffix": "源自意大利语“ballone”（大球），由“balla”（球）+ 后缀“-one”（表大）构成",
+    "exampleSentences": [
+      "We decorate the room with colorful balloons for the party.（我们用彩色气球装饰房间准备派对。）",
+      "The child is holding a red balloon in his hand.（那个孩子手里拿着一个红色气球。）"
+    ]
+  },
+  {
+    "unit": "Unit 7",
+    "word": "chocolate",
+    "phonetic": "/ˈtʃɒklət/",
+    "partOfSpeech": "n. （不可数名词，也可作可数名词表“一块巧克力”）",
+    "meaning": "巧克力",
+    "wordRootAffix": "源自西班牙语“chocolate”，无英语词根词缀，为食品专有名词",
+    "exampleSentences": [
+      "She likes eating dark chocolate.（她喜欢吃黑巧克力。）",
+      "I bought a box of chocolates for my sister.（我给妹妹买了一盒巧克力。）"
+    ]
+  },
+  {
+    "unit": "Unit 7",
+    "word": "pizza",
+    "phonetic": "/ˈpiːtsə/",
+    "partOfSpeech": "n.",
+    "meaning": "比萨饼",
+    "wordRootAffix": "源自意大利语“pizza”，无英语词根词缀，为西餐专有名词",
+    "exampleSentences": [
+      "We order a pizza for dinner tonight.（我们今晚点了一份比萨饼当晚餐。）",
+      "My favorite pizza has cheese and mushrooms.（我最喜欢的比萨饼有奶酪和蘑菇。）"
+    ]
+  },
+  {
+    "unit": "Unit 7",
+    "word": "list",
+    "phonetic": "/lɪst/",
+    "partOfSpeech": "n. 名单；清单；v. 列表；列清单",
+    "meaning": "名单；清单；列表；列清单",
+    "wordRootAffix": "源自古英语“liste”（条纹、表格），无常见词缀，指“按顺序排列的条目”",
+    "exampleSentences": [
+      "Make a shopping list before you go to the supermarket.（去超市前先列一份购物清单。）",
+      "She lists all the things she needs to buy.（她把所有需要买的东西列了出来。）"
+    ]
+  },
+  {
+    "unit": "Unit 7",
+    "word": "own",
+    "phonetic": "/əʊn/",
+    "partOfSpeech": "adj. & pron.",
+    "meaning": "自己的；本人的",
+    "wordRootAffix": "源自古英语“āgen”，无常见词缀，指“属于某人自身的”",
+    "exampleSentences": [
+      "He has his own room.（他有自己的房间。）",
+      "She likes to make her own decisions.（她喜欢自己做决定。）"
+    ]
+  },
+  {
+    "unit": "Unit 7",
+    "word": "example",
+    "phonetic": "/ɪɡˈzɑːmpl/",
+    "partOfSpeech": "n.",
+    "meaning": "例子；范例",
+    "wordRootAffix": "源自拉丁语“exemplum”（样本），前缀“ex-”（向外）+ 词根“empl-”（拿），“拿出来作为参考的事物”",
+    "exampleSentences": [
+      "Can you give me an example of a healthy food?（你能给我举一个健康食品的例子吗？）",
+      "This book has many examples of English dialogues.（这本书有很多英语对话的范例。）"
+    ]
+  },
+  {
+    "unit": "Unit 7",
+    "word": "for example",
+    "phonetic": "/fɔː(r) ɪɡˈzɑːmpl/",
+    "partOfSpeech": "短语",
+    "meaning": "例如",
+    "wordRootAffix": "由介词“for”（作为）+ “example”（例子）构成，用于举例说明",
+    "exampleSentences": [
+      "Many fruits are good for health, for example, apples and bananas.（很多水果对健康有益，例如苹果和香蕉。）",
+      "She likes sports, for example, swimming and running.（她喜欢运动，例如游泳和跑步。）"
+    ]
+  },
+  {
+    "unit": "Unit 7",
+    "word": "language",
+    "phonetic": "/ˈlæŋɡwɪdʒ/",
+    "partOfSpeech": "n.",
+    "meaning": "语言",
+    "wordRootAffix": "源自拉丁语“lingua”（舌头），词根“lingu-”（语言）+ 后缀“-age”（表抽象名词），“用舌头表达的交流工具”",
+    "exampleSentences": [
+      "English is an international language.（英语是一门国际语言。）",
+      "She can speak three languages.（她会说三门语言。）"
+    ]
+  },
+  {
+    "unit": "Unit 7",
+    "word": "international",
+    "phonetic": "/ˌɪntəˈnæʃnəl/",
+    "partOfSpeech": "adj.",
+    "meaning": "国际的",
+    "wordRootAffix": "前缀“inter-”（在……之间）+ “national”（国家的），“涉及多个国家之间的”",
+    "exampleSentences": [
+      "This is an international school with students from many countries.（这是一所国际学校，有来自很多国家的学生。）",
+      "They held an international meeting in Beijing.（他们在北京举行了一次国际会议。）"
+    ]
+  },
+  {
+    "unit": "Unit 7",
+    "word": "mark",
+    "phonetic": "/mɑːk/",
+    "partOfSpeech": "v. 做记号；纪念；打分；n. 记号",
+    "meaning": "做记号；纪念；打分；记号",
+    "wordRootAffix": "源自古英语“mearc”（边界、记号），无常见词缀，指“留下痕迹或符号”",
+    "exampleSentences": [
+      "She marks the important words with a red pen.（她用红笔给重要的单词做记号。）",
+      "We celebrate this day to mark the founding of our school.（我们庆祝这一天以纪念学校的成立。）"
+    ]
+  },
+  {
+    "unit": "Unit 7",
+    "word": "national",
+    "phonetic": "/ˈnæʃnəl/",
+    "partOfSpeech": "adj.",
+    "meaning": "国家的；民族的",
+    "wordRootAffix": "由“nation”（国家、民族）+ 后缀“-al”（表形容词）构成，“与国家或民族相关的”",
+    "exampleSentences": [
+      "National Day is a big holiday in China.（国庆节是中国的一个重要节日。）",
+      "He is proud of his national culture.（他为自己的民族文化感到自豪。）"
+    ]
+  },
+  {
+    "unit": "Unit 7",
+    "word": "found",
+    "phonetic": "/faʊnd/",
+    "partOfSpeech": "v. （过去式和过去分词同形）",
+    "meaning": "创建；创立",
+    "wordRootAffix": "源自拉丁语“fundare”（建立），词根“fund-”（基础）+ 后缀“-ed”，“打下基础并建立”",
+    "exampleSentences": [
+      "The school was founded in 1990.（这所学校成立于1990年。）",
+      "They founded a charity to help poor children.（他们成立了一个慈善机构来帮助贫困儿童。）"
+    ]
+  },
+  {
+    "unit": "Unit 7",
+    "word": "meaningful",
+    "phonetic": "/ˈmiːnɪŋfl/",
+    "partOfSpeech": "adj.",
+    "meaning": "重要的；重大的",
+    "wordRootAffix": "由“meaning”（意义）+ 后缀“-ful”（表“充满……的”）构成，“充满意义的”",
+    "exampleSentences": [
+      "It was a meaningful experience for her.（这对她来说是一次有意义的经历。）",
+      "We should do something meaningful in our free time.（我们应该在空闲时间做一些有意义的事情。）"
+    ]
+  },
+  {
+    "unit": "Unit 7",
+    "word": "make a wish",
+    "phonetic": "/meɪk ə wɪʃ/",
+    "partOfSpeech": "短语",
+    "meaning": "许愿",
+    "wordRootAffix": "由“make”（许下）+ “a”（一个）+ “wish”（愿望）构成，指“表达内心的愿望”",
+    "exampleSentences": [
+      "She makes a wish before blowing out the birthday candles.（她吹生日蜡烛前许了一个愿。）",
+      "We can make a wish on New Year's Eve.（我们可以在除夕夜许愿。）"
+    ]
+  },
+  {
+    "unit": "Unit 7",
+    "word": "celebration",
+    "phonetic": "/ˌselɪˈbreɪʃn/",
+    "partOfSpeech": "n.",
+    "meaning": "庆典；庆祝（活动）",
+    "wordRootAffix": "由“celebrate”（庆祝）+ 后缀“-ion”（表名词）构成，指“庆祝的活动或仪式”",
+    "exampleSentences": [
+      "There will be a big celebration for the school's 30th anniversary.（学校30周年校庆将有一场盛大的庆典。）",
+      "The celebration starts at 7 o'clock in the evening.（庆祝活动晚上7点开始。）"
+    ]
+  },
+  {
+    "unit": "Unit 7",
+    "word": "post",
+    "phonetic": "/pəʊst/",
+    "partOfSpeech": "n. 帖子；邮政；v. 邮寄；发布",
+    "meaning": "帖子；邮政；邮寄；发布",
+    "wordRootAffix": "源自古英语“post”（柱子、邮政），无常见词缀，指“邮寄行为或网络上的内容”",
+    "exampleSentences": [
+      "She posts a photo of her birthday party on social media.（她在社交媒体上发布了生日派对的照片。）",
+      "I need to post this letter to my friend.（我需要把这封信寄给我的朋友。）"
+    ]
+  },
+  {
+    "unit": "Unit 7",
+    "word": "contact",
+    "phonetic": "/ˈkɒntækt/",
+    "partOfSpeech": "n. 联系；接触；v. 联系；联络",
+    "meaning": "联系；接触；联系；联络",
+    "wordRootAffix": "前缀“con-”（共同）+ 词根“tact-”（接触），“彼此接触或沟通”即“联系”",
+    "exampleSentences": [
+      "Keep in contact with your family when you are away.（你离开时要和家人保持联系。）",
+      "I will contact you as soon as possible.（我会尽快联系你。）"
+    ]
+  },
+  {
+    "unit": "Unit 7",
+    "word": "symbol",
+    "phonetic": "/ˈsɪmbl/",
+    "partOfSpeech": "n.",
+    "meaning": "象征；符号",
+    "wordRootAffix": "源自希腊语“symbolon”（标记），无常见词缀，指“代表其他事物的标志”",
+    "exampleSentences": [
+      "The dove is a symbol of peace.（鸽子是和平的象征。）",
+      "This symbol means “no smoking” in public places.（这个符号表示在公共场所“禁止吸烟”。）"
+    ]
+  },
+  {
+    "unit": "Unit 7",
+    "word": "take a photo",
+    "phonetic": "/teɪk ə ˈfəʊtəʊ/",
+    "partOfSpeech": "短语",
+    "meaning": "拍照",
+    "wordRootAffix": "由“take”（拍摄）+ “a”（一张）+ “photo”（照片）构成，指“拍摄单张照片”",
+    "exampleSentences": [
+      "Can you help me take a photo with the monument?（你能帮我和纪念碑拍张照吗？）",
+      "She takes a lot of photos during her trip.（她旅行期间拍了很多照片。）"
+    ]
+  },
+  {
+    "unit": "Unit 7",
+    "word": "village",
+    "phonetic": "/ˈvɪlɪdʒ/",
+    "partOfSpeech": "n.",
+    "meaning": "村庄；村镇",
+    "wordRootAffix": "源自拉丁语“villa”（别墅、村庄），无常见词缀，指“农村的聚居地”",
+    "exampleSentences": [
+      "He was born in a small village in the countryside.（他出生在农村的一个小村庄。）",
+      "The village is famous for its beautiful scenery.（这个村庄以其美丽的风景而闻名。）"
+    ]
+  },
+  {
+    "unit": "Unit 7",
+    "word": "grow",
+    "phonetic": "/ɡrəʊ/",
+    "partOfSpeech": "v. (过去式 grew /ɡruː/，过去分词 grown /ɡrəʊn/)",
+    "meaning": "成长；长大；增长",
+    "wordRootAffix": "源自古英语“grōwan”，无常见词缀，指“生物体积变大或数量增加”",
+    "exampleSentences": [
+      "Children grow fast when they eat healthy food.（孩子们吃健康食品时长得很快。）",
+      "The population of the city is growing every year.（这个城市的人口每年都在增长。）"
+    ]
+  },
+  {
+    "unit": "Unit 7",
+    "word": "blow",
+    "phonetic": "/bləʊ/",
+    "partOfSpeech": "v. (过去式 blew /bluː/，过去分词 blown /bləʊn/)",
+    "meaning": "吹；刮",
+    "wordRootAffix": "源自古英语“blāwan”，无常见词缀，指“气体流动或用嘴吹气”",
+    "exampleSentences": [
+      "The wind is blowing strongly today.（今天风刮得很大。）",
+      "She blows out all the candles in one breath.（她一口气吹灭了所有的蜡烛。）"
+    ]
+  },
+  {
+    "unit": "Unit 7",
+    "word": "blow out",
+    "phonetic": "/bləʊ aʊt/",
+    "partOfSpeech": "短语",
+    "meaning": "吹灭",
+    "wordRootAffix": "由“blow”（吹）+ “out”（完全地）构成，指“将火焰吹灭”",
+    "exampleSentences": [
+      "He helps his little sister blow out the birthday candles.（他帮妹妹吹灭生日蜡烛。）",
+      "The candle was blown out by the wind.（蜡烛被风吹灭了。）"
+    ]
+  },
+  {
+    "unit": "Unit 7",
+    "word": "enjoy",
+    "phonetic": "/ɪnˈdʒɔɪ/",
+    "partOfSpeech": "v.",
+    "meaning": "享受……的乐趣；喜欢",
+    "wordRootAffix": "前缀“en-”（使）+ 词根“joy”（快乐），“使自己感到快乐”即“享受”",
+    "exampleSentences": [
+      "We enjoy the beautiful music at the concert.（我们在音乐会上享受美妙的音乐。）",
+      "She enjoys reading books in the library.（她喜欢在图书馆看书。）"
+    ]
+  },
+  {
+    "unit": "Unit 7",
+    "word": "height",
+    "phonetic": "/haɪt/",
+    "partOfSpeech": "n.",
+    "meaning": "身高；高度",
+    "wordRootAffix": "由“high”（高的）+ 后缀“-t”（表名词）构成，指“垂直方向的长度或高度”",
+    "exampleSentences": [
+      "What's your height?（你的身高是多少？）",
+      "The height of this building is 100 meters.（这座大楼的高度是100米。）"
+    ]
+  },
+  {
+    "unit": "Unit 7",
+    "word": "later",
+    "phonetic": "/ˈleɪtə(r)/",
+    "partOfSpeech": "adv. & adj.",
+    "meaning": "以后（的）；后来（的）",
+    "wordRootAffix": "由“late”（晚的）+ 后缀“-r”构成，表“时间上在后面的”",
+    "exampleSentences": [
+      "See you later!（回头见！）",
+      "We can discuss this problem later.（我们可以稍后再讨论这个问题。）"
+    ]
+  },
+  {
+    "unit": "Unit 7",
+    "word": "next time",
+    "phonetic": "/nekst taɪm/",
+    "partOfSpeech": "短语",
+    "meaning": "下次",
+    "wordRootAffix": "由“next”（下一个的）+ “time”（时间）构成，指“即将到来的下一次”",
+    "exampleSentences": [
+      "Next time, we will go to the park together.（下次我们一起去公园。）",
+      "I will try my best next time.（下次我会尽力的。）"
+    ]
+  },
+  {
+    "unit": "Unit 7",
+    "word": "whom",
+    "phonetic": "/huːm/",
+    "partOfSpeech": "pron.",
+    "meaning": "谁；什么人",
+    "wordRootAffix": "源自古英语“hwām”，是“who”的宾格形式，无常见词缀，用于指代动作的承受者",
+    "exampleSentences": [
+      "Whom are you talking to on the phone?（你在电话里和谁说话？）",
+      "To whom should I send this letter?（这封信我应该寄给谁？）"
+    ]
+  },
+  {
+    "unit": "Unit 7",
+    "word": "William Shakespeare",
+    "phonetic": "/ˈwɪljəm ˈʃeɪkspɪə(r)/",
+    "partOfSpeech": "n.",
+    "meaning": "[人名] 威廉·莎士比亚",
+    "wordRootAffix": "“William”源自日耳曼语，意为“坚定的保护者”；“Shakespeare”源自英语，意为“震动的长矛”，是英国文艺复兴时期著名剧作家、诗人",
+    "exampleSentences": [
+      "William Shakespeare wrote many famous plays.（威廉·莎士比亚写了很多著名的戏剧。）",
+      "We are learning a poem by William Shakespeare in class.（我们在课堂上学习威廉·莎士比亚的一首诗。）"
+    ]
+  },
+  {
+    "unit": "Unit 7",
+    "word": "Florence Nightingale",
+    "phonetic": "/ˈflɒrəns ˈnaɪtɪŋɡeɪl/",
+    "partOfSpeech": "n.",
+    "meaning": "[人名] 弗洛伦斯·南丁格尔",
+    "wordRootAffix": "“Florence”源自拉丁语，意为“盛开的”；“Nightingale”意为“夜莺”，是现代护理事业的创始人和现代护理教育的奠基人",
+    "exampleSentences": [
+      "Florence Nightingale is known as the “Lady with the Lamp”.（弗洛伦斯·南丁格尔被称为“提灯女神”。）",
+      "We learned about Florence Nightingale's life in history class.（我们在历史课上了解了弗洛伦斯·南丁格尔的生平。）"
+    ]
+  },
+  {
+    "unit": "Unit 7",
+    "word": "National Day",
+    "phonetic": "/ˈnæʃnəl deɪ/",
+    "partOfSpeech": "短语",
+    "meaning": "国庆节",
+    "wordRootAffix": "由“national”（国家的）+ “day”（日子）构成，指国家成立的纪念日，中国国庆节为10月1日",
+    "exampleSentences": [
+      "We have a seven-day holiday on National Day.（我们国庆节有七天假期。）",
+      "People celebrate National Day with fireworks and parades.（人们用烟花和游行庆祝国庆节。）"
+    ]
+  },
+  {
+    "unit": "Unit 7",
+    "word": "CPC Founding Day",
+    "phonetic": "/ˌsiː piː ˈsiː ˈfaʊndɪŋ deɪ/",
+    "partOfSpeech": "短语",
+    "meaning": "中国共产党建党纪念日",
+    "wordRootAffix": "“CPC”是“Communist Party of China”（中国共产党）的缩写，“Founding Day”意为“成立纪念日”，日期为7月1日",
+    "exampleSentences": [
+      "We celebrate CPC Founding Day to honor the party's history.（我们庆祝中国共产党建党纪念日，缅怀党的历史。）",
+      "There are many activities on CPC Founding Day.（中国共产党建党纪念日当天有很多活动。）"
+    ]
+  },
+  {
+    "unit": "Unit 7",
+    "word": "PLA Day",
+    "phonetic": "/ˌpiː el ˈeɪ deɪ/",
+    "partOfSpeech": "短语",
+    "meaning": "中国人民解放军建军节",
+    "wordRootAffix": "“PLA”是“People's Liberation Army”（中国人民解放军）的缩写，“Day”指纪念日，日期为8月1日",
+    "exampleSentences": [
+      "PLA Day is a special day to celebrate the army's founding.（建军节是庆祝军队成立的特殊日子。）",
+      "We should respect soldiers on PLA Day.（建军节当天我们应该向军人致敬。）"
+    ]
+  },
+  {
+    "unit": "Unit 7",
+    "word": "Judy",
+    "phonetic": "/ˈdʒuːdi/",
+    "partOfSpeech": "n.",
+    "meaning": "[女子名] 朱迪",
+    "wordRootAffix": "源自希伯来语“Judith”（朱迪思）的昵称，意为“来自犹太的女人”或“被赞美的”",
+    "exampleSentences": [
+      "Judy is my classmate; she is very friendly.（朱迪是我的同学，她非常友好。）",
+      "Judy invites me to her birthday party.（朱迪邀请我去她的生日派对。）"
+    ]
+  },
+  {
+    "unit": "Unit 7",
+    "word": "Clark",
+    "phonetic": "/klɑːk/",
+    "partOfSpeech": "n.",
+    "meaning": "[姓氏] 克拉克",
+    "wordRootAffix": "源自拉丁语“clericus”（牧师、学者），最初作为职业姓氏，后成为常见英语姓氏",
+    "exampleSentences": [
+      "Mr. Clark is our English teacher.（克拉克先生是我们的英语老师。）",
+      "Clark comes from the United States.（克拉克来自美国。）"
+    ]
+  }
+]

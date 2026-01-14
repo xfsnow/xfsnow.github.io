@@ -1,0 +1,542 @@
+[
+  {
+    "unit": "Unit 6",
+    "word": "when",
+    "phonetic": "/wen/",
+    "partOfSpeech": "adv. & conj.",
+    "meaning": "什么时候；当……的时候",
+    "wordRootAffix": "源自古英语“hwænne”，无常见词根词缀，用于询问时间或引导时间状语从句",
+    "exampleSentences": [
+      "When do you get up every morning?（你每天早上什么时候起床？）",
+      "I was reading a book when he came.（他来的时候我正在看书。）"
+    ]
+  },
+  {
+    "unit": "Unit 6",
+    "word": "get up",
+    "phonetic": "/ɡet ʌp/",
+    "partOfSpeech": "短语",
+    "meaning": "起床；站起",
+    "wordRootAffix": "由“get”（变得）+ “up”（向上）构成，指“从躺卧状态起身”",
+    "exampleSentences": [
+      "I usually get up at 6:30 in the morning.（我通常早上6点半起床。）",
+      "She gets up early to exercise every day.（她每天早起锻炼。）"
+    ]
+  },
+  {
+    "unit": "Unit 6",
+    "word": "go to school",
+    "phonetic": "/ɡəʊ tu skuːl/",
+    "partOfSpeech": "短语",
+    "meaning": "去上学",
+    "wordRootAffix": "由“go”（去）+ “to”（到）+ “school”（学校）构成，指“前往学校上课”",
+    "exampleSentences": [
+      "He goes to school by bike every day.（他每天骑自行车去上学。）",
+      "We go to school at 7:40 in the morning.（我们早上7点40分去上学。）"
+    ]
+  },
+  {
+    "unit": "Unit 6",
+    "word": "have breakfast",
+    "phonetic": "/hæv ˈbrekfəst/",
+    "partOfSpeech": "短语",
+    "meaning": "吃早餐",
+    "wordRootAffix": "由“have”（吃）+ “breakfast”（早餐）构成，指“食用早餐的行为”",
+    "exampleSentences": [
+      "She has breakfast with her family at 7:00.（她7点和家人一起吃早餐。）",
+      "It's important to have breakfast every day.（每天吃早餐很重要。）"
+    ]
+  },
+  {
+    "unit": "Unit 6",
+    "word": "have lunch",
+    "phonetic": "/hæv lʌntʃ/",
+    "partOfSpeech": "短语",
+    "meaning": "吃午餐",
+    "wordRootAffix": "由“have”（吃）+ “lunch”（午餐）构成，指“食用午餐的行为”",
+    "exampleSentences": [
+      "We have lunch at school at 12:00.（我们中午12点在学校吃午餐。）",
+      "My mother brings lunch to me every day.（我妈妈每天给我带午餐。）"
+    ]
+  },
+  {
+    "unit": "Unit 6",
+    "word": "have dinner",
+    "phonetic": "/hæv ˈdɪnə(r)/",
+    "partOfSpeech": "短语",
+    "meaning": "吃晚餐",
+    "wordRootAffix": "由“have”（吃）+ “dinner”（晚餐）构成，指“食用晚餐的行为”",
+    "exampleSentences": [
+      "They have dinner at home in the evening.（他们晚上在家吃晚餐。）",
+      "We often have dinner with grandparents on weekends.（我们周末经常和祖父母一起吃晚餐。）"
+    ]
+  },
+  {
+    "unit": "Unit 6",
+    "word": "go to bed",
+    "phonetic": "/ɡəʊ tu bed/",
+    "partOfSpeech": "短语",
+    "meaning": "上床睡觉",
+    "wordRootAffix": "由“go”（去）+ “to”（到）+ “bed”（床）构成，指“前往床上准备睡觉”",
+    "exampleSentences": [
+      "I go to bed at 9:30 every night.（我每晚9点半上床睡觉。）",
+      "Don't go to bed too late; it's bad for health.（不要睡得太晚，对健康不好。）"
+    ]
+  },
+  {
+    "unit": "Unit 6",
+    "word": "o'clock",
+    "phonetic": "/əˈklɒk/",
+    "partOfSpeech": "adv.",
+    "meaning": "……点钟",
+    "wordRootAffix": "源自“of the clock”的缩写，无常见词根词缀，用于表示整点时间",
+    "exampleSentences": [
+      "The class starts at 8 o'clock in the morning.（早上8点钟开始上课。）",
+      "He arrives home at 6 o'clock in the evening.（他晚上6点钟到家。）"
+    ]
+  },
+  {
+    "unit": "Unit 6",
+    "word": "half",
+    "phonetic": "/hɑːf/",
+    "partOfSpeech": "n. & adj. & adv.",
+    "meaning": "一半；半个；一半的",
+    "wordRootAffix": "源自古英语“healf”，无常见词根词缀，指“整体的二分之一”",
+    "exampleSentences": [
+      "It's half past seven now.（现在是七点半。）",
+      "I eat half an apple every day.（我每天吃半个苹果。）"
+    ]
+  },
+  {
+    "unit": "Unit 6",
+    "word": "past",
+    "phonetic": "/pɑːst/",
+    "partOfSpeech": "prep. & adj. & n.",
+    "meaning": "过；超过；过去的；过去",
+    "wordRootAffix": "源自古法语“passé”，无常见词根词缀，用于时间表达时表“过了某点”",
+    "exampleSentences": [
+      "It's ten past nine.（现在是九点十分。）",
+      "We talked about our past experiences.（我们谈论了过去的经历。）"
+    ]
+  },
+  {
+    "unit": "Unit 6",
+    "word": "quarter",
+    "phonetic": "/ˈkwɔːtə(r)/",
+    "partOfSpeech": "n. & adj. & v.",
+    "meaning": "一刻钟；四分之一；四等分",
+    "wordRootAffix": "源自拉丁语“quartus”（第四），词根“quart-”（四）+ 后缀“-er”，指“六十分钟的四分之一（15分钟）”",
+    "exampleSentences": [
+      "It's a quarter past eight.（现在是八点十五分。）",
+      "She eats a quarter of the cake.（她吃了四分之一的蛋糕。）"
+    ]
+  },
+  {
+    "unit": "Unit 6",
+    "word": "to",
+    "phonetic": "/tuː/",
+    "partOfSpeech": "prep.",
+    "meaning": "差；不到（几点）",
+    "wordRootAffix": "同前序单元，源自古英语“tō”，用于时间表达时表“距离某点还差多少时间”",
+    "exampleSentences": [
+      "It's ten to three.（现在是两点五十分。）",
+      "The train leaves at a quarter to six.（火车五点四十五分出发。）"
+    ]
+  },
+  {
+    "unit": "Unit 6",
+    "word": "time",
+    "phonetic": "/taɪm/",
+    "partOfSpeech": "n. & v.",
+    "meaning": "时间；次数；计时",
+    "wordRootAffix": "源自古英语“tīma”，无常见词根词缀，指“持续的时间段或次数”",
+    "exampleSentences": [
+      "What time is it now?（现在几点了？）",
+      "I go to the park three times a week.（我每周去公园三次。）"
+    ]
+  },
+  {
+    "unit": "Unit 6",
+    "word": "what time",
+    "phonetic": "/wɒt taɪm/",
+    "partOfSpeech": "短语",
+    "meaning": "几点；什么时间",
+    "wordRootAffix": "由“what”（什么）+ “time”（时间）构成，用于询问具体时刻",
+    "exampleSentences": [
+      "What time do you finish school?（你几点放学？）",
+      "What time does the movie start?（电影几点开始？）"
+    ]
+  },
+  {
+    "unit": "Unit 6",
+    "word": "usually",
+    "phonetic": "/ˈjuːʒuəli/",
+    "partOfSpeech": "adv.",
+    "meaning": "通常；一般",
+    "wordRootAffix": "由“usual”（通常的）+ 后缀“-ly”（表副词）构成，表“频率上经常发生”",
+    "exampleSentences": [
+      "He usually goes to school by bus.（他通常坐公交车去上学。）",
+      "I usually do my homework after dinner.（我通常晚饭后做作业。）"
+    ]
+  },
+  {
+    "unit": "Unit 6",
+    "word": "often",
+    "phonetic": "/ˈɒfn; ˈɒftən/",
+    "partOfSpeech": "adv.",
+    "meaning": "经常；常常",
+    "wordRootAffix": "源自古英语“oft”，无常见词根词缀，表“频率较高”",
+    "exampleSentences": [
+      "She often reads books in the evening.（她经常晚上看书。）",
+      "We often play basketball after school.（我们经常放学后打篮球。）"
+    ]
+  },
+  {
+    "unit": "Unit 6",
+    "word": "sometimes",
+    "phonetic": "/ˈsʌmtaɪmz/",
+    "partOfSpeech": "adv.",
+    "meaning": "有时；间或",
+    "wordRootAffix": "由“some”（一些）+ “times”（次数）构成，表“偶尔发生”",
+    "exampleSentences": [
+      "I sometimes go swimming on weekends.（我有时周末去游泳。）",
+      "She sometimes eats out with friends.（她有时和朋友出去吃饭。）"
+    ]
+  },
+  {
+    "unit": "Unit 6",
+    "word": "never",
+    "phonetic": "/ˈnevə(r)/",
+    "partOfSpeech": "adv.",
+    "meaning": "从不；绝不",
+    "wordRootAffix": "源自古英语“nǣfre”，无常见词根词缀，表“频率为零”",
+    "exampleSentences": [
+      "He never eats fast food because it's unhealthy.（他从不吃快餐，因为它不健康。）",
+      "I never go to bed late on school nights.（上学日晚上我从不晚睡。）"
+    ]
+  },
+  {
+    "unit": "Unit 6",
+    "word": "early",
+    "phonetic": "/ˈɜːli/",
+    "partOfSpeech": "adj. & adv.",
+    "meaning": "早的；早地",
+    "wordRootAffix": "源自古英语“ǣrlic”，无常见词根词缀，表“时间上靠前的”",
+    "exampleSentences": [
+      "She is an early bird; she gets up at 6:00.（她是个早起的人，6点起床。）",
+      "We arrive at school early every morning.（我们每天早上很早到达学校。）"
+    ]
+  },
+  {
+    "unit": "Unit 6",
+    "word": "late",
+    "phonetic": "/leɪt/",
+    "partOfSpeech": "adj. & adv.",
+    "meaning": "晚的；迟的；晚地；迟地",
+    "wordRootAffix": "源自古英语“læt”，无常见词根词缀，表“时间上靠后的”",
+    "exampleSentences": [
+      "Don't be late for class.（上课别迟到。）",
+      "He comes home late from work every day.（他每天下班回家很晚。）"
+    ]
+  },
+  {
+    "unit": "Unit 6",
+    "word": "weekday",
+    "phonetic": "/ˈwiːkdeɪ/",
+    "partOfSpeech": "n.",
+    "meaning": "工作日（周一至周五）",
+    "wordRootAffix": "由“week”（星期）+ “day”（日子）构成，指“周一到周五的工作日”",
+    "exampleSentences": [
+      "We have classes on weekdays.（我们工作日有课。）",
+      "He goes to work early on weekdays.（他工作日上班很早。）"
+    ]
+  },
+  {
+    "unit": "Unit 6",
+    "word": "weekend",
+    "phonetic": "/ˌwiːkˈend/",
+    "partOfSpeech": "n.",
+    "meaning": "周末（周六和周日）",
+    "wordRootAffix": "由“week”（星期）+ “end”（结束）构成，指“一周的末尾，即周六和周日”",
+    "exampleSentences": [
+      "I usually relax on weekends.（我通常周末放松。）",
+      "We go hiking with friends on weekends.（我们周末和朋友去徒步旅行。）"
+    ]
+  },
+  {
+    "unit": "Unit 6",
+    "word": "on weekends",
+    "phonetic": "/ɒn ˌwiːkˈendz/",
+    "partOfSpeech": "短语",
+    "meaning": "在周末",
+    "wordRootAffix": "由介词“on”（在……时间）+ “weekends”（周末，复数）构成，表“频率为每周周末”",
+    "exampleSentences": [
+      "She visits her grandparents on weekends.（她周末去看望祖父母。）",
+      "We often watch movies on weekends.（我们经常周末看电影。）"
+    ]
+  },
+  {
+    "unit": "Unit 6",
+    "word": "get",
+    "phonetic": "/ɡet/",
+    "partOfSpeech": "v.",
+    "meaning": "得到；到达；变得",
+    "wordRootAffix": "源自古英语“gietan”，无常见词根词缀，此处侧重“到达”",
+    "exampleSentences": [
+      "When do you get to school?（你什么时候到达学校？）",
+      "I get home at 5:30 in the afternoon.（我下午5点半到家。）"
+    ]
+  },
+  {
+    "unit": "Unit 6",
+    "word": "get to",
+    "phonetic": "/ɡet tuː/",
+    "partOfSpeech": "短语",
+    "meaning": "到达",
+    "wordRootAffix": "由“get”（到达）+ “to”（到）构成，后接地点名词",
+    "exampleSentences": [
+      "How do you get to the library?（你怎么到达图书馆？）",
+      "It takes 20 minutes to get to school.（到达学校需要20分钟。）"
+    ]
+  },
+  {
+    "unit": "Unit 6",
+    "word": "take",
+    "phonetic": "/teɪk/",
+    "partOfSpeech": "v.",
+    "meaning": "拿；取；乘坐；花费",
+    "wordRootAffix": "源自古英语“tacan”，无常见词根词缀，此处侧重“乘坐交通工具”",
+    "exampleSentences": [
+      "I take the bus to school every day.（我每天坐公交车去上学。）",
+      "She takes a taxi to the airport.（她坐出租车去机场。）"
+    ]
+  },
+  {
+    "unit": "Unit 6",
+    "word": "bus",
+    "phonetic": "/bʌs/",
+    "partOfSpeech": "n.",
+    "meaning": "公共汽车；巴士",
+    "wordRootAffix": "源自拉丁语“omnibus”（为所有人的），后缩写为“bus”，指“公共交通工具”",
+    "exampleSentences": [
+      "The bus stop is near my home.（公交车站在我家附近。）",
+      "He waits for the bus at 7:00 every morning.（他每天早上7点等公交车。）"
+    ]
+  },
+  {
+    "unit": "Unit 6",
+    "word": "subway",
+    "phonetic": "/ˈsʌbweɪ/",
+    "partOfSpeech": "n.",
+    "meaning": "地铁",
+    "wordRootAffix": "由“sub-”（地下）+ “way”（道路）构成，“地下的交通道路”即“地铁”",
+    "exampleSentences": [
+      "Taking the subway is fast and convenient.（坐地铁又快又方便。）",
+      "She takes the subway to work every day.（她每天坐地铁上班。）"
+    ]
+  },
+  {
+    "unit": "Unit 6",
+    "word": "train",
+    "phonetic": "/treɪn/",
+    "partOfSpeech": "n. & v.",
+    "meaning": "火车；训练",
+    "wordRootAffix": "源自古法语“train”（拖车），无常见词根词缀，指“长途轨道交通工具”",
+    "exampleSentences": [
+      "We go to Beijing by train.（我们坐火车去北京。）",
+      "The train leaves the station at 9:00.（火车9点离开车站。）"
+    ]
+  },
+  {
+    "unit": "Unit 6",
+    "word": "bike",
+    "phonetic": "/baɪk/",
+    "partOfSpeech": "n. & v.",
+    "meaning": "自行车；骑自行车",
+    "wordRootAffix": "是“bicycle”的缩写，无常见词根词缀，指“两轮脚踏交通工具”",
+    "exampleSentences": [
+      "I ride my bike to school every day.（我每天骑自行车去上学。）",
+      "She buys a new bike for her birthday.（她生日买了一辆新自行车。）"
+    ]
+  },
+  {
+    "unit": "Unit 6",
+    "word": "ride",
+    "phonetic": "/raɪd/",
+    "partOfSpeech": "v. & n.",
+    "meaning": "骑；乘；旅程",
+    "wordRootAffix": "源自古英语“rīdan”，无常见词根词缀，指“乘坐自行车、马等交通工具”",
+    "exampleSentences": [
+      "He rides a bike to the park.（他骑自行车去公园。）",
+      "It's a 10-minute ride from my home to school.（从我家到学校骑车需要10分钟。）"
+    ]
+  },
+  {
+    "unit": "Unit 6",
+    "word": "walk",
+    "phonetic": "/wɔːk/",
+    "partOfSpeech": "v. & n.",
+    "meaning": "走；步行；散步",
+    "wordRootAffix": "源自古英语“wealcan”，无常见词根词缀，指“用脚行走”",
+    "exampleSentences": [
+      "I walk to school because my home is near.（我步行去上学，因为我家很近。）",
+      "We take a walk after dinner every evening.（我们每天晚饭后散步。）"
+    ]
+  },
+  {
+    "unit": "Unit 6",
+    "word": "minute",
+    "phonetic": "/ˈmɪnɪt/",
+    "partOfSpeech": "n.",
+    "meaning": "分钟；一会儿",
+    "wordRootAffix": "源自拉丁语“minutus”（微小的），无常见词根词缀，指“60秒的时间单位”",
+    "exampleSentences": [
+      "It takes 15 minutes to walk to school.（步行到学校需要15分钟。）",
+      "Please wait for me for a minute.（请等我一会儿。）"
+    ]
+  },
+  {
+    "unit": "Unit 6",
+    "word": "hour",
+    "phonetic": "/ˈaʊə(r)/",
+    "partOfSpeech": "n.",
+    "meaning": "小时",
+    "wordRootAffix": "源自拉丁语“hora”（小时），无常见词根词缀，指“60分钟的时间单位”",
+    "exampleSentences": [
+      "The class lasts for one hour.（这节课持续一个小时。）",
+      "He works eight hours a day.（他每天工作八个小时。）"
+    ]
+  },
+  {
+    "unit": "Unit 6",
+    "word": "day",
+    "phonetic": "/deɪ/",
+    "partOfSpeech": "n.",
+    "meaning": "天；日；白天",
+    "wordRootAffix": "同前序单元，源自古英语“dæg”，指“24小时的时间段或白天”",
+    "exampleSentences": [
+      "There are seven days in a week.（一周有七天。）",
+      "It's a beautiful day today.（今天是美好的一天。）"
+    ]
+  },
+  {
+    "unit": "Unit 6",
+    "word": "week",
+    "phonetic": "/wiːk/",
+    "partOfSpeech": "n.",
+    "meaning": "星期；周",
+    "wordRootAffix": "源自古英语“wice”，无常见词根词缀，指“七天为一周的时间单位”",
+    "exampleSentences": [
+      "We have two math classes this week.（我们这周有两节数学课。）",
+      "How many days are there in a week?（一周有多少天？）"
+    ]
+  },
+  {
+    "unit": "Unit 6",
+    "word": "month",
+    "phonetic": "/mʌnθ/",
+    "partOfSpeech": "n.",
+    "meaning": "月；月份",
+    "wordRootAffix": "源自古英语“mōnaþ”，无常见词根词缀，指“月亮绕地球一周的时间（约30天）”",
+    "exampleSentences": [
+      "There are 12 months in a year.（一年有12个月。）",
+      "My birthday is in the third month of the year.（我的生日在一年的第三个月。）"
+    ]
+  },
+  {
+    "unit": "Unit 6",
+    "word": "year",
+    "phonetic": "/jɪə(r); jɜː(r)/",
+    "partOfSpeech": "n.",
+    "meaning": "年；年度",
+    "wordRootAffix": "源自古英语“ġēar”，无常见词根词缀，指“365天（闰年366天）的时间单位”",
+    "exampleSentences": [
+      "We have a summer holiday every year.（我们每年都有暑假。）",
+      "He is 13 years old this year.（他今年13岁了。）"
+    ]
+  },
+  {
+    "unit": "Unit 6",
+    "word": "Monday",
+    "phonetic": "/ˈmʌndeɪ/",
+    "partOfSpeech": "n.",
+    "meaning": "星期一",
+    "wordRootAffix": "源自古英语“Mōnandæg”（月亮日），无常见词根词缀，一周的第一天（部分国家）或第二天",
+    "exampleSentences": [
+      "We have English class on Monday.（我们星期一有英语课。）",
+      "She goes to the library on Monday afternoon.（她星期一下午去图书馆。）"
+    ]
+  },
+  {
+    "unit": "Unit 6",
+    "word": "Tuesday",
+    "phonetic": "/ˈtjuːzdeɪ/",
+    "partOfSpeech": "n.",
+    "meaning": "星期二",
+    "wordRootAffix": "源自古英语“Tīwesdæg”（战神日），无常见词根词缀，一周的第二天（部分国家）或第三天",
+    "exampleSentences": [
+      "He has math class on Tuesday.（他星期二有数学课。）",
+      "We play basketball after school on Tuesday.（我们星期二放学后打篮球。）"
+    ]
+  },
+  {
+    "unit": "Unit 6",
+    "word": "Wednesday",
+    "phonetic": "/ˈwenzdeɪ/",
+    "partOfSpeech": "n.",
+    "meaning": "星期三",
+    "wordRootAffix": "源自古英语“Wōdnesdæg”（奥丁神日），无常见词根词缀，一周的第三天（部分国家）或第四天",
+    "exampleSentences": [
+      "She has music class on Wednesday.（她星期三有音乐课。）",
+      "We have a class meeting on Wednesday afternoon.（我们星期三下午开班会。）"
+    ]
+  },
+  {
+    "unit": "Unit 6",
+    "word": "Thursday",
+    "phonetic": "/ˈθɜːzdeɪ/",
+    "partOfSpeech": "n.",
+    "meaning": "星期四",
+    "wordRootAffix": "源自古英语“Þunresdæg”（雷神日），无常见词根词缀，一周的第四天（部分国家）或第五天",
+    "exampleSentences": [
+      "I have PE class on Thursday.（我星期四有体育课。）",
+      "He goes to the bookstore on Thursday evening.（他星期四晚上去书店。）"
+    ]
+  },
+  {
+    "unit": "Unit 6",
+    "word": "Friday",
+    "phonetic": "/ˈfraɪdeɪ/",
+    "partOfSpeech": "n.",
+    "meaning": "星期五",
+    "wordRootAffix": "源自古英语“Frīgedæg”（爱神日），无常见词根词缀，一周的第五天（部分国家）或第六天",
+    "exampleSentences": [
+      "We have art class on Friday.（我们星期五有美术课。）",
+      "She goes to the cinema with friends on Friday night.（她星期五晚上和朋友去看电影。）"
+    ]
+  },
+  {
+    "unit": "Unit 6",
+    "word": "Saturday",
+    "phonetic": "/ˈsætədeɪ/",
+    "partOfSpeech": "n.",
+    "meaning": "星期六",
+    "wordRootAffix": "源自古英语“Sæturnesdæg”（土星日），无常见词根词缀，一周的第六天（部分国家）或第七天",
+    "exampleSentences": [
+      "I go shopping with my mother on Saturday.（我星期六和妈妈去购物。）",
+      "We have no classes on Saturday and Sunday.（我们星期六和星期天没有课。）"
+    ]
+  },
+  {
+    "unit": "Unit 6",
+    "word": "Sunday",
+    "phonetic": "/ˈsʌndeɪ/",
+    "partOfSpeech": "n.",
+    "meaning": "星期日；星期天",
+    "wordRootAffix": "源自古英语“Sunnandæg”（太阳日），无常见词根词缀，一周的第七天（部分国家）或第一天",
+    "exampleSentences": [
+      "We go to church on Sunday morning.（我们星期天早上去教堂。）",
+      "She visits her grandparents on Sunday afternoon.（她星期天下午去看望祖父母。）"
+    ]
+  }
+]

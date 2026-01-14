@@ -1,0 +1,422 @@
+[
+  {
+    "unit": "Unit 1",
+    "word": "name",
+    "phonetic": "/neɪm/",
+    "partOfSpeech": "n. & v.",
+    "meaning": "名字；命名",
+    "wordRootAffix": "源自古英语“nama”，无常见词根词缀，指“用于识别某人/某物的称呼”",
+    "exampleSentences": [
+      "What's your name?（你叫什么名字？）",
+      "They named their baby Lily.（他们给宝宝取名叫莉莉。）"
+    ]
+  },
+  {
+    "unit": "Unit 1",
+    "word": "nice",
+    "phonetic": "/naɪs/",
+    "partOfSpeech": "adj.",
+    "meaning": "令人愉快的；友好的",
+    "wordRootAffix": "源自古法语“nice”（愚蠢的），后演变为“令人满意的”，无常见词根词缀",
+    "exampleSentences": [
+      "It's nice to meet you.（很高兴见到你。）",
+      "She is a nice girl with a kind heart.（她是个心地善良的好女孩。）"
+    ]
+  },
+  {
+    "unit": "Unit 1",
+    "word": "to",
+    "phonetic": "/tuː; tə/",
+    "partOfSpeech": "prep. & inf. marker",
+    "meaning": "到；向；朝；不定式符号",
+    "wordRootAffix": "源自古英语“tō”，无常见词根词缀，介词表方向，不定式符号后接动词原形",
+    "exampleSentences": [
+      "I go to school by bike.（我骑自行车去上学。）",
+      "She wants to learn English well.（她想学好英语。）"
+    ]
+  },
+  {
+    "unit": "Unit 1",
+    "word": "meet",
+    "phonetic": "/miːt/",
+    "partOfSpeech": "v.",
+    "meaning": "遇见；相逢",
+    "wordRootAffix": "源自古英语“metan”，无常见词根词缀，指“偶然或计划中与某人见面”",
+    "exampleSentences": [
+      "I meet my friend at the park every weekend.（我每周在公园和朋友见面。）",
+      "We met for the first time in 2023.（我们2023年第一次见面。）"
+    ]
+  },
+  {
+    "unit": "Unit 1",
+    "word": "too",
+    "phonetic": "/tuː/",
+    "partOfSpeech": "adv.",
+    "meaning": "也；又；太",
+    "wordRootAffix": "源自古英语“tō”，与介词“to”同源，无词根词缀，用于句末表“也”，修饰形容词表“太”",
+    "exampleSentences": [
+      "I like music, and she likes it too.（我喜欢音乐，她也喜欢。）",
+      "This dress is too big for me.（这条裙子对我来说太大了。）"
+    ]
+  },
+  {
+    "unit": "Unit 1",
+    "word": "your",
+    "phonetic": "/jɔː(r); jʊə(r)/",
+    "partOfSpeech": "pron.",
+    "meaning": "你的；你们的",
+    "wordRootAffix": "源自古英语“ēower”，形容词性物主代词，修饰名词，无词根词缀",
+    "exampleSentences": [
+      "What's your favorite subject?（你最喜欢的科目是什么？）",
+      "Your books are on the desk.（你们的书在桌子上。）"
+    ]
+  },
+  {
+    "unit": "Unit 1",
+    "word": "Ms.",
+    "phonetic": "/mɪz/",
+    "partOfSpeech": "n.",
+    "meaning": "女士（对婚姻状况不明的女性的称呼）",
+    "wordRootAffix": "源自“Miss”和“Mrs.”的合并形式，无词根词缀，礼貌称呼女性",
+    "exampleSentences": [
+      "Ms. Wang is our math teacher.（王女士是我们的数学老师。）",
+      "Can I ask Ms. Lee a question?（我能问李女士一个问题吗？）"
+    ]
+  },
+  {
+    "unit": "Unit 1",
+    "word": "his",
+    "phonetic": "/hɪz/",
+    "partOfSpeech": "pron.",
+    "meaning": "他的",
+    "wordRootAffix": "源自古英语“his”，形容词性/名词性物主代词，无词根词缀",
+    "exampleSentences": [
+      "His name is Tom.（他的名字叫汤姆。）",
+      "This is his pen; mine is blue.（这是他的钢笔，我的是蓝色的。）"
+    ]
+  },
+  {
+    "unit": "Unit 1",
+    "word": "and",
+    "phonetic": "/ænd; ən/",
+    "partOfSpeech": "conj.",
+    "meaning": "和；又；而且",
+    "wordRootAffix": "同Starter Unit 3，源自古英语“and”，并列连词",
+    "exampleSentences": [
+      "He is tall and strong.（他又高又壮。）",
+      "I have a pen and a notebook.（我有一支钢笔和一个笔记本。）"
+    ]
+  },
+  {
+    "unit": "Unit 1",
+    "word": "her",
+    "phonetic": "/hɜː(r); hə(r)/",
+    "partOfSpeech": "pron.",
+    "meaning": "她的；她（宾格）",
+    "wordRootAffix": "源自古英语“hire”，形容词性物主代词（修饰名词）或宾格代词（作宾语），无词根词缀",
+    "exampleSentences": [
+      "Her hair is long and black.（她的头发又长又黑。）",
+      "I gave her a birthday present.（我给了她一份生日礼物。）"
+    ]
+  },
+  {
+    "unit": "Unit 1",
+    "word": "yes",
+    "phonetic": "/jes/",
+    "partOfSpeech": "interj.",
+    "meaning": "是的；对",
+    "wordRootAffix": "源自古英语“gēa”，无常见词根词缀，用于肯定回答",
+    "exampleSentences": [
+      "Yes, I am a student.（是的，我是一名学生。）",
+      "Are you coming? Yes, I am.（你要来吗？是的，我来。）"
+    ]
+  },
+  {
+    "unit": "Unit 1",
+    "word": "she",
+    "phonetic": "/ʃiː/",
+    "partOfSpeech": "pron.",
+    "meaning": "她",
+    "wordRootAffix": "源自古英语“scēo”，主格代词，指代女性，无词根词缀",
+    "exampleSentences": [
+      "She is my sister.（她是我的姐姐。）",
+      "She likes reading books in the library.（她喜欢在图书馆看书。）"
+    ]
+  },
+  {
+    "unit": "Unit 1",
+    "word": "he",
+    "phonetic": "/hiː/",
+    "partOfSpeech": "pron.",
+    "meaning": "他",
+    "wordRootAffix": "源自古英语“hē”，主格代词，指代男性，无词根词缀",
+    "exampleSentences": [
+      "He plays basketball very well.（他篮球打得很好。）",
+      "Is he your brother? Yes, he is.（他是你哥哥吗？是的，他是。）"
+    ]
+  },
+  {
+    "unit": "Unit 1",
+    "word": "no",
+    "phonetic": "/nəʊ/",
+    "partOfSpeech": "interj. & adj.",
+    "meaning": "不；没有",
+    "wordRootAffix": "源自古英语“nā”，无常见词根词缀，用于否定回答或修饰名词表“没有”",
+    "exampleSentences": [
+      "No, I don't like coffee.（不，我不喜欢咖啡。）",
+      "There are no books on the table.（桌子上没有书。）"
+    ]
+  },
+  {
+    "unit": "Unit 1",
+    "word": "not",
+    "phonetic": "/nɒt; nɑːt/",
+    "partOfSpeech": "adv.",
+    "meaning": "不；没有",
+    "wordRootAffix": "源自古英语“nāwiht”（nothing）的缩写，否定副词，修饰动词、形容词等",
+    "exampleSentences": [
+      "I am not a teacher.（我不是一名老师。）",
+      "She does not want to go out.（她不想出去。）"
+    ]
+  },
+  {
+    "unit": "Unit 1",
+    "word": "zero",
+    "phonetic": "/ˈzɪərəʊ; ˈzɪroʊ/",
+    "partOfSpeech": "num.",
+    "meaning": "零",
+    "wordRootAffix": "源自拉丁语“nullus”（没有），无常见词根词缀，数字0的英文表达",
+    "exampleSentences": [
+      "The temperature is zero degrees today.（今天气温是零度。）",
+      "He has zero experience in cooking.（他没有烹饪经验。）"
+    ]
+  },
+  {
+    "unit": "Unit 1",
+    "word": "one",
+    "phonetic": "/wʌn/",
+    "partOfSpeech": "num. & pron.",
+    "meaning": "一；一个",
+    "wordRootAffix": "源自古英语“ān”，数字1，也可作代词指代单数事物",
+    "exampleSentences": [
+      "I have one apple and two bananas.（我有一个苹果和两个香蕉。）",
+      "One of my friends is from Beijing.（我的一个朋友来自北京。）"
+    ]
+  },
+  {
+    "unit": "Unit 1",
+    "word": "two",
+    "phonetic": "/tuː/",
+    "partOfSpeech": "num.",
+    "meaning": "二",
+    "wordRootAffix": "源自古英语“twā”，无常见词根词缀，数字2的英文表达",
+    "exampleSentences": [
+      "She has two brothers and one sister.（她有两个哥哥和一个妹妹。）",
+      "It takes two hours to finish the homework.（完成作业需要两个小时。）"
+    ]
+  },
+  {
+    "unit": "Unit 1",
+    "word": "three",
+    "phonetic": "/θriː/",
+    "partOfSpeech": "num.",
+    "meaning": "三",
+    "wordRootAffix": "源自古英语“þrīe”，无常见词根词缀，数字3的英文表达",
+    "exampleSentences": [
+      "There are three people in my family.（我家有三口人。）",
+      "We will meet at three o'clock this afternoon.（我们今天下午三点见面。）"
+    ]
+  },
+  {
+    "unit": "Unit 1",
+    "word": "four",
+    "phonetic": "/fɔː(r)/",
+    "partOfSpeech": "num.",
+    "meaning": "四",
+    "wordRootAffix": "源自古英语“fēower”，无常见词根词缀，数字4的英文表达",
+    "exampleSentences": [
+      "He is four years old.（他四岁了。）",
+      "The bus number is four.（公交车是4路。）"
+    ]
+  },
+  {
+    "unit": "Unit 1",
+    "word": "five",
+    "phonetic": "/faɪv/",
+    "partOfSpeech": "num.",
+    "meaning": "五",
+    "wordRootAffix": "源自古英语“fīf”，无常见词根词缀，数字5的英文表达",
+    "exampleSentences": [
+      "I have five pencils in my pencil case.（我的铅笔盒里有五支铅笔。）",
+      "The class starts at five past eight.（八点零五分上课。）"
+    ]
+  },
+  {
+    "unit": "Unit 1",
+    "word": "six",
+    "phonetic": "/sɪks/",
+    "partOfSpeech": "num.",
+    "meaning": "六",
+    "wordRootAffix": "源自古英语“siex”，无常见词根词缀，数字6的英文表达",
+    "exampleSentences": [
+      "She gets up at six every morning.（她每天早上六点起床。）",
+      "There are six windows in the classroom.（教室里有六扇窗户。）"
+    ]
+  },
+  {
+    "unit": "Unit 1",
+    "word": "seven",
+    "phonetic": "/ˈsevən/",
+    "partOfSpeech": "num.",
+    "meaning": "七",
+    "wordRootAffix": "源自古英语“seofon”，无常见词根词缀，数字7的英文表达",
+    "exampleSentences": [
+      "My favorite number is seven.（我最喜欢的数字是七。）",
+      "We have seven classes a day.（我们一天有七节课。）"
+    ]
+  },
+  {
+    "unit": "Unit 1",
+    "word": "eight",
+    "phonetic": "/eɪt/",
+    "partOfSpeech": "num.",
+    "meaning": "八",
+    "wordRootAffix": "源自古英语“eahta”，无常见词根词缀，数字8的英文表达",
+    "exampleSentences": [
+      "He is eight years old and goes to primary school.（他八岁了，上小学。）",
+      "The cake has eight candles.（蛋糕上有八根蜡烛。）"
+    ]
+  },
+  {
+    "unit": "Unit 1",
+    "word": "nine",
+    "phonetic": "/naɪn/",
+    "partOfSpeech": "num.",
+    "meaning": "九",
+    "wordRootAffix": "源自古英语“niġon”，无常见词根词缀，数字9的英文表达",
+    "exampleSentences": [
+      "There are nine students in the group.（小组里有九名学生。）",
+      "The shop closes at nine in the evening.（商店晚上九点关门。）"
+    ]
+  },
+  {
+    "unit": "Unit 1",
+    "word": "telephone",
+    "phonetic": "/ˈtelɪfəʊn/",
+    "partOfSpeech": "n. & v.",
+    "meaning": "电话；打电话",
+    "wordRootAffix": "前缀“tele-”（远距离）+ “phone”（声音），“远距离传递声音的设备”",
+    "exampleSentences": [
+      "What's your telephone number?（你的电话号码是多少？）",
+      "I will telephone you tomorrow morning.（我明天早上给你打电话。）"
+    ]
+  },
+  {
+    "unit": "Unit 1",
+    "word": "number",
+    "phonetic": "/ˈnʌmbə(r)/",
+    "partOfSpeech": "n.",
+    "meaning": "数字；号码",
+    "wordRootAffix": "源自拉丁语“numerus”，词根“numer-”（数量）+ 后缀“-er”，指“表示数量的符号”",
+    "exampleSentences": [
+      "My phone number is 138xxxx5678.（我的电话号码是138xxxx5678。）",
+      "Please write down your student number.（请写下你的学号。）"
+    ]
+  },
+  {
+    "unit": "Unit 1",
+    "word": "phone",
+    "phonetic": "/fəʊn/",
+    "partOfSpeech": "n. & v.",
+    "meaning": "电话；打电话",
+    "wordRootAffix": "是“telephone”的缩写，无额外词根词缀",
+    "exampleSentences": [
+      "Call me on my phone if you need help.（需要帮助的话给我打电话。）",
+      "She phones her parents every weekend.（她每周给父母打电话。）"
+    ]
+  },
+  {
+    "unit": "Unit 1",
+    "word": "phone number",
+    "phonetic": "/fəʊn ˈnʌmbə(r)/",
+    "partOfSpeech": "短语",
+    "meaning": "电话号码",
+    "wordRootAffix": "由“phone”（电话）+ “number”（号码）构成，指“用于拨打的数字组合”",
+    "exampleSentences": [
+      "Can you tell me your phone number?（你能告诉我你的电话号码吗？）",
+      "I lost his phone number and can't contact him.（我弄丢了他的电话号码，联系不上他了。）"
+    ]
+  },
+  {
+    "unit": "Unit 1",
+    "word": "first",
+    "phonetic": "/fɜːst/",
+    "partOfSpeech": "adj. & adv. & num.",
+    "meaning": "第一；首先；最初的",
+    "wordRootAffix": "源自古英语“fyrst”，无常见词根词缀，表“顺序或时间上的第一个”",
+    "exampleSentences": [
+      "My first name is Mary.（我的名字叫玛丽。）",
+      "First, open the book. Then, read the text.（首先，打开书。然后，读课文。）"
+    ]
+  },
+  {
+    "unit": "Unit 1",
+    "word": "first name",
+    "phonetic": "/fɜːst neɪm/",
+    "partOfSpeech": "短语",
+    "meaning": "名字（西方人名的第一个字）",
+    "wordRootAffix": "由“first”（第一）+ “name”（名字）构成，指“姓名中位于前面的部分”",
+    "exampleSentences": [
+      "His first name is John, and his last name is Smith.（他的名字叫约翰，姓氏叫史密斯。）",
+      "What's her first name?（她的名字是什么？）"
+    ]
+  },
+  {
+    "unit": "Unit 1",
+    "word": "last",
+    "phonetic": "/lɑːst/",
+    "partOfSpeech": "adj. & adv. & v.",
+    "meaning": "最后的；最后；持续",
+    "wordRootAffix": "源自古英语“læst”，无常见词根词缀，表“顺序或时间上的最后一个”",
+    "exampleSentences": [
+      "This is the last day of our trip.（这是我们旅行的最后一天。）",
+      "He came last in the race.（他在比赛中得了最后一名。）"
+    ]
+  },
+  {
+    "unit": "Unit 1",
+    "word": "last name",
+    "phonetic": "/lɑːst neɪm/",
+    "partOfSpeech": "短语",
+    "meaning": "姓氏（西方人名的最后一个字）",
+    "wordRootAffix": "由“last”（最后的）+ “name”（名字）构成，指“姓名中位于后面的部分”",
+    "exampleSentences": [
+      "Her last name is Brown.（她的姓氏是布朗。）",
+      "How do you spell your last name?（你的姓氏怎么拼写？）"
+    ]
+  },
+  {
+    "unit": "Unit 1",
+    "word": "friend",
+    "phonetic": "/frend/",
+    "partOfSpeech": "n.",
+    "meaning": "朋友",
+    "wordRootAffix": "源自古英语“frēond”，无常见词根词缀，指“彼此有好感并经常来往的人”",
+    "exampleSentences": [
+      "She is my best friend.（她是我最好的朋友。）",
+      "We have been friends for five years.（我们做朋友五年了。）"
+    ]
+  },
+  {
+    "unit": "Unit 1",
+    "word": "China",
+    "phonetic": "/ˈtʃaɪnə/",
+    "partOfSpeech": "n.",
+    "meaning": "中国",
+    "wordRootAffix": "源自梵语“Cīna”，无英语词根词缀，指“亚洲东部的国家”",
+    "exampleSentences": [
+      "I am from China.（我来自中国。）",
+      "China is a great country with a long history.（中国是一个有着悠久历史的伟大国家。）"
+    ]
+  }
+]
