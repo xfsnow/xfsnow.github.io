@@ -639,7 +639,7 @@ class BlogMaker:
         self.make_home()
 
         # 生成关于页面
-        # self.make_about()
+        self.make_about()
 
         # 生成文章页面
         self.make_article()
@@ -652,8 +652,8 @@ class BlogMaker:
 
 
 if __name__ == "__main__":
-    # blog_maker = BlogMaker('zh')
-    # blog_maker.main()
+    blog_maker = BlogMaker('zh')
+    blog_maker.main()
     # blog_maker.clearDuplicate()
 
     blog_maker = BlogMaker('en')

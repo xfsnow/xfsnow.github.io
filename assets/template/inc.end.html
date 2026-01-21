@@ -65,6 +65,16 @@
     <script src="/{{ data.lang.lang }}/index.js"></script>
     <script src="/assets/js/blog.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/highlight.min.js"></script>
-    <script>hljs.highlightAll();</script>
+<script>hljs.highlightAll();
+if (window.location.hostname === 'www.snowpeak.org') {
+  const script = document.createElement('script');
+  script.defer = true;
+  script.src = 'https://static.cloudflareinsights.com/beacon.min.js';
+  script.dataset.cfBeacon = JSON.stringify({
+    "token": "4c2c021185e64942857a36d116eb4711"
+  });
+  document.head.appendChild(script);
+}    
+</script>
 </body>
 </html>
