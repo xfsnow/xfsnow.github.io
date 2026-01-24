@@ -1,0 +1,25 @@
+<svg width="600" height="550" viewBox="0 -150 600 500" xmlns="http://www.w3.org/2000/svg">
+  <path d="M150 42.36 L50 180 L573.6 180" fill="none" stroke="black" stroke-width="2" />
+  <line x1="150" y1="42.36" x2="150" y2="180" stroke="black" stroke-width="2" />
+  <line x1="150" y1="42.36" x2="105.28" y2="180" stroke="blue" stroke-width="1.5" />
+  <line x1="150" y1="42.36" x2="573.6" y2="180" stroke="blue" stroke-width="1.5" />
+  <text x="132" y="45" font-family="Arial" font-size="16">A</text>
+  <text x="35" y="195" font-family="Arial" font-size="16">B</text>
+  <text x="132" y="200" font-family="Arial" font-size="16">C</text>
+  
+  <line x1="150" y1="180" x2="150" y2="317.64" stroke="black" stroke-width="1.2" stroke-dasharray="4" />
+  <line x1="150" y1="42.36" x2="150" y2="-127.77" stroke="black" stroke-width="1.2" stroke-dasharray="4" />
+  <line x1="573.6" y1="180" x2="150" y2="317.64" stroke="black" stroke-width="1.2" stroke-dasharray="4" />
+  <line x1="573.6" y1="180" x2="150" y2="-127.77" stroke="black" stroke-width="1.2" stroke-dasharray="4" />
+
+  <polyline points="140,180 140,170 150,170" fill="none" stroke="black" stroke-width="1" />
+  <g transform="translate(150, 42.36) rotate(18)">
+  <polyline points="0,10 10,10 10,0" fill="none" stroke="blue" stroke-width="1" />
+  </g>
+
+
+  <text x="100" y="200" font-family="Arial" font-size="16" fill="blue">D</text>
+  <text x="575" y="195" font-family="Arial" font-size="16" fill="blue">E</text>
+  <text x="130" y="315" font-family="Arial" font-size="16" fill="black">F</text>
+  <text x="130" y="-115" font-family="Arial" font-size="16" fill="black">G</text>
+</svg>

@@ -1,0 +1,9 @@
+<svg width="200" height="220" viewBox="0 0 200 220" xmlns="http://www.w3.org/2000/svg">
+  <path d="M150 42.36 L50 180 L150 180 Z" fill="none" stroke="black" stroke-width="2" />
+  
+  <polyline points="140,180 140,170 150,170" fill="none" stroke="black" stroke-width="1" />
+
+  <text x="145" y="35" font-family="Arial" font-size="16">A</text>
+  <text x="35" y="195" font-family="Arial" font-size="16">B</text>
+  <text x="155" y="195" font-family="Arial" font-size="16">C</text>
+</svg>
