@@ -38,7 +38,7 @@
             "id": "maths",
             "title": "Maths Questions Bank",
             "description": "Records and displays maths questions using LaTex",
-            "url": "../math_question/math_question.htm",
+            "url": "../math_question/",
             "icon": "fas fa-calculator"
         }
 ]
