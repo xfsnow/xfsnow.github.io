@@ -1,0 +1,26 @@
+<svg width="500" height="500" viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg">
+  <rect width="100%" height="100%" fill="#ffffff" />
+
+  <polygon points="250,100 76.8,200 423.2,200" fill="none" stroke="#333" stroke-width="2" />
+
+  <line x1="250" y1="100" x2="250" y2="350" stroke="#000" stroke-width="2" />
+
+  <line x1="423.2" y1="200" x2="250" y2="350" stroke="#000" stroke-width="2" />
+
+  <line x1="250" y1="350" x2="170.1" y2="146.2" stroke="#000" stroke-width="2" />
+
+  <line x1="423.2" y1="200" x2="170.1" y2="146.2" stroke="#000" stroke-width="2" />
+
+  <line x1="170.1" y1="146.2" x2="250" y2="192.4" stroke="#666" stroke-width="2" stroke-dasharray="5,5" />
+
+  <text x="242" y="90" font-family="serif" font-size="20" font-style="italic">A</text>
+  <text x="55" y="210" font-family="serif" font-size="20" font-style="italic">B</text>
+  <text x="430" y="210" font-family="serif" font-size="20" font-style="italic">C</text>
+  <text x="255" y="215" font-family="serif" font-size="20" font-style="italic">D</text>
+  <text x="242" y="375" font-family="serif" font-size="20" font-style="italic">E</text>
+  <text x="145" y="145" font-family="serif" font-size="20" font-style="italic">F</text>
+  <text x="255" y="185" font-family="serif" font-size="20" font-style="italic">G</text>
+
+  <path d="M 270,332 A 30,30 0 0 0 240,325" fill="none" stroke="orange" stroke-width="2" />
+  <text x="265" y="320" font-size="12" fill="orange">60°</text>
+</svg>

@@ -1,0 +1,29 @@
+<svg viewBox="-50 -10 110 70" xmlns="http://www.w3.org/2000/svg">
+  <line x1="-50" y1="50" x2="50" y2="50" stroke="black" stroke-width="0.5"/>
+  <line x1="0" y1="60" x2="0" y2="0" stroke="black" stroke-width="0.5"/>
+
+  <text x="-42" y="58" font-size="4">-4</text>
+  <text x="38" y="58" font-size="4">4</text>
+  <text x="2" y="54" font-size="4">O</text>
+  <text x="2" y="12" font-size="4">4</text>
+
+  <polygon points="-40,50 40,50 0,10" fill="none" stroke="#666" stroke-width="0.4" stroke-dasharray="2" />
+  <text x="-46" y="54" font-size="4" font-weight="bold">A</text>
+  <text x="42" y="54" font-size="4" font-weight="bold">B</text>
+  <text x="1" y="8" font-size="4" font-weight="bold">C</text>
+
+  <circle cx="14.6" cy="35.4" r="1" fill="blue" />
+  <text x="17" y="35" font-size="4" fill="blue" font-weight="bold">P</text>
+
+  <line x1="-40" y1="50" x2="14.6" y2="35.4" stroke="blue" stroke-width="0.6" />
+  <line x1="0" y1="10" x2="14.6" y2="35.4" stroke="blue" stroke-width="0.6" />
+
+  <line x1="-21" y1="29" x2="-19" y2="31" stroke="red" stroke-width="0.5" />
+  <line x1="-13" y1="41" x2="-12" y2="44" stroke="red" stroke-width="0.5" />
+
+  <path d="M -30 50 A 10 10 0 0 0 -30.3 47.3" fill="none" stroke="orange" stroke-width="0.6" />
+  <text x="-28" y="47" font-size="3" fill="orange">15°</text>
+
+  <path d="M 2.8 12.8 A 4 4 0 0 1 1.2 13.9" fill="none" stroke="orange" stroke-width="0.6" />
+  <text x="4" y="17" font-size="3" fill="orange">15°</text>
+</svg>

@@ -1,0 +1,22 @@
+<svg viewBox="-50 -10 100 70" xmlns="http://www.w3.org/2000/svg">
+  <line x1="-50" y1="50" x2="50" y2="50" stroke="#ddd" stroke-width="0.3"/>
+  <line x1="0" y1="60" x2="0" y2="0" stroke="#ddd" stroke-width="0.3"/>
+
+  <polygon points="-40,50 40,50 0,10" fill="#f5f5f5" stroke="black" stroke-width="0.4" />
+  <text x="-46" y="54" font-size="4" font-weight="bold">A</text>
+  <text x="35" y="54" font-size="4" font-weight="bold">B</text>
+  <text x="1" y="8" font-size="4" font-weight="bold">C</text>
+
+  <line x1="0" y1="50" x2="0" y2="10" stroke="#FFD700" stroke-width="0.6" />
+
+  <line x1="0" y1="50" x2="-20" y2="30" stroke="#32CD32" stroke-width="0.6" />
+
+  <path d="M 16.5685,50 A 56.5 56.5 0 0 0 12.9 30" fill="none" stroke="#8A2BE2" stroke-width="0.6" />
+
+  <line x1="-35" y1="35" x2="35" y2="35" stroke="black" stroke-width="0.5" />
+  <text x="24" y="33" font-size="3.5" fill="black">l (y=m)</text>
+
+  <circle cx="0" cy="35" r="1" fill="black" />
+  <circle cx="-15" cy="35" r="1" fill="black" />
+  <circle cx="15.2" cy="35" r="1" fill="black" />
+</svg>

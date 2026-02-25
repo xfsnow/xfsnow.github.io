@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>几何证明：BE=AE+CE</title>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #333;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        h2 {
+            color: #555;
+            margin-top: 25px;
+            margin-bottom: 15px;
+        }
+        p {
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+        ul {
+            margin-left: 20px;
+            margin-bottom: 20px;
+        }
+        li {
+            margin-bottom: 8px;
+        }
+        .proof {
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-left: 4px solid #3498db;
+            margin: 20px 0;
+            border-radius: 0 8px 8px 0;
+        }
+        .align-center {
+            text-align: center;
+        }
+        .formula {
+            margin: 15px 0;
+            padding: 10px;
+            background-color: #f0f8ff;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>几何证明：BE=AE+CE</h1>
+        
+        <h2>已知条件</h2>
+        <ul>
+            <li>△ABC 是等边三角形，A 在最上面，B 在左侧，C 在左下</li>
+            <li>AP 平行于画布纵向边（垂直方向）</li>
+            <li>D 是点 C 关于 AP 的对称点</li>
+            <li>E 是 BD 与 AP 的交点</li>
+        </ul>
+        
+        <h2>证明过程</h2>
+        <div class="proof">
+            <p>因为 D 是点 C 关于 AP 的对称点，所以 AP 是线段 CD 的垂直平分线。</p>
+            
+            <p>因此，AC = AD，CE = DE（垂直平分线上的点到线段两端的距离相等）。</p>
+            
+            <p>又因为 △ABC 是等边三角形，所以 AB = AC = BC。</p>
+            
+            <p>由 AC = AD 和 AB = AC 可得 AB = AD，即 △ABD 是等腰三角形。</p>
+            
+            <p>现在，我们将 △ACE 绕点 A 逆时针旋转 60°，得到 △ABF。</p>
+            
+            <p>因为 △ABC 是等边三角形，所以旋转 60° 后，AC 会与 AB 重合。</p>
+            
+            <p>因此，△ABF ≌ △ACE（旋转全等）。</p>
+            
+            <p>所以，BF = CE，AF = AE，∠BAF = ∠CAE。</p>
+            
+            <p>又因为 ∠BAC = 60°，所以 ∠FAE = ∠BAC = 60°。</p>
+            
+            <p>因此，△AFE 是等边三角形（因为 AF = AE，∠FAE = 60°）。</p>
+            
+            <p>所以，FE = AE。</p>
+            
+            <p>现在，我们需要证明点 F 在 BE 上。</p>
+            
+            <p>因为 ∠ABF = ∠ACE，而 ∠ACE = ∠ADE（因为 AP 是对称轴）。</p>
+            
+            <p>又因为 △ABD 是等腰三角形，所以 ∠ABD = ∠ADE。</p>
+            
+            <p>因此，∠ABF = ∠ABD，所以点 F 在 BE 上。</p>
+            
+            <p>因此，BE = BF + FE = CE + AE。</p>
+            
+            <p class="align-center">证毕。</p>
+        </div>
+    </div>
+</body>
+</html>

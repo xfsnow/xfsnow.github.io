@@ -1,0 +1,30 @@
+<svg width="500" height="400" viewBox="0 0 500 400" xmlns="http://www.w3.org/2000/svg">
+  <!-- 绘制白色背景 -->
+  <rect width="100%" height="100%" fill="#ffffff" />
+  
+  <!-- 绘制等边三角形ABC（以A点为圆心顺时针旋转20度） -->
+  <polygon points="250,100 53.03,134.73 181.60,287.96" fill="none" stroke="black" stroke-width="2"/>
+  
+  <!-- 绘制顶点标签 -->
+  <text x="250" y="90" text-anchor="middle" font-size="14" font-family="serif" font-style="italic">A</text>
+  <text x="38" y="130" text-anchor="middle" font-size="14" font-family="serif" font-style="italic">B</text>
+  <text x="166" y="288" text-anchor="middle" font-size="14" font-family="serif" font-style="italic">C</text>
+  
+  <!-- 绘制直线AP，平行于画布纵向边（垂直方向） -->
+  <line x1="250" y1="100" x2="250" y2="350" stroke="black" stroke-width="2"/>
+  
+  <!-- 绘制点P标签 -->
+  <text x="255" y="360" text-anchor="middle" font-size="14" font-family="serif" font-style="italic">P</text>
+  
+  <!-- 绘制点C关于AP的对称点D -->
+  <circle cx="318.40" cy="287.96" r="3" fill="black"/>
+  <text x="333" y="292" text-anchor="middle" font-size="14" font-family="serif" font-style="italic">D</text>
+  
+  <!-- 连接AD和BD -->
+  <line x1="250" y1="100" x2="318.40" y2="287.96" stroke="black" stroke-width="2"/>
+  <line x1="53.03" y1="134.73" x2="318.40" y2="287.96" stroke="black" stroke-width="2"/>
+  
+  <!-- 找到BD与AP的交点E -->
+  <circle cx="250" cy="248.38" r="3" fill="black"/>
+  <text x="260" y="240" text-anchor="middle" font-size="14" font-family="serif" font-style="italic">E</text>
+</svg>

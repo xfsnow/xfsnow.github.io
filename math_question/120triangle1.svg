@@ -1,0 +1,21 @@
+<svg width="500" height="400" viewBox="0 0 500 400" xmlns="http://www.w3.org/2000/svg">
+  <rect width="100%" height="100%" fill="#ffffff" />
+
+  <line x1="76.8" y1="250" x2="353.9" y2="90" stroke="#000" stroke-width="2" />
+
+  <line x1="250" y1="150" x2="423.2" y2="250" stroke="#000" stroke-width="2" />
+  <line x1="76.8" y1="250" x2="423.2" y2="250" stroke="#000" stroke-width="2" />
+
+  <line x1="250" y1="150" x2="250" y2="250" stroke="#000" stroke-width="2" />
+
+  <line x1="423.2" y1="250" x2="250" y2="230" stroke="#000" stroke-width="2" />
+
+  <line x1="250" y1="230" x2="353.9" y2="90" stroke="#000" stroke-width="2" />
+
+  <text x="240" y="140" font-family="serif" font-size="20" font-style="italic">A</text>
+  <text x="55" y="265" font-family="serif" font-size="20" font-style="italic">B</text>
+  <text x="430" y="265" font-family="serif" font-size="20" font-style="italic">C</text>
+  <text x="242" y="275" font-family="serif" font-size="20" font-style="italic">D</text>
+  <text x="225" y="235" font-family="serif" font-size="20" font-style="italic">E</text>
+  <text x="360" y="85" font-family="serif" font-size="20" font-style="italic">F</text>
+</svg>
