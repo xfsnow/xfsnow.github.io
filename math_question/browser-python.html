@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>浏览器端Python运行环境</title>
+    <title>浏览器端 Python 运行环境</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
-    <!-- 添加Google Fonts中的中文字体支持 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <!-- 添加 Google Fonts 中的中文字体支持 -->
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
     
-    <!-- 配置Tailwind -->
+    <!-- 配置 Tailwind -->
     <script>
         tailwind.config = {
             theme: {
@@ -46,7 +46,7 @@
             }
         }
     </style>
-        <!-- 加载Pyodide -->
+        <!-- 加载 Pyodide -->
     <script src="pyodide/pyodide.js"></script>
     
 
@@ -55,7 +55,7 @@
     <header class="bg-primary text-white shadow-md">
         <div class="container mx-auto px-4 py-4 flex justify-between items-center">
             <h1 class="text-2xl font-bold">
-                <i class="fa fa-python mr-2"></i>浏览器端Python运行环境
+                <i class="fa fa-python mr-2"></i>浏览器端 Python 运行环境
             </h1>
             <div class="text-sm bg-white/20 px-3 py-1 rounded-full">
                 支持 matplotlib, numpy, math
@@ -73,7 +73,7 @@
                 </button>
             </div>
             <div class="border border-gray-300 rounded-lg overflow-hidden shadow-sm">
-                <textarea id="codeEditor" class="w-full editor-height p-4 font-mono text-sm bg-white focus:outline-none focus:ring-2 focus:ring-primary/50 resize-none noto-sans" placeholder="在这里输入Python代码...">
+                <textarea id="codeEditor" class="w-full editor-height p-4 font-mono text-sm bg-white focus:outline-none focus:ring-2 focus:ring-primary/50 resize-none noto-sans" placeholder="在这里输入 Python 代码...">
 import matplotlib.pyplot as plt
 import numpy as np
 fig, ax = plt.subplots(figsize=(6, 6))
@@ -112,24 +112,24 @@ plt.show()</textarea>
         const codeEditor = document.getElementById('codeEditor');
         const runBtn = document.getElementById('runBtn');
 
-        // 初始化Pyodide
+        // 初始化 Pyodide
         async function initPyodide() {
             try {
-                outputDiv.innerHTML = '<div><i class="fa fa-spinner fa-spin mr-2"></i>正在加载Python环境和所需库，请稍候...</div>';
+                outputDiv.innerHTML = '<div><i class="fa fa-spinner fa-spin mr-2"></i>正在加载 Python 环境和所需库，请稍候...</div>';
                 
-                // 加载Pyodide
+                // 加载 Pyodide
                 pyodide = await loadPyodide();
                 // 安装所需的库
                 await pyodide.loadPackage(['numpy', 'matplotlib']);
                 
-                // 将字体文件写入Pyodide的虚拟文件系统
+                // 将字体文件写入 Pyodide 的虚拟文件系统
                 try {
                     const fontResponse = await fetch('pyodide/NotoSansSC-Regular.otf');
                     if (fontResponse.ok) {
                         const fontArrayBuffer = await fontResponse.arrayBuffer();
                         const fontData = new Uint8Array(fontArrayBuffer);
                         pyodide.FS.writeFile('/NotoSansSC-Regular.otf', fontData);
-                        console.log("字体文件已写入Pyodide文件系统");
+                        console.log("字体文件已写入 Pyodide 文件系统");
                         outputDiv.innerHTML += '<div class="text-green-400">字体文件已加载</div>';
                     } else {
                         console.log("无法获取字体文件，状态码:", fontResponse.status);
@@ -140,7 +140,7 @@ plt.show()</textarea>
                     outputDiv.innerHTML += '<div class="text-red-400">字体文件加载失败: ' + error.message + '</div>';
                 }
                 
-                // 配置matplotlib在浏览器中显示
+                // 配置 matplotlib 在浏览器中显示
                 pyodide.runPython(`
 import matplotlib
 matplotlib.use('Agg')
@@ -154,7 +154,7 @@ import os
 # 尝试加载本地字体文件
 try:
     print("检查字体文件是否存在...")
-    # 检查字体文件是否存在于Pyodide的虚拟文件系统中
+    # 检查字体文件是否存在于 Pyodide 的虚拟文件系统中
     if os.path.exists('/NotoSansSC-Regular.otf'):
         print("字体文件存在，开始加载...")
         # 注册本地字体文件
@@ -196,30 +196,30 @@ def show_plot(fig=None):
     if fig is None:
         fig = plt.gcf()
     buf = BytesIO()
-    # 保存图像时明确指定背景色和DPI
+    # 保存图像时明确指定背景色和 DPI
     fig.savefig(buf, format='png', bbox_inches='tight', facecolor='white', edgecolor='none', dpi=100)
     buf.seek(0)
     img_str = base64.b64encode(buf.read()).decode('utf-8')
     return img_str`);
                 
-                outputDiv.innerHTML = '<div class="text-green-400"><i class="fa fa-check-circle mr-2"></i>Python环境已加载完成，可以运行代码了！</div>';
+                outputDiv.innerHTML = '<div class="text-green-400"><i class="fa fa-check-circle mr-2"></i>Python 环境已加载完成，可以运行代码了！</div>';
                 runBtn.disabled = false;
             } catch (error) {
                 outputDiv.innerHTML = `<div class="text-red-400"><i class="fa fa-exclamation-circle mr-2"></i>加载失败: ${error.message}</div>`;
-                console.error("Pyodide初始化失败:", error);
+                console.error("Pyodide 初始化失败:", error);
             }
         }
 
-        // 运行Python代码
+        // 运行 Python 代码
         async function runPythonCode() {
             if (!pyodide) {
-                outputDiv.innerHTML = '<div class="text-red-400"><i class="fa fa-exclamation-circle mr-2"></i>Python环境尚未加载完成，请稍候...</div>';
+                outputDiv.innerHTML = '<div class="text-red-400"><i class="fa fa-exclamation-circle mr-2"></i>Python 环境尚未加载完成，请稍候...</div>';
                 return;
             }
 
             const code = codeEditor.value.trim();
             if (!code) {
-                outputDiv.innerHTML = '<div class="text-yellow-400"><i class="fa fa-warning mr-2"></i>请输入Python代码后再运行</div>';
+                outputDiv.innerHTML = '<div class="text-yellow-400"><i class="fa fa-warning mr-2"></i>请输入 Python 代码后再运行</div>';
                 return;
             }
 
@@ -237,10 +237,10 @@ def show_plot(fig=None):
                 const stdout = pyodide.runPython("sys.stdout.getvalue()");
                 let stderr = pyodide.runPython("sys.stderr.getvalue()");
                 
-                // 过滤掉matplotlib的agg后端警告，因为在浏览器环境中这是正常的
+                // 过滤掉 matplotlib 的 agg 后端警告，因为在浏览器环境中这是正常的
                 if (stderr) {
                     stderr = stderr.replace(/UserWarning: Matplotlib is currently using agg, which is a non-GUI backend, so cannot show the figure.\s*/g, '');
-                    // 如果过滤后stderr为空，则设为null避免显示空的错误信息
+                    // 如果过滤后 stderr 为空，则设为 null 避免显示空的错误信息
                     if (stderr.trim() === '') {
                         stderr = null;
                     }
@@ -286,7 +286,7 @@ def show_plot(fig=None):
         // 绑定运行按钮事件
         runBtn.addEventListener('click', runPythonCode);
         
-        // 支持Ctrl+Enter运行代码
+        // 支持 Ctrl+Enter 运行代码
         codeEditor.addEventListener('keydown', (e) => {
             if (e.ctrlKey && e.key === 'Enter') {
                 runPythonCode();
