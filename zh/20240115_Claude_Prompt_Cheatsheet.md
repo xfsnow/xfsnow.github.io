@@ -1,9 +1,19 @@
 # Claude 提示语一览
+
+发布时间: *2024-01-15 10:40:23*
+
+分类: __AI__
+
+Claude 是由 Anthropic 打造的高性能、可信赖且智能的 AI 平台。Claude 在语言、推理、分析、编程等任务方面表现出色。这里整理了 Claude 的一些常用提示语，帮助用户更好地利用其功能。
+
+---------
+
+
 Claude 是由 Anthropic 打造的高性能、可信赖且智能的 AI 平台。Claude 在语言、推理、分析、编程等任务方面表现出色。这里整理了 Claude 的一些常用提示语，帮助用户更好地利用其功能。
 
 先放下带格式的图片，仔细看的话，会发现虽然总共 9 个提示语，但有 2 个是相同的。
 
-![Claude Cheatsheet](img/Claude_Cheatsheet.jpg)
+![Claude Cheatsheet](../assets/img/20240115_Claude_Prompt_Cheetsheet.webp)
 
 先放上原文，方便大家复制粘贴使用。不想看英文的，可以直接翻到后面看中文。
 

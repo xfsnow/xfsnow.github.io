@@ -4,10 +4,10 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Snowpeak Tech Blog - AI与云计算技术分享</title>
-    <meta name="description" content="专注于AI、云计算、GitHub Copilot等前沿技术的分享与探讨">
+    <title>Snowpeak Tech Blog - AI涓庝簯璁＄畻鎶€鏈垎浜?/title>
+    <meta name="description" content="涓撴敞浜嶢I銆佷簯璁＄畻銆丟itHub Copilot绛夊墠娌挎妧鏈殑鍒嗕韩涓庢帰璁?>
     <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
 </head>
 <body>
     <nav class="navbar">
@@ -16,10 +16,10 @@
                 <a href="index.html" style="text-decoration: none;"><h2><i class="fas fa-snowflake"></i> Snowpeak</h2></a>
             </div>
             <div class="nav-menu">
-                <a href="index.html#home" class="nav-link">首页</a>
-                <a href="index.html#articles" class="nav-link">文章</a>
-                <a href="index.html#tools" class="nav-link">工具</a>
-                <a href="index.html#about" class="nav-link">关于</a>
+                <a href="index.html#home" class="nav-link">棣栭〉</a>
+                <a href="index.html#articles" class="nav-link">鏂囩珷</a>
+                <a href="index.html#tools" class="nav-link">宸ュ叿</a>
+                <a href="index.html#about" class="nav-link">鍏充簬</a>
             </div>
             <div class="nav-toggle" id="mobile-menu">
                 <span class="bar"></span>
@@ -30,50 +30,48 @@
     </nav>
     <header class="article-header">
         <div class="container">
-            <h1>本地视频播放器</h1>
+            <h1>鏈湴瑙嗛鎾斁鍣?/h1>
             <div class="article-meta">
-                <span><i class="fas fa-calendar"></i> 2025年9月11日</span>
-                <span><i class="fas fa-clock"></i> 阅读时间 5分钟</span>
-                <span><i class="fas fa-tag"></i> 软件工具</span>
+                <span><i class="fas fa-calendar"></i> 2025骞?鏈?1鏃?/span>
+                <span><i class="fas fa-clock"></i> 闃呰鏃堕棿 5鍒嗛挓</span>
+                <span><i class="fas fa-tag"></i> 杞欢宸ュ叿</span>
                 <span><i class="fas fa-user"></i> Snowpeak</span>
             </div>
         </div>
     </header>
     
-<h2>视频播放器</h2>
+<h2>瑙嗛鎾斁鍣?/h2>
 <div class="video-player-container" style="max-width: 800px; margin: 20px auto; padding: 20px; border: 1px solid #ddd; border-radius: 8px;">
-    <!-- 文件选择器 -->
+    <!-- 鏂囦欢閫夋嫨鍣?-->
     <div class="file-input-container" style="margin-bottom: 20px; text-align: center;">
         <label for="videoFileInput" style="display: inline-block; padding: 10px 20px; background-color: #007bff; color: white; border-radius: 5px; cursor: pointer; transition: background-color 0.3s;">
-            <i class="fas fa-upload"></i> 选择视频文件
+            <i class="fas fa-upload"></i> 閫夋嫨瑙嗛鏂囦欢
         </label>
         <input type="file" id="videoFileInput" accept="video/*" style="display: none;">
         <div id="fileName" style="margin-top: 10px; color: #666; font-size: 14px;"></div>
     </div>
     
-    <!-- 视频播放器 -->
+    <!-- 瑙嗛鎾斁鍣?-->
     <div class="video-wrapper" style="position: relative; width: 100%; max-width: 100%; background: #000; border-radius: 5px; overflow: hidden;">
         <video id="videoPlayer" controls style="width: 100%; height: auto; display: none;">
-            您的浏览器不支持 HTML5 视频播放。
-        </video>
+            鎮ㄧ殑娴忚鍣ㄤ笉鏀寔 HTML5 瑙嗛鎾斁銆?        </video>
         <div id="videoPlaceholder" style="width: 100%; height: 300px; background: linear-gradient(45deg, #f0f0f0 25%, transparent 25%), linear-gradient(-45deg, #f0f0f0 25%, transparent 25%), linear-gradient(45deg, transparent 75%, #f0f0f0 75%), linear-gradient(-45deg, transparent 75%, #f0f0f0 75%); background-size: 20px 20px; background-position: 0 0, 0 10px, 10px -10px, -10px 0px; display: flex; align-items: center; justify-content: center; color: #999; font-size: 18px; border-radius: 5px;">
             <div style="text-align: center;">
                 <i class="fas fa-play-circle" style="font-size: 48px; margin-bottom: 10px; display: block;"></i>
-                请选择视频文件开始播放
-            </div>
+                璇烽€夋嫨瑙嗛鏂囦欢寮€濮嬫挱鏀?            </div>
         </div>
     </div>
     
-    <!-- 播放控制信息 -->
+    <!-- 鎾斁鎺у埗淇℃伅 -->
     <div id="videoInfo" style="margin-top: 15px; padding: 10px; background-color: #f8f9fa; border-radius: 5px; display: none;">
         <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px;">
             <div>
-                <strong>文件名:</strong> <span id="videoFileName">-</span><br>
-                <strong>时长:</strong> <span id="videoDuration">-</span>
+                <strong>鏂囦欢鍚?</strong> <span id="videoFileName">-</span><br>
+                <strong>鏃堕暱:</strong> <span id="videoDuration">-</span>
             </div>
             <div>
-                <strong>分辨率:</strong> <span id="videoResolution">-</span><br>
-                <strong>文件大小:</strong> <span id="videoFileSize">-</span>
+                <strong>鍒嗚鲸鐜?</strong> <span id="videoResolution">-</span><br>
+                <strong>鏂囦欢澶у皬:</strong> <span id="videoFileSize">-</span>
             </div>
         </div>
     </div>
@@ -96,35 +94,32 @@ document.addEventListener('DOMContentLoaded', function() {
     fileInput.addEventListener('change', function(e) {
         const file = e.target.files[0];
         if (file) {
-            // 检查是否为视频文件
+            // 妫€鏌ユ槸鍚︿负瑙嗛鏂囦欢
             if (!file.type.startsWith('video/')) {
-                alert('请选择有效的视频文件！');
+                alert('璇烽€夋嫨鏈夋晥鐨勮棰戞枃浠讹紒');
                 return;
             }
 
-            // 清理之前的 blob URL
+            // 娓呯悊涔嬪墠鐨?blob URL
             if (currentBlobURL) {
                 URL.revokeObjectURL(currentBlobURL);
                 currentBlobURL = null;
             }
 
-            // 显示文件名
-            fileName.textContent = `已选择: ${file.name}`;
+            // 鏄剧ず鏂囦欢鍚?            fileName.textContent = `宸查€夋嫨: ${file.name}`;
             
             try {
-                // 创建视频URL
+                // 鍒涘缓瑙嗛URL
                 currentBlobURL = URL.createObjectURL(file);
                 
-                // 重置视频播放器
-                videoPlayer.load();
+                // 閲嶇疆瑙嗛鎾斁鍣?                videoPlayer.load();
                 videoPlayer.src = currentBlobURL;
                 
-                // 显示视频播放器，隐藏占位符
-                videoPlaceholder.style.display = 'none';
+                // 鏄剧ず瑙嗛鎾斁鍣紝闅愯棌鍗犱綅绗?                videoPlaceholder.style.display = 'none';
                 videoPlayer.style.display = 'block';
                 videoInfo.style.display = 'block';
                 
-                // 更新文件信息
+                // 鏇存柊鏂囦欢淇℃伅
                 videoFileName.textContent = file.name;
                 videoFileSize.textContent = formatFileSize(file.size);
                 
@@ -132,51 +127,50 @@ document.addEventListener('DOMContentLoaded', function() {
                 
             } catch (error) {
                 console.error('Error creating blob URL:', error);
-                alert('创建视频URL时出错，请尝试其他视频文件。');
+                alert('鍒涘缓瑙嗛URL鏃跺嚭閿欙紝璇峰皾璇曞叾浠栬棰戞枃浠躲€?);
                 return;
             }
         }
     });
 
-    // 监听视频元数据加载（移到外部，避免重复绑定）
+    // 鐩戝惉瑙嗛鍏冩暟鎹姞杞斤紙绉诲埌澶栭儴锛岄伩鍏嶉噸澶嶇粦瀹氾級
     videoPlayer.addEventListener('loadedmetadata', function() {
         videoDuration.textContent = formatTime(videoPlayer.duration);
-        videoResolution.textContent = `${videoPlayer.videoWidth} × ${videoPlayer.videoHeight}`;
+        videoResolution.textContent = `${videoPlayer.videoWidth} 脳 ${videoPlayer.videoHeight}`;
     });
 
-    // 监听视频加载错误
+    // 鐩戝惉瑙嗛鍔犺浇閿欒
     videoPlayer.addEventListener('error', function(e) {
         console.error('Video loading error:', e);
         const error = videoPlayer.error;
-        let errorMessage = '视频加载失败';
+        let errorMessage = '瑙嗛鍔犺浇澶辫触';
         
         if (error) {
             switch (error.code) {
                 case error.MEDIA_ERR_ABORTED:
-                    errorMessage = '视频加载被中断';
+                    errorMessage = '瑙嗛鍔犺浇琚腑鏂?;
                     break;
                 case error.MEDIA_ERR_NETWORK:
-                    errorMessage = '网络错误导致视频加载失败';
+                    errorMessage = '缃戠粶閿欒瀵艰嚧瑙嗛鍔犺浇澶辫触';
                     break;
                 case error.MEDIA_ERR_DECODE:
-                    errorMessage = '视频解码失败，可能是格式不支持';
+                    errorMessage = '瑙嗛瑙ｇ爜澶辫触锛屽彲鑳芥槸鏍煎紡涓嶆敮鎸?;
                     break;
                 case error.MEDIA_ERR_SRC_NOT_SUPPORTED:
-                    errorMessage = '不支持的视频格式';
+                    errorMessage = '涓嶆敮鎸佺殑瑙嗛鏍煎紡';
                     break;
             }
         }
         
-        alert(errorMessage + '。请尝试其他视频文件或格式。');
+        alert(errorMessage + '銆傝灏濊瘯鍏朵粬瑙嗛鏂囦欢鎴栨牸寮忋€?);
         
-        // 重置到初始状态
-        videoPlaceholder.style.display = 'flex';
+        // 閲嶇疆鍒板垵濮嬬姸鎬?        videoPlaceholder.style.display = 'flex';
         videoPlayer.style.display = 'none';
         videoInfo.style.display = 'none';
         fileName.textContent = '';
     });
 
-    // 监听视频加载成功
+    // 鐩戝惉瑙嗛鍔犺浇鎴愬姛
     videoPlayer.addEventListener('loadstart', function() {
         console.log('Video loading started');
     });
@@ -185,8 +179,7 @@ document.addEventListener('DOMContentLoaded', function() {
         console.log('Video can start playing');
     });
 
-    // 格式化文件大小
-    function formatFileSize(bytes) {
+    // 鏍煎紡鍖栨枃浠跺ぇ灏?    function formatFileSize(bytes) {
         if (bytes === 0) return '0 Bytes';
         const k = 1024;
         const sizes = ['Bytes', 'KB', 'MB', 'GB'];
@@ -194,15 +187,14 @@ document.addEventListener('DOMContentLoaded', function() {
         return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + ' ' + sizes[i];
     }
 
-    // 格式化时间
-    function formatTime(seconds) {
+    // 鏍煎紡鍖栨椂闂?    function formatTime(seconds) {
         if (isNaN(seconds)) return '00:00';
         const minutes = Math.floor(seconds / 60);
         const remainingSeconds = Math.floor(seconds % 60);
         return `${minutes.toString().padStart(2, '0')}:${remainingSeconds.toString().padStart(2, '0')}`;
     }
 
-    // 拖拽上传功能
+    // 鎷栨嫿涓婁紶鍔熻兘
     const container = document.querySelector('.video-player-container');
     
     ['dragenter', 'dragover', 'dragleave', 'drop'].forEach(eventName => {
@@ -245,7 +237,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
-    // 页面卸载时清理 blob URL
+    // 椤甸潰鍗歌浇鏃舵竻鐞?blob URL
     window.addEventListener('beforeunload', function() {
         if (currentBlobURL) {
             URL.revokeObjectURL(currentBlobURL);
