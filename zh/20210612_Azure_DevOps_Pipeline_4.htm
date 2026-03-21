@@ -12,7 +12,7 @@
     command: custom
     customCommand: run build
     workingDir: '$(Agent.BuildDirectory)/s/ASP_Angular/'
-</code></pre> <p>新增的前1个任务，是按前端项目的依赖关系，把依赖库安装上。后1个任务就是构建出前端可发布的文件。</p><p>注意这2个任务都有<code>workingDir: '$(Agent.BuildDirectory)/s/ASP_Angular/'</code> 这个声明，<code>$(Agent.BuildDirectory)</code>是个环境变量，在当前任务的环境下指的就是 <code>/home/vsts/work/1</code>，所以前面日志中显示的代码签出路径<code>/home/vsts/work/1/s/ASP_Angular</code>可以用环境变量来表示就是<code>$(Agent.BuildDirectory)/s/ASP_Angular/</code>。</p><p>保存并运行。耐心等待一会，任务运行完成后，我们点进任务日志，可以看到如下的日志。</p><p><img alt="Graphical user interface, text Description automatically generated" src="../assets/img/20210612_Azure_DevOps_Pipeline_4_01.png"></p><p>表示前端的构建已经成功完成。</p><h2>前端后端代码合并最终发布制品</h2><p>最后我们把前端构建好的文件复制到后端构建好的目录下，就可以准备好用于发布的制品包了。</p><p>回到YAML文件编辑界面，先找到</p> <pre><code class="language-yaml">- task: DotNetCoreCLI@2
+</code></pre> <p>新增的前1个任务，是按前端项目的依赖关系，把依赖库安装上。后1个任务就是构建出前端可发布的文件。</p><p>注意这2个任务都有<code>workingDir: '$(Agent.BuildDirectory)/s/ASP_Angular/'</code><br> 这个声明，<code>$(Agent.BuildDirectory)</code>是个环境变量，在当前任务的环境下指的就是 <code>/home/vsts/work/1</code>，所以前面日志中显示的代码签出路径<code>/home/vsts/work/1/s/ASP_Angular</code>可以用环境变量来表示就是<code>$(Agent.BuildDirectory)/s/ASP_Angular/</code>。</p><p>保存并运行。耐心等待一会，任务运行完成后，我们点进任务日志，可以看到如下的日志。</p><p><img alt="Graphical user interface, text Description automatically generated" src="../assets/img/20210612_Azure_DevOps_Pipeline_4_01.png"></p><p>表示前端的构建已经成功完成。</p><h2>前端后端代码合并最终发布制品</h2><p>最后我们把前端构建好的文件复制到后端构建好的目录下，就可以准备好用于发布的制品包了。</p><p>回到YAML文件编辑界面，先找到</p> <pre><code class="language-yaml">- task: DotNetCoreCLI@2
   displayName: 'dotnet publish'
   inputs:
     command: publish
@@ -34,7 +34,7 @@
     archiveFile: '$(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip'
     replaceExistingArchive: true
     verbose: true
-</code></pre> <p>把前面都整理好的目录和文件统一打包压缩包。</p><p><code>archiveFile: '$(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip'</code> 这行声明打包文件存放的路径，<code>$(Build.BuildId)</code>是个环境变量，是构建的序列号，通常用来给每次构建的打包文件生成不同的名字。</p><p>最后发布制品的任务也从原来的</p> <pre><code class="language-yaml">    PathtoPublish: '$(Build.ArtifactStagingDirectory)/ '
+</code></pre> <p>把前面都整理好的目录和文件统一打包压缩包。</p><p><code>archiveFile: '$(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip'</code><br> 这行声明打包文件存放的路径，<code>$(Build.BuildId)</code>是个环境变量，是构建的序列号，通常用来给每次构建的打包文件生成不同的名字。</p><p>最后发布制品的任务也从原来的</p> <pre><code class="language-yaml">    PathtoPublish: '$(Build.ArtifactStagingDirectory)/ '
 </code></pre> <p>改成</p> <pre><code class="language-yaml">    PathtoPublish: '$(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip'
 </code></pre> <p>咱们只要保存这一个最终的压缩包即可，其它过程中的文件不用发布。</p><p>保存之后运行。运行成功后，这次我们可以看到生成的制品文件名变成了这样的。</p><p><img alt="Graphical user interface, application, Teams Description automatically generated" src="../assets/img/20210612_Azure_DevOps_Pipeline_4_02.png"></p><p>因为包含前端和后端所有构建好的文件，所以体积也增大到了4MB。</p><p>我们下载这个文件，可以在自己电脑解压看一下。</p> <pre><code class="language-bash">unzip -l 235.zip
 Archive:  235.zip

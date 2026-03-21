@@ -106,7 +106,7 @@ class BlogMaker:
             content = content[1] if len(content) > 1 else content[0]  # 取第二部分作为正文
 
             # 使用 markdown 库将 Markdown 转换为 HTML
-            md = markdown.Markdown(extensions=['fenced_code', 'tables', 'sane_lists'])
+            md = markdown.Markdown(extensions=['fenced_code', 'tables', 'sane_lists', 'nl2br'])
             html_content = md.convert(content)
             # 根据 markdown 文件内容长度粗略估计阅读时间， 假设每分钟阅读 60 个单词
             reading_time = len(content.split()) // 60
@@ -181,7 +181,7 @@ class BlogMaker:
         content = content[1] if len(content) > 1 else content[0]  # 取第二部分作为正文
 
         # 使用 markdown 库将 Markdown 转换为 HTML
-        md = markdown.Markdown(extensions=['fenced_code', 'tables', 'sane_lists'])
+        md = markdown.Markdown(extensions=['fenced_code', 'tables', 'sane_lists', 'nl2br'])
         html_content = md.convert(content)
         data = {
             'lang': self.getLang(),
