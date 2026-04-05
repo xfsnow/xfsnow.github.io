@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>改革之路：抉择年代 - 角色扮演游戏</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            user-select: none; /* 避免拖动文本影响点击，但不影响复制 */
+        }
+
+        body {
+            background: linear-gradient(145deg, #2e241f 0%, #1f1915 100%);
+            font-family: 'Segoe UI', '华文楷书', 'Microsoft YaHei', 'PingFang SC', Roboto, 'Noto Sans CJK SC', serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 24px 16px;
+        }
+
+        /* 游戏主面板 */
+        .game-container {
+            max-width: 780px;
+            width: 100%;
+            background: #fffef7;
+            background-image: radial-gradient(circle at 10% 20%, rgba(235, 220, 190, 0.2) 2%, transparent 2.5%);
+            background-size: 28px 28px;
+            border-radius: 56px 48px 64px 48px;
+            box-shadow: 0 25px 45px rgba(0, 0, 0, 0.5), inset 0 1px 2px rgba(255, 255, 200, 0.6);
+            overflow: hidden;
+            transition: all 0.2s;
+        }
+
+        /* 仿旧报纸质感 */
+        .game-header {
+            background: #9b2f1f;
+            background-image: linear-gradient(135deg, #b13e2a, #7f271a);
+            padding: 1.5rem 1.8rem;
+            text-align: center;
+            border-bottom: 6px solid #e9c891;
+        }
+
+        .game-header h1 {
+            margin: 0;
+            font-size: 2rem;
+            letter-spacing: 6px;
+            color: #ffefb9;
+            text-shadow: 4px 4px 0 #5a1e12;
+            font-weight: 800;
+        }
+
+        .game-header p {
+            margin: 8px 0 0;
+            color: #fbe4b0;
+            font-style: italic;
+            font-weight: 500;
+        }
+
+        /* 角色选择栏 */
+        .role-selector {
+            display: flex;
+            gap: 12px;
+            padding: 20px 20px 12px;
+            background: #fef3da;
+            border-bottom: 1px solid #e5cf9b;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .role-btn {
+            background: #e7dbbc;
+            border: 2px solid #b68742;
+            font-size: 1.1rem;
+            font-weight: bold;
+            padding: 8px 24px;
+            border-radius: 60px;
+            cursor: pointer;
+            font-family: inherit;
+            transition: 0.2s;
+            color: #3a2a1f;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .role-btn.active {
+            background: #c97e3a;
+            border-color: #f7d44a;
+            color: white;
+            box-shadow: 0 0 0 2px #ffeaaf;
+        }
+
+        .role-btn:hover {
+            background: #cf9f5e;
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        /* 状态面板 */
+        .stats-panel {
+            background: #2c241aee;
+            background: #2d241cee;
+            backdrop-filter: blur(4px);
+            margin: 16px 20px;
+            padding: 12px 18px;
+            border-radius: 60px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 12px;
+            color: #ffefcf;
+            font-weight: bold;
+            border: 1px solid #ebc48e;
+        }
+
+        .stat {
+            background: #1e1712;
+            padding: 4px 14px;
+            border-radius: 40px;
+            display: inline-flex;
+            align-items: baseline;
+            gap: 8px;
+            font-size: 0.9rem;
+        }
+
+        .stat span:first-child {
+            color: #f8cf8c;
+        }
+
+        .stat-value {
+            color: #ffd966;
+            font-size: 1.2rem;
+            font-weight: 800;
+            min-width: 2.4rem;
+            text-align: center;
+        }
+
+        /* 剧情卡片 */
+        .story-card {
+            background: #fffaf0;
+            margin: 12px 20px 20px;
+            padding: 20px 24px;
+            border-radius: 48px 32px 48px 32px;
+            box-shadow: inset 0 0 0 1px #fff8e7, 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .year-tag {
+            display: inline-block;
+            background: #7c3f2c;
+            color: #fae67a;
+            padding: 4px 16px;
+            border-radius: 30px;
+            font-size: 0.8rem;
+            font-weight: bold;
+            margin-bottom: 16px;
+            letter-spacing: 1px;
+        }
+
+        .story-desc {
+            font-size: 1.1rem;
+            line-height: 1.45;
+            color: #2e241f;
+            margin: 16px 0 24px;
+            font-weight: 500;
+        }
+
+        .options-area {
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+            margin-top: 8px;
+        }
+
+        .opt-btn {
+            background: #f2e5cf;
+            border: 2px solid #cfaa7a;
+            border-radius: 60px;
+            padding: 12px 20px;
+            font-size: 0.95rem;
+            font-weight: 600;
+            text-align: left;
+            cursor: pointer;
+            transition: all 0.2s;
+            font-family: inherit;
+            color: #2b211b;
+        }
+
+        .opt-btn:hover {
+            background: #ffefcf;
+            border-color: #b56f2e;
+            transform: scale(0.98);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        .reset-btn {
+            background: #b6562c;
+            border: none;
+            color: white;
+            padding: 8px 20px;
+            border-radius: 40px;
+            font-weight: bold;
+            cursor: pointer;
+            margin: 8px 20px 24px auto;
+            display: block;
+            width: fit-content;
+            font-family: inherit;
+            box-shadow: 0 2px 5px black;
+        }
+
+        .log-area {
+            background: #e9ddc3;
+            margin: 10px 20px 24px;
+            padding: 14px 18px;
+            border-radius: 28px;
+            font-size: 0.8rem;
+            color: #3a2c1f;
+            border-left: 6px solid #b5642c;
+            font-style: italic;
+        }
+
+        footer {
+            text-align: center;
+            font-size: 0.7rem;
+            padding: 12px;
+            color: #ad987a;
+            background: #fff2e2;
+        }
+
+        button:active {
+            transform: scale(0.97);
+        }
+
+        @media (max-width: 550px) {
+            .stats-panel { flex-direction: column; align-items: stretch; border-radius: 28px; }
+            .story-card { padding: 16px; }
+            .opt-btn { font-size: 0.85rem; }
+        }
+    </style>
+</head>
+<body>
+<div class="game-container" id="gameApp">
+    <div class="game-header">
+        <h1>📜 改革之路 · 抉择年代</h1>
+        <p>1978 – 1982  破冰岁月  每个人都是历史的书写者</p>
+    </div>
+    <div class="role-selector" id="roleSelector">
+        <button data-role="xiaogang" class="role-btn">🌾 小岗村村民</button>
+        <button data-role="zhiqing" class="role-btn">📚 返城知青</button>
+        <button data-role="huaqiao" class="role-btn">🌏 华侨</button>
+    </div>
+
+    <!-- 动态面板 -->
+    <div id="statsPanel" class="stats-panel">
+        <!-- js 渲染属性 -->
+    </div>
+
+    <div id="storyArea" class="story-card">
+        <div class="year-tag" id="yearTag">1978 · 冬</div>
+        <div class="story-desc" id="storyDesc">
+            请先选择一个角色，开启改革年代的命运之旅。
+        </div>
+        <div class="options-area" id="optionsArea"></div>
+    </div>
+
+    <button id="resetGameBtn" class="reset-btn">🔄 重新开始 / 重置角色</button>
+    <div id="logArea" class="log-area">
+        💡 提示：每个选择将改变勇气、智慧、人脉与财富，五年之后迎来你的结局。
+    </div>
+    <footer>⚙️ 真实历史背景 · 抉择塑造命运 · 改革之路没有存档，每一步都算数</footer>
+</div>
+
+<script>
+    // ----------------------------- 游戏数据定义 ---------------------------------
+    // 基础角色结构
+    const ROLES = {
+        xiaogang: { name: "小岗村村民 · 李大胆", init: { courage: 5, wisdom: 5, connections: 5, money: 8 } },
+        zhiqing: { name: "返城知青 · 陈建国", init: { courage: 5, wisdom: 5, connections: 5, money: 4 } },
+        huaqiao: { name: "华侨 · 林淑芬", init: { courage: 5, wisdom: 5, connections: 5, money: 22 } }
+    };
+
+    // ---------- 小岗村剧情 (5个) 完全忠实原设计，补充合理资金变化 ----------
+    const xiaogangPlots = [
+        { // 剧情1
+            year: "1978 · 冬",
+            desc: "村头牛棚昏暗的油灯下，十八户农民商量‘分田到户’。按手印意味着可能坐牢。你李大胆，怎么办？",
+            options: [
+                { text: "🔴 第一个按手印：带头签下生死状", delta: { courage: 3, wisdom: 1, connections: 2, money: 0 }, log: "你率先按下红手印，村民视你为脊梁，但被公社干部盯上了。" },
+                { text: "🟡 犹豫之后，还是按了手印", delta: { courage: 1, wisdom: 2, connections: 1, money: 0 }, log: "你虽犹豫，但最终加入。乡亲们认可你，风险共存。" },
+                { text: "🟢 拒绝按手印，暗中支持大家", delta: { courage: 0, wisdom: 2, connections: 0, money: 0 }, log: "你选择低调支持，避免风头，却被少数村民认为不够兄弟。" }
+            ]
+        },
+        { // 剧情2 丰收顾虑
+            year: "1979 · 秋",
+            desc: "粮食产量翻了三倍！但公社干部来调查‘是否搞资本主义’。面对质问，你决定——",
+            options: [
+                { text: "🌾 主动交出部分粮食，装作没多收", delta: { courage: 0, wisdom: 1, connections: -1, money: -2 }, log: "你上交部分余粮，暂时躲过检查，但村民私下有些怨气。" },
+                { text: "🔥 联合村民对抗，拿出红手印契约", delta: { courage: 2, wisdom: -1, connections: 2, money: 0 }, log: "你挺身而出与干部对峙，红手印成了护身符，但可能被上报处分。" },
+                { text: "📰 请隔壁县记者来暗访报道", delta: { courage: 1, wisdom: 3, connections: 1, money: 0 }, log: "记者将真相公之于众，引发舆论关注。你成了改革典型。" }
+            ]
+        },
+        { // 剧情3 家庭联产承包推广
+            year: "1980 · 春",
+            desc: "中央文件允许包产到户！县里要你作为典型去省里发言，你如何应对？",
+            options: [
+                { text: "🎤 老实讲述当年穷苦和分田经过", delta: { courage: 1, wisdom: 2, connections: 0, money: 0 }, log: "你诚恳的发言感动省领导，改革影响力大增。" },
+                { text: "📜 只讲成绩，不提风险", delta: { courage: 0, wisdom: 2, connections: 1, money: 0 }, log: "稳妥发言获得上级好感，但少了历史见证者的厚重。" },
+                { text: "🤝 推给老村长，自己谦让", delta: { courage: -1, wisdom: 0, connections: 3, money: 0 }, log: "村民感谢你的谦让，但失去了个人话语权。" }
+            ]
+        },
+        { // 剧情4 乡镇企业
+            year: "1981 · 夏",
+            desc: "村里有了余粮，有人提议合办砖瓦厂。需要你带头投资，是冒险还是守田？",
+            options: [
+                { text: "🏭 带头办厂，勇敢投资", delta: { courage: 2, wisdom: 2, connections: 0, money: 4 }, log: "你率先办起砖瓦厂，积累非农收入，成为第一批乡镇企业家。" },
+                { text: "🤲 支持别人办，自己出工不出钱", delta: { courage: 0, wisdom: 1, connections: 2, money: 1 }, log: "你入股少许，获得一些分红，但影响有限。" },
+                { text: "🌽 反对办厂，坚守种田", delta: { courage: -2, wisdom: -1, connections: 0, money: -1 }, log: "你坚持传统，错过工业化机遇，日子虽稳但渐渐落后。" }
+            ]
+        },
+        { // 剧情5 人民公社解体
+            year: "1982 · 冬",
+            desc: "公社正式撤销，乡政府成立。你要不要竞选第一任乡长？",
+            options: [
+                { text: "🏛️ 竞选乡长，为民请命", delta: { courage: 2, wisdom: 1, connections: 3, money: 0 }, log: "你成功当选乡长，推动基层改革，名声远播。" },
+                { text: "💰 当致富带头人，种田兼办厂", delta: { courage: 0, wisdom: 2, connections: 0, money: 5 }, log: "你成了远近闻名的万元户，过上好日子但影响范围局限。" },
+                { text: "👴 让给年轻人，自己当顾问", delta: { courage: 0, wisdom: 1, connections: 2, money: 2 }, log: "你备受尊敬，退居幕后，依然受人爱戴。" }
+            ]
+        }
+    ];
+
+    // 返城知青剧情
+    const zhiqingPlots = [
+        { year: "1979 · 春", desc: "从黑龙江兵团返沪，街道办说暂时没工作。弟弟念大学，父母让你去卖茶叶蛋。你的选择？",
+          options: [
+            { text: "🥚 立刻摆摊卖茶叶蛋", delta: { courage: 2, wisdom: 1, connections: 0, money: 2 }, log: "你放下身段，开始个体经营，虽被邻居瞧不起，但赚到第一桶金。" },
+            { text: "🏭 等待国营厂招工", delta: { courage: 0, wisdom: 1, connections: 1, money: 0 }, log: "保守等待，体面但遥遥无期。" },
+            { text: "🍜 找知青战友合伙开小饭馆", delta: { courage: 3, wisdom: 1, connections: 2, money: -2 }, log: "借钱开店，冒险一搏，未来可期。" }
+          ] },
+        { year: "1979 · 夏", desc: "摊位被市容队没收，街道主任说“个体户是资本主义尾巴”。你怎么办？",
+          options: [
+            { text: "📋 认罚，改行做临时工", delta: { courage: -1, wisdom: 1, connections: 0, money: 0 }, log: "暂时安稳，但收入低微。" },
+            { text: "✉️ 写信给《人民日报》反映", delta: { courage: 2, wisdom: 2, connections: 0, money: 0 }, log: "引起上级注意，政策讨论升温，你成了典型。" },
+            { text: "🤝 联合返城知青集体提意见", delta: { courage: 1, wisdom: 0, connections: 3, money: 0 }, log: "知青群体声援，形成社会力量，问题被重视。" }
+          ] },
+        { year: "1980 · 秋", desc: "街道亏损小厂让你承包，自负盈亏，你敢接吗？",
+          options: [
+            { text: "⚡ 大胆承包，独自经营", delta: { courage: 3, wisdom: 2, connections: 0, money: 3 }, log: "你成了小厂长，压力巨大但利润可观。" },
+            { text: "👥 合伙承包（找知青一起）", delta: { courage: 1, wisdom: 2, connections: 3, money: 2 }, log: "风险分散，众人拾柴火焰高。" },
+            { text: "📖 拒绝承包，去考大学", delta: { courage: 0, wisdom: 3, connections: 0, money: -1 }, log: "你考上大学，改变命运，但错过早期商机。" }
+          ] },
+        { year: "1981 · 春", desc: "工厂盈利雇了十几人，有人举报你‘剥削’。如何应对？",
+          options: [
+            { text: "📏 减为8人以下，避开红线", delta: { courage: 0, wisdom: 3, connections: 0, money: -1 }, log: "合法但限制了发展规模。" },
+            { text: "📢 继续雇工，找报社宣传解决就业", delta: { courage: 3, wisdom: 0, connections: 2, money: 3 }, log: "你成为改革先锋，敢为人先。" },
+            { text: "🤝 转为合作经营，工人入股", delta: { courage: 0, wisdom: 2, connections: 3, money: 1 }, log: "创新模式，凝聚力大增。" }
+          ] },
+        { year: "1982 · 秋", desc: "政策保护个体经济，你小有资产。注册‘红帽子’企业还是个体户？",
+          options: [
+            { text: "🎩 注册红帽子企业（集体挂靠）", delta: { courage: 0, wisdom: 3, connections: 0, money: 5 }, log: "产权模糊但规模飞速扩张。" },
+            { text: "🪪 坚持注册个体户执照", delta: { courage: 2, wisdom: 1, connections: 0, money: 2 }, log: "产权清晰，稳扎稳打。" },
+            { text: "🚀 移民深圳特区闯一闯", delta: { courage: 3, wisdom: 1, connections: 1, money: 1 }, log: "奔赴特区，崭新天地。" }
+          ] }
+    ];
+
+    // 华侨剧情
+    const huaqiaoPlots = [
+        { year: "1979 · 秋", desc: "回到潮汕老家，县领导希望你捐资办学，而你更想办工厂。如何抉择？",
+          options: [
+            { text: "🏫 捐建一所小学", delta: { courage: 0, wisdom: 1, connections: 3, money: -5 }, log: "获得官方好感，但无经济回报。" },
+            { text: "🏭 试探合资办厂", delta: { courage: 2, wisdom: 2, connections: 0, money: -3 }, log: "干部对外资法规陌生，但你是探路者。" },
+            { text: "✈️ 先回泰国观望", delta: { courage: -1, wisdom: 1, connections: 0, money: 0 }, log: "安全保守，但错过先机。" }
+          ] },
+        { year: "1980 · 夏", desc: "深圳特区邀请你去考察，那里还是一片工地，但政策免税。签约吗？",
+          options: [
+            { text: "🤝 立刻签约投资电子装配厂", delta: { courage: 3, wisdom: 1, connections: 0, money: -8, minMoney: 8 }, log: "成为特区早期投资者，风险巨大。" },
+            { text: "📦 少量投资，先租柜台试销", delta: { courage: 1, wisdom: 3, connections: 0, money: -2 }, log: "谨慎行事，稳中求进。" },
+            { text: "👥 介绍其他华侨来，当中间人", delta: { courage: 0, wisdom: 2, connections: 4, money: 2 }, log: "赚取佣金，人脉大增。" }
+          ] },
+        { year: "1981 · 春", desc: "工厂招了女工，村民要求分利，声称地是他们的。如何解决？",
+          options: [
+            { text: "🤲 按村民要求增加补偿", delta: { courage: 0, wisdom: 1, connections: 2, money: -3 }, log: "花钱消灾，获得当地好感。" },
+            { text: "⚖️ 请特区政府协调，坚持合同", delta: { courage: 2, wisdom: 0, connections: 1, money: 0 }, log: "依靠法律，过程漫长但维护权益。" },
+            { text: "🏢 引入香港管理团队，淡出日常", delta: { courage: 0, wisdom: 2, connections: 0, money: -2 }, log: "专业管理，但控制力下降。" }
+          ] },
+        { year: "1982 · 春", desc: "内地传闻特区可能收缩，泰国合伙人想撤资。你怎么办？",
+          options: [
+            { text: "💪 买下合伙人股份，自己独资", delta: { courage: 3, wisdom: 2, connections: 0, money: -12, minMoney: 12 }, log: "豪赌国运，孤注一掷。" },
+            { text: "⏸️ 暂停扩大，维持现状", delta: { courage: -1, wisdom: 2, connections: 0, money: 0 }, log: "观望等待，安全但可能落后。" },
+            { text: "🌴 转而投资海南", delta: { courage: 2, wisdom: 1, connections: 0, money: -4 }, log: "分散布局，捕捉新机会。" }
+          ] },
+        { year: "1982 · 冬", desc: "领导人视察特区，接见外资代表。你提什么建议？",
+          options: [
+            { text: "📜 要求更明确的法律保护外资", delta: { courage: 0, wisdom: 3, connections: 2, money: 0 }, log: "推动立法，受外商尊敬。" },
+            { text: "🏭 提出出口加工区具体方案", delta: { courage: 2, wisdom: 4, connections: 2, money: 0 }, log: "影响国家政策，成为特区顾问。" },
+            { text: "🙏 只谈感恩，不提意见", delta: { courage: -1, wisdom: 0, connections: 2, money: 0 }, log: "安全保守，无甚建树。" }
+          ] }
+    ];
+
+    const plotMap = {
+        xiaogang: xiaogangPlots,
+        zhiqing: zhiqingPlots,
+        huaqiao: huaqiaoPlots
+    };
+
+    // 游戏状态
+    let currentRole = null;       // 'xiaogang', 'zhiqing', 'huaqiao'
+    let currentPlotIndex = 0;    // 0~4
+    let attributes = { courage: 5, wisdom: 5, connections: 5, money: 0 };
+    let logs = [];
+
+    // DOM 元素
+    const statsPanel = document.getElementById('statsPanel');
+    const storyDescDiv = document.getElementById('storyDesc');
+    const optionsArea = document.getElementById('optionsArea');
+    const yearTag = document.getElementById('yearTag');
+    const logArea = document.getElementById('logArea');
+    const resetBtn = document.getElementById('resetGameBtn');
+
+    // 辅助函数：更新属性显示
+    function updateStatsUI() {
+        if (!currentRole) {
+            statsPanel.innerHTML = `<div style="width:100%; text-align:center;">⚡ 请先选择角色 ⚡</div>`;
+            return;
+        }
+        statsPanel.innerHTML = `
+            <div class="stat">🔥 勇气 <span class="stat-value">${attributes.courage}</span></div>
+            <div class="stat">📖 智慧 <span class="stat-value">${attributes.wisdom}</span></div>
+            <div class="stat">🤝 人脉 <span class="stat-value">${attributes.connections}</span></div>
+            <div class="stat">💰 财富 <span class="stat-value">${Math.floor(attributes.money)}</span></div>
+        `;
+    }
+
+    // 添加日志
+    function addLog(msg) {
+        logs.unshift(msg);
+        if (logs.length > 7) logs.pop();
+        logArea.innerHTML = `📜 记事：<br>${logs.map(l => `• ${l}`).join('<br>')}`;
+    }
+
+    // 结局判定 (根据勇气+智慧+人脉 总分 及 财富)
+    function showEnding() {
+        const total = attributes.courage + attributes.wisdom + attributes.connections;
+        let endingTitle = "";
+        let endingDesc = "";
+        const roleName = ROLES[currentRole].name;
+        const wealth = attributes.money;
+
+        if (total >= 25) {
+            if (currentRole === 'xiaogang') endingTitle = "🌾 改革先锋 · 乡村脊梁";
+            else if (currentRole === 'zhiqing') endingTitle = "🏆 风云企业家 · 时代骄子";
+            else endingTitle = "🏅 特区功勋 · 开放标杆";
+            endingDesc = "你站在时代潮头，用勇气与智慧改变了无数人的命运。你的名字刻在改革丰碑上，成为传奇。";
+        } else if (total >= 16) {
+            if (currentRole === 'xiaogang') endingTitle = "🌿 小康之家 · 一方能人";
+            else if (currentRole === 'zhiqing') endingTitle = "📈 殷实厂长 · 安稳富足";
+            else endingTitle = "🏮 殷实侨商 · 造福乡梓";
+            endingDesc = "你抓住了机遇，日子红红火火，家庭美满，受人尊敬。虽未名震天下，却也是改革实实在在的受益者。";
+        } else {
+            if (currentRole === 'xiaogang') endingTitle = "🌽 温饱知足 · 岁月平淡";
+            else if (currentRole === 'zhiqing') endingTitle = "🕰️ 普通职工 · 错过浪潮";
+            else endingTitle = "🍂 犹豫徘徊 · 回首遗珠";
+            endingDesc = "你过于谨慎或运气不佳，未能充分拥抱变革，日子虽安稳，但想起当年抉择，不免有些遗憾。改革洪流滚滚，机会曾近在咫尺。";
+        }
+
+        if (wealth > 30) endingDesc += " 此外，你积累的丰厚财富让你的晚年十分优渥，儿孙敬仰。";
+        else if (wealth < 5) endingDesc += " 你的财富不多，生活简朴，但内心的平静也是一笔财富。";
+
+        storyDescDiv.innerHTML = `<div style="font-size:1.3rem; font-weight:bold; margin-bottom:12px;">✨ 【终章】${endingTitle}</div>
+                                  <p>${endingDesc}</p>
+                                  <p style="margin-top:16px; background:#f0e1c6; padding:12px; border-radius:24px;">🌟 勇气+智慧+人脉总分：${total}  |  财富：${Math.floor(wealth)}</p>
+                                  <p style="font-size:0.9rem;">${currentRole==='xiaogang'?'小岗村包产到户星火燎原，乡镇企业异军突起。':currentRole==='zhiqing'?'从返城待业到弄潮商海，个体经济谱写传奇。':'华侨投资打开国门，特区试验田震撼世界。'} 你的选择，都是历史的一部分。</p>`;
+        optionsArea.innerHTML = `<button class="opt-btn" id="restartFromEnding">🔁 重新开始新旅程</button>`;
+        const restartEndBtn = document.getElementById('restartFromEnding');
+        if (restartEndBtn) restartEndBtn.onclick = () => { resetGame(); };
+        yearTag.innerText = "1982 · 结局";
+        addLog(`🏁 游戏结局：${endingTitle}，总分${total}，财富${Math.floor(wealth)}。`);
+    }
+
+    // 渲染当前剧情
+    function renderCurrentPlot() {
+        if (!currentRole) return;
+        const plots = plotMap[currentRole];
+        if (currentPlotIndex >= plots.length) {
+            showEnding();
+            return;
+        }
+        const plot = plots[currentPlotIndex];
+        yearTag.innerText = plot.year;
+        storyDescDiv.innerHTML = `<div style="margin-bottom:6px;">${plot.desc}</div>`;
+        // 生成选项按钮
+        let optsHtml = '';
+        plot.options.forEach((opt, idx) => {
+            optsHtml += `<button class="opt-btn" data-opt-index="${idx}">${opt.text}</button>`;
+        });
+        optionsArea.innerHTML = optsHtml;
+        // 绑定选项事件
+        document.querySelectorAll('.opt-btn[data-opt-index]').forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                const idx = parseInt(btn.getAttribute('data-opt-index'));
+                handleChoice(plot.options[idx]);
+            });
+        });
+    }
+
+    // 处理选择，检查资金门槛 (minMoney)
+    function handleChoice(option) {
+        if (!currentRole) return;
+        // 资金门槛检测 (华侨部分选项需要足够资金)
+        if (option.delta.minMoney && attributes.money < option.delta.minMoney) {
+            addLog(`❌ 资金不足（需要至少${option.delta.minMoney}财富），无法选择此路。请另择他途。`);
+            return;
+        }
+        // 应用属性变化
+        const delta = option.delta;
+        attributes.courage += delta.courage || 0;
+        attributes.wisdom += delta.wisdom || 0;
+        attributes.connections += delta.connections || 0;
+        attributes.money += delta.money || 0;
+        // 避免属性负数下限 (最低0)
+        attributes.courage = Math.max(0, attributes.courage);
+        attributes.wisdom = Math.max(0, attributes.wisdom);
+        attributes.connections = Math.max(0, attributes.connections);
+        attributes.money = Math.max(0, attributes.money);
+        
+        updateStatsUI();
+        addLog(option.log);
+        
+        // 前进剧情
+        currentPlotIndex++;
+        if (currentPlotIndex < plotMap[currentRole].length) {
+            renderCurrentPlot();
+        } else {
+            renderCurrentPlot(); // 会触发结局
+        }
+    }
+
+    // 重置角色 (完全重置，保留当前角色选择)
+    function resetGame() {
+        if (!currentRole) {
+            addLog("请先选择一个角色开始。");
+            return;
+        }
+        const init = ROLES[currentRole].init;
+        attributes = { ...init };
+        currentPlotIndex = 0;
+        logs = [];
+        addLog(`重新开始「${ROLES[currentRole].name}」的改革之旅。`);
+        updateStatsUI();
+        renderCurrentPlot();
+    }
+
+    // 切换角色
+    function switchRole(roleId) {
+        currentRole = roleId;
+        const init = ROLES[roleId].init;
+        attributes = { ...init };
+        currentPlotIndex = 0;
+        logs = [];
+        addLog(`🎭 你扮演「${ROLES[roleId].name}」，1978年变革伊始。`);
+        updateStatsUI();
+        renderCurrentPlot();
+        // UI 高亮
+        document.querySelectorAll('.role-btn').forEach(btn => {
+            if (btn.dataset.role === roleId) btn.classList.add('active');
+            else btn.classList.remove('active');
+        });
+    }
+
+    // 事件绑定
+    document.querySelectorAll('.role-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+            const role = btn.dataset.role;
+            switchRole(role);
+        });
+    });
+    resetBtn.addEventListener('click', () => {
+        if (currentRole) resetGame();
+        else addLog("请先选择一位角色。");
+    });
+
+    // 初始化显示默认信息
+    function init() {
+        statsPanel.innerHTML = `<div style="width:100%; text-align:center;">✨ 请点击上方角色，成为改革亲历者 ✨</div>`;
+        storyDescDiv.innerHTML = "1978年冬天，改革之门悄然开启。小岗村的红手印、返城知青的彷徨、华侨的试探……每个选择，都在定义明天的中国。";
+        optionsArea.innerHTML = `<button class="opt-btn" style="background:#d9c294;" disabled>👆 选择角色开始游戏</button>`;
+        yearTag.innerText = "1978 · 破冰";
+    }
+    init();
+</script>
+</body>
+</html>
