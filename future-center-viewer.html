@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Future Center</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html, body {
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            background: #000;
+        }
+
+        .container {
+            width: 100vw;
+            height: 100vh;
+            position: relative;
+        }
+
+        .iframe-wrapper {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 1s ease-in-out;
+        }
+
+        .iframe-wrapper.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container" id="container">
+        <div class="iframe-wrapper active" data-index="0">
+            <iframe src="https://lenovo.k8scloud.cn/insight/insight-view/lps-future-center/data-recover-en"></iframe>
+        </div>
+        <div class="iframe-wrapper" data-index="1">
+            <iframe src="https://lenovo.k8scloud.cn/insight/insight-view/lps-future-center/cloud-native-en"></iframe>
+        </div>
+        <div class="iframe-wrapper" data-index="2">
+            <iframe src="https://lenovo.k8scloud.cn/insight/insight-view/lps-future-center/cmp-en"></iframe>
+        </div>
+        <div class="iframe-wrapper" data-index="3">
+            <iframe src="https://lenovo.k8scloud.cn/insight/insight-view/lps-future-center/aiops-en"></iframe>
+        </div>
+        <div class="iframe-wrapper" data-index="4">
+            <iframe src="https://lenovo.k8scloud.cn/insight/insight-view/lps-future-center/computing-resource-en"></iframe>
+        </div>
+    </div>
+
+    <script>
+        const wrappers = document.querySelectorAll('.iframe-wrapper');
+        let currentIndex = 0;
+        const SWITCH_INTERVAL = 100000; // 10秒
+
+        function nextPage() {
+            wrappers[currentIndex].classList.remove('active');
+            currentIndex = (currentIndex + 1) % wrappers.length;
+            wrappers[currentIndex].classList.add('active');
+        }
+
+        setInterval(nextPage, SWITCH_INTERVAL);
+    </script>
+</body>
+</html>
