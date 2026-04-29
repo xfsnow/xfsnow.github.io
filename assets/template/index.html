@@ -11,7 +11,7 @@
                 </div>
             </div>
             <div class="hero-image">
-                <i class="fas fa-mountain"></i>
+                <svg viewBox="0 0 80 60" width="120" height="90" fill="currentColor"><path d="M0 60 L25 28 L35 40 L58 12 L80 60 Z"/></svg>
             </div>
         </div>
     </section>
@@ -20,7 +20,7 @@
         <div class="container">
             <div class="search-container">
                 <div class="search-box">
-                    <i class="fas fa-search"></i>
+                    <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
                     <input type="text" id="searchInput" placeholder="{{data.lang.search_placeholder}}" aria-label="{{data.lang.search_placeholder}}">
                 </div>
                 <div class="search-filters">
@@ -55,8 +55,7 @@
             </div>
 
             <!-- 搜索结果为空时显示 -->
-            <div class="no-results" id="noResults" style="display: none;">
-                <i class="fas fa-search"></i>
+            <div class="no-results" id="noResults" style="display: none;"><svg class="icon" viewBox="0 0 24 24" width="48" height="48" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="8" y1="8" x2="14" y2="14"/><line x1="14" y1="8" x2="8" y2="14"/></svg>
                 <h3>{{data.lang.noResults}}</h3>
                 <p>{{data.lang.tryOtherKeywords}}</p>
             </div>
@@ -67,15 +66,78 @@
         <div class="container">
             <h2 class="section-title">{{data.lang.tool}}</h2>
             <div class="tools-grid">
-            {% for tool in data.tools %}
-            <a href="{{ tool.url }}" class="tool-card">
-                <i class="{{ tool.icon }} tool-icon"></i>
+            <a href="/imageprocess/" class="tool-card">
+                <svg class="tool-icon" viewBox="0 0 24 24" width="48" height="48" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
+                    <circle cx="8.5" cy="8.5" r="1.5"/>
+                    <polyline points="21 15 16 10 5 21"/>
+                </svg>
                 <div class="tool-content">
-                    <h3>{{ tool.title }}</h3>
-                    <p>{{ tool.description }}</p>
+                    <h3>响应式图片处理</h3>
+                    <p>在线图片压缩和格式转换工具</p>
                 </div>
             </a>
-            {% endfor %}
+            <a href="/va/" class="tool-card">
+                <svg class="tool-icon" viewBox="0 0 24 24" width="48" height="48" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
+                    <line x1="12" y1="8" x2="12" y2="12"/>
+                    <line x1="12" y1="16" x2="12.01" y2="16"/>
+                </svg>
+                <div class="tool-content">
+                    <h3>AI 虚拟助手</h3>
+                    <p>智能对话和问答助手</p>
+                </div>
+            </a>
+            <a href="/AzureIcon/" class="tool-card">
+                <svg class="tool-icon" viewBox="0 0 24 24" width="48" height="48" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M4 20 L12 2 L20 20"/>
+                    <path d="M8 14 L20 20"/>
+                </svg>
+                <div class="tool-content">
+                    <h3>Azure图标汇总</h3>
+                    <p>完整的Azure服务图标集合</p>
+                </div>
+            </a>
+            <a href="/english_middle/" class="tool-card">
+                <svg class="tool-icon" viewBox="0 0 24 24" width="48" height="48" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M22 10v6M2 10l10-5 10 5-10 5z"/>
+                    <path d="M6 12v5c3 3 9 3 12 0v-5"/>
+                </svg>
+                <div class="tool-content">
+                    <h3>英语能力测试</h3>
+                    <p>初中英语水平在线测试系统</p>
+                </div>
+            </a>
+            <a href="/schools.htm" class="tool-card">
+                <svg class="tool-icon" viewBox="0 0 24 24" width="48" height="48" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="2" y="4" width="20" height="16" rx="2"/>
+                    <path d="M2 10 L22 10"/>
+                    <path d="M7 4 L7 20"/>
+                    <path d="M17 4 L17 20"/>
+                    <path d="M2 14 L7 14"/>
+                    <path d="M17 14 L22 14"/>
+                </svg>
+                <div class="tool-content">
+                    <h3>北京学校划片数据</h3>
+                    <p>北京地区学校划片信息查询</p>
+                </div>
+            </a>
+            <a href="/math_question/" class="tool-card">
+                <svg class="tool-icon" viewBox="0 0 24 24" width="48" height="48" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="4" y="2" width="16" height="20" rx="2"/>
+                    <line x1="8" y1="6" x2="16" y2="6"/>
+                    <line x1="16" y1="14" x2="16" y2="14"/>
+                    <path d="M8 14h.01"/>
+                    <path d="M12 14h.01"/>
+                    <path d="M8 18h.01"/>
+                    <path d="M12 18h.01"/>
+                    <path d="M16 18h.01"/>
+                </svg>
+                <div class="tool-content">
+                    <h3>数学题库</h3>
+                    <p>使用 LaTex 记录和展示数学题目</p>
+                </div>
+            </a>
         </div>
         </div>
     </section>

@@ -625,10 +625,11 @@ body {
 .social-link {
     display: flex;
     align-items: center;
-    gap: 8px;
-    padding: 8px 12px;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
     background: rgba(255, 255, 255, 0.1);
-    border-radius: 8px;
+    border-radius: 50%;
     color: #94a3b8;
     text-decoration: none;
     transition: all 0.3s ease;
