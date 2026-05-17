@@ -8,7 +8,7 @@
     <meta name="description" content="本文深入探讨了使用嵌套集合模型(Nested Set Model)在关系型数据库中实现树状结构的方法。在Mike Hillyer经典模型基础上，通过增加节点深度字段优化查询性能，提供了完整的增删查改操作实现方案。">
     <meta name="keywords" content="AI, GitHub Copilot, Azure云, 云计算, 前端技术, 后端技术, Web开发, 软件工程">
     <link rel="canonical" href="/zh/further-discussion/">
-    <link rel="stylesheet" href="/assets/css/style.css"><!-- Font Awesome replaced with inline SVG -->
+    <link rel="stylesheet" href="/assets/css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/default.min.css">
 </head>
 <body>
@@ -186,7 +186,6 @@ UPDATE geo SET rgt=rgt-2 WHERE rgt&gt;8;
 <h2>同级节点平移</h2>
 <p>同级节点平移一般就不需要写操作了，我们只处理读取出来的结果排序的问题。上述 SQL 都是按 lft 排序，即按添加的先后顺序排序，而通常的情况是同级子节点显示时需要按字母或音序排序，解决办法是如果显示的是英文，直接按英文排序，如果显示的是中文，再冗余一个字段，在添加记录时存储好拼音，读取时按拼音排序。</p>
 <hr />
-<p><em>原文链接: https://www.snowpeak.fun/cn/article/detail/further_discussion_on_managing_hierarchical_data_with_nested_set_model/</em></p>
     </main>
     
     <!-- 相关文章 -->

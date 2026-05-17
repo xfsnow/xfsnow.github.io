@@ -8,7 +8,7 @@
     <meta name="description" content="星级评分是调查的一个常用功能，网上常见多是动态调用图片实现的，我结合 CSS 想出一种更简洁的方法。功能使用更方便，HTML页源代码和 JavaScript 语句更简洁，使用 CSS 排版进一步实现和内容与设计的分离。">
     <meta name="keywords" content="AI, GitHub Copilot, Azure云, 云计算, 前端技术, 后端技术, Web开发, 软件工程">
     <link rel="canonical" href="/zh/star-rating/">
-    <link rel="stylesheet" href="/assets/css/style.css"><!-- Font Awesome replaced with inline SVG -->
+    <link rel="stylesheet" href="/assets/css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/default.min.css">
 </head>
 <body>
@@ -179,7 +179,6 @@ var page = {
 <p><strong>遗留问题</strong>：<br />
 CSS 中的 <code>position:relative;</code> 是为了解决 Firefox 中获取鼠标位置不准确的问题。如果不加这句，在 Firefox 中 <code>getMouseWithinX()</code> 得到鼠标位置貌似不是期望的相对 <code>field0_star</code> 的位置，而是相对页面的位置，所以值会过大，效果就是鼠标一移上去就会显示多于5个星星。要把这几个问题搞清，还需要进一步弄清楚 IE 和 Firefox 中事件与其元素及鼠标的关系。如果哪位同仁有所见解，欢迎留言交流。</p>
 <hr />
-<p><em>原文链接: https://www.snowpeak.fun/cn/article/detail/a_simple_star_rating/</em></p>
     </main>
     
     <!-- 相关文章 -->

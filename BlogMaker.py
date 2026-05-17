@@ -119,6 +119,13 @@ class BlogMaker:
             content = re.split(r'^-+\s*$', content, maxsplit=1, flags=re.MULTILINE)
             content = content[1] if len(content) > 1 else content[0]  # 取第二部分作为正文
 
+            # 过滤掉原文链接及后面的内容（用于SEO优化，移除旧链接）
+            # 中文: *原文链接: ...*  英文: *link: ...*
+            if self.langPath == 'zh':
+                content = re.sub(r'^\s*\*原文链接:.*$[\s\S]*', '', content, flags=re.MULTILINE)
+            else:
+                content = re.sub(r'^\s*\*link:.*$[\s\S]*', '', content, flags=re.MULTILINE)
+
             # 使用 markdown 库将 Markdown 转换为 HTML
             md = markdown.Markdown(extensions=['fenced_code', 'tables', 'sane_lists', 'nl2br'])
             html_content = md.convert(content)

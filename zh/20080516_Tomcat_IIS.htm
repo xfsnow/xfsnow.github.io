@@ -8,7 +8,7 @@
     <meta name="description" content="介绍把 Tomcat 5.5.25 集成进 IIS 5.1 的主要方法和步骤。">
     <meta name="keywords" content="AI, GitHub Copilot, Azure云, 云计算, 前端技术, 后端技术, Web开发, 软件工程">
     <link rel="canonical" href="/zh/tomcat-iis/">
-    <link rel="stylesheet" href="/assets/css/style.css"><!-- Font Awesome replaced with inline SVG -->
+    <link rel="stylesheet" href="/assets/css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/default.min.css">
 </head>
 <body>
@@ -207,7 +207,6 @@ group=status:
 <p>Windows XP 对 NTFS 权限非常麻烦，最后试成的就是要给 <code>isapi_redirector2.dll</code>、各个配置文件所在路径和要运行 JSP 的路径以及其中的文件赋给 <code>IUSR_machinename</code>（<code>machinename</code> 是机器名，如我的机器名叫 <code>ads</code>，则这个用户就是 <code>IUSR_ads</code>）用户读和写的权限。</p>
 <p>如果还不行，注意看 Tomcat 的日志和 Windows 事件查看，结合再查。</p>
 <hr />
-<p><em>原文链接: https://www.snowpeak.fun/cn/article/detail/integrate_tomcat_into_iis/</em></p>
     </main>
     
     <!-- 相关文章 -->

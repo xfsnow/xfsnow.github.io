@@ -8,7 +8,7 @@
     <meta name="description" content="Apache2 服务无法启动报错的一种情况及解决方法">
     <meta name="keywords" content="AI, GitHub Copilot, Azure云, 云计算, 前端技术, 后端技术, Web开发, 软件工程">
     <link rel="canonical" href="/zh/apache/">
-    <link rel="stylesheet" href="/assets/css/style.css"><!-- Font Awesome replaced with inline SVG -->
+    <link rel="stylesheet" href="/assets/css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/default.min.css">
 </head>
 <body>
@@ -62,7 +62,6 @@
 </code></pre>
 <p>的错误，这种错误可能有多种原因引起。我今天发现配置文件注释用得不对也是造成这个错误的一个原因：配置文件 <code>httpd.conf</code> 中如果写注释，注释以 <code>#</code> 开头必须单独放在一行中。而在某个配置项同一行写了 <code>#</code> 注释，就会造成以上无法启动的问题。解决办法就是把注释都单独放在一行。这只是无法启动的一个可能的原因，希望给遇到这个问题的朋友多一点思路，多一点帮助。</p>
 <hr />
-<p><em>原文链接: https://www.snowpeak.fun/cn/article/detail/a_solution_to_apache_2_specific_error_1/</em></p>
     </main>
     
     <!-- 相关文章 -->
