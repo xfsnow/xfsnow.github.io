@@ -10,20 +10,35 @@
             </div>
         </div>
     </header>
-    <!-- 面包屑导航
+    <!-- 面包屑导航 -->
     <nav class="breadcrumb">
         <div class="container">
-            <a href="../index.html">首页</a>
+            <a href="/">{% if data.lang.lang == 'zh' %}首页{% else %}Home{% endif %}</a>
             <span>&gt;</span>
-            <a href="../index.html#articles">文章</a>
+            <a href="/{{ data.lang.lang }}/page-1/">{{ data.lang.article }}</a>
             <span>&gt;</span>
-            <span>当前文章</span>
+            <span>{{ data.article.title }}</span>
         </div>
     </nav>
-    -->
 
     <!-- 文章内容 -->
     <main class="article-container">
         {{ data.article.content | safe }}
     </main>
+    
+    {% if data.article.related_articles %}
+    <!-- 相关文章 -->
+    <section class="related-articles">
+        <div class="container">
+            <h3>{% if data.lang.lang == 'zh' %}相关文章{% else %}Related Articles{% endif %}</h3>
+            <div class="related-articles-list">
+                {% for article in data.article.related_articles %}
+                <a href="{{ article.seo_url }}" class="related-article-item">
+                    <h4>{{ article.title }}</h4>
+                </a>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+    {% endif %}
 {% include 'inc.end.html' %}

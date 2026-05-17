@@ -144,7 +144,7 @@ class Blog {
                 <span class="article-date">${article.time_publish}</span>
             </div>
             <h3 class="article-title">
-                <a href="${article.filename}">${article.title}</a>
+                <a href="${article.seo_url || article.filename}">${article.title}</a>
             </h3>
             <p class="article-summary">${article.summary}</p>
         `;

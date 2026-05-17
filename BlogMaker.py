@@ -83,6 +83,22 @@ class BlogMaker:
             output_file = os.path.join(self.langPath, 'index.html')
         self.view.write_html(output_file, html_content, strip=True)
 
+    def get_related_articles(self, current_article: dict, all_articles: list, count: int = 3) -> list:
+        """获取相关文章（同分类）"""
+        related = []
+        for article in all_articles:
+            if article['filename'] != current_article['filename'] and article['category'] == current_article['category']:
+                related.append(article)
+                if len(related) >= count:
+                    break
+        return related
+
+    def process_html_content(self, html_content: str) -> str:
+        """处理HTML内容，优化图片路径等"""
+        # 修正图片路径：../assets/img/ -> /assets/img/
+        html_content = html_content.replace('../assets/img/', '/assets/img/')
+        return html_content
+
     # markdown 转成HTML，然后再带上模板的页眉和页脚
     def make_article(self):
         articles = self.list_articles()
@@ -91,8 +107,6 @@ class BlogMaker:
             markdownPath = os.path.join(self.langPath, article['filename'].replace('.htm', '.md'))
             # markdownPath 去掉开头 / 符
             markdownPath = markdownPath.lstrip('/')
-            # print(f"正在处理文章: {markdownPath}")
-            # exit()
             if not os.path.exists(markdownPath):
                 print(f"文章文件 {markdownPath} 不存在")
                 continue
@@ -108,9 +122,16 @@ class BlogMaker:
             # 使用 markdown 库将 Markdown 转换为 HTML
             md = markdown.Markdown(extensions=['fenced_code', 'tables', 'sane_lists', 'nl2br'])
             html_content = md.convert(content)
+            
+            # 处理HTML内容
+            html_content = self.process_html_content(html_content)
+            
             # 根据 markdown 文件内容长度粗略估计阅读时间， 假设每分钟阅读 60 个单词
             reading_time = len(content.split()) // 60
             reading_time_str = f"{reading_time}" if reading_time > 0 else "1"
+
+            # 获取相关文章
+            related_articles = self.get_related_articles(article, articles)
 
             # 渲染模板
             data = {
@@ -119,15 +140,27 @@ class BlogMaker:
                     'date': article['time_publish'],
                     'reading_time': reading_time_str,
                     'category_name': article['category_name'],
-                    'content': html_content
+                    'category': article['category'],
+                    'content': html_content,
+                    'summary': article['summary'],
+                    'seo_url': article['seo_url'],
+                    'related_articles': related_articles
                 },
                 'lang': self.getLang()
             }
             rendered_html = self.view.render_template('article.html', data=data)
 
-            # 保存生成的 HTML 文件
-            output_file = os.path.join(self.langPath, article['filename']).lstrip('/')
-            self.view.write_html(output_file, rendered_html, strip=True)
+            # 保存旧的 HTML 文件（保持向后兼容）
+            output_file_old = os.path.join(self.langPath, article['filename']).lstrip('/')
+            self.view.write_html(output_file_old, rendered_html, strip=True)
+            
+            # 生成新的 SEO 友好目录和 index.html
+            # 从 seo_url 提取目录路径
+            seo_path = article['seo_url'].lstrip('/')  # 去掉开头的 /
+            seo_dir = os.path.dirname(seo_path) if seo_path.endswith('/') else seo_path
+            os.makedirs(seo_dir, exist_ok=True)
+            output_file_new = os.path.join(seo_dir, 'index.html')
+            self.view.write_html(output_file_new, rendered_html, strip=True)
             # break
 
         print(f"已生成 {len(articles)} 篇文章的 HTML 文件")
@@ -162,11 +195,15 @@ class BlogMaker:
             # 渲染模板
             html_content = self.view.render_template('page.html', data=data)
 
-            # 生成文件名
-            output_file = os.path.join(self.langPath, f'page_{page_num}.htm')
-
-            # 保存生成的HTML文件
-            self.view.write_html(output_file, html_content, strip=True)
+            # 生成旧格式文件名（保持向后兼容）
+            output_file_old = os.path.join(self.langPath, f'page_{page_num}.htm')
+            self.view.write_html(output_file_old, html_content, strip=True)
+            
+            # 生成新格式文件名（SEO友好）
+            page_dir = os.path.join(self.langPath, f'page-{page_num}')
+            os.makedirs(page_dir, exist_ok=True)
+            output_file_new = os.path.join(page_dir, 'index.html')
+            self.view.write_html(output_file_new, html_content, strip=True)
 
         print(f"已生成 {total_pages} 个分页文件，共 {total_articles} 篇文章")
 
@@ -238,6 +275,27 @@ class BlogMaker:
 
         return articles
 
+    def get_seo_url(self, filename: str) -> str:
+        """从原文件名生成SEO友好的URL
+        
+        示例：
+            输入: '20060609_configuring_mysql.md' 或 '/zh/20060609_configuring_mysql.htm'
+            输出: '/zh/configuring-mysql/'
+        """
+        # 提取纯文件名
+        pure_filename = filename.split('/')[-1] if '/' in filename else filename
+        pure_filename = pure_filename.replace('.md', '').replace('.htm', '')
+        
+        # 去掉日期前缀（8位数字+下划线）
+        import re
+        keyword_part = re.sub(r'^\d{8}_', '', pure_filename)
+        
+        # 将下划线替换为横杠，并转为小写
+        keyword_part = keyword_part.replace('_', '-').lower()
+        
+        # 生成SEO URL
+        return f'/{self.langPath}/{keyword_part}/'
+
     def extract_article_info(self, filepath: str, filename: str):
         """从单个 Markdown 文件中提取文章信息"""
         try:
@@ -246,8 +304,10 @@ class BlogMaker:
 
             lines = content.split('\n')
             fileUrl = '/' + self.langPath +'/' + filename.replace('.md', '.htm')
+            seo_url = self.get_seo_url(filename)
             article_info = {
                 'filename': fileUrl,
+                'seo_url': seo_url,
                 'title': '',
                 'summary': '',
                 'time_publish': '',
@@ -631,6 +691,54 @@ class BlogMaker:
         if not duplicates_found:
             print("未发现重复标题的文件。")
 
+    def generate_sitemap(self, all_articles_zh: list, all_articles_en: list):
+        """生成 sitemap.xml"""
+        base_url = "https://www.snowpeak.org"
+        xml_lines = ['<?xml version="1.0" encoding="UTF-8"?>']
+        xml_lines.append('<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">')
+        
+        # 添加首页
+        xml_lines.append('  <url>')
+        xml_lines.append(f'    <loc>{base_url}/</loc>')
+        xml_lines.append('    <priority>1.0</priority>')
+        xml_lines.append('  </url>')
+        
+        # 添加中文文章
+        for article in all_articles_zh:
+            xml_lines.append('  <url>')
+            xml_lines.append(f'    <loc>{base_url}{article["seo_url"]}</loc>')
+            xml_lines.append(f'    <lastmod>{article["time_publish"].split()[0]}</lastmod>')
+            xml_lines.append('    <priority>0.8</priority>')
+            xml_lines.append('  </url>')
+        
+        # 添加英文文章
+        for article in all_articles_en:
+            xml_lines.append('  <url>')
+            xml_lines.append(f'    <loc>{base_url}{article["seo_url"]}</loc>')
+            xml_lines.append(f'    <lastmod>{article["time_publish"].split()[0]}</lastmod>')
+            xml_lines.append('    <priority>0.8</priority>')
+            xml_lines.append('  </url>')
+        
+        xml_lines.append('</urlset>')
+        
+        sitemap_content = '\n'.join(xml_lines)
+        with open('sitemap.xml', 'w', encoding='utf-8') as f:
+            f.write(sitemap_content)
+        print("已生成 sitemap.xml")
+
+    def generate_robots_txt(self):
+        """生成 robots.txt"""
+        robots_content = '''User-agent: *
+Allow: /zh/
+Allow: /en/
+Disallow: /assets/
+
+Sitemap: https://www.snowpeak.org/sitemap.xml
+'''
+        with open('robots.txt', 'w', encoding='utf-8') as f:
+            f.write(robots_content)
+        print("已生成 robots.txt")
+
     def main(self):
         # 处理文章索引
         zh_articles = self.index_article()
@@ -652,10 +760,22 @@ class BlogMaker:
 
 
 if __name__ == "__main__":
-    blog_maker = BlogMaker('zh')
-    blog_maker.main()
-    # blog_maker.clearDuplicate()
+    # 生成中文内容
+    blog_maker_zh = BlogMaker('zh')
+    articles_zh = blog_maker_zh.index_article()
+    blog_maker_zh.make_home()
+    blog_maker_zh.make_about()
+    blog_maker_zh.make_article()
+    blog_maker_zh.make_pager()
 
-    blog_maker = BlogMaker('en')
-    blog_maker.main()
-    # blog_maker.fix()
+    # 生成英文内容
+    blog_maker_en = BlogMaker('en')
+    articles_en = blog_maker_en.index_article()
+    blog_maker_en.make_home()
+    blog_maker_en.make_about()
+    blog_maker_en.make_article()
+    blog_maker_en.make_pager()
+
+    # 生成 sitemap 和 robots.txt
+    blog_maker_zh.generate_sitemap(articles_zh, articles_en)
+    blog_maker_zh.generate_robots_txt()

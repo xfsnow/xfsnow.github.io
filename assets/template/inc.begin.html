@@ -4,9 +4,20 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    {% if data.article and data.article.title %}
+    <title>{{ data.article.title }} | {{ data.lang.title }}</title>
+    {% else %}
     <title>{{ data.lang.title }}</title>
+    {% endif %}
+    {% if data.article and data.article.summary %}
+    <meta name="description" content="{{ data.article.summary }}">
+    {% else %}
     <meta name="description" content="{{ data.lang.description }}">
+    {% endif %}
     <meta name="keywords" content="{{ data.lang.keywords }}">
+    {% if data.article and data.article.seo_url %}
+    <link rel="canonical" href="{{ data.article.seo_url }}">
+    {% endif %}
     <link rel="stylesheet" href="/assets/css/style.css"><!-- Font Awesome replaced with inline SVG -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/default.min.css">
 </head>
@@ -20,13 +31,13 @@
             <div class="nav-menu">
             {% if data.lang.lang == 'zh' %}
                 <a href="/" class="nav-link">{{data.lang.home}}</a>
-                <a href="/{{ data.lang.lang }}/page_1.htm" class="nav-link">{{data.lang.article}}</a>
+                <a href="/{{ data.lang.lang }}/page-1/" class="nav-link">{{data.lang.article}}</a>
                 <a href="/#tools" class="nav-link">{{data.lang.tool}}</a>
                 <a href="/{{ data.lang.lang }}/about.htm" class="nav-link">{{data.lang.about}}</a>
                 <a href="/en/" class="nav-link lang-switch"><svg class="icon" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg> English</a>
             {% else %}
                 <a href="/{{ data.lang.lang }}/" class="nav-link">{{data.lang.home}}</a>
-                <a href="/{{ data.lang.lang }}/page_1.htm" class="nav-link">{{data.lang.article}}</a>
+                <a href="/{{ data.lang.lang }}/page-1/" class="nav-link">{{data.lang.article}}</a>
                 <a href="/{{ data.lang.lang }}#tools" class="nav-link">{{data.lang.tool}}</a>
                 <a href="/{{ data.lang.lang }}/about.htm" class="nav-link">{{data.lang.about}}</a>
                 <a href="/" class="nav-link lang-switch"><svg class="icon" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg> 简体中文</a>

@@ -203,32 +203,56 @@ body {
     text-align: center;
 }
 
-.search-box {
+.search-form {
     max-width: 800px;
-    margin: 0 auto;
-    position: relative;
-    margin-bottom: 20px;
+    margin: 0 auto 20px auto;
+    display: flex;
+    background: var(--bg-primary);
+    border: 2px solid var(--border-color);
+    border-radius: 25px;
+    overflow: hidden;
+    height: 40px;
 }
 
-.search-box i {
-    position: absolute;
-    left: 20px;
-    top: 50%;
-    transform: translateY(-50%);
+.search-form input {
+    flex: 1;
+    border: none;
+    padding: 0 20px;
+    background: transparent;
+    color: var(--text-primary);
+    outline: none;
+    font-size: 1rem;
+    height: 100%;
+    line-height: 40px;
+}
+
+.search-form input::placeholder {
     color: var(--text-secondary);
 }
 
-#searchInput {
-    width: 100%;
-    padding: 15px 20px 15px 50px;
-    border: 2px solid var(--border-color);
-    border-radius: 50px;
-    font-size: 1rem;
-    outline: none;
-    transition: border-color 0.3s ease;
+.search-btn {
+    width: 48px;
+    min-width: 48px;
+    height: 100%;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0 25px 25px 0;
+    transition: background-color 0.3s;
+    flex-shrink: 0;
 }
 
-#searchInput:focus {
+.search-btn svg {
+    width: 18px;
+    height: 18px;
+    stroke: var(--primary-color);
+    fill: none;
+}
+
+.search-form:focus-within {
     border-color: var(--primary-color);
 }
 

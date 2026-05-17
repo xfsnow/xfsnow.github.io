@@ -28,7 +28,7 @@
                     <span class="article-date">{{ article.time_publish }}</span>
                 </div>
                 <h3 class="article-title">
-                    <a href="{{ article.filename }}">{{ article.title }}</a>
+                    <a href="{{ article.seo_url }}">{{ article.title }}</a>
                 </h3>
                 <p class="article-summary">{{ article.summary }}</p>
             </div>
@@ -44,19 +44,19 @@
         <ul class="pagination">
             {% if data.page > 1 %}
             <li class="page-item">
-                <a class="page-link" href="/{{ data.lang.lang }}/page_{{ data.page - 1 }}.htm" aria-label="Previous">
+                <a class="page-link" href="/{{ data.lang.lang }}/page-{{ data.page - 1 }}/" aria-label="Previous">
                     <span aria-hidden="true">&laquo;</span>
                 </a>
             </li>
             {% endif %}
             {% for i in range(1, data.total_pages + 1) %}
             <li class="page-item {% if i == data.page %}active{% endif %}">
-                <a class="page-link" href="/{{ data.lang.lang }}/page_{{ i }}.htm">{{ i }}</a>
+                <a class="page-link" href="/{{ data.lang.lang }}/page-{{ i }}/">{{ i }}</a>
             </li>
             {% endfor %}
             {% if data.page < data.total_pages %}
             <li class="page-item">
-                <a class="page-link" href="/{{ data.lang.lang }}/page_{{ data.page + 1 }}.htm" aria-label="Next">
+                <a class="page-link" href="/{{ data.lang.lang }}/page-{{ data.page + 1 }}/" aria-label="Next">
                     <span aria-hidden="true">&raquo;</span>
                 </a>
             </li>

@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /zh/
+Allow: /en/
+Disallow: /assets/
+
+Sitemap: https://www.snowpeak.org/sitemap.xml

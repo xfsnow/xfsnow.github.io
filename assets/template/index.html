@@ -19,10 +19,15 @@
     <div class="search-section">
         <div class="container">
             <div class="search-container">
-                <div class="search-box">
-                    <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-                    <input type="text" id="searchInput" placeholder="{{data.lang.search_placeholder}}" aria-label="{{data.lang.search_placeholder}}">
-                </div>
+                <form action="/search" method="get" class="search-form">
+                    <input type="text" id="searchInput" name="keyword" placeholder="{{data.lang.search_placeholder}}" aria-label="{{data.lang.search_placeholder}}">
+                    <button type="submit" class="search-btn">
+                        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="11" cy="11" r="8"></circle>
+                            <path d="m21 21-4.35-4.35"></path>
+                        </svg>
+                    </button>
+                </form>
                 <div class="search-filters">
                  <button class="filter-btn active" data-category="all">{{data.lang.all}}</button>
                     {% for category in data.categories %}
@@ -36,7 +41,7 @@
     <!-- 文章列表 -->
     <section id="articles" class="articles-section">
         <div class="container">
-            <h2 class="section-title"><a href="/{{ data.lang.lang }}/page_1.htm">{{data.lang.all}} {{data.lang.article}}</a></h2>
+            <h2 class="section-title"><a href="/{{ data.lang.lang }}/page-1/">{{data.lang.all}} {{data.lang.article}}</a></h2>
             <div class="articles-grid" id="articlesGrid">
 {% for article in data.articles %}
             <div class="article-card">
@@ -46,7 +51,7 @@
                 <span class="article-date">{{ article.time_publish }}</span>
             </div>
             <h3 class="article-title">
-                <a href="{{ article.filename }}">{{ article.title }}</a>
+                <a href="{{ article.seo_url }}">{{ article.title }}</a>
             </h3>
             <p class="article-summary">{{ article.summary }}</p>
         </div>
