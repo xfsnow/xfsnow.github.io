@@ -30,7 +30,7 @@ body {
 .container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 20px 0 0 0;
 }
 
 /* 导航栏 */
@@ -194,7 +194,6 @@ body {
 
 /* 搜索区域 */
 .search-section {
-    padding: 40px 0;
     background: var(--bg-secondary);
 }
 
@@ -327,8 +326,8 @@ body {
 }
 
 .article-header {
-    margin-top: 70px; /* 为固定导航栏留出空间 */
-    padding: 30px 0 30px;
+    margin-top: 40px; /* 为固定导航栏留出空间 */
+    padding: 10px 0;
     background: var(--gradient-primary);
     color: white;
     text-align: center;
@@ -1084,7 +1083,7 @@ a.gongan_beian {
     }
 
     .article-header {
-        padding: 40px 0 30px;
+        padding: 30px 0 10px 0;
     }
 
     .article-header h1 {
@@ -1296,7 +1295,6 @@ html {
 @media (max-width: 768px) {
     .breadcrumb {
         padding: 10px 0;
-        margin-top: 70px;
     }
 
     .breadcrumb .container {
@@ -1338,3 +1336,44 @@ html {
         max-width: 150px;
     }
 }
+
+/* 相关文章区域样式 */
+.related-articles {
+    padding: 15px 0;
+    margin-top: 20px;
+    border-top: 1px solid #eee;
+}
+
+.related-articles h3 {
+    font-size: 1.2rem;
+    color: var(--text-primary);
+    margin-bottom: 12px;
+}
+
+.related-articles-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.related-article-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 0;
+    text-decoration: none;
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    line-height: 1.4;
+}
+
+.related-article-item:hover {
+    text-decoration: underline;
+}
+
+.related-article-item h4 {
+    margin: 0;
+    font-weight: normal;
+}
+
+
