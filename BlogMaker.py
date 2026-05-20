@@ -87,7 +87,7 @@ class BlogMaker:
         """获取相关文章（同分类）"""
         related = []
         for article in all_articles:
-            if article['filename'] != current_article['filename'] and article['category'] == current_article['category']:
+            if article['seo_url'] != current_article['seo_url'] and article['category'] == current_article['category']:
                 related.append(article)
                 if len(related) >= count:
                     break
@@ -104,7 +104,26 @@ class BlogMaker:
         articles = self.list_articles()
         # 遍历所有文章，生成每篇文章的 HTML
         for article in articles:
-            markdownPath = os.path.join(self.langPath, article['filename'].replace('.htm', '.md'))
+            # 从 seo_url 提取 markdown 文件路径（去掉开头的 /{lang}/ 和末尾的 /）
+            # 查找对应的 markdown 文件（可能在 SEO 目录或原始位置）
+            import re
+            seo_path = article['seo_url'].lstrip('/').rstrip('/')
+            slug = seo_path.split('/')[-1]
+            
+            # 尝试在 SEO 目录中查找 index.md
+            seo_md_path = os.path.join(self.langPath, slug, 'index.md')
+            if os.path.exists(seo_md_path):
+                markdownPath = seo_md_path
+            else:
+                # 回退：在 zh 或 en 目录下查找带日期的原始 markdown 文件
+                # 遍历目录找到匹配的 slug
+                md_files = [f for f in os.listdir(self.langPath) if f.endswith('.md') and not f.startswith('about')]
+                for md_file in md_files:
+                    # 检查文件名是否包含这个 slug
+                    md_slug = re.sub(r'^\d{8}_', '', md_file.replace('.md', '')).replace('_', '-').lower()
+                    if md_slug == slug:
+                        markdownPath = os.path.join(self.langPath, md_file)
+                        break
             # markdownPath 去掉开头 / 符
             markdownPath = markdownPath.lstrip('/')
             if not os.path.exists(markdownPath):
@@ -157,10 +176,6 @@ class BlogMaker:
             }
             rendered_html = self.view.render_template('article.html', data=data)
 
-            # 保存旧的 HTML 文件（保持向后兼容）
-            output_file_old = os.path.join(self.langPath, article['filename']).lstrip('/')
-            self.view.write_html(output_file_old, rendered_html, strip=True)
-            
             # 生成新的 SEO 友好目录和 index.html
             # 从 seo_url 提取目录路径
             seo_path = article['seo_url'].lstrip('/')  # 去掉开头的 /
@@ -202,10 +217,6 @@ class BlogMaker:
             # 渲染模板
             html_content = self.view.render_template('page.html', data=data)
 
-            # 生成旧格式文件名（保持向后兼容）
-            output_file_old = os.path.join(self.langPath, f'page_{page_num}.htm')
-            self.view.write_html(output_file_old, html_content, strip=True)
-            
             # 生成新格式文件名（SEO友好）
             page_dir = os.path.join(self.langPath, f'page-{page_num}')
             os.makedirs(page_dir, exist_ok=True)
@@ -310,10 +321,8 @@ class BlogMaker:
                 content = f.read()
 
             lines = content.split('\n')
-            fileUrl = '/' + self.langPath +'/' + filename.replace('.md', '.htm')
             seo_url = self.get_seo_url(filename)
             article_info = {
-                'filename': fileUrl,
                 'seo_url': seo_url,
                 'title': '',
                 'summary': '',
