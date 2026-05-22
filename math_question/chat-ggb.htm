@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8"/>
+  <title>ChatGGB - OpenAI Compatible</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
+  <link rel="stylesheet" href="chat-ggb.css"/>
+  <script src="https://cdn.geogebra.org/apps/deployggb.js"></script>
+  <script src="ai-manager.js"></script>
+  <script src="chat-ggb.js"></script>
+</head>
+<body>
+  <div class="container">
+    <div class="ggb-panel">
+      <h2 class="ggb-title">和AI聊聊天，用GeoGebra画图形</h2>
+      <div id="ggb-element"></div>
+      <div class="button-group">
+        <button id="settings-btn" class="settings-btn">⚙️ 设置</button>
+        <a href="ChatGGB_Guide.html" target="_blank" class="guide-link">使用指南</a>
+      </div>
+
+      <div id="settings-panel" class="settings-panel">
+        <div class="settings-header">
+          <h3>设置</h3>
+          <button id="close-settings" class="close-settings-btn">✕</button>
+        </div>
+        
+        <div class="provider-section">
+          <h4>模型配置</h4>
+          <div class="provider-input-section">
+            <label for="provider-name">模型供应方:</label>
+            <input type="text" id="provider-name" class="provider-input" placeholder="例如: OpenRouter, 智谱AI, NVIDIA Build">
+          </div>
+          
+          <div class="endpoint-section">
+            <label for="api-endpoint">接入端点:</label>
+            <input type="text" id="api-endpoint" class="endpoint-input" placeholder="例如: https://openrouter.ai/api/v1">
+          </div>
+          
+          <div class="api-key-section">
+            <label for="api-key">API Key:</label>
+            <input type="password" id="api-key" class="api-key-input" placeholder="请输入API密钥">
+          </div>
+          
+          <div class="model-name-section">
+            <label for="model-name">模型名称:</label>
+            <input type="text" id="model-name" class="model-name-input" placeholder="例如: meta-llama/llama-3.3-70b-instruct:free">
+          </div>
+        </div>
+        
+        <div class="system-prompt-section">
+          <label for="system-prompt">系统提示语:</label>
+          <textarea id="system-prompt" class="system-prompt-textarea">
+你是一个几何学助手，可以通过GeoGebra绘制几何图形和动画。
+
+当用户请求绘制图形或动画时，请提供：
+1. 友好的解释，包括数学概念和原理
+2. 清晰的GeoGebra命令
+
+规范：
+1. 将GeoGebra命令放在``geogebra和```标记之间，每行一个命令。
+2. 不要在GeoGebra命令行添加任何注释！
+3. 命令应该按照逻辑顺序排列，从基本元素到复杂构造。
+4. 数学公式应该包裹在$$中
+
+GeoGebra支持的命令类型包括：
+
+## 基本元素
+- 点：A = (2, 3)
+- 向量：v = Vector[A, B] 或 v = (1, 2)
+- 线段：Segment(A, B)
+- 直线：Line(A, B)
+- 射线：Ray(A, B)
+- 圆：Circle(A, 3) 或 Circle(A, B)
+- 椭圆：Ellipse(F1, F2, a)
+- 多边形：Polygon(A, B, C, …)
+- 文本: Text(<对象>)
+Text(<对象>,<是否替换变量?true|false>)
+Text(<对象>,<点>)
+Text(<对象>,<点>,<是否替换变量?true|false>)
+Text(<对象>,<点>,<是否替换变量?true|false>,<LaTeX 公式布尔值>)
+Text(<对象>,<点>,<是否替换变量?true|false>,<LaTeX 公式布尔值>,<水平对齐 -1|0|1>)
+Text(<对象>,<点>,<是否替换变量?true|false>,<LaTeX 公式布尔值>,<水平对齐 -1|0|1>,<垂直对齐 -1|0|1>)
+  给点标文本时适当使用最后2个参数调整位置，避免文本和点线重叠。
+
+## 函数和曲线
+- 斜率：Slope(line)
+
+## 动画和交互
+- 滑块：a = Slider[0, 10, 0.1]
+- 启动/停止动画：StartAnimation[a, true] 或 StartAnimation[a, false]
+- 设置动画速度：SetAnimationSpeed(object, speed)
+- 条件显示对象：SetConditionToShowObject(object, condition)
+- 设置轨迹：SetTrace(object, true) 或 SetTrace(object, false)
+- 轨迹曲线：Locus(point, parameter)
+
+## 高级功能
+- 序列：Sequence(expression, variable, from, to, step)
+- 列表：{a, b, c}
+- 条件表达式：If(condition, then, else)
+- 文本对象：Text("文本", (x, y))
+- 脚本按钮（示意）：点击脚本中使用 RunClickScript("命令")
+
+## 动画示例
+
+### 1. 创建滑块并用于动画：
+  a = Slider[0, 10, 0.1]
+  P = (a, 0)
+  StartAnimation[a, true]
+
+### 2. 圆上运动的点：
+  a = Slider[0, 2π, 0.01]
+  P = (5 cos(a), 5 sin(a))
+  Circle((0, 0), 5)
+  StartAnimation[a, true]
+
+### 3. 函数图像的动态变化：
+  a = Slider[0, 5, 0.1]
+  f(x) = a x^2
+  StartAnimation[a, true]
+
+请确保命令语法正确，并在解释中提及每个命令的目的。
+如果用户的请求不明确，请提出澄清问题。
+用户的请求可能与之前提出的请求相关。</textarea>
+        </div>
+        <button id="save-settings" class="save-settings-btn">保存设置</button>
+      </div>
+    </div>
+    
+    <div class="input-panel">
+      <div class="chat-section">
+        <div id="chat-container" class="chat-container"></div>
+        
+        <div class="image-preview-wrapper">
+          <div class="image-preview-container" id="image-preview-container">
+            <img id="image-preview" src="" alt="Image preview">
+            <button id="close-preview" class="close-preview-btn" title="移除图片">×</button>
+          </div>
+        </div>
+        
+        <div class="user-input-container">
+          <div class="input-wrapper">
+            <textarea id="user-input" placeholder="在这里输入内容，让AI帮你画图" rows="3"></textarea>
+            <div class="input-actions">
+              <button id="image-attachment-btn" class="image-attachment-btn" title="添加图片"></button>
+              <button id="send-btn" class="send-btn"  title="发送消息"></button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
