@@ -62,8 +62,6 @@ class OpenAICompatibleAI extends AiBase {
   }
 
   callAPI(userMessage, onUpdate, onComplete, onError, imageBase64 = null) {
-    const thinkingMessage = onUpdate('AI正在思考...', 'ai', true);
-
     const messages = this.constructMessages();
 
     const userContent = this.constructUserContent(userMessage, imageBase64);
@@ -74,6 +72,8 @@ class OpenAICompatibleAI extends AiBase {
       fullEndpoint = fullEndpoint + '/';
     }
     fullEndpoint += 'chat/completions';
+
+    console.log('开始流式请求:', fullEndpoint);
 
     fetch(fullEndpoint, {
       method: 'POST',
@@ -92,21 +92,25 @@ class OpenAICompatibleAI extends AiBase {
         throw new Error('API请求失败: ' + response.status);
       }
 
+      console.log('响应状态:', response.status, '是否支持流式:', !!response.body);
+
       const reader = response.body.getReader();
       const decoder = new TextDecoder('utf-8');
       let fullResponse = '';
+      let chunkCount = 0;
 
       const readStream = () => {
         reader.read().then(({ done, value }) => {
           if (done) {
-            if (thinkingMessage.parentNode) {
-              thinkingMessage.parentNode.removeChild(thinkingMessage);
-            }
+            console.log('流式响应完成, 共收到', chunkCount, '个chunk');
             onComplete(fullResponse, 'ai');
             return;
           }
 
+          chunkCount++;
           const chunk = decoder.decode(value, { stream: true });
+          console.log('收到第', chunkCount, '个chunk, 长度:', chunk.length);
+
           const lines = chunk.split('\n');
 
           lines.forEach(line => {
@@ -121,8 +125,12 @@ class OpenAICompatibleAI extends AiBase {
                 let content = '';
                 if (parsed.choices && parsed.choices.length > 0) {
                   const choice = parsed.choices[0];
-                  if (choice.delta && choice.delta.content !== undefined) {
-                    content = choice.delta.content;
+                  if (choice.delta) {
+                    if (choice.delta.content !== undefined) {
+                      content = choice.delta.content;
+                    } else if (choice.delta.reasoning_content !== undefined) {
+                      content = choice.delta.reasoning_content;
+                    }
                   } else if (choice.message && choice.message.content) {
                     content = choice.message.content;
                   }
@@ -130,7 +138,7 @@ class OpenAICompatibleAI extends AiBase {
 
                 if (content) {
                   fullResponse += content;
-                  thinkingMessage.innerHTML = this.constructor.formatAIResponse(fullResponse);
+                  onUpdate(fullResponse, 'ai', true);
                 }
               } catch (e) {
                 // 忽略解析错误
@@ -140,9 +148,7 @@ class OpenAICompatibleAI extends AiBase {
 
           readStream();
         }).catch(error => {
-          if (thinkingMessage.parentNode) {
-            thinkingMessage.parentNode.removeChild(thinkingMessage);
-          }
+          console.log('流式读取错误:', error);
           onError('错误: ' + error.message, 'ai');
         });
       };
@@ -150,9 +156,7 @@ class OpenAICompatibleAI extends AiBase {
       readStream();
     })
     .catch(error => {
-      if (thinkingMessage.parentNode) {
-        thinkingMessage.parentNode.removeChild(thinkingMessage);
-      }
+      console.log('请求错误:', error);
       onError('错误: ' + error.message, 'ai');
     });
   }

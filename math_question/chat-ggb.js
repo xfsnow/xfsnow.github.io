@@ -431,20 +431,50 @@ GeoGebra Web API支持的命令类型包括：
         chatHistory.pop();
       }
 
+      console.log('创建流式消息');
+      const streamingMessageDiv = this.createStreamingMessage();
+      console.log('流式消息创建成功:', streamingMessageDiv);
+
+      console.log('创建AI客户端');
       const aiClient = new OpenAICompatibleAI(apiKey, SYSTEM_PROMPT, chatHistory, apiEndpoint, modelName, providerName);
       aiClient.callAPI(
         message,
-        (content, sender, isThinking) => this.displayMessage(content, sender, isThinking),
+        (content, sender, isThinking) => {
+          this.updateStreamingMessage(streamingMessageDiv, content);
+        },
         (response) => {
-          this.displayMessage(response, 'ai');
+          if (streamingMessageDiv) {
+            streamingMessageDiv.classList.remove('ai-thinking');
+          }
           const commands = AiBase.extractGgbCommands(response);
           if (commands.length > 0) {
             console.log('GeoGebra commands extracted:', commands);
           }
         },
-        (error) => this.displayMessage(error, 'ai'),
+        (error) => {
+          if (streamingMessageDiv && streamingMessageDiv.parentNode) {
+            streamingMessageDiv.parentNode.removeChild(streamingMessageDiv);
+            streamingMessageDiv = null;
+          }
+          this.displayMessage(error, 'ai');
+        },
         tempImage
       );
+    }
+
+    createStreamingMessage() {
+      const messageDiv = document.createElement('div');
+      messageDiv.classList.add('message', 'ai-message', 'ai-thinking');
+      messageDiv.innerHTML = '<div class="typing-indicator">AI正在思考...</div>';
+      this.chatContainer.appendChild(messageDiv);
+      this.chatContainer.scrollTop = this.chatContainer.scrollHeight;
+      return messageDiv;
+    }
+
+    updateStreamingMessage(messageDiv, content) {
+      console.log('更新流式消息, 内容长度:', content.length);
+      messageDiv.innerHTML = AiBase.formatAIResponse(content);
+      this.chatContainer.scrollTop = this.chatContainer.scrollHeight;
     }
 
     displayUserMessage(text, imageBase64 = null) {
@@ -470,7 +500,7 @@ GeoGebra Web API支持的命令类型包括：
         messageDiv.classList.add('ai-thinking');
       }
 
-      if (sender === 'ai' && !isThinking) {
+      if (sender === 'ai') {
         messageDiv.innerHTML = AiBase.formatAIResponse(message);
       } else {
         messageDiv.textContent = message;
