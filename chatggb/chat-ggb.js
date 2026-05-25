@@ -1,563 +1,681 @@
-window.addEventListener("load", function() {
-  AiBase.formatAIResponse = function(content) {
-    const ggbBlocks = [];
-    let placeholderContent = content.replace(/```(?:\s*geogebra\s*|\s*geogebra\s*\n)([\s\S]*?)```/g, (match, p1) => {
-      const trimmedContent = p1.trim();
-      ggbBlocks.push(trimmedContent);
-      return `{{GGB_BLOCK_${ggbBlocks.length - 1}}}`;
-    });
-
-    let formattedContent = placeholderContent
-      .replace(/&/g, '&amp;')
-      .replace(/</g, '&lt;')
-      .replace(/>/g, '&gt;');
-
-    formattedContent = formattedContent.replace(/```([\s\S]*?)```/g, '<pre><code>$1</code></pre>');
-    formattedContent = formattedContent.replace(/`([^`]+)`/g, '<code>$1</code>');
-    formattedContent = formattedContent.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
-    formattedContent = formattedContent.replace(/\n/g, '<br>');
-
-    formattedContent = formattedContent.replace(/\{\{GGB_BLOCK_(\d+)\}\}/g, (match, index) => {
-      const blockContent = ggbBlocks[index];
-      const lines = blockContent.split('\n').length;
-      return `<textarea class="ggb-code-block" rows="${Math.max(lines, 3)}">${blockContent}</textarea><div class="ggb-execute-container"><button class="ggb-execute-btn" data-ggb-execute><span class="ggb-execute-icon"></span>执行命令</button></div>`;
-    });
-
-    return formattedContent;
-  };
-
-  AiBase.extractGgbCommands = function(response) {
-    const regex = /```(?:\s*geogebra\s*|\s*geogebra\s*\n)([\s\S]*?)```/g;
-    let match;
-    const commands = [];
-
-    while ((match = regex.exec(response)) !== null) {
-      const commandBlock = match[1].trim();
-      const commandLines = commandBlock.split('\n');
-      commandLines.forEach(line => {
-        const trimmedLine = line.trim();
-        if (trimmedLine) {
-          commands.push(trimmedLine);
-        }
-      });
-    }
-
-    return commands;
-  };
-
-  const SYSTEM_PROMPT = `你是一个几何学助手，可以通过GeoGebra绘制几何图形和动画。
-
-当用户请求绘制图形或动画时，请提供：
-1. 友好的解释，包括数学概念和原理
-2. 清晰的GeoGebra命令
-
-规范：
-1. 将GeoGebra命令放在\`\`\`geogebra和\`\`\`标记之间，每行一个命令。
-2. 不要在GeoGebra命令行添加任何注释！
-3. 命令应该按照逻辑顺序排列，从基本元素到复杂构造。
-4. 数学公式应该包裹在$$中
-5. 只使用GeoGebra Web版本支持的英文命令名称
-
-GeoGebra Web API支持的命令类型包括：
-
-## 基本元素
-- 点：A = (2, 3)
-- 向量：v = Vector[A, B] 或 v = (1, 2)
-- 线段：Segment(A, B)
-- 直线：Line(A, B)
-- 射线：Ray(A, B)
-- 圆：Circle(A, r) 或 Circle(A, B) 或 Circle(A, B, C)
-- 椭圆：Ellipse(F1, F2, a)
-- 多边形：Polygon(A, B, C, …)
-- 中点：Midpoint(A, B)
-- 垂直平分线：PerpendicularBisector(A, B)
-- 角平分线：AngleBisector(A, B, C)
-- 交点：Intersection(object1, object2)
-- 垂线：Perpendicular(line, point)
-- 平行线：Parallel(line, point)
-- 距离：Distance(point1, point2)
-- 角度：Angle(A, B, C)
-- 三角形中心：TriangleCenter(A, B, C, n)，其中n是Kimberling数字
-
-## 三角形中心Kimberling数字：
-- X(1) = Incenter（内心，内切圆圆心）
-- X(2) = Centroid（重心）
-- X(3) = Circumcenter（外心，外接圆圆心）
-- X(4) = Orthocenter（垂心）
-- X(5) = Nine-point center（九点圆圆心）
-
-## 函数和曲线
-- 斜率：Slope(line)
-- 函数：f(x) = x^2 + 2x + 1
-
-## 动画和交互
-- 滑块：a = Slider[0, 10, 0.1]
-- 启动/停止动画：StartAnimation[a, true] 或 StartAnimation[a, false]
-- 设置动画速度：SetAnimationSpeed(object, speed)
-- 条件显示对象：SetConditionToShowObject(object, condition)
-- 设置轨迹：SetTrace(object, true) 或 SetTrace(object, false)
-- 轨迹曲线：Locus(point, parameter)
-
-## 高级功能
-- 序列：Sequence(expression, variable, from, to, step)
-- 列表：{a, b, c}
-- 条件表达式：If(condition, then, else)
-- 文本对象：Text("文本", (x, y))
-
-## 常用几何构造示例
-
-### 1. 构造三角形及其外心和外接圆：
-  A = (1, 2)
-  B = (-2, -1)
-  C = (4, 0)
-  Polygon(A, B, C)
-  O = TriangleCenter(A, B, C, 3)
-  c1 = Circle(O, A)
-
-### 2. 构造三角形的内心和内切圆：
-  A = (1, 2)
-  B = (-2, -1)
-  C = (4, 0)
-  Polygon(A, B, C)
-  I = TriangleCenter(A, B, C, 1)
-  c2 = Circle(I, Distance(I, Segment(A, B)))
-
-### 3. 同时绘制三角形的外心和内心：
-  A = (1, 2)
-  B = (-2, -1)
-  C = (4, 0)
-  Polygon(A, B, C)
-  O = TriangleCenter(A, B, C, 3)
-  I = TriangleCenter(A, B, C, 1)
-  Circle(O, A)
-  Circle(I, Distance(I, Segment(A, B)))
-
-### 4. 创建滑块并用于动画：
-  a = Slider[0, 10, 0.1]
-  P = (a, 0)
-  StartAnimation[a, true]
-
-### 5. 圆上运动的点：
-  a = Slider[0, 2π, 0.01]
-  P = (5 cos(a), 5 sin(a))
-  Circle((0, 0), 5)
-  StartAnimation[a, true]
-
-### 6. 函数图像的动态变化：
-  a = Slider[0, 5, 0.1]
-  f(x) = a x^2
-  StartAnimation[a, true]
-
-## 重要提示：
-- 使用 TriangleCenter(A, B, C, n) 获取三角形中心，n为Kimberling数字
-- X(1)用于内心，X(3)用于外心
-- 内切圆半径通过 Distance(I, Segment(A, B)) 计算
-- 所有命令必须使用英文名称
-
-请确保命令语法正确，并在解释中提及每个命令的目的。
-如果用户的请求不明确，请提出澄清问题。
-用户的请求可能与之前提出的请求相关。`;
-
-  class GGBManager {
-    constructor() {
-      this.ggbApp = null;
-      this.sendBtn = null;
-      this.userInput = null;
-      this.chatContainer = null;
-      this.providerNameInput = null;
-      this.apiEndpointInput = null;
-      this.apiKeyInput = null;
-      this.modelNameInput = null;
-      this.settingsBtn = null;
-      this.settingsPanel = null;
-      this.closeSettingsBtn = null;
-      this.saveSettingsBtn = null;
-      this.imageAttachmentBtn = null;
-
-      this.init();
-    }
-
-    init() {
-      this.initGGBApplet();
-      this.initSettings();
-      this.bindElements();
-      this.bindEvents();
-      this.loadSettings();
-    }
-
-    initGGBApplet() {
-      this.ggbApp = new GGBApplet({
-        "width": 600,
-        "height": 600,
-        "showToolBar": true,
-        "showAlgebraInput": false,
-        "showMenuBar": true,
-        "allowStyleBar": true,
-        "language": "zh",
-        "showAlgebraView": false,
-        "perspective": "G"
-      }, true);
-      this.ggbApp.inject('ggb-element');
-    }
-
-    initSettings() {
-      const settingsBtn = document.getElementById('settings-btn');
-      const closeSettingsBtn = document.getElementById('close-settings');
-      const settingsPanel = document.getElementById('settings-panel');
-
-      settingsBtn.addEventListener('click', () => {
-        settingsPanel.classList.add('active');
-      });
-
-      closeSettingsBtn.addEventListener('click', () => {
-        settingsPanel.classList.remove('active');
-      });
-    }
-
-    bindElements() {
-      this.sendBtn = document.getElementById('send-btn');
-      this.userInput = document.getElementById('user-input');
-      this.chatContainer = document.getElementById('chat-container');
-
-      this.providerNameInput = document.getElementById('provider-name');
-      this.apiEndpointInput = document.getElementById('api-endpoint');
-      this.apiKeyInput = document.getElementById('api-key');
-      this.modelNameInput = document.getElementById('model-name');
-
-      this.settingsBtn = document.getElementById('settings-btn');
-      this.settingsPanel = document.getElementById('settings-panel');
-      this.closeSettingsBtn = document.getElementById('close-settings');
-      this.saveSettingsBtn = document.getElementById('save-settings');
-      this.imageAttachmentBtn = document.getElementById('image-attachment-btn');
-    }
-
-    bindEvents() {
-      if (this.imageAttachmentBtn) {
-        this.fileInput = document.createElement('input');
-        this.fileInput.type = 'file';
-        this.fileInput.accept = 'image/*';
-        this.fileInput.style.display = 'none';
-        document.body.appendChild(this.fileInput);
-
-        this.imageAttachmentBtn.addEventListener('click', () => {
-          this.fileInput.click();
-        });
-
-        this.fileInput.addEventListener('change', (e) => {
-          const file = e.target.files[0];
-          if (!file) return;
-
-          const allowedTypes = ['image/jpeg', 'image/png', 'image/gif', 'image/webp'];
-          if (!allowedTypes.includes(file.type)) {
-            alert('仅支持 JPG/PNG/GIF/WEBP 格式图片！');
-            this.fileInput.value = '';
-            return;
-          }
-          if (file.size > 10 * 1024 * 1024) {
-            alert('图片大小不能超过10MB！');
-            this.fileInput.value = '';
-            return;
-          }
-
-          const reader = new FileReader();
-          reader.onload = (event) => {
-            AiBase.prototype.selectedImageBase64 = event.target.result;
-            this.showImagePreview(AiBase.prototype.selectedImageBase64);
-          };
-          reader.readAsDataURL(file);
-        });
-      }
-
-      const closePreviewBtn = document.getElementById('close-preview');
-      if (closePreviewBtn) {
-        closePreviewBtn.addEventListener('click', () => {
-          this.hideImagePreview();
-          if (this.fileInput) {
-            this.fileInput.value = '';
-          }
-        });
-      }
-
-      this.sendBtn.addEventListener('click', () => this.sendMessage());
-
-      this.userInput.addEventListener('keydown', (e) => {
-        if (e.key === 'Enter' && !e.shiftKey) {
-          e.preventDefault();
-          this.sendMessage();
-        }
-      });
-
-      this.settingsBtn.addEventListener('click', () => {
-        this.settingsPanel.classList.add('active');
-      });
-
-      this.closeSettingsBtn.addEventListener('click', () => {
-        this.settingsPanel.classList.remove('active');
-      });
-
-      this.saveSettingsBtn.addEventListener('click', () => {
-        this.saveSettings();
-        this.settingsPanel.classList.remove('active');
-      });
-
-      this.chatContainer.addEventListener('click', (e) => {
-        if (e.target && e.target.matches('[data-ggb-execute]')) {
-          this.handleGgbExecute(e.target);
-        }
-      });
-    }
-
-    handleGgbExecute(buttonElement) {
-      const textareaElement = buttonElement.closest('.ggb-execute-container').previousElementSibling;
-      if (textareaElement && textareaElement.classList.contains('ggb-code-block')) {
-        this.executeCommandsFromTextarea(textareaElement);
-      }
-    }
-
-    executeCommandsFromTextarea(textareaElement) {
-      const app = window.ggbApplet;
-
-      if (app) {
+class ChatGGB {
+  constructor() {
+    this.currentChatId = null;
+    this.messages = [];
+    this.ggbInstances = new Map();
+    this.currentGgbId = 0;
+    this.maxRetryCount = 2;
+    this.ggbReady = false;
+    this.currentAssistantMessage = null;
+    
+    this.initElements();
+    this.preloadGeoGebra();
+    this.loadHistory();
+    this.bindEvents();
+  }
+  
+  preloadGeoGebra() {
+    this.showLoadingState();
+    
+    const script = document.createElement('script');
+    script.src = 'https://cdn.geogebra.org/apps/deployggb.js';
+    script.onload = () => {
+      this.initializePreloadGGB();
+    };
+    script.onerror = () => {
+      this.showLoadError();
+    };
+    document.head.appendChild(script);
+  }
+  
+  initializePreloadGGB() {
+    // 创建预加载画板实例
+    const preloadApp = new GGBApplet({
+      "width": 100,
+      "height": 100,
+      "showToolBar": false,
+      "showAlgebraInput": false,
+      "showMenuBar": false,
+      "allowStyleBar": false,
+      "language": "zh",
+      "showAlgebraView": false,
+      "perspective": "G",
+      "appName": "classic"
+    }, true);
+    
+    preloadApp.onLoad = () => {
+      // 预加载完成，销毁临时画板
+      setTimeout(() => {
         try {
-          app.reset();
+          const container = document.getElementById('ggb-preload-container');
+          if (container) {
+            container.innerHTML = '';
+          }
         } catch (e) {
-          try {
-            app.evalCommand('Delete[All]');
-          } catch (e2) {
-            console.warn('无法清空画板:', e2);
-          }
+          console.log('清理预加载容器失败:', e);
         }
+        
+        this.ggbReady = true;
+        this.hideLoadingState();
+      }, 500);
+    };
+    
+    preloadApp.inject('ggb-preload');
+  }
+  
+  showLoadingState() {
+    this.chatContainer.innerHTML = `
+      <div class="loading-container">
+        <div class="loading-spinner"></div>
+        <p>正在加载 GeoGebra...</p>
+        <p class="loading-hint">这可能需要几秒钟，请耐心等待</p>
+      </div>
+    `;
+    this.sendBtn.disabled = true;
+    this.userInput.disabled = true;
+  }
+  
+  hideLoadingState() {
+    this.chatContainer.innerHTML = `
+      <div class="welcome-message">
+        <div class="welcome-icon">🎨</div>
+        <h3>欢迎使用AI几何绘图助手</h3>
+        <p>输入几何作图需求，AI会自动帮你生成GeoGebra命令并绘制图形</p>
+        <div class="welcome-examples">
+          <span class="example-tag">画一个等边三角形</span>
+          <span class="example-tag">构造圆的切线</span>
+          <span class="example-tag">证明勾股定理</span>
+        </div>
+      </div>
+    `;
+    this.sendBtn.disabled = false;
+    this.userInput.disabled = false;
+  }
+  
+  showLoadError() {
+    this.chatContainer.innerHTML = `
+      <div class="error-container">
+        <div class="error-icon">❌</div>
+        <p>GeoGebra 加载失败</p>
+        <p>请检查网络连接或稍后重试</p>
+        <button onclick="window.location.reload()" class="retry-btn">🔄 刷新重试</button>
+      </div>
+    `;
+  }
+  
+  initElements() {
+    this.chatContainer = document.getElementById('chat-container');
+    this.userInput = document.getElementById('user-input');
+    this.sendBtn = document.getElementById('send-btn');
+    this.chatTitle = document.getElementById('chat-title');
+    this.historyList = document.getElementById('history-list');
+    this.newChatBtn = document.getElementById('new-chat-btn');
+    this.settingsBtn = document.getElementById('settings-btn');
+    this.settingsPanel = document.getElementById('settings-panel');
+    this.closeSettingsBtn = document.getElementById('close-settings');
+    this.saveSettingsBtn = document.getElementById('save-settings');
+    this.exampleTags = document.querySelectorAll('.example-tag');
+  }
+  
+  bindEvents() {
+    this.sendBtn.addEventListener('click', () => this.sendMessage());
+    this.userInput.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' && !e.shiftKey) {
+        e.preventDefault();
+        this.sendMessage();
       }
-
-      const commands = textareaElement.value.split('\n');
-
-      commands.forEach((command) => {
-        command = command.trim();
-        if (command) {
-          try {
-            app.evalCommand(command);
-          } catch (e) {
-            console.error('执行命令出错: ' + command, e);
-          }
-        }
+    });
+    
+    this.newChatBtn.addEventListener('click', () => this.newChat());
+    this.settingsBtn.addEventListener('click', () => this.openSettings());
+    this.closeSettingsBtn.addEventListener('click', () => this.closeSettings());
+    
+    this.exampleTags.forEach(tag => {
+      tag.addEventListener('click', () => {
+        this.userInput.value = tag.textContent;
+        this.sendMessage();
       });
+    });
+    
+    this.saveSettingsBtn.addEventListener('click', () => this.saveSettings());
+  }
+  
+  newChat() {
+    this.currentChatId = null;
+    this.messages = [];
+    this.chatTitle.textContent = '新对话';
+    this.chatContainer.innerHTML = `
+      <div class="welcome-message">
+        <div class="welcome-icon">🎨</div>
+        <h3>欢迎使用AI几何绘图助手</h3>
+        <p>输入几何作图需求，AI会自动帮你生成GeoGebra命令并绘制图形</p>
+        <div class="welcome-examples">
+          <span class="example-tag">画一个等边三角形</span>
+          <span class="example-tag">构造圆的切线</span>
+          <span class="example-tag">证明勾股定理</span>
+        </div>
+      </div>
+    `;
+    
+    // 移除所有历史项的active状态
+    document.querySelectorAll('.history-item').forEach(item => {
+      item.classList.remove('active');
+    });
+  }
+  
+  async sendMessage() {
+    if (!this.ggbReady) {
+      alert('GeoGebra 正在加载中，请稍候...');
+      return;
     }
-
-    executeCommands() {
-      const app = window.ggbApplet;
-
-      if (app) {
-        try {
-          app.reset();
-        } catch (e) {
-          try {
-            app.evalCommand('Delete[All]');
-          } catch (e2) {
-            console.warn('无法清空画板:', e2);
-          }
+    
+    const message = this.userInput.value.trim();
+    if (!message) return;
+    
+    // 清空输入框
+    this.userInput.value = '';
+    
+    // 如果是新对话，生成标题
+    if (!this.currentChatId) {
+      this.currentChatId = Date.now().toString();
+      const title = this.generateTitle(message);
+      this.chatTitle.textContent = title;
+      
+      // 移除欢迎消息
+      this.chatContainer.innerHTML = '';
+    }
+    
+    // 添加用户消息
+    this.addMessage('user', message);
+    
+    // 发送到AI（使用流式响应）
+    this.sendToAIStream(message);
+  }
+  
+  generateTitle(message) {
+    // 规则提取标题
+    const keywords = ['画', '绘制', '构造', '证明', '求', '计算', '作', '做', '创建'];
+    for (const kw of keywords) {
+      if (message.includes(kw)) {
+        const idx = message.indexOf(kw);
+        const title = message.substring(idx, Math.min(idx + 15, message.length));
+        return title.replace(/[。，,、]/g, '');
+      }
+    }
+    return message.substring(0, Math.min(10, message.length)) + '...';
+  }
+  
+  async sendToAIStream(message) {
+    // 添加助手消息容器（用于流式更新）
+    this.currentAssistantMessage = this.addAssistantMessageContainer();
+    
+    try {
+      // 调用AI（带流式回调）
+      const response = await AiManager.sendMessage(
+        message, 
+        this.messages,
+        (partialContent) => {
+          // 实时更新消息内容
+          this.updateAssistantMessage(partialContent);
         }
-      }
-
-      const commands = this.commandArea.value.split('\n');
-
-      commands.forEach((command) => {
-        command = command.trim();
-        if (command) {
-          try {
-            app.evalCommand(command);
-          } catch (e) {
-            console.error('执行命令出错: ' + command, e);
-          }
-        }
-      });
-    }
-
-    showImagePreview(imageData) {
-      const previewWrapper = document.querySelector('.image-preview-wrapper');
-      const previewImage = document.getElementById('image-preview');
-
-      if (imageData && previewWrapper && previewImage) {
-        previewImage.src = imageData;
-        previewWrapper.classList.add('active');
-      }
-    }
-
-    hideImagePreview() {
-      const previewWrapper = document.querySelector('.image-preview-wrapper');
-      if (previewWrapper) {
-        previewWrapper.classList.remove('active');
-      }
-    }
-
-    sendMessage() {
-      const message = this.userInput.value.trim();
-      if (!message && !AiBase.prototype.selectedImageBase64) return;
-
-      this.displayUserMessage(message, AiBase.prototype.selectedImageBase64);
-
-      this.userInput.value = '';
-      const tempImage = AiBase.prototype.selectedImageBase64;
-      AiBase.prototype.selectedImageBase64 = null;
-      this.hideImagePreview();
-      if (this.fileInput) {
-        this.fileInput.value = '';
-      }
-
-      const providerName = this.providerNameInput.value.trim();
-      const apiEndpoint = this.apiEndpointInput.value.trim();
-      const apiKey = this.apiKeyInput.value.trim();
-      const modelName = this.modelNameInput.value.trim();
-
-      if (!providerName) {
-        this.displayMessage('请先输入模型供应方', 'ai');
-        return;
-      }
-      if (!apiEndpoint) {
-        this.displayMessage('请先输入接入端点', 'ai');
-        return;
-      }
-      if (!apiKey) {
-        this.displayMessage('请先输入API密钥', 'ai');
-        return;
-      }
-      if (!modelName) {
-        this.displayMessage('请先输入模型名称', 'ai');
-        return;
-      }
-
-      const chatHistory = this.getChatHistory();
-
-      if (chatHistory.length > 0 && chatHistory[chatHistory.length - 1].role === 'user') {
-        chatHistory.pop();
-      }
-
-      console.log('创建流式消息');
-      const streamingMessageDiv = this.createStreamingMessage();
-      console.log('流式消息创建成功:', streamingMessageDiv);
-
-      console.log('创建AI客户端');
-      const aiClient = new OpenAICompatibleAI(apiKey, SYSTEM_PROMPT, chatHistory, apiEndpoint, modelName, providerName);
-      aiClient.callAPI(
-        message,
-        (content, sender, isThinking) => {
-          this.updateStreamingMessage(streamingMessageDiv, content);
-        },
-        (response) => {
-          if (streamingMessageDiv) {
-            streamingMessageDiv.classList.remove('ai-thinking');
-          }
-          const commands = AiBase.extractGgbCommands(response);
-          if (commands.length > 0) {
-            console.log('GeoGebra commands extracted:', commands);
-          }
-        },
-        (error) => {
-          if (streamingMessageDiv && streamingMessageDiv.parentNode) {
-            streamingMessageDiv.parentNode.removeChild(streamingMessageDiv);
-            streamingMessageDiv = null;
-          }
-          this.displayMessage(error, 'ai');
-        },
-        tempImage
       );
-    }
-
-    createStreamingMessage() {
-      const messageDiv = document.createElement('div');
-      messageDiv.classList.add('message', 'ai-message', 'ai-thinking');
-      messageDiv.innerHTML = '<div class="typing-indicator">AI正在思考...</div>';
-      this.chatContainer.appendChild(messageDiv);
-      this.chatContainer.scrollTop = this.chatContainer.scrollHeight;
-      return messageDiv;
-    }
-
-    updateStreamingMessage(messageDiv, content) {
-      console.log('更新流式消息, 内容长度:', content.length);
-      messageDiv.innerHTML = AiBase.formatAIResponse(content);
-      this.chatContainer.scrollTop = this.chatContainer.scrollHeight;
-    }
-
-    displayUserMessage(text, imageBase64 = null) {
-      const messageDiv = document.createElement('div');
-      messageDiv.classList.add('message', 'user-message');
-
-      let content = `<p>${text || "(无文本消息)"}</p>`;
-      if (imageBase64) {
-        content += `<img src="${imageBase64}" class="image-preview" alt="用户上传图片" style="max-width: 200px; max-height: 200px; margin-top: 10px; border-radius: 4px;">`;
-      }
-
-      messageDiv.innerHTML = content;
-      this.chatContainer.appendChild(messageDiv);
-      this.chatContainer.scrollTop = this.chatContainer.scrollHeight;
-      return messageDiv;
-    }
-
-    displayMessage(message, sender, isThinking = false) {
-      const messageDiv = document.createElement('div');
-      messageDiv.classList.add('message');
-      messageDiv.classList.add(sender + '-message');
-      if (isThinking) {
-        messageDiv.classList.add('ai-thinking');
-      }
-
-      if (sender === 'ai') {
-        messageDiv.innerHTML = AiBase.formatAIResponse(message);
-      } else {
-        messageDiv.textContent = message;
-      }
-
-      this.chatContainer.appendChild(messageDiv);
-      this.chatContainer.scrollTop = this.chatContainer.scrollHeight;
-      return messageDiv;
-    }
-
-    getChatHistory() {
-      const messages = this.chatContainer.querySelectorAll('.message');
-      const history = [];
-
-      messages.forEach((messageDiv) => {
-        if (messageDiv.classList.contains('ai-thinking')) {
-          return;
-        }
-
-        if (messageDiv.classList.contains('user-message')) {
-          const textContent = messageDiv.querySelector('p').textContent;
-
-          let content = [{ type: "text", text: textContent }];
-
-          if (content.length === 1 && content[0].type === "text") {
-            history.push({ role: 'user', content: content[0].text });
-          } else {
-            history.push({ role: 'user', content: content });
-          }
-        } else if (messageDiv.classList.contains('ai-message')) {
-          const textContent = messageDiv.textContent;
-          history.push({ role: 'assistant', content: textContent });
-        }
+      
+      // 消息完成后提取命令并执行
+      const lastMessage = this.currentAssistantMessage;
+      const content = lastMessage.querySelector('.message-content').innerHTML;
+      await this.processGgbCommands(content, lastMessage);
+      
+      // 更新消息历史（保存纯文本版本）
+      const plainContent = content.replace(/<[^>]*>/g, '');
+      this.messages.push({
+        role: 'user',
+        content: message
+      }, {
+        role: 'assistant',
+        content: plainContent
       });
-
-      return history;
-    }
-
-    saveSettings() {
-      const settings = {
-        providerName: this.providerNameInput.value,
-        apiEndpoint: this.apiEndpointInput.value,
-        apiKey: this.apiKeyInput.value,
-        modelName: this.modelNameInput.value
-      };
-      localStorage.setItem('ggbOpenAISettings', JSON.stringify(settings));
-      alert('设置已保存！');
-    }
-
-    loadSettings() {
-      const settings = JSON.parse(localStorage.getItem('ggbOpenAISettings')) || {};
-      this.providerNameInput.value = settings.providerName || '';
-      this.apiEndpointInput.value = settings.apiEndpoint || '';
-      this.apiKeyInput.value = settings.apiKey || '';
-      this.modelNameInput.value = settings.modelName || '';
+      
+      // 保存到历史
+      this.saveChat();
+      
+    } catch (error) {
+      this.updateAssistantMessage(`❌ 发送失败: ${error.message}`);
+    } finally {
+      this.currentAssistantMessage = null;
     }
   }
+  
+  addAssistantMessageContainer() {
+    const messageDiv = document.createElement('div');
+    messageDiv.className = 'message assistant';
+    messageDiv.innerHTML = `
+      <div class="avatar">🤖</div>
+      <div class="message-content"><span class="typing-indicator">正在思考...</span></div>
+    `;
+    this.chatContainer.appendChild(messageDiv);
+    this.scrollToBottom();
+    return messageDiv;
+  }
+  
+  updateAssistantMessage(content) {
+    if (!this.currentAssistantMessage) return;
+    
+    const contentDiv = this.currentAssistantMessage.querySelector('.message-content');
+    contentDiv.innerHTML = this.formatContent(content);
+    this.scrollToBottom();
+  }
+  
+  addLoadingIndicator() {
+    const loadingDiv = document.createElement('div');
+    loadingDiv.className = 'message assistant';
+    loadingDiv.innerHTML = `
+      <div class="avatar">🤖</div>
+      <div class="message-content">
+        <div class="loading-indicator">
+          <span>正在思考</span>
+          <div class="loading-dots">
+            <span class="loading-dot"></span>
+            <span class="loading-dot"></span>
+            <span class="loading-dot"></span>
+          </div>
+        </div>
+      </div>
+    `;
+    this.chatContainer.appendChild(loadingDiv);
+    this.scrollToBottom();
+    return loadingDiv;
+  }
+  
+  addMessage(role, content) {
+    const messageDiv = document.createElement('div');
+    messageDiv.className = `message ${role}`;
+    
+    const avatar = role === 'user' ? '👤' : '🤖';
+    
+    // 处理内容中的代码块
+    let formattedContent = this.formatContent(content);
+    
+    messageDiv.innerHTML = `
+      <div class="avatar">${avatar}</div>
+      <div class="message-content">${formattedContent}</div>
+    `;
+    
+    this.chatContainer.appendChild(messageDiv);
+    this.scrollToBottom();
+    return messageDiv;
+  }
+  
+  formatContent(content) {
+    // 将代码块转换为带样式的格式
+    content = content.replace(/```(\w+)?\n([\s\S]*?)```/g, (match, lang, code) => {
+      return `<div class="code-block"><pre>${code.trim()}</pre></div>`;
+    });
+    
+    // 将行内代码转换
+    content = content.replace(/`([^`]+)`/g, '<code>$1</code>');
+    
+    // 将换行转换为<br>
+    content = content.replace(/\n/g, '<br>');
+    
+    return content;
+  }
+  
+  async processGgbCommands(content, messageDiv) {
+    console.log('Processing GGB commands...');
+    
+    // 提取GeoGebra命令
+    const commands = this.extractGgbCommands(content);
+    console.log('Extracted commands:', commands);
+    
+    if (commands.length === 0) {
+      console.log('No commands found');
+      return;
+    }
+    
+    // 生成新的画板
+    const ggbId = `ggb-${this.currentGgbId++}`;
+    console.log('Creating GGB container with id:', ggbId);
+    
+    const ggbContainer = document.createElement('div');
+    ggbContainer.className = 'ggb-container';
+    ggbContainer.innerHTML = `
+      <div id="${ggbId}" style="width: 100%; height: 400px;"></div>
+    `;
+    
+    // 在消息后面添加画板
+    const contentDiv = messageDiv.querySelector('.message-content');
+    contentDiv.appendChild(ggbContainer);
+    console.log('GGB container added to DOM');
+    
+    // 等待DOM更新
+    await new Promise(resolve => setTimeout(resolve, 100));
+    
+    // 验证容器存在
+    const containerElement = document.getElementById(ggbId);
+    console.log('Container element exists:', !!containerElement);
+    
+    // 创建GeoGebra实例并执行命令
+    await this.executeGgbCommands(ggbId, commands, contentDiv);
+    
+    this.scrollToBottom();
+  }
+  
+  extractGgbCommands(content) {
+    const commands = [];
+    
+    // 匹配代码块中的命令
+    const codeBlockMatch = content.match(/```(\w+)?\n([\s\S]*?)```/);
+    if (codeBlockMatch) {
+      const codeContent = codeBlockMatch[2];
+      const lines = codeContent.split('\n').filter(line => line.trim());
+      commands.push(...lines);
+    }
+    
+    // 如果代码块中没有命令，尝试匹配单行命令
+    if (commands.length === 0) {
+      const regex = /(?:^|\s)([A-Za-z]+\[.*?\]|[A-Za-z]+\([^)]+\)|[A-Za-z]+\s*=\s*.+)/g;
+      let match;
+      while ((match = regex.exec(content)) !== null) {
+        const cmd = match[1].trim();
+        if (this.isValidGgbCommand(cmd)) {
+          commands.push(cmd);
+        }
+      }
+    }
+    
+    return commands;
+  }
+  
+  isValidGgbCommand(cmd) {
+    const validPatterns = [
+      /^[A-Za-z]+\[.*\]$/,
+      /^[A-Za-z]+\s*=\s*\(.+\)$/,
+      /^[A-Za-z]+\s*=\s*".*"$/,
+      /^[A-Za-z]+\s*=\s*[\d.]+$/
+    ];
+    
+    return validPatterns.some(pattern => pattern.test(cmd));
+  }
+  
+  async executeGgbCommands(ggbId, commands, container) {
+    return new Promise((resolve) => {
+      this.initAndExecute(ggbId, commands, container, resolve);
+    });
+  }
+  
+  initAndExecute(ggbId, commands, container, resolve) {
+    console.log('Initializing GGB applet with id:', ggbId);
+    
+    const ggbApp = new GGBApplet({
+      "width": "100%",
+      "height": 400,
+      "showToolBar": true,
+      "showAlgebraInput": false,
+      "showMenuBar": true,
+      "allowStyleBar": true,
+      "language": "zh",
+      "showAlgebraView": false,
+      "perspective": "G",
+      "appName": "classic"
+    }, true);
+    
+    ggbApp.onLoad = () => {
+      console.log('GGB applet loaded successfully');
+      this.executeWithRetry(ggbApp, commands, 0, container)
+        .then(() => resolve())
+        .catch(() => resolve());
+    };
+    
+    ggbApp.inject(ggbId);
+    console.log('GGB applet injected');
+  }
+  
+  async executeWithRetry(ggbApp, commands, retryCount, container) {
+    // 清空画板
+    try {
+      ggbApp.evalCommand('Clear[]');
+    } catch (e) {
+      // 忽略清空错误
+    }
+    
+    // 执行命令并收集错误
+    const errors = [];
+    for (const cmd of commands) {
+      try {
+        ggbApp.evalCommand(cmd);
+      } catch (e) {
+        errors.push({ command: cmd, error: e.message || 'Unknown error' });
+      }
+    }
+    
+    if (errors.length > 0 && retryCount < this.maxRetryCount) {
+      // 显示错误并反馈给AI
+      this.showExecutionResult(container, false, errors);
+      
+      // 构建反馈消息
+      const feedback = `以下GeoGebra命令执行失败，请修正：\n${errors.map(e => `- ${e.command}: ${e.error}`).join('\n')}`;
+      
+      // 发送反馈给AI
+      const loadingDiv = this.addLoadingIndicator();
+      
+      try {
+        const response = await AiManager.sendMessage(feedback, this.messages);
+        loadingDiv.remove();
+        
+        const messageDiv = this.addMessage('assistant', response.content);
+        this.messages.push({
+          role: 'user',
+          content: feedback
+        }, {
+          role: 'assistant',
+          content: response.content
+        });
+        
+        // 提取新命令并重试
+        const newCommands = this.extractGgbCommands(response.content);
+        if (newCommands.length > 0) {
+          await this.executeWithRetry(ggbApp, newCommands, retryCount + 1, container);
+        }
+      } catch (e) {
+        loadingDiv.remove();
+        this.showExecutionResult(container, false, [{ error: 'AI反馈失败: ' + e.message }]);
+      }
+    } else if (errors.length > 0) {
+      // 达到最大重试次数
+      this.showExecutionResult(container, false, errors);
+    } else {
+      // 执行成功
+      this.showExecutionResult(container, true, null);
+    }
+  }
+  
+  showExecutionResult(container, success, errors) {
+    const resultDiv = document.createElement('div');
+    resultDiv.className = `execution-result ${success ? 'success' : 'error'}`;
+    
+    if (success) {
+      resultDiv.textContent = '✅ 命令执行成功！';
+    } else {
+      resultDiv.innerHTML = `
+        ❌ 命令执行失败：
+        <br>
+        ${errors.map(e => e.command ? `${e.command}: ${e.error}` : e.error).join('<br>')}
+      `;
+    }
+    
+    container.appendChild(resultDiv);
+    this.scrollToBottom();
+  }
+  
+  scrollToBottom() {
+    setTimeout(() => {
+      this.chatContainer.scrollTop = this.chatContainer.scrollHeight;
+    }, 100);
+  }
+  
+  saveChat() {
+    if (!this.currentChatId) return;
+    
+    const chatData = {
+      id: this.currentChatId,
+      title: this.chatTitle.textContent,
+      messages: this.messages,
+      createdAt: Date.now()
+    };
+    
+    // 保存到localStorage
+    const histories = this.getHistories();
+    histories.unshift(chatData);
+    
+    // 只保留最近50条历史
+    if (histories.length > 50) {
+      histories.pop();
+    }
+    
+    localStorage.setItem('chatggb_histories', JSON.stringify(histories));
+    
+    // 更新历史列表
+    this.loadHistory();
+  }
+  
+  loadHistory() {
+    const histories = this.getHistories();
+    
+    if (histories.length === 0) {
+      this.historyList.innerHTML = '<p style="color: #6b7280; text-align: center; padding: 20px;">暂无历史记录</p>';
+      return;
+    }
+    
+    this.historyList.innerHTML = histories.map((chat, index) => `
+      <div class="history-item ${this.currentChatId === chat.id ? 'active' : ''}" data-chat-id="${chat.id}">
+        <div class="history-icon">${this.getIconByIndex(index)}</div>
+        <div class="history-content">
+          <div class="history-title-text">${chat.title}</div>
+          <div class="history-time">${this.formatTime(chat.createdAt)}</div>
+        </div>
+      </div>
+    `).join('');
+    
+    // 绑定历史点击事件
+    document.querySelectorAll('.history-item').forEach(item => {
+      item.addEventListener('click', () => this.loadChat(item.dataset.chatId));
+    });
+  }
+  
+  getIconByIndex(index) {
+    const icons = ['📐', '📊', '🔺', '⚫', '📈', '🔷', '🔶', '💎', '🔲', '⭐'];
+    return icons[index % icons.length];
+  }
+  
+  formatTime(timestamp) {
+    const date = new Date(timestamp);
+    const now = new Date();
+    const diff = now - date;
+    
+    if (diff < 60000) {
+      return '刚刚';
+    } else if (diff < 3600000) {
+      return `${Math.floor(diff / 60000)}分钟前`;
+    } else if (diff < 86400000) {
+      return `${Math.floor(diff / 3600000)}小时前`;
+    } else {
+      return `${date.getMonth() + 1}/${date.getDate()}`;
+    }
+  }
+  
+  getHistories() {
+    try {
+      return JSON.parse(localStorage.getItem('chatggb_histories') || '[]');
+    } catch {
+      return [];
+    }
+  }
+  
+  loadChat(chatId) {
+    const histories = this.getHistories();
+    const chat = histories.find(c => c.id === chatId);
+    
+    if (!chat) return;
+    
+    this.currentChatId = chatId;
+    this.messages = chat.messages;
+    this.chatTitle.textContent = chat.title;
+    
+    // 清空聊天容器
+    this.chatContainer.innerHTML = '';
+    
+    // 渲染消息
+    chat.messages.forEach(msg => {
+      const messageDiv = this.addMessage(msg.role, msg.content);
+      
+      // 如果是助手消息，尝试生成画板
+      if (msg.role === 'assistant') {
+        const commands = this.extractGgbCommands(msg.content);
+        if (commands.length > 0) {
+          const ggbId = `ggb-${this.currentGgbId++}`;
+          const ggbContainer = document.createElement('div');
+          ggbContainer.className = 'ggb-container';
+          ggbContainer.innerHTML = `<div id="${ggbId}" style="width: 100%; height: 400px;"></div>`;
+          
+          const contentDiv = messageDiv.querySelector('.message-content');
+          contentDiv.appendChild(ggbContainer);
+          
+          // 延迟初始化画板
+          setTimeout(() => {
+            this.executeGgbCommands(ggbId, commands, contentDiv);
+          }, 200);
+        }
+      }
+    });
+    
+    // 更新历史列表active状态
+    document.querySelectorAll('.history-item').forEach(item => {
+      item.classList.toggle('active', item.dataset.chatId === chatId);
+    });
+  }
+  
+  openSettings() {
+    // 加载保存的设置
+    const settings = this.getSettings();
+    document.getElementById('provider-name').value = settings.providerName || '';
+    document.getElementById('api-endpoint').value = settings.apiEndpoint || '';
+    document.getElementById('api-key').value = settings.apiKey || '';
+    document.getElementById('model-name').value = settings.modelName || '';
+    
+    this.settingsPanel.classList.add('active');
+  }
+  
+  closeSettings() {
+    this.settingsPanel.classList.remove('active');
+  }
+  
+  saveSettings() {
+    const settings = {
+      providerName: document.getElementById('provider-name').value,
+      apiEndpoint: document.getElementById('api-endpoint').value,
+      apiKey: document.getElementById('api-key').value,
+      modelName: document.getElementById('model-name').value
+    };
+    
+    localStorage.setItem('chatggb_settings', JSON.stringify(settings));
+    
+    // 更新AiManager配置
+    AiManager.updateSettings(settings);
+    
+    alert('设置已保存！');
+    this.closeSettings();
+  }
+  
+  getSettings() {
+    try {
+      return JSON.parse(localStorage.getItem('chatggb_settings') || '{}');
+    } catch {
+      return {};
+    }
+  }
+}
 
-  const ggbManager = new GGBManager();
+// 初始化
+document.addEventListener('DOMContentLoaded', () => {
+  window.chatGGB = new ChatGGB();
 });

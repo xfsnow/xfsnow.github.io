@@ -161,3 +161,83 @@ class OpenAICompatibleAI extends AiBase {
     });
   }
 }
+
+// 统一的AiManager类
+class AiManager {
+  static settings = {
+    providerName: '',
+    apiEndpoint: '',
+    apiKey: '',
+    modelName: ''
+  };
+
+  static systemPrompt = `
+你是一个GeoGebra几何绘图专家。请根据用户的几何作图需求，生成正确的GeoGebra命令。
+
+规则：
+1. 使用GeoGebra脚本格式，使用方括号语法，如 Circle[A, B]
+2. 每个命令单独一行
+3. 将命令放在代码块中，使用ggb或plaintext语言标识
+4. 提供清晰的步骤说明和解释
+5. 确保坐标在合理范围内（x: -10~10, y: -10~10）
+6. 优先使用点定义，再使用几何命令
+
+示例：
+用户：画一个等边三角形ABC
+回答：
+我来帮你画一个等边三角形ABC。
+
+步骤：
+1. 定义三个顶点
+2. 用线段连接
+
+\`\`\`ggb
+A = (0, 3)
+B = (-2, 0)
+C = (2, 0)
+Segment[A, B]
+Segment[B, C]
+Segment[C, A]
+\`\`\`
+`;
+
+  static updateSettings(newSettings) {
+    AiManager.settings = { ...AiManager.settings, ...newSettings };
+  }
+
+  static async sendMessage(message, chatHistory, onUpdate = null) {
+    return new Promise((resolve, reject) => {
+      const { apiKey, apiEndpoint, modelName } = AiManager.settings;
+
+      if (!apiKey || !apiEndpoint || !modelName) {
+        return reject(new Error('请先配置API设置'));
+      }
+
+      const ai = new OpenAICompatibleAI(
+        apiKey,
+        AiManager.systemPrompt,
+        chatHistory,
+        apiEndpoint,
+        modelName
+      );
+
+      let fullResponse = '';
+
+      ai.callAPI(
+        message,
+        (content) => {
+          fullResponse = content;
+          if (onUpdate) {
+            onUpdate(content);
+          }
+        },
+        (content) => {
+          resolve({ content: content || fullResponse });
+        },
+        (error) => {
+          reject(new Error(error));
+        }
+      );
+    });
+  }
+}
