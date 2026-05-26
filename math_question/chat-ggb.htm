@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8"/>
+  <title>ChatGGB - OpenAI Compatible</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
+  <link rel="stylesheet" href="chat-ggb.css"/>
+  <script src="https://cdn.geogebra.org/apps/deployggb.js"></script>
+  <script src="ai-manager.js"></script>
+  <script src="chat-ggb.js"></script>
+</head>
+<body>
+  <div class="container">
+    <div class="ggb-panel">
+      <h2 class="ggb-title">和AI聊聊天，用GeoGebra画图形</h2>
+      <div id="ggb-element"></div>
+      <div class="button-group">
+        <button id="settings-btn" class="settings-btn">⚙️ 设置</button>
+        <a href="ChatGGB_Guide.html" target="_blank" class="guide-link">使用指南</a>
+      </div>
+
+      <div id="settings-panel" class="settings-panel">
+        <div class="settings-header">
+          <h3>设置</h3>
+          <button id="close-settings" class="close-settings-btn">✕</button>
+        </div>
+        
+        <div class="provider-section">
+          <h4>模型配置</h4>
+          <div class="provider-input-section">
+            <label for="provider-name">模型供应方:</label>
+            <input type="text" id="provider-name" class="provider-input" placeholder="例如: OpenRouter, 智谱AI, NVIDIA Build">
+          </div>
+          
+          <div class="endpoint-section">
+            <label for="api-endpoint">接入端点:</label>
+            <input type="text" id="api-endpoint" class="endpoint-input" placeholder="例如: https://openrouter.ai/api/v1">
+          </div>
+          
+          <div class="api-key-section">
+            <label for="api-key">API Key:</label>
+            <input type="password" id="api-key" class="api-key-input" placeholder="请输入API密钥">
+          </div>
+          
+          <div class="model-name-section">
+            <label for="model-name">模型名称:</label>
+            <input type="text" id="model-name" class="model-name-input" placeholder="例如: meta-llama/llama-3.3-70b-instruct:free">
+          </div>
+        </div>
+        <button id="save-settings" class="save-settings-btn">保存设置</button>
+      </div>
+    </div>
+    
+    <div class="input-panel">
+      <div class="chat-section">
+        <div id="chat-container" class="chat-container"></div>
+        
+        <div class="image-preview-wrapper">
+          <div class="image-preview-container" id="image-preview-container">
+            <img id="image-preview" src="" alt="Image preview">
+            <button id="close-preview" class="close-preview-btn" title="移除图片">×</button>
+          </div>
+        </div>
+        
+        <div class="user-input-container">
+          <div class="input-wrapper">
+            <textarea id="user-input" placeholder="在这里输入内容，让AI帮你画图" rows="3"></textarea>
+            <div class="input-actions">
+              <button id="image-attachment-btn" class="image-attachment-btn" title="添加图片"></button>
+              <button id="send-btn" class="send-btn"  title="发送消息"></button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
