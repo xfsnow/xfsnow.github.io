@@ -2,9 +2,10 @@
 <html>
 <head>
   <meta charset="utf-8"/>
-  <title>ChatGGB - AI几何绘图助手</title>
+  <title>ChatGGB - AI数学绘图助手</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
   <link rel="stylesheet" href="chat-ggb.css"/>
+  <script src="https://cdn.geogebra.org/apps/deployggb.js"></script>
 </head>
 <body>
   <div class="container">
@@ -73,18 +74,22 @@
       <div class="chat-header">
         <h2 id="chat-title" class="chat-title">新对话</h2>
       </div>
+
+      <!-- 固定 GeoGebra 画板（便于统一渲染） -->
+      <div class="fixed-ggb-container">
+        <div id="ggb-fixed" style="width: 100%; height: 360px;"></div>
+      </div>
       
       <!-- 聊天内容区 -->
       <div id="chat-container" class="chat-container">
         <!-- 欢迎消息 -->
         <div class="welcome-message">
-          <div class="welcome-icon">🎨</div>
-          <h3>欢迎使用AI几何绘图助手</h3>
-          <p>输入几何作图需求，AI会自动帮你生成GeoGebra命令并绘制图形</p>
+          <h3>欢迎使用AI数学绘图助手</h3>
+          <p>输入数学作图或数学作图需求，AI会自动帮你生成GeoGebra命令并绘制图形</p>
           <div class="welcome-examples">
-            <span class="example-tag">画一个等边三角形</span>
-            <span class="example-tag">构造圆的切线</span>
-            <span class="example-tag">证明勾股定理</span>
+            <button type="button" class="example-tag">画一个等边三角形</button>
+            <button type="button" class="example-tag">构造圆的切线</button>
+            <button type="button" class="example-tag">证明勾股定理</button>
           </div>
         </div>
       </div>
@@ -100,7 +105,7 @@
       <!-- 输入区域 -->
       <div class="user-input-container">
         <div class="input-wrapper">
-          <textarea id="user-input" placeholder="输入几何作图需求..." rows="2"></textarea>
+          <textarea id="user-input" placeholder="输入数学作图需求..." rows="2"></textarea>
           <div class="input-actions">
             <button id="image-attachment-btn" class="image-attachment-btn" title="添加图片"></button>
             <button id="send-btn" class="send-btn" title="发送消息">
@@ -114,8 +119,8 @@
     </div>
   </div>
   
-  <!-- 隐藏的预加载画板容器 -->
-  <div id="ggb-preload-container" style="display: none;">
+  <!-- 预加载画板容器（离屏可见，避免 display:none 阻止初始化） -->
+  <div id="ggb-preload-container" style="position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden;">
     <div id="ggb-preload" style="width: 100px; height: 100px;"></div>
   </div>
   

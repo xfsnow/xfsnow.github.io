@@ -1,0 +1,238 @@
+=== GEOGEBRA 全局强制规则 ===
+1. 单行单命令
+2. 仅使用英文小括号()
+3. 禁止分号; 禁止方括号[]
+4. 坐标格式：(x,y)
+5. 命令首字母大写
+
+
+【点线向量】
+命令：Line
+  语法：Line( <Point>, <Point> )
+  语法：Line( <Point>, <Parallel Line> )
+  语法：Line( <Point>, <Direction Vector> )
+  示例：Line( <Point>, <Point> )
+  示例：Line( <Point>, <Parallel Line> )
+
+命令：Point
+  语法：Point( <Object> )
+  语法：Point( <Object>, <Parameter> )
+  语法：Point( <Point>, <Vector> )
+  语法：Point( <List> )
+  示例：Point( <Object> )
+  示例：Point( <Object>, <Parameter> )
+
+命令：Ray
+  语法：Ray( <Start Point>, <Point> )
+  语法：Ray( <Start Point>, <Direction Vector> )
+  示例：Ray( <Start Point>, <Point> )
+  示例：Ray( <Start Point>, <Direction Vector> )
+
+命令：Segment
+  语法：Segment( <Point>, <Point> )
+  语法：Segment( <Point>, <Length> )
+  示例：Segment( <Point>, <Point> )
+  示例：Segment( <Point>, <Length> )
+
+命令：Vector
+  语法：Vector( <Point> )
+  语法：Vector( <Start Point>, <End Point> )
+  示例：Vector( <Point> )
+  示例：Vector( <Start Point>, <End Point> )
+
+命令：Line
+  语法：If points areAandB, the line’s direction vector is(B - A)See alsoLinecommand.
+  示例：If points areAandB, the line’s direction vector is(B - A)See alsoLinecommand.
+
+命令：Point
+  语法：Click (or tap in the mobile app) on a segment (or interval), straight line, polygon, conic section, function, or curve to create a point on the object.Click (or tap in the mobile app) on the intersection of two objects to create their intersection point (see alsoIntersecttool andIntersectcommand).See alsoPointcommand.
+  示例：Click (or tap in the mobile app) on a segment (or interval), straight line, polygon, conic section, function, or curve to create a point on the object.Click (or tap in the mobile app) on the intersection of two objects to create their intersection point (see alsoIntersecttool andIntersectcommand).See alsoPointcommand.
+
+命令：Segment
+  语法：This tool has different names in different variants of English:Interval between Two Points (Aus)Segment between Two Points (UK + US)
+  示例：This tool has different names in different variants of English:Interval between Two Points (Aus)Segment between Two Points (UK + US)
+
+
+【圆形圆弧】
+命令：Circle
+  语法：Circle( <Point>, <Radius Number> )
+  语法：Circle( <Point>, <Segment> )
+  语法：Circle( <Point>, <Point> )
+  语法：Circle( <Point>, <Point>, <Point> )
+  语法：Circle( <Line>, <Point> )
+  语法：Circle( <Point>, <Radius>, <Direction> )
+  语法：Circle( <Point>, <Point>, <Direction> )
+  示例：Circle( <Point>, <Radius Number> )
+  示例：Circle( <Point>, <Segment> )
+
+命令：CircularArc
+  语法：CircularArc( <Midpoint>, <Point A>, <Point B> )
+  示例：CircularArc( <Midpoint>, <Point A>, <Point B> )
+
+命令：Sector
+  语法：Sector( <Conic>, <Point>, <Point> )
+  语法：Sector( <Conic>, <Parameter Value>, <Parameter Value> )
+  示例：Sector( <Conic>, <Point>, <Point> )
+  示例：Sector( <Conic>, <Parameter Value>, <Parameter Value> )
+
+
+【多边形】
+命令：Polygon
+  语法：Polygon( <Point>, …​, <Point> )
+  语法：Polygon( <Point>, <Point>, <Number of Vertices> )
+  语法：Polygon( <List of Points> )
+  语法：Polygon( <Point>, <Point>, <Number of Vertices n>, <Direction> )
+  示例：Polygon( <Point>, …​, <Point> )
+  示例：Polygon( <Point>, <Point>, <Number of Vertices> )
+
+
+【几何中心】
+命令：Centroid
+  语法：Centroid( <Polygon> )
+  示例：Centroid( <Polygon> )
+
+
+【辅助线】
+命令：AngleBisector
+  语法：AngleBisector( <Line>, <Line> )
+  语法：AngleBisector( <Point>, <Point>, <Point> )
+  示例：AngleBisector( <Line>, <Line> )
+  示例：AngleBisector( <Point>, <Point>, <Point> )
+
+命令：PerpendicularBisector
+  语法：PerpendicularBisector( <Segment> )
+  语法：PerpendicularBisector( <Point>, <Point> )
+  语法：PerpendicularBisector( <Point>, <Point>, <Direction>)
+  示例：PerpendicularBisector( <Segment> )
+  示例：PerpendicularBisector( <Point>, <Point> )
+
+命令：Tangent
+  语法：Tangent( <Point>, <Conic> )
+  语法：Tangent( <Point>, <Function> )
+  语法：Tangent( <Point on Curve>, <Curve> )
+  语法：Tangent( <x-Value>, <Function> )
+  语法：Tangent( <Line>, <Conic> )
+  语法：Tangent( <Circle>, <Circle> )
+  语法：Tangent( <Point>, <Spline> )
+  语法：Tangent( <Point>, <Implicit Curve> )
+  示例：Tangent( <Point>, <Conic> )
+  示例：Tangent( <Point>, <Function> )
+
+
+【计算测量】
+命令：Angle
+  语法：Angle( <Vector>, <Vector> )
+  语法：Angle( <Line>, <Line> )
+  语法：Angle( <Line>, <Plane> )
+  语法：Angle( <Plane>, <Plane> )
+  语法：Angle( <Point>, <Apex>, <Point> )
+  语法：Angle( <Point>, <Apex>, <Angle> )
+  语法：Angle( <Point>, <Point>, <Point>, <Direction> )
+  示例：Angle( <Vector>, <Vector> )
+  示例：Angle( <Line>, <Line> )
+
+命令：Area
+  语法：Area( <Point>, …​, <Point> )
+  语法：Area( <Conic> )
+  语法：Area( <Polygon> )
+  示例：Area( <Point>, …​, <Point> )
+  示例：Area( <Conic> )
+
+命令：Distance
+  语法：Distance( <Point>, <Object> )
+  语法：Distance( <Line>, <Line> )
+  语法：Distance( <Plane>, <Plane> )
+  示例：Distance( <Point>, <Object> )
+  示例：Distance( <Line>, <Line> )
+
+命令：Intersection
+  语法：Intersection( <List>, <List> )
+  示例：Intersection( <List>, <List> )
+
+命令：Midpoint
+  语法：Midpoint( <Segment> )
+  语法：Midpoint( <Conic> )
+  语法：Midpoint( <Interval> )
+  语法：Midpoint( <Point>, <Point> )
+  语法：Midpoint( <Quadric> )
+  示例：Midpoint( <Segment> )
+  示例：Midpoint( <Conic> )
+
+
+【变换】
+命令：Dilate
+  语法：Dilate( <Object>, <Dilation Factor> )
+  语法：Dilate( <Object>, <Dilation Factor>, <Dilation Center Point> )
+  示例：Dilate( <Object>, <Dilation Factor> )
+  示例：Dilate( <Object>, <Dilation Factor>, <Dilation Center Point> )
+
+命令：Reflect
+  语法：Reflect( < Object >, <Point> )
+  语法：Reflect( < Object >, <Line> )
+  语法：Reflect( < Object >, <Circle> )
+  语法：Reflect( < Object >, <Plane> )
+  示例：Reflect( < Object >, <Point> )
+  示例：Reflect( < Object >, <Line> )
+
+命令：Rotate
+  语法：Rotate( <Object>, <Angle> )
+  语法：Rotate( <Object>, <Angle>, <Point> )
+  语法：Rotate( <Object>, <Angle>, <Axis of Rotation>)
+  语法：Rotate( <Object>, <Angle>, <Point on Axis>, <Axis Direction or Plane> )
+  示例：Rotate( <Object>, <Angle> )
+  示例：Rotate( <Object>, <Angle>, <Point> )
+
+命令：Translate
+  语法：Translate( <Object>, <Vector> )
+  语法：Translate( <Vector>, <Start Point> )
+  示例：Translate( <Object>, <Vector> )
+  示例：Translate( <Vector>, <Start Point> )
+
+
+【函数曲线】
+命令：Curve
+  语法：Curve( <Expression>, <Expression>, <Parameter Variable>, <Start Value>, <End Value> )
+  语法：Curve( <Expression> , <Expression> , <Expression> , <Parameter Variable> , <Start Value> , <End Value> )
+  示例：Curve( <Expression>, <Expression>, <Parameter Variable>, <Start Value>, <End Value> )
+  示例：Curve( <Expression> , <Expression> , <Expression> , <Parameter Variable> , <Start Value> , <End Value> )
+
+命令：Ellipse
+  语法：Ellipse( <Focus>, <Focus>, <Semimajor Axis Length> )
+  语法：Ellipse( <Focus>, <Focus>, <Segment> )
+  语法：Ellipse( <Focus>, <Focus>, <Point> )
+  示例：Ellipse( <Focus>, <Focus>, <Semimajor Axis Length> )
+  示例：Ellipse( <Focus>, <Focus>, <Segment> )
+
+命令：Hyperbola
+  语法：Hyperbola( <Focus>, <Focus>, <Semimajor Axis Length> )
+  语法：Hyperbola( <Focus>, <Focus>, <Segment> )
+  语法：Hyperbola( <Focus>, <Focus>, <Point> )
+  示例：Hyperbola( <Focus>, <Focus>, <Semimajor Axis Length> )
+  示例：Hyperbola( <Focus>, <Focus>, <Segment> )
+
+命令：Parabola
+  语法：Parabola( <Point>, <Line> )
+  示例：Parabola( <Point>, <Line> )
+
+
+【样式设置】
+命令：SetColor
+  语法：SetColor( <Object>, <Red>, <Green>, <Blue> )
+  语法：SetColor( <Object>, <"Color"> )
+  示例：SetColor( <Object>, <Red>, <Green>, <Blue> )
+  示例：SetColor( <Object>, <"Color"> )
+
+命令：SetLineThickness
+  语法：SetLineThickness( <Object>, <Number> )
+  示例：SetLineThickness( <Object>, <Number> )
+
+命令：Text
+  语法：Text( <Object> )
+  语法：Text( <Object>, <Boolean for Substitution of Variables> )
+  语法：Text( <Object>, <Point> )
+  语法：Text( <Object>, <Point>, <Boolean for Substitution of Variables> )
+  语法：Text( <Object>, <Point>, <Boolean for Substitution of Variables>, <Boolean for LaTeX formula> )
+  语法：Text( <Object>, <Point>, <Boolean for Substitution of Variables>, <Boolean for LaTeX formula>, <Horizontal alignment [-1|0|1]>, <Vertical alignment [-1|0|1]> )
+  示例：Text( <Object> )
+  示例：Text( <Object>, <Boolean for Substitution of Variables> )
+

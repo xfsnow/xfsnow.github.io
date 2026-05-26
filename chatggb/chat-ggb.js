@@ -7,60 +7,124 @@ class ChatGGB {
     this.maxRetryCount = 2;
     this.ggbReady = false;
     this.currentAssistantMessage = null;
+    this.loadTimeout = null;
     
     this.initElements();
+    // 尝试从 localStorage 加载已保存的 API/模型设置，优先应用，避免发送前提示错误
+    this.loadSavedSettings();
     this.preloadGeoGebra();
+    // 尝试创建固定画板（在 GeoGebra 库加载后创建）
+    this.waitAndCreateFixedGgb();
     this.loadHistory();
     this.bindEvents();
+  }
+
+  // 从 localStorage 加载保存的设置并应用到 AiManager
+  loadSavedSettings() {
+    const settings = this.getSettings();
+    if (settings && (settings.apiKey || settings.apiEndpoint || settings.modelName || settings.providerName)) {
+      // 更新 AiManager 内部配置，供后续发送使用
+      AiManager.updateSettings(settings);
+      // 如果设置面板的输入存在，则同步显示（方便用户查看）
+      try {
+        if (document.getElementById('provider-name')) document.getElementById('provider-name').value = settings.providerName || '';
+        if (document.getElementById('api-endpoint')) document.getElementById('api-endpoint').value = settings.apiEndpoint || '';
+        if (document.getElementById('api-key')) document.getElementById('api-key').value = settings.apiKey || '';
+        if (document.getElementById('model-name')) document.getElementById('model-name').value = settings.modelName || '';
+      } catch (e) {
+        // 忽略 DOM 操作错误
+      }
+    }
   }
   
   preloadGeoGebra() {
     this.showLoadingState();
     
+    // 设置加载超时（10秒）
+    this.loadTimeout = setTimeout(() => {
+      this.showLoadTimeoutError();
+    }, 10000);
+    
+    // If library already loaded (we added synchronous script in index.html), skip loading applet
+    if (typeof GGBApplet !== 'undefined') {
+      clearTimeout(this.loadTimeout);
+      this.ggbReady = true;
+      this.hideLoadingState();
+      return;
+    }
+
     const script = document.createElement('script');
     script.src = 'https://cdn.geogebra.org/apps/deployggb.js';
     script.onload = () => {
-      this.initializePreloadGGB();
+      clearTimeout(this.loadTimeout);
+      this.ggbReady = true;
+      this.hideLoadingState();
     };
     script.onerror = () => {
-      this.showLoadError();
+      clearTimeout(this.loadTimeout);
+      this.showLoadError('脚本加载失败，请检查网络连接');
     };
     document.head.appendChild(script);
   }
+
+  waitAndCreateFixedGgb() {
+    const self = this;
+    let attempts = 0;
+    const t = setInterval(() => {
+      attempts++;
+      if (typeof GGBApplet !== 'undefined') {
+        clearInterval(t);
+        try { self.createFixedGgb(); } catch (e) { console.warn('createFixedGgb failed', e && e.message); }
+      } else if (attempts > 50) {
+        clearInterval(t);
+        console.warn('GeoGebra lib not available to create fixed applet');
+      }
+    }, 200);
+  }
+
+  createFixedGgb() {
+    if (this.fixedGgbCreated) return;
+    const self = this;
+    const el = document.getElementById('ggb-fixed');
+    if (!el) return;
+
+    const options = {
+      width: '100%',
+      height: 360,
+      showToolBar: true,
+      showAlgebraInput: false,
+      showMenuBar: true,
+      allowStyleBar: true,
+      language: 'zh',
+      showAlgebraView: false,
+      perspective: 'G',
+      appName: 'classic',
+      id: 'ggb-fixed-applet',
+      appletOnLoad: function(applet) {
+        try {
+          self.fixedGgbInstance = applet || window.ggbApplet || null;
+          window.ggbFixedApplet = self.fixedGgbInstance;
+          console.log('Fixed GeoGebra instance ready', !!self.fixedGgbInstance);
+        } catch (e) {}
+      }
+    };
+
+    try {
+      const ggbApp = new GGBApplet(options, true);
+      ggbApp.inject('ggb-fixed');
+      this.fixedGgbWrapper = ggbApp;
+      this.fixedGgbCreated = true;
+      console.log('Injected fixed GGB wrapper', ggbApp);
+    } catch (e) {
+      console.warn('Failed to inject fixed GeoGebra applet', e && e.message);
+    }
+  }
   
   initializePreloadGGB() {
-    // 创建预加载画板实例
-    const preloadApp = new GGBApplet({
-      "width": 100,
-      "height": 100,
-      "showToolBar": false,
-      "showAlgebraInput": false,
-      "showMenuBar": false,
-      "allowStyleBar": false,
-      "language": "zh",
-      "showAlgebraView": false,
-      "perspective": "G",
-      "appName": "classic"
-    }, true);
-    
-    preloadApp.onLoad = () => {
-      // 预加载完成，销毁临时画板
-      setTimeout(() => {
-        try {
-          const container = document.getElementById('ggb-preload-container');
-          if (container) {
-            container.innerHTML = '';
-          }
-        } catch (e) {
-          console.log('清理预加载容器失败:', e);
-        }
-        
-        this.ggbReady = true;
-        this.hideLoadingState();
-      }, 500);
-    };
-    
-    preloadApp.inject('ggb-preload');
+    // Deprecated: we no longer create a hidden applet for preload because many browsers
+    // prevent initialization in display:none. The library load itself is sufficient.
+    this.ggbReady = true;
+    this.hideLoadingState();
   }
   
   showLoadingState() {
@@ -78,9 +142,8 @@ class ChatGGB {
   hideLoadingState() {
     this.chatContainer.innerHTML = `
       <div class="welcome-message">
-        <div class="welcome-icon">🎨</div>
-        <h3>欢迎使用AI几何绘图助手</h3>
-        <p>输入几何作图需求，AI会自动帮你生成GeoGebra命令并绘制图形</p>
+        <h3>欢迎使用AI数学绘图助手</h3>
+        <p>输入数学作图需求，AI会自动帮你生成GeoGebra命令并绘制图形</p>
         <div class="welcome-examples">
           <span class="example-tag">画一个等边三角形</span>
           <span class="example-tag">构造圆的切线</span>
@@ -92,12 +155,23 @@ class ChatGGB {
     this.userInput.disabled = false;
   }
   
-  showLoadError() {
+  showLoadError(message = '请检查网络连接或稍后重试') {
     this.chatContainer.innerHTML = `
       <div class="error-container">
         <div class="error-icon">❌</div>
         <p>GeoGebra 加载失败</p>
-        <p>请检查网络连接或稍后重试</p>
+        <p>${message}</p>
+        <button onclick="window.location.reload()" class="retry-btn">🔄 刷新重试</button>
+      </div>
+    `;
+  }
+  
+  showLoadTimeoutError() {
+    this.chatContainer.innerHTML = `
+      <div class="error-container">
+        <div class="error-icon">⏱️</div>
+        <p>GeoGebra 加载超时</p>
+        <p>加载时间超过10秒，可能是网络连接较慢或GeoGebra服务暂时不可用</p>
         <button onclick="window.location.reload()" class="retry-btn">🔄 刷新重试</button>
       </div>
     `;
@@ -114,7 +188,7 @@ class ChatGGB {
     this.settingsPanel = document.getElementById('settings-panel');
     this.closeSettingsBtn = document.getElementById('close-settings');
     this.saveSettingsBtn = document.getElementById('save-settings');
-    this.exampleTags = document.querySelectorAll('.example-tag');
+    // example-tag elements are dynamic; we will use event delegation in bindEvents
   }
   
   bindEvents() {
@@ -130,11 +204,13 @@ class ChatGGB {
     this.settingsBtn.addEventListener('click', () => this.openSettings());
     this.closeSettingsBtn.addEventListener('click', () => this.closeSettings());
     
-    this.exampleTags.forEach(tag => {
-      tag.addEventListener('click', () => {
-        this.userInput.value = tag.textContent;
+    // Use event delegation so example buttons work even after DOM replacements
+    this.chatContainer.addEventListener('click', (e) => {
+      const target = e.target;
+      if (target && target.classList && target.classList.contains('example-tag')) {
+        this.userInput.value = target.textContent;
         this.sendMessage();
-      });
+      }
     });
     
     this.saveSettingsBtn.addEventListener('click', () => this.saveSettings());
@@ -147,8 +223,8 @@ class ChatGGB {
     this.chatContainer.innerHTML = `
       <div class="welcome-message">
         <div class="welcome-icon">🎨</div>
-        <h3>欢迎使用AI几何绘图助手</h3>
-        <p>输入几何作图需求，AI会自动帮你生成GeoGebra命令并绘制图形</p>
+        <h3>欢迎使用AI数学绘图助手</h3>
+        <p>输入数学作图需求，AI会自动帮你生成GeoGebra命令并绘制图形</p>
         <div class="welcome-examples">
           <span class="example-tag">画一个等边三角形</span>
           <span class="example-tag">构造圆的切线</span>
@@ -239,7 +315,18 @@ class ChatGGB {
       this.saveChat();
       
     } catch (error) {
-      this.updateAssistantMessage(`❌ 发送失败: ${error.message}`);
+      // 如果错误是因为未配置 API 设置，则不要在聊天中插入那条错误提示，改为打开设置面板引导用户配置
+      if (error && error.message && error.message.includes('请先配置API设置')) {
+        // 移除流式占位的助手消息，避免在聊天中留下“正在思考...”占位
+        try {
+          if (this.currentAssistantMessage && this.currentAssistantMessage.remove) {
+            this.currentAssistantMessage.remove();
+          }
+        } catch (e) {}
+        this.openSettings();
+      } else {
+        this.updateAssistantMessage(`❌ 发送失败: ${error.message}`);
+      }
     } finally {
       this.currentAssistantMessage = null;
     }
@@ -332,7 +419,28 @@ class ChatGGB {
       return;
     }
     
-    // 生成新的画板
+    const contentDiv = messageDiv.querySelector('.message-content');
+
+    // 如果固定画板存在，则优先在固定画板上执行命令
+    if (this.fixedGgbInstance) {
+      console.log('Executing commands on fixed GeoGebra applet');
+      // 在消息中添加提示说明图形在上方固定画板显示
+      const note = document.createElement('div');
+      note.className = 'execution-note';
+      note.textContent = '图形已在上方固定画板显示';
+      contentDiv.appendChild(note);
+
+      // 尝试执行命令
+      try {
+        await this.executeWithRetry(this.fixedGgbInstance, commands, 0, contentDiv);
+      } catch (e) {
+        console.warn('execute on fixed applet failed', e && e.message);
+      }
+      this.scrollToBottom();
+      return;
+    }
+
+    // 回退：生成新的画板（按消息创建）
     const ggbId = `ggb-${this.currentGgbId++}`;
     console.log('Creating GGB container with id:', ggbId);
     
@@ -343,7 +451,6 @@ class ChatGGB {
     `;
     
     // 在消息后面添加画板
-    const contentDiv = messageDiv.querySelector('.message-content');
     contentDiv.appendChild(ggbContainer);
     console.log('GGB container added to DOM');
     
@@ -362,28 +469,75 @@ class ChatGGB {
   
   extractGgbCommands(content) {
     const commands = [];
-    
-    // 匹配代码块中的命令
-    const codeBlockMatch = content.match(/```(\w+)?\n([\s\S]*?)```/);
-    if (codeBlockMatch) {
-      const codeContent = codeBlockMatch[2];
-      const lines = codeContent.split('\n').filter(line => line.trim());
-      commands.push(...lines);
+
+    // Normalize content to string
+    let html = String(content || '');
+
+    // Try several strategies to extract code block content
+    const tryPre = () => {
+      const preMatch = html.match(/<pre[^>]*>([\s\S]*?)<\/pre>/i);
+      if (preMatch) return preMatch[1];
+      // also try code-block wrapper
+      const cbMatch = html.match(/<div[^>]*class=["']?code-block["']?[^>]*>[\s\S]*?<pre[^>]*>([\s\S]*?)<\/pre>[\s\S]*?<\/div>/i);
+      if (cbMatch) return cbMatch[1];
+      return null;
+    };
+
+    let raw = tryPre();
+
+    // Fenced code block with ``` (allow CRLF and optional language tag)
+    if (!raw) {
+      const fenceMatch = html.match(/```(?:\s*\w+)?\r?\n([\s\S]*?)\r?\n```/);
+      if (fenceMatch) raw = fenceMatch[1];
     }
-    
-    // 如果代码块中没有命令，尝试匹配单行命令
-    if (commands.length === 0) {
-      const regex = /(?:^|\s)([A-Za-z]+\[.*?\]|[A-Za-z]+\([^)]+\)|[A-Za-z]+\s*=\s*.+)/g;
-      let match;
-      while ((match = regex.exec(content)) !== null) {
-        const cmd = match[1].trim();
-        if (this.isValidGgbCommand(cmd)) {
-          commands.push(cmd);
+
+    // Sometimes the content is plain text with fences but no newlines; try a loose match
+    if (!raw) {
+      const looseFence = html.match(/```([\s\S]*?)```/);
+      if (looseFence) raw = looseFence[1];
+    }
+
+    // If still no code block, fall back to the whole text
+    let text = raw || html;
+
+    // Unescape common HTML entities and normalize <br> and block tags to newlines
+    text = text.replace(/&lt;/g, '<').replace(/&gt;/g, '>').replace(/&amp;/g, '&');
+    text = text.replace(/<br\s*\/?>(\s*)/gi, '\n')
+               .replace(/<\/p>/gi, '\n')
+               .replace(/<\/div>\s*<div[^>]*>/gi, '\n');
+    // remove remaining tags
+    text = text.replace(/<[^>]+>/g, '');
+
+    // Split into candidate lines (by newline or semicolon)
+    const lines = text.split(/\r?\n|;/).map(l => l.trim()).filter(l => l);
+
+    // Keywords commonly appearing in GeoGebra commands
+    const keywords = ['Polygon', 'Circle', 'Segment', 'Tangent', 'Line', 'Point', 'Vector', 'Midpoint', 'Perpendicular', 'Intersect'];
+
+    for (const line of lines) {
+      // further split by commas if many commands are glued
+      const parts = line.split(/\s*[,;]\s*/).map(s => s.trim()).filter(s => s);
+      for (const part of parts) {
+        if (!part) continue;
+        // quick accept if matches valid command patterns or contains keyword or bracket-style expression
+        if (this.isValidGgbCommand(part) || keywords.some(k => part.indexOf(k) !== -1) || /[A-Za-z0-9_]+\s*=\s*\([^)]+\)/.test(part) || /[A-Za-z]+\[[^\]]+\]/.test(part)) {
+          commands.push(part);
         }
       }
     }
-    
-    return commands;
+
+    // As a more lenient fallback, run a global regex to find potential command tokens
+    if (commands.length === 0) {
+      const globalRegex = /[A-Za-z0-9_]+\s*=\s*\([^\)]+\)|[A-Za-z]+\[[^\]]+\]|Polygon\([^\)]*\)|Polygon\[[^\]]+\]|Circle\([^\)]+\)|Segment\[[^\]]+\]/g;
+      const found = text.match(globalRegex) || [];
+      for (const f of found) {
+        const s = f.trim();
+        if (s && !commands.includes(s)) commands.push(s);
+      }
+    }
+
+    // Final cleanup: trim trailing punctuation
+    return commands.map(c => c.replace(/[\u200B\uFEFF]/g, '').trim()).filter(Boolean);
   }
   
   isValidGgbCommand(cmd) {
@@ -406,7 +560,17 @@ class ChatGGB {
   initAndExecute(ggbId, commands, container, resolve) {
     console.log('Initializing GGB applet with id:', ggbId);
     
-    const ggbApp = new GGBApplet({
+    // 检查 GGBApplet 是否已加载
+    if (typeof GGBApplet === 'undefined') {
+      console.log('GGBApplet not loaded, loading script...');
+      this.loadGgbScript(() => {
+        this.initAndExecute(ggbId, commands, container, resolve);
+      });
+      return;
+    }
+    
+    // Prepare options with appletOnLoad to ensure we detect when the instance is ready
+    const options = {
       "width": "100%",
       "height": 400,
       "showToolBar": true,
@@ -416,18 +580,145 @@ class ChatGGB {
       "language": "zh",
       "showAlgebraView": false,
       "perspective": "G",
-      "appName": "classic"
-    }, true);
-    
-    ggbApp.onLoad = () => {
-      console.log('GGB applet loaded successfully');
-      this.executeWithRetry(ggbApp, commands, 0, container)
-        .then(() => resolve())
-        .catch(() => resolve());
+      "appName": "classic",
+      // appletOnLoad may receive the applet instance as an argument in many GeoGebra builds
+      appletOnLoad: (applet) => {
+        console.log('appletOnLoad callback triggered for', ggbId, 'applet param:', applet);
+        const instance = applet || window.ggbApplet || null;
+        console.log('Resolved GeoGebra instance:', !!instance);
+
+        if (instance) {
+          try {
+            // 保存实例以便后续引用
+            this.ggbInstances.set(ggbId, instance);
+          } catch (e) {}
+
+          this.executeWithRetry(instance, commands, 0, container)
+            .then(() => resolve())
+            .catch(() => resolve());
+        } else {
+          // fallback: try again shortly
+          setTimeout(() => {
+            const fallback = window.ggbApplet || this.ggbInstances.get(ggbId) || null;
+            if (fallback) {
+              this.executeWithRetry(fallback, commands, 0, container)
+                .then(() => resolve())
+                .catch(() => resolve());
+            } else {
+              console.warn('无法找到 GeoGebra 实例的回退引用 for', ggbId);
+              resolve();
+            }
+          }, 300);
+        }
+      }
     };
-    
+
+    // 指定 id 带到 options 中（部分 GeoGebra 版本会使用该 id）
+    options.id = ggbId;
+
+    const ggbApp = new GGBApplet(options, true);
     ggbApp.inject(ggbId);
-    console.log('GGB applet injected');
+    console.log('GGB applet injected for', ggbId, 'wrapper:', ggbApp);
+
+    // After injection, wait a moment and verify the DOM structure; if the target div
+    // height is collapsed, force it to match parent and call applet size APIs.
+    setTimeout(() => {
+      try {
+        const target = document.getElementById(ggbId);
+        if (!target) return;
+
+        console.log('Post-inject target rect:', target.getBoundingClientRect());
+        console.log('Post-inject target innerHTML length:', target.innerHTML && target.innerHTML.length);
+        const kids = Array.from(target.children || []);
+        console.log('Post-inject children count:', kids.length, kids.map(k=>k.tagName + ':' + k.className));
+
+        const parent = target.parentElement;
+        const parentH = parent ? parent.clientHeight : null;
+        const currentH = target.clientHeight || target.getBoundingClientRect().height;
+
+        // If inner target is much smaller than parent's allocated height, force-match it.
+        if (parentH && currentH < Math.max(50, parentH * 0.5)) {
+          try {
+            target.style.height = parentH + 'px';
+            target.style.minHeight = parentH + 'px';
+            target.style.display = 'block';
+            console.log('Forced target height to parent height:', parentH);
+          } catch (e) { console.warn('force set height failed', e && e.message); }
+        }
+
+        // If the GeoGebra applet exposes setSize, call it to ensure internal canvas resized
+        try {
+          if (ggbApp && typeof ggbApp.setSize === 'function') {
+            const w = target.clientWidth || target.getBoundingClientRect().width || 600;
+            const h = target.clientHeight || parentH || 400;
+            ggbApp.setSize(w, h);
+            console.log('Called ggbApp.setSize', w, h);
+          }
+        } catch (e) {
+          console.warn('ggbApp.setSize failed', e && e.message);
+        }
+        // 进一步修正：GeoGebra 有时会向内层添加 transform 缩放，我们尝试清除或修正它们
+        try {
+          const scaler = target.querySelector('.applet_scaler, .ggbTransform, .geogebra_applet');
+          if (scaler) {
+            console.log('Found scaler element:', scaler.tagName, scaler.className);
+            // 清除内联 transform
+            try { scaler.style.transform = 'none'; } catch (e) {}
+            try { scaler.style.webkitTransform = 'none'; } catch (e) {}
+            // 强制宽高为 100%
+            try { scaler.style.width = '100%'; scaler.style.height = '100%'; } catch (e) {}
+            // 如果存在内部 svg/canvas，确保其宽高属性为 100%
+            const inner = scaler.querySelector('svg, canvas, iframe, embed, object');
+            if (inner) {
+              try { inner.style.width = '100%'; inner.style.height = '100%'; } catch (e) {}
+              try { if (inner.setAttribute) { inner.setAttribute('width', '100%'); inner.setAttribute('height', '100%'); } } catch (e) {}
+            }
+          }
+        } catch (e) { console.warn('scaler fix failed', e && e.message); }
+
+        // 再次调用 ZoomFit 保证内容可见
+        try { if (ggbApp && typeof ggbApp.evalCommand === 'function') { ggbApp.evalCommand('ZoomFit[]'); } } catch (e) {}
+        try { if (window.ggbApplet && typeof window.ggbApplet.evalCommand === 'function') { window.ggbApplet.evalCommand('ZoomFit[]'); } } catch (e) {}
+      } catch (e) {
+        console.warn('post-inject DOM check error', e && e.message);
+      }
+    }, 300);
+
+    // Extra fallback polling: wait for window.ggbApplet to appear for up to 2s
+    let pollCount = 0;
+    const pollInterval = setInterval(() => {
+      pollCount++;
+      const app = window.ggbApplet || null;
+      if (app) {
+        clearInterval(pollInterval);
+        console.log('Polled and found window.ggbApplet for', ggbId);
+      } else if (pollCount > 20) {
+        clearInterval(pollInterval);
+        console.warn('Polling for GeoGebra instance timed out for', ggbId);
+      }
+    }, 100);
+  }
+  
+  loadGgbScript(callback) {
+    // 检查是否已经在加载
+    if (this.ggbScriptLoading) {
+      setTimeout(() => this.loadGgbScript(callback), 100);
+      return;
+    }
+    
+    this.ggbScriptLoading = true;
+    const script = document.createElement('script');
+    script.src = 'https://cdn.geogebra.org/apps/deployggb.js';
+    script.onload = () => {
+      this.ggbScriptLoading = false;
+      callback();
+    };
+    script.onerror = () => {
+      this.ggbScriptLoading = false;
+      console.error('Failed to load GeoGebra script');
+      alert('无法加载 GeoGebra 脚本，请检查网络连接');
+    };
+    document.head.appendChild(script);
   }
   
   async executeWithRetry(ggbApp, commands, retryCount, container) {
@@ -485,6 +776,79 @@ class ChatGGB {
       this.showExecutionResult(container, false, errors);
     } else {
       // 执行成功
+      // 尝试调整视图并输出调试信息，帮助定位对象不可见的问题
+      try {
+        if (typeof ggbApp !== 'undefined' && ggbApp && typeof ggbApp.evalCommand === 'function') {
+          try { ggbApp.evalCommand('ZoomFit[]'); } catch (e) { /* ignore */ }
+        }
+      } catch (e) {}
+
+      try {
+        if (typeof ggbApp !== 'undefined' && ggbApp && typeof ggbApp.repaint === 'function') {
+          try { ggbApp.repaint(); } catch (e) { /* ignore */ }
+        }
+      } catch (e) {}
+
+      // 尝试列出已定义对象并获取部分坐标，用于判断对象是否存在但在视野外
+      try {
+        const apiCandidates = ['getObjectNames', 'getAllObjectNames', 'getObjectList', 'getDefinedObjectNames'];
+        let objectNames = null;
+        for (const name of apiCandidates) {
+          if (typeof ggbApp !== 'undefined' && ggbApp && typeof ggbApp[name] === 'function') {
+            try {
+              const objs = ggbApp[name]();
+              console.log('GeoGebra objects via', name, objs);
+              if (Array.isArray(objs) && objs.length > 0) {
+                objectNames = objs;
+                break;
+              }
+            } catch (e) {
+              console.log('调用', name, '报错', e && e.message);
+            }
+          }
+        }
+
+        // 如果获取到了对象名，尝试读取点坐标并计算边界
+        if (objectNames && objectNames.length > 0) {
+          const coords = [];
+          for (const nm of objectNames) {
+            try {
+              const x = (typeof ggbApp.getXcoord === 'function') ? Number(ggbApp.getXcoord(nm)) : NaN;
+              const y = (typeof ggbApp.getYcoord === 'function') ? Number(ggbApp.getYcoord(nm)) : NaN;
+              if (!Number.isNaN(x) && !Number.isNaN(y)) {
+                coords.push({ x, y, name: nm });
+              }
+            } catch (e) {
+              // ignore individual failures
+            }
+          }
+
+          if (coords.length > 0) {
+            const xs = coords.map(c => c.x);
+            const ys = coords.map(c => c.y);
+            const minX = Math.min(...xs);
+            const maxX = Math.max(...xs);
+            const minY = Math.min(...ys);
+            const maxY = Math.max(...ys);
+            console.log('Computed object bbox:', { minX, minY, maxX, maxY });
+
+            // 如果坐标范围明显偏离默认视图，调用 setCoordSystem 调整视图
+            try {
+              if (typeof ggbApp.setCoordSystem === 'function') {
+                const paddingX = Math.max(1, (maxX - minX) * 0.2);
+                const paddingY = Math.max(1, (maxY - minY) * 0.2);
+                ggbApp.setCoordSystem(minX - paddingX, minY - paddingY, maxX + paddingX, maxY + paddingY);
+                console.log('Called setCoordSystem to fit objects');
+              }
+            } catch (e) {
+              console.log('setCoordSystem 调用失败', e && e.message);
+            }
+          }
+        }
+      } catch (e) {
+        console.log('列出对象或获取坐标时出错', e && e.message);
+      }
+
       this.showExecutionResult(container, true, null);
     }
   }

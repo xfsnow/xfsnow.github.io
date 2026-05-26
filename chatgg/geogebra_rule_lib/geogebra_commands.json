@@ -1,0 +1,5804 @@
+[
+  {
+    "command": "AffineRatio",
+    "syntax_list": [
+      "AffineRatio( <Point A>, <Point B>, <Point C> )"
+    ],
+    "valid_example": [
+      "AffineRatio( <Point A>, <Point B>, <Point C> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "Angle",
+    "syntax_list": [
+      "Angle( <Vector>, <Vector> )",
+      "Angle( <Line>, <Line> )",
+      "Angle( <Line>, <Plane> )",
+      "Angle( <Plane>, <Plane> )",
+      "Angle( <Point>, <Apex>, <Point> )",
+      "Angle( <Point>, <Apex>, <Angle> )",
+      "Angle( <Point>, <Point>, <Point>, <Direction> )"
+    ],
+    "valid_example": [
+      "Angle( <Vector>, <Vector> )",
+      "Angle( <Line>, <Line> )"
+    ],
+    "category": "计算测量"
+  },
+  {
+    "command": "AngleBisector",
+    "syntax_list": [
+      "AngleBisector( <Line>, <Line> )",
+      "AngleBisector( <Point>, <Point>, <Point> )"
+    ],
+    "valid_example": [
+      "AngleBisector( <Line>, <Line> )",
+      "AngleBisector( <Point>, <Point>, <Point> )"
+    ],
+    "category": "辅助线"
+  },
+  {
+    "command": "ANOVA",
+    "syntax_list": [
+      "ANOVA( <List>, <List>, …​)"
+    ],
+    "valid_example": [
+      "ANOVA( <List>, <List>, …​)"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "Append",
+    "syntax_list": [
+      "Append( <List>, <Object> )",
+      "Append( <Object>, <List> )"
+    ],
+    "valid_example": [
+      "Append( <List>, <Object> )",
+      "Append( <Object>, <List> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "ApplyMatrix",
+    "syntax_list": [
+      "ApplyMatrix( < Matrix >, < Object > )"
+    ],
+    "valid_example": [
+      "ApplyMatrix( < Matrix >, < Object > )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "Arc",
+    "syntax_list": [
+      "Arc( <Circle>, <Point M >, <Point N> )",
+      "Arc( <Ellipse>, <Point M>, <Point N> )",
+      "Arc( <Circle>, <Parameter Value>, <Parameter Value> )",
+      "Arc( <Ellipse>, <Parameter Value>, <Parameter Value> )"
+    ],
+    "valid_example": [
+      "Arc( <Circle>, <Point M >, <Point N> )",
+      "Arc( <Ellipse>, <Point M>, <Point N> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "Area",
+    "syntax_list": [
+      "Area( <Point>, …​, <Point> )",
+      "Area( <Conic> )",
+      "Area( <Polygon> )"
+    ],
+    "valid_example": [
+      "Area( <Point>, …​, <Point> )",
+      "Area( <Conic> )"
+    ],
+    "category": "计算测量"
+  },
+  {
+    "command": "AreCollinear",
+    "syntax_list": [
+      "AreCollinear( <Point>, <Point>, <Point> )"
+    ],
+    "valid_example": [
+      "AreCollinear( <Point>, <Point>, <Point> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "AreConcurrent",
+    "syntax_list": [
+      "AreConcurrent( <Line>, <Line>, <Line> )"
+    ],
+    "valid_example": [
+      "AreConcurrent( <Line>, <Line>, <Line> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "AreConcyclic",
+    "syntax_list": [
+      "AreConcyclic( <Point>, <Point>, <Point>, <Point> )"
+    ],
+    "valid_example": [
+      "AreConcyclic( <Point>, <Point>, <Point>, <Point> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "AreCongruent",
+    "syntax_list": [
+      "AreCongruent( <Object>, <Object> )"
+    ],
+    "valid_example": [
+      "AreCongruent( <Object>, <Object> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "AreEqual",
+    "syntax_list": [
+      "AreEqual( <Object>, <Object> )"
+    ],
+    "valid_example": [
+      "AreEqual( <Object>, <Object> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "AreParallel",
+    "syntax_list": [
+      "AreParallel( <Line>, <Line> )"
+    ],
+    "valid_example": [
+      "AreParallel( <Line>, <Line> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "ArePerpendicular",
+    "syntax_list": [
+      "ArePerpendicular( <Line>, <Line> )"
+    ],
+    "valid_example": [
+      "ArePerpendicular( <Line>, <Line> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "Assume",
+    "syntax_list": [
+      "Assume( <Condition>, <Expression> )"
+    ],
+    "valid_example": [
+      "Assume( <Condition>, <Expression> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "Asymptote",
+    "syntax_list": [
+      "Asymptote( <Conic> )",
+      "Asymptote( <Function> )",
+      "Asymptote( <Implicit Curve> )"
+    ],
+    "valid_example": [
+      "Asymptote( <Conic> )",
+      "Asymptote( <Function> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "AttachCopyToView",
+    "syntax_list": [
+      "AttachCopyToView( <Object>, <View 0|1|2> )",
+      "AttachCopyToView( <Object>, <View 0|1|2>, <Point 1>, <Point 2>, <Screen Point 1>, <Screen Point 2> )"
+    ],
+    "valid_example": [
+      "AttachCopyToView( <Object>, <View 0|1|2> )",
+      "AttachCopyToView( <Object>, <View 0|1|2>, <Point 1>, <Point 2>, <Screen Point 1>, <Screen Point 2> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "Axes",
+    "syntax_list": [
+      "Axes( <Conic> )",
+      "Axes( <Quadric> )"
+    ],
+    "valid_example": [
+      "Axes( <Conic> )",
+      "Axes( <Quadric> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "AxisStepX",
+    "syntax_list": [
+      "AxisStepX( )"
+    ],
+    "valid_example": [
+      "AxisStepX( )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "AxisStepY",
+    "syntax_list": [
+      "AxisStepY( )"
+    ],
+    "valid_example": [
+      "AxisStepY( )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "BarChart",
+    "syntax_list": [
+      "BarChart( <List of Data>, <List of Frequencies> )",
+      "BarChart( <List of Raw Data>, <Width of Bars>, <Vertical Scale Factor (optional)> )",
+      "BarChart( <List of Data> , <List of Frequencies>, <Width of Bars> )",
+      "BarChart( <Start Value>, <End Value>, <List of Heights> )",
+      "BarChart( <Start Value>, <End Value> , <Expression>, <Variable>, <From Number>, <To Number> )",
+      "BarChart( <Start Value>, <End Value>, <Expression>, <Variable>, <From Number>, <To Number>, <Step Width> )"
+    ],
+    "valid_example": [
+      "BarChart( <List of Data>, <List of Frequencies> )",
+      "BarChart( <List of Raw Data>, <Width of Bars>, <Vertical Scale Factor (optional)> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "Barycenter",
+    "syntax_list": [
+      "Barycenter( <List of Points>, <List of Weights> )"
+    ],
+    "valid_example": [
+      "Barycenter( <List of Points>, <List of Weights> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "Bernoulli",
+    "syntax_list": [
+      "Bernoulli( <Probability p>, <Boolean Cumulative> )"
+    ],
+    "valid_example": [
+      "Bernoulli( <Probability p>, <Boolean Cumulative> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "BetaDist",
+    "syntax_list": [
+      "BetaDist( <Number α>, <Number β>, <Variable value> )",
+      "BetaDist( <Number α>, <Number β>, <Variable value>, <Boolean Cumulative> )",
+      "BetaDist(<Number α>, <Number β>, x, <Boolean Cumulative>)"
+    ],
+    "valid_example": [
+      "BetaDist( <Number α>, <Number β>, <Variable value> )",
+      "BetaDist( <Number α>, <Number β>, <Variable value>, <Boolean Cumulative> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "BinomialDist",
+    "syntax_list": [
+      "BinomialDist( <Number of Trials>, <Probability of Success> )",
+      "BinomialDist( <Number of Trials>, <Probability of Success>, <Boolean Cumulative> )",
+      "BinomialDist( <Number of Trials>, <Probability of Success>, <Variable Value>, <Boolean Cumulative> )",
+      "BinomialDist( <Number of Trials>, <Probability of Success>, <List of values>)"
+    ],
+    "valid_example": [
+      "BinomialDist( <Number of Trials>, <Probability of Success> )",
+      "BinomialDist( <Number of Trials>, <Probability of Success>, <Boolean Cumulative> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "Bottom",
+    "syntax_list": [
+      "Bottom( <Quadric> )"
+    ],
+    "valid_example": [
+      "Bottom( <Quadric> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "BoxPlot",
+    "syntax_list": [
+      "BoxPlot( yOffset, yScale, List of Raw Data )",
+      "BoxPlot( yOffset, yScale, Start Value, Q1, Median, Q3, End Value )",
+      "BoxPlot( <yOffset>, <yScale>, <List of Raw Data>, <Boolean Outliers> )",
+      "BoxPlot( <yOffset>, <yScale>, <List of Data>, <List of Frequencies>, <Boolean Outliers> )"
+    ],
+    "valid_example": [
+      "BoxPlot( yOffset, yScale, List of Raw Data )",
+      "BoxPlot( yOffset, yScale, Start Value, Q1, Median, Q3, End Value )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "Button",
+    "syntax_list": [
+      "Button( )",
+      "Button( <Caption> )"
+    ],
+    "valid_example": [
+      "Button( )",
+      "Button( <Caption> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "CASLoaded",
+    "syntax_list": [
+      "CASLoaded()"
+    ],
+    "valid_example": [
+      "CASLoaded()"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "Cauchy",
+    "syntax_list": [
+      "Cauchy( <Median>, <Scale>, <Variable value> )",
+      "Cauchy( <Median>, <Scale>, <Variable value>, <Boolean Cumulative>)",
+      "Cauchy( <Median>, <Scale>, x, <Boolean Cumulative>)"
+    ],
+    "valid_example": [
+      "Cauchy( <Median>, <Scale>, <Variable value> )",
+      "Cauchy( <Median>, <Scale>, <Variable value>, <Boolean Cumulative>)"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "Cell",
+    "syntax_list": [
+      "Cell( <Column>, <Row> )"
+    ],
+    "valid_example": [
+      "Cell( <Column>, <Row> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "CellRange",
+    "syntax_list": [
+      "CellRange( <Start Cell>, <End Cell> )"
+    ],
+    "valid_example": [
+      "CellRange( <Start Cell>, <End Cell> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "Center",
+    "syntax_list": [
+      "Center( <Conic> )",
+      "Center( <Quadric> )"
+    ],
+    "valid_example": [
+      "Center( <Conic> )",
+      "Center( <Quadric> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "CenterView",
+    "syntax_list": [
+      "CenterView( <Center Point> )"
+    ],
+    "valid_example": [
+      "CenterView( <Center Point> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "Centroid",
+    "syntax_list": [
+      "Centroid( <Polygon> )"
+    ],
+    "valid_example": [
+      "Centroid( <Polygon> )"
+    ],
+    "category": "几何中心"
+  },
+  {
+    "command": "CFactor",
+    "syntax_list": [
+      "CFactor( <Expression> )",
+      "CFactor( <Expression>, <Variable> )"
+    ],
+    "valid_example": [
+      "CFactor( <Expression> )",
+      "CFactor( <Expression>, <Variable> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "CharacteristicPolynomial",
+    "syntax_list": [
+      "CharacteristicPolynomial( <Matrix> )"
+    ],
+    "valid_example": [
+      "CharacteristicPolynomial( <Matrix> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "Checkbox",
+    "syntax_list": [
+      "Checkbox( )",
+      "Checkbox( <Caption> )",
+      "Checkbox( <List> )",
+      "Checkbox( <Caption>, <List> )"
+    ],
+    "valid_example": [
+      "Checkbox( )",
+      "Checkbox( <Caption> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "ChiSquared",
+    "syntax_list": [
+      "ChiSquared( <Degrees of Freedom>, <Variable Value> )",
+      "ChiSquared( <Degrees of Freedom>, <Variable Value>, <Boolean Cumulative> )",
+      "ChiSquared( <Degrees of Freedom>, x, <Boolean Cumulative> )"
+    ],
+    "valid_example": [
+      "ChiSquared( <Degrees of Freedom>, <Variable Value> )",
+      "ChiSquared( <Degrees of Freedom>, <Variable Value>, <Boolean Cumulative> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "ChiSquaredTest",
+    "syntax_list": [
+      "ChiSquaredTest( <Matrix> )",
+      "ChiSquaredTest( <Observed List>, <Expected List> )",
+      "ChiSquaredTest( <Observed Matrix>, <Expected Matrix> )",
+      "ChiSquaredTest( <List>, <List>, <Degrees of Freedom> )"
+    ],
+    "valid_example": [
+      "ChiSquaredTest( <Matrix> )",
+      "ChiSquaredTest( <Observed List>, <Expected List> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "CIFactor",
+    "syntax_list": [
+      "CIFactor( <Expression> )",
+      "CIFactor( <Expression>, <Variable> )"
+    ],
+    "valid_example": [
+      "CIFactor( <Expression> )",
+      "CIFactor( <Expression>, <Variable> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "Circle",
+    "syntax_list": [
+      "Circle( <Point>, <Radius Number> )",
+      "Circle( <Point>, <Segment> )",
+      "Circle( <Point>, <Point> )",
+      "Circle( <Point>, <Point>, <Point> )",
+      "Circle( <Line>, <Point> )",
+      "Circle( <Point>, <Radius>, <Direction> )",
+      "Circle( <Point>, <Point>, <Direction> )"
+    ],
+    "valid_example": [
+      "Circle( <Point>, <Radius Number> )",
+      "Circle( <Point>, <Segment> )"
+    ],
+    "category": "圆形圆弧"
+  },
+  {
+    "command": "CircularArc",
+    "syntax_list": [
+      "CircularArc( <Midpoint>, <Point A>, <Point B> )"
+    ],
+    "valid_example": [
+      "CircularArc( <Midpoint>, <Point A>, <Point B> )"
+    ],
+    "category": "圆形圆弧"
+  },
+  {
+    "command": "CircularSector",
+    "syntax_list": [
+      "CircularSector( <Midpoint>, <Point A>, <Point B> )"
+    ],
+    "valid_example": [
+      "CircularSector( <Midpoint>, <Point A>, <Point B> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "CircumcircularArc",
+    "syntax_list": [
+      "CircumcircularArc( <Point>, <Point>, <Point> )"
+    ],
+    "valid_example": [
+      "CircumcircularArc( <Point>, <Point>, <Point> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "CircumcircularSector",
+    "syntax_list": [
+      "CircumcircularSector( <Point>, <Point>, <Point> )"
+    ],
+    "valid_example": [
+      "CircumcircularSector( <Point>, <Point>, <Point> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "Circumference",
+    "syntax_list": [
+      "Circumference(Conic)"
+    ],
+    "valid_example": [
+      "Circumference(Conic)"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "Classes",
+    "syntax_list": [
+      "Classes( <List of Data>, <Start>, <Width of Classes> )",
+      "Classes( <List of Data>, <Number of Classes> )"
+    ],
+    "valid_example": [
+      "Classes( <List of Data>, <Start>, <Width of Classes> )",
+      "Classes( <List of Data>, <Number of Classes> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "ClosestPoint",
+    "syntax_list": [
+      "ClosestPoint( <Path>, <Point> )",
+      "ClosestPoint( <Line>, <Line> )"
+    ],
+    "valid_example": [
+      "ClosestPoint( <Path>, <Point> )",
+      "ClosestPoint( <Line>, <Line> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "ClosestPointRegion",
+    "syntax_list": [
+      "ClosestPointRegion( <Region>, <Point> )"
+    ],
+    "valid_example": [
+      "ClosestPointRegion( <Region>, <Point> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "Coefficients",
+    "syntax_list": [
+      "Coefficients( <Polynomial> )",
+      "Coefficients( <Conic> )",
+      "Coefficients( <Polynomial>, <Variable> )"
+    ],
+    "valid_example": [
+      "Coefficients( <Polynomial> )",
+      "Coefficients( <Conic> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "Column",
+    "syntax_list": [
+      "Column( <Spreadsheet Cell> )"
+    ],
+    "valid_example": [
+      "Column( <Spreadsheet Cell> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "ColumnName",
+    "syntax_list": [
+      "ColumnName( <Spreadsheet Cell> )"
+    ],
+    "valid_example": [
+      "ColumnName( <Spreadsheet Cell> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "CommonDenominator",
+    "syntax_list": [
+      "CommonDenominator( <Expression>, <Expression> )"
+    ],
+    "valid_example": [
+      "CommonDenominator( <Expression>, <Expression> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "CompleteSquare",
+    "syntax_list": [
+      "CompleteSquare( <Quadratic Function> )"
+    ],
+    "valid_example": [
+      "CompleteSquare( <Quadratic Function> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "ComplexRoot",
+    "syntax_list": [
+      "ComplexRoot( <Polynomial> )"
+    ],
+    "valid_example": [
+      "ComplexRoot( <Polynomial> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "Cone",
+    "syntax_list": [
+      "Cone( <Circle>, <Height> )",
+      "Cone( <Point>, <Point>, <Radius> )",
+      "Cone( <Point>, <Vector>, <Angle Î±> )"
+    ],
+    "valid_example": [
+      "Cone( <Circle>, <Height> )",
+      "Cone( <Point>, <Point>, <Radius> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "Conic",
+    "syntax_list": [
+      "Conic( <Point>, <Point>, <Point>, <Point>, <Point> )",
+      "Conic( <Number a>, <Number b>, <Number c>, <Number d>, <Number e>, <Number f> )",
+      "Conic( <List> )"
+    ],
+    "valid_example": [
+      "Conic( <Point>, <Point>, <Point>, <Point>, <Point> )",
+      "Conic( <Number a>, <Number b>, <Number c>, <Number d>, <Number e>, <Number f> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "ConjugateDiameter",
+    "syntax_list": [
+      "ConjugateDiameter( <Line>, <Conic> )",
+      "ConjugateDiameter( <Vector>, <Conic> )"
+    ],
+    "valid_example": [
+      "ConjugateDiameter( <Line>, <Conic> )",
+      "ConjugateDiameter( <Vector>, <Conic> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "ConstructionStep",
+    "syntax_list": [
+      "ConstructionStep()",
+      "ConstructionStep( <Object> )"
+    ],
+    "valid_example": [
+      "ConstructionStep()",
+      "ConstructionStep( <Object> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "ContingencyTable",
+    "syntax_list": [
+      "ContingencyTable( <List of Text>, <List of Text> )",
+      "ContingencyTable( <List of Text>, <List of Text>, <Options> )",
+      "ContingencyTable( <List of Row Values>, <List of Column Values>, <Frequency Table> )",
+      "ContingencyTable( <List of Row Values>, <List of Column Values> <Frequency Table>, <Options> )"
+    ],
+    "valid_example": [
+      "ContingencyTable( <List of Text>, <List of Text> )",
+      "ContingencyTable( <List of Text>, <List of Text>, <Options> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "ContinuedFraction",
+    "syntax_list": [
+      "ContinuedFraction( <Number> )",
+      "ContinuedFraction( <Number>, <Level> )",
+      "ContinuedFraction( <Number>, <Level> (optional), <Boolean Shorthand> )"
+    ],
+    "valid_example": [
+      "ContinuedFraction( <Number> )",
+      "ContinuedFraction( <Number>, <Level> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "ConvexHull",
+    "syntax_list": [
+      "ConvexHull( <List of Points> )"
+    ],
+    "valid_example": [
+      "ConvexHull( <List of Points> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "CopyFreeObject",
+    "syntax_list": [
+      "CopyFreeObject( <Object> )"
+    ],
+    "valid_example": [
+      "CopyFreeObject( <Object> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "Corner",
+    "syntax_list": [
+      "Corner( <Number of Corner> )",
+      "Corner( <Graphics View>, <Number of Corner> )",
+      "Corner( <Image>, <Number of Corner> )",
+      "Corner( <Text>, <Number of Corner> )"
+    ],
+    "valid_example": [
+      "Corner( <Number of Corner> )",
+      "Corner( <Graphics View>, <Number of Corner> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "CorrelationCoefficient",
+    "syntax_list": [
+      "CorrelationCoefficient( <List of x-coordinates>, <List of y-coordinates> )",
+      "CorrelationCoefficient( <List of Points> )"
+    ],
+    "valid_example": [
+      "CorrelationCoefficient( <List of x-coordinates>, <List of y-coordinates> )",
+      "CorrelationCoefficient( <List of Points> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "CountIf",
+    "syntax_list": [
+      "CountIf( <Condition>, <List> )",
+      "CountIf( <Condition>, <Variable>, <List> )"
+    ],
+    "valid_example": [
+      "CountIf( <Condition>, <List> )",
+      "CountIf( <Condition>, <Variable>, <List> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "Covariance",
+    "syntax_list": [
+      "Covariance( <List of Numbers>, <List of Numbers> )",
+      "Covariance( <List of Points> )"
+    ],
+    "valid_example": [
+      "Covariance( <List of Numbers>, <List of Numbers> )",
+      "Covariance( <List of Points> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "Cross",
+    "syntax_list": [
+      "Cross( <Vector u> , <Vector v> )"
+    ],
+    "valid_example": [
+      "Cross( <Vector u> , <Vector v> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "CrossRatio",
+    "syntax_list": [
+      "CrossRatio( <Point A>, <Point B>, <Point C>, <Point D> )"
+    ],
+    "valid_example": [
+      "CrossRatio( <Point A>, <Point B>, <Point C>, <Point D> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "CSolutions",
+    "syntax_list": [
+      "CSolutions( <Equation> )",
+      "CSolutions( <Equation>, <Variable> )",
+      "CSolutions( <List of Equations>, <List of Variables> )"
+    ],
+    "valid_example": [
+      "CSolutions( <Equation> )",
+      "CSolutions( <Equation>, <Variable> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "CSolve",
+    "syntax_list": [
+      "CSolve( <Equation> )",
+      "CSolve( <Equation>, <Variable> )",
+      "CSolve( <List of Equations>, <List of Variables> )"
+    ],
+    "valid_example": [
+      "CSolve( <Equation> )",
+      "CSolve( <Equation>, <Variable> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "Cube",
+    "syntax_list": [
+      "Cube( <Square> )",
+      "Cube( <Point>, <Point>, <Direction> )",
+      "Cube( <Point>, <Point>, <Point>)",
+      "Cube( <Point>, <Point>)"
+    ],
+    "valid_example": [
+      "Cube( <Square> )",
+      "Cube( <Point>, <Point>, <Direction> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "Cubic",
+    "syntax_list": [
+      "Cubic( <Point>, <Point>, <Point>, <Number> )"
+    ],
+    "valid_example": [
+      "Cubic( <Point>, <Point>, <Point>, <Number> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "Curvature",
+    "syntax_list": [
+      "Curvature( <Point>, <Object> )"
+    ],
+    "valid_example": [
+      "Curvature( <Point>, <Object> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "CurvatureVector",
+    "syntax_list": [
+      "CurvatureVector( <Point>, <Object> )"
+    ],
+    "valid_example": [
+      "CurvatureVector( <Point>, <Object> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "Curve",
+    "syntax_list": [
+      "Curve( <Expression>, <Expression>, <Parameter Variable>, <Start Value>, <End Value> )",
+      "Curve( <Expression> , <Expression> , <Expression> , <Parameter Variable> , <Start Value> , <End Value> )"
+    ],
+    "valid_example": [
+      "Curve( <Expression>, <Expression>, <Parameter Variable>, <Start Value>, <End Value> )",
+      "Curve( <Expression> , <Expression> , <Expression> , <Parameter Variable> , <Start Value> , <End Value> )"
+    ],
+    "category": "函数曲线"
+  },
+  {
+    "command": "Cylinder",
+    "syntax_list": [
+      "Cylinder( <Circle>, <Height> )",
+      "Cylinder( <Point>, <Point>, <Radius> )"
+    ],
+    "valid_example": [
+      "Cylinder( <Circle>, <Height> )",
+      "Cylinder( <Point>, <Point>, <Radius> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "DataFunction",
+    "syntax_list": [
+      "DataFunction( <List of Numbers>, <List of Numbers> )"
+    ],
+    "valid_example": [
+      "DataFunction( <List of Numbers>, <List of Numbers> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "Degree",
+    "syntax_list": [
+      "Degree( <Polynomial> )",
+      "Degree( <Polynomial>, <Variable> )"
+    ],
+    "valid_example": [
+      "Degree( <Polynomial> )",
+      "Degree( <Polynomial>, <Variable> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "DelaunayTriangulation",
+    "syntax_list": [
+      "DelaunayTriangulation( <List of Points> )"
+    ],
+    "valid_example": [
+      "DelaunayTriangulation( <List of Points> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "Delete",
+    "syntax_list": [
+      "Delete( <Object> )"
+    ],
+    "valid_example": [
+      "Delete( <Object> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "Denominator",
+    "syntax_list": [
+      "Denominator( <Function> )",
+      "Denominator( <Number> )",
+      "Denominator( <Expression> )"
+    ],
+    "valid_example": [
+      "Denominator( <Function> )",
+      "Denominator( <Number> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "Derivative",
+    "syntax_list": [
+      "Derivative( <Function> )",
+      "Derivative( <Function>, <Number> )",
+      "Derivative( <Function>, <Variable> )",
+      "Derivative( <Function>, <Variable>, <Number> )",
+      "Derivative( <Curve> )",
+      "Derivative( <Curve>, <Number> )",
+      "Derivative( <Expression> )",
+      "Derivative( <Expression>, <Variable> )",
+      "Derivative( <Expression>, <Variable>, <Number> )"
+    ],
+    "valid_example": [
+      "Derivative( <Function> )",
+      "Derivative( <Function>, <Number> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "Determinant",
+    "syntax_list": [
+      "Determinant( <Matrix> )"
+    ],
+    "valid_example": [
+      "Determinant( <Matrix> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "Difference",
+    "syntax_list": [
+      "Difference( <Polygon>, <Polygon> )"
+    ],
+    "valid_example": [
+      "Difference( <Polygon>, <Polygon> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "Dilate",
+    "syntax_list": [
+      "Dilate( <Object>, <Dilation Factor> )",
+      "Dilate( <Object>, <Dilation Factor>, <Dilation Center Point> )"
+    ],
+    "valid_example": [
+      "Dilate( <Object>, <Dilation Factor> )",
+      "Dilate( <Object>, <Dilation Factor>, <Dilation Center Point> )"
+    ],
+    "category": "变换"
+  },
+  {
+    "command": "Dimension",
+    "syntax_list": [
+      "Dimension( <Object> )"
+    ],
+    "valid_example": [
+      "Dimension( <Object> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "Direction",
+    "syntax_list": [
+      "Direction( <Line> )"
+    ],
+    "valid_example": [
+      "Direction( <Line> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "Directrix",
+    "syntax_list": [
+      "Directrix( <Conic> )"
+    ],
+    "valid_example": [
+      "Directrix( <Conic> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "Distance",
+    "syntax_list": [
+      "Distance( <Point>, <Object> )",
+      "Distance( <Line>, <Line> )",
+      "Distance( <Plane>, <Plane> )"
+    ],
+    "valid_example": [
+      "Distance( <Point>, <Object> )",
+      "Distance( <Line>, <Line> )"
+    ],
+    "category": "计算测量"
+  },
+  {
+    "command": "Div",
+    "syntax_list": [
+      "Div( <Dividend Number>, <Divisor Number> )",
+      "Div( <Dividend Polynomial>, <Divisor Polynomial> )"
+    ],
+    "valid_example": [
+      "Div( <Dividend Number>, <Divisor Number> )",
+      "Div( <Dividend Polynomial>, <Divisor Polynomial> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "Division",
+    "syntax_list": [
+      "Division( <Dividend Number>, <Divisor Number> )",
+      "Division( <Dividend Polynomial>, <Divisor Polynomial> )"
+    ],
+    "valid_example": [
+      "Division( <Dividend Number>, <Divisor Number> )",
+      "Division( <Dividend Polynomial>, <Divisor Polynomial> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "Divisors",
+    "syntax_list": [
+      "Divisors( <Number> )"
+    ],
+    "valid_example": [
+      "Divisors( <Number> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "DivisorsList",
+    "syntax_list": [
+      "DivisorsList( <Number> )"
+    ],
+    "valid_example": [
+      "DivisorsList( <Number> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "DivisorsSum",
+    "syntax_list": [
+      "DivisorsSum( <Number> )"
+    ],
+    "valid_example": [
+      "DivisorsSum( <Number> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "Dodecahedron",
+    "syntax_list": [
+      "Dodecahedron( <Regular pentagon> )",
+      "Dodecahedron( <Point>, <Point>, <Direction> )",
+      "Dodecahedron( <Point>, <Point>, <Point>)",
+      "Dodecahedron( <Point>, <Point>)"
+    ],
+    "valid_example": [
+      "Dodecahedron( <Regular pentagon> )",
+      "Dodecahedron( <Point>, <Point>, <Direction> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "Dot",
+    "syntax_list": [
+      "Dot( <Vector>, <Vector> )"
+    ],
+    "valid_example": [
+      "Dot( <Vector>, <Vector> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "DotPlot",
+    "syntax_list": [
+      "DotPlot( <List of Raw Data> )",
+      "DotPlot( <List of Raw Data>, <Stack Adjacent Dots (optional)>, <Scale Factor (optional)> )"
+    ],
+    "valid_example": [
+      "DotPlot( <List of Raw Data> )",
+      "DotPlot( <List of Raw Data>, <Stack Adjacent Dots (optional)>, <Scale Factor (optional)> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "DynamicCoordinates",
+    "syntax_list": [
+      "DynamicCoordinates( <Point>, <x-Coordinate>, <y-Coordinate> )",
+      "DynamicCoordinates( <Point>, <x-Coordinate>, <y-Coordinate>, <z-Coordinate> )"
+    ],
+    "valid_example": [
+      "DynamicCoordinates( <Point>, <x-Coordinate>, <y-Coordinate> )",
+      "DynamicCoordinates( <Point>, <x-Coordinate>, <y-Coordinate>, <z-Coordinate> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "Eccentricity",
+    "syntax_list": [
+      "Eccentricity( <Conic> )"
+    ],
+    "valid_example": [
+      "Eccentricity( <Conic> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "Eigenvalues",
+    "syntax_list": [
+      "Eigenvalues( <Matrix> )"
+    ],
+    "valid_example": [
+      "Eigenvalues( <Matrix> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "Eigenvectors",
+    "syntax_list": [
+      "Eigenvectors( <Matrix> )"
+    ],
+    "valid_example": [
+      "Eigenvectors( <Matrix> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "Element",
+    "syntax_list": [
+      "Element( <List>, <Position of Element n> )",
+      "Element( <Matrix>, <Row>, <Column> )",
+      "Element( <List>, <Index1>, <Index2>, …​)"
+    ],
+    "valid_example": [
+      "Element( <List>, <Position of Element n> )",
+      "Element( <Matrix>, <Row>, <Column> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "Eliminate",
+    "syntax_list": [
+      "Eliminate( <List of Polynomials>, <List of Variables> )"
+    ],
+    "valid_example": [
+      "Eliminate( <List of Polynomials>, <List of Variables> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "Ellipse",
+    "syntax_list": [
+      "Ellipse( <Focus>, <Focus>, <Semimajor Axis Length> )",
+      "Ellipse( <Focus>, <Focus>, <Segment> )",
+      "Ellipse( <Focus>, <Focus>, <Point> )"
+    ],
+    "valid_example": [
+      "Ellipse( <Focus>, <Focus>, <Semimajor Axis Length> )",
+      "Ellipse( <Focus>, <Focus>, <Segment> )"
+    ],
+    "category": "函数曲线"
+  },
+  {
+    "command": "Ends",
+    "syntax_list": [
+      "Ends( <Quadric> )"
+    ],
+    "valid_example": [
+      "Ends( <Quadric> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "Envelope",
+    "syntax_list": [
+      "Envelope( <Path>, <Point> )"
+    ],
+    "valid_example": [
+      "Envelope( <Path>, <Point> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "Erlang",
+    "syntax_list": [
+      "Erlang( <Shape>, <Rate>, <Variable Value> )",
+      "Erlang( <Shape>, <Rate>, <Variable Value>, <Boolean Cumulative> )",
+      "Erlang( <Shape>, <Rate>, x, <Boolean Cumulative> )"
+    ],
+    "valid_example": [
+      "Erlang( <Shape>, <Rate>, <Variable Value> )",
+      "Erlang( <Shape>, <Rate>, <Variable Value>, <Boolean Cumulative> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "Execute",
+    "syntax_list": [
+      "Execute( <List of Texts> )",
+      "Execute( <List of Texts>, <Parameter>, …​ , <Parameter> )"
+    ],
+    "valid_example": [
+      "Execute( <List of Texts> )",
+      "Execute( <List of Texts>, <Parameter>, …​ , <Parameter> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "Expand",
+    "syntax_list": [
+      "Expand( <Expression> )"
+    ],
+    "valid_example": [
+      "Expand( <Expression> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "Exponential",
+    "syntax_list": [
+      "Exponential( <Lambda>, <Variable Value> )",
+      "Exponential( <Lambda>, <Variable Value>, <Boolean Cumulative> )",
+      "Exponential( <Lambda>, x, <Boolean Cumulative> )"
+    ],
+    "valid_example": [
+      "Exponential( <Lambda>, <Variable Value> )",
+      "Exponential( <Lambda>, <Variable Value>, <Boolean Cumulative> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "ExportImage",
+    "syntax_list": [
+      "ExportImage( <Property>, <Value>, <Property>, <Value>, …​ )"
+    ],
+    "valid_example": [
+      "ExportImage( <Property>, <Value>, <Property>, <Value>, …​ )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "ExtendedGCD",
+    "syntax_list": [
+      "ExtendedGCD( <Integer>,<Integer> )",
+      "ExtendedGCD( <Polynomial>, <Polynomial> )"
+    ],
+    "valid_example": [
+      "ExtendedGCD( <Integer>,<Integer> )",
+      "ExtendedGCD( <Polynomial>, <Polynomial> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "Extremum",
+    "syntax_list": [
+      "Extremum( <Polynomial> )",
+      "Extremum( <Function>, <Start x-Value>, <End x-Value> )",
+      "Extremum( <Function> )"
+    ],
+    "valid_example": [
+      "Extremum( <Polynomial> )",
+      "Extremum( <Function>, <Start x-Value>, <End x-Value> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "Factor",
+    "syntax_list": [
+      "Factor( <Polynomial> )",
+      "Factor( <Number> )",
+      "Factor( <Expression>, <Variable> )"
+    ],
+    "valid_example": [
+      "Factor( <Polynomial> )",
+      "Factor( <Number> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "Factors",
+    "syntax_list": [
+      "Factors( <Polynomial> )",
+      "Factors( <Number> )"
+    ],
+    "valid_example": [
+      "Factors( <Polynomial> )",
+      "Factors( <Number> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "FDistribution",
+    "syntax_list": [
+      "FDistribution( <Numerator Degrees of Freedom>, <Denominator Degrees of Freedom>, <Variable Value> )",
+      "FDistribution( <Numerator Degrees of Freedom>, <Denominator Degrees of Freedom>, <Variable Value>, <Boolean Cumulative> )",
+      "FDistribution( <Numerator Degrees of Freedom>, <Denominator Degrees of Freedom>, x, <Boolean Cumulative> )"
+    ],
+    "valid_example": [
+      "FDistribution( <Numerator Degrees of Freedom>, <Denominator Degrees of Freedom>, <Variable Value> )",
+      "FDistribution( <Numerator Degrees of Freedom>, <Denominator Degrees of Freedom>, <Variable Value>, <Boolean Cumulative> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "FillCells",
+    "syntax_list": [
+      "FillCells( <CellRange>, <Object> )",
+      "FillCells( <Cell>, <List> )",
+      "FillCells( <Cell>, <Matrix> )"
+    ],
+    "valid_example": [
+      "FillCells( <CellRange>, <Object> )",
+      "FillCells( <Cell>, <List> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "FillColumn",
+    "syntax_list": [
+      "FillColumn( <Column>, <List> )"
+    ],
+    "valid_example": [
+      "FillColumn( <Column>, <List> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "FillRow",
+    "syntax_list": [
+      "FillRow( <Row>, <List> )"
+    ],
+    "valid_example": [
+      "FillRow( <Row>, <List> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "First",
+    "syntax_list": [
+      "First( <List> )",
+      "First( <List>, <Number n of elements> )",
+      "First( <Text> )",
+      "First( <Text> , <Number n of elements> )",
+      "First( <Locus>, <Number n of elements> )"
+    ],
+    "valid_example": [
+      "First( <List> )",
+      "First( <List>, <Number n of elements> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "Fit",
+    "syntax_list": [
+      "Fit( <List of Points>, <List of Functions> )",
+      "Fit( <List of points>, <Function> )"
+    ],
+    "valid_example": [
+      "Fit( <List of Points>, <List of Functions> )",
+      "Fit( <List of points>, <Function> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "FitExp",
+    "syntax_list": [
+      "FitExp( <List of Points> )"
+    ],
+    "valid_example": [
+      "FitExp( <List of Points> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "FitGrowth",
+    "syntax_list": [
+      "FitGrowth( <List of Points> )"
+    ],
+    "valid_example": [
+      "FitGrowth( <List of Points> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "FitImplicit",
+    "syntax_list": [
+      "FitImplicit( <List of Points>, <Order> )"
+    ],
+    "valid_example": [
+      "FitImplicit( <List of Points>, <Order> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "FitLine",
+    "syntax_list": [
+      "FitLine( <List of Points> )"
+    ],
+    "valid_example": [
+      "FitLine( <List of Points> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "FitLineX",
+    "syntax_list": [
+      "FitLineX( <List of Points> )"
+    ],
+    "valid_example": [
+      "FitLineX( <List of Points> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "FitLog",
+    "syntax_list": [
+      "FitLog( <List of Points> )"
+    ],
+    "valid_example": [
+      "FitLog( <List of Points> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "FitLogistic",
+    "syntax_list": [
+      "FitLogistic( <List of Points> )"
+    ],
+    "valid_example": [
+      "FitLogistic( <List of Points> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "FitPoly",
+    "syntax_list": [
+      "FitPoly( <List of Points>, <Degree of Polynomial> )",
+      "FitPoly( <Freehand Function>, <Degree of Polynomial> )"
+    ],
+    "valid_example": [
+      "FitPoly( <List of Points>, <Degree of Polynomial> )",
+      "FitPoly( <Freehand Function>, <Degree of Polynomial> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "FitPow",
+    "syntax_list": [
+      "FitPow( <List of Points> )"
+    ],
+    "valid_example": [
+      "FitPow( <List of Points> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "FitSin",
+    "syntax_list": [
+      "FitSin( <List of Points> )"
+    ],
+    "valid_example": [
+      "FitSin( <List of Points> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "Flatten",
+    "syntax_list": [
+      "Flatten( <List> )"
+    ],
+    "valid_example": [
+      "Flatten( <List> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "Focus",
+    "syntax_list": [
+      "Focus( <Conic> )"
+    ],
+    "valid_example": [
+      "Focus( <Conic> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "FormulaText",
+    "syntax_list": [
+      "FormulaText( <Object> )",
+      "FormulaText( <Object>, <Boolean for Substitution of Variables> )",
+      "FormulaText( <Object>, <Boolean for Substitution of Variables>, <Boolean Show Name> )"
+    ],
+    "valid_example": [
+      "FormulaText( <Object> )",
+      "FormulaText( <Object>, <Boolean for Substitution of Variables> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "FractionText",
+    "syntax_list": [
+      "FractionText( <Number> )",
+      "FractionText( <Point> )",
+      "FractionText( <Number>, <Boolean Single fraction>)"
+    ],
+    "valid_example": [
+      "FractionText( <Number> )",
+      "FractionText( <Point> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "Frequency",
+    "syntax_list": [
+      "Frequency( <List of Raw Data> )",
+      "Frequency( <Boolean Cumulative>, <List of Raw Data> )",
+      "Frequency( <List of Class Boundaries>, <List of Raw Data> )",
+      "Frequency( <List of Text>, <List of Text> )",
+      "Frequency( <Boolean Cumulative>, <List of Class Boundaries>,<List of Raw Data> )",
+      "Frequency( <List of Class Boundaries>, <List of Raw Data>, <Use Density> , <Density Scale Factor> (optional) )",
+      "Frequency( <Boolean Cumulative>, <List of Class Boundaries>, <List of Raw Data>, <Use Density> , <Density Scale Factor>(optional) )"
+    ],
+    "valid_example": [
+      "Frequency( <List of Raw Data> )",
+      "Frequency( <List of Class Boundaries>, <List of Raw Data> )",
+      "Frequency( <List of Class Boundaries>, <List of\nRaw Data> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "FrequencyPolygon",
+    "syntax_list": [
+      "FrequencyPolygon( <List of Class Boundaries>, <List of Heights> )",
+      "FrequencyPolygon( <List of Class Boundaries>, <List of Raw Data>, <Boolean Use Density>, <Density Scale Factor (optional)> )",
+      "FrequencyPolygon( <Boolean Cumulative>, <List of Class Boundaries>, <List of Raw Data>, <Boolean Use Density> , <Density Scale Factor (optional)> )"
+    ],
+    "valid_example": [
+      "FrequencyPolygon( <List of Class Boundaries>, <List of Heights> )",
+      "FrequencyPolygon( <List of Class Boundaries>, <List of Raw Data>, <Boolean Use Density>, <Density Scale Factor (optional)> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "FrequencyTable",
+    "syntax_list": [
+      "FrequencyTable( <List of Raw Data> )",
+      "FrequencyTable( <Boolean Cumulative>, <List of Raw Data> )",
+      "FrequencyTable( <List of Class Boundaries>, <List of Raw Data> )",
+      "FrequencyTable( <Boolean Cumulative>, <List of Class Boundaries>, <List of Raw Data> )",
+      "FrequencyTable( <List of Class Boundaries>, <List of Raw Data>, <Use Density> , <Density Scale Factor (optional)> )",
+      "FrequencyTable( <Boolean Cumulative>, <List of Class Boundaries>, <List of Raw Data>, <Use Density> , <Density Scale Factor (optional)> )",
+      "FrequencyTable( <List of Raw Data>,<Scale Factor (optional)> )"
+    ],
+    "valid_example": [
+      "FrequencyTable( <List of Raw Data> )",
+      "FrequencyTable( <List of Class Boundaries>, <List of Raw Data> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "FromBase",
+    "syntax_list": [
+      "FromBase( \"<Number as Text>\", <Base> )"
+    ],
+    "valid_example": [
+      "FromBase( \"<Number as Text>\", <Base> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "Function",
+    "syntax_list": [
+      "Function( <List of Numbers> )",
+      "Function(Function, Start x-value, End x-value)",
+      "Function( <Expression>, <Parameter Variable 1>, <Start Value>, <End Value>, <Parameter Variable 2>, <Start Value>, <End Value> )"
+    ],
+    "valid_example": [
+      "Function( <List of Numbers> )",
+      "Function(Function, Start x-value, End x-value)"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "FutureValue",
+    "syntax_list": [
+      "FutureValue( <Rate>, <Number of Periods>, <Payment>, <Present Value (optional)>, <Type (optional)> )"
+    ],
+    "valid_example": [
+      "FutureValue( <Rate>, <Number of Periods>, <Payment>, <Present Value (optional)>, <Type (optional)> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "Gamma",
+    "syntax_list": [
+      "Gamma( <Alpha>, <Beta>, <Variable Value> )",
+      "Gamma( <Alpha>, <Beta>, <Variable Value>, <Boolean Cumulative> )",
+      "Gamma( <Alpha>, <Beta>, x, <Boolean Cumulative> )"
+    ],
+    "valid_example": [
+      "Gamma( <Alpha>, <Beta>, <Variable Value> )",
+      "Gamma( <Alpha>, <Beta>, <Variable Value>, <Boolean Cumulative> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "GCD",
+    "syntax_list": [
+      "GCD( <Number>, <Number> )",
+      "GCD( <List of Numbers> )",
+      "GCD( <Polynomial>, <Polynomial> )",
+      "GCD( <List of Polynomials> )"
+    ],
+    "valid_example": [
+      "GCD( <Number>, <Number> )",
+      "GCD( <List of Numbers> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "GeometricMean",
+    "syntax_list": [
+      "GeometricMean(List of Numbers)"
+    ],
+    "valid_example": [
+      "GeometricMean(List of Numbers)"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "GetTime",
+    "syntax_list": [
+      "GetTime()",
+      "GetTime( \"<Format>\" )"
+    ],
+    "valid_example": [
+      "GetTime()",
+      "GetTime( \"<Format>\" )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "GroebnerDegRevLex",
+    "syntax_list": [
+      "GroebnerDegRevLex( <List of Polynomials> )",
+      "GroebnerDegRevLex( <List of Polynomials>, <List of Variables> )"
+    ],
+    "valid_example": [
+      "GroebnerDegRevLex( <List of Polynomials> )",
+      "GroebnerDegRevLex( <List of Polynomials>, <List of Variables> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "GroebnerLex",
+    "syntax_list": [
+      "GroebnerLex( <List of Polynomials> )",
+      "GroebnerLex( <List of Polynomials>, <List of Variables> )"
+    ],
+    "valid_example": [
+      "GroebnerLex( <List of Polynomials> )",
+      "GroebnerLex( <List of Polynomials>, <List of Variables> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "GroebnerLexDeg",
+    "syntax_list": [
+      "GroebnerLexDeg( <List of Polynomials> )",
+      "GroebnerLexDeg( <List of Polynomials>, <List of Variables> )"
+    ],
+    "valid_example": [
+      "GroebnerLexDeg( <List of Polynomials> )",
+      "GroebnerLexDeg( <List of Polynomials>, <List of Variables> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "HarmonicMean",
+    "syntax_list": [
+      "HarmonicMean( <List of Numbers> )"
+    ],
+    "valid_example": [
+      "HarmonicMean( <List of Numbers> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "Height",
+    "syntax_list": [
+      "Height( <Solid> )"
+    ],
+    "valid_example": [
+      "Height( <Solid> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "HideLayer",
+    "syntax_list": [
+      "HideLayer( <Number> )"
+    ],
+    "valid_example": [
+      "HideLayer( <Number> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "Histogram",
+    "syntax_list": [
+      "Histogram( <List of Class Boundaries>, <List of Heights> )",
+      "Histogram( <List of Class Boundaries>, <List of Raw Data>, <Boolean Use Density>, <Density Scale Factor>(optional) )",
+      "Histogram( <Boolean Cumulative>, <List of Class Boundaries>, <List of Raw Data>, <Boolean Use Density> , <Density Scale Factor> (optional) )"
+    ],
+    "valid_example": [
+      "Histogram( <List of Class Boundaries>, <List of Heights> )",
+      "Histogram( <List of Class Boundaries>, <List of Raw Data>, <Boolean Use Density>, <Density Scale Factor>(optional) )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "HistogramRight",
+    "syntax_list": [
+      "HistogramRight( <List of Class Boundaries>, <List of Heights> )",
+      "HistogramRight( <List of Class Boundaries>, <List of Raw Data>, <Boolean Use Density> , <Density Scale Factor> (optional) )",
+      "HistogramRight( <Boolean Cumulative>, <List of Class Boundaries>, <List of Raw Data>, <Boolean Use Density> , <Density Scale Factor> (optional) )"
+    ],
+    "valid_example": [
+      "HistogramRight( <List of Class Boundaries>, <List of Heights> )",
+      "HistogramRight( <List of Class Boundaries>, <List of Raw Data>, <Boolean Use Density> , <Density Scale Factor> (optional) )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "Hyperbola",
+    "syntax_list": [
+      "Hyperbola( <Focus>, <Focus>, <Semimajor Axis Length> )",
+      "Hyperbola( <Focus>, <Focus>, <Segment> )",
+      "Hyperbola( <Focus>, <Focus>, <Point> )"
+    ],
+    "valid_example": [
+      "Hyperbola( <Focus>, <Focus>, <Semimajor Axis Length> )",
+      "Hyperbola( <Focus>, <Focus>, <Segment> )"
+    ],
+    "category": "函数曲线"
+  },
+  {
+    "command": "HyperGeometric",
+    "syntax_list": [
+      "HyperGeometric( <Population Size>, <Number of Successes>, <Sample Size>)",
+      "HyperGeometric( <Population Size>, <Number of Successes>, <Sample Size>, <Boolean Cumulative> )",
+      "HyperGeometric( <Population Size>, <Number of Successes>, <Sample Size>, <Variable Value>, <Boolean Cumulative> )"
+    ],
+    "valid_example": [
+      "HyperGeometric( <Population Size>, <Number of Successes>, <Sample Size>)",
+      "HyperGeometric( <Population Size>, <Number of Successes>, <Sample Size>, <Boolean Cumulative> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "Icosahedron",
+    "syntax_list": [
+      "Icosahedron( <Equilateral Triangle> )",
+      "Icosahedron( <Point>, <Point>, <Direction> )",
+      "Icosahedron( <Point>, <Point>, <Point>)",
+      "Icosahedron( <Point>, <Point>)"
+    ],
+    "valid_example": [
+      "Icosahedron( <Equilateral Triangle> )",
+      "Icosahedron( <Point>, <Point>, <Direction> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "Identity",
+    "syntax_list": [
+      "Identity( <Number> )"
+    ],
+    "valid_example": [
+      "Identity( <Number> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "If",
+    "syntax_list": [
+      "If( <Condition>, <Then> )",
+      "If( <Condition>, <Then>, <Else> )",
+      "If( <Condition 1>, <Then 1>, <Condition 2>, <Then 2>, …​ , <Else (optional)> )"
+    ],
+    "valid_example": [
+      "If( <Condition>, <Then> )",
+      "If( <Condition>, <Then>, <Else> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "IFactor",
+    "syntax_list": [
+      "IFactor( <Polynomial> )",
+      "IFactor( <Expression> )",
+      "IFactor( <Expression>, <Variable> )"
+    ],
+    "valid_example": [
+      "IFactor( <Polynomial> )",
+      "IFactor( <Expression> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "ImplicitCurve",
+    "syntax_list": [
+      "ImplicitCurve( <List of Points> )",
+      "ImplicitCurve( <f(x,y)> )"
+    ],
+    "valid_example": [
+      "ImplicitCurve( <List of Points> )",
+      "ImplicitCurve( <f(x,y)> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "ImplicitDerivative",
+    "syntax_list": [
+      "ImplicitDerivative( <f(x, y)> )",
+      "ImplicitDerivative( <Expression>, <Dependent Variable>, <Independent Variable> )"
+    ],
+    "valid_example": [
+      "ImplicitDerivative( <f(x, y)> )",
+      "ImplicitDerivative( <Expression>, <Dependent Variable>, <Independent Variable> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "Incircle",
+    "syntax_list": [
+      "Incircle( <Point>, <Point>, <Point> )"
+    ],
+    "valid_example": [
+      "Incircle( <Point>, <Point>, <Point> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "IndexOf",
+    "syntax_list": [
+      "IndexOf( <Object>, <List> )",
+      "IndexOf( <Object>, <List>, <Start Index> )",
+      "IndexOf( <Text>, <Text> )",
+      "IndexOf( <Text>, <Text>, <Start Index> )"
+    ],
+    "valid_example": [
+      "IndexOf( <Object>, <List> )",
+      "IndexOf( <Object>, <List>, <Start Index> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "InfiniteCone",
+    "syntax_list": [
+      "InfiniteCone( <Point>, <Vector>, <Angle Î±> )",
+      "InfiniteCone( <Point>, <Point>, <Angle Î±> )",
+      "InfiniteCone( <Point>, <Line>, <Angle Î±> )"
+    ],
+    "valid_example": [
+      "InfiniteCone( <Point>, <Vector>, <Angle Î±> )",
+      "InfiniteCone( <Point>, <Point>, <Angle Î±> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "InfiniteCylinder",
+    "syntax_list": [
+      "InfiniteCylinder( <Line>, <Radius> )",
+      "InfiniteCylinder( <Point>, <Vector>, <Radius > )",
+      "InfiniteCylinder( <Point>, <Point>, <Radius> )"
+    ],
+    "valid_example": [
+      "InfiniteCylinder( <Line>, <Radius> )",
+      "InfiniteCylinder( <Point>, <Vector>, <Radius > )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "InflectionPoint",
+    "syntax_list": [
+      "InflectionPoint( <Polynomial> )",
+      "InflectionPoint( <Function> )"
+    ],
+    "valid_example": [
+      "InflectionPoint( <Polynomial> )",
+      "InflectionPoint( <Function> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "InputBox",
+    "syntax_list": [
+      "InputBox( <Linked Object> )"
+    ],
+    "valid_example": [
+      "InputBox( <Linked Object> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "Insert",
+    "syntax_list": [
+      "Insert( <Object>, <List>, <Position> )",
+      "Insert( <List>, <List>, <Position> )"
+    ],
+    "valid_example": [
+      "Insert( <Object>, <List>, <Position> )",
+      "Insert( <List>, <List>, <Position> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "Integral",
+    "syntax_list": [
+      "Integral( <Function> )",
+      "Integral( <Function>, <Variable> )",
+      "Integral( <Function>, <Start x-Value>, <End x-Value> )",
+      "Integral( <Function>, <Start x-Value>, <End x-Value>, <Boolean Evaluate> )",
+      "Integral( <Function>, <Variable>, <Start Value>, <End Value> )"
+    ],
+    "valid_example": [
+      "Integral( <Function> )",
+      "Integral( <Function>, <Variable> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "IntegralBetween",
+    "syntax_list": [
+      "IntegralBetween( <Function>, <Function>, <Number>, <Number> )",
+      "IntegralBetween( <Function>, <Function>, <Number>, <Number>, <Boolean Evaluate> )",
+      "IntegralBetween( <Function>, <Function>, <Variable>, <Number>, <Number> )"
+    ],
+    "valid_example": [
+      "IntegralBetween( <Function>, <Function>, <Number>, <Number> )",
+      "IntegralBetween( <Function>, <Function>, <Number>, <Number>, <Boolean Evaluate> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "IntegralSymbolic",
+    "syntax_list": [
+      "IntegralSymbolic(<Function>)",
+      "IntegralSymbolic(<Function>, <Variable>)"
+    ],
+    "valid_example": [
+      "IntegralSymbolic(<Function>)",
+      "IntegralSymbolic(<Function>, <Variable>)"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "InteriorAngles",
+    "syntax_list": [
+      "InteriorAngles( <Polygon> )"
+    ],
+    "valid_example": [
+      "InteriorAngles( <Polygon> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "Intersect",
+    "syntax_list": [
+      "Intersect( <Object>, <Object> )",
+      "Intersect( <Object>, <Object>, <Index of Intersection Point> )",
+      "Intersect( <Object>, <Object>, <Initial Point> )",
+      "Intersect( <Function>, <Function>, <Start x-Value>, <End x-Value> )",
+      "Intersect( <Curve 1>, <Curve 2>, <Parameter 1>, <Parameter 2> )",
+      "Intersect( <Function>, <Function> )"
+    ],
+    "valid_example": [
+      "Intersect( <Object>, <Object> )",
+      "Intersect( <Object>, <Object>, <Index of Intersection Point> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "IntersectConic",
+    "syntax_list": [
+      "IntersectConic( <Plane>, <Quadric> )",
+      "IntersectConic( <Quadric>, <Quadric> )"
+    ],
+    "valid_example": [
+      "IntersectConic( <Plane>, <Quadric> )",
+      "IntersectConic( <Quadric>, <Quadric> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "Intersection",
+    "syntax_list": [
+      "Intersection( <List>, <List> )"
+    ],
+    "valid_example": [
+      "Intersection( <List>, <List> )"
+    ],
+    "category": "计算测量"
+  },
+  {
+    "command": "IntersectPath",
+    "syntax_list": [
+      "IntersectPath( <Line>, <Polygon> )",
+      "IntersectPath( <Polygon>, <Polygon> )",
+      "IntersectPath( <Plane>, <Polygon> )",
+      "IntersectPath( <Plane>, <Quadric> )"
+    ],
+    "valid_example": [
+      "IntersectPath( <Line>, <Polygon> )",
+      "IntersectPath( <Polygon>, <Polygon> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "InverseBeta",
+    "syntax_list": [
+      "InverseBeta( <Number α>, <Number β>, <Probability> )"
+    ],
+    "valid_example": [
+      "InverseBeta( <Number α>, <Number β>, <Probability> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "InverseBinomial",
+    "syntax_list": [
+      "InverseBinomial( <Number of Trials>, <Probability of Success>, <Cumulative Probability> )"
+    ],
+    "valid_example": [
+      "InverseBinomial( <Number of Trials>, <Probability of Success>, <Cumulative Probability> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "InverseBinomialMinimumTrials",
+    "syntax_list": [
+      "InverseBinomialMinimumTrials(Cumulative Probability, Probability of Success, Number of Successes)"
+    ],
+    "valid_example": [
+      "InverseBinomialMinimumTrials(Cumulative Probability, Probability of Success, Number of Successes)"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "InverseCauchy",
+    "syntax_list": [
+      "InverseCauchy( <Median>, <Scale>, <Probability> )"
+    ],
+    "valid_example": [
+      "InverseCauchy( <Median>, <Scale>, <Probability> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "InverseChiSquared",
+    "syntax_list": [
+      "InverseChiSquared( <Degrees of Freedom>, <Probability> )"
+    ],
+    "valid_example": [
+      "InverseChiSquared( <Degrees of Freedom>, <Probability> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "InverseExponential",
+    "syntax_list": [
+      "InverseExponential( <Lambda>, <Probability> )"
+    ],
+    "valid_example": [
+      "InverseExponential( <Lambda>, <Probability> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "InverseFDistribution",
+    "syntax_list": [
+      "InverseFDistribution( <Numerator Degrees of Freedom>, <Denominator Degrees of Freedom>, <Probability> )"
+    ],
+    "valid_example": [
+      "InverseFDistribution( <Numerator Degrees of Freedom>, <Denominator Degrees of Freedom>, <Probability> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "InverseGamma",
+    "syntax_list": [
+      "InverseGamma( <Alpha>, <Beta>, <Probability> )"
+    ],
+    "valid_example": [
+      "InverseGamma( <Alpha>, <Beta>, <Probability> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "InverseHyperGeometric",
+    "syntax_list": [
+      "InverseHyperGeometric( <Population Size>, <Number of Successes>, <Sample Size>, <Probability> )"
+    ],
+    "valid_example": [
+      "InverseHyperGeometric( <Population Size>, <Number of Successes>, <Sample Size>, <Probability> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "InverseLaplace",
+    "syntax_list": [
+      "InverseLaplace( <Function> )",
+      "InverseLaplace( <Function>, <Variable> )"
+    ],
+    "valid_example": [
+      "InverseLaplace( <Function> )",
+      "InverseLaplace( <Function>, <Variable> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "InverseLogistic",
+    "syntax_list": [
+      "InverseLogistic( <Mean>, <Scale>, <Probability> )"
+    ],
+    "valid_example": [
+      "InverseLogistic( <Mean>, <Scale>, <Probability> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "InverseLogNormal",
+    "syntax_list": [
+      "InverseLogNormal( <Mean>, <Standard Deviation>, <Probability> )"
+    ],
+    "valid_example": [
+      "InverseLogNormal( <Mean>, <Standard Deviation>, <Probability> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "InverseNormal",
+    "syntax_list": [
+      "InverseNormal( <Mean>, <Standard Deviation>, <Probability> )"
+    ],
+    "valid_example": [
+      "InverseNormal( <Mean>, <Standard Deviation>, <Probability> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "InversePascal",
+    "syntax_list": [
+      "InversePascal( <n>, <p>, <Probability> )"
+    ],
+    "valid_example": [
+      "InversePascal( <n>, <p>, <Probability> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "InversePoisson",
+    "syntax_list": [
+      "InversePoisson( <Mean>, <Probability> )"
+    ],
+    "valid_example": [
+      "InversePoisson( <Mean>, <Probability> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "InverseTDistribution",
+    "syntax_list": [
+      "InverseTDistribution( <Degrees of Freedom>, <Probability> )"
+    ],
+    "valid_example": [
+      "InverseTDistribution( <Degrees of Freedom>, <Probability> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "InverseWeibull",
+    "syntax_list": [
+      "InverseWeibull( <Shape>, <Scale>, <Probability> )"
+    ],
+    "valid_example": [
+      "InverseWeibull( <Shape>, <Scale>, <Probability> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "InverseZipf",
+    "syntax_list": [
+      "InverseZipf( <Number of Elements>, <Exponent>, <Probability> )"
+    ],
+    "valid_example": [
+      "InverseZipf( <Number of Elements>, <Exponent>, <Probability> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "Invert",
+    "syntax_list": [
+      "Invert( <Matrix> )",
+      "Invert( <Function> )"
+    ],
+    "valid_example": [
+      "Invert( <Matrix> )",
+      "Invert( <Function> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "IsDefined",
+    "syntax_list": [
+      "IsDefined( <Object> )"
+    ],
+    "valid_example": [
+      "IsDefined( <Object> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "IsFactored",
+    "syntax_list": [
+      "IsFactored( <Polynomial> )"
+    ],
+    "valid_example": [
+      "IsFactored( <Polynomial> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "IsInRegion",
+    "syntax_list": [
+      "IsInRegion( <Point>, <Region> )"
+    ],
+    "valid_example": [
+      "IsInRegion( <Point>, <Region> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "IsInteger",
+    "syntax_list": [
+      "IsInteger( <Number> )"
+    ],
+    "valid_example": [
+      "IsInteger( <Number> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "IsPrime",
+    "syntax_list": [
+      "IsPrime( <Number> )"
+    ],
+    "valid_example": [
+      "IsPrime( <Number> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "IsTangent",
+    "syntax_list": [
+      "IsTangent( <Line>, <Conic> )"
+    ],
+    "valid_example": [
+      "IsTangent( <Line>, <Conic> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "IsVertexForm",
+    "syntax_list": [
+      "IsVertexForm(<function>)"
+    ],
+    "valid_example": [
+      "IsVertexForm(<function>)"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "Iteration",
+    "syntax_list": [
+      "Iteration( <Function>, <Start Value>, <Number of Iterations> )",
+      "Iteration( <Expression>, <Variable Name>, …​, <Start Values>, <Number of Iterations> )"
+    ],
+    "valid_example": [
+      "Iteration( <Function>, <Start Value>, <Number of Iterations> )",
+      "Iteration( <Expression>, <Variable Name>, …​, <Start Values>, <Number of Iterations> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "IterationList",
+    "syntax_list": [
+      "IterationList( <Function>, <Start Value>, <Number of Iterations> )",
+      "IterationList( <Expression>, <Variable Name>, …​, <Start Values>, <Number of Iterations> )"
+    ],
+    "valid_example": [
+      "IterationList( <Function>, <Start Value>, <Number of Iterations> )",
+      "IterationList( <Expression>, <Variable Name>, …​, <Start Values>, <Number of Iterations> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "Join",
+    "syntax_list": [
+      "Join( <List>, <List>, …​ )",
+      "Join( <List of Lists> )"
+    ],
+    "valid_example": [
+      "Join( <List>, <List>, …​ )",
+      "Join( <List of Lists> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "JordanDiagonalization",
+    "syntax_list": [
+      "JordanDiagonalization( <Matrix> )"
+    ],
+    "valid_example": [
+      "JordanDiagonalization( <Matrix> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "KeepIf",
+    "syntax_list": [
+      "KeepIf( <Condition>, <List> )",
+      "KeepIf( <Condition>, <Variable>, <List> )"
+    ],
+    "valid_example": [
+      "KeepIf( <Condition>, <List> )",
+      "KeepIf( <Condition>, <Variable>, <List> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "Laplace",
+    "syntax_list": [
+      "Laplace( <Function> )",
+      "Laplace( <Function>, <Variable> )"
+    ],
+    "valid_example": [
+      "Laplace( <Function> )",
+      "Laplace( <Function>, <Variable> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "Last",
+    "syntax_list": [
+      "Last( <List> )",
+      "Last( <Text> )",
+      "Last( <Text> , <Number of elements> )"
+    ],
+    "valid_example": [
+      "Last( <List> )",
+      "Last( <Text> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "LCM",
+    "syntax_list": [
+      "LCM( <Number>, <Number> )",
+      "LCM( <List of Numbers> )",
+      "LCM( <Polynomial>, <Polynomial> )",
+      "LCM( <List of Polynomials> )"
+    ],
+    "valid_example": [
+      "LCM( <Number>, <Number> )",
+      "LCM( <List of Numbers> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "LeftSide",
+    "syntax_list": [
+      "LeftSide( <Equation> )",
+      "LeftSide( <List of Equations> )",
+      "LeftSide( <List of Equations>, <Index> )"
+    ],
+    "valid_example": [
+      "LeftSide( <Equation> )",
+      "LeftSide( <List of Equations> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "LeftSum",
+    "syntax_list": [
+      "LeftSum( <Function>, <Start x-Value>, <End x-Value>, <Number of Rectangles> )"
+    ],
+    "valid_example": [
+      "LeftSum( <Function>, <Start x-Value>, <End x-Value>, <Number of Rectangles> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "Length",
+    "syntax_list": [
+      "Length( <Object> )",
+      "Length( <Function>, <Start x-Value>, <End x-Value> )",
+      "Length( <Function>, <Start Point>, <End Point> )",
+      "Length( <Curve>, <Start t-Value>, <End t-Value> )",
+      "Length( <Curve>, <Start Point>, <End Point> )",
+      "Length( <Function>, <Variable>, <Start x-Value>, <End x-Value> )"
+    ],
+    "valid_example": [
+      "Length( <Object> )",
+      "Length( <Function>, <Start x-Value>, <End x-Value> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "LetterToUnicode",
+    "syntax_list": [
+      "LetterToUnicode( \"<Letter>\" )"
+    ],
+    "valid_example": [
+      "LetterToUnicode( \"<Letter>\" )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "Limit",
+    "syntax_list": [
+      "Limit( <Function>, <Value> )",
+      "Limit( <Expression>, <Value> )",
+      "Limit( <Expression>, <Variable>, <Value> )"
+    ],
+    "valid_example": [
+      "Limit( <Function>, <Value> )",
+      "Limit( <Expression>, <Value> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "LimitAbove",
+    "syntax_list": [
+      "LimitAbove( <Function>, <Value> )",
+      "LimitAbove( <Expression>, <Value> )",
+      "LimitAbove( <Expression>, <Variable>, <Value> )"
+    ],
+    "valid_example": [
+      "LimitAbove( <Function>, <Value> )",
+      "LimitAbove( <Expression>, <Value> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "LimitBelow",
+    "syntax_list": [
+      "LimitBelow( <Function>, <Value> )",
+      "LimitBelow( <Expression>, <Value> )",
+      "LimitBelow( <Expression>, <Variable>, <Value> )"
+    ],
+    "valid_example": [
+      "LimitBelow( <Function>, <Value> )",
+      "LimitBelow( <Expression>, <Value> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "Line",
+    "syntax_list": [
+      "Line( <Point>, <Point> )",
+      "Line( <Point>, <Parallel Line> )",
+      "Line( <Point>, <Direction Vector> )"
+    ],
+    "valid_example": [
+      "Line( <Point>, <Point> )",
+      "Line( <Point>, <Parallel Line> )"
+    ],
+    "category": "点线向量"
+  },
+  {
+    "command": "LinearEccentricity",
+    "syntax_list": [
+      "LinearEccentricity( <Conic> )"
+    ],
+    "valid_example": [
+      "LinearEccentricity( <Conic> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "LineGraph",
+    "syntax_list": [
+      "LineGraph (<List of x-coordinates>, <List of y-coordinates>)"
+    ],
+    "valid_example": [
+      "LineGraph (<List of x-coordinates>, <List of y-coordinates>)"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "Locus",
+    "syntax_list": [
+      "Locus( <Point Creating Locus Line Q>, <Point P>)",
+      "Locus( <Point Creating Locus Line Q>, <Slider t>)",
+      "Locus( <Slopefield>, <Point> )",
+      "Locus( <f(x, y)>, <Point> )"
+    ],
+    "valid_example": [
+      "Locus( <Point Creating Locus Line Q>, <Point P>)",
+      "Locus( <Point Creating Locus Line Q>, <Slider t>)"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "LocusEquation",
+    "syntax_list": [
+      "LocusEquation( <Locus> )",
+      "LocusEquation( <Point Creating Locus Line Q>, <Point P> )",
+      "LocusEquation( <Boolean Expression>, <Free Point> )"
+    ],
+    "valid_example": [
+      "LocusEquation( <Locus> )",
+      "LocusEquation( <Point Creating Locus Line Q>, <Point P> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "Logistic",
+    "syntax_list": [
+      "Logistic( <Mean>, <Scale>, <Variable Value> )",
+      "Logistic( <Mean>, <Scale>, <Variable Value>, <Boolean Cumulative> )",
+      "Logistic( <Mean>, <Scale>, x, <Boolean Cumulative> )"
+    ],
+    "valid_example": [
+      "Logistic( <Mean>, <Scale>, <Variable Value> )",
+      "Logistic( <Mean>, <Scale>, <Variable Value>, <Boolean Cumulative> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "LogNormal",
+    "syntax_list": [
+      "LogNormal( <Mean>, <Standard Deviation>, <Variable Value> )",
+      "LogNormal( <Mean>, <Standard Deviation>, <Variable Value>, <Boolean Cumulative> )",
+      "LogNormal( <Mean>, <Standard Deviation>, x, <Boolean Cumulative> )"
+    ],
+    "valid_example": [
+      "LogNormal( <Mean>, <Standard Deviation>, <Variable Value> )",
+      "LogNormal( <Mean>, <Standard Deviation>, <Variable Value>, <Boolean Cumulative> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "LowerSum",
+    "syntax_list": [
+      "LowerSum( <Function>, <Start x-Value>, <End x-Value>, <Number of Rectangles> )"
+    ],
+    "valid_example": [
+      "LowerSum( <Function>, <Start x-Value>, <End x-Value>, <Number of Rectangles> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "LUDecomposition",
+    "syntax_list": [
+      "LUDecomposition( <Matrix> )"
+    ],
+    "valid_example": [
+      "LUDecomposition( <Matrix> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "MAD",
+    "syntax_list": [
+      "MAD( <List of Numbers> )",
+      "MAD( <List of Numbers>, <List of Frequencies> )"
+    ],
+    "valid_example": [
+      "MAD( <List of Numbers> )",
+      "MAD( <List of Numbers>, <List of Frequencies> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "MajorAxis",
+    "syntax_list": [
+      "MajorAxis( <Conic> )"
+    ],
+    "valid_example": [
+      "MajorAxis( <Conic> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "MatrixRank",
+    "syntax_list": [
+      "MatrixRank( <Matrix> )"
+    ],
+    "valid_example": [
+      "MatrixRank( <Matrix> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "Max",
+    "syntax_list": [
+      "Max( <List> )",
+      "Max( <Interval> )",
+      "Max( <Number>, <Number> )",
+      "Max( <Function>, <Start x-Value>, <End x-Value> )",
+      "Max(<List of Data>, <List of Frequencies> )"
+    ],
+    "valid_example": [
+      "Max( <List> )",
+      "Max( <Interval> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "Maximize",
+    "syntax_list": [
+      "Maximize( <Dependent number>, <Free number> )",
+      "Maximize( <Dependent Number>, <Point on Path> )"
+    ],
+    "valid_example": [
+      "Maximize( <Dependent number>, <Free number> )",
+      "Maximize( <Dependent Number>, <Point on Path> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "Mean",
+    "syntax_list": [
+      "Mean( <List of Raw Data> )",
+      "Mean( <List of Numbers>, <List of Frequencies> )"
+    ],
+    "valid_example": [
+      "Mean( <List of Raw Data> )",
+      "Mean( <List of Numbers>, <List of Frequencies> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "MeanX",
+    "syntax_list": [
+      "MeanX( <List of Points> )"
+    ],
+    "valid_example": [
+      "MeanX( <List of Points> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "MeanY",
+    "syntax_list": [
+      "MeanY( <List of Points> )"
+    ],
+    "valid_example": [
+      "MeanY( <List of Points> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "Median",
+    "syntax_list": [
+      "Median( <List of Raw Data> )",
+      "Median( <List of Numbers>, <List of Frequencies> )"
+    ],
+    "valid_example": [
+      "Median( <List of Raw Data> )",
+      "Median( <List of Numbers>, <List of Frequencies> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "Midpoint",
+    "syntax_list": [
+      "Midpoint( <Segment> )",
+      "Midpoint( <Conic> )",
+      "Midpoint( <Interval> )",
+      "Midpoint( <Point>, <Point> )",
+      "Midpoint( <Quadric> )"
+    ],
+    "valid_example": [
+      "Midpoint( <Segment> )",
+      "Midpoint( <Conic> )"
+    ],
+    "category": "计算测量"
+  },
+  {
+    "command": "Min",
+    "syntax_list": [
+      "Min( <List> )",
+      "Min( <Interval> )",
+      "Min( <Number>, <Number> )",
+      "Min( <Function>, <Start x-Value>, <End x-Value> )",
+      "Min( <List of Data>, <List of Frequencies> )"
+    ],
+    "valid_example": [
+      "Min( <List> )",
+      "Min( <Interval> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "MinimalPolynomial",
+    "syntax_list": [
+      "MinimalPolynomial( <Matrix> )"
+    ],
+    "valid_example": [
+      "MinimalPolynomial( <Matrix> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "Minimize",
+    "syntax_list": [
+      "Minimize( <Dependent number>, <Free number> )",
+      "Minimize( <Dependent Number>, <Point on Path> )"
+    ],
+    "valid_example": [
+      "Minimize( <Dependent number>, <Free number> )",
+      "Minimize( <Dependent Number>, <Point on Path> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "MinimumSpanningTree",
+    "syntax_list": [
+      "MinimumSpanningTree( <List of Points> )"
+    ],
+    "valid_example": [
+      "MinimumSpanningTree( <List of Points> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "MinorAxis",
+    "syntax_list": [
+      "MinorAxis( <Conic> )"
+    ],
+    "valid_example": [
+      "MinorAxis( <Conic> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "MixedNumber",
+    "syntax_list": [
+      "MixedNumber( <Number> )"
+    ],
+    "valid_example": [
+      "MixedNumber( <Number> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "Mod",
+    "syntax_list": [
+      "Mod( <Dividend Number>, <Divisor Number> )",
+      "Mod( <Dividend Polynomial>, <Divisor Polynomial> )"
+    ],
+    "valid_example": [
+      "Mod( <Dividend Number>, <Divisor Number> )",
+      "Mod( <Dividend Polynomial>, <Divisor Polynomial> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "Mode",
+    "syntax_list": [
+      "Mode( <List of Numbers> )"
+    ],
+    "valid_example": [
+      "mode(s)"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "ModularExponent",
+    "syntax_list": [
+      "ModularExponent( <Number>, <Number>, <Number> )"
+    ],
+    "valid_example": [
+      "ModularExponent( <Number>, <Number>, <Number> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "Name",
+    "syntax_list": [
+      "Name( <Object> )"
+    ],
+    "valid_example": [
+      "Name( <Object> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "NDerivative",
+    "syntax_list": [
+      "NDerivative( <Function> )",
+      "NDerivative( <Function>, <Order n> )"
+    ],
+    "valid_example": [
+      "NDerivative( <Function> )",
+      "NDerivative( <Function>, <Order n> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "Net",
+    "syntax_list": [
+      "Net( <Polyhedron> , <Number> )",
+      "Net( <Polyhedron>, <Number>, <Face>, <Edge>, <Edge>, …​ )"
+    ],
+    "valid_example": [
+      "Net( <Polyhedron> , <Number> )",
+      "Net( <Polyhedron>, <Number>, <Face>, <Edge>, <Edge>, …​ )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "NextPrime",
+    "syntax_list": [
+      "NextPrime( <Number> )"
+    ],
+    "valid_example": [
+      "NextPrime( <Number> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "NIntegral",
+    "syntax_list": [
+      "NIntegral( <Function> )",
+      "NIntegral( <Function>, <Start x-Value>, <End x-Value> )",
+      "NIntegral( <Function>, <Start x-Value>, <Start y-Value>, <End x-Value> )",
+      "NIntegral( <Function>, <Variable>, <Start Value>, <End Value> )"
+    ],
+    "valid_example": [
+      "NIntegral( <Function> )",
+      "NIntegral( <Function>, <Start x-Value>, <End x-Value> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "NInvert",
+    "syntax_list": [
+      "NInvert( <Function> )"
+    ],
+    "valid_example": [
+      "NInvert( <Function> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "Normal",
+    "syntax_list": [
+      "Normal( <Mean>, <Standard Deviation>, <Variable Value> )",
+      "Normal( <Mean>, <Standard Deviation>, <Variable Value>, <Boolean Cumulative> )",
+      "Normal( <Mean>, <Standard Deviation>, <Variable Value u> , <Variable Value v>)",
+      "Normal( <Mean>, <Standard Deviation>, x, <Boolean Cumulative> )"
+    ],
+    "valid_example": [
+      "Normal( m , s , u , v )",
+      "Normal( m , s , v , true)"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "Normalize",
+    "syntax_list": [
+      "Normalize( <List of Numbers> )",
+      "Normalize( <List of Points> )"
+    ],
+    "valid_example": [
+      "Normalize( <List of Numbers> )",
+      "Normalize( <List of Points> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "NormalQuantilePlot",
+    "syntax_list": [
+      "NormalQuantilePlot( <List of Raw Data> )"
+    ],
+    "valid_example": [
+      "NormalQuantilePlot( <List of Raw Data> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "NSolutions",
+    "syntax_list": [
+      "NSolutions( <Equation> )",
+      "NSolutions( <Equation>, <Variable> )",
+      "NSolutions( <Equation>, <Variable = starting value> )",
+      "NSolutions( <List of Equations>, <List of Variables> )"
+    ],
+    "valid_example": [
+      "NSolutions( <Equation> )",
+      "NSolutions( <Equation>, <Variable> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "NSolve",
+    "syntax_list": [
+      "NSolve( <Equation> )",
+      "NSolve( <Equation>, <Variable> )",
+      "NSolve( <Equation>, <Variable = starting value> )",
+      "NSolve( <List of Equations>, <List of Variables> )"
+    ],
+    "valid_example": [
+      "NSolve( <Equation> )",
+      "NSolve( <Equation>, <Variable> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "NSolveODE",
+    "syntax_list": [
+      "NSolveODE( <List of Derivatives>, <Initial x-coordinate>, <List of Initial y-coordinates>, <Final x-coordinate> )"
+    ],
+    "valid_example": [
+      "NSolveODE( <List of Derivatives>, <Initial x-coordinate>, <List of Initial y-coordinates>, <Final x-coordinate> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "Numerator",
+    "syntax_list": [
+      "Numerator( <Function> )",
+      "Numerator( <Number> )",
+      "Numerator( <Expression> )"
+    ],
+    "valid_example": [
+      "Numerator( <Function> )",
+      "Numerator( <Number> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "Numeric",
+    "syntax_list": [
+      "Numeric( <Expression> )",
+      "Numeric( <Expression>, <Significant Figures> )"
+    ],
+    "valid_example": [
+      "Numeric( <Expression> )",
+      "Numeric( <Expression>, <Significant Figures> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "Object",
+    "syntax_list": [
+      "Object( <Name of Object as Text> )"
+    ],
+    "valid_example": [
+      "Object( <Name of Object as Text> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "Octahedron",
+    "syntax_list": [
+      "Octahedron( <Equilateral Triangle> )",
+      "Octahedron( <Point>, <Point>, <Direction> )",
+      "Octahedron( <Point>, <Point>, <Point>)",
+      "Octahedron( <Point>, <Point>)"
+    ],
+    "valid_example": [
+      "Octahedron( <Equilateral Triangle> )",
+      "Octahedron( <Point>, <Point>, <Direction> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "Ordinal",
+    "syntax_list": [
+      "Ordinal( <Integer> )"
+    ],
+    "valid_example": [
+      "Ordinal( <Integer> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "OrdinalRank",
+    "syntax_list": [
+      "OrdinalRank( <List> )"
+    ],
+    "valid_example": [
+      "OrdinalRank( <List> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "OsculatingCircle",
+    "syntax_list": [
+      "OsculatingCircle( <Point>, <Function> )",
+      "OsculatingCircle( <Point>, <Curve> )",
+      "OsculatingCircle( <Point>, <Object> )"
+    ],
+    "valid_example": [
+      "OsculatingCircle( <Point>, <Function> )",
+      "OsculatingCircle( <Point>, <Curve> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "Pan",
+    "syntax_list": [
+      "Pan( <x>, <y> )",
+      "Pan( <x>, <y>, <z> )"
+    ],
+    "valid_example": [
+      "Pan( <x>, <y> )",
+      "Pan( <x>, <y>, <z> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "Parabola",
+    "syntax_list": [
+      "Parabola( <Point>, <Line> )"
+    ],
+    "valid_example": [
+      "Parabola( <Point>, <Line> )"
+    ],
+    "category": "函数曲线"
+  },
+  {
+    "command": "Parameter",
+    "syntax_list": [
+      "Parameter( <Parabola> )"
+    ],
+    "valid_example": [
+      "Parameter( <Parabola> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "ParametricDerivative",
+    "syntax_list": [
+      "ParametricDerivative( <Curve> )"
+    ],
+    "valid_example": [
+      "ParametricDerivative( <Curve> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "ParseToFunction",
+    "syntax_list": [
+      "ParseToFunction( <Text> )",
+      "ParseToFunction( <Function>, <Text> )",
+      "ParseToFunction( <Text>, <List of variables> )"
+    ],
+    "valid_example": [
+      "ParseToFunction( <Text> )",
+      "ParseToFunction( <Function>, <Text> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "ParseToNumber",
+    "syntax_list": [
+      "ParseToNumber( <Number>, <Text> )",
+      "ParseToNumber( <Text> )"
+    ],
+    "valid_example": [
+      "ParseToNumber( <Number>, <Text> )",
+      "ParseToNumber( <Text> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "PartialFractions",
+    "syntax_list": [
+      "PartialFractions( <Function> )",
+      "PartialFractions( <Function>, <Variable> )"
+    ],
+    "valid_example": [
+      "PartialFractions( <Function> )",
+      "PartialFractions( <Function>, <Variable> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "Pascal",
+    "syntax_list": [
+      "Pascal( <n>, <p> )",
+      "Pascal( <n>, <p>, <Boolean Cumulative> )",
+      "Pascal( <n>, <p>, <Variable Value>, <Boolean Cumulative> )"
+    ],
+    "valid_example": [
+      "Pascal( <n>, <p> )",
+      "Pascal( <n>, <p>, <Boolean Cumulative> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "PathParameter",
+    "syntax_list": [
+      "PathParameter( <Point On Path> )"
+    ],
+    "valid_example": [
+      "PathParameter( <Point On Path> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "Payment",
+    "syntax_list": [
+      "Payment( <Rate>, <Number of Periods>, <Present Value>, <Future Value (optional)>, <Type (optional)> )"
+    ],
+    "valid_example": [
+      "Payment( <Rate>, <Number of Periods>, <Present Value>, <Future Value (optional)>, <Type (optional)> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "Percentile",
+    "syntax_list": [
+      "Percentile( <List of Numbers>, <Percent> )"
+    ],
+    "valid_example": [
+      "Percentile( <List of Numbers>, <Percent> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "Perimeter",
+    "syntax_list": [
+      "Perimeter( <Polygon> )",
+      "Perimeter( <Conic> )",
+      "Perimeter( <Locus> )"
+    ],
+    "valid_example": [
+      "Perimeter( <Polygon> )",
+      "Perimeter( <Conic> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "Periods",
+    "syntax_list": [
+      "Periods( <Rate>, <Payment>, <Present Value>, <Future Value (optional)>, <Type (optional)> )"
+    ],
+    "valid_example": [
+      "Periods( <Rate>, <Payment>, <Present Value>, <Future Value (optional)>, <Type (optional)> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "PerpendicularBisector",
+    "syntax_list": [
+      "PerpendicularBisector( <Segment> )",
+      "PerpendicularBisector( <Point>, <Point> )",
+      "PerpendicularBisector( <Point>, <Point>, <Direction>)"
+    ],
+    "valid_example": [
+      "PerpendicularBisector( <Segment> )",
+      "PerpendicularBisector( <Point>, <Point> )"
+    ],
+    "category": "辅助线"
+  },
+  {
+    "command": "PerpendicularLine",
+    "syntax_list": [
+      "PerpendicularLine( <Point>, <Line> )",
+      "PerpendicularLine( <Point>, <Segment> )",
+      "PerpendicularLine( <Point>, <Vector> )",
+      "PerpendicularLine( <Point>, <Plane> )",
+      "PerpendicularLine( <Line> , <Line> )",
+      "PerpendicularLine( <Point>, <Direction>, <Direction> )",
+      "PerpendicularLine( <Point>, <Line>, <Context> )"
+    ],
+    "valid_example": [
+      "PerpendicularLine( <Point>, <Line>, <Plane> )",
+      "PerpendicularLine( <Point>, <Line>, space )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "PerpendicularPlane",
+    "syntax_list": [
+      "PerpendicularPlane( <Point>, <Line> )",
+      "PerpendicularPlane( <Point>, <Vector> )"
+    ],
+    "valid_example": [
+      "PerpendicularPlane( <Point>, <Line> )",
+      "PerpendicularPlane( <Point>, <Vector> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "PerpendicularVector",
+    "syntax_list": [
+      "PerpendicularVector( <Line> )",
+      "PerpendicularVector( <Segment> )",
+      "PerpendicularVector( <Vector> )",
+      "PerpendicularVector( <Plane> )"
+    ],
+    "valid_example": [
+      "PerpendicularVector( <Line> )",
+      "PerpendicularVector( <Segment> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "PieChart",
+    "syntax_list": [
+      "PieChart(< List of Frequencies >)",
+      "PieChart(< List of Frequencies >, < Center >, < Radius >)"
+    ],
+    "valid_example": [
+      "PieChart(< List of Frequencies >)",
+      "PieChart(< List of Frequencies >, < Center >, < Radius >)"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "Plane",
+    "syntax_list": [
+      "Plane( <Polygon> )",
+      "Plane( <Conic> )",
+      "Plane( <Point>, <Plane> )",
+      "Plane( <Point>, <Line> )",
+      "Plane( <Line> , <Line> )",
+      "Plane( <Point>, <Point>, <Point> )",
+      "Plane( <Point>, <Vector>, <Vector> )"
+    ],
+    "valid_example": [
+      "Plane( <Polygon> )",
+      "Plane( <Conic> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "PlaneBisector",
+    "syntax_list": [
+      "PlaneBisector( <Point> , <Point> )",
+      "PlaneBisector( <Segment> )"
+    ],
+    "valid_example": [
+      "PlaneBisector( <Point> , <Point> )",
+      "PlaneBisector( <Segment> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "PlaySound",
+    "syntax_list": [
+      "PlaySound( <URL> )",
+      "PlaySound( <Boolean Play> )",
+      "PlaySound( <Function>, <Min Value>, <Max Value> )",
+      "PlaySound( <Function>, <Min Value>, <Max Value>, <Sample Rate>, <Sample Depth> )",
+      "PlaySound( <Note>, <Duration>, <Instrument> ) (GeoGebra Classic 5 only)"
+    ],
+    "valid_example": [
+      "PlaySound(true)",
+      "PlaySound(false)"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "PlotSolve",
+    "syntax_list": [
+      "PlotSolve( <Equation in x> )"
+    ],
+    "valid_example": [
+      "PlotSolve( <Equation in x> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "Point",
+    "syntax_list": [
+      "Point( <Object> )",
+      "Point( <Object>, <Parameter> )",
+      "Point( <Point>, <Vector> )",
+      "Point( <List> )"
+    ],
+    "valid_example": [
+      "Point( <Object> )",
+      "Point( <Object>, <Parameter> )"
+    ],
+    "category": "点线向量"
+  },
+  {
+    "command": "PointIn",
+    "syntax_list": [
+      "PointIn( <Region> )"
+    ],
+    "valid_example": [
+      "PointIn( <Region> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "PointList",
+    "syntax_list": [
+      "PointList( <List> )"
+    ],
+    "valid_example": [
+      "PointList( <List> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "Poisson",
+    "syntax_list": [
+      "Poisson( <Mean> )",
+      "Poisson( <Mean>, <Boolean Cumulative> )",
+      "Poisson( <Mean>, <Variable Value v>, <Boolean Cumulative> )"
+    ],
+    "valid_example": [
+      "Poisson( <Mean> )",
+      "Poisson( <Mean>, <Boolean Cumulative> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "Polar",
+    "syntax_list": [
+      "Polar( <Point>, <Conic> )",
+      "Polar(<Line>, <Conic>)"
+    ],
+    "valid_example": [
+      "Polar( <Point>, <Conic> )",
+      "Polar(<Line>, <Conic>)"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "Polygon",
+    "syntax_list": [
+      "Polygon( <Point>, …​, <Point> )",
+      "Polygon( <Point>, <Point>, <Number of Vertices> )",
+      "Polygon( <List of Points> )",
+      "Polygon( <Point>, <Point>, <Number of Vertices n>, <Direction> )"
+    ],
+    "valid_example": [
+      "Polygon( <Point>, …​, <Point> )",
+      "Polygon( <Point>, <Point>, <Number of Vertices> )"
+    ],
+    "category": "多边形"
+  },
+  {
+    "command": "Polyline",
+    "syntax_list": [
+      "Polyline( <List of Points> )",
+      "Polyline( <Point>, …​, <Point> )"
+    ],
+    "valid_example": [
+      "Polyline( <List of Points> )",
+      "Polyline( <Point>, …​, <Point> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "Polynomial",
+    "syntax_list": [
+      "Polynomial( <Function> )",
+      "Polynomial( <List of Points> )",
+      "Polynomial( <Function>, <Variable> )"
+    ],
+    "valid_example": [
+      "Polynomial( <Function> )",
+      "Polynomial( <List of Points> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "PresentValue",
+    "syntax_list": [
+      "PresentValue( <Rate>, <Number of Periods>, <Payment>, <Future Value (optional)>, <Type (optional)> )"
+    ],
+    "valid_example": [
+      "PresentValue( <Rate>, <Number of Periods>, <Payment>, <Future Value (optional)>, <Type (optional)> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "PreviousPrime",
+    "syntax_list": [
+      "PreviousPrime( <Number> )"
+    ],
+    "valid_example": [
+      "PreviousPrime( <Number> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "PrimeFactors",
+    "syntax_list": [
+      "PrimeFactors( <Number> )"
+    ],
+    "valid_example": [
+      "PrimeFactors( <Number> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "Prism",
+    "syntax_list": [
+      "Prism( <Point>, <Point>, …​ )",
+      "Prism( <Polygon>, <Point> )",
+      "Prism( <Polygon>, <Height value> )"
+    ],
+    "valid_example": [
+      "Prism( <Point>, <Point>, …​ )",
+      "Prism( <Polygon>, <Point> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "Product",
+    "syntax_list": [
+      "Product( <List of Raw Data> )",
+      "Product( <List of Numbers>, <Number of Elements> )",
+      "Product( <List of Numbers>, <List of Frequencies> )",
+      "Product( <Expression>, <Variable>, <Start Value>, <End Value> )",
+      "Product( <List of Expressions> )"
+    ],
+    "valid_example": [
+      "Product( <List of Raw Data> )",
+      "Product( <List of Numbers>, <Number of Elements> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "Prove",
+    "syntax_list": [
+      "Prove( <Boolean Expression> )"
+    ],
+    "valid_example": [
+      "Prove( <Boolean Expression> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "ProveDetails",
+    "syntax_list": [
+      "ProveDetails( <Boolean Expression> )"
+    ],
+    "valid_example": [
+      "ProveDetails( <Boolean Expression> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "Pyramid",
+    "syntax_list": [
+      "Pyramid( <Point>, <Point>, …​)",
+      "Pyramid( <Polygon>, <Point> )",
+      "Pyramid( <Polygon>, <Height> )"
+    ],
+    "valid_example": [
+      "Pyramid( <Point>, <Point>, …​)",
+      "Pyramid( <Polygon>, <Point> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "QRDecomposition",
+    "syntax_list": [
+      "QRDecomposition( <Matrix> )"
+    ],
+    "valid_example": [
+      "QRDecomposition( <Matrix> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "Radius",
+    "syntax_list": [
+      "Radius( <Conic> )"
+    ],
+    "valid_example": [
+      "Radius( <Conic> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "RandomBetween",
+    "syntax_list": [
+      "RandomBetween( <Minimum Integer> , <Maximum Integer> )",
+      "RandomBetween( <Minimum Integer> , <Maximum Integer> , <Boolean Fixed> )",
+      "RandomBetween( <Minimum Integer> , <Maximum Integer>, <Number of Samples> )"
+    ],
+    "valid_example": [
+      "RandomBetween( <Minimum Integer> , <Maximum Integer> )",
+      "RandomBetween( <Minimum Integer> , <Maximum Integer> , <Boolean Fixed> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "RandomBinomial",
+    "syntax_list": [
+      "RandomBinomial( <Number of Trials>, <Probability> )"
+    ],
+    "valid_example": [
+      "RandomBinomial( <Number of Trials>, <Probability> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "RandomDiscrete",
+    "syntax_list": [
+      "RandomDiscrete( <List>, <List> )"
+    ],
+    "valid_example": [
+      "RandomDiscrete( <List>, <List> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "RandomElement",
+    "syntax_list": [
+      "RandomElement( <List> )"
+    ],
+    "valid_example": [
+      "RandomElement( <List> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "RandomNormal",
+    "syntax_list": [
+      "RandomNormal( <Mean>, <Standard Deviation> )"
+    ],
+    "valid_example": [
+      "RandomNormal( <Mean>, <Standard Deviation> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "RandomPointIn",
+    "syntax_list": [
+      "RandomPointIn( <Region> )",
+      "RandomPointIn( <List of Points> )",
+      "RandomPointIn( <xMin>, <xMax>, <yMin>, <yMax> )"
+    ],
+    "valid_example": [
+      "RandomPointIn( <Region> )",
+      "RandomPointIn( <List of Points> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "RandomPoisson",
+    "syntax_list": [
+      "RandomPoisson( <Mean> )"
+    ],
+    "valid_example": [
+      "RandomPoisson( <Mean> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "RandomPolynomial",
+    "syntax_list": [
+      "RandomPolynomial( <Degree> , <Minimum for Coefficients>, <Maximum for Coefficients> )",
+      "RandomPolynomial( <Variable>, <Degree> , <Minimum for Coefficients>, <Maximum for Coefficients> )"
+    ],
+    "valid_example": [
+      "RandomPolynomial( <Degree> , <Minimum for Coefficients>, <Maximum for Coefficients> )",
+      "RandomPolynomial( <Variable>, <Degree> , <Minimum for Coefficients>, <Maximum for Coefficients> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "RandomUniform",
+    "syntax_list": [
+      "RandomUniform( <Min>, <Max> )",
+      "RandomUniform( <Min>, <Max>, <Number of Samples n> )"
+    ],
+    "valid_example": [
+      "RandomUniform( <Min>, <Max> )",
+      "RandomUniform( <Min>, <Max>, <Number of Samples n> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "Rate",
+    "syntax_list": [
+      "Rate( <Number of Periods>, <Payment>, <Present Value>, <Future Value (optional)>, <Type (optional)>, <Guess (optional)> )"
+    ],
+    "valid_example": [
+      "Rate( <Number of Periods>, <Payment>, <Present Value>, <Future Value (optional)>, <Type (optional)>, <Guess (optional)> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "Rationalize",
+    "syntax_list": [
+      "Rationalize( <Number> )"
+    ],
+    "valid_example": [
+      "Rationalize( <Number> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "Ray",
+    "syntax_list": [
+      "Ray( <Start Point>, <Point> )",
+      "Ray( <Start Point>, <Direction Vector> )"
+    ],
+    "valid_example": [
+      "Ray( <Start Point>, <Point> )",
+      "Ray( <Start Point>, <Direction Vector> )"
+    ],
+    "category": "点线向量"
+  },
+  {
+    "command": "ReadText",
+    "syntax_list": [
+      "ReadText( <Text> )"
+    ],
+    "valid_example": [
+      "ReadText( <Text> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "RectangleSum",
+    "syntax_list": [
+      "RectangleSum( <Function>, <Start x-Value>, <End x-Value>, <Number of Rectangles>, <Position for rectangle start> )"
+    ],
+    "valid_example": [
+      "RectangleSum( <Function>, <Start x-Value>, <End x-Value>, <Number of Rectangles>, <Position for rectangle start> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "ReducedRowEchelonForm",
+    "syntax_list": [
+      "ReducedRowEchelonForm( <Matrix> )"
+    ],
+    "valid_example": [
+      "ReducedRowEchelonForm( <Matrix> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "Reflect",
+    "syntax_list": [
+      "Reflect( < Object >, <Point> )",
+      "Reflect( < Object >, <Line> )",
+      "Reflect( < Object >, <Circle> )",
+      "Reflect( < Object >, <Plane> )"
+    ],
+    "valid_example": [
+      "Reflect( < Object >, <Point> )",
+      "Reflect( < Object >, <Line> )"
+    ],
+    "category": "变换"
+  },
+  {
+    "command": "Relation",
+    "syntax_list": [
+      "Relation( <List> )",
+      "Relation( <Object>, <Object> )"
+    ],
+    "valid_example": [
+      "Relation( <List> )",
+      "Relation( <Object>, <Object> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "RemovableDiscontinuity",
+    "syntax_list": [
+      "RemovableDiscontinuity( <Function> )"
+    ],
+    "valid_example": [
+      "RemovableDiscontinuity( <Function> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "Remove",
+    "syntax_list": [
+      "Remove( <List>, <List> )"
+    ],
+    "valid_example": [
+      "Remove( <List>, <List> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "RemoveUndefined",
+    "syntax_list": [
+      "RemoveUndefined( <List> )"
+    ],
+    "valid_example": [
+      "RemoveUndefined( <List> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "Rename",
+    "syntax_list": [
+      "Rename( <Object>, <Name> )"
+    ],
+    "valid_example": [
+      "Rename( <Object>, <Name> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "Repeat",
+    "syntax_list": [
+      "Repeat( <Number>, <Scripting Command>, <Scripting Command>, …​ )"
+    ],
+    "valid_example": [
+      "Repeat( <Number>, <Scripting Command>, <Scripting Command>, …​ )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "ReplaceAll",
+    "syntax_list": [
+      "ReplaceAll( <Text>, <Text to Match>, <Text to Replace> )"
+    ],
+    "valid_example": [
+      "ReplaceAll( <Text>, <Text to Match>, <Text to Replace> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "ResidualPlot",
+    "syntax_list": [
+      "ResidualPlot( <List of Points>, <Function> )"
+    ],
+    "valid_example": [
+      "ResidualPlot( <List of Points>, <Function> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "Reverse",
+    "syntax_list": [
+      "Reverse( <List> )"
+    ],
+    "valid_example": [
+      "Reverse( <List> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "RightSide",
+    "syntax_list": [
+      "RightSide( <Equation> )",
+      "RightSide( <List of Equations> )",
+      "RightSide( <List of Equations>, <Index> )"
+    ],
+    "valid_example": [
+      "RightSide( <Equation> )",
+      "RightSide( <List of Equations> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "RigidPolygon",
+    "syntax_list": [
+      "RigidPolygon( <Polygon> )",
+      "RigidPolygon( <Polygon>, <Offset x>, <Offset y> )",
+      "RigidPolygon( <Free Point>, …​, <Free Point> )"
+    ],
+    "valid_example": [
+      "RigidPolygon( <Polygon> )",
+      "RigidPolygon( <Polygon>, <Offset x>, <Offset y> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "Root",
+    "syntax_list": [
+      "Root( <Polynomial> )",
+      "Root( <Function>, <Initial x-Value> )",
+      "Root( <Function>, <Start x-Value>, <End x-Value> )"
+    ],
+    "valid_example": [
+      "Root( <Polynomial> )",
+      "Root( <Function>, <Initial x-Value> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "RootList",
+    "syntax_list": [
+      "RootList( <List> )"
+    ],
+    "valid_example": [
+      "RootList( <List> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "RootMeanSquare",
+    "syntax_list": [
+      "RootMeanSquare( <List of Numbers> )"
+    ],
+    "valid_example": [
+      "RootMeanSquare( <List of Numbers> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "Roots",
+    "syntax_list": [
+      "Roots( <Function>, <Start x-Value>, <End x-Value> )"
+    ],
+    "valid_example": [
+      "Roots( <Function>, <Start x-Value>, <End x-Value> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "Rotate",
+    "syntax_list": [
+      "Rotate( <Object>, <Angle> )",
+      "Rotate( <Object>, <Angle>, <Point> )",
+      "Rotate( <Object>, <Angle>, <Axis of Rotation>)",
+      "Rotate( <Object>, <Angle>, <Point on Axis>, <Axis Direction or Plane> )"
+    ],
+    "valid_example": [
+      "Rotate( <Object>, <Angle> )",
+      "Rotate( <Object>, <Angle>, <Point> )"
+    ],
+    "category": "变换"
+  },
+  {
+    "command": "RotateText",
+    "syntax_list": [
+      "RotateText( <Text>, <Angle> )"
+    ],
+    "valid_example": [
+      "RotateText( <Text>, <Angle> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "Row",
+    "syntax_list": [
+      "Row( <Spreadsheet Cell> )"
+    ],
+    "valid_example": [
+      "Row( <Spreadsheet Cell> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "RSquare",
+    "syntax_list": [
+      "RSquare( <List of Points>, <Function> )"
+    ],
+    "valid_example": [
+      "RSquare( <List of Points>, <Function> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "RunClickScript",
+    "syntax_list": [
+      "RunClickScript( <Object> )"
+    ],
+    "valid_example": [
+      "RunClickScript( <Object> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "RunUpdateScript",
+    "syntax_list": [
+      "RunUpdateScript( <Object> )"
+    ],
+    "valid_example": [
+      "RunUpdateScript( <Object> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "Sample",
+    "syntax_list": [
+      "Sample( <List>, <Size> )",
+      "Sample( <List>, <Size>, <With Replacement> )"
+    ],
+    "valid_example": [
+      "Sample( <List>, <Size> )",
+      "Sample( <List>, <Size>, <With Replacement> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "SampleSD",
+    "syntax_list": [
+      "SampleSD( <List of Raw Data> )",
+      "SampleSD( <List of Numbers>, <List of Frequencies> )"
+    ],
+    "valid_example": [
+      "SampleSD( <List of Raw Data> )",
+      "SampleSD( <List of Numbers>, <List of Frequencies> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "SampleSDX",
+    "syntax_list": [
+      "SampleSDX( <List of Points> )"
+    ],
+    "valid_example": [
+      "SampleSDX( <List of Points> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "SampleSDY",
+    "syntax_list": [
+      "SampleSDY( <List of Points> )"
+    ],
+    "valid_example": [
+      "SampleSDY( <List of Points> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "SampleVariance",
+    "syntax_list": [
+      "SampleVariance( <List of Raw Data> )",
+      "SampleVariance( <List of Numbers>, <List of Frequencies> )"
+    ],
+    "valid_example": [
+      "SampleVariance( <List of Raw Data> )",
+      "SampleVariance( <List of Numbers>, <List of Frequencies> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "ScientificText",
+    "syntax_list": [
+      "ScientificText( <Number> )",
+      "ScientificText( <Number>, <Precision> )"
+    ],
+    "valid_example": [
+      "ScientificText( <Number> )",
+      "ScientificText( <Number>, <Precision> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "SD",
+    "syntax_list": [
+      "SD( <List of Raw Data> )",
+      "SD( <List of Numbers>, <List of Frequencies> )"
+    ],
+    "valid_example": [
+      "SD( <List of Raw Data> )",
+      "SD( <List of Numbers>, <List of Frequencies> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "SDX",
+    "syntax_list": [
+      "SDX( <List of Points> )"
+    ],
+    "valid_example": [
+      "SDX( <List of Points> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "SDY",
+    "syntax_list": [
+      "SDY( <List of Points> )"
+    ],
+    "valid_example": [
+      "SDY( <List of Points> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "Sector",
+    "syntax_list": [
+      "Sector( <Conic>, <Point>, <Point> )",
+      "Sector( <Conic>, <Parameter Value>, <Parameter Value> )"
+    ],
+    "valid_example": [
+      "Sector( <Conic>, <Point>, <Point> )",
+      "Sector( <Conic>, <Parameter Value>, <Parameter Value> )"
+    ],
+    "category": "圆形圆弧"
+  },
+  {
+    "command": "Segment",
+    "syntax_list": [
+      "Segment( <Point>, <Point> )",
+      "Segment( <Point>, <Length> )"
+    ],
+    "valid_example": [
+      "Segment( <Point>, <Point> )",
+      "Segment( <Point>, <Length> )"
+    ],
+    "category": "点线向量"
+  },
+  {
+    "command": "SelectedElement",
+    "syntax_list": [
+      "SelectedElement( <List> )"
+    ],
+    "valid_example": [
+      "SelectedElement( <List> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "SelectedIndex",
+    "syntax_list": [
+      "SelectedIndex( <List> )"
+    ],
+    "valid_example": [
+      "SelectedIndex( <List> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "SelectObjects",
+    "syntax_list": [
+      "SelectObjects( )",
+      "SelectObjects( <Object>, <Object>, …​ )"
+    ],
+    "valid_example": [
+      "SelectObjects( )",
+      "SelectObjects( <Object>, <Object>, …​ )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "Semicircle",
+    "syntax_list": [
+      "Semicircle( <Point>, <Point> )"
+    ],
+    "valid_example": [
+      "Semicircle( <Point>, <Point> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "SemiMajorAxisLength",
+    "syntax_list": [
+      "SemiMajorAxisLength( <Conic> )"
+    ],
+    "valid_example": [
+      "SemiMajorAxisLength( <Conic> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "SemiMinorAxisLength",
+    "syntax_list": [
+      "SemiMinorAxisLength( <Conic> )"
+    ],
+    "valid_example": [
+      "SemiMinorAxisLength( <Conic> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "Sequence",
+    "syntax_list": [
+      "Sequence( <End Value > )",
+      "Sequence( <Start value k >, <End value n > )",
+      "Sequence( <Start value k>, <End value n>, <Increment> )",
+      "Sequence( <Expression>, <Variable k>, <Start Value a>, <End Value b> )",
+      "Sequence( <Expression>, <Variable k>, <Start Value a>, <End Value b>, <Increment> )"
+    ],
+    "valid_example": [
+      "Sequence( <End Value > )",
+      "Sequence( <Start value k >, <End value n > )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "SetActiveView",
+    "syntax_list": [
+      "SetActiveView( <View> )"
+    ],
+    "valid_example": [
+      "SetActiveView( <View> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "SetAxesRatio",
+    "syntax_list": [
+      "SetAxesRatio( <Number>, <Number> )",
+      "SetAxesRatio( <Number>, <Number>, <Number> )"
+    ],
+    "valid_example": [
+      "SetAxesRatio( <Number>, <Number> )",
+      "SetAxesRatio( <Number>, <Number>, <Number> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "SetBackgroundColor",
+    "syntax_list": [
+      "SetBackgroundColor( <Object>, <Red>, <Green>, <Blue> )",
+      "SetBackgroundColor( <Object>, <\"Color\"> )",
+      "SetBackgroundColor( <Red>, <Green>, <Blue> )",
+      "SetBackgroundColor( <\"Color\"> )"
+    ],
+    "valid_example": [
+      "SetBackgroundColor( <Object>, <Red>, <Green>, <Blue> )",
+      "SetBackgroundColor( <Object>, <\"Color\"> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "SetCaption",
+    "syntax_list": [
+      "SetCaption( <Object>, <Text> )"
+    ],
+    "valid_example": [
+      "SetCaption( <Object>, <Text> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "SetColor",
+    "syntax_list": [
+      "SetColor( <Object>, <Red>, <Green>, <Blue> )",
+      "SetColor( <Object>, <\"Color\"> )"
+    ],
+    "valid_example": [
+      "SetColor( <Object>, <Red>, <Green>, <Blue> )",
+      "SetColor( <Object>, <\"Color\"> )"
+    ],
+    "category": "样式设置"
+  },
+  {
+    "command": "SetConditionToShowObject",
+    "syntax_list": [
+      "SetConditionToShowObject( <Object>, <Condition> )"
+    ],
+    "valid_example": [
+      "SetConditionToShowObject( <Object>, <Condition> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "SetConstructionStep",
+    "syntax_list": [
+      "SetConstructionStep( <Number> )"
+    ],
+    "valid_example": [
+      "SetConstructionStep( <Number> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "SetCoords",
+    "syntax_list": [
+      "SetCoords( <Object>, <x>, <y> )",
+      "SetCoords( <Object>, <x>, <y>, <z> )"
+    ],
+    "valid_example": [
+      "SetCoords( <Object>, <x>, <y> )",
+      "SetCoords( <Object>, <x>, <y>, <z> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "SetDecoration",
+    "syntax_list": [
+      "SetDecoration( <Object>, <Number> )",
+      "SetDecoration(<Segment>, <Number>, <Number>)"
+    ],
+    "valid_example": [
+      "SetDecoration( <Object>, <Number> )",
+      "SetDecoration(<Segment>, <Number>, <Number>)"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "SetDynamicColor",
+    "syntax_list": [
+      "SetDynamicColor( <Object>, <Red>, <Green>, <Blue> )",
+      "SetDynamicColor( <Object>, <Red>, <Green>, <Blue>, <Opacity> )"
+    ],
+    "valid_example": [
+      "SetDynamicColor( <Object>, <Red>, <Green>, <Blue> )",
+      "SetDynamicColor( <Object>, <Red>, <Green>, <Blue>, <Opacity> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "SetFilling",
+    "syntax_list": [
+      "SetFilling( <Object>, <Number> )"
+    ],
+    "valid_example": [
+      "SetFilling( <Object>, <Number> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "SetFixed",
+    "syntax_list": [
+      "SetFixed( <Object>, <true | false> )",
+      "SetFixed( <Object>, <true | false>, <true | false> )"
+    ],
+    "valid_example": [
+      "SetFixed( <Object>, <true | false> )",
+      "SetFixed( <Object>, <true | false>, <true | false> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "SetImage",
+    "syntax_list": [
+      "SetImage( <Object>, <Image> )",
+      "SetImage( <Object>, <Text> )"
+    ],
+    "valid_example": [
+      "SetImage( <Object>, <Image> )",
+      "SetImage( <Object>, <Text> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "SetLabelMode",
+    "syntax_list": [
+      "SetLabelMode( <Object>, <Number> )"
+    ],
+    "valid_example": [
+      "SetLabelMode( <Object>, <Number> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "SetLayer",
+    "syntax_list": [
+      "SetLayer( <Object>, <Layer> )"
+    ],
+    "valid_example": [
+      "SetLayer( <Object>, <Layer> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "SetLevelOfDetail",
+    "syntax_list": [
+      "SetLevelOfDetail( <Surface>, <Level of Detail> )"
+    ],
+    "valid_example": [
+      "SetLevelOfDetail( <Surface>, <Level of Detail> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "SetLineOpacity",
+    "syntax_list": [
+      "SetLineOpacity( <Object>, <Number> )"
+    ],
+    "valid_example": [
+      "SetLineOpacity( <Object>, <Number> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "SetLineStyle",
+    "syntax_list": [
+      "SetLineStyle( <Line>, <Number> )"
+    ],
+    "valid_example": [
+      "SetLineStyle( <Line>, <Number> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "SetLineThickness",
+    "syntax_list": [
+      "SetLineThickness( <Object>, <Number> )"
+    ],
+    "valid_example": [
+      "SetLineThickness( <Object>, <Number> )"
+    ],
+    "category": "样式设置"
+  },
+  {
+    "command": "SetPerspective",
+    "syntax_list": [
+      "SetPerspective( <Text> )"
+    ],
+    "valid_example": [
+      "SetPerspective( <Text> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "SetPointSize",
+    "syntax_list": [
+      "SetPointSize( <Point>, <Number> )",
+      "SetPointSize( <Object>, <Number> )"
+    ],
+    "valid_example": [
+      "SetPointSize( <Point>, <Number> )",
+      "SetPointSize( <Object>, <Number> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "SetPointStyle",
+    "syntax_list": [
+      "SetPointStyle( <Point>, <Number> )"
+    ],
+    "valid_example": [
+      "SetPointStyle( <Point>, <Number> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "SetSeed",
+    "syntax_list": [
+      "SetSeed( <Integer> )"
+    ],
+    "valid_example": [
+      "SetSeed( <Integer> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "SetSpinSpeed",
+    "syntax_list": [
+      "SetSpinSpeed( <Number> )"
+    ],
+    "valid_example": [
+      "SetSpinSpeed( <Number> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "SetTooltipMode",
+    "syntax_list": [
+      "SetTooltipMode( <Object>, <Number> )"
+    ],
+    "valid_example": [
+      "SetTooltipMode( <Object>, <Number> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "SetTrace",
+    "syntax_list": [
+      "SetTrace( <Object>, <true | false> )"
+    ],
+    "valid_example": [
+      "SetTrace( <Object>, <true | false> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "SetValue",
+    "syntax_list": [
+      "SetValue( <Boolean>, <0|1> )",
+      "SetValue( <Object>, <Object> )",
+      "SetValue( <List>, <Number>, <Object> )",
+      "SetValue( <Dependent Object>, ? )",
+      "SetValue( < drop-down list >, <Number n > )"
+    ],
+    "valid_example": [
+      "SetValue( <Boolean>, <0|1> )",
+      "SetValue( <Object>, <Object> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "SetViewDirection",
+    "syntax_list": [
+      "SetViewDirection( <Direction> )",
+      "SetViewDirection( )",
+      "SetViewDirection( <Direction>, <Boolean animated> )"
+    ],
+    "valid_example": [
+      "SetViewDirection( <Direction> )",
+      "SetViewDirection( )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "SetVisibleInView",
+    "syntax_list": [
+      "SetVisibleInView( <Object>, <View Number 1|2|-1>, <Boolean> )"
+    ],
+    "valid_example": [
+      "SetVisibleInView( <Object>, <View Number 1|2|-1>, <Boolean> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "Shear",
+    "syntax_list": [
+      "Shear( <Object>, <Line>, <Ratio> )"
+    ],
+    "valid_example": [
+      "Shear( <Object>, <Line>, <Ratio> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "ShortestDistance",
+    "syntax_list": [
+      "ShortestDistance( <List of Segments>, <Start Point>, <End Point>, <Boolean Weighted> )"
+    ],
+    "valid_example": [
+      "ShortestDistance( <List of Segments>, <Start Point>, <End Point>, <Boolean Weighted> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "ShowAxes",
+    "syntax_list": [
+      "ShowAxes( )",
+      "ShowAxes( <Boolean> )",
+      "ShowAxes( <View>, <Boolean> )"
+    ],
+    "valid_example": [
+      "ShowAxes( )",
+      "ShowAxes( <Boolean> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "ShowGrid",
+    "syntax_list": [
+      "ShowGrid( )",
+      "ShowGrid( <Boolean> )",
+      "ShowGrid( <View>, <Boolean> )"
+    ],
+    "valid_example": [
+      "ShowGrid( )",
+      "ShowGrid( <Boolean> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "ShowLabel",
+    "syntax_list": [
+      "ShowLabel( <Object>, <Boolean> )"
+    ],
+    "valid_example": [
+      "ShowLabel( <Object>, <Boolean> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "ShowLayer",
+    "syntax_list": [
+      "ShowLayer( <Number> )"
+    ],
+    "valid_example": [
+      "ShowLayer( <Number> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "Shuffle",
+    "syntax_list": [
+      "Shuffle( <List> )"
+    ],
+    "valid_example": [
+      "Shuffle( <List> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "Side",
+    "syntax_list": [
+      "Side( <Quadric> )"
+    ],
+    "valid_example": [
+      "Side( <Quadric> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "SigmaXX",
+    "syntax_list": [
+      "SigmaXX( <List of Points> )",
+      "SigmaXX( <List of Raw Data> )",
+      "SigmaXX( <List of Numbers>, <List of Frequencies> )"
+    ],
+    "valid_example": [
+      "SigmaXX( <List of Points> )",
+      "SigmaXX( <List of Raw Data> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "SigmaXY",
+    "syntax_list": [
+      "SigmaXY( <List of Points> )",
+      "SigmaXY( <List of x-coordinates>, <List of y-coordinates> )"
+    ],
+    "valid_example": [
+      "SigmaXY( <List of Points> )",
+      "SigmaXY( <List of x-coordinates>, <List of y-coordinates> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "SigmaYY",
+    "syntax_list": [
+      "SigmaYY( <List of Points> )"
+    ],
+    "valid_example": [
+      "SigmaYY( <List of Points> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "Simplify",
+    "syntax_list": [
+      "Simplify( <Function> )",
+      "Simplify( <Text> )"
+    ],
+    "valid_example": [
+      "Simplify( <Function> )",
+      "Simplify( <Text> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "Slider",
+    "syntax_list": [
+      "Slider( <Min>, <Max>, <Increment>, <Speed>, <Width>,<Is Angle>, <Horizontal>, <Animating>, <Boolean Random>)"
+    ],
+    "valid_example": [
+      "Slider( <Min>, <Max>, <Increment>, <Speed>, <Width>,<Is Angle>, <Horizontal>, <Animating>, <Boolean Random>)"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "Slope",
+    "syntax_list": [
+      "Slope( <Line> )"
+    ],
+    "valid_example": [
+      "Slope( <Line> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "SlopeField",
+    "syntax_list": [
+      "SlopeField( <f(x,y)> )",
+      "SlopeField( <f(x,y)>, <Number n> )",
+      "SlopeField( <f(x,y)>, <Number n>, <Length Multiplier a> )",
+      "SlopeField( <f(x,y)>, <Number n>, <Length Multiplier a>, <Min x>, <Min y>, <Max x>, <Max y> )"
+    ],
+    "valid_example": [
+      "SlopeField( <f(x,y)> )",
+      "SlopeField( <f(x,y)>, <Number n> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "SlowPlot",
+    "syntax_list": [
+      "SlowPlot( <Function> )",
+      "SlowPlot( <Function >, <Boolean Repeat >)"
+    ],
+    "valid_example": [
+      "SlowPlot( <Function> )",
+      "SlowPlot( <Function >, <Boolean Repeat >)"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "Solutions",
+    "syntax_list": [
+      "Solutions( <Equation> )",
+      "Solutions( <Equation>, <Variable> )",
+      "Solutions( <List of Equations>, <List of Variables> )"
+    ],
+    "valid_example": [
+      "Solutions( <Equation> )",
+      "Solutions( <Equation>, <Variable> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "Solve",
+    "syntax_list": [
+      "Solve( <Equation in x> )",
+      "Solve( <Equation>, <Variable> )",
+      "Solve( <Equation in x>, <Assumption> )",
+      "Solve( <List of Equations>, <List of Variables> )",
+      "Solve( <Equation>, <Variable> , <List of assumptions>)",
+      "Solve( <List of Parametric Equations>, <List of Variables> )"
+    ],
+    "valid_example": [
+      "Solve( <Equation in x> )",
+      "Solve( <Equation>, <Variable> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "SolveCubic",
+    "syntax_list": [
+      "SolveCubic( <Cubic Polynomial> )"
+    ],
+    "valid_example": [
+      "SolveCubic( <Cubic Polynomial> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "SolveODE",
+    "syntax_list": [
+      "SolveODE( <f'(x, y)> )",
+      "SolveODE( <f'(x, y)>, <Point on f> )",
+      "SolveODE( <f'(x, y)>, <Start x>, <Start y>, <End x>, <Step> )",
+      "SolveODE( <y'>, <x'>, <Start x>, <Start y>, <End t>, <Step> )",
+      "SolveODE( <b(x)>, <c(x)>, <f(x)>, <Start x>, <Start y>, <Start y'>, <End x>, <Step> )",
+      "SolveODE( <Equation> )",
+      "SolveODE( <Equation>, <Point(s) on f> )",
+      "SolveODE( <Equation>, <Point(s) on f>, <Point(s) on f'> )",
+      "SolveODE( <Equation>, <Dependent Variable>, <Independent Variable>, <Point(s) on f> )",
+      "SolveODE( <Equation>, <Dependent Variable>, <Independent Variable>, <Point(s) on f>, <Point(s) on f'> )"
+    ],
+    "valid_example": [
+      "SolveODE( <f'(x, y)> )",
+      "SolveODE( <f'(x, y)>, <Point on f> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "SolveQuartic",
+    "syntax_list": [
+      "SolveQuartic( <Quartic Polynomial> )"
+    ],
+    "valid_example": [
+      "SolveQuartic( <Quartic Polynomial> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "Sort",
+    "syntax_list": [
+      "Sort( <List> )",
+      "Sort( <Values>, <Keys> )"
+    ],
+    "valid_example": [
+      "Sort( <List> )",
+      "Sort( <Values>, <Keys> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "Spearman",
+    "syntax_list": [
+      "Spearman( <List of Points> )",
+      "Spearman( <List of Numbers>, <List of Numbers> )"
+    ],
+    "valid_example": [
+      "Spearman( <List of Points> )",
+      "Spearman( <List of Numbers>, <List of Numbers> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "Sphere",
+    "syntax_list": [
+      "Sphere( <Point>, <Radius> )",
+      "Sphere( <Point>, <Point> )"
+    ],
+    "valid_example": [
+      "Sphere( <Point>, <Radius> )",
+      "Sphere( <Point>, <Point> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "Spline",
+    "syntax_list": [
+      "Spline( <List of Points> )",
+      "Spline( <List of Points>, <Order â¥ 3> )",
+      "Spline( <List of Points>, <Order â¥ 3>, <Weight Function> )"
+    ],
+    "valid_example": [
+      "Spline( <List of Points> )",
+      "Spline( <List of Points>, <Order â¥ 3> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "Split",
+    "syntax_list": [
+      "Split( <Text>, <List of Texts to split on>)"
+    ],
+    "valid_example": [
+      "Split( <Text>, <List of Texts to split on>)"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "StartAnimation",
+    "syntax_list": [
+      "StartAnimation( )",
+      "StartAnimation( <Boolean> )",
+      "StartAnimation( <Point or Slider>, <Point or Slider>, …​. )",
+      "StartAnimation( <Point or Slider>, <Point or Slider>, …​., <Boolean> )"
+    ],
+    "valid_example": [
+      "StartAnimation( )",
+      "StartAnimation( <Boolean> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "StartRecord",
+    "syntax_list": [
+      "StartRecord( )",
+      "StartRecord( <Boolean> )"
+    ],
+    "valid_example": [
+      "StartRecord( )",
+      "StartRecord( <Boolean> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "StemPlot",
+    "syntax_list": [
+      "StemPlot( <List> )",
+      "StemPlot( <List>, <Adjustment -1|0|1> )"
+    ],
+    "valid_example": [
+      "StemPlot( <List> )",
+      "StemPlot( <List>, <Adjustment -1|0|1> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "StepGraph",
+    "syntax_list": [
+      "StepGraph( <List of Points> )",
+      "StepGraph( <List of Points>, <Boolean Join> )",
+      "StepGraph( <List of x-coordinates>, <List of y-coordinates> )",
+      "StepGraph( <List of x-coordinates>, <List of y-coordinates>, <Boolean Join> )",
+      "StepGraph( <List of x-coordinates>, <List of y-coordinates>, <Boolean Join>, <Point Style> )",
+      "StepGraph( <List of Points>, <Boolean Join>, <Point Style> )"
+    ],
+    "valid_example": [
+      "StepGraph( <List of Points> )",
+      "StepGraph( <List of Points>, <Boolean Join> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "StickGraph",
+    "syntax_list": [
+      "StickGraph( <List of Points> )",
+      "StickGraph( <List of Points>, <Boolean Horizontal> )",
+      "StickGraph( <List of x-coordinates>, <List of y-coordinates> )",
+      "StickGraph( <List of x-coordinates>, <List of y-coordinates>, <Boolean Horizontal> )"
+    ],
+    "valid_example": [
+      "StickGraph( <List of Points> )",
+      "StickGraph( <List of Points>, <Boolean Horizontal> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "Stretch",
+    "syntax_list": [
+      "Stretch( < Object >, <Vector> )",
+      "Stretch( < Object >, <Line>, <Ratio> )"
+    ],
+    "valid_example": [
+      "Stretch( < Object >, <Vector> )",
+      "Stretch( < Object >, <Line>, <Ratio> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "Substitute",
+    "syntax_list": [
+      "Substitute( <Expression>, <from>, <to> )",
+      "Substitute( <Expression>, <Substitution List> )"
+    ],
+    "valid_example": [
+      "Substitute( <Expression>, <from>, <to> )",
+      "Substitute( <Expression>, <Substitution List> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "Sum",
+    "syntax_list": [
+      "Sum( <List> )",
+      "Sum( <List>, <Number of Elements> )",
+      "Sum( <List>, <List of Frequencies> )",
+      "Sum( <Expression>, <Variable>, <Start Value>, <End Value> )"
+    ],
+    "valid_example": [
+      "Sum( <List> )",
+      "Sum( <List>, <Number of Elements> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "SumSquaredErrors",
+    "syntax_list": [
+      "SumSquaredErrors( <List of Points>, <Function> )"
+    ],
+    "valid_example": [
+      "SumSquaredErrors( <List of Points>, <Function> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "SurdText",
+    "syntax_list": [
+      "SurdText( <Point> )",
+      "SurdText( <Number> )",
+      "SurdText( <Number>, <List> )"
+    ],
+    "valid_example": [
+      "SurdText( <Point> )",
+      "SurdText( <Number> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "Surface",
+    "syntax_list": [
+      "Surface( <Expression>, <Expression>, <Expression>, <Parameter Variable 1>, <Start Value>, <End Value>, <Parameter Variable 2>, <Start Value>, <End Value> )",
+      "Surface( <Function>, <Angle> )",
+      "Surface( <Curve>, <Angle>, <Line>)"
+    ],
+    "valid_example": [
+      "Surface( <Expression>, <Expression>, <Expression>, <Parameter Variable 1>, <Start Value>, <End Value>, <Parameter Variable 2>, <Start Value>, <End Value> )",
+      "Surface( <Function>, <Angle> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "SVD",
+    "syntax_list": [
+      "SVD( <Matrix> )"
+    ],
+    "valid_example": [
+      "SVD( <Matrix> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "Sxx",
+    "syntax_list": [
+      "Sxx( <List of Numbers> )",
+      "Sxx( <List of Points> )"
+    ],
+    "valid_example": [
+      "Sxx( <List of Numbers> )",
+      "Sxx( <List of Points> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "Sxy",
+    "syntax_list": [
+      "Sxy( <List of Points> )",
+      "Sxy( <List of Numbers>, <List of Numbers> )"
+    ],
+    "valid_example": [
+      "Sxy( <List of Points> )",
+      "Sxy( <List of Numbers>, <List of Numbers> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "Syy",
+    "syntax_list": [
+      "Syy( <List of Points> )"
+    ],
+    "valid_example": [
+      "Syy( <List of Points> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "TableText",
+    "syntax_list": [
+      "TableText( <List>, <List>, …​ )",
+      "TableText( <List>, <List>, …​, <Alignment of Text> )",
+      "TableText( <List>, <List>, …​, <Alignment of Text>, <Minimum Cell Width>)",
+      "TableText( <List>, <List>, …​, <Alignment of Text>, <Minimum Cell Width>, <Minimum Cell Height>)"
+    ],
+    "valid_example": [
+      "TableText( <List>, <List>, …​ )",
+      "TableText( <List>, <List>, …​, <Alignment of Text> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "Take",
+    "syntax_list": [
+      "Take( <List>, <Start Position> )",
+      "Take( <Text>, <Start Position> )",
+      "Take( <List>, <Start Position>, <End Position> )",
+      "Take( <Text>, <Start Position>, <End Position> )"
+    ],
+    "valid_example": [
+      "Take( <List>, <Start Position> )",
+      "Take( <Text>, <Start Position> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "Tangent",
+    "syntax_list": [
+      "Tangent( <Point>, <Conic> )",
+      "Tangent( <Point>, <Function> )",
+      "Tangent( <Point on Curve>, <Curve> )",
+      "Tangent( <x-Value>, <Function> )",
+      "Tangent( <Line>, <Conic> )",
+      "Tangent( <Circle>, <Circle> )",
+      "Tangent( <Point>, <Spline> )",
+      "Tangent( <Point>, <Implicit Curve> )"
+    ],
+    "valid_example": [
+      "Tangent( <Point>, <Conic> )",
+      "Tangent( <Point>, <Function> )"
+    ],
+    "category": "辅助线"
+  },
+  {
+    "command": "TaylorPolynomial",
+    "syntax_list": [
+      "TaylorPolynomial( <Function>, <x-Value>, <Order Number> )",
+      "TaylorPolynomial( <Expression>, <x-Value>, <Order Number> )",
+      "TaylorPolynomial( <Expression>, <Variable>, <Variable Value>, <Order Number> )"
+    ],
+    "valid_example": [
+      "TaylorPolynomial( <Function>, <x-Value>, <Order Number> )",
+      "TaylorPolynomial( <Expression>, <x-Value>, <Order Number> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "TDistribution",
+    "syntax_list": [
+      "TDistribution( <Degrees of Freedom>, <Variable Value> )",
+      "TDistribution( <Degrees of Freedom>, <Variable Value>, <Boolean Cumulative> )",
+      "TDistribution( <Degrees of Freedom>, x, <Boolean Cumulative> )"
+    ],
+    "valid_example": [
+      "TDistribution( <Degrees of Freedom>, <Variable Value> )",
+      "TDistribution( <Degrees of Freedom>, <Variable Value>, <Boolean Cumulative> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "Tetrahedron",
+    "syntax_list": [
+      "Tetrahedron( <Equilateral Triangle> )",
+      "Tetrahedron( <Point>, <Point>, <Direction> )",
+      "Tetrahedron( <Point>, <Point>, <Point>)",
+      "Tetrahedron( <Point>, <Point>)"
+    ],
+    "valid_example": [
+      "Tetrahedron( <Equilateral Triangle> )",
+      "Tetrahedron( <Point>, <Point>, <Direction> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "Text",
+    "syntax_list": [
+      "Text( <Object> )",
+      "Text( <Object>, <Boolean for Substitution of Variables> )",
+      "Text( <Object>, <Point> )",
+      "Text( <Object>, <Point>, <Boolean for Substitution of Variables> )",
+      "Text( <Object>, <Point>, <Boolean for Substitution of Variables>, <Boolean for LaTeX formula> )",
+      "Text( <Object>, <Point>, <Boolean for Substitution of Variables>, <Boolean for LaTeX formula>, <Horizontal alignment [-1|0|1]>, <Vertical alignment [-1|0|1]> )"
+    ],
+    "valid_example": [
+      "Text( <Object> )",
+      "Text( <Object>, <Boolean for Substitution of Variables> )"
+    ],
+    "category": "样式设置"
+  },
+  {
+    "command": "TextToUnicode",
+    "syntax_list": [
+      "TextToUnicode( \"<Text>\" )"
+    ],
+    "valid_example": [
+      "TextToUnicode( \"<Text>\" )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "TiedRank",
+    "syntax_list": [
+      "TiedRank( <List> )"
+    ],
+    "valid_example": [
+      "TiedRank( <List> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "TMeanEstimate",
+    "syntax_list": [
+      "TMeanEstimate( <List of Sample Data>, <Confidence level> )",
+      "TMeanEstimate( <Sample Mean>, <Sample Standard Deviation>, <Sample Size>, <Confidence level> )"
+    ],
+    "valid_example": [
+      "TMeanEstimate( <List of Sample Data>, <Confidence level> )",
+      "TMeanEstimate( <Sample Mean>, <Sample Standard Deviation>, <Sample Size>, <Confidence level> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "ToBase",
+    "syntax_list": [
+      "ToBase( <Number>, <Base> )"
+    ],
+    "valid_example": [
+      "ToBase( <Number>, <Base> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "ToComplex",
+    "syntax_list": [
+      "ToComplex( <Vector> )"
+    ],
+    "valid_example": [
+      "ToComplex( <Vector> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "ToExponential",
+    "syntax_list": [
+      "ToExponential( <Complex Number> )"
+    ],
+    "valid_example": [
+      "ToExponential( <Complex Number> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "ToolImage",
+    "syntax_list": [
+      "ToolImage( <Number> )",
+      "ToolImage( <Number>, <Point> )",
+      "ToolImage( <Number>, <Point>, <Point> )"
+    ],
+    "valid_example": [
+      "ToolImage( <Number> )",
+      "ToolImage( <Number>, <Point> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "Top",
+    "syntax_list": [
+      "Top( <Quadric> )"
+    ],
+    "valid_example": [
+      "Top( <Quadric> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "ToPoint",
+    "syntax_list": [
+      "ToPoint( <Complex Number> )"
+    ],
+    "valid_example": [
+      "ToPoint( <Complex Number> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "ToPolar",
+    "syntax_list": [
+      "ToPolar( <Vector> )",
+      "ToPolar( <Complex Number> )"
+    ],
+    "valid_example": [
+      "ToPolar( <Vector> )",
+      "ToPolar( <Complex Number> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "Translate",
+    "syntax_list": [
+      "Translate( <Object>, <Vector> )",
+      "Translate( <Vector>, <Start Point> )"
+    ],
+    "valid_example": [
+      "Translate( <Object>, <Vector> )",
+      "Translate( <Vector>, <Start Point> )"
+    ],
+    "category": "变换"
+  },
+  {
+    "command": "Transpose",
+    "syntax_list": [
+      "Transpose( <Matrix> )"
+    ],
+    "valid_example": [
+      "Transpose( <Matrix> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "TrapezoidalSum",
+    "syntax_list": [
+      "TrapezoidalSum( <Function>, <Start x-Value>, <End x-Value>, <Number of Trapezoids> )"
+    ],
+    "valid_example": [
+      "TrapezoidalSum( <Function>, <Start x-Value>, <End x-Value>, <Number of Trapezoids> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "TravelingSalesman",
+    "syntax_list": [
+      "TravelingSalesman( <List of Points> )"
+    ],
+    "valid_example": [
+      "TravelingSalesman( <List of Points> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "TriangleCenter",
+    "syntax_list": [
+      "TriangleCenter( <Point>, <Point>, <Point>, <Number> )"
+    ],
+    "valid_example": [
+      "TriangleCenter( <Point>, <Point>, <Point>, <Number> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "TriangleCurve",
+    "syntax_list": [
+      "TriangleCurve( <Point P>, <Point Q>, <Point R>, <Equation in A, B, C> )"
+    ],
+    "valid_example": [
+      "TriangleCurve( <Point P>, <Point Q>, <Point R>, <Equation in A, B, C> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "Triangular",
+    "syntax_list": [
+      "Triangular( <Lower Bound>, <Upper Bound>, <Mode>, <Variable Value> )",
+      "Triangular( <Lower Bound>, <Upper Bound>, <Mode>, <Variable Value>, <Boolean Cumulative> )",
+      "Triangular( <Lower Bound>, <Upper Bound>, <Mode>, x, <Boolean Cumulative> )"
+    ],
+    "valid_example": [
+      "Triangular( <Lower Bound>, <Upper Bound>, <Mode>, <Variable Value> )",
+      "Triangular( <Lower Bound>, <Upper Bound>, <Mode>, <Variable Value>, <Boolean Cumulative> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "TrigCombine",
+    "syntax_list": [
+      "TrigCombine( <Expression> )",
+      "TrigCombine( <Expression>, <Target Function> )"
+    ],
+    "valid_example": [
+      "TrigCombine( <Expression> )",
+      "TrigCombine( <Expression>, <Target Function> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "TrigExpand",
+    "syntax_list": [
+      "TrigExpand( <Expression> )",
+      "TrigExpand( <Expression>, <Target Function> )",
+      "TrigExpand( <Expression>, <Target Function>, <Target Variable> )",
+      "TrigExpand( <Expression>, <Target Function>, <Target Variable>, <Target Variable> )"
+    ],
+    "valid_example": [
+      "TrigExpand( <Expression> )",
+      "TrigExpand( <Expression>, <Target Function> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "TrigSimplify",
+    "syntax_list": [
+      "TrigSimplify( <Expression> )"
+    ],
+    "valid_example": [
+      "TrigSimplify( <Expression> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "Trilinear",
+    "syntax_list": [
+      "Trilinear( <Point>, <Point>, <Point>, <Number>, <Number>, <Number> )"
+    ],
+    "valid_example": [
+      "Trilinear( <Point>, <Point>, <Point>, <Number>, <Number>, <Number> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "TTest",
+    "syntax_list": [
+      "TTest( <List of Sample Data>, <Hypothesized Mean>, <Tail> )",
+      "TTest( <Sample Mean>, <Sample Standard Deviation>, <Sample Size>, <Hypothesized Mean>, <Tail> )"
+    ],
+    "valid_example": [
+      "TTest( <List of Sample Data>, <Hypothesized Mean>, <Tail> )",
+      "TTest( <Sample Mean>, <Sample Standard Deviation>, <Sample Size>, <Hypothesized Mean>, <Tail> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "TTestPaired",
+    "syntax_list": [
+      "TTestPaired( <List of Sample Data 1>, <List of Sample Data 2>, <Tail> )"
+    ],
+    "valid_example": [
+      "TTestPaired( <List of Sample Data 1>, <List of Sample Data 2>, <Tail> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "Turtle",
+    "syntax_list": [
+      "Turtle()"
+    ],
+    "valid_example": [
+      "Turtle()"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "TurtleBack",
+    "syntax_list": [
+      "TurtleBack( <Turtle>, <Distance> )"
+    ],
+    "valid_example": [
+      "TurtleBack( <Turtle>, <Distance> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "TurtleDown",
+    "syntax_list": [
+      "TurtleDown( <Turtle> )"
+    ],
+    "valid_example": [
+      "TurtleDown( <Turtle> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "TurtleForward",
+    "syntax_list": [
+      "TurtleForward( <Turtle>, <Distance> )"
+    ],
+    "valid_example": [
+      "TurtleForward( <Turtle>, <Distance> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "TurtleLeft",
+    "syntax_list": [
+      "TurtleLeft( <Turtle>, <Angle> )"
+    ],
+    "valid_example": [
+      "TurtleLeft( <Turtle>, <Angle> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "TurtleRight",
+    "syntax_list": [
+      "TurtleRight( <Turtle>, <Angle> )"
+    ],
+    "valid_example": [
+      "TurtleRight( <Turtle>, <Angle> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "TurtleUp",
+    "syntax_list": [
+      "TurtleUp( <Turtle> )"
+    ],
+    "valid_example": [
+      "TurtleUp( <Turtle> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "Type",
+    "syntax_list": [
+      "Type( <Object> )"
+    ],
+    "valid_example": [
+      "Type( <Object> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "UnicodeToLetter",
+    "syntax_list": [
+      "UnicodeToLetter( <Integer> )"
+    ],
+    "valid_example": [
+      "UnicodeToLetter( <Integer> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "UnicodeToText",
+    "syntax_list": [
+      "UnicodeToText( <List of Integers> )"
+    ],
+    "valid_example": [
+      "UnicodeToText( <List of Integers> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "Uniform",
+    "syntax_list": [
+      "Uniform( <Lower Bound>, <Upper Bound>, <Variable Value> )",
+      "Uniform( <Lower Bound>, <Upper Bound>, <Variable Value>, <Boolean Cumulative> )",
+      "Uniform( <Lower Bound>, <Upper Bound>, x, <Boolean Cumulative> )"
+    ],
+    "valid_example": [
+      "Uniform( <Lower Bound>, <Upper Bound>, <Variable Value> )",
+      "Uniform( <Lower Bound>, <Upper Bound>, <Variable Value>, <Boolean Cumulative> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "Union",
+    "syntax_list": [
+      "Union( <List>, <List> )",
+      "Union( <Polygon>, <Polygon> )"
+    ],
+    "valid_example": [
+      "Union( <List>, <List> )",
+      "Union( <Polygon>, <Polygon> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "Unique",
+    "syntax_list": [
+      "Unique( <List> )"
+    ],
+    "valid_example": [
+      "Unique( <List> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "UnitPerpendicularVector",
+    "syntax_list": [
+      "UnitPerpendicularVector( <Line>)",
+      "UnitPerpendicularVector( <Segment> )",
+      "UnitPerpendicularVector( <Vector> )",
+      "UnitPerpendicularVector( <Plane> )"
+    ],
+    "valid_example": [
+      "UnitPerpendicularVector( <Line>)",
+      "UnitPerpendicularVector( <Segment> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "UnitVector",
+    "syntax_list": [
+      "UnitVector( <Vector> )",
+      "UnitVector( <Line> )",
+      "UnitVector( <Segment> )"
+    ],
+    "valid_example": [
+      "UnitVector( <Vector> )",
+      "UnitVector( <Line> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "UpdateConstruction",
+    "syntax_list": [
+      "UpdateConstruction( )",
+      "UpdateConstruction( <Number of times> )"
+    ],
+    "valid_example": [
+      "UpdateConstruction()"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "UpperSum",
+    "syntax_list": [
+      "UpperSum( <Function>, <Start x-Value>, <End x-Value>, <Number of Rectangles> )"
+    ],
+    "valid_example": [
+      "UpperSum( <Function>, <Start x-Value>, <End x-Value>, <Number of Rectangles> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "Variance",
+    "syntax_list": [
+      "Variance( <List of Raw Data> )",
+      "Variance( <List of Numbers>, <List of Frequencies> )",
+      "Variance( <List of Numbers> )"
+    ],
+    "valid_example": [
+      "Variance( <List of Raw Data> )",
+      "Variance( <List of Numbers>, <List of Frequencies> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "Vector",
+    "syntax_list": [
+      "Vector( <Point> )",
+      "Vector( <Start Point>, <End Point> )"
+    ],
+    "valid_example": [
+      "Vector( <Point> )",
+      "Vector( <Start Point>, <End Point> )"
+    ],
+    "category": "点线向量"
+  },
+  {
+    "command": "Vertex",
+    "syntax_list": [
+      "Vertex( <Conic> )",
+      "Vertex( <Inequality> )",
+      "Vertex( <Polygon> )",
+      "Vertex( <Polygon>, <Index n> )",
+      "Vertex( <Segment>, <Index> )"
+    ],
+    "valid_example": [
+      "Vertex( <Conic> )",
+      "Vertex( <Inequality> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "VerticalText",
+    "syntax_list": [
+      "VerticalText( <Text> )",
+      "VerticalText( <Text>, <Point> )"
+    ],
+    "valid_example": [
+      "VerticalText( <Text> )",
+      "VerticalText( <Text>, <Point> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "Volume",
+    "syntax_list": [
+      "Volume( <Solid> )"
+    ],
+    "valid_example": [
+      "Volume( <Solid> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "Voronoi",
+    "syntax_list": [
+      "Voronoi( <List of Points> )"
+    ],
+    "valid_example": [
+      "Voronoi( <List of Points> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "Weibull",
+    "syntax_list": [
+      "Weibull( <Shape>, <Scale>, <Variable Value> )",
+      "Weibull( <Shape>, <Scale>, <Variable Value>, <Boolean Cumulative> )",
+      "Weibull( <Shape>, <Scale>, x, <Boolean Cumulative> )"
+    ],
+    "valid_example": [
+      "Weibull( <Shape>, <Scale>, <Variable Value> )",
+      "Weibull( <Shape>, <Scale>, <Variable Value>, <Boolean Cumulative> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "Zip",
+    "syntax_list": [
+      "Zip( <Expression>, <Var1>, <List1>, <Var2>, <List2>, …​)"
+    ],
+    "valid_example": [
+      "Zip( <Expression>, <Var1>, <List1>, <Var2>, <List2>, …​)"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "Zipf",
+    "syntax_list": [
+      "Zipf( <Number of Elements>, <Exponent> )",
+      "Zipf( <Number of Elements>, <Exponent> , <Boolean Cumulative> )",
+      "Zipf( <Number of Elements>, <Exponent> , <Variable Value v>, <Boolean Cumulative> )"
+    ],
+    "valid_example": [
+      "Zipf( <Number of Elements>, <Exponent> )",
+      "Zipf( <Number of Elements>, <Exponent> , <Boolean Cumulative> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "ZMeanEstimate",
+    "syntax_list": [
+      "ZMeanEstimate( <List of Sample Data>, <σ>, <Confidence Level> )",
+      "ZMeanEstimate( <Sample Mean>, <σ>, <Sample Size>, <Confidence Level> )"
+    ],
+    "valid_example": [
+      "ZMeanEstimate( <List of Sample Data>, <σ>, <Confidence Level> )",
+      "ZMeanEstimate( <Sample Mean>, <σ>, <Sample Size>, <Confidence Level> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "ZMeanTest",
+    "syntax_list": [
+      "ZMeanTest( <List of Sample Data>, <σ>, <Hypothesized Mean>, <Tail> )",
+      "ZMeanTest( <Sample Mean>, <σ>, <Sample Size>, <Hypothesized Mean>, <Tail> )"
+    ],
+    "valid_example": [
+      "ZMeanTest( <List of Sample Data>, <σ>, <Hypothesized Mean>, <Tail> )",
+      "ZMeanTest( <Sample Mean>, <σ>, <Sample Size>, <Hypothesized Mean>, <Tail> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "ZoomIn",
+    "syntax_list": [
+      "ZoomIn( )",
+      "ZoomIn( <Scale Factor> )",
+      "ZoomIn( <Scale Factor>, <Center Point> )",
+      "ZoomIn( <Min x>, <Min y>, <Max x>, <Max y> )",
+      "ZoomIn( <Min x>, <Min y>, <Min z>, <Max x>, <Max y>, <Max z> )"
+    ],
+    "valid_example": [
+      "ZoomIn( )",
+      "ZoomIn( <Scale Factor> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "ZoomOut",
+    "syntax_list": [
+      "ZoomOut( <Scale Factor> )",
+      "ZoomOut( <Scale Factor>, <Center Point> )"
+    ],
+    "valid_example": [
+      "ZoomOut( <Scale Factor> )",
+      "ZoomOut( <Scale Factor>, <Center Point> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "ZProportionEstimate",
+    "syntax_list": [
+      "ZProportionEstimate ( <Sample Proportion >, <Sample Size >, <Confidence Level> )"
+    ],
+    "valid_example": [
+      "ZProportionEstimate ( <Sample Proportion >, <Sample Size >, <Confidence Level> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "ZProportionTest",
+    "syntax_list": [
+      "ZProportionTest( <Sample Proportion>, <Sample Size>, <Hypothesized Proportion>, <Tail> )"
+    ],
+    "valid_example": [
+      "ZProportionTest( <Sample Proportion>, <Sample Size>, <Hypothesized Proportion>, <Tail> )"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "Curves",
+    "syntax_list": [
+      "Parametric curves can be used with pre-defined functions and arithmetic operations. For example, inputc(3)returns the point at parameter position 3 on curvec.You can also place a point on a curve using toolPointor commandPoint. Since the endpointsaandbare dynamic\nyou can use slider variables as well (see toolSlider)."
+    ],
+    "valid_example": [
+      "Parametric curves can be used with pre-defined functions and arithmetic operations. For example, inputc(3)returns the point at parameter position 3 on curvec.You can also place a point on a curve using toolPointor commandPoint. Since the endpointsaandbare dynamic\nyou can use slider variables as well (see toolSlider)."
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "Functions",
+    "syntax_list": [
+      "All available predefined functions (e.g. sin, cos, tan) are described in sectionPredefined Functions and Operators."
+    ],
+    "valid_example": [
+      "All available predefined functions (e.g. sin, cos, tan) are described in sectionPredefined Functions and Operators."
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "Lists",
+    "syntax_list": [
+      "By default, the elements of this list are not shown in theGraphics View.Lists can also be used as arguments in list operations (mentioned further in this article) orList Commands.Lists must contain objects of the same type (e.g. lists of numbers, lists of points…​), otherwise lists operations or using lists as commands arguments might yield unreliable results."
+    ],
+    "valid_example": [
+      "By default, the elements of this list are not shown in theGraphics View.Lists can also be used as arguments in list operations (mentioned further in this article) orList Commands.Lists must contain objects of the same type (e.g. lists of numbers, lists of points…​), otherwise lists operations or using lists as commands arguments might yield unreliable results."
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "Compass",
+    "syntax_list": [
+      "This tool has different names in different variants of English:Compass (US)Compasses (UK + Aus)"
+    ],
+    "valid_example": [
+      "This tool has different names in different variants of English:Compass (US)Compasses (UK + Aus)"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "Delete",
+    "syntax_list": [
+      "Use theUndobutton to recover accidentally deleted object.Parts ofPenStrokecreated with thePen Toolcan be erased. Select this tool and move a pen or the finger over the part to erase (touch screens) or click and hold the left mouse button while dragging the pointer over the part of graph to erase (non-touch screens).See alsoDeletecommand."
+    ],
+    "valid_example": [
+      "Use theUndobutton to recover accidentally deleted object.Parts ofPenStrokecreated with thePen Toolcan be erased. Select this tool and move a pen or the finger over the part to erase (touch screens) or click and hold the left mouse button while dragging the pointer over the part of graph to erase (non-touch screens).See alsoDeletecommand."
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "Image",
+    "syntax_list": [
+      "TransparentGIFandPNGfiles are supported, but for PNGs it is necessary to make sure that they have an alpha channel (for example if editing is made usingIrfanView, save using the PNGOUT plugin and chooseRGB+Alpha)Inserted images will be auxiliary objects by default."
+    ],
+    "valid_example": [
+      "TransparentGIFandPNGfiles are supported, but for PNGs it is necessary to make sure that they have an alpha channel (for example if editing is made usingIrfanView, save using the PNGOUT plugin and chooseRGB+Alpha)Inserted images will be auxiliary objects by default."
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "Line",
+    "syntax_list": [
+      "If points areAandB, the line’s direction vector is(B - A)See alsoLinecommand."
+    ],
+    "valid_example": [
+      "If points areAandB, the line’s direction vector is(B - A)See alsoLinecommand."
+    ],
+    "category": "点线向量"
+  },
+  {
+    "command": "Pen",
+    "syntax_list": [
+      "pen (touch devices)"
+    ],
+    "valid_example": [
+      "pen (touch devices)"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "Point",
+    "syntax_list": [
+      "Click (or tap in the mobile app) on a segment (or interval), straight line, polygon, conic section, function, or curve to create a point on the object.Click (or tap in the mobile app) on the intersection of two objects to create their intersection point (see alsoIntersecttool andIntersectcommand).See alsoPointcommand."
+    ],
+    "valid_example": [
+      "Click (or tap in the mobile app) on a segment (or interval), straight line, polygon, conic section, function, or curve to create a point on the object.Click (or tap in the mobile app) on the intersection of two objects to create their intersection point (see alsoIntersecttool andIntersectcommand).See alsoPointcommand."
+    ],
+    "category": "点线向量"
+  },
+  {
+    "command": "Polyline",
+    "syntax_list": [
+      "polyline (polygonal chain)"
+    ],
+    "valid_example": [
+      "polyline (polygonal chain)"
+    ],
+    "category": "其他"
+  },
+  {
+    "command": "Segment",
+    "syntax_list": [
+      "This tool has different names in different variants of English:Interval between Two Points (Aus)Segment between Two Points (UK + US)"
+    ],
+    "valid_example": [
+      "This tool has different names in different variants of English:Interval between Two Points (Aus)Segment between Two Points (UK + US)"
+    ],
+    "category": "点线向量"
+  },
+  {
+    "command": "Slider",
+    "syntax_list": [
+      "Use the following shortcuts to enter a degree symbol ° orpi (π)for theintervalandincrementof a slider:Alt+O(Mac OS:Ctrl+O) for the degree symbol °Alt+P(Mac OS:Ctrl+P) for the pi symbolπ"
+    ],
+    "valid_example": [
+      "Use the following shortcuts to enter a degree symbol ° orpi (π)for theintervalandincrementof a slider:Alt+O(Mac OS:Ctrl+O) for the degree symbol °Alt+P(Mac OS:Ctrl+P) for the pi symbolπ"
+    ],
+    "category": "其他"
+  }
+]

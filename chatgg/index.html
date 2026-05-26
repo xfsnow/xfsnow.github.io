@@ -1,0 +1,67 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>ChatGGB — Clean</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="app">
+    <header class="topbar">
+      <h1>ChatGGB (clean)</h1>
+      <div class="top-actions">
+        <button id="open-settings">设置</button>
+      </div>
+    </header>
+
+    <main class="main">
+      <section class="left">
+        <div id="history" class="history"></div>
+      </section>
+
+      <section class="right">
+        <div class="fixed-ggb">
+          <div id="ggb-fixed"></div>
+          <div class="ggb-controls">
+            <button id="btn-zoom">ZoomFit</button>
+            <button id="btn-clear">Clear</button>
+            <button id="btn-export">Export PNG</button>
+          </div>
+        </div>
+
+        <div id="chat" class="chat"></div>
+
+        <form id="composer" class="composer">
+          <textarea id="input" placeholder="输入 GeoGebra 命令或描述..."></textarea>
+          <div class="actions">
+            <button type="submit">发送</button>
+          </div>
+        </form>
+      </section>
+    </main>
+  </div>
+
+  <script src="ggbAdapter.js"></script>
+  <script src="ggbParser.js"></script>
+  <script src="aiClient.js"></script>
+  <script src="main.js"></script>
+
+  <!-- Settings modal -->
+  <div id="settings-modal" class="settings-modal" style="display:none">
+    <div class="settings-content">
+      <h3>模型配置</h3>
+      <label>API 接入端点</label>
+      <input id="setting-endpoint" placeholder="例如: https://openrouter.ai/api/v1">
+      <label>API Key</label>
+      <input id="setting-apikey" placeholder="你的 API 密钥">
+      <label>模型名称</label>
+      <input id="setting-model" placeholder="例如: gpt-4o-mini">
+      <div class="settings-actions">
+        <button id="save-settings">保存</button>
+        <button id="close-settings">关闭</button>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
