@@ -109,8 +109,44 @@
   <!-- 隐藏的文件输入 -->
   <input type="file" id="image-input" accept="image/*" style="display: none;">
   
+  <!-- 设置弹窗 -->
+  <div class="modal-overlay" id="settings-modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3>设置</h3>
+        <button class="modal-close-btn" id="close-settings-btn">×</button>
+      </div>
+      <div class="modal-body">
+        <div class="settings-group">
+          <label class="settings-label">模型提供方:</label>
+          <select id="model-provider" class="settings-select">
+            <option value="zhipu">智谱</option>
+          </select>
+        </div>
+        <div class="settings-group">
+          <label class="settings-label">接入端点:</label>
+          <input type="text" id="api-endpoint" class="settings-input" placeholder="https://open.bigmodel.cn/api/paas/v4">
+        </div>
+        <div class="settings-group">
+          <label class="settings-label">API密钥:</label>
+          <input type="password" id="api-key" class="settings-input" placeholder="请输入API密钥">
+        </div>
+        <div class="settings-group">
+          <label class="settings-label">模型名称:</label>
+          <input type="text" id="model-name" class="settings-input" placeholder="glm-5v-turbo">
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button id="save-settings-btn" class="save-settings-btn">保存设置</button>
+      </div>
+    </div>
+  </div>
+  
   <!-- GeoGebra库 -->
   <script src="https://cdn.geogebra.org/apps/deployggb.js"></script>
+  
+  <!-- AI客户端 -->
+  <script src="ai.js"></script>
   
   <!-- 主JavaScript文件 -->
   <script src="chatgg.js"></script>

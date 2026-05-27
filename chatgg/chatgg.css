@@ -303,31 +303,31 @@ body {
 
 .message.user {
   flex-direction: row-reverse;
+  justify-content: flex-end;
 }
 
 .message-content {
   padding: 12px 16px;
   border-radius: 18px;
   line-height: 1.6;
-  max-width: 100%;
-  width: 100%;
+  max-width: 90%;
+  width: fit-content;
 }
 
 .message.user .message-content {
-  max-width: 100%;
-  width: 100%;
-  background-color: #1e88e5;
-  color: white;
+  background-color: #e3f2fd;
+  color: #333333;
   border-bottom-right-radius: 4px;
+  text-align: right;
 }
 
 .message.assistant .message-content {
-  max-width: 100%;
+  max-width: 90%;
   width: 100%;
-  background-color: #ffffff;
+  background-color: transparent;
   color: #333333;
   border-bottom-left-radius: 4px;
-  border: 1px solid #e5e5e5;
+  border: none;
 }
 
 .message-content p {
@@ -488,4 +488,147 @@ body {
 .send-btn:disabled {
   background-color: #999999;
   cursor: not-allowed;
+}
+
+/* GeoGebra 代码块 */
+.ggb-code-block {
+  background-color: #f5f5f5;
+  padding: 12px;
+  border-radius: 8px;
+  margin: 8px 0;
+  overflow-x: auto;
+  max-width: 100%;
+}
+
+.ggb-code-block code {
+  font-family: 'Courier New', monospace;
+  font-size: 13px;
+  color: #333;
+}
+
+/* 设置弹窗 */
+.modal-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-overlay.active {
+  display: flex;
+}
+
+.modal-content {
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  max-width: 500px;
+  width: 90%;
+  max-height: 80vh;
+  overflow-y: auto;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 24px;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.modal-header h3 {
+  font-size: 20px;
+  font-weight: 600;
+  color: #333333;
+  margin: 0;
+}
+
+.modal-close-btn {
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  background: none;
+  border: none;
+  font-size: 24px;
+  color: #999999;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s;
+}
+
+.modal-close-btn:hover {
+  background-color: #f5f5f5;
+  color: #333333;
+}
+
+.modal-body {
+  padding: 24px;
+}
+
+.settings-group {
+  margin-bottom: 20px;
+}
+
+.settings-label {
+  display: block;
+  font-size: 14px;
+  font-weight: 500;
+  color: #333333;
+  margin-bottom: 8px;
+}
+
+.settings-input,
+.settings-select {
+  width: 100%;
+  padding: 12px 16px;
+  border: 1px solid #e5e5e5;
+  border-radius: 8px;
+  font-size: 14px;
+  color: #333333;
+  background-color: #fafafa;
+  transition: all 0.2s;
+}
+
+.settings-input:focus,
+.settings-select:focus {
+  outline: none;
+  border-color: #1e88e5;
+  background-color: #ffffff;
+}
+
+.settings-input::placeholder {
+  color: #999999;
+}
+
+.settings-select {
+  cursor: pointer;
+}
+
+.modal-footer {
+  padding: 16px 24px 24px;
+}
+
+.save-settings-btn {
+  width: 100%;
+  padding: 14px;
+  background-color: #1e88e5;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.save-settings-btn:hover {
+  background-color: #1976d2;
 }
