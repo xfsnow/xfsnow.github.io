@@ -142,6 +142,12 @@
     </div>
   </div>
   
+  <!-- GeoGebra 预加载容器（调试用，暂时显示） -->
+  <div id="ggb-preload-container" style="position: fixed; left: 10px; bottom: 10px; width: 300px; height: 250px; border: 2px solid #ff0000; background: rgba(255, 0, 0, 0.1); z-index: 9999; padding: 10px;">
+    <div style="color: #ff0000; font-size: 12px; padding: 5px; font-weight: bold;">GeoGebra Preload (调试用)</div>
+    <div id="ggb-preload-applet" style="width: 100%; height: calc(100% - 30px); background: #f0f0f0;"></div>
+  </div>
+  
   <!-- GeoGebra库 -->
   <script src="https://cdn.geogebra.org/apps/deployggb.js"></script>
   
