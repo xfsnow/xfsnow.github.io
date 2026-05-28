@@ -1,76 +1,143 @@
-ChatGGB 重构（中文说明）
+# ChatGG - AI数学绘图助手
 
-概述
-----
-这是一个针对当前 chatgg 功能的全新简洁实现骨架，放在 `/chatgg` 下。目标是提供聊天与 GeoGebra 图形渲染的基础功能，并保留可扩展的接口以便后续替换 AI 接入和增强解析器。
+## 概述
+ChatGG 是一个通过AI对话生成 GeoGebra 图形的简洁版程序。用户可以用自然语言描述数学作图需求，AI会自动生成相应的GeoGebra命令并绘制图形。
 
-包含文件
-----
-- `index.html`：主页面（简单 UI），包含固定画板、聊天区与输入区。
-- `style.css`：页面样式。
-- `ggbAdapter.js`：最小化的 GeoGebra 适配器，负责加载 `deployggb.js` 并封装常用方法（注入、执行命令、ZoomFit、清空、枚举对象等）。
-- `ggbParser.js`：简易解析器，从助手文本/HTML 中提取 GeoGebra 命令（优先 code fence / <pre>）。
-- `aiClient.js`：精简的 AI 客户端适配层（当前为本地规则/占位实现，后续可替换为真实后端）。
-- `main.js`：UI glue，负责与 AI 客户端交互、将 AI 输出解析为命令并下发到 GeoGebra。
+## 功能特性
+- 🤖 **AI智能绘图**：通过自然语言描述生成GeoGebra几何图形
+- 💬 **流式对话**：支持实时流式响应，边生成边显示
+- ⚙️ **多模型支持**：兼容OpenAI格式的API，可配置不同AI服务商
+- 🎨 **现代UI界面**：简洁美观的聊天界面，支持侧边栏折叠
+- 💾 **本地存储**：自动保存API设置和对话历史
+- 📱 **响应式设计**：适配各种屏幕尺寸
 
-当前实现的功能（已实现）
-----
-- 页面上方有一个固定 GeoGebra 画板（`#ggb-fixed`），用于集中展示 AI 生成的图形；并支持在消息中按需创建临时画板副本。
-- 输入区域可发送文本到简易 AI 客户端，显示 AI 回复文本。
-- `ggbParser` 能从 AI 回复中提取命令（支持 fenced code block、`<pre>`、以及简单的行拆分）。
-- 抽象的 `GGBAdapter` 暴露 `createApplet`, `executeCommands`, `zoomFit`, `clear`, `listObjects`, `setSize` 等方法，便于后续替换或扩展。
+## 项目结构
+```
+chatgg/
+├── index.html      # 主页面，包含完整的HTML结构
+├── chatgg.css      # 样式文件，定义UI布局和视觉效果
+├── chatgg.js       # 主要业务逻辑，处理对话交互和UI控制
+├── ai.js           # AI客户端，处理与AI API的通信
+└── README.md       # 项目说明文档
+```
 
-主要问题与观察
-----
-- 画板渲染时常见问题：被父容器压缩或内部元素带有 transform 缩放，导致只显示工具条或一条横条。
-- AI 输出格式多样，命令解析需更鲁棒的策略以避免识别失败。
-- GeoGebra 在不同版本或封装下 API 名称不完全一致（如 `repaint` / `setSize` 等），需要兼容层。
+## 技术架构
 
-重构目标（作为后续开发的需求提示语）
-----
-目标是建立一套稳健、可维护且易扩展的 ChatGGB：
+### 核心组件
 
-核心需求：
-- 多画板支持：页面中可展示多个 GeoGebra 实例（固定主画板 + 每条消息的可选副本）。
-- 稳定命令解析：解析器应支持多种 AI 输出形式（fenced code、`<pre>`、普通文本中的行命令），并输出标准命令数组。
-- 渲染策略：优先把命令下发到固定主画板；若用户需要也能在单条消息下创建独立画板副本。
-- 统一的 applet 适配层：`ggbAdapter` 应封装常用 API（evalCommand、setSize、ZoomFit、getAllObjectNames、getXcoord/getYcoord、setCoordSystem、repaint）并对不同版本做容错。
+#### 1. AI客户端 (ai.js)
+- 实现了 `AiClient` 类，支持OpenAI兼容的流式API
+- 处理SSE（Server-Sent Events）流式响应
+- 提供统一的接口用于发送消息和接收响应
 
-UI/UX 要求（建议）
-- 画板以卡片形式显示，可收起/展开/最大化；每个画板上提供工具按钮（ZoomFit / Clear / Export）。
-- 在消息处显示“图形已在上方画板显示”或“在此消息下创建了画板”的提示，并提供“在新画板打开 / 复制命令 / 反馈给 AI 修改并重试”的交互。
+#### 2. 主控制器 (chatgg.js)
+- 管理对话历史和消息渲染
+- 处理用户输入和发送逻辑
+- 集成设置面板和localStorage持久化
+- 格式化AI回复内容（支持代码块、加粗等Markdown语法）
 
-错误处理与调试
-----
-- 命令执行失败时显示详细错误（命令 + GeoGebra 报错），并提供“一键反馈给 AI 修改并重试”。
-- 在 UI 或控制台输出关键调试信息：提取到的命令、Injected applet id、对象列表、计算到的 bbox、setCoordSystem 参数、API 调用失败信息等。
+#### 3. 用户界面 (index.html + chatgg.css)
+- 左侧边栏：新建对话、历史记录、设置入口
+- 右侧主区域：聊天头部、消息列表、输入框
+- 设置弹窗：配置AI服务提供商、API端点、密钥和模型名称
 
-接口与数据格式建议
-----
-- AI -> 前端：建议 AI 在回复内提供明确的 fenced code block（```）包裹 GeoGebra 命令，作为首选解析来源。
-- 前端内部命令形态：[{cmd: "A=(0,0)", raw: "A=(0,0)", line:1}]。
-- ggbAdapter 应提供：
-	- `createApplet(containerId, options) -> Promise<applet>`
-	- `executeCommands(applet, commands[]) -> {errors:[], success}`
-	- `clear(applet)`, `zoomFit(applet)`, `setView(applet,bbox)`, `listObjects(applet)`。
+## 使用方法
 
-实施阶段（建议分步）
-----
-1. 规格与接口定义：明确 `ggbAdapter` 与 `ggbParser` 的 API 及数据格式。
-2. 实现 `ggbAdapter`：注入库、处理 appletOnLoad、兼容常见 API 名称、返回统一错误结构。
-3. 强化 `ggbParser`：单元测试覆盖常见 AI 输出样式、支持更多分隔与实体解码。
-4. UI 组件化：实现 `FixedGgbPanel`（单例）与 `MessageGgbCard`（多副本），并提供工具条操作。
-5. 集成聊天流：将 AI 回复显示、提取命令、在主画板/副本上渲染，并提供重试/反馈操作。
-6. 测试与兼容性验证：在主流浏览器上验证注入、命令执行、视图调整（ZoomFit/setCoordSystem）等。
+### 1. 首次使用配置
+1. 点击左下角的"设置"按钮
+2. 选择模型提供商（当前支持智谱AI）
+3. 输入API端点（默认：https://open.bigmodel.cn/api/paas/v4）
+4. 输入API密钥
+5. 选择模型名称（默认：glm-5v-turbo）
+6. 点击"保存设置"
 
-交付物建议
-----
-- 新模块： `chatgg/ggbAdapter.js`, `chatgg/ggbParser.js`, `chatgg/aiClient.js`。
-- 主逻辑与 UI：`chatgg/main.js`、`chatgg/index.html`、`chatgg/style.css`。
-- 文档：`chatgg/README.md`（即本文件）。
+### 2. 开始对话
+- 在输入框中输入数学作图需求，例如：
+  - "画一个等边三角形"
+  - "构造圆的切线"
+  - "证明勾股定理"
+- 或者点击欢迎页面的示例标签快速开始
 
-后续我可以：
-- 将 `ggbParser` 与 `ggbAdapter` 进一步增强为生产级模块；或
-- 直接将本新 UI 替换为站点默认入口并做一次完整集成测试（包含真实 AI 后端接入）。
+### 3. 对话管理
+- 点击"新对话"按钮清空当前对话
+- 点击侧边栏切换按钮隐藏/显示侧边栏
+- 按Enter键发送消息，Shift+Enter换行
 
-请告诉我你想先做哪一项（增强解析器 / 完整替换 / 接入真实 AI），我会继续实现下一步。 
+## 系统提示词
+AI被配置为GeoGebra几何绘图专家，遵循以下规则：
+- 使用GeoGebra脚本格式，方括号语法如 `Circle[A, B]`
+- 每个命令单独一行
+- 将命令放在代码块中（ggb或plaintext标识）
+- 提供清晰的步骤说明和解释
+- 确保坐标在合理范围内（x: -10~10, y: -10~10）
+- 优先使用点定义，再使用几何命令
+
+## API配置
+
+### 支持的模型提供商
+当前版本支持任何兼容OpenAI格式的API服务，包括但不限于：
+- 智谱AI (Zhipu AI)
+- OpenAI
+- Azure OpenAI
+- 其他OpenAI兼容服务
+
+### 配置参数
+- **模型提供方**：下拉选择（当前仅智谱）
+- **接入端点**：API的基础URL
+- **API密钥**：访问令牌
+- **模型名称**：具体使用的模型标识
+- **使用流式响应**：勾选则使用流式响应（默认），取消则使用一次性响应
+
+所有配置保存在浏览器localStorage中，下次访问时自动加载。
+
+### 流式 vs 非流式响应
+
+程序现在支持两种响应模式，可以在设置中切换：
+
+**流式响应（推荐）**：
+- ✅ 首字延迟低（200-500ms），用户体验更好
+- ✅ 文字逐字显示，感觉响应更快
+- ❌ 总完成时间可能略长
+- 💡 适合大多数场景
+
+**一次性响应**：
+- ✅ 代码逻辑更简单
+- ✅ 总完成时间可能稍快（10-20%）
+- ❌ 首字延迟高（2-5秒），需要等待完整回复
+- 💡 适合网络不稳定或追求简化的场景
+
+**重要提示**：两种方式的 Token 消耗完全相同！计费只与输入输出内容有关，与传输方式无关。
+
+**性能测试**：打开浏览器控制台（F12），发送消息时会显示详细的性能数据，包括首字延迟、总耗时等。
+
+## 技术栈
+- **前端框架**：原生JavaScript（无框架依赖）
+- **样式方案**：纯CSS，使用Flexbox布局
+- **图标系统**：内联SVG图标
+- **数据存储**：localStorage持久化设置
+- **外部依赖**：GeoGebra库（通过CDN加载）
+
+## 浏览器兼容性
+- Chrome/Edge（推荐）
+- Firefox
+- Safari
+- 需要支持ES6+和Fetch API的现代浏览器
+
+## 注意事项
+1. 使用前必须配置有效的API密钥
+2. API调用会产生费用，请注意用量
+3. GeoGebra库从CDN加载，需要网络连接
+4. 建议在网络良好的环境下使用以获得最佳体验
+
+## TODO
+- [x] 实现流式和非流式响应对比功能
+- [ ] 测试对比流式响应和一次性响应哪种效果更好，更节省token。
+- [ ] 对话响应中解析 GeoGebra 命令，动态生成 GeoGebra 画板副本，然后以解析出的命令画出数学图形。在多次对话中显示多个画板及画图。
+- [ ] 支持图片上传和多模态对话
+- [ ] 实现对话历史的完整保存和恢复
+- [ ] 增加GeoGebra图形的导出功能
+- [ ] 优化移动端体验
+- [ ] 添加命令预览和编辑功能
+
+## 许可证
+本项目作为 xfsnow.github.io 网站的一部分，遵循原项目的许可协议。
