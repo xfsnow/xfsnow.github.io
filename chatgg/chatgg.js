@@ -10,7 +10,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     
     window.ggbLibLoading = true;
-    console.log('[GeoGebra] 开始预加载库...');
     
     // 尝试在隐藏容器中初始化 GeoGebra
     const preloadContainer = document.getElementById('ggb-preload-container');
@@ -38,30 +37,19 @@ document.addEventListener('DOMContentLoaded', () => {
         "showFullscreenButton": false,
         "scale": 0.01,
         "appletOnLoad": function(api) {
-          console.log('[GeoGebra] 预加载 applet 初始化成功');
+          // 预加载完成
         }
       };
       
-      console.log('[GeoGebra] 创建预加载 applet...');
       const preloadApplet = new GGBApplet(preloadParams, '5.0', 'ggb-preload-applet');
       preloadApplet.inject('ggb-preload-container', 'preferHTML5');
-      console.log('[GeoGebra] 预加载 applet 注入成功');
       
       // 轮询检查库是否完全加载
       const checkInterval = setInterval(() => {
-        // 检查多个可能的全局对象
-        const ggbLoaded = typeof GGBApplet !== 'undefined' || 
-                          (window.GGBApplet && typeof window.GGBApplet === 'function') ||
-                          (preloadContainer.querySelector('iframe') !== null);
-        
-        if (ggbLoaded) {
+        if (typeof GGBApplet !== 'undefined') {
           clearInterval(checkInterval);
           window.ggbLibLoaded = true;
           window.ggbLibLoading = false;
-          console.log('[GeoGebra] 库预加载完成');
-          console.log('[GeoGebra] GGBApplet:', typeof GGBApplet);
-          console.log('[GeoGebra] window.GGBApplet:', typeof window.GGBApplet);
-          console.log('[GeoGebra] container iframe:', preloadContainer.querySelector('iframe') ? '存在' : '不存在');
         }
       }, 200);
       
@@ -395,7 +383,6 @@ document.addEventListener('DOMContentLoaded', () => {
     return new Promise((resolve, reject) => {
       // 如果已经加载，直接返回
       if (window.ggbLibLoaded) {
-        console.log('[GeoGebra] 库已加载（从缓存）');
         resolve(true);
         return;
       }
@@ -405,13 +392,10 @@ document.addEventListener('DOMContentLoaded', () => {
                         (window.GGBApplet && typeof window.GGBApplet === 'function');
       
       if (canUseGGB) {
-        console.log('[GeoGebra] 库已加载（直接检测）');
         window.ggbLibLoaded = true;
         resolve(true);
         return;
       }
-
-      console.log('[GeoGebra] 等待库加载...');
       
       // 轮询检查库是否加载
       const startTime = Date.now();
@@ -422,14 +406,11 @@ document.addEventListener('DOMContentLoaded', () => {
         if (ggbLoaded) {
           clearInterval(checkInterval);
           window.ggbLibLoaded = true;
-          console.log('[GeoGebra] 库加载完成，耗时:', Date.now() - startTime, 'ms');
           resolve(true);
         } else if (Date.now() - startTime > timeout) {
           clearInterval(checkInterval);
-          console.error('[GeoGebra] 库加载超时');
-          console.error('[GeoGebra] GGBApplet:', typeof GGBApplet);
-          console.error('[GeoGebra] window.GGBApplet:', typeof window.GGBApplet);
-          console.error('[GeoGebra] 请检查网络连接或 CDN 是否可访问: https://cdn.geogebra.org/apps/deployggb.js');
+          console.error('[GeoGebra] 库加载超时，请检查网络连接');
+          console.error('[GeoGebra] CDN 地址: https://cdn.geogebra.org/apps/deployggb.js');
           reject(new Error('GeoGebra 库加载超时，请检查网络连接'));
         }
       }, 200);
@@ -445,10 +426,6 @@ document.addEventListener('DOMContentLoaded', () => {
       console.error('[GeoGebra] 库加载失败:', e);
       return null;
     }
-
-    console.log('[GeoGebra] 开始创建画板:', containerId);
-    console.log('[GeoGebra] 命令:', commands);
-    console.log('[GeoGebra] 视图范围:', viewRange);
 
     const params = {
       "id": containerId,
@@ -467,17 +444,11 @@ document.addEventListener('DOMContentLoaded', () => {
       "useBrowserForJS": false,
       // 添加 applet 加载完成的回调
       "appletOnLoad": function(api) {
-        console.log('[GeoGebra] 画板加载完成:', containerId);
-        console.log('[GeoGebra] API 对象:', api);
-        console.log('[GeoGebra] API 方法:', Object.keys(api).slice(0, 20));
-        
         // 执行所有命令
         if (commands && commands.length > 0) {
-          console.log('[GeoGebra] 开始执行 ' + commands.length + ' 个命令...');
           commands.forEach((cmd, index) => {
             try {
               api.evalCommand(cmd);
-              console.log('[GeoGebra] 命令 ' + (index + 1) + ' 执行成功:', cmd);
             } catch (e) {
               console.error('[GeoGebra] 命令 ' + (index + 1) + ' 执行失败:', cmd, e);
             }
@@ -494,19 +465,16 @@ document.addEventListener('DOMContentLoaded', () => {
                   viewRange.yMin || -10,
                   viewRange.yMax || 10
                 );
-                console.log('[GeoGebra] 已设置坐标系:', viewRange);
               } else {
                 // 没有指定范围，尝试自动缩放
                 if (typeof api.zoomTo === 'function') {
                   api.zoomTo(200); // 默认缩放级别
-                  console.log('[GeoGebra] 使用默认缩放');
                 }
               }
               
               // 强制刷新画板
               if (typeof api.refreshViews === 'function') {
                 api.refreshViews();
-                console.log('[GeoGebra] 已刷新视图');
               }
             } catch (e) {
               console.error('[GeoGebra] 调整视图失败:', e);
@@ -526,18 +494,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
     try {
       // 创建并注入画板
-      console.log('[GeoGebra] 创建 GGBApplet 实例...');
       const applet = new GGBApplet(params, '5.0', containerId);
-      
-      console.log('[GeoGebra] 注入画板到:', containerId);
       applet.inject(containerId, 'preferHTML5');
-      
-      console.log('[GeoGebra] 画板注入成功');
       return applet;
     } catch (e) {
       console.error('[GeoGebra] 创建画板失败:', e);
-      console.error('[GeoGebra] 错误详情:', e.message);
-      console.error('[GeoGebra] 错误堆栈:', e.stack);
       return null;
     }
   }
@@ -770,7 +731,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // 重新绘制 GeoGebra 画板
 window.rerenderGGB = function(containerId) {
-  console.log('重新绘制:', containerId);
   // TODO: 实现重绘逻辑
 };
 
@@ -780,44 +740,7 @@ window.copyGGBCommands = function(commands) {
   navigator.clipboard.writeText(text).then(() => {
     alert('命令已复制到剪贴板！');
   }).catch(err => {
-    console.error('复制失败:', err);
-    alert('复制失败，请手动复制');
-  });
-
-// ==================== 全局辅助函数 ====================
-
-// 重新绘制 GeoGebra 画板
-window.rerenderGGB = function(containerId) {
-  console.log('重新绘制:', containerId);
-  // TODO: 实现重绘逻辑
-};
-
-// 复制 GeoGebra 命令到剪贴板
-window.copyGGBCommands = function(commands) {
-  const text = commands.join('\n');
-  navigator.clipboard.writeText(text).then(() => {
-    alert('命令已复制到剪贴板！');
-  }).catch(err => {
-    console.error('复制失败:', err);
+    console.error('[GeoGebra] 复制失败:', err);
     alert('复制失败，请手动复制');
   });
 };
-
-// ==================== 全局辅助函数 ====================
-
-// 重新绘制 GeoGebra 画板
-window.rerenderGGB = function(containerId) {
-  console.log('重新绘制:', containerId);
-  // TODO: 实现重绘逻辑
-};
-
-// 复制 GeoGebra 命令到剪贴板
-window.copyGGBCommands = function(commands) {
-  const text = commands.join('\n');
-  navigator.clipboard.writeText(text).then(() => {
-    alert('命令已复制到剪贴板！');
-  }).catch(err => {
-    console.error('复制失败:', err);
-    alert('复制失败，请手动复制');
-  });
-}}
