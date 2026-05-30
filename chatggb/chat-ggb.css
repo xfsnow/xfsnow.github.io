@@ -428,6 +428,7 @@ body {
 
 .message.user {
   flex-direction: row-reverse;
+  justify-content: flex-end;
 }
 
 .avatar {
@@ -479,6 +480,43 @@ body {
 
 .message-content p:last-child {
   margin-bottom: 0;
+}
+
+/* Markdown标题样式 */
+.message-content h1,
+.message-content h2,
+.message-content h3,
+.message-content h4 {
+  margin: 12px 0 8px 0;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.message-content h1 {
+  font-size: 20px;
+  color: #1e88e5;
+}
+
+.message-content h2 {
+  font-size: 18px;
+  color: #333333;
+}
+
+.message-content h3 {
+  font-size: 16px;
+  color: #333333;
+}
+
+.message-content h4 {
+  font-size: 14px;
+  color: #666666;
+}
+
+.message.user .message-content h1,
+.message.user .message-content h2,
+.message.user .message-content h3,
+.message.user .message-content h4 {
+  color: white;
 }
 
 /* 动态画板容器 */

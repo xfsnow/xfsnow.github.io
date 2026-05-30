@@ -393,6 +393,12 @@ class ChatGGB {
   }
   
   formatContent(content) {
+    // 将Markdown标题转换为HTML标题（从大到小处理，避免冲突）
+    content = content.replace(/^#### (.+)$/gm, '<h4>$1</h4>');
+    content = content.replace(/^### (.+)$/gm, '<h3>$1</h3>');
+    content = content.replace(/^## (.+)$/gm, '<h2>$1</h2>');
+    content = content.replace(/^# (.+)$/gm, '<h1>$1</h1>');
+    
     // 将代码块转换为带样式的格式
     content = content.replace(/```(\w+)?\n([\s\S]*?)```/g, (match, lang, code) => {
       return `<div class="code-block"><pre>${code.trim()}</pre></div>`;
