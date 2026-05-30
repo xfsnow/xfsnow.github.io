@@ -637,10 +637,10 @@ document.addEventListener('DOMContentLoaded', () => {
             commandsDiv = document.createElement('div');
             commandsDiv.className = 'ggb-commands-display';
             
-            // 生成命令列表 HTML
-            const commandItemsHtml = commands.map((cmd, index) => {
+            // 生成命令列表 HTML（不带行号）
+            const commandItemsHtml = commands.map((cmd) => {
               const escapedCmd = escapeHtmlForCommands(cmd);
-              return `<div class="ggb-command-item"><span class="command-number">${index + 1}.</span><code>${escapedCmd}</code></div>`;
+              return `<div class="ggb-command-item"><code>${escapedCmd}</code></div>`;
             }).join('');
             
             // 复制按钮的 SVG 图标
@@ -853,11 +853,11 @@ document.addEventListener('DOMContentLoaded', () => {
           const commandsDiv = document.createElement('div');
           commandsDiv.className = 'ggb-commands-display';
           
-          // 生成命令列表 HTML
-          const commandItemsHtml = formatted.commands.map((cmd, index) => {
+          // 生成命令列表 HTML（不带行号）
+          const commandItemsHtml = formatted.commands.map((cmd) => {
             const escapedCmd = escapeHtml(cmd);
-            console.log(`[onComplete] 命令 ${index + 1}:`, cmd);
-            return `<div class="ggb-command-item"><span class="command-number">${index + 1}.</span><code>${escapedCmd}</code></div>`;
+            console.log(`[onComplete] 命令:`, cmd);
+            return `<div class="ggb-command-item"><code>${escapedCmd}</code></div>`;
           }).join('');
           
           // 复制按钮的 SVG 图标
