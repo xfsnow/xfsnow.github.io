@@ -676,3 +676,21 @@ body {
     height: 300px;
   }
 }
+
+/* ==================== 动态状态及提示样式 ==================== */
+.copy-success-text {
+  color: #52c41a;
+}
+
+.ggb-error-text {
+  color: #ff4d4f;
+}
+
+.ggb-error-box {
+  color: #ff4d4f;
+  padding: 8px;
+  margin-top: 8px;
+  background: #fff3f3;
+  border-radius: 4px;
+  font-size: 12px;
+}

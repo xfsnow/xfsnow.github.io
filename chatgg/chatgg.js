@@ -7,6 +7,54 @@ document.addEventListener('DOMContentLoaded', () => {
     return div.innerHTML;
   }
   
+  function createCommandsDisplay(container, commands) {
+    if (!commands || commands.length === 0) return null;
+    const wrapper = container.parentElement;
+    if (!wrapper) {
+      console.warn('[createCommandsDisplay] 未找到容器包装器，无法创建命令显示区域');
+      return null;
+    }
+    
+    let commandsDiv = wrapper.querySelector('.ggb-commands-display');
+    if (commandsDiv) {
+      console.log('[createCommandsDisplay] 命令显示区域已存在，跳过创建');
+      return commandsDiv;
+    }
+    
+    commandsDiv = document.createElement('div');
+    commandsDiv.className = 'ggb-commands-display';
+    
+    const commandItemsHtml = commands.map((cmd) => {
+      const escapedCmd = escapeHtmlForCommands(cmd);
+      return `<div class="ggb-command-item"><code>${escapedCmd}</code></div>`;
+    }).join('');
+    
+    const copyIconSvg = `
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+      </svg>
+    `;
+    
+    commandsDiv.innerHTML = `
+      <div class="ggb-commands-header">
+        <div class="ggb-commands-title">GeoGebra 命令</div>
+        <button class="copy-btn" onclick="copyGGBCommands(this)">
+          ${copyIconSvg}
+          <span>复制</span>
+        </button>
+      </div>
+      <div class="ggb-commands-list">
+        ${commandItemsHtml}
+      </div>
+    `;
+    
+    commandsDiv.dataset.commands = JSON.stringify(commands);
+    wrapper.appendChild(commandsDiv);
+    console.log('[createCommandsDisplay] ✓ 命令显示区域已创建，包含', commands.length, '条命令');
+    return commandsDiv;
+  }
+  
   window.copyGGBCommands = function(button) {
     const commandsDiv = button.closest('.ggb-commands-display');
     if (!commandsDiv) return;
@@ -44,7 +92,7 @@ document.addEventListener('DOMContentLoaded', () => {
       <svg viewBox="0 0 24 24" fill="none" stroke="#52c41a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
         <polyline points="20 6 9 17 4 12"></polyline>
       </svg>
-      <span style="color: #52c41a;">已复制</span>
+      <span class="copy-success-text">已复制</span>
     `;
     
     setTimeout(() => {
@@ -56,10 +104,7 @@ document.addEventListener('DOMContentLoaded', () => {
     try {
       const textArea = document.createElement('textarea');
       textArea.value = text;
-      textArea.style.position = 'fixed';
-      textArea.style.left = '-9999px';
-      textArea.style.top = '-9999px';
-      textArea.style.opacity = '0';
+      textArea.style.cssText = 'position: fixed; left: -9999px; top: -9999px; opacity: 0;';
       document.body.appendChild(textArea);
       
       textArea.focus();
@@ -143,17 +188,11 @@ document.addEventListener('DOMContentLoaded', () => {
   
   preloadGeoGebraLib();
 
-  const toggleSidebarBtn = document.getElementById('toggle-sidebar-btn');
   const sidebar = document.querySelector('.sidebar');
+  document.getElementById('toggle-sidebar-btn')?.addEventListener('click', () => {
+    sidebar?.classList.toggle('collapsed');
+  });
 
-  if (toggleSidebarBtn && sidebar) {
-    toggleSidebarBtn.addEventListener('click', () => {
-      sidebar.classList.toggle('collapsed');
-    });
-  }
-
-  const newChatHeaderBtn = document.getElementById('new-chat-header-btn');
-  const newChatSidebarBtn = document.getElementById('new-chat-btn');
   const chatTitle = document.getElementById('chat-title');
   const chatContainer = document.getElementById('chat-container');
 
@@ -171,31 +210,25 @@ document.addEventListener('DOMContentLoaded', () => {
         </div>
       `;
     }
-    
-    if (chatTitle) {
-      chatTitle.textContent = '新对话';
-    }
-    
+    if (chatTitle) chatTitle.textContent = '新对话';
     messageHistory = [];
   }
 
-  if (newChatHeaderBtn) {
-    newChatHeaderBtn.addEventListener('click', resetChat);
-  }
-
-  if (newChatSidebarBtn) {
-    newChatSidebarBtn.addEventListener('click', resetChat);
-  }
+  [document.getElementById('new-chat-header-btn'), document.getElementById('new-chat-btn')].forEach(btn => {
+    btn?.addEventListener('click', resetChat);
+  });
 
   const settingsBtn = document.getElementById('settings-btn');
   const settingsModal = document.getElementById('settings-modal');
   const closeSettingsBtn = document.getElementById('close-settings-btn');
   const saveSettingsBtn = document.getElementById('save-settings-btn');
   
-  const modelProvider = document.getElementById('model-provider');
-  const apiEndpoint = document.getElementById('api-endpoint');
-  const apiKey = document.getElementById('api-key');
-  const modelName = document.getElementById('model-name');
+  const settingsElements = {
+    provider: document.getElementById('model-provider'),
+    endpoint: document.getElementById('api-endpoint'),
+    apiKey: document.getElementById('api-key'),
+    modelName: document.getElementById('model-name')
+  };
   
   const SETTINGS_KEY = 'chatgg_settings';
   
@@ -208,36 +241,36 @@ document.addEventListener('DOMContentLoaded', () => {
   
   function loadSettings() {
     const saved = localStorage.getItem(SETTINGS_KEY);
+    let settings = defaultSettings;
     if (saved) {
       try {
-        const settings = JSON.parse(saved);
-        modelProvider.value = settings.provider || defaultSettings.provider;
-        apiEndpoint.value = settings.endpoint || defaultSettings.endpoint;
-        apiKey.value = settings.apiKey || defaultSettings.apiKey;
-        modelName.value = settings.modelName || defaultSettings.modelName;
+        settings = { ...defaultSettings, ...JSON.parse(saved) };
       } catch (e) {
         console.error('加载设置失败:', e);
-        useDefaultSettings();
       }
-    } else {
-      useDefaultSettings();
     }
+    Object.keys(settingsElements).forEach(key => {
+      if (settingsElements[key]) {
+        settingsElements[key].value = settings[key] || '';
+      }
+    });
   }
   
   function useDefaultSettings() {
-    modelProvider.value = defaultSettings.provider;
-    apiEndpoint.value = defaultSettings.endpoint;
-    apiKey.value = defaultSettings.apiKey;
-    modelName.value = defaultSettings.modelName;
+    Object.keys(settingsElements).forEach(key => {
+      if (settingsElements[key]) {
+        settingsElements[key].value = defaultSettings[key] || '';
+      }
+    });
   }
   
   function saveSettings() {
-    const settings = {
-      provider: modelProvider.value,
-      endpoint: apiEndpoint.value,
-      apiKey: apiKey.value,
-      modelName: modelName.value
-    };
+    const settings = {};
+    Object.keys(settingsElements).forEach(key => {
+      if (settingsElements[key]) {
+        settings[key] = settingsElements[key].value;
+      }
+    });
     
     try {
       localStorage.setItem(SETTINGS_KEY, JSON.stringify(settings));
@@ -250,37 +283,20 @@ document.addEventListener('DOMContentLoaded', () => {
   }
   
   function openSettingsModal() {
-    if (settingsModal) {
-      loadSettings();
-      settingsModal.classList.add('active');
-    }
+    loadSettings();
+    settingsModal?.classList.add('active');
   }
   
   function closeSettingsModal() {
-    if (settingsModal) {
-      settingsModal.classList.remove('active');
-    }
+    settingsModal?.classList.remove('active');
   }
   
-  if (settingsBtn) {
-    settingsBtn.addEventListener('click', openSettingsModal);
-  }
-  
-  if (closeSettingsBtn) {
-    closeSettingsBtn.addEventListener('click', closeSettingsModal);
-  }
-  
-  if (saveSettingsBtn) {
-    saveSettingsBtn.addEventListener('click', saveSettings);
-  }
-  
-  if (settingsModal) {
-    settingsModal.addEventListener('click', (e) => {
-      if (e.target === settingsModal) {
-        closeSettingsModal();
-      }
-    });
-  }
+  settingsBtn?.addEventListener('click', openSettingsModal);
+  closeSettingsBtn?.addEventListener('click', closeSettingsModal);
+  saveSettingsBtn?.addEventListener('click', saveSettings);
+  settingsModal?.addEventListener('click', (e) => {
+    if (e.target === settingsModal) closeSettingsModal();
+  });
 
   // ==================== 对话处理逻辑 ====================
   
@@ -352,10 +368,6 @@ document.addEventListener('DOMContentLoaded', () => {
       ggbWrapper.className = 'ggb-container-wrapper';
       ggbWrapper.innerHTML = `
         <div id="${ggbContainerId}" class="ggb-container"></div>
-        <div class="ggb-actions">
-          <button class="ggb-btn" onclick="rerenderGGB('${ggbContainerId}')">重新绘制</button>
-          <button class="ggb-btn" onclick="copyGGBCommands(${JSON.stringify(formatted.commands).replace(/"/g, '&quot;')})">复制命令</button>
-        </div>
       `;
       contentDiv.appendChild(ggbWrapper);
       
@@ -557,51 +569,7 @@ document.addEventListener('DOMContentLoaded', () => {
       console.log('[createGGBApplet] 画板注入完成');
       
       if (commands && commands.length > 0) {
-        console.log('[createGGBApplet] 开始创建命令显示区域');
-        
-        const wrapper = container.parentElement;
-        if (wrapper) {
-          let commandsDiv = wrapper.querySelector('.ggb-commands-display');
-          
-          if (!commandsDiv) {
-            commandsDiv = document.createElement('div');
-            commandsDiv.className = 'ggb-commands-display';
-            
-            const commandItemsHtml = commands.map((cmd) => {
-              const escapedCmd = escapeHtmlForCommands(cmd);
-              return `<div class="ggb-command-item"><code>${escapedCmd}</code></div>`;
-            }).join('');
-            
-            const copyIconSvg = `
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-              </svg>
-            `;
-            
-            commandsDiv.innerHTML = `
-              <div class="ggb-commands-header">
-                <div class="ggb-commands-title">GeoGebra 命令</div>
-                <button class="copy-btn" onclick="copyGGBCommands(this)">
-                  ${copyIconSvg}
-                  <span>复制</span>
-                </button>
-              </div>
-              <div class="ggb-commands-list">
-                ${commandItemsHtml}
-              </div>
-            `;
-            
-            commandsDiv.dataset.commands = JSON.stringify(commands);
-            
-            wrapper.appendChild(commandsDiv);
-            console.log('[createGGBApplet] ✓ 命令显示区域已创建，包含', commands.length, '条命令');
-          } else {
-            console.log('[createGGBApplet] 命令显示区域已存在，跳过创建');
-          }
-        } else {
-          console.warn('[createGGBApplet] 未找到容器包装器，无法创建命令显示区域');
-        }
+        createCommandsDisplay(container, commands);
       }
       
       return applet;
@@ -692,11 +660,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const aiContentDiv = addMessageToUI('', 'assistant');
     let fullResponse = '';
     
-    function escapeHtml(text) {
-      const div = document.createElement('div');
-      div.textContent = text;
-      return div.innerHTML;
-    }
+
     
     await aiClient.sendMessage(
       messages,
@@ -747,39 +711,7 @@ document.addEventListener('DOMContentLoaded', () => {
           ggbWrapper.appendChild(ggbContainer);
           console.log('[onComplete] 画板容器已创建');
           
-          const commandsDiv = document.createElement('div');
-          commandsDiv.className = 'ggb-commands-display';
-          
-          const commandItemsHtml = formatted.commands.map((cmd) => {
-            const escapedCmd = escapeHtml(cmd);
-            console.log(`[onComplete] 命令:`, cmd);
-            return `<div class="ggb-command-item"><code>${escapedCmd}</code></div>`;
-          }).join('');
-          
-          const copyIconSvg = `
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-              <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-            </svg>
-          `;
-          
-          commandsDiv.innerHTML = `
-            <div class="ggb-commands-header">
-              <div class="ggb-commands-title">GeoGebra 命令</div>
-              <button class="copy-btn" onclick="copyGGBCommands(this)">
-                ${copyIconSvg}
-                <span>复制</span>
-              </button>
-            </div>
-            <div class="ggb-commands-list">
-              ${commandItemsHtml}
-            </div>
-          `;
-          
-          commandsDiv.dataset.commands = JSON.stringify(formatted.commands);
-          
-          ggbWrapper.appendChild(commandsDiv);
-          console.log('[onComplete] 命令显示区域已创建，包含', formatted.commands.length, '条命令');
+          const commandsDiv = createCommandsDisplay(ggbContainer, formatted.commands);
           
           aiContentDiv.appendChild(ggbWrapper);
           console.log('[onComplete] ✓ 画板和命令显示区域已添加到DOM');
@@ -795,9 +727,9 @@ document.addEventListener('DOMContentLoaded', () => {
               .catch(err => {
                 console.error('[onComplete] ✗ 画板创建失败:', err);
                 const errorDiv = document.createElement('div');
-                errorDiv.style.cssText = 'color: red; padding: 8px; margin-top: 8px; background: #fff3f3; border-radius: 4px; font-size: 12px;';
+                errorDiv.className = 'ggb-error-box';
                 errorDiv.textContent = '⚠️ 画板加载失败，但您可以复制下方命令在 GeoGebra 中使用';
-                commandsDiv.appendChild(errorDiv);
+                commandsDiv?.appendChild(errorDiv);
               });
           } else {
             console.error('[onComplete] ✗ 容器元素验证失败！');
@@ -817,7 +749,7 @@ document.addEventListener('DOMContentLoaded', () => {
         console.log('[onComplete] ========== 处理完成 ==========');
       },
       (error) => {
-        aiContentDiv.innerHTML = `<span style="color: red;">错误: ${error}</span>`;
+        aiContentDiv.innerHTML = `<span class="ggb-error-text">错误: ${error}</span>`;
         sendBtn.disabled = false;
       }
     );
@@ -826,18 +758,13 @@ document.addEventListener('DOMContentLoaded', () => {
   const sendBtn = document.getElementById('send-btn');
   const userInput = document.getElementById('user-input');
   
-  if (sendBtn) {
-    sendBtn.addEventListener('click', sendMessage);
-  }
-  
-  if (userInput) {
-    userInput.addEventListener('keypress', (e) => {
-      if (e.key === 'Enter' && !e.shiftKey) {
-        e.preventDefault();
-        sendMessage();
-      }
-    });
-  }
+  sendBtn?.addEventListener('click', sendMessage);
+  userInput?.addEventListener('keypress', (e) => {
+    if (e.key === 'Enter' && !e.shiftKey) {
+      e.preventDefault();
+      sendMessage();
+    }
+  });
 
   const exampleTags = document.querySelectorAll('.example-tag');
   exampleTags.forEach(tag => {
@@ -890,10 +817,6 @@ document.addEventListener('DOMContentLoaded', () => {
             ggbWrapper.className = 'ggb-container-wrapper';
             ggbWrapper.innerHTML = `
               <div id="${ggbContainerId}" class="ggb-container"></div>
-              <div class="ggb-actions">
-                <button class="ggb-btn" onclick="rerenderGGB('${ggbContainerId}')">重新绘制</button>
-                <button class="ggb-btn" onclick="copyGGBCommands(${JSON.stringify(formatted.commands).replace(/"/g, '&quot;')})">复制命令</button>
-              </div>
             `;
             aiContentDiv.appendChild(ggbWrapper);
             
@@ -904,7 +827,7 @@ document.addEventListener('DOMContentLoaded', () => {
           sendBtn.disabled = false;
         },
         (error) => {
-          aiContentDiv.innerHTML = `<span style="color: red;">错误: ${error}</span>`;
+          aiContentDiv.innerHTML = `<span class="ggb-error-text">错误: ${error}</span>`;
           sendBtn.disabled = false;
         }
       );
