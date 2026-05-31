@@ -399,7 +399,7 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     }
     
-    const codeMatch = content.match(/```(?:\s*ggb\s*|\s*geogebra\s*|\s*plaintext\s*)([\s\S]*?)```/);
+    const codeMatch = content.match(/```(?:\s*ggb(?!-json)\s*|\s*geogebra\s*|\s*plaintext\s*)([\s\S]*?)```/);
     if (codeMatch) {
       const commands = codeMatch[1]
         .split('\n')
@@ -455,73 +455,76 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   async function createGGBApplet(containerId, commands, viewRange) {
-    console.log('[createGGBApplet] 开始创建，容器ID:', containerId);
-    console.log('[createGGBApplet] 命令数量:', commands ? commands.length : 0);
-    console.log('[createGGBApplet] 视图范围:', viewRange);
-    
     try {
       await waitForGeoGebraLib();
-      console.log('[createGGBApplet] GeoGebra库已加载');
     } catch (e) {
       console.error('[GeoGebra] 库加载失败:', e);
       return null;
     }
 
+    const container = document.getElementById(containerId);
+    if (!container) {
+      console.error('[createGGBApplet] 容器不存在！');
+      return null;
+    }
+
+    // 读取容器实际尺寸（CSS 已设定 width:100% + aspect-ratio）
+    const initWidth = Math.max(container.clientWidth || 600, 320);
+    const initHeight = Math.max(container.clientHeight || 400, 240);
+
     const params = {
       "id": containerId,
-      "width": 600,
-      "height": 400,
+      "width": initWidth,
+      "height": initHeight,
       "showToolBar": false,
       "showAlgebraInput": false,
       "showMenuBar": false,
       "appName": "graphing",
       "language": "zh-CN",
-      "scale": 0.9,
       "enableLabelDrags": false,
       "enableShiftDragZoom": true,
       "showZoomButtons": true,
       "capturingThreshold": null,
       "useBrowserForJS": false,
       "appletOnLoad": function(api) {
-        console.log('[createGGBApplet] appletOnLoad 回调触发');
-        
         if (commands && commands.length > 0) {
-          console.log('[createGGBApplet] 开始执行', commands.length, '条命令');
           commands.forEach((cmd, index) => {
             try {
               api.evalCommand(cmd);
-              console.log('[createGGBApplet] 命令', index + 1, '执行成功:', cmd);
             } catch (e) {
               console.error('[GeoGebra] 命令 ' + (index + 1) + ' 执行失败:', cmd, e);
             }
           });
-          
+
           setTimeout(function() {
             try {
               if (viewRange) {
                 api.setCoordSystem(
-                  viewRange.xMin || -10,
-                  viewRange.xMax || 10,
-                  viewRange.yMin || -10,
-                  viewRange.yMax || 10
+                  viewRange.xMin || -10, viewRange.xMax || 10,
+                  viewRange.yMin || -10, viewRange.yMax || 10
                 );
-                console.log('[createGGBApplet] 已设置视图范围');
-              } else {
-                if (typeof api.zoomTo === 'function') {
-                  api.zoomTo(200); // 默认缩放级别
-                  console.log('[createGGBApplet] 已调用zoomTo');
-                }
+              } else if (typeof api.zoomTo === 'function') {
+                api.zoomTo(200);
               }
-              
-              if (typeof api.refreshViews === 'function') {
-                api.refreshViews();
-                console.log('[createGGBApplet] 已刷新视图');
-              }
+              if (typeof api.refreshViews === 'function') api.refreshViews();
             } catch (e) {
               console.error('[GeoGebra] 调整视图失败:', e);
             }
           }, 500);
         }
+
+        // 响应式：窗口改变时同步更新画板尺寸
+        let resizeTimer;
+        window.addEventListener('resize', () => {
+          clearTimeout(resizeTimer);
+          resizeTimer = setTimeout(() => {
+            const newW = Math.max(container.clientWidth, 320);
+            const newH = Math.max(container.clientHeight, 240);
+            try {
+              api.setSize(newW, newH);
+            } catch (e) { /* 忽略 */ }
+          }, 200);
+        });
       }
     };
 
@@ -533,22 +536,13 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     try {
-      console.log('[createGGBApplet] 开始注入画板到容器:', containerId);
-      const container = document.getElementById(containerId);
-      if (!container) {
-        console.error('[createGGBApplet] 容器不存在！');
-        return null;
-      }
-      console.log('[createGGBApplet] 容器存在，尺寸:', container.clientWidth, 'x', container.clientHeight);
-      
       const applet = new GGBApplet(params, '5.0', containerId);
       applet.inject(containerId, 'preferHTML5');
-      console.log('[createGGBApplet] 画板注入完成');
-      
+
       if (commands && commands.length > 0) {
         createCommandsDisplay(container, commands);
       }
-      
+
       return applet;
     } catch (e) {
       console.error('[GeoGebra] 创建画板失败:', e);

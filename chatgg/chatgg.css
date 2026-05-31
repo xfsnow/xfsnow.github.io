@@ -305,13 +305,20 @@ body {
 }
 
 /* ==================== GeoGebra 画板 ==================== */
+.ggb-container-wrapper {
+  width: 100%;
+  min-width: 320px;
+}
+
 .ggb-container {
   margin-top: 12px;
   border-radius: 12px;
   overflow: hidden;
   border: 1px solid #e5e5e5;
-  height: 400px;
   background: #fff;
+  width: 100%;
+  aspect-ratio: 3 / 2;
+  min-height: 240px;
 }
 
 .ggb-container > div {
@@ -670,10 +677,6 @@ body {
   
   .message-content {
     max-width: 95%;
-  }
-  
-  .ggb-container {
-    height: 300px;
   }
 }
 
