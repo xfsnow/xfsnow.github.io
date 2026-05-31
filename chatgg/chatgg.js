@@ -228,6 +228,37 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  function hideGGBAlgebraPanel(containerId) {
+    const container = document.getElementById(containerId);
+    if (!container) return;
+    
+    const selectors = [
+      '.gwt-SplitLayoutPanel > div:first-child',
+      '[class*="algebra"]',
+      '[class*="Algebra"]', 
+      '[id*="algebra"]',
+      '[id*="Algebra"]'
+    ];
+    
+    selectors.forEach(sel => {
+      try {
+        const el = container.querySelector(sel);
+        if (el && el.offsetWidth < container.offsetWidth * 0.4) {
+          el.style.display = 'none';
+        }
+      } catch(e) {}
+    });
+
+    const allDivs = container.querySelectorAll('div');
+    allDivs.forEach(div => {
+      const cls = div.className || '';
+      const id = div.id || '';
+      if ((cls.match(/algebra/i) || id.match(/algebra/i)) && div.offsetWidth < container.offsetWidth * 0.4) {
+        div.style.display = 'none';
+      }
+    });
+  }
+
   const sidebar = document.querySelector('.sidebar');
   document.getElementById('toggle-sidebar-btn')?.addEventListener('click', () => {
     sidebar?.classList.toggle('collapsed');
@@ -658,6 +689,13 @@ document.addEventListener('DOMContentLoaded', () => {
       
       params.appletOnLoad = function(api) {
         ggbApi = api;
+        try {
+          if (typeof api.setErrorDialogsActive === 'function') api.setErrorDialogsActive(false);
+        } catch(e) {}
+        
+        setTimeout(() => {
+          try { hideGGBAlgebraPanel(containerId); } catch(e) {}
+        }, 500);
       };
       
       applet.inject(containerId, 'preferHTML5');
