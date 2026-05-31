@@ -513,18 +513,6 @@ document.addEventListener('DOMContentLoaded', () => {
           }, 500);
         }
 
-        // 响应式：窗口改变时同步更新画板尺寸
-        let resizeTimer;
-        window.addEventListener('resize', () => {
-          clearTimeout(resizeTimer);
-          resizeTimer = setTimeout(() => {
-            const newW = Math.max(container.clientWidth, 320);
-            const newH = Math.max(container.clientHeight, 240);
-            try {
-              api.setSize(newW, newH);
-            } catch (e) { /* 忽略 */ }
-          }, 200);
-        });
       }
     };
 
