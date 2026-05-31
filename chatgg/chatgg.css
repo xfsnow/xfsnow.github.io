@@ -314,7 +314,7 @@ body {
 }
 
 .ggb-container {
-  margin-top: 12px;
+  margin: 12px auto 0 auto;
   border-radius: 12px;
   overflow: hidden;
   border: 1px solid #e5e5e5;
