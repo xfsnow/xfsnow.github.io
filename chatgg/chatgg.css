@@ -1,3 +1,4 @@
+/* ==================== 基础样式 ==================== */
 * {
   margin: 0;
   padding: 0;
@@ -5,9 +6,9 @@
 }
 
 body {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   background-color: #f5f5f5;
-  color: #333333;
+  color: #333;
   height: 100vh;
   overflow: hidden;
 }
@@ -17,15 +18,14 @@ body {
   height: 100vh;
 }
 
-/* 左侧边栏 */
+/* ==================== 侧边栏 ==================== */
 .sidebar {
   width: 280px;
-  background-color: #ffffff;
+  background: #fff;
   display: flex;
   flex-direction: column;
   padding: 12px;
   border-right: 1px solid #e5e5e5;
-  flex-shrink: 0;
   transition: width 0.3s ease, padding 0.3s ease;
 }
 
@@ -42,25 +42,19 @@ body {
   gap: 12px;
   width: 100%;
   padding: 12px 16px;
-  background-color: transparent;
-  color: #333333;
+  background: transparent;
+  color: #333;
   border: 1px solid #e5e5e5;
   border-radius: 8px;
   font-size: 14px;
-  font-weight: 500;
   cursor: pointer;
-  transition: all 0.2s;
+  transition: background 0.2s;
 }
 
 .new-chat-btn:hover {
-  background-color: #f5f5f5;
+  background: #f5f5f5;
 }
 
-.btn-text {
-  font-size: 14px;
-}
-
-/* 历史记录区域 */
 .history-section {
   flex: 1;
   margin-top: 20px;
@@ -72,7 +66,7 @@ body {
 .history-title {
   font-size: 12px;
   font-weight: 600;
-  color: #999999;
+  color: #999;
   padding: 0 8px 8px;
   text-transform: uppercase;
   letter-spacing: 0.5px;
@@ -89,7 +83,7 @@ body {
 }
 
 .history-list::-webkit-scrollbar-thumb {
-  background-color: #ddd;
+  background: #ddd;
   border-radius: 3px;
 }
 
@@ -100,40 +94,14 @@ body {
   padding: 10px 12px;
   border-radius: 8px;
   cursor: pointer;
-  transition: background-color 0.2s;
+  transition: background 0.2s;
   margin-bottom: 4px;
 }
 
 .history-item:hover {
-  background-color: #f5f5f5;
+  background: #f5f5f5;
 }
 
-.history-icon svg {
-  width: 20px;
-  height: 20px;
-  color: #666666;
-}
-
-.history-content {
-  flex: 1;
-  min-width: 0;
-}
-
-.history-title-text {
-  font-size: 14px;
-  color: #333333;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
-.history-time {
-  font-size: 12px;
-  color: #999999;
-  margin-top: 2px;
-}
-
-/* 设置区域 */
 .settings-section {
   padding-top: 12px;
   border-top: 1px solid #e5e5e5;
@@ -146,39 +114,31 @@ body {
   width: 100%;
   padding: 10px 12px;
   background: none;
-  color: #333333;
+  color: #333;
   border: none;
   border-radius: 8px;
   font-size: 14px;
   cursor: pointer;
-  transition: all 0.2s;
+  transition: background 0.2s;
 }
 
 .settings-btn:hover {
-  background-color: #f5f5f5;
+  background: #f5f5f5;
 }
 
-.settings-btn svg {
-  width: 20px;
-  height: 20px;
-  color: #666666;
-}
-
-/* 右侧主内容区 */
+/* ==================== 主内容区 ==================== */
 .main-content {
   flex: 1;
   display: flex;
   flex-direction: column;
-  background-color: #fafafa;
+  background: #fafafa;
   min-width: 0;
 }
 
-/* 聊天头部 */
 .chat-header {
   padding: 16px 24px;
   border-bottom: 1px solid #e5e5e5;
-  background-color: #ffffff;
-  flex-shrink: 0;
+  background: #fff;
   display: flex;
   align-items: center;
   gap: 16px;
@@ -187,7 +147,6 @@ body {
 .header-controls {
   display: flex;
   gap: 8px;
-  align-items: center;
 }
 
 .header-icon-btn {
@@ -196,7 +155,7 @@ body {
   border-radius: 8px;
   background: none;
   border: none;
-  color: #666666;
+  color: #666;
   cursor: pointer;
   display: flex;
   align-items: center;
@@ -205,23 +164,18 @@ body {
 }
 
 .header-icon-btn:hover {
-  background-color: #f5f5f5;
-  color: #333333;
-}
-
-.header-icon-btn svg {
-  width: 20px;
-  height: 20px;
+  background: #f5f5f5;
+  color: #333;
 }
 
 .chat-title {
   font-size: 18px;
   font-weight: 600;
-  color: #333333;
+  color: #333;
   flex: 1;
 }
 
-/* 聊天内容区 */
+/* ==================== 聊天区域 ==================== */
 .chat-container {
   flex: 1;
   overflow-y: auto;
@@ -235,29 +189,25 @@ body {
 }
 
 .chat-container::-webkit-scrollbar-thumb {
-  background-color: #ddd;
+  background: #ddd;
   border-radius: 4px;
 }
 
-/* 欢迎消息 */
 .welcome-message {
-  text-align: left;
   padding: 24px 20px;
-  max-width: none;
   width: 100%;
-  margin: 0;
 }
 
 .welcome-message h3 {
   font-size: 24px;
   font-weight: 600;
-  color: #333333;
+  color: #333;
   margin-bottom: 12px;
 }
 
 .welcome-message p {
   font-size: 14px;
-  color: #666666;
+  color: #666;
   margin-bottom: 24px;
 }
 
@@ -269,20 +219,20 @@ body {
 
 .example-tag {
   padding: 8px 16px;
-  background-color: #e8f4ff;
+  background: #e8f4ff;
   color: #1e88e5;
   border-radius: 20px;
   font-size: 13px;
   cursor: pointer;
-  transition: all 0.2s;
   border: none;
+  transition: background 0.2s;
 }
 
 .example-tag:hover {
-  background-color: #bbdefb;
+  background: #bbdefb;
 }
 
-/* 消息气泡 */
+/* ==================== 消息气泡 ==================== */
 .message {
   display: flex;
   gap: 0;
@@ -291,36 +241,13 @@ body {
 }
 
 @keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(10px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 .message.user {
   flex-direction: row-reverse;
   justify-content: flex-end;
-}
-
-.message.user .message-content {
-  background-color: #e3f2fd;
-  color: #333333;
-  border-bottom-right-radius: 4px;
-  text-align: right;
-  margin-left: auto; /* 确保靠右对齐 */
-}
-
-.message.assistant .message-content {
-  max-width: 90%;
-  width: 100%;
-  background-color: transparent;
-  color: #333333;
-  border-bottom-left-radius: 4px;
-  border: none;
 }
 
 .message-content {
@@ -331,6 +258,22 @@ body {
   width: fit-content;
 }
 
+.message.user .message-content {
+  background: #e3f2fd;
+  color: #333;
+  border-bottom-right-radius: 4px;
+  text-align: right;
+  margin-left: auto;
+}
+
+.message.assistant .message-content {
+  max-width: 90%;
+  width: 100%;
+  background: transparent;
+  color: #333;
+  border-bottom-left-radius: 4px;
+}
+
 .message-content p {
   margin-bottom: 8px;
 }
@@ -339,7 +282,7 @@ body {
   margin-bottom: 0;
 }
 
-/* Markdown标题样式 */
+/* Markdown 标题 */
 .message-content h1,
 .message-content h2,
 .message-content h3,
@@ -349,41 +292,26 @@ body {
   line-height: 1.4;
 }
 
-.message-content h1 {
-  font-size: 20px;
-  color: #1e88e5;
-}
-
-.message-content h2 {
-  font-size: 18px;
-  color: #333333;
-}
-
-.message-content h3 {
-  font-size: 16px;
-  color: #333333;
-}
-
-.message-content h4 {
-  font-size: 14px;
-  color: #666666;
-}
+.message-content h1 { font-size: 20px; color: #1e88e5; }
+.message-content h2 { font-size: 18px; color: #333; }
+.message-content h3 { font-size: 16px; color: #333; }
+.message-content h4 { font-size: 14px; color: #666; }
 
 .message.user .message-content h1,
 .message.user .message-content h2,
 .message.user .message-content h3,
 .message.user .message-content h4 {
-  color: #333333;
+  color: #333;
 }
 
-/* GeoGebra画板容器 - 动态生成在对话中 */
+/* ==================== GeoGebra 画板 ==================== */
 .ggb-container {
   margin-top: 12px;
   border-radius: 12px;
   overflow: hidden;
   border: 1px solid #e5e5e5;
   height: 400px;
-  background-color: #ffffff;
+  background: #fff;
 }
 
 .ggb-container > div {
@@ -391,13 +319,12 @@ body {
   height: 100%;
 }
 
-/* 图片预览 */
+/* ==================== 图片预览 ==================== */
 .image-preview-wrapper {
   display: none;
   padding: 12px 24px;
-  background-color: #ffffff;
+  background: #fff;
   border-top: 1px solid #e5e5e5;
-  flex-shrink: 0;
 }
 
 .image-preview-wrapper.active {
@@ -424,7 +351,7 @@ body {
   width: 28px;
   height: 28px;
   border-radius: 50%;
-  background-color: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.5);
   border: none;
   color: white;
   font-size: 18px;
@@ -432,26 +359,25 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: background-color 0.2s;
+  transition: background 0.2s;
 }
 
 .close-preview-btn:hover {
-  background-color: rgba(0, 0, 0, 0.7);
+  background: rgba(0, 0, 0, 0.7);
 }
 
-/* 输入区域 */
+/* ==================== 输入区域 ==================== */
 .user-input-container {
   padding: 16px 24px;
   border-top: 1px solid #e5e5e5;
-  background-color: #ffffff;
-  flex-shrink: 0;
+  background: #fff;
 }
 
 .input-wrapper {
   display: flex;
   gap: 12px;
   align-items: flex-end;
-  background-color: #f5f5f5;
+  background: #f5f5f5;
   border-radius: 14px;
   padding: 8px;
   border: 1px solid #e5e5e5;
@@ -460,7 +386,7 @@ body {
 
 .input-wrapper:focus-within {
   border-color: #1e88e5;
-  background-color: #ffffff;
+  background: #fff;
 }
 
 #user-input {
@@ -468,7 +394,7 @@ body {
   background: none;
   border: none;
   outline: none;
-  color: #333333;
+  color: #333;
   font-size: 14px;
   resize: none;
   padding: 10px;
@@ -477,7 +403,7 @@ body {
 }
 
 #user-input::placeholder {
-  color: #999999;
+  color: #999;
 }
 
 .input-actions {
@@ -486,32 +412,12 @@ body {
   padding-right: 4px;
 }
 
-.image-attachment-btn {
-  width: 36px;
-  height: 36px;
-  border-radius: 8px;
-  background: none;
-  border: none;
-  color: #999999;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: all 0.2s;
-}
-
-.image-attachment-btn:hover {
-  background-color: #e5e5e5;
-  color: #666666;
-}
-
+.image-attachment-btn,
 .send-btn {
   width: 36px;
   height: 36px;
   border-radius: 8px;
-  background-color: #1e88e5;
   border: none;
-  color: white;
   cursor: pointer;
   display: flex;
   align-items: center;
@@ -519,32 +425,31 @@ body {
   transition: all 0.2s;
 }
 
+.image-attachment-btn {
+  background: none;
+  color: #999;
+}
+
+.image-attachment-btn:hover {
+  background: #e5e5e5;
+  color: #666;
+}
+
+.send-btn {
+  background: #1e88e5;
+  color: white;
+}
+
 .send-btn:hover {
-  background-color: #1976d2;
+  background: #1976d2;
 }
 
 .send-btn:disabled {
-  background-color: #999999;
+  background: #999;
   cursor: not-allowed;
 }
 
-/* GeoGebra 代码块 */
-.ggb-code-block {
-  background-color: #f5f5f5;
-  padding: 12px;
-  border-radius: 8px;
-  margin: 8px 0;
-  overflow-x: auto;
-  max-width: 100%;
-}
-
-.ggb-code-block code {
-  font-family: 'Courier New', monospace;
-  font-size: 13px;
-  color: #333;
-}
-
-/* 设置弹窗 */
+/* ==================== 设置弹窗 ==================== */
 .modal-overlay {
   display: none;
   position: fixed;
@@ -552,7 +457,7 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.5);
   z-index: 1000;
   align-items: center;
   justify-content: center;
@@ -563,7 +468,7 @@ body {
 }
 
 .modal-content {
-  background-color: #ffffff;
+  background: #fff;
   border-radius: 12px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
   max-width: 500px;
@@ -583,8 +488,7 @@ body {
 .modal-header h3 {
   font-size: 20px;
   font-weight: 600;
-  color: #333333;
-  margin: 0;
+  color: #333;
 }
 
 .modal-close-btn {
@@ -594,7 +498,7 @@ body {
   background: none;
   border: none;
   font-size: 24px;
-  color: #999999;
+  color: #999;
   cursor: pointer;
   display: flex;
   align-items: center;
@@ -603,95 +507,70 @@ body {
 }
 
 .modal-close-btn:hover {
-  background-color: #f5f5f5;
-  color: #333333;
+  background: #f5f5f5;
+  color: #333;
 }
 
 .modal-body {
   padding: 24px;
 }
 
-.settings-group {
+.form-group {
   margin-bottom: 20px;
 }
 
-.settings-label {
+.form-group label {
   display: block;
   font-size: 14px;
   font-weight: 500;
-  color: #333333;
+  color: #333;
   margin-bottom: 8px;
 }
 
-.settings-input,
-.settings-select {
+.form-group input,
+.form-group select {
   width: 100%;
-  padding: 12px 16px;
+  padding: 10px 12px;
   border: 1px solid #e5e5e5;
   border-radius: 8px;
   font-size: 14px;
-  color: #333333;
-  background-color: #fafafa;
-  transition: all 0.2s;
+  color: #333;
+  transition: border-color 0.2s;
 }
 
-.settings-input:focus,
-.settings-select:focus {
+.form-group input:focus,
+.form-group select:focus {
   outline: none;
   border-color: #1e88e5;
-  background-color: #ffffff;
-}
-
-.settings-input::placeholder {
-  color: #999999;
-}
-
-.settings-select {
-  cursor: pointer;
 }
 
 .modal-footer {
-  padding: 16px 24px 24px;
+  padding: 16px 24px;
+  border-top: 1px solid #e5e5e5;
+  display: flex;
+  justify-content: flex-end;
 }
 
-.save-settings-btn {
-  width: 100%;
-  padding: 14px;
-  background-color: #1e88e5;
+.btn-primary {
+  padding: 10px 24px;
+  background: #1e88e5;
   color: white;
   border: none;
   border-radius: 8px;
-  font-size: 15px;
-  font-weight: 600;
+  font-size: 14px;
+  font-weight: 500;
   cursor: pointer;
-  transition: all 0.2s;
+  transition: background 0.2s;
 }
 
-.save-settings-btn:hover {
-  background-color: #1976d2;
+.btn-primary:hover {
+  background: #1976d2;
 }
 
-/* GeoGebra 画板包装器 */
-.ggb-container-wrapper {
-  margin-top: 12px;
-}
-
-.ggb-container {
-  border-radius: 12px;
-  overflow: hidden;
-  border: 1px solid #e5e5e5;
-  height: 400px;
-  min-height: 400px;
-  min-width: 100%;
-  background-color: #ffffff;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  position: relative;
-}
-
-/* GeoGebra 命令显示区域 */
+/* ==================== GeoGebra 命令显示 ==================== */
 .ggb-commands-display {
   margin-top: 8px;
-  background-color: #ffffff;
+  background: #fff;
   border-radius: 8px;
   border: 1px solid #e0e0e0;
   overflow: hidden;
@@ -699,9 +578,9 @@ body {
 }
 
 .ggb-commands-header {
-  padding: 5px 14px;
-  background-color: #f5f7fa;
-  color: #333333;
+  padding: 4px 14px;
+  background: #f5f7fa;
+  color: #333;
   font-weight: 600;
   font-size: 14px;
   display: flex;
@@ -717,7 +596,7 @@ body {
 
 .copy-btn {
   padding: 4px 8px;
-  background-color: transparent;
+  background: transparent;
   border: 1px solid #d0d0d0;
   border-radius: 4px;
   cursor: pointer;
@@ -726,11 +605,11 @@ body {
   align-items: center;
   gap: 4px;
   font-size: 12px;
-  color: #666666;
+  color: #666;
 }
 
 .copy-btn:hover {
-  background-color: #f0f0f0;
+  background: #f0f0f0;
   border-color: #1976d2;
   color: #1976d2;
 }
@@ -744,45 +623,56 @@ body {
   padding: 10px 14px;
   max-height: 200px;
   overflow-y: auto;
-  background-color: #ffffff;
+  background: #fff;
 }
 
 .ggb-command-item {
   display: block;
   padding: 0;
-  font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
   font-size: 13px;
   line-height: 1.5;
 }
 
 .ggb-command-item code {
   display: block;
-  background-color: transparent;
-  color: #333333;
+  background: transparent;
+  color: #333;
   word-break: break-all;
   white-space: pre-wrap;
   font-weight: 400;
   font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
 }
 
-/* GeoGebra 操作按钮（已废弃，保留以防旧代码引用） */
-.ggb-actions {
-  display: none; /* 隐藏旧的按钮区域 */
-}
-
-.ggb-btn {
-  padding: 6px 12px;
-  background-color: #f5f5f5;
-  color: #333333;
-  border: 1px solid #e5e5e5;
-  border-radius: 6px;
-  font-size: 12px;
-  cursor: pointer;
-  transition: all 0.2s;
-}
-
-.ggb-btn:hover {
-  background-color: #e5e5e5;
-  border-color: #1e88e5;
-  color: #1e88e5;
+/* ==================== 响应式 ==================== */
+@media (max-width: 768px) {
+  .sidebar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 100;
+    box-shadow: 2px 0 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .sidebar.collapsed {
+    transform: translateX(-100%);
+  }
+  
+  .chat-header,
+  .user-input-container {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+  
+  .chat-container {
+    padding: 16px;
+  }
+  
+  .message-content {
+    max-width: 95%;
+  }
+  
+  .ggb-container {
+    height: 300px;
+  }
 }

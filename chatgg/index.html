@@ -8,9 +8,8 @@
 </head>
 <body>
   <div class="container">
-    <!-- 左侧边栏 -->
+    <!-- 侧边栏 -->
     <div class="sidebar">
-      <!-- 新建对话按钮 -->
       <button id="new-chat-btn" class="new-chat-btn">
         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
           <line x1="12" y1="5" x2="12" y2="19"></line>
@@ -19,15 +18,11 @@
         <span class="btn-text">新对话</span>
       </button>
       
-      <!-- 历史记录列表 -->
       <div class="history-section">
         <h3 class="history-title">历史记录</h3>
-        <div id="history-list" class="history-list">
-          <!-- 动态生成历史项 -->
-        </div>
+        <div id="history-list" class="history-list"></div>
       </div>
       
-      <!-- 设置区域 -->
       <div class="settings-section">
         <button id="settings-btn" class="settings-btn">
           <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -39,9 +34,8 @@
       </div>
     </div>
     
-    <!-- 右侧主内容区 -->
+    <!-- 主内容区 -->
     <div class="main-content">
-      <!-- 聊天头部 -->
       <div class="chat-header">
         <div class="header-controls">
           <button id="toggle-sidebar-btn" class="header-icon-btn" title="切换侧边栏">
@@ -60,9 +54,7 @@
         <h2 id="chat-title" class="chat-title">新对话</h2>
       </div>
       
-      <!-- 聊天内容区 -->
       <div id="chat-container" class="chat-container">
-        <!-- 欢迎消息 -->
         <div class="welcome-message">
           <h3>欢迎使用AI数学绘图助手</h3>
           <p>输入数学作图需求,AI会自动帮你生成GeoGebra命令并绘制图形</p>
@@ -74,7 +66,6 @@
         </div>
       </div>
       
-      <!-- 图片预览 -->
       <div class="image-preview-wrapper" id="image-preview-wrapper">
         <div class="image-preview-container" id="image-preview-container">
           <img id="image-preview" src="" alt="Image preview">
@@ -82,7 +73,6 @@
         </div>
       </div>
       
-      <!-- 输入区域 -->
       <div class="user-input-container">
         <div class="input-wrapper">
           <textarea id="user-input" placeholder="输入数学作图需求..." rows="2"></textarea>
@@ -106,7 +96,6 @@
     </div>
   </div>
   
-  <!-- 隐藏的文件输入 -->
   <input type="file" id="image-input" accept="image/*" style="display: none;">
   
   <!-- 设置弹窗 -->
@@ -117,41 +106,36 @@
         <button class="modal-close-btn" id="close-settings-btn">×</button>
       </div>
       <div class="modal-body">
-        <div class="settings-group">
-          <label class="settings-label">模型提供方:</label>
-          <select id="model-provider" class="settings-select">
+        <div class="form-group">
+          <label>模型提供方:</label>
+          <select id="model-provider">
             <option value="zhipu">智谱</option>
           </select>
         </div>
-        <div class="settings-group">
-          <label class="settings-label">接入端点:</label>
-          <input type="text" id="api-endpoint" class="settings-input" placeholder="https://open.bigmodel.cn/api/paas/v4">
+        <div class="form-group">
+          <label>接入端点:</label>
+          <input type="text" id="api-endpoint" placeholder="https://open.bigmodel.cn/api/paas/v4">
         </div>
-        <div class="settings-group">
-          <label class="settings-label">API密钥:</label>
-          <input type="password" id="api-key" class="settings-input" placeholder="请输入API密钥">
+        <div class="form-group">
+          <label>API密钥:</label>
+          <input type="password" id="api-key" placeholder="请输入API密钥">
         </div>
-        <div class="settings-group">
-          <label class="settings-label">模型名称:</label>
-          <input type="text" id="model-name" class="settings-input" placeholder="glm-5v-turbo">
+        <div class="form-group">
+          <label>模型名称:</label>
+          <input type="text" id="model-name" placeholder="glm-5v-turbo">
         </div>
       </div>
       <div class="modal-footer">
-        <button id="save-settings-btn" class="save-settings-btn">保存设置</button>
+        <button id="save-settings-btn" class="btn-primary">保存设置</button>
       </div>
     </div>
   </div>
   
-  <!-- GeoGebra 预加载容器（隐藏，用于触发库加载） -->
+  <!-- GeoGebra 预加载容器 -->
   <div id="ggb-preload-container" style="position: absolute; left: -9999px; top: -9999px; width: 1px; height: 1px; overflow: hidden;"></div>
   
-  <!-- GeoGebra库 -->
   <script src="https://cdn.geogebra.org/apps/deployggb.js"></script>
-  
-  <!-- AI客户端 -->
   <script src="ai.js"></script>
-  
-  <!-- 主JavaScript文件 -->
   <script src="chatgg.js"></script>
 </body>
 </html>
