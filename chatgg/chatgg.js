@@ -385,60 +385,37 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   function extractGGBCommands(content) {
-    console.log('[extractGGBCommands] 开始提取，内容长度:', content.length);
-    
     const jsonMatch = content.match(/```ggb-json\s*([\s\S]*?)```/);
-    
     if (jsonMatch) {
-      console.log('[extractGGBCommands] 找到 ggb-json 代码块');
       try {
         const jsonData = JSON.parse(jsonMatch[1]);
-        console.log('[extractGGBCommands] 解析成功，命令数量:', jsonData.commands ? jsonData.commands.length : 0);
         return {
           success: true,
           commands: jsonData.commands || [],
-          viewRange: jsonData.viewRange || null,
-          explanation: content.replace(/```ggb-json[\s\S]*?```/g, '').trim()
+          viewRange: jsonData.viewRange || null
         };
       } catch (e) {
         console.error('JSON 解析失败:', e);
-        return { 
-          success: false, 
-          error: 'JSON 格式错误',
-          rawContent: content 
-        };
       }
     }
     
-    console.log('[extractGGBCommands] 未找到 ggb-json，尝试旧格式');
-    return parseOldFormat(content);
-  }
-
-  function parseOldFormat(content) {
     const codeMatch = content.match(/```(?:\s*ggb\s*|\s*geogebra\s*|\s*plaintext\s*)([\s\S]*?)```/);
-    
     if (codeMatch) {
-      console.log('[parseOldFormat] 找到代码块');
       const commands = codeMatch[1]
         .split('\n')
         .map(line => line.trim())
         .filter(line => line.length > 0 && !line.startsWith('#'));
-      
-      console.log('[parseOldFormat] 提取到命令数量:', commands.length);
-      
       return {
         success: true,
         commands: commands,
-        viewRange: null,
-        explanation: content.replace(/```[\s\S]*?```/g, '').trim()
+        viewRange: null
       };
     }
     
-    console.log('[parseOldFormat] 未找到任何代码块');
     return {
       success: false,
-      error: '未找到 GeoGebra 命令',
-      rawContent: content
+      commands: [],
+      viewRange: null
     };
   }
 
@@ -579,54 +556,35 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
+  function parseMarkdown(text) {
+    return text
+      .replace(/```([\s\S]*?)```/g, '<pre><code>$1</code></pre>')
+      .replace(/^#### (.+)$/gm, '<h4>$1</h4>')
+      .replace(/^### (.+)$/gm, '<h3>$1</h3>')
+      .replace(/^## (.+)$/gm, '<h2>$1</h2>')
+      .replace(/^# (.+)$/gm, '<h1>$1</h1>')
+      .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
+      .replace(/\n/g, '<br>');
+  }
+
   function formatMessage(content) {
-    console.log('[formatMessage] 开始处理，内容长度:', content.length);
-    
     const extracted = extractGGBCommands(content);
-    console.log('[formatMessage] 提取结果:', extracted.success ? '成功' : '失败', '命令数量:', extracted.commands ? extracted.commands.length : 0);
     
     if (extracted.success && extracted.commands.length > 0) {
-      let displayContent = content;
-      
-      displayContent = displayContent.replace(/```ggb-json\s*[\s\S]*?```/g, '');
-      displayContent = displayContent.replace(/```(?:\s*ggb\s*|\s*geogebra\s*|\s*plaintext\s*)[\s\S]*?```/g, '');
-      
-      console.log('[formatMessage] 移除代码块后内容长度:', displayContent.length);
-      
-      displayContent = displayContent.replace(/^#### (.+)$/gm, '<h4>$1</h4>');
-      displayContent = displayContent.replace(/^### (.+)$/gm, '<h3>$1</h3>');
-      displayContent = displayContent.replace(/^## (.+)$/gm, '<h2>$1</h2>');
-      displayContent = displayContent.replace(/^# (.+)$/gm, '<h1>$1</h1>');
-      
-      displayContent = displayContent.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
-      
-      displayContent = displayContent.replace(/\n/g, '<br>');
-      
-      console.log('[formatMessage] 最终HTML长度:', displayContent.length);
+      const displayContent = content
+        .replace(/```ggb-json\s*[\s\S]*?```/g, '')
+        .replace(/```(?:\s*ggb\s*|\s*geogebra\s*|\s*plaintext\s*)[\s\S]*?```/g, '');
       
       return {
-        text: displayContent.trim(),
+        text: parseMarkdown(displayContent).trim(),
         hasGGB: true,
         commands: extracted.commands,
         viewRange: extracted.viewRange
       };
     }
     
-    let formatted = content;
-    
-    formatted = formatted.replace(/```([\s\S]*?)```/g, '<pre><code>$1</code></pre>');
-    
-    formatted = formatted.replace(/^#### (.+)$/gm, '<h4>$1</h4>');
-    formatted = formatted.replace(/^### (.+)$/gm, '<h3>$1</h3>');
-    formatted = formatted.replace(/^## (.+)$/gm, '<h2>$1</h2>');
-    formatted = formatted.replace(/^# (.+)$/gm, '<h1>$1</h1>');
-    
-    formatted = formatted.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
-    
-    formatted = formatted.replace(/\n/g, '<br>');
-    
     return {
-      text: formatted,
+      text: parseMarkdown(content),
       hasGGB: false
     };
   }
