@@ -126,67 +126,107 @@ document.addEventListener('DOMContentLoaded', () => {
   
   window.ggbLibLoaded = false;
   window.ggbLibLoading = false;
+  window.ggbLoadPromise = null;
   
-  function preloadGeoGebraLib() {
-    if (window.ggbLibLoaded || window.ggbLibLoading) {
-      return;
+  function ensureGeoGebraLoaded() {
+    if (window.ggbLibLoaded) {
+      return Promise.resolve(true);
     }
     
-    window.ggbLibLoading = true;
-    
-    const preloadContainer = document.getElementById('ggb-preload-container');
-    if (!preloadContainer) {
-      console.error('[GeoGebra] 预加载容器不存在');
-      window.ggbLibLoading = false;
-      return;
+    if (window.ggbLoadPromise) {
+      return window.ggbLoadPromise;
     }
     
-    try {
-      const preloadParams = {
-        "id": "ggb-preload-applet",
-        "width": 1,
-        "height": 1,
-        "showToolBar": false,
-        "showAlgebraInput": false,
-        "showMenuBar": false,
-        "showToolBarHelp": false,
-        "showResetIcon": false,
-        "enableLabelDrags": false,
-        "enableShiftDragZoom": false,
-        "enableRightClick": false,
-        "showZoomButtons": false,
-        "showFullscreenButton": false,
-        "scale": 0.01,
-        "appletOnLoad": function(api) {
-        }
-      };
-      
-      const preloadApplet = new GGBApplet(preloadParams, '5.0', 'ggb-preload-applet');
-      preloadApplet.inject('ggb-preload-container', 'preferHTML5');
+    window.ggbLoadPromise = new Promise((resolve, reject) => {
+      const startTime = Date.now();
+      const timeout = 20000;
       
       const checkInterval = setInterval(() => {
-        if (typeof GGBApplet !== 'undefined') {
+        const ggbLoaded = typeof GGBApplet !== 'undefined' && 
+                          typeof GGBApplet === 'function';
+        
+        if (ggbLoaded) {
           clearInterval(checkInterval);
           window.ggbLibLoaded = true;
-          window.ggbLibLoading = false;
+          window.ggbLoadPromise = null;
+          resolve(true);
+        } else if (Date.now() - startTime > timeout) {
+          clearInterval(checkInterval);
+          window.ggbLoadPromise = null;
+          console.error('[GeoGebra] 库加载超时');
+          reject(new Error('GeoGebra 库加载超时'));
         }
       }, 200);
-      
-      setTimeout(() => {
-        if (!window.ggbLibLoaded) {
-          clearInterval(checkInterval);
-          window.ggbLibLoading = false;
-          console.error('[GeoGebra] 库预加载超时');
-        }
-      }, 15000);
-      
-    } catch (e) {
-      console.error('[GeoGebra] 预加载失败:', e);
-      window.ggbLibLoading = false;
-    }
+    });
+    
+    return window.ggbLoadPromise;
   }
   
-  preloadGeoGebraLib();
+  ensureGeoGebraLoaded().catch(() => {});
+
+  let ggbAppletQueue = [];
+  let ggbAppletProcessing = false;
+  
+  function processGGBAppletQueue() {
+    if (ggbAppletProcessing || ggbAppletQueue.length === 0) return;
+    
+    ggbAppletProcessing = true;
+    const { containerId, commands, viewRange, resolve } = ggbAppletQueue.shift();
+    
+    createGGBAppletInternal(containerId, commands, viewRange).then(result => {
+      resolve(result);
+      ggbAppletProcessing = false;
+      setTimeout(() => processGGBAppletQueue(), 300);
+    }).catch(err => {
+      console.error('[GeoGebra Queue] 创建失败:', err);
+      resolve(null);
+      ggbAppletProcessing = false;
+      setTimeout(() => processGGBAppletQueue(), 300);
+    });
+  }
+  
+  function queueGGBApplet(containerId, commands, viewRange) {
+    return new Promise(resolve => {
+      ggbAppletQueue.push({ containerId, commands, viewRange, resolve });
+      processGGBAppletQueue();
+    });
+  }
+
+  function waitForAppletReady(api, timeout = 15000) {
+    return new Promise((resolve, reject) => {
+      const startTime = Date.now();
+      let consecutiveSuccesses = 0;
+      const requiredSuccesses = 3;
+      
+      const checkReady = () => {
+        try {
+          if (api && typeof api.evalCommand === 'function') {
+            api.evalCommand('testPoint=(0,0)');
+            api.evalCommand('Delete[testPoint]');
+            consecutiveSuccesses++;
+            
+            if (consecutiveSuccesses >= requiredSuccesses) {
+              resolve(true);
+              return;
+            }
+          } else {
+            consecutiveSuccesses = 0;
+          }
+        } catch (e) {
+          consecutiveSuccesses = 0;
+        }
+        
+        if (Date.now() - startTime > timeout) {
+          reject(new Error('Applet 就绪超时'));
+          return;
+        }
+        
+        setTimeout(checkReady, 200);
+      };
+      
+      checkReady();
+    });
+  }
 
   const sidebar = document.querySelector('.sidebar');
   document.getElementById('toggle-sidebar-btn')?.addEventListener('click', () => {
@@ -571,44 +611,9 @@ document.addEventListener('DOMContentLoaded', () => {
     };
   }
 
-  function waitForGeoGebraLib(timeout = 15000) {
-    return new Promise((resolve, reject) => {
-      if (window.ggbLibLoaded) {
-        resolve(true);
-        return;
-      }
-
-      const canUseGGB = typeof GGBApplet !== 'undefined' || 
-                        (window.GGBApplet && typeof window.GGBApplet === 'function');
-      
-      if (canUseGGB) {
-        window.ggbLibLoaded = true;
-        resolve(true);
-        return;
-      }
-      
-      const startTime = Date.now();
-      const checkInterval = setInterval(() => {
-        const ggbLoaded = typeof GGBApplet !== 'undefined' || 
-                          (window.GGBApplet && typeof window.GGBApplet === 'function');
-        
-        if (ggbLoaded) {
-          clearInterval(checkInterval);
-          window.ggbLibLoaded = true;
-          resolve(true);
-        } else if (Date.now() - startTime > timeout) {
-          clearInterval(checkInterval);
-          console.error('[GeoGebra] 库加载超时，请检查网络连接');
-          console.error('[GeoGebra] CDN 地址: https://cdn.geogebra.org/apps/deployggb.js');
-          reject(new Error('GeoGebra 库加载超时，请检查网络连接'));
-        }
-      }, 200);
-    });
-  }
-
-  async function createGGBApplet(containerId, commands, viewRange) {
+  async function createGGBAppletInternal(containerId, commands, viewRange) {
     try {
-      await waitForGeoGebraLib();
+      await ensureGeoGebraLoaded();
     } catch (e) {
       console.error('[GeoGebra] 库加载失败:', e);
       return null;
@@ -620,7 +625,6 @@ document.addEventListener('DOMContentLoaded', () => {
       return null;
     }
 
-    // 读取容器实际尺寸（CSS 已设定 width:100% + aspect-ratio）
     const initWidth = Math.max(container.clientWidth || 600, 320);
     const initHeight = Math.max(container.clientHeight || 400, 240);
 
@@ -631,41 +635,13 @@ document.addEventListener('DOMContentLoaded', () => {
       "showToolBar": false,
       "showAlgebraInput": false,
       "showMenuBar": false,
-      "appName": "graphing",
-      "language": "zh-CN",
+      "appName": "geometry",
+      "language": "en",
       "enableLabelDrags": false,
       "enableShiftDragZoom": true,
       "showZoomButtons": true,
       "capturingThreshold": null,
-      "useBrowserForJS": false,
-      "appletOnLoad": function(api) {
-        if (commands && commands.length > 0) {
-          commands.forEach((cmd, index) => {
-            try {
-              api.evalCommand(cmd);
-            } catch (e) {
-              console.error('[GeoGebra] 命令 ' + (index + 1) + ' 执行失败:', cmd, e);
-            }
-          });
-
-          setTimeout(function() {
-            try {
-              if (viewRange) {
-                api.setCoordSystem(
-                  viewRange.xMin || -10, viewRange.xMax || 10,
-                  viewRange.yMin || -10, viewRange.yMax || 10
-                );
-              } else if (typeof api.zoomTo === 'function') {
-                api.zoomTo(200);
-              }
-              if (typeof api.refreshViews === 'function') api.refreshViews();
-            } catch (e) {
-              console.error('[GeoGebra] 调整视图失败:', e);
-            }
-          }, 500);
-        }
-
-      }
+      "useBrowserForJS": false
     };
 
     if (viewRange) {
@@ -677,10 +653,67 @@ document.addEventListener('DOMContentLoaded', () => {
 
     try {
       const applet = new GGBApplet(params, '5.0', containerId);
+      
+      let ggbApi = null;
+      
+      params.appletOnLoad = function(api) {
+        ggbApi = api;
+      };
+      
       applet.inject(containerId, 'preferHTML5');
 
       if (commands && commands.length > 0) {
         createCommandsDisplay(container, commands);
+        
+        await new Promise((resolve) => {
+          const startTime = Date.now();
+          const checkInterval = setInterval(() => {
+            if (!ggbApi) return;
+            
+            try {
+              ggbApi.evalCommand('testReady=(0,0)');
+              ggbApi.evalCommand('Delete[testReady]');
+              clearInterval(checkInterval);
+              
+              setTimeout(async () => {
+                for (let i = 0; i < commands.length; i++) {
+                  const cmd = commands[i];
+                  try {
+                    ggbApi.evalCommand(cmd);
+                    await new Promise(r => setTimeout(r, 150));
+                  } catch (e) {
+                    console.error('[GeoGebra] 命令 ' + (i + 1) + ' 执行失败:', cmd, e);
+                  }
+                }
+                
+                setTimeout(function() {
+                  try {
+                    if (viewRange && ggbApi.setCoordSystem) {
+                      ggbApi.setCoordSystem(
+                        viewRange.xMin || -10, viewRange.xMax || 10,
+                        viewRange.yMin || -10, viewRange.yMax || 10
+                      );
+                    } else if (typeof ggbApi.zoomTo === 'function') {
+                      ggbApi.zoomTo(200);
+                    }
+                    if (typeof ggbApi.refreshViews === 'function') ggbApi.refreshViews();
+                  } catch (e) {
+                    console.error('[GeoGebra] 调整视图失败:', e);
+                  }
+                }, 300);
+                
+                resolve();
+              }, 200);
+            } catch (e) {
+            }
+            
+            if (Date.now() - startTime > 20000) {
+              clearInterval(checkInterval);
+              console.error('[GeoGebra] 等待 applet 就绪超时');
+              resolve();
+            }
+          }, 250);
+        });
       }
 
       return applet;
@@ -688,6 +721,10 @@ document.addEventListener('DOMContentLoaded', () => {
       console.error('[GeoGebra] 创建画板失败:', e);
       return null;
     }
+  }
+
+  function createGGBApplet(containerId, commands, viewRange) {
+    return queueGGBApplet(containerId, commands, viewRange);
   }
 
   function parseMarkdown(text) {
