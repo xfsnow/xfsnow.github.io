@@ -197,6 +197,11 @@ document.addEventListener('DOMContentLoaded', () => {
   const chatContainer = document.getElementById('chat-container');
 
   function resetChat() {
+    saveCurrentChat();
+    
+    currentChatId = null;
+    messageHistory = [];
+    
     if (chatContainer) {
       chatContainer.innerHTML = `
         <div class="welcome-message">
@@ -211,7 +216,7 @@ document.addEventListener('DOMContentLoaded', () => {
       `;
     }
     if (chatTitle) chatTitle.textContent = '新对话';
-    messageHistory = [];
+    renderHistoryList();
   }
 
   [document.getElementById('new-chat-header-btn'), document.getElementById('new-chat-btn')].forEach(btn => {
@@ -231,6 +236,9 @@ document.addEventListener('DOMContentLoaded', () => {
   };
   
   const SETTINGS_KEY = 'chatgg_settings';
+  const HISTORY_KEY = 'chatgg_history';
+  const MAX_HISTORY = 50;
+  let currentChatId = null;
   
   const defaultSettings = {
     provider: 'zhipu',
@@ -298,6 +306,148 @@ document.addEventListener('DOMContentLoaded', () => {
     if (e.target === settingsModal) closeSettingsModal();
   });
 
+  // ==================== 历史记录管理 ====================
+  
+  function loadHistory() {
+    try {
+      const saved = localStorage.getItem(HISTORY_KEY);
+      return saved ? JSON.parse(saved) : [];
+    } catch (e) {
+      console.error('加载历史记录失败:', e);
+      return [];
+    }
+  }
+  
+  function saveHistory(history) {
+    try {
+      localStorage.setItem(HISTORY_KEY, JSON.stringify(history));
+    } catch (e) {
+      console.error('保存历史记录失败:', e);
+    }
+  }
+  
+  function generateChatTitle(messages) {
+    const firstUserMsg = messages.find(m => m.role === 'user');
+    if (!firstUserMsg) return '新对话';
+    const text = firstUserMsg.content.trim();
+    return text.length > 20 ? text.substring(0, 20) + '...' : text;
+  }
+  
+  function saveCurrentChat() {
+    if (!currentChatId || messageHistory.length === 0) return;
+    
+    const history = loadHistory();
+    const chatIndex = history.findIndex(c => c.id === currentChatId);
+    
+    const chatData = {
+      id: currentChatId,
+      title: generateChatTitle(messageHistory),
+      messages: messageHistory,
+      updatedAt: Date.now()
+    };
+    
+    if (chatIndex >= 0) {
+      history[chatIndex] = chatData;
+    } else {
+      history.unshift(chatData);
+    }
+    
+    if (history.length > MAX_HISTORY) {
+      history.length = MAX_HISTORY;
+    }
+    
+    saveHistory(history);
+    renderHistoryList();
+  }
+  
+  function loadChat(chatId) {
+    const history = loadHistory();
+    const chat = history.find(c => c.id === chatId);
+    if (!chat) return;
+    
+    currentChatId = chat.id;
+    messageHistory = chat.messages;
+    
+    if (chatTitle) chatTitle.textContent = chat.title;
+    
+    chatContainer.innerHTML = '';
+    
+    messageHistory.forEach(msg => {
+      addMessageToUI(msg.content, msg.role, false);
+    });
+    
+    chatContainer.scrollTop = chatContainer.scrollHeight;
+    renderHistoryList();
+  }
+  
+  function deleteChat(chatId, event) {
+    if (event) {
+      event.stopPropagation();
+      event.preventDefault();
+    }
+    
+    if (!confirm('确定要删除这个对话吗？')) return;
+    
+    let history = loadHistory();
+    history = history.filter(c => c.id !== chatId);
+    saveHistory(history);
+    
+    if (currentChatId === chatId) {
+      currentChatId = null;
+      messageHistory = [];
+      resetChat();
+    }
+    
+    renderHistoryList();
+  }
+  
+  function renderHistoryList() {
+    const historyList = document.getElementById('history-list');
+    if (!historyList) return;
+    
+    const history = loadHistory();
+    
+    if (history.length === 0) {
+      historyList.innerHTML = '<div style="padding: 12px; color: #999; font-size: 13px; text-align: center;">暂无历史记录</div>';
+      return;
+    }
+    
+    historyList.innerHTML = history.map(chat => `
+      <div class="history-item ${chat.id === currentChatId ? 'active' : ''}" data-chat-id="${chat.id}">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0;">
+          <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+        </svg>
+        <span class="history-item-title">${escapeHtml(chat.title)}</span>
+        <button class="history-delete-btn" data-chat-id="${chat.id}" title="删除">
+          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+    `).join('');
+    
+    historyList.querySelectorAll('.history-item').forEach(item => {
+      item.addEventListener('click', () => {
+        const chatId = item.dataset.chatId;
+        loadChat(chatId);
+      });
+    });
+    
+    historyList.querySelectorAll('.history-delete-btn').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        const chatId = btn.dataset.chatId;
+        deleteChat(chatId, e);
+      });
+    });
+  }
+  
+  function escapeHtml(text) {
+    const div = document.createElement('div');
+    div.textContent = text;
+    return div.innerHTML;
+  }
+
   // ==================== 对话处理逻辑 ====================
   
   const systemPrompt = `你是一个GeoGebra几何绘图专家。请根据用户的几何作图需求，生成正确的GeoGebra命令。
@@ -352,7 +502,7 @@ document.addEventListener('DOMContentLoaded', () => {
     return defaultSettings;
   }
 
-  function addMessageToUI(content, role) {
+  function addMessageToUI(content, role, skipScroll) {
     const messageDiv = document.createElement('div');
     messageDiv.className = `message ${role}`;
     
@@ -363,7 +513,7 @@ document.addEventListener('DOMContentLoaded', () => {
     contentDiv.innerHTML = formatted.text;
     
     if (formatted.hasGGB && role === 'assistant') {
-      const ggbContainerId = 'ggb-' + Date.now();
+      const ggbContainerId = 'ggb-' + Date.now() + Math.random();
       const ggbWrapper = document.createElement('div');
       ggbWrapper.className = 'ggb-container-wrapper';
       ggbWrapper.innerHTML = `
@@ -379,7 +529,9 @@ document.addEventListener('DOMContentLoaded', () => {
     messageDiv.appendChild(contentDiv);
     chatContainer.appendChild(messageDiv);
     
-    chatContainer.scrollTop = chatContainer.scrollHeight;
+    if (!skipScroll) {
+      chatContainer.scrollTop = chatContainer.scrollHeight;
+    }
     
     return contentDiv;
   }
@@ -584,6 +736,10 @@ document.addEventListener('DOMContentLoaded', () => {
       return;
     }
 
+    if (!currentChatId) {
+      currentChatId = 'chat-' + Date.now();
+    }
+
     if (sendBtn) sendBtn.disabled = true;
     if (userInput && typeof text !== 'string') userInput.value = '';
     
@@ -686,6 +842,7 @@ document.addEventListener('DOMContentLoaded', () => {
         
         chatContainer.scrollTop = chatContainer.scrollHeight;
         sendBtn.disabled = false;
+        saveCurrentChat();
         console.log('[onComplete] ========== 处理完成 ==========');
       },
       (error) => {
@@ -712,5 +869,7 @@ document.addEventListener('DOMContentLoaded', () => {
       sendMessage(tag.textContent);
     });
   });
+
+  renderHistoryList();
 });
 
