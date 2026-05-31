@@ -589,10 +589,10 @@ document.addEventListener('DOMContentLoaded', () => {
     };
   }
 
-  async function sendMessage() {
+  async function sendMessage(text) {
     const userInput = document.getElementById('user-input');
     const sendBtn = document.getElementById('send-btn');
-    const message = userInput.value.trim();
+    const message = typeof text === 'string' ? text.trim() : userInput?.value?.trim();
     
     if (!message) return;
     
@@ -602,8 +602,8 @@ document.addEventListener('DOMContentLoaded', () => {
       return;
     }
 
-    sendBtn.disabled = true;
-    userInput.value = '';
+    if (sendBtn) sendBtn.disabled = true;
+    if (userInput && typeof text !== 'string') userInput.value = '';
     
     messageHistory.push({ role: 'user', content: message });
     addMessageToUI(message, 'user');
@@ -727,75 +727,8 @@ document.addEventListener('DOMContentLoaded', () => {
   const exampleTags = document.querySelectorAll('.example-tag');
   exampleTags.forEach(tag => {
     tag.addEventListener('click', () => {
-      const message = tag.textContent;
-      
-      const settings = getSettings();
-      if (!settings.apiKey || !settings.endpoint || !settings.modelName) {
-        alert('请先在设置中配置 API');
-        return;
-      }
-      
-      const sendBtn = document.getElementById('send-btn');
-      const userInput = document.getElementById('user-input');
-      
-      sendBtn.disabled = true;
-      
-      messageHistory.push({ role: 'user', content: message });
-      addMessageToUI(message, 'user');
-      
-      const aiClient = new AiClient(settings.endpoint, settings.apiKey, settings.modelName);
-      
-      const messages = [
-        { role: 'system', content: systemPrompt },
-        ...messageHistory
-      ];
-      
-      const aiContentDiv = addMessageToUI('', 'assistant');
-      let fullResponse = '';
-      
-      aiClient.sendMessage(
-        messages,
-        (content) => {
-          fullResponse = content;
-          const formatted = formatMessage(content);
-          aiContentDiv.innerHTML = formatted.text;
-          
-          chatContainer.scrollTop = chatContainer.scrollHeight;
-        },
-        (content) => {
-          fullResponse = content || fullResponse;
-          messageHistory.push({ role: 'assistant', content: fullResponse });
-          
-          const formatted = formatMessage(fullResponse);
-          aiContentDiv.innerHTML = formatted.text;
-          
-          if (formatted.hasGGB) {
-            const ggbContainerId = 'ggb-' + Date.now();
-            const ggbWrapper = document.createElement('div');
-            ggbWrapper.className = 'ggb-container-wrapper';
-            ggbWrapper.innerHTML = `
-              <div id="${ggbContainerId}" class="ggb-container"></div>
-            `;
-            aiContentDiv.appendChild(ggbWrapper);
-            
-            createGGBApplet(ggbContainerId, formatted.commands, formatted.viewRange);
-          }
-          
-          chatContainer.scrollTop = chatContainer.scrollHeight;
-          sendBtn.disabled = false;
-        },
-        (error) => {
-          aiContentDiv.innerHTML = `<span class="ggb-error-text">错误: ${error}</span>`;
-          sendBtn.disabled = false;
-        }
-      );
+      sendMessage(tag.textContent);
     });
   });
 });
-
-// ==================== 全局辅助函数 ====================
-
-window.rerenderGGB = function(containerId) {
-  // TODO: 实现重绘逻辑
-};
 
