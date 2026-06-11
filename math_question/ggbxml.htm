@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GeoGebra XML 绘图测试</title>
+    <link rel="stylesheet" href="ggbxml.css">
+    <script src="https://cdn.geogebra.org/apps/deployggb.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>GeoGebra XML 绘图测试</h1>
+            <p>测试题目：已知△ABC是等边三角形，直线AP位于△ABC外侧，点C关于直线AP的对称点为D，连接AD、BD，BD交AP于点E。</p>
+        </header>
+
+        <div class="main-content">
+            <div class="ggb-container">
+                <div id="ggb-element"></div>
+                <div class="ggb-controls">
+                    <button id="loadExample">加载示例图形</button>
+                    <button id="clearCanvas">清空画布</button>
+                </div>
+            </div>
+
+            <div class="input-panel">
+                <h3>XML 命令输入</h3>
+                <textarea id="xmlInput" placeholder="输入 GeoGebra XML 命令..."></textarea>
+                <button id="executeBtn">执行命令</button>
+                <div class="output-panel">
+                    <h4>输出日志</h4>
+                    <div id="outputLog"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="expected-output">
+            <h3>预期输出</h3>
+            <ul>
+                <li>1. 等边三角形ABC</li>
+                <li>2. 外侧直线AP</li>
+                <li>3. 对称点D</li>
+                <li>4. 连接线AD、BD、CE</li>
+            </ul>
+        </div>
+    </div>
+
+    <script src="ggbxml.js"></script>
+</body>
+</html>

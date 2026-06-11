@@ -831,6 +831,43 @@ XML 格式铁律：
     return `<p>${html}</p>`;
   }
 
+  function createLoadingAnimation() {
+    const loadingDiv = document.createElement('div');
+    loadingDiv.className = 'message assistant loading';
+    
+    const contentDiv = document.createElement('div');
+    contentDiv.className = 'message-content';
+    
+    const messages = [
+      'AI正在思考...',
+      '正在和数学图形斗智斗勇，马上胜利！',
+      '画师 AI 在线作图，草稿变成品 ing。',
+      '正在把公式变成看得见的样子',
+      '数学元素正在排队入场，请耐心围观。',
+      '偷偷打磨图形细节，力求完美！'
+    ];
+    
+    const randomMessage = messages[Math.floor(Math.random() * messages.length)];
+    
+    const thinkingDiv = document.createElement('div');
+    thinkingDiv.className = 'thinking-text';
+    thinkingDiv.innerHTML = `<span class="thinking-message">${randomMessage}</span><span class="thinking-cursor">|</span>`;
+    
+    contentDiv.appendChild(thinkingDiv);
+    loadingDiv.appendChild(contentDiv);
+    
+    chatContainer.appendChild(loadingDiv);
+    chatContainer.scrollTop = chatContainer.scrollHeight;
+    
+    return loadingDiv;
+  }
+
+  function removeLoadingAnimation(loadingDiv) {
+    if (loadingDiv && loadingDiv.parentNode) {
+      loadingDiv.parentNode.removeChild(loadingDiv);
+    }
+  }
+
   function formatMessageFromText(content) {
     const extracted = extractGGBCommandsFromText(content);
     
@@ -983,6 +1020,8 @@ XML 格式铁律：
       }))
     ];
     
+    const loadingDiv = createLoadingAnimation();
+    
     try {
       const response = await fetch(`${settings.endpoint}/chat/completions`, {
         method: 'POST',
@@ -1004,6 +1043,8 @@ XML 格式铁律：
       
       const result = await response.json();
       const aiContent = result.choices?.[0]?.message?.content || '';
+      
+      removeLoadingAnimation(loadingDiv);
       
       if (aiContent) {
         messageHistory.push({ role: 'assistant', content: aiContent });
@@ -1044,6 +1085,7 @@ XML 格式铁律：
       
       saveCurrentChat();
     } catch (error) {
+      removeLoadingAnimation(loadingDiv);
       console.error('发送消息失败:', error);
       const errorMsg = {
         role: 'assistant',

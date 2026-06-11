@@ -843,3 +843,45 @@ body {
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
 }
+
+/* ==================== 加载动画样式 ==================== */
+.message.loading {
+  justify-content: flex-start;
+}
+
+.message.loading .message-content {
+  background: #f5f7fa;
+  border-radius: 18px;
+  border-bottom-left-radius: 4px;
+  padding: 12px 20px;
+  min-width: 200px;
+}
+
+.thinking-text {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 15px;
+  color: #666;
+  font-weight: 500;
+}
+
+.thinking-message {
+  transition: opacity 0.3s ease;
+}
+
+.thinking-cursor {
+  color: #1e88e5;
+  font-weight: bold;
+  font-size: 18px;
+  animation: cursorBlink 1s infinite;
+}
+
+@keyframes cursorBlink {
+  0%, 50% {
+    opacity: 1;
+  }
+  51%, 100% {
+    opacity: 0;
+  }
+}
