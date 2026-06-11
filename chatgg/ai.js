@@ -37,10 +37,7 @@ class AiClient {
         body: JSON.stringify({
           model: this.modelName,
           messages: transformedMessages,
-          stream: true,
-          thinking: {
-            type: "enabled"
-          }
+          stream: true
         })
       });
 
@@ -113,10 +110,7 @@ class AiClient {
         body: JSON.stringify({
           model: this.modelName,
           messages: transformedMessages,
-          stream: false,
-          thinking: {
-            type: "enabled"
-          }
+          stream: false
         })
       });
 
