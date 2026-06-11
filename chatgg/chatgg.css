@@ -117,7 +117,7 @@ body {
 }
 
 .history-delete-btn {
-  display: none;
+  opacity: 0;
   width: 24px;
   height: 24px;
   border-radius: 4px;
@@ -128,11 +128,11 @@ body {
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
-  transition: all 0.2s;
+  transition: opacity 0.2s, background 0.2s, color 0.2s;
 }
 
 .history-item:hover .history-delete-btn {
-  display: flex;
+  opacity: 1;
 }
 
 .history-delete-btn:hover {
@@ -232,7 +232,7 @@ body {
 }
 
 .welcome-message {
-  padding: 24px 20px;
+  padding: 24px 0;
   width: 100%;
 }
 
@@ -345,7 +345,7 @@ body {
 /* ==================== GeoGebra 画板 ==================== */
 .ggb-container-wrapper {
   width: 100%;
-  min-width: 600px;
+  /* min-width: 600px; */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -596,6 +596,24 @@ body {
   border-top: 1px solid #e5e5e5;
   display: flex;
   justify-content: flex-end;
+  gap: 12px;
+}
+
+.btn-secondary {
+  padding: 10px 24px;
+  background: #fff;
+  color: #666;
+  border: 1px solid #e5e5e5;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn-secondary:hover {
+  background: #f5f5f5;
+  color: #333;
 }
 
 .btn-primary {
@@ -707,12 +725,12 @@ body {
   
   .chat-header,
   .user-input-container {
-    padding-left: 16px;
-    padding-right: 16px;
+    padding-left: 24px;
+    padding-right: 24px;
   }
   
   .chat-container {
-    padding: 16px;
+    padding: 20px 24px;
   }
   
   .message-content {
@@ -736,4 +754,92 @@ body {
   background: #fff3f3;
   border-radius: 4px;
   font-size: 12px;
+}
+
+/* 流式渲染：打字光标 */
+.ggb-cursor-blink {
+  animation: ggb-blink 0.8s infinite;
+  color: #1e88e5;
+  font-weight: 400;
+}
+
+@keyframes ggb-blink {
+  0%, 50% { opacity: 1; }
+  51%, 100% { opacity: 0; }
+}
+
+/* 流式渲染：生成中提示 */
+.ggb-stream-loading {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 12px;
+  padding: 8px 16px;
+  background: #f5f7fa;
+  border-radius: 8px;
+  color: #666;
+  font-size: 13px;
+}
+
+.ggb-stream-spinner {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  border: 2px solid #e5e5e5;
+  border-top-color: #1e88e5;
+  border-radius: 50%;
+  animation: ggb-spin 0.8s linear infinite;
+}
+
+@keyframes ggb-spin {
+  to { transform: rotate(360deg); }
+}
+
+/* ==================== Markdown 表格样式（默认） ==================== */
+.ggb-markdown-table {
+  width: 100%;
+  max-width: 100%;
+  border-collapse: collapse;
+  margin: 10px 0;
+  font-size: 13px;
+  overflow: hidden;
+  background: #fff;
+  border: 1px solid #e6e6e6;
+  border-radius: 6px;
+}
+
+.message-content .ggb-markdown-table th,
+.message-content .ggb-markdown-table td {
+  padding: 8px 10px;
+  border-bottom: 1px solid #f0f0f0;
+  text-align: left;
+  vertical-align: middle;
+}
+
+.message-content .ggb-markdown-table thead th {
+  background: #fafafa;
+  font-weight: 600;
+  color: #333;
+  border-bottom: 1px solid #e6e6e6;
+}
+
+.message-content .ggb-markdown-table tbody tr:nth-child(even) td {
+  background: #fbfbfb;
+}
+
+.message-content .ggb-markdown-table td code {
+  white-space: pre-wrap;
+  word-break: break-word;
+  background: transparent;
+  font-family: inherit;
+}
+
+/* 小屏幕时允许横向滚动以避免挤压 */
+.message-content .ggb-markdown-table {
+  display: table;
+}
+
+.message-content .ggb-markdown-table-wrapper {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
 }

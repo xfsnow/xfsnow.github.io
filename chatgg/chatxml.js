@@ -1,49 +1,33 @@
 document.addEventListener('DOMContentLoaded', () => {
-  // ==================== 图片上传相关变量 ====================
   let selectedImageData = null;
   let selectedImageUrl = null;
 
-  // ==================== 工具函数 ====================
-  
   function escapeHtmlForCommands(text) {
     const div = document.createElement('div');
     div.textContent = text;
     return div.innerHTML;
   }
 
-  function createCommandsDisplay(container, commands) {
-    if (!commands) return null;
-    
-    const isArray = Array.isArray(commands);
-    const hasContent = isArray ? commands.length > 0 : commands.trim().length > 0;
-    
-    if (!hasContent) return null;
+  function createCommandsDisplay(container, xmlContent) {
+    if (!xmlContent || !xmlContent.trim()) return null;
     
     const wrapper = container.parentElement;
     if (!wrapper) {
-      console.warn('[createCommandsDisplay] 未找到容器包装器，无法创建命令显示区域');
+      console.warn('[createCommandsDisplay] 未找到容器包装器');
       return null;
     }
     
     let commandsDiv = wrapper.querySelector('.ggb-commands-display');
     if (commandsDiv) {
-      console.log('[createCommandsDisplay] 命令显示区域已存在，跳过创建');
+      console.log('[createCommandsDisplay] 命令显示区域已存在');
       return commandsDiv;
     }
     
     commandsDiv = document.createElement('div');
     commandsDiv.className = 'ggb-commands-display';
     
-    let commandItemsHtml = '';
-    if (isArray) {
-      commandItemsHtml = commands.map((cmd) => {
-        const escapedCmd = escapeHtmlForCommands(cmd);
-        return `<div class="ggb-command-item"><code>${escapedCmd}</code></div>`;
-      }).join('');
-    } else {
-      const escapedXml = escapeHtmlForCommands(commands);
-      commandItemsHtml = `<div class="ggb-command-item"><code>${escapedXml}</code></div>`;
-    }
+    const escapedXml = escapeHtmlForCommands(xmlContent);
+    const commandItemsHtml = `<div class="ggb-command-item"><code>${escapedXml}</code></div>`;
     
     const copyIconSvg = `
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -54,7 +38,7 @@ document.addEventListener('DOMContentLoaded', () => {
     
     commandsDiv.innerHTML = `
       <div class="ggb-commands-header">
-        <div class="ggb-commands-title">GeoGebra 命令</div>
+        <div class="ggb-commands-title">GeoGebra XML</div>
         <button class="copy-btn" onclick="copyGGBCommands(this)">
           ${copyIconSvg}
           <span>复制</span>
@@ -65,45 +49,41 @@ document.addEventListener('DOMContentLoaded', () => {
       </div>
     `;
     
-    commandsDiv.dataset.commands = JSON.stringify(isArray ? commands : [commands]);
+    commandsDiv.dataset.xmlContent = xmlContent;
     wrapper.appendChild(commandsDiv);
-    console.log('[createCommandsDisplay] ✓ 命令显示区域已创建');
+    console.log('[createCommandsDisplay] ✓ XML显示区域已创建');
     return commandsDiv;
   }
-  
+
   window.copyGGBCommands = function(button) {
     const commandsDiv = button.closest('.ggb-commands-display');
     if (!commandsDiv) return;
     
     try {
-      const commandsData = commandsDiv.dataset.commands;
-      if (!commandsData) {
-        alert('未找到命令数据');
+      const xmlContent = commandsDiv.dataset.xmlContent;
+      if (!xmlContent) {
+        alert('未找到XML数据');
         return;
       }
       
-      const commands = JSON.parse(commandsData);
-      const commandText = commands.join('\n');
-      
       if (navigator.clipboard && navigator.clipboard.writeText) {
-        navigator.clipboard.writeText(commandText).then(() => {
+        navigator.clipboard.writeText(xmlContent).then(() => {
           showCopySuccess(button);
         }).catch(err => {
           console.error('[copyGGBCommands] Clipboard API 失败:', err);
-          fallbackCopyToClipboard(commandText, button);
+          fallbackCopyToClipboard(xmlContent, button);
         });
       } else {
-        fallbackCopyToClipboard(commandText, button);
+        fallbackCopyToClipboard(xmlContent, button);
       }
     } catch (e) {
       console.error('[copyGGBCommands] 错误:', e);
       alert('复制出错：' + e.message);
     }
   };
-  
+
   function showCopySuccess(button) {
     const originalHtml = button.innerHTML;
-    
     button.innerHTML = `
       <svg viewBox="0 0 24 24" fill="none" stroke="#52c41a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
         <polyline points="20 6 9 17 4 12"></polyline>
@@ -115,7 +95,7 @@ document.addEventListener('DOMContentLoaded', () => {
       button.innerHTML = originalHtml;
     }, 2000);
   }
-  
+
   function fallbackCopyToClipboard(text, button) {
     try {
       const textArea = document.createElement('textarea');
@@ -132,18 +112,18 @@ document.addEventListener('DOMContentLoaded', () => {
       if (successful) {
         showCopySuccess(button);
       } else {
-        alert('复制失败，请手动选择并复制命令');
+        alert('复制失败，请手动选择并复制');
       }
     } catch (err) {
       console.error('[fallbackCopyToClipboard] 错误:', err);
-      alert('复制失败，请手动选择并复制命令');
+      alert('复制失败，请手动选择并复制');
     }
   }
-  
+
   window.ggbLibLoaded = false;
   window.ggbLibLoading = false;
   window.ggbLoadPromise = null;
-  
+
   function ensureGeoGebraLoaded() {
     if (window.ggbLibLoaded) {
       return Promise.resolve(true);
@@ -158,8 +138,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const timeout = 20000;
       
       const checkInterval = setInterval(() => {
-        const ggbLoaded = typeof GGBApplet !== 'undefined' && 
-                          typeof GGBApplet === 'function';
+        const ggbLoaded = typeof GGBApplet !== 'undefined' && typeof GGBApplet === 'function';
         
         if (ggbLoaded) {
           clearInterval(checkInterval);
@@ -177,19 +156,19 @@ document.addEventListener('DOMContentLoaded', () => {
     
     return window.ggbLoadPromise;
   }
-  
+
   ensureGeoGebraLoaded().catch(() => {});
 
   let ggbAppletQueue = [];
   let ggbAppletProcessing = false;
-  
+
   function processGGBAppletQueue() {
     if (ggbAppletProcessing || ggbAppletQueue.length === 0) return;
     
     ggbAppletProcessing = true;
-    const { containerId, commands, viewRange, xmlContent, resolve } = ggbAppletQueue.shift();
+    const { containerId, xmlContent, viewRange, resolve } = ggbAppletQueue.shift();
     
-    createGGBAppletInternal(containerId, commands, viewRange, xmlContent).then(result => {
+    createGGBAppletInternal(containerId, xmlContent, viewRange).then(result => {
       resolve(result);
       ggbAppletProcessing = false;
       setTimeout(() => processGGBAppletQueue(), 300);
@@ -200,85 +179,184 @@ document.addEventListener('DOMContentLoaded', () => {
       setTimeout(() => processGGBAppletQueue(), 300);
     });
   }
-  
-  function queueGGBApplet(containerId, commands, viewRange, xmlContent = null) {
+
+  function queueGGBApplet(containerId, xmlContent, viewRange) {
     return new Promise(resolve => {
-      ggbAppletQueue.push({ containerId, commands, viewRange, xmlContent, resolve });
+      ggbAppletQueue.push({ containerId, xmlContent, viewRange, resolve });
       processGGBAppletQueue();
     });
   }
 
-  function waitForAppletReady(api, timeout = 15000) {
-    return new Promise((resolve, reject) => {
-      const startTime = Date.now();
-      let consecutiveSuccesses = 0;
-      const requiredSuccesses = 3;
-      
-      const checkReady = () => {
-        try {
-          if (api && typeof api.evalCommand === 'function') {
-            api.evalCommand('testPoint=(0,0)');
-            api.evalCommand('Delete[testPoint]');
-            consecutiveSuccesses++;
-            
-            if (consecutiveSuccesses >= requiredSuccesses) {
-              resolve(true);
-              return;
-            }
-          } else {
-            consecutiveSuccesses = 0;
-          }
-        } catch (e) {
-          consecutiveSuccesses = 0;
-        }
-        
-        if (Date.now() - startTime > timeout) {
-          reject(new Error('Applet 就绪超时'));
-          return;
-        }
-        
-        setTimeout(checkReady, 200);
-      };
-      
-      checkReady();
-    });
+  function createGGBApplet(containerId, xmlContent, viewRange) {
+    return queueGGBApplet(containerId, xmlContent, viewRange);
   }
 
-  function hideGGBAlgebraPanel(containerId) {
-    const container = document.getElementById(containerId);
-    if (!container) return;
-    
-    const selectors = [
-      '.gwt-SplitLayoutPanel > div:first-child',
-      '[class*="algebra"]',
-      '[class*="Algebra"]', 
-      '[id*="algebra"]',
-      '[id*="Algebra"]'
-    ];
-    
-    selectors.forEach(sel => {
-      try {
-        const el = container.querySelector(sel);
-        if (el && el.offsetWidth < container.offsetWidth * 0.4) {
-          el.style.display = 'none';
-        }
-      } catch(e) {}
-    });
+  async function createGGBAppletInternal(containerId, xmlContent, viewRange) {
+    try {
+      await ensureGeoGebraLoaded();
+    } catch (e) {
+      console.error('[GeoGebra] 库加载失败:', e);
+      return null;
+    }
 
-    const allDivs = container.querySelectorAll('div');
-    allDivs.forEach(div => {
-      const cls = div.className || '';
-      const id = div.id || '';
-      if ((cls.match(/algebra/i) || id.match(/algebra/i)) && div.offsetWidth < container.offsetWidth * 0.4) {
-        div.style.display = 'none';
+    const container = document.getElementById(containerId);
+    if (!container) {
+      console.error('[createGGBApplet] 容器不存在！');
+      return null;
+    }
+
+    const initWidth = Math.max(container.clientWidth || 600, 320);
+    const initHeight = Math.max(container.clientHeight || 400, 240);
+
+    const params = {
+        id: containerId,
+        width: initWidth,
+        height: initHeight,
+        showToolBar: false,
+        showAlgebraInput: false,
+        showMenuBar: false,
+        appName: "classic",
+        language: "en",
+        enableLabelDrags: false,
+        enableShiftDragZoom: true,
+        showZoomButtons: true,
+        capturingThreshold: null,
+        useBrowserForJS: false,
+    };
+
+    if (viewRange) {
+      params["xmin"] = viewRange.xMin || -10;
+      params["xmax"] = viewRange.xMax || 10;
+      params["ymin"] = viewRange.yMin || -10;
+      params["ymax"] = viewRange.yMax || 10;
+    }
+
+    try {
+      const applet = new GGBApplet(params, '5.0', containerId);
+      
+      let ggbApi = null;
+      
+      params.appletOnLoad = function(api) {
+        ggbApi = api;
+        try {
+          if (typeof api.setErrorDialogsActive === 'function') api.setErrorDialogsActive(false);
+        } catch(e) {}
+        
+        const containerEl = document.getElementById(containerId);
+        const wrapperEl = containerEl ? containerEl.parentElement : null;
+        
+        if (wrapperEl && typeof ResizeObserver !== 'undefined') {
+          const resizeObserver = new ResizeObserver(entries => {
+            for (let entry of entries) {
+              const newWidth = entry.contentRect.width;
+              const newHeight = 500;
+              
+              if (newWidth > 100) {
+                api.setSize(newWidth, newHeight);
+              }
+            }
+          });
+          
+          resizeObserver.observe(wrapperEl);
+        }
+      };
+      
+      applet.inject(containerId, 'preferHTML5');
+
+      if (xmlContent && xmlContent.trim()) {
+        createCommandsDisplay(container, xmlContent);
+        
+        await new Promise((resolve) => {
+          const startTime = Date.now();
+          const checkInterval = setInterval(() => {
+            if (!ggbApi) return;
+            
+            try {
+              ggbApi.evalCommand('testReady=(0,0)');
+              ggbApi.evalCommand('Delete[testReady]');
+              clearInterval(checkInterval);
+              
+              setTimeout(async () => {
+                try {
+                  ggbApi.evalXML(xmlContent);
+                } catch (e) {
+                  console.error('[GeoGebra] XML 执行失败:', e);
+                }
+                
+                setTimeout(function() {
+                  try {
+                    if (typeof ggbApi.evalCommand === 'function') {
+                      ggbApi.evalCommand("SetAxesRatio[1, 1]");
+                    }
+
+                    if (viewRange && ggbApi.setCoordSystem) {
+                      let xMin = viewRange.xMin || -10;
+                      let xMax = viewRange.xMax || 10;
+                      let yMin = viewRange.yMin || -10;
+                      let yMax = viewRange.yMax || 10;
+
+                      const containerEl = document.getElementById(containerId);
+                      if (containerEl) {
+                        const canvasWidth = containerEl.clientWidth || 600;
+                        const canvasHeight = containerEl.clientHeight || 500;
+                        const canvasRatio = canvasWidth / canvasHeight;
+
+                        const desiredWidth = xMax - xMin;
+                        const desiredHeight = yMax - yMin;
+                        const desiredRatio = desiredWidth / desiredHeight;
+
+                        if (canvasRatio > desiredRatio) {
+                          const adjustedWidth = desiredHeight * canvasRatio;
+                          const xCenter = (xMin + xMax) / 2;
+                          xMin = xCenter - adjustedWidth / 2;
+                          xMax = xCenter + adjustedWidth / 2;
+                        } else {
+                          const adjustedHeight = desiredWidth / canvasRatio;
+                          const yCenter = (yMin + yMax) / 2;
+                          yMin = yCenter - adjustedHeight / 2;
+                          yMax = yCenter + adjustedHeight / 2;
+                        }
+                      }
+
+                      ggbApi.setCoordSystem(xMin, xMax, yMin, yMax);
+                      
+                      if (typeof ggbApi.evalCommand === 'function') {
+                        ggbApi.evalCommand("SetAxesRatio[1, 1]");
+                      }
+                    } else if (typeof ggbApi.zoomTo === 'function') {
+                      ggbApi.zoomTo(200);
+                    }
+                    
+                    if (typeof ggbApi.refreshViews === 'function') ggbApi.refreshViews();
+                  } catch (e) {
+                    console.error('[GeoGebra] 调整视图失败:', e);
+                  }
+                }, 300);
+                
+                resolve();
+              }, 200);
+            } catch (e) {
+            }
+            
+            if (Date.now() - startTime > 20000) {
+              clearInterval(checkInterval);
+              console.error('[GeoGebra] 等待 applet 就绪超时');
+              resolve();
+            }
+          }, 250);
+        });
       }
-    });
+      
+      return { success: true };
+    } catch (error) {
+      console.error('[GeoGebra] 创建失败:', error);
+      return null;
+    }
   }
 
   const sidebar = document.querySelector('.sidebar');
   const SIDEBAR_BREAKPOINT = 768;
 
-  // 窗口变窄时自动折叠侧边栏
   function checkSidebarAutoCollapse() {
     if (window.innerWidth <= SIDEBAR_BREAKPOINT) {
       sidebar?.classList.add('collapsed');
@@ -307,7 +385,7 @@ document.addEventListener('DOMContentLoaded', () => {
       chatContainer.innerHTML = `
         <div class="welcome-message">
           <h3>欢迎使用AI数学绘图助手</h3>
-          <p>输入数学作图需求,AI会自动帮你生成GeoGebra命令并绘制图形</p>
+          <p>输入数学作图需求,AI会自动帮你生成GeoGebra XML并绘制图形</p>
           <div class="welcome-examples">
             <button type="button" class="example-tag">画一个等边三角形</button>
             <button type="button" class="example-tag">构造圆的切线</button>
@@ -336,8 +414,8 @@ document.addEventListener('DOMContentLoaded', () => {
     modelName: document.getElementById('model-name')
   };
   
-  const SETTINGS_KEY = 'chatgg_settings';
-  const HISTORY_KEY = 'chatgg_history';
+  const SETTINGS_KEY = 'chatxml_settings';
+  const HISTORY_KEY = 'chatxml_history';
   const MAX_HISTORY = 50;
   let currentChatId = null;
   
@@ -404,8 +482,6 @@ document.addEventListener('DOMContentLoaded', () => {
   document.getElementById('cancel-settings-btn')?.addEventListener('click', closeSettingsModal);
   saveSettingsBtn?.addEventListener('click', saveSettings);
 
-  // ==================== 历史记录管理 ====================
-  
   function loadHistory() {
     try {
       const saved = localStorage.getItem(HISTORY_KEY);
@@ -548,8 +624,6 @@ document.addEventListener('DOMContentLoaded', () => {
     return div.innerHTML;
   }
 
-  // ==================== 图片上传功能 ====================
-
   function showImagePreview(imageUrl) {
     const previewWrapper = document.getElementById('image-preview-wrapper');
     const previewImage = document.getElementById('image-preview');
@@ -586,7 +660,6 @@ document.addEventListener('DOMContentLoaded', () => {
     reader.readAsDataURL(file);
   }
 
-  // 绑定图片上传事件
   const imageInput = document.getElementById('image-input');
   const imageAttachmentBtn = document.getElementById('image-attachment-btn');
   const closePreviewBtn = document.getElementById('close-preview');
@@ -597,8 +670,6 @@ document.addEventListener('DOMContentLoaded', () => {
   });
   closePreviewBtn?.addEventListener('click', hideImagePreview);
 
-  // ==================== 对话处理逻辑 ====================
-  
   const systemPrompt = `你是一个GeoGebra几何绘图专家。请根据用户的几何作图需求，生成正确的GeoGebra XML命令。
 
 重要规则：GeoGebra 的 evalXML 引擎非常死板，标签、属性名或嵌套结构错误会被静默忽略。
@@ -674,7 +745,6 @@ XML 格式铁律：
     const contentDiv = document.createElement('div');
     contentDiv.className = 'message-content';
     
-    // 处理多模态消息内容
     if (typeof content === 'object' && content !== null) {
       const textParts = content.filter(c => c.type === 'text').map(c => c.text).join('\n');
       const imageParts = content.filter(c => c.type === 'image_url');
@@ -701,7 +771,7 @@ XML 格式铁律：
         contentDiv.appendChild(ggbWrapper);
         
         setTimeout(() => {
-          createGGBApplet(ggbContainerId, formatted.commands, formatted.viewRange, formatted.xmlContent);
+          createGGBApplet(ggbContainerId, formatted.xmlContent, formatted.viewRange);
         }, 100);
       }
     }
@@ -717,7 +787,6 @@ XML 格式铁律：
   }
 
   function extractGGBCommands(content) {
-    // 处理多模态内容
     if (typeof content === 'object') {
       const textContent = content.find(c => c.type === 'text')?.text || '';
       return extractGGBCommandsFromText(textContent);
@@ -733,7 +802,6 @@ XML 格式铁律：
         if (xmlContent.includes('<construction') && xmlContent.includes('</construction>')) {
           return {
             success: true,
-            commands: null,
             xmlContent: xmlContent,
             viewRange: null
           };
@@ -743,240 +811,79 @@ XML 格式铁律：
       }
     }
     
-    const jsonMatch = text.match(/```ggb-json\s*([\s\S]*?)```/);
-    if (jsonMatch) {
-      try {
-        const jsonData = JSON.parse(jsonMatch[1]);
-        return {
-          success: true,
-          commands: jsonData.commands || [],
-          xmlContent: null,
-          viewRange: jsonData.viewRange || null
-        };
-      } catch (e) {
-        console.error('JSON 解析失败:', e);
-      }
-    }
-    
-    const codeMatch = text.match(/```(?:\s*ggb(?!-json)(?!-xml)\s*|\s*geogebra\s*|\s*plaintext\s*)([\s\S]*?)```/);
-    if (codeMatch) {
-      const commands = codeMatch[1]
-        .split('\n')
-        .map(line => line.trim())
-        .filter(line => line.length > 0 && !line.startsWith('#'));
-      return {
-        success: true,
-        commands: commands,
-        xmlContent: null,
-        viewRange: null
-      };
-    }
-    
     return {
       success: false,
-      commands: [],
       xmlContent: null,
       viewRange: null
     };
   }
 
-  async function createGGBAppletInternal(containerId, commands, viewRange, xmlContent = null) {
-    try {
-      await ensureGeoGebraLoaded();
-    } catch (e) {
-      console.error('[GeoGebra] 库加载失败:', e);
-      return null;
-    }
-
-    const container = document.getElementById(containerId);
-    if (!container) {
-      console.error('[createGGBApplet] 容器不存在！');
-      return null;
-    }
-
-    const initWidth = Math.max(container.clientWidth || 600, 320);
-    const initHeight = Math.max(container.clientHeight || 400, 240);
-
-    const params = {
-        id: containerId,
-        width: initWidth,
-        height: initHeight,
-        showToolBar: false,
-        showAlgebraInput: false,
-        showMenuBar: false,
-        
-        appName: "classic", 
-        
-        language: "en",
-        enableLabelDrags: false,
-        enableShiftDragZoom: true,
-        showZoomButtons: true,
-        capturingThreshold: null,
-        useBrowserForJS: false,
-    };
-
-    if (viewRange) {
-      params["xmin"] = viewRange.xMin || -10;
-      params["xmax"] = viewRange.xMax || 10;
-      params["ymin"] = viewRange.yMin || -10;
-      params["ymax"] = viewRange.yMax || 10;
-    }
-
-    try {
-      const applet = new GGBApplet(params, '5.0', containerId);
-      
-      let ggbApi = null;
-      
-      params.appletOnLoad = function(api) {
-        ggbApi = api;
-        try {
-          if (typeof api.setErrorDialogsActive === 'function') api.setErrorDialogsActive(false);
-        } catch(e) {}
-        
-        const containerEl = document.getElementById(containerId);
-        const wrapperEl = containerEl ? containerEl.parentElement : null;
-        
-        if (wrapperEl && typeof ResizeObserver !== 'undefined') {
-          const resizeObserver = new ResizeObserver(entries => {
-            for (let entry of entries) {
-              const newWidth = entry.contentRect.width;
-              const newHeight = 500; 
-              
-              if (newWidth > 100) {
-                api.setSize(newWidth, newHeight);
-              }
-            }
-          });
-          
-          resizeObserver.observe(wrapperEl);
-        }
-      };
-      
-      applet.inject(containerId, 'preferHTML5');
-
-      const hasCommands = commands && commands.length > 0;
-      const hasXml = xmlContent && xmlContent.trim().length > 0;
-      
-      if (hasCommands || hasXml) {
-        const displayCommands = hasCommands ? commands : xmlContent;
-        createCommandsDisplay(container, displayCommands);
-        
-        await new Promise((resolve) => {
-          const startTime = Date.now();
-          const checkInterval = setInterval(() => {
-            if (!ggbApi) return;
-            
-            try {
-              ggbApi.evalCommand('testReady=(0,0)');
-              ggbApi.evalCommand('Delete[testReady]');
-              clearInterval(checkInterval);
-              
-              setTimeout(async () => {
-                if (hasXml) {
-                  try {
-                    ggbApi.evalXML(xmlContent);
-                  } catch (e) {
-                    console.error('[GeoGebra] XML 执行失败:', e);
-                  }
-                } else {
-                  for (let i = 0; i < commands.length; i++) {
-                    const cmd = commands[i];
-                    try {
-                      ggbApi.evalCommand(cmd);
-                      await new Promise(r => setTimeout(r, 150));
-                    } catch (e) {
-                      console.error('[GeoGebra] 命令 ' + (i + 1) + ' 执行失败:', cmd, e);
-                    }
-                  }
-                }
-                
-                setTimeout(function() {
-                  try {
-                    if (typeof ggbApi.evalCommand === 'function') {
-                      ggbApi.evalCommand("SetAxesRatio[1, 1]");
-                    }
-
-                    if (viewRange && ggbApi.setCoordSystem) {
-                      let xMin = viewRange.xMin || -10;
-                      let xMax = viewRange.xMax || 10;
-                      let yMin = viewRange.yMin || -10;
-                      let yMax = viewRange.yMax || 10;
-
-                      const containerEl = document.getElementById(containerId);
-                      if (containerEl) {
-                        const canvasWidth = containerEl.clientWidth || 600;
-                        const canvasHeight = containerEl.clientHeight || 500;
-                        const canvasRatio = canvasWidth / canvasHeight;
-
-                        const desiredWidth = xMax - xMin;
-                        const desiredHeight = yMax - yMin;
-                        const desiredRatio = desiredWidth / desiredHeight;
-
-                        if (canvasRatio > desiredRatio) {
-                          const adjustedWidth = desiredHeight * canvasRatio;
-                          const xCenter = (xMin + xMax) / 2;
-                          xMin = xCenter - adjustedWidth / 2;
-                          xMax = xCenter + adjustedWidth / 2;
-                        } else {
-                          const adjustedHeight = desiredWidth / canvasRatio;
-                          const yCenter = (yMin + yMax) / 2;
-                          yMin = yCenter - adjustedHeight / 2;
-                          yMax = yCenter + adjustedHeight / 2;
-                        }
-                      }
-
-                      ggbApi.setCoordSystem(xMin, xMax, yMin, yMax);
-                      
-                      if (typeof ggbApi.evalCommand === 'function') {
-                        ggbApi.evalCommand("SetAxesRatio[1, 1]");
-                      }
-                    } else if (typeof ggbApi.zoomTo === 'function') {
-                      ggbApi.zoomTo(200);
-                    }
-                    
-                    if (typeof ggbApi.refreshViews === 'function') ggbApi.refreshViews();
-                  } catch (e) {
-                    console.error('[GeoGebra] 调整视图失败:', e);
-                  }
-                }, 300);
-                
-                resolve();
-              }, 200);
-            } catch (e) {
-            }
-            
-            if (Date.now() - startTime > 20000) {
-              clearInterval(checkInterval);
-              console.error('[GeoGebra] 等待 applet 就绪超时');
-              resolve();
-            }
-          }, 250);
-        });
-      }
-
-      return applet;
-    } catch (e) {
-      console.error('[GeoGebra] 创建画板失败:', e);
-      return null;
-    }
+  function formatMessage(content) {
+    return formatMessageFromText(content);
   }
 
-  function createGGBApplet(containerId, commands, viewRange, xmlContent = null) {
-    return queueGGBApplet(containerId, commands, viewRange, xmlContent);
+  function formatMessageFromText(content) {
+    const extracted = extractGGBCommandsFromText(content);
+    
+    if (extracted.success && extracted.xmlContent && extracted.xmlContent.trim()) {
+      const displayContent = content.replace(/```ggb-xml\s*[\s\S]*?```/g, '');
+      
+      return {
+        text: parseMarkdown(displayContent).trim(),
+        hasGGB: true,
+        xmlContent: extracted.xmlContent,
+        viewRange: extracted.viewRange
+      };
+    }
+    
+    return {
+      text: parseMarkdown(content),
+      hasGGB: false
+    };
   }
 
   function parseMarkdown(text) {
     if (!text) return '';
     
-    const codeBlocks = [];
-    text = text.replace(/```([\s\S]*?)```/g, (m, p1) => {
-      codeBlocks.push(p1);
-      return `@@CODEBLOCK${codeBlocks.length - 1}@@`;
+    let html = text;
+    
+    // 处理代码块
+    html = html.replace(/```(\w+)?\n([\s\S]*?)```/g, (match, lang, code) => {
+      return `<pre><code>${escapeHtml(code.trim())}</code></pre>`;
     });
+    
+    // 处理行内代码
+    html = html.replace(/`([^`]+)`/g, '<code>$1</code>');
+    
+    // 处理表格
+    html = parseMarkdownTable(html);
+    
+    // 处理标题
+    html = html.replace(/^####\s+(.+)$/gm, '<h4>$1</h4>');
+    html = html.replace(/^###\s+(.+)$/gm, '<h3>$1</h3>');
+    html = html.replace(/^##\s+(.+)$/gm, '<h2>$1</h2>');
+    html = html.replace(/^#\s+(.+)$/gm, '<h1>$1</h1>');
+    
+    // 处理加粗和斜体
+    html = html.replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>');
+    html = html.replace(/\*([^*]+)\*/g, '<em>$1</em>');
+    
+    // 处理段落和换行
+    html = html.replace(/^\s*\n/g, '');
+    html = html.replace(/\n\n/g, '</p><p>');
+    html = html.replace(/\n/g, '<br>');
+    html = `<p>${html}</p>`;
+    
+    return html;
+  }
 
+  function parseMarkdownTable(text) {
+    if (!text.includes('|')) return text;
+    
     const lines = text.split('\n');
     const out = [];
     let i = 0;
+    
     while (i < lines.length) {
       const line = lines[i];
       const next = lines[i + 1] || '';
@@ -1020,172 +927,125 @@ XML 格式铁律：
       i++;
     }
 
-    text = out.join('\n');
-
-    text = text
-      .replace(/^#### (.+)$/gm, '<h4>$1</h4>')
-      .replace(/^### (.+)$/gm, '<h3>$1</h3>')
-      .replace(/^## (.+)$/gm, '<h2>$1</h2>')
-      .replace(/^# (.+)$/gm, '<h1>$1</h1>')
-      .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
-
-    text = text.replace(/\n/g, '<br>');
-
-    text = text.replace(/@@CODEBLOCK(\d+)@@/g, (m, idx) => {
-      const code = codeBlocks[Number(idx)] || '';
-      return `<pre><code>${escapeHtml(code)}</code></pre>`;
-    });
-
-    return text;
+    return out.join('\n');
   }
 
-  function formatMessage(content, streaming) {
-    if (typeof content === 'object') {
-      const textContent = content.find(c => c.type === 'text')?.text || '';
-      return formatMessageFromText(textContent, streaming);
-    }
-    return formatMessageFromText(content, streaming);
-  }
-
-  function formatMessageFromText(content, streaming) {
-    const extracted = extractGGBCommandsFromText(content);
-    
-    const hasCommands = extracted.commands && extracted.commands.length > 0;
-    const hasXml = extracted.xmlContent && extracted.xmlContent.trim().length > 0;
-    
-    if (extracted.success && (hasCommands || hasXml)) {
-      const displayContent = content
-        .replace(/```ggb-xml\s*[\s\S]*?```/g, '')
-        .replace(/```ggb-json\s*[\s\S]*?```/g, '')
-        .replace(/```(?:\s*ggb\s*|\s*geogebra\s*|\s*plaintext\s*)[\s\S]*?```/g, '');
-      
-      return {
-        text: parseMarkdown(displayContent).trim(),
-        hasGGB: true,
-        commands: extracted.commands,
-        xmlContent: extracted.xmlContent,
-        viewRange: extracted.viewRange
-      };
-    }
-    
-    if (streaming) {
-      const openIdx = content.indexOf('```ggb-xml');
-      if (openIdx >= 0) {
-        const beforeBlock = content.substring(0, openIdx);
-        return {
-          text: parseMarkdown(beforeBlock).trim() + '<div class="ggb-stream-loading"><span class="ggb-stream-spinner"></span> 正在生成 GeoGebra 命令...</div>',
-          hasGGB: false
-        };
-      }
-      const jsonOpenIdx = content.indexOf('```ggb-json');
-      if (jsonOpenIdx >= 0) {
-        const beforeBlock = content.substring(0, jsonOpenIdx);
-        return {
-          text: parseMarkdown(beforeBlock).trim() + '<div class="ggb-stream-loading"><span class="ggb-stream-spinner"></span> 正在生成 GeoGebra 命令...</div>',
-          hasGGB: false
-        };
-      }
-    }
-    
-    return {
-      text: parseMarkdown(content),
-      hasGGB: false
-    };
-  }
-
-  async function sendMessage(text) {
-    const userInput = document.getElementById('user-input');
+  async function sendMessage() {
+    const input = document.getElementById('user-input');
     const sendBtn = document.getElementById('send-btn');
-    const message = typeof text === 'string' ? text.trim() : userInput?.value?.trim();
     
-    // 检查是否有图片或文字输入
-    if (!message && !selectedImageData) {
-      alert('请输入文字或添加图片');
+    if (!input || !sendBtn) {
+      console.error('[sendMessage] 未找到输入框或发送按钮');
       return;
+    }
+    
+    const content = input.value.trim();
+    if (!content && !selectedImageData) {
+      return;
+    }
+    
+    input.value = '';
+    sendBtn.disabled = true;
+    
+    const userContent = [];
+    if (content) {
+      userContent.push({ type: 'text', text: content });
+    }
+    if (selectedImageData) {
+      userContent.push({ type: 'image_url', image_url: { url: selectedImageData } });
+      hideImagePreview();
+    }
+    
+    messageHistory.push({ role: 'user', content: userContent.length > 1 ? userContent : content });
+    
+    const userMsg = addMessageToUI(userContent.length > 1 ? userContent : content, 'user', false);
+    
+    if (!currentChatId) {
+      currentChatId = Date.now().toString();
     }
     
     const settings = getSettings();
-    if (!settings.apiKey || !settings.endpoint || !settings.modelName) {
-      alert('请先在设置中配置 API');
-      return;
-    }
-
-    if (!currentChatId) {
-      currentChatId = 'chat-' + Date.now();
-    }
-
-    if (sendBtn) sendBtn.disabled = true;
-    if (userInput && typeof text !== 'string') userInput.value = '';
     
-    // 构建多模态消息内容
-    const messageContent = [];
-    
-    if (selectedImageData) {
-      messageContent.push({
-        type: 'image_url',
-        image_url: {
-          url: selectedImageData
-        }
-      });
-    }
-    
-    if (message) {
-      messageContent.push({
-        type: 'text',
-        text: message
-      });
-    }
-    
-    // 如果只有图片，添加提示文字
-    if (messageContent.length === 1 && messageContent[0].type === 'image_url') {
-      messageContent.push({
-        type: 'text',
-        text: '根据这张图片画出数学图形'
-      });
-    }
-    
-    const finalContent = messageContent.length === 1 && messageContent[0].type === 'text' 
-      ? messageContent[0].text 
-      : messageContent;
-    
-    messageHistory.push({ role: 'user', content: finalContent });
-    addMessageToUI(finalContent, 'user');
-    
-    // 清空图片预览
-    hideImagePreview();
-    
-    const aiClient = new AiClient(settings.endpoint, settings.apiKey, settings.modelName);
-    
-    const messages = [
+    const messagesForAPI = [
       { role: 'system', content: systemPrompt },
-      ...messageHistory
+      ...messageHistory.map(msg => ({
+        role: msg.role,
+        content: msg.content
+      }))
     ];
     
-    const aiContentDiv = addMessageToUI('', 'assistant');
-    let fullResponse = '';
-    let lastRenderTime = 0;
-    const RENDER_INTERVAL = 60;
-    
-    await aiClient.sendMessage(
-      messages,
-      (content) => {
-        fullResponse = content;
-        const now = Date.now();
-        if (now - lastRenderTime < RENDER_INTERVAL) return;
-        lastRenderTime = now;
+    try {
+      const response = await fetch(`${settings.endpoint}/chat/completions`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': `Bearer ${settings.apiKey}`
+        },
+        body: JSON.stringify({
+          model: settings.modelName,
+          messages: messagesForAPI,
+          stream: true
+        })
+      });
+      
+      if (!response.ok) {
+        const errorData = await response.json();
+        throw new Error(errorData.error?.message || `HTTP error! status: ${response.status}`);
+      }
+      
+      const reader = response.body.getReader();
+      const decoder = new TextDecoder('utf-8');
+      
+      let aiContent = '';
+      let aiContentDiv = null;
+      let isFirstChunk = true;
+      
+      while (true) {
+        const { done, value } = await reader.read();
+        if (done) break;
         
-        const formatted = formatMessage(content, true);
-        aiContentDiv.innerHTML = formatted.text + '<span class="ggb-cursor-blink">▌</span>';
+        const chunk = decoder.decode(value);
+        
+        const lines = chunk.split('\n').filter(line => line.trim());
+        for (const line of lines) {
+          if (line.startsWith('data: ')) {
+            const data = line.substring(6);
+            if (data === '[DONE]') continue;
+            
+            try {
+              const json = JSON.parse(data);
+              const contentChunk = json.choices?.[0]?.delta?.content;
+              
+              if (contentChunk) {
+                aiContent += contentChunk;
+                
+                if (isFirstChunk) {
+                  messageHistory.push({ role: 'assistant', content: aiContent });
+                  aiContentDiv = addMessageToUI(aiContent, 'assistant', false);
+                  isFirstChunk = false;
+                } else {
+                  messageHistory[messageHistory.length - 1].content = aiContent;
+                  
+                  if (aiContentDiv) {
+                    const formatted = formatMessage(aiContent);
+                    aiContentDiv.innerHTML = formatted.text;
+                  }
+                }
+              }
+            } catch (e) {
+              console.error('解析响应失败:', e);
+            }
+          }
+        }
+        
         chatContainer.scrollTop = chatContainer.scrollHeight;
-      },
-      (content) => {
-        fullResponse = content || fullResponse;
-        messageHistory.push({ role: 'assistant', content: fullResponse });
-        
-        const formatted = formatMessage(fullResponse);
+      }
+      
+      if (aiContentDiv) {
+        const formatted = formatMessage(aiContent);
         aiContentDiv.innerHTML = formatted.text;
         
-        if (formatted.hasGGB && (formatted.commands && formatted.commands.length > 0 || formatted.xmlContent)) {
+        if (formatted.hasGGB && formatted.xmlContent && formatted.xmlContent.trim()) {
           const ggbContainerId = 'ggb-' + Date.now();
           const ggbWrapper = document.createElement('div');
           ggbWrapper.className = 'ggb-container-wrapper';
@@ -1195,13 +1055,12 @@ XML 格式铁律：
           ggbContainer.className = 'ggb-container';
           ggbWrapper.appendChild(ggbContainer);
           
-          const displayCommands = formatted.commands && formatted.commands.length > 0 ? formatted.commands : formatted.xmlContent;
-          const commandsDiv = createCommandsDisplay(ggbContainer, displayCommands);
+          createCommandsDisplay(ggbContainer, formatted.xmlContent);
           aiContentDiv.appendChild(ggbWrapper);
           
           const container = document.getElementById(ggbContainerId);
           if (container) {
-            createGGBApplet(ggbContainerId, formatted.commands, formatted.viewRange, formatted.xmlContent)
+            createGGBApplet(ggbContainerId, formatted.xmlContent, formatted.viewRange)
               .then(() => {
                 console.log('[onComplete] 画板创建成功');
               })
@@ -1209,43 +1068,51 @@ XML 格式铁律：
                 console.error('[onComplete] 画板创建失败:', err);
                 const errorDiv = document.createElement('div');
                 errorDiv.className = 'ggb-error-box';
-                errorDiv.textContent = '⚠️ 画板加载失败，但您可以复制下方命令在 GeoGebra 中使用';
-                commandsDiv?.appendChild(errorDiv);
+                errorDiv.textContent = '⚠️ 画板加载失败，但您可以复制下方XML在 GeoGebra 中使用';
+                ggbWrapper.appendChild(errorDiv);
               });
           }
         }
-        
-        chatContainer.scrollTop = chatContainer.scrollHeight;
-        sendBtn.disabled = false;
-        saveCurrentChat();
-      },
-      (error) => {
-        aiContentDiv.innerHTML = `<span class="ggb-error-text">错误: ${error}</span>`;
-        sendBtn.disabled = false;
       }
-    );
+      
+      saveCurrentChat();
+    } catch (error) {
+      console.error('发送消息失败:', error);
+      const errorMsg = {
+        role: 'assistant',
+        content: `抱歉，发生错误：${error.message}`
+      };
+      messageHistory.push(errorMsg);
+      addMessageToUI(errorMsg.content, 'assistant', false);
+    } finally {
+      sendBtn.disabled = false;
+    }
   }
 
+  const messageInput = document.getElementById('user-input');
   const sendBtn = document.getElementById('send-btn');
-  const userInput = document.getElementById('user-input');
-  
-  sendBtn?.addEventListener('click', sendMessage);
-  userInput?.addEventListener('keypress', (e) => {
+
+  messageInput?.addEventListener('keydown', (e) => {
     if (e.key === 'Enter' && !e.shiftKey) {
       e.preventDefault();
       sendMessage();
     }
   });
 
+  sendBtn?.addEventListener('click', sendMessage);
+
   function bindExampleTags() {
     document.querySelectorAll('.example-tag').forEach(tag => {
       tag.addEventListener('click', () => {
-        sendMessage(tag.textContent);
+        if (messageInput) {
+          messageInput.value = tag.textContent;
+          messageInput.focus();
+        }
       });
     });
   }
 
   bindExampleTags();
-
   renderHistoryList();
+  loadSettings();
 });

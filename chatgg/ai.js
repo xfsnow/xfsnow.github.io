@@ -1,4 +1,4 @@
-// 通用 AI 客户端 - 支持 OpenAI 兼容的流式 API
+// 通用 AI 客户端 - 支持 OpenAI 兼容的流式 API，支持多模态消息
 class AiClient {
   constructor(apiEndpoint, apiKey, modelName) {
     this.apiEndpoint = apiEndpoint;
@@ -6,11 +6,26 @@ class AiClient {
     this.modelName = modelName;
   }
 
+  // 将消息转换为多模态格式
+  transformMessages(messages) {
+    return messages.map(msg => {
+      if (typeof msg.content === 'object' && msg.content !== null) {
+        return msg;
+      }
+      return {
+        role: msg.role,
+        content: msg.content
+      };
+    });
+  }
+
   // 发送消息并获取流式响应
   async sendMessage(messages, onUpdate, onComplete, onError) {
     const endpoint = this.apiEndpoint.endsWith('/') 
       ? this.apiEndpoint + 'chat/completions'
       : this.apiEndpoint + '/chat/completions';
+
+    const transformedMessages = this.transformMessages(messages);
 
     try {
       const response = await fetch(endpoint, {
@@ -21,13 +36,17 @@ class AiClient {
         },
         body: JSON.stringify({
           model: this.modelName,
-          messages: messages,
-          stream: true
+          messages: transformedMessages,
+          stream: true,
+          thinking: {
+            type: "enabled"
+          }
         })
       });
 
       if (!response.ok) {
-        throw new Error(`API 请求失败: ${response.status}`);
+        const errorText = await response.text();
+        throw new Error(`API 请求失败: ${response.status} - ${errorText}`);
       }
 
       const reader = response.body.getReader();
@@ -71,6 +90,44 @@ class AiClient {
       };
 
       readStream();
+    } catch (error) {
+      onError(`请求错误: ${error.message}`);
+    }
+  }
+
+  // 发送非流式消息（用于图片场景的备用方案）
+  async sendMessageNonStream(messages, onComplete, onError) {
+    const endpoint = this.apiEndpoint.endsWith('/') 
+      ? this.apiEndpoint + 'chat/completions'
+      : this.apiEndpoint + '/chat/completions';
+
+    const transformedMessages = this.transformMessages(messages);
+
+    try {
+      const response = await fetch(endpoint, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': `Bearer ${this.apiKey}`
+        },
+        body: JSON.stringify({
+          model: this.modelName,
+          messages: transformedMessages,
+          stream: false,
+          thinking: {
+            type: "enabled"
+          }
+        })
+      });
+
+      if (!response.ok) {
+        const errorText = await response.text();
+        throw new Error(`API 请求失败: ${response.status} - ${errorText}`);
+      }
+
+      const result = await response.json();
+      const content = result.choices?.[0]?.message?.content || '';
+      onComplete(content);
     } catch (error) {
       onError(`请求错误: ${error.message}`);
     }
