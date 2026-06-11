@@ -1,0 +1,635 @@
+<?xml version="1.0" encoding="utf-8"?>
+<geogebra format="5.0" version="5.0.288.0" id="5fe0a6fc-4df8-436d-b38b-5978cae0c879"  xsi:noNamespaceSchemaLocation="http://www.geogebra.org/ggb.xsd" xmlns="" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" >
+<gui>
+	<window width="950" height="650" />
+	<perspectives>
+	</perspectives>
+	<labelingStyle  val="3"/>
+	<font  size="16"/>
+</gui>
+<euclidianView>
+	<viewNumber viewNo="1"/>
+	<size  width="948" height="648"/>
+	<coordSystem xZero="533.0538223140495" yZero="398.41704545454525" scale="48.92045454545458" yscale="48.92045454545453"/>
+	<evSettings axes="false" grid="false" gridIsBold="false" pointCapturing="0" rightAngleStyle="1" checkboxSize="26" gridType="0"/>
+	<bgColor r="255" g="255" b="255"/>
+	<axesColor r="0" g="0" b="0"/>
+	<gridColor r="192" g="192" b="192"/>
+	<lineStyle axes="1" grid="0"/>
+	<axis id="0" show="false" label="" unitLabel="" tickStyle="1" showNumbers="true"/>
+	<axis id="1" show="false" label="" unitLabel="" tickStyle="1" showNumbers="true"/>
+</euclidianView>
+<kernel>
+	<continuous val="false"/>
+	<usePathAndRegionParameters val="true"/>
+	<decimals val="1"/>
+	<angleUnit val="degree"/>
+	<algebraStyle val="0" spreadsheet="0"/>
+	<coordStyle val="0"/>
+	<angleFromInvTrig val="false"/>
+	<startAnimation val="true"/>
+</kernel>
+<scripting blocked="false" disabled="false"/>
+<construction title="" author="" date="">
+<expression label ="O" exp="(0, 0)" type="point"/>
+<element type="point" label="O">
+	<show object="false" label="true" ev="4"/>
+	<objColor r="0" g="0" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<coords x="0" y="0" z="1"/>
+	<pointSize val="5"/>
+	<pointStyle val="0"/>
+</element>
+<element type="numeric" label="r">
+	<value val="7"/>
+	<symbolic val="true" />
+	<show object="true" label="true"/>
+	<objColor r="102" g="0" b="204" alpha="0.1"/>
+	<layer val="0"/>
+	<labelMode val="1"/>
+	<slider min="-10" max="10" absoluteScreenLocation="true" width="200" x="27" y="504" fixed="false" horizontal="true" showAlgebra="true"/>
+	<lineStyle thickness="10" type="0" typeHidden="1"/>
+	<animation step="1" speed="1" type="0" playing="false"/>
+</element>
+<element type="numeric" label="d">
+	<value val="2"/>
+	<symbolic val="true" />
+	<show object="true" label="true"/>
+	<objColor r="0" g="51" b="204" alpha="0.1"/>
+	<layer val="0"/>
+	<labelMode val="1"/>
+	<slider min="-5" max="5" absoluteScreenLocation="true" width="200" x="27" y="464" fixed="false" horizontal="true" showAlgebra="true"/>
+	<lineStyle thickness="10" type="0" typeHidden="1"/>
+	<animation step="1" speed="1" type="0" playing="false"/>
+</element>
+<element type="numeric" label="c">
+	<value val="3"/>
+	<symbolic val="true" />
+	<show object="true" label="true"/>
+	<objColor r="102" g="153" b="0" alpha="0.1"/>
+	<layer val="0"/>
+	<labelMode val="1"/>
+	<slider min="-5" max="5" absoluteScreenLocation="true" width="200" x="27" y="424" fixed="false" horizontal="true" showAlgebra="true"/>
+	<lineStyle thickness="10" type="0" typeHidden="1"/>
+	<animation step="1" speed="1" type="0" playing="false"/>
+</element>
+<element type="numeric" label="b">
+	<value val="1"/>
+	<symbolic val="true" />
+	<show object="true" label="true"/>
+	<objColor r="255" g="102" b="0" alpha="0.1"/>
+	<layer val="0"/>
+	<labelMode val="1"/>
+	<slider min="1" max="16" absoluteScreenLocation="true" width="200" x="27" y="384" fixed="false" horizontal="true" showAlgebra="true"/>
+	<lineStyle thickness="10" type="0" typeHidden="1"/>
+	<animation step="1" speed="1" type="0" playing="false"/>
+</element>
+<element type="numeric" label="a">
+	<value val="2"/>
+	<symbolic val="true" />
+	<show object="true" label="true"/>
+	<objColor r="255" g="0" b="0" alpha="0.1"/>
+	<layer val="0"/>
+	<labelMode val="1"/>
+	<slider min="1" max="16" absoluteScreenLocation="true" width="200" x="27" y="344" fixed="false" horizontal="true" showAlgebra="true"/>
+	<lineStyle thickness="10" type="0" typeHidden="1"/>
+	<animation step="1" speed="1" type="0" playing="false"/>
+</element>
+<command name="Vector">
+	<input a0="(c / sqrt(a), d / sqrt(b))"/>
+	<output a0="v"/>
+</command>
+<element type="vector" label="v">
+	<show object="true" label="false" ev="4"/>
+	<objColor r="0" g="0" b="255" alpha="0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<coords x="2.1213203435596424" y="2" z="0"/>
+	<lineStyle thickness="7" type="0" typeHidden="1"/>
+	<coordStyle style="cartesian"/>
+</element>
+<expression label="proj" exp="r / Length[v]" />
+<element type="numeric" label="proj">
+	<value val="2.400980191995124"/>
+	<symbolic val="true" />
+	<objColor r="0" g="0" b="0" alpha="0.1"/>
+</element>
+<expression label="Q" exp="O + (proj * UnitVector[v])" type="point" />
+<element type="point" label="Q">
+	<show object="false" label="true" ev="4"/>
+	<objColor r="68" g="68" b="68" alpha="0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<coords x="1.7469696946961764" y="1.647058823529412" z="1"/>
+	<pointSize val="3"/>
+	<pointStyle val="0"/>
+</element>
+<command name="UnitOrthogonalVector">
+	<input a0="v"/>
+	<output a0="un"/>
+</command>
+<element type="vector" label="un">
+	<show object="false" label="false" ev="4"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<coords x="-0.6859943405700354" y="0.7276068751089989" z="0"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<coordStyle style="cartesian"/>
+</element>
+<command name="Line">
+	<input a0="Q" a1="Q + un"/>
+	<output a0="lineQ"/>
+</command>
+<element type="line" label="lineQ">
+	<show object="true" label="false" ev="4"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<coords x="-0.727606875108999" y="-0.6859943405700355" z="2.4009801919951244"/>
+	<lineStyle thickness="2" type="20" typeHidden="1"/>
+	<eqnStyle style="implicit"/>
+</element>
+<expression label="e" exp="x^(2) + y^(2) = r^(2)" type="conic" />
+<element type="conic" label="e">
+	<show object="false" label="false" ev="4"/>
+	<objColor r="255" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<lineStyle thickness="2" type="20" typeHidden="1"/>
+	<eigenvectors  x0="1" y0="0" z0="1.0" x1="0" y1="1" z1="1.0"/>
+	<matrix A0="1" A1="1" A2="-49" A3="0" A4="0" A5="0"/>
+	<eqnStyle style="specific"/>
+</element>
+<command name="Point">
+	<input a0="lineQ"/>
+	<output a0="P"/>
+</command>
+<element type="point" label="P">
+	<show object="true" label="false" ev="4"/>
+	<objColor r="255" g="255" b="0" alpha="0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<animation step="1" speed="1" type="1" playing="true"/>
+	<coords x="5.148951973824509" y="-1.9612882850427529" z="1"/>
+	<pointSize val="8"/>
+	<pointStyle val="0"/>
+</element>
+<command name="Vector">
+	<input a0="P"/>
+	<output a0="u"/>
+</command>
+<element type="vector" label="u">
+	<show object="true" label="false" ev="4"/>
+	<objColor r="255" g="0" b="0" alpha="0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<coords x="5.148951973824509" y="-1.9612882850427529" z="0"/>
+	<lineStyle thickness="7" type="0" typeHidden="1"/>
+	<coordStyle style="cartesian"/>
+</element>
+<expression label ="pad" exp="30"/>
+<element type="numeric" label="pad">
+	<value val="30"/>
+	<symbolic val="true" />
+	<show object="false" label="true"/>
+	<objColor r="0" g="0" b="0" alpha="0.1"/>
+	<layer val="1"/>
+	<labelMode val="1"/>
+	<animation step="1" speed="1" type="0" playing="false"/>
+</element>
+<command name="Line">
+	<input a0="O" a1="O + v"/>
+	<output a0="f"/>
+</command>
+<element type="line" label="f">
+	<show object="false" label="false"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<coords x="-2" y="2.1213203435596424" z="0"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<eqnStyle style="implicit"/>
+</element>
+<command name="OrthogonalLine">
+	<input a0="P" a1="f"/>
+	<output a0="g"/>
+</command>
+<element type="line" label="g">
+	<show object="false" label="false" ev="4"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<coords x="-2.1213203435596424" y="-2" z="7.000000000000002"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<eqnStyle style="implicit"/>
+</element>
+<command name="Intersect">
+	<input a0="g" a1="f"/>
+	<output a0="A"/>
+</command>
+<element type="point" label="A">
+	<show object="false" label="true" ev="4"/>
+	<objColor r="68" g="68" b="68" alpha="0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<coords x="14.8492424049175" y="14.000000000000004" z="8.5"/>
+	<pointSize val="3"/>
+	<pointStyle val="0"/>
+</element>
+<command name="Segment">
+	<input a0="P" a1="A"/>
+	<output a0="h"/>
+</command>
+<element type="segment" label="h">
+	<show object="true" label="false" ev="4"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<coords x="-3.608347108572165" y="-3.4019822791283327" z="11.906937976949166"/>
+	<lineStyle thickness="2" type="10" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<command name="Angle">
+	<input a0="O" a1="A" a2="P"/>
+	<output a0="α"/>
+</command>
+<element type="angle" label="α">
+	<angleStyle val="1"/>
+	<value val="1.5707963267948968"/>
+	<show object="true" label="false" ev="4"/>
+	<objColor r="96" g="96" b="96" alpha="0.5"/>
+	<layer val="1"/>
+	<labelMode val="1"/>
+	<lineStyle thickness="1" type="0" typeHidden="2"/>
+	<arcSize val="15"/>
+</element>
+<command name="If">
+	<input a0="(v * u)  &lt;  0" a1="0" a2="((-sgn((u * un))) * 0.05)"/>
+	<output a0="offSeg"/>
+</command>
+<element type="numeric" label="offSeg">
+	<value val="0.05"/>
+	<symbolic val="true" />
+	<objColor r="0" g="0" b="0" alpha="0.1"/>
+</element>
+<command name="Segment">
+	<input a0="O + (offSeg * un)" a1="A + (offSeg * un)"/>
+	<output a0="segOA"/>
+</command>
+<element type="segment" label="segOA">
+	<show object="true" label="false" ev="4"/>
+	<objColor r="128" g="128" b="128" alpha="0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<coords x="-1.6470588235294121" y="1.7469696946961766" z="-0.12004900959975623"/>
+	<lineStyle thickness="9" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="boolean" label="showCoords">
+	<value val="true"/>
+	<show object="true" label="true"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelOffset x="20" y="257"/>
+	<labelMode val="0"/>
+	<checkbox fixed="true"/>
+	<caption val="顯示向量座標"/>
+</element>
+<expression label="text2" exp="&quot;\fgcolor{006600}{&quot; + (LaTeX[If[c ≟ 1, &quot;&quot;, If[c ≟ -1, &quot;-&quot;, c + &quot;&quot;]]]) + &quot;}x&quot; + (LaTeX[If[d  &lt;  0, &quot;&quot;, &quot;+&quot;]]) + &quot;\fgcolor{0000ff}{&quot; + (LaTeX[If[d ≟ 1, &quot;&quot;, If[d ≟ -1, &quot;-&quot;, d + &quot;&quot;]]]) + &quot;}y=\fgcolor{660099}{&quot; + (LaTeX[r]) + &quot;}&quot;" />
+<element type="text" label="text2">
+	<show object="true" label="false" ev="8"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<bgColor r="255" g="255" b="255" alpha="255"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<isLaTeX val="true"/>
+	<font serif="true" sizeM="2" size="16" style="1"/>
+	<absoluteScreenLocation  x="328" y="33"/>
+</element>
+<expression label="text1" exp="&quot;\fgcolor{ff0000}{&quot; + (LaTeX[If[a ≟ 1, &quot;&quot;, a + &quot;&quot;]]) + &quot;}x^2+\fgcolor{ee6600}{&quot; + (LaTeX[If[b ≟ 1, &quot;&quot;, b + &quot;&quot;]]) + &quot;}y^2=&quot; + (LaTeX[Length[u]^(2)]) + &quot;&quot;" />
+<element type="text" label="text1">
+	<show object="true" label="false" ev="8"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<bgColor r="255" g="255" b="255" alpha="255"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<isLaTeX val="true"/>
+	<font serif="true" sizeM="2" size="16" style="1"/>
+	<absoluteScreenLocation  x="571" y="30"/>
+</element>
+<expression label="txtu" exp="&quot;\fgcolor{ff0000}{\vec{u}}=(\fgcolor{ff0000}{&quot; + (LaTeX[If[a ≟ 1, &quot;&quot;, If[IsInteger[sqrt(a)], sqrt(a) + &quot;&quot;, &quot;\sqrt{&quot; + a + &quot;}&quot;]]]) + &quot;}x, \fgcolor{ee6600}{ &quot; + (LaTeX[If[b ≟ 1, &quot;&quot;, If[IsInteger[sqrt(b)], sqrt(b) + &quot;&quot;, &quot;\sqrt{&quot; + b + &quot;}&quot;]]]) + &quot; }y)&quot;" />
+<element type="text" label="txtu">
+	<show object="true" label="true" ev="8"/>
+	<condition showObject="showCoords"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<bgColor r="255" g="255" b="255" alpha="255"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<isLaTeX val="true"/>
+	<font serif="true" sizeM="2" size="16" style="1"/>
+	<absoluteScreenLocation  x="16" y="20"/>
+</element>
+<expression label="txU" exp="&quot;\vec{u}&quot;"/>
+<element type="text" label="txU">
+	<show object="false" label="false" ev="20"/>
+	<objColor r="255" g="0" b="0" alpha="0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<isLaTeX val="true"/>
+	<font serif="true" sizeM="2" size="16" style="1"/>
+	<startPoint exp="P"/>
+	<labelOffset x="-3" y="2"/>
+</element>
+<expression label="txV" exp="&quot;\vec{v}&quot;"/>
+<element type="text" label="txV">
+	<show object="false" label="false" ev="40"/>
+	<objColor r="0" g="0" b="255" alpha="0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<isLaTeX val="true"/>
+	<font serif="true" sizeM="2" size="16" style="1"/>
+	<startPoint exp="O + v"/>
+	<labelOffset x="-4" y="-42"/>
+</element>
+<command name="Angle">
+	<input a0="P" a1="O" a2="O + v"/>
+	<output a0="theta"/>
+</command>
+<element type="angle" label="theta">
+	<angleStyle val="1"/>
+	<value val="1.1199115241988364"/>
+	<show object="true" label="false" ev="4"/>
+	<objColor r="64" g="64" b="64" alpha="0.45"/>
+	<layer val="0"/>
+	<labelMode val="1"/>
+	<lineStyle thickness="2" type="0" typeHidden="2"/>
+	<arcSize val="30"/>
+	<selectionAllowed val="false"/>
+</element>
+<command name="Angle">
+	<input a0="u"/>
+	<output a0="angU"/>
+</command>
+<element type="angle" label="angU">
+	<angleStyle val="0"/>
+	<value val="5.919243193404657"/>
+	<show object="false" label="true" ev="4"/>
+	<objColor r="0" g="100" b="0" alpha="0.1"/>
+	<layer val="1"/>
+	<labelMode val="1"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<arcSize val="30"/>
+</element>
+<command name="Angle">
+	<input a0="v"/>
+	<output a0="angV"/>
+</command>
+<element type="angle" label="angV">
+	<angleStyle val="0"/>
+	<value val="0.7559694104239078"/>
+	<show object="false" label="true" ev="4"/>
+	<objColor r="0" g="0" b="0" alpha="0.1"/>
+	<layer val="1"/>
+	<labelMode val="1"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<arcSize val="30"/>
+</element>
+<expression label="uw" exp="x(Corner[txU, 2] - Corner[txU, 1])" />
+<element type="numeric" label="uw">
+	<value val="0.8994192799070841"/>
+	<symbolic val="true" />
+	<objColor r="0" g="0" b="0" alpha="0.1"/>
+</element>
+<expression label="uh" exp="y(Corner[txU, 4] - Corner[txU, 1])" />
+<element type="numeric" label="uh">
+	<value val="1.1038327526132408"/>
+	<symbolic val="true" />
+	<objColor r="0" g="0" b="0" alpha="0.1"/>
+</element>
+<expression label="txU2" exp="&quot;\vec{u}&quot;"/>
+<element type="text" label="txU2">
+	<show object="true" label="false" ev="40"/>
+	<objColor r="255" g="0" b="0" alpha="0"/>
+	<layer val="2"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<isLaTeX val="true"/>
+	<font serif="true" sizeM="2" size="16" style="1"/>
+	<startPoint exp="PinU"/>
+</element>
+<command name="TextPin">
+	<input a0="P" a1="pad" a2="angU" a3="uw" a4="uh"/>
+	<output a0="PinU"/>
+</command>
+<element type="point" label="PinU">
+	<show object="false" label="true" ev="4"/>
+	<objColor r="68" g="68" b="68" alpha="0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<coords x="5.259942843952657" y="-1.6229484476961353" z="1"/>
+	<pointSize val="3"/>
+	<pointStyle val="0"/>
+</element>
+<expression label="txV2" exp="&quot;\vec{v}&quot;"/>
+<element type="text" label="txV2">
+	<show object="true" label="false" ev="40"/>
+	<objColor r="0" g="0" b="255" alpha="0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<isLaTeX val="true"/>
+	<font serif="true" sizeM="2" size="16" style="1"/>
+	<startPoint exp="PinV"/>
+</element>
+<expression label="V" exp="O + v" type="point" />
+<element type="point" label="V">
+	<show object="false" label="true" ev="4"/>
+	<objColor r="68" g="68" b="68" alpha="0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<coords x="2.1213203435596424" y="2" z="1"/>
+	<pointSize val="3"/>
+	<pointStyle val="0"/>
+</element>
+<expression label="vw" exp="x(Corner[txV, 2] - Corner[txV, 1])" />
+<element type="numeric" label="vw">
+	<value val="0.8176538908246218"/>
+	<symbolic val="true" />
+	<objColor r="0" g="0" b="0" alpha="0.1"/>
+</element>
+<expression label="vh" exp="y(Corner[txV, 4] - Corner[txV, 1])" />
+<element type="numeric" label="vh">
+	<value val="1.1038327526132408"/>
+	<symbolic val="true" />
+	<objColor r="0" g="0" b="0" alpha="0.1"/>
+</element>
+<command name="TextPin">
+	<input a0="V" a1="pad" a2="angV" a3="vw" a4="vh"/>
+	<output a0="PinV"/>
+</command>
+<element type="point" label="PinV">
+	<show object="false" label="true" ev="4"/>
+	<objColor r="68" g="68" b="68" alpha="0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<coords x="2.1490575232127305" y="2.9635129806486415" z="1"/>
+	<pointSize val="3"/>
+	<pointStyle val="0"/>
+</element>
+<expression label="text3" exp="&quot;\left| \fgcolor{ff0000}{\vec{u} } \right| \left| \fgcolor{0000ff}{ \vec{v} } \right| \cos\theta = \fgcolor{660099}{ &quot; + (LaTeX[r]) + &quot;}&quot;" />
+<element type="text" label="text3">
+	<show object="true" label="false" ev="8"/>
+	<condition showObject="showCoords"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<bgColor r="255" g="255" b="255" alpha="255"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<isLaTeX val="true"/>
+	<font serif="true" sizeM="2" size="16" style="1"/>
+	<absoluteScreenLocation  x="14" y="187"/>
+</element>
+<expression label="txtv" exp="&quot;\fgcolor{0000ff}{\vec{v}}=\left(&quot; + (LaTeX[If[IsInteger[c / sqrt(a)], c / sqrt(a) + &quot;&quot;, If[IsInteger[sqrt(a)], &quot;\frac{\fgcolor{006600}{&quot; + c + &quot;}}{&quot; + (sqrt(a)) + &quot;}&quot;, &quot;\frac{\fgcolor{006600}{&quot; + c + &quot;}}{&quot; + &quot;\sqrt{\fgcolor{ff0000}{&quot; + a + &quot;}}}&quot;]]]) + &quot;,&quot; + (LaTeX[If[IsInteger[d / sqrt(b)], &quot;\fgcolor{0000ff}{&quot; + (d / sqrt(b)) + &quot;}&quot;, If[IsInteger[sqrt(b)], &quot;\frac{\fgcolor{0000ff}{&quot; + d + &quot;}}{\fgcolor{ee6600}{&quot; + (sqrt(b)) + &quot;}}&quot;, &quot;\frac{\fgcolor{0000ff}{&quot; + d + &quot;}}{&quot; + &quot;\sqrt{\fgcolor{ee6600}{&quot; + b + &quot;}}}&quot;]]]) + &quot;\right)&quot;" />
+<element type="text" label="txtv">
+	<show object="true" label="true" ev="8"/>
+	<condition showObject="showCoords"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<bgColor r="255" g="255" b="255" alpha="255"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<isLaTeX val="true"/>
+	<font serif="true" sizeM="2" size="16" style="1"/>
+	<absoluteScreenLocation  x="13" y="74"/>
+</element>
+<expression label="txTheta" exp="&quot;\theta&quot;"/>
+<element type="text" label="txTheta">
+	<show object="true" label="false" ev="40"/>
+	<condition showObject="abs(angU - angV) &gt; 15°"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<isLaTeX val="true"/>
+	<font serif="true" sizeM="1.4" size="7" style="1"/>
+	<startPoint exp="PinTheta"/>
+	<labelOffset x="-12" y="-16"/>
+</element>
+<expression label="PinTheta" exp="(1; MidAngle[angU, angV])" type="point" />
+<element type="point" label="PinTheta">
+	<show object="false" label="true" ev="4"/>
+	<objColor r="68" g="68" b="68" alpha="0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<coords x="0.9808507544548836" y="0.19476087257271615" z="1"/>
+	<coordStyle style="polar"/>
+	<pointSize val="3"/>
+	<pointStyle val="0"/>
+</element>
+<expression label="v1" exp="(b * c^(2)) + (a * d^(2))" />
+<element type="numeric" label="v1">
+	<value val="17"/>
+	<symbolic val="true" />
+	<objColor r="0" g="0" b="0" alpha="0.1"/>
+</element>
+<expression label="v2" exp="(a * b)" />
+<element type="numeric" label="v2">
+	<value val="2"/>
+	<symbolic val="true" />
+	<objColor r="0" g="0" b="0" alpha="0.1"/>
+</element>
+<command name="GCD">
+	<input a0="v1" a1="v2"/>
+	<output a0="cd"/>
+</command>
+<element type="numeric" label="cd">
+	<value val="1"/>
+	<symbolic val="true" />
+	<objColor r="0" g="0" b="0" alpha="0.1"/>
+</element>
+<expression label="v11" exp="v1 / cd" />
+<element type="numeric" label="v11">
+	<value val="17"/>
+	<symbolic val="true" />
+	<objColor r="0" g="0" b="0" alpha="0.1"/>
+</element>
+<expression label="v12" exp="v2 / cd" />
+<element type="numeric" label="v12">
+	<value val="2"/>
+	<symbolic val="true" />
+	<objColor r="0" g="0" b="0" alpha="0.1"/>
+</element>
+<expression label="vnorm2" exp="sqrt(v11 / v12)" />
+<element type="numeric" label="vnorm2">
+	<value val="2.9154759474226504"/>
+	<symbolic val="true" />
+	<objColor r="0" g="0" b="0" alpha="0.1"/>
+</element>
+<expression label="min1" exp="((a * b) * r^(2))" />
+<element type="numeric" label="min1">
+	<value val="98"/>
+	<symbolic val="true" />
+	<objColor r="0" g="0" b="0" alpha="0.1"/>
+</element>
+<expression label="min2" exp="v1" />
+<element type="numeric" label="min2">
+	<value val="17"/>
+	<symbolic val="true" />
+	<objColor r="0" g="0" b="0" alpha="0.1"/>
+</element>
+<command name="GCD">
+	<input a0="min1" a1="min2"/>
+	<output a0="mincd"/>
+</command>
+<element type="numeric" label="mincd">
+	<value val="1"/>
+	<symbolic val="true" />
+	<objColor r="0" g="0" b="0" alpha="0.1"/>
+</element>
+<expression label="min11" exp="min1 / mincd" />
+<element type="numeric" label="min11">
+	<value val="98"/>
+	<symbolic val="true" />
+	<objColor r="0" g="0" b="0" alpha="0.1"/>
+</element>
+<expression label="min12" exp="min2 / mincd" />
+<element type="numeric" label="min12">
+	<value val="17"/>
+	<symbolic val="true" />
+	<objColor r="0" g="0" b="0" alpha="0.1"/>
+</element>
+<expression label="text4" exp="&quot;\left| \fgcolor{ff0000}{\vec{u}} \right|^2 = \left( \frac{ \fgcolor{660099}{ &quot; + (LaTeX[r]) + &quot; }}{ \left| \fgcolor{0000ff}{ \vec{v} } \right| \cos\theta } \right)^2 ≥&#10;\frac{ \fgcolor{660099}{ &quot; + (LaTeX[r]) + &quot; ^2 }}{ \left| \fgcolor{0000ff}{ \vec{v} } \right|^2  } &#10;=&quot; + (LaTeX[If[IsInteger[min11 / min12], min11 / min12 + &quot;&quot;, &quot;\frac{&quot; + min11 + &quot;}{&quot; + min12 + &quot;}&quot;]]) + &quot;&quot;" />
+<element type="text" label="text4">
+	<show object="true" label="false" ev="8"/>
+	<condition showObject="showCoords"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<bgColor r="255" g="255" b="255" alpha="255"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<isLaTeX val="true"/>
+	<font serif="true" sizeM="1.4" size="7" style="1"/>
+	<absoluteScreenLocation  x="500" y="102"/>
+</element>
+<expression label="text5" exp="&quot;\left| \fgcolor{0000ff}{\vec{v}}  \right| = &quot; + (LaTeX[If[IsInteger[vnorm2], vnorm2 + &quot;&quot;, If[v12 ≟ 1, If[IsInteger[sqrt(v11)], sqrt(v11) + &quot;&quot;, &quot;\sqrt{&quot; + v11 + &quot;}&quot;], &quot;\frac{&quot; + (If[IsInteger[sqrt(v11)], sqrt(v11) + &quot;&quot;, &quot;\sqrt{&quot; + v11 + &quot;}&quot;]) + &quot;}{&quot; + (If[IsInteger[sqrt(v12)], sqrt(v12) + &quot;&quot;, &quot;\sqrt{&quot; + v12 + &quot;}&quot;]) + &quot;}&quot;]]]) + &quot;&quot;" />
+<element type="text" label="text5">
+	<show object="true" label="false" ev="8"/>
+	<condition showObject="showCoords"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<bgColor r="255" g="255" b="255" alpha="255"/>
+	<layer val="2"/>
+	<labelMode val="0"/>
+	<isLaTeX val="true"/>
+	<font serif="true" sizeM="1.4" size="7" style="1"/>
+	<absoluteScreenLocation  x="320" y="103"/>
+</element>
+</construction>
+</geogebra>

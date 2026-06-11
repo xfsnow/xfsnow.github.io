@@ -1,0 +1,990 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GeoGebra 命令验证工具</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        
+        .header {
+            text-align: center;
+            color: white;
+            margin-bottom: 30px;
+        }
+        
+        .header h1 {
+            font-size: 2rem;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        }
+        
+        .header p {
+            opacity: 0.9;
+        }
+        
+        .main-content {
+            display: grid;
+            grid-template-columns: 320px 1fr;
+            gap: 20px;
+        }
+        
+        .sidebar {
+            background: white;
+            border-radius: 16px;
+            padding: 20px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+            max-height: calc(100vh - 180px);
+            overflow-y: auto;
+        }
+        
+        .sidebar h2 {
+            font-size: 1.1rem;
+            color: #333;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #eee;
+        }
+        
+        .material-list {
+            list-style: none;
+        }
+        
+        .material-item {
+            padding: 12px 15px;
+            margin-bottom: 8px;
+            background: #f8f9fa;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+        
+        .material-item:hover {
+            background: #e9ecef;
+            border-color: #667eea;
+        }
+        
+        .material-item.active {
+            background: #667eea;
+            color: white;
+            border-color: #667eea;
+        }
+        
+        .material-item .id {
+            font-size: 0.85rem;
+            opacity: 0.7;
+            margin-bottom: 4px;
+        }
+        
+        .material-item .title {
+            font-weight: 500;
+        }
+        
+        .material-item.active .id {
+            opacity: 0.8;
+        }
+        
+        .preview-panel {
+            background: white;
+            border-radius: 16px;
+            padding: 20px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+            min-height: calc(100vh - 180px);
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .preview-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid #eee;
+        }
+        
+        .preview-header h2 {
+            font-size: 1.3rem;
+            color: #333;
+        }
+        
+        .action-buttons {
+            display: flex;
+            gap: 10px;
+        }
+        
+        .btn {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-primary {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 20px rgba(102, 126, 234, 0.4);
+        }
+        
+        .btn-secondary {
+            background: #f8f9fa;
+            color: #666;
+        }
+        
+        .btn-secondary:hover {
+            background: #e9ecef;
+        }
+        
+        .btn-outline {
+            background: transparent;
+            color: #667eea;
+            border: 1px solid #667eea;
+        }
+        
+        .btn-outline:hover {
+            background: #667eea;
+            color: white;
+        }
+        
+        .btn:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+            transform: none !important;
+        }
+        
+        .preview-content {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            overflow-y: auto;
+        }
+        
+        .ggb-wrapper {
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            width: 100%;
+            min-height: 450px;
+            background: #fff;
+            border: 1px solid #eee;
+        }
+        
+        .ggb-container {
+            width: 100%;
+            height: 450px;
+            min-height: 450px;
+        }
+        
+        .commands-textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font-family: 'Monaco', 'Menlo', monospace;
+            font-size: 14px;
+            line-height: 1.5;
+            resize: vertical;
+            box-sizing: border-box;
+        }
+        
+        .commands-textarea:focus {
+            outline: none;
+            border-color: #667eea;
+            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+        }
+        
+        .commands-panel {
+            background: #f8f9fa;
+            border-radius: 12px;
+            padding: 20px;
+        }
+        
+        .commands-panel h3 {
+            font-size: 1rem;
+            color: #555;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .commands-panel h3 span {
+            background: #667eea;
+            color: white;
+            padding: 2px 10px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+        }
+        
+        .commands-list {
+            max-height: 300px;
+            overflow-y: auto;
+        }
+        
+        .command-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 10px 12px;
+            margin-bottom: 5px;
+            background: white;
+            border-radius: 8px;
+            font-family: 'Consolas', 'Monaco', monospace;
+            font-size: 0.9rem;
+            color: #333;
+            transition: all 0.2s ease;
+        }
+        
+        .command-item:hover {
+            background: #e8f4fd;
+        }
+        
+        .command-item.executed {
+            background: #d4edda;
+            border-left: 3px solid #28a745;
+        }
+        
+        .command-item.failed {
+            background: #f8d7da;
+            border-left: 3px solid #dc3545;
+        }
+        
+        .command-index {
+            width: 24px;
+            height: 24px;
+            background: #667eea;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.75rem;
+            flex-shrink: 0;
+        }
+        
+        .command-item.executed .command-index {
+            background: #28a745;
+        }
+        
+        .command-item.failed .command-index {
+            background: #dc3545;
+        }
+        
+        .command-text {
+            flex: 1;
+            word-break: break-all;
+        }
+        
+        .command-status {
+            font-size: 0.75rem;
+            opacity: 0.6;
+            flex-shrink: 0;
+        }
+        
+        .stats-bar {
+            display: flex;
+            gap: 20px;
+            padding: 15px 20px;
+            background: #f8f9fa;
+            border-radius: 10px;
+            margin-top: auto;
+        }
+        
+        .stat-item {
+            text-align: center;
+        }
+        
+        .stat-value {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #667eea;
+        }
+        
+        .stat-label {
+            font-size: 0.8rem;
+            color: #666;
+            margin-top: 4px;
+        }
+        
+        .loading {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 400px;
+            color: #666;
+        }
+        
+        .loading::after {
+            content: '';
+            width: 40px;
+            height: 40px;
+            border: 4px solid #f3f3f3;
+            border-top: 4px solid #667eea;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            margin-right: 15px;
+        }
+        
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        
+        .empty-state {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 60px 20px;
+            color: #999;
+            text-align: center;
+        }
+        
+        .empty-state svg {
+            width: 80px;
+            height: 80px;
+            margin-bottom: 20px;
+            opacity: 0.5;
+        }
+        
+        .progress-bar {
+            height: 4px;
+            background: #eee;
+            border-radius: 2px;
+            margin-bottom: 15px;
+            overflow: hidden;
+        }
+        
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #667eea, #764ba2);
+            transition: width 0.3s ease;
+        }
+        
+        @media (max-width: 900px) {
+            .main-content {
+                grid-template-columns: 1fr;
+            }
+            
+            .sidebar {
+                max-height: 200px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>GeoGebra 命令验证工具</h1>
+            <p>验证提取的命令是否能正确绘制图形</p>
+        </div>
+        
+        <div class="main-content">
+            <div class="sidebar">
+                <h2>材料列表</h2>
+                <ul class="material-list" id="materialList">
+                    <li class="loading">加载中...</li>
+                </ul>
+            </div>
+            
+            <div class="preview-panel">
+                <div class="preview-header">
+                    <h2 id="previewTitle">选择一个材料</h2>
+                    <div class="action-buttons">
+                        <button class="btn btn-secondary" id="clearBtn" disabled>清空画板</button>
+                        <button class="btn btn-primary" id="runBtn" disabled>执行所有命令</button>
+                        <button class="btn btn-outline" id="testBtn">测试画板</button>
+                    </div>
+                </div>
+                
+                <div class="progress-bar" id="progressBar" style="display: none;">
+                    <div class="progress-fill" id="progressFill"></div>
+                </div>
+                
+                <div class="preview-content" id="previewContent">
+                    <div class="empty-state">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <polyline points="12 6 12 12 16 14"></polyline>
+                        </svg>
+                        <p>从左侧选择一个材料开始验证</p>
+                    </div>
+                </div>
+                
+                <div class="stats-bar">
+                    <div class="stat-item">
+                        <div class="stat-value" id="statTotal">0</div>
+                        <div class="stat-label">材料总数</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-value" id="statLoaded">0</div>
+                        <div class="stat-label">已加载</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-value" id="statSuccess">0</div>
+                        <div class="stat-label">成功执行</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- GeoGebra 脚本 -->
+    <script src="https://cdn.geogebra.org/apps/deployggb.js"></script>
+    
+    <script>
+        const BASE_DIR = '../../sample';
+        let currentMaterial = null;
+        let currentCommands = [];
+        let ggbApi = null;
+        let ggbApplet = null;
+        let executedCount = 0;
+        let successCount = 0;
+
+        async function loadMaterials() {
+            const list = document.getElementById('materialList');
+            list.innerHTML = '<li class="loading">加载中...</li>';
+            
+            try {
+                const response = await fetch(`${BASE_DIR}/materials.json`);
+                if (!response.ok) {
+                    throw new Error('无法加载材料列表');
+                }
+                const materials = await response.json();
+                displayMaterials(materials);
+            } catch (error) {
+                console.error('加载材料失败:', error);
+                list.innerHTML = '<li style="padding: 15px; color: #dc3545;">加载失败</li>';
+            }
+        }
+
+        function displayMaterials(materials) {
+            const list = document.getElementById('materialList');
+            document.getElementById('statTotal').textContent = materials.length;
+            
+            if (materials.length === 0) {
+                list.innerHTML = '<li style="padding: 15px; color: #999;">暂无材料</li>';
+                return;
+            }
+            
+            list.innerHTML = materials.map(m => `
+                <li class="material-item" data-id="${m.id}" data-title="${m.title}">
+                    <div class="id">${m.id}</div>
+                    <div class="title">${m.title}</div>
+                </li>
+            `).join('');
+            
+            list.querySelectorAll('.material-item').forEach(item => {
+                item.addEventListener('click', () => {
+                    selectMaterial(item.dataset.id, item.dataset.title);
+                });
+            });
+        }
+
+        async function selectMaterial(id, title) {
+            currentMaterial = id;
+            currentCommands = [];
+            executedCount = 0;
+            successCount = 0;
+            
+            document.querySelector('.material-item.active')?.classList.remove('active');
+            document.querySelector(`[data-id="${id}"]`)?.classList.add('active');
+            
+            document.getElementById('previewTitle').textContent = title;
+            document.getElementById('runBtn').disabled = true;
+            document.getElementById('clearBtn').disabled = true;
+            document.getElementById('progressBar').style.display = 'none';
+            
+            const preview = document.getElementById('previewContent');
+            preview.innerHTML = '<div class="loading">加载中...</div>';
+            
+            try {
+                const response = await fetch(`${BASE_DIR}/${id}/commands.txt`);
+                if (!response.ok) {
+                    throw new Error('无法加载命令文件');
+                }
+                const text = await response.text();
+                currentCommands = text.split('\n').filter(line => line.trim() && !line.startsWith('#'));
+                
+                displayCommands();
+            
+            // 等待 DOM 更新完成后再初始化画板
+            setTimeout(() => {
+                initGGBApplet();
+            }, 100);
+                
+                document.getElementById('statLoaded').textContent = parseInt(document.getElementById('statLoaded').textContent) + 1;
+            } catch (error) {
+                console.error('加载命令失败:', error);
+                preview.innerHTML = `
+                    <div class="empty-state">
+                        <p style="color: #dc3545;">加载命令失败: ${error.message}</p>
+                    </div>
+                `;
+            }
+        }
+
+        function displayCommands() {
+            const preview = document.getElementById('previewContent');
+            preview.innerHTML = `
+                <div class="ggb-wrapper">
+                    <div id="ggbContainer" class="ggb-container"></div>
+                </div>
+                <div class="commands-panel">
+                    <h3>提取的命令 <span>${currentCommands.length} 条</span></h3>
+                    <textarea id="commandsTextarea" class="commands-textarea" rows="10">${currentCommands.join('\n')}</textarea>
+                </div>
+            `;
+        }
+
+        let ggbLibLoaded = false;
+        let ggbLibLoading = false;
+        let ggbLoadPromise = null;
+        
+        function ensureGeoGebraLoaded() {
+            if (ggbLibLoaded) {
+                console.log('[GeoGebra] 库已加载');
+                return Promise.resolve(true);
+            }
+            
+            if (ggbLoadPromise) {
+                console.log('[GeoGebra] 库正在加载中');
+                return ggbLoadPromise;
+            }
+            
+            console.log('[GeoGebra] 开始加载库');
+            ggbLoadPromise = new Promise((resolve, reject) => {
+                const startTime = Date.now();
+                const timeout = 20000;
+                
+                const checkInterval = setInterval(() => {
+                    const ggbLoaded = typeof GGBApplet !== 'undefined' && 
+                                      typeof GGBApplet === 'function';
+                    
+                    if (ggbLoaded) {
+                        clearInterval(checkInterval);
+                        ggbLibLoaded = true;
+                        ggbLoadPromise = null;
+                        console.log('[GeoGebra] 库加载完成，耗时:', Date.now() - startTime, 'ms');
+                        resolve(true);
+                    } else if (Date.now() - startTime > timeout) {
+                        clearInterval(checkInterval);
+                        ggbLoadPromise = null;
+                        console.error('[GeoGebra] 库加载超时');
+                        reject(new Error('GeoGebra 库加载超时'));
+                    }
+                }, 200);
+            });
+            
+            return ggbLoadPromise;
+        }
+
+        let ggbAppletQueue = [];
+        let ggbAppletProcessing = false;
+        
+        function processGGBAppletQueue() {
+            if (ggbAppletProcessing || ggbAppletQueue.length === 0) return;
+            
+            ggbAppletProcessing = true;
+            const { containerId, resolve } = ggbAppletQueue.shift();
+            
+            createGGBAppletInternal(containerId).then(result => {
+                resolve(result);
+                ggbAppletProcessing = false;
+                setTimeout(() => processGGBAppletQueue(), 300);
+            }).catch(err => {
+                console.error('[GeoGebra Queue] 创建失败:', err);
+                resolve(null);
+                ggbAppletProcessing = false;
+                setTimeout(() => processGGBAppletQueue(), 300);
+            });
+        }
+        
+        function queueGGBApplet(containerId) {
+            return new Promise(resolve => {
+                ggbAppletQueue.push({ containerId, resolve });
+                processGGBAppletQueue();
+            });
+        }
+
+        async function createGGBAppletInternal(containerId) {
+            const container = document.getElementById(containerId);
+            if (!container) {
+                console.error('[GeoGebra] 容器不存在');
+                return null;
+            }
+            
+            try {
+                await ensureGeoGebraLoaded();
+            } catch (e) {
+                console.error('[GeoGebra] 库加载失败:', e);
+                return null;
+            }
+
+            const initWidth = Math.max(container.clientWidth || 600, 320);
+            const initHeight = 450;
+
+            const params = {
+                id: containerId,
+                width: initWidth,
+                height: initHeight,
+                showToolBar: false,
+                showAlgebraInput: false,
+                showMenuBar: false,
+                appName: "classic",
+                language: "zh-CN",
+                enableLabelDrags: false,
+                enableShiftDragZoom: true,
+                showZoomButtons: true,
+                capturingThreshold: null,
+                useBrowserForJS: false,
+                xmin: -15,
+                xmax: 15,
+                ymin: -15,
+                ymax: 15
+            };
+
+            try {
+                console.log('[GeoGebra] 创建 applet 实例');
+                const applet = new GGBApplet(params, '5.0', containerId);
+                
+                params.appletOnLoad = function(api) {
+                    console.log('[GeoGebra] applet 加载完成');
+                    ggbApi = api;
+                    try {
+                        if (typeof api.setErrorDialogsActive === 'function') {
+                            api.setErrorDialogsActive(false);
+                        }
+                    } catch(e) {}
+                    
+                    document.getElementById('runBtn').disabled = false;
+                    document.getElementById('clearBtn').disabled = false;
+                };
+                
+                console.log('[GeoGebra] 注入容器');
+                applet.inject(containerId, 'preferHTML5');
+                
+                return applet;
+            } catch (e) {
+                console.error('[GeoGebra] 创建画板失败:', e);
+                return null;
+            }
+        }
+
+        function initGGBApplet() {
+            const container = document.getElementById('ggbContainer');
+            if (!container) {
+                console.error('[GeoGebra] 容器元素不存在');
+                return;
+            }
+            
+            // 显示加载状态
+            container.innerHTML = '<div style="height: 450px; display: flex; align-items: center; justify-content: center; color: #667eea;">正在加载 GeoGebra 画板...</div>';
+            
+            queueGGBApplet('ggbContainer').then(applet => {
+                if (!applet) {
+                    container.innerHTML = '<div style="height: 450px; display: flex; align-items: center; justify-content: center; color: #dc3545;">无法创建 GeoGebra 画板，请检查浏览器控制台</div>';
+                }
+            });
+        }
+
+        async function runAllCommands() {
+            if (!ggbApi) {
+                alert('GeoGebra 画板尚未加载完成');
+                return;
+            }
+            
+            // 等待 API 完全就绪
+            await waitForGGBReady();
+            
+            // 从 Textarea 读取命令
+            const textarea = document.getElementById('commandsTextarea');
+            if (!textarea) return;
+            
+            const commands = textarea.value.split('\n').filter(line => line.trim() && !line.startsWith('#'));
+            if (commands.length === 0) {
+                alert('没有可执行的命令');
+                return;
+            }
+            
+            document.getElementById('runBtn').disabled = true;
+            document.getElementById('clearBtn').disabled = true;
+            document.getElementById('progressBar').style.display = 'block';
+            
+            executedCount = 0;
+            successCount = 0;
+            
+            // 执行命令前清空画板
+            try {
+                ggbApi.reset();
+                console.log('[命令执行] 已清空画板');
+            } catch (e) {
+                console.error('[命令执行] 清空画板失败:', e);
+            }
+            
+            for (let i = 0; i < commands.length; i++) {
+                await runCommand(commands[i], i, commands.length);
+                
+                const progress = ((i + 1) / commands.length) * 100;
+                document.getElementById('progressFill').style.width = `${progress}%`;
+                
+                await new Promise(r => setTimeout(r, 150));
+            }
+            
+            // 设置坐标轴比例
+            try {
+                if (typeof ggbApi.evalCommand === 'function') {
+                    ggbApi.evalCommand("SetAxesRatio(1, 1)");
+                }
+            } catch (e) {
+                console.error('[命令执行] 设置坐标轴比例失败:', e);
+            }
+            
+            document.getElementById('runBtn').disabled = false;
+            document.getElementById('clearBtn').disabled = false;
+            document.getElementById('progressBar').style.display = 'none';
+            document.getElementById('statSuccess').textContent = successCount;
+            
+            console.log(`[命令执行] 完成: ${successCount}/${commands.length} 条命令成功`);
+        }
+        
+        async function waitForGGBReady() {
+            return new Promise((resolve) => {
+                const startTime = Date.now();
+                const timeout = 10000;
+                
+                const checkInterval = setInterval(() => {
+                    if (!ggbApi) return;
+                    
+                    try {
+                        ggbApi.evalCommand('testReady=(0,0)');
+                        ggbApi.evalCommand('Delete(testReady)');
+                        clearInterval(checkInterval);
+                        console.log('[GeoGebra] API 就绪');
+                        resolve();
+                    } catch (e) {
+                        if (Date.now() - startTime > timeout) {
+                            clearInterval(checkInterval);
+                            console.error('[GeoGebra] API 就绪超时');
+                            resolve();
+                        }
+                    }
+                }, 200);
+            });
+        }
+
+        async function runCommand(cmd, index, total) {
+            try {
+                console.log(`[命令执行] 执行命令 ${index + 1}/${total}: ${cmd}`);
+                
+                // 清理命令（去除首尾空格和可能的引号）
+                let cleanCmd = cmd.trim().replace(/^["']|["']$/g, '');
+                
+                // 将 GeoGebra 格式的方括号转换为圆括号
+                cleanCmd = convertGeoGebraSyntax(cleanCmd);
+                
+                // 尝试直接执行
+                ggbApi.evalCommand(cleanCmd);
+                successCount++;
+                console.log(`[命令执行] 命令 ${index + 1}/${total} 执行成功`);
+            } catch (error) {
+                console.error(`[命令执行] 命令 ${index + 1}/${total} 执行失败:`, error.message);
+                
+                // 尝试用 evalCommandCAS 执行
+                try {
+                    let fixedCmd = cmd.trim().replace(/^["']|["']$/g, '');
+                    fixedCmd = convertGeoGebraSyntax(fixedCmd);
+                    
+                    ggbApi.evalCommandCAS(fixedCmd);
+                    successCount++;
+                    console.log(`[命令执行] 命令 ${index + 1}/${total} 通过 CAS 模式执行成功: ${fixedCmd}`);
+                } catch (e) {
+                    console.error(`[命令执行] 命令 ${index + 1}/${total} 所有模式都执行失败:`, e.message);
+                }
+            }
+            executedCount++;
+        }
+        
+        function convertGeoGebraSyntax(cmd) {
+            // 将 GeoGebra 命令中的方括号转换为圆括号
+            // 但要注意不要转换坐标中的方括号，如 [0, 0]
+            let result = cmd;
+            
+            // 匹配命令名后的方括号，如 Circle[0, C] -> Circle(0, C)
+            // 使用正则表达式匹配命令名（字母开头，后面跟着可选的数字或下划线）后面的方括号
+            result = result.replace(/([A-Za-z][A-Za-z0-9_]*)\[/g, '$1(');
+            
+            // 匹配命令参数结束的方括号（不在坐标内的）
+            // 这是一个简化的处理，更复杂的情况需要更复杂的解析
+            const stack = [];
+            let converted = '';
+            
+            for (let i = 0; i < result.length; i++) {
+                const char = result[i];
+                
+                if (char === '(') {
+                    stack.push('(');
+                    converted += char;
+                } else if (char === ')') {
+                    stack.pop();
+                    converted += char;
+                } else if (char === '[') {
+                    if (stack.length > 0) {
+                        // 在圆括号内，可能是坐标，保持方括号
+                        converted += char;
+                    } else {
+                        // 在圆括号外，转换为圆括号
+                        stack.push('[');
+                        converted += '(';
+                    }
+                } else if (char === ']') {
+                    if (stack[stack.length - 1] === '[') {
+                        stack.pop();
+                        converted += ')';
+                    } else {
+                        converted += char;
+                    }
+                } else {
+                    converted += char;
+                }
+            }
+            
+            return converted;
+        }
+
+        function clearBoard() {
+            if (!ggbApi) return;
+            
+            try {
+                ggbApi.reset();
+                document.querySelectorAll('.command-item').forEach(item => {
+                    item.classList.remove('executed', 'failed');
+                    item.querySelector('.command-status').textContent = '';
+                });
+                executedCount = 0;
+                successCount = 0;
+            } catch (error) {
+                console.error('清空画板失败:', error);
+            }
+        }
+
+        function escapeHtml(text) {
+            const div = document.createElement('div');
+            div.textContent = text;
+            return div.innerHTML;
+        }
+
+        // 初始化
+        document.addEventListener('DOMContentLoaded', () => {
+            loadMaterials();
+            
+            document.getElementById('runBtn').addEventListener('click', runAllCommands);
+            document.getElementById('clearBtn').addEventListener('click', clearBoard);
+            document.getElementById('testBtn').addEventListener('click', testGGBApplet);
+        });
+        
+        function testGGBApplet() {
+            console.log('[测试] 开始测试 GeoGebra 画板');
+            
+            // 创建测试面板
+            const testPanel = document.createElement('div');
+            testPanel.id = 'testPanel';
+            testPanel.innerHTML = `
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+                    <h3>GeoGebra 画板测试</h3>
+                    <button id="closeTestBtn" style="padding: 5px 10px; background: #f5f5f5; border: 1px solid #ddd; border-radius: 4px; cursor: pointer;">关闭</button>
+                </div>
+                <div id="testGGBContainer" style="width: 500px; height: 400px; border: 1px solid #ccc;"></div>
+                <div style="margin-top: 15px;">
+                    <button id="testDrawBtn" disabled style="margin-right: 10px;">绘制测试图形</button>
+                    <button id="testClearBtn" disabled>清空画板</button>
+                </div>
+            `;
+            testPanel.style.padding = '20px';
+            testPanel.style.position = 'fixed';
+            testPanel.style.top = '50%';
+            testPanel.style.left = '50%';
+            testPanel.style.transform = 'translate(-50%, -50%)';
+            testPanel.style.background = '#fff';
+            testPanel.style.border = '1px solid #ccc';
+            testPanel.style.borderRadius = '8px';
+            testPanel.style.zIndex = '1000';
+            
+            document.body.appendChild(testPanel);
+            
+            // 关闭按钮事件
+            document.getElementById('closeTestBtn').addEventListener('click', () => {
+                document.body.removeChild(testPanel);
+            });
+            
+            // 初始化测试画板
+            setTimeout(() => {
+                const testContainer = document.getElementById('testGGBContainer');
+                if (testContainer) {
+                    testContainer.innerHTML = '<div style="height: 400px; display: flex; align-items: center; justify-content: center;">正在加载...</div>';
+                    
+                    queueGGBApplet('testGGBContainer').then(applet => {
+                        if (applet) {
+                            console.log('[测试] 画板创建成功');
+                            document.getElementById('testDrawBtn').disabled = false;
+                            document.getElementById('testClearBtn').disabled = false;
+                        } else {
+                            console.error('[测试] 画板创建失败');
+                            testContainer.innerHTML = '<div style="height: 400px; display: flex; align-items: center; justify-content: center; color: red;">创建失败</div>';
+                        }
+                    });
+                }
+            }, 100);
+            
+            document.getElementById('testDrawBtn').addEventListener('click', () => {
+                if (ggbApi) {
+                    try {
+                        ggbApi.evalCommand('Circle((0,0), 3)');
+                        ggbApi.evalCommand('Point((3,0))');
+                        ggbApi.evalCommand('Line((-5,0), (5,0))');
+                        console.log('[测试] 命令执行成功');
+                    } catch (e) {
+                        console.error('[测试] 命令执行失败:', e);
+                    }
+                }
+            });
+            
+            document.getElementById('testClearBtn').addEventListener('click', () => {
+                if (ggbApi) {
+                    try {
+                        ggbApi.reset();
+                        console.log('[测试] 画板已清空');
+                    } catch (e) {
+                        console.error('[测试] 清空失败:', e);
+                    }
+                }
+            });
+        }
+    </script>
+</body>
+</html>

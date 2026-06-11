@@ -1,0 +1,816 @@
+<?xml version="1.0" encoding="utf-8"?>
+<geogebra format="5.0" version="5.0.609.0" app="classic" platform="w" id="6940f5fd-412d-4bab-9fc4-5ee6f9dec78d"  xsi:noNamespaceSchemaLocation="http://www.geogebra.org/apps/xsd/ggb.xsd" xmlns="" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" >
+<gui>
+	<window width="980" height="620" />
+	<perspectives>
+<perspective id="tmp">
+	<panes>
+		<pane location="" divider="0.20816326530612245" orientation="1" />
+	</panes>
+	<views>
+		<view id="4" toolbar="0 || 2020 , 2021 , 2022 , 66 || 2001 , 2003 , 2002 , 2004 , 2005 || 2040 , 2041 , 2042 , 2044 , 2043" visible="false" inframe="false" stylebar="false" location="1,0" size="400" window="747,253,364,423" />
+		<view id="1" visible="true" inframe="false" stylebar="true" location="1" size="978" window="558,188,465,548" />
+		<view id="2" visible="false" inframe="false" stylebar="true" location="3" size="204" tab="ALGEBRA" window="100,100,250,400" />
+		<view id="8" toolbar="1001 | 1002 | 1003  || 1005 | 1004 || 1006 | 1007 | 1010 | 1011 || 1008 1009 || 6" visible="false" inframe="false" stylebar="false" location="1" size="150" window="50,50,500,500" />
+		<view id="16" visible="false" inframe="false" stylebar="false" location="1" size="255" window="497,141,588,675" />
+		<view id="32" visible="false" inframe="false" stylebar="true" location="1" size="150" window="50,50,500,500" />
+		<view id="64" toolbar="0" visible="false" inframe="false" stylebar="false" location="1" size="150" window="50,50,500,500" />
+		<view id="128" visible="false" inframe="false" stylebar="false" location="1" size="480" window="50,50,500,500" />
+		<view id="4097" visible="false" inframe="false" stylebar="true" location="1" size="150" window="285,135,723,500" />
+		<view id="70" toolbar="0 || 2020 || 2021 || 2022" visible="false" inframe="false" stylebar="true" location="1" size="150" window="50,50,500,500" />
+		<view id="512" toolbar="0 | 1 501 5 19 , 67 | 2 15 45 18 , 7 37 | 514 3 9 , 13 44 , 47 | 16 51 | 551 550 11 ,  20 22 21 23 , 55 56 57 , 12 | 69 | 510 511 , 512 513 | 533 531 , 534 532 , 522 523 , 537 536 , 535 , 538 | 521 520 | 36 , 38 49 560 | 571 30 29 570 31 33 | 17 | 540 40 41 42 , 27 28 35 , 6 , 502" visible="false" inframe="false" stylebar="false" location="1" size="300" window="50,50,500,500" />
+	</views>
+	<toolbar show="true" items="0 || 40 | 41 | 42" position="1" help="false" />
+	<input show="false" cmd="true" top="false" />
+	<dockBar show="false" east="false" />
+</perspective>
+	</perspectives>
+	<labelingStyle  val="2"/>
+	<font  size="18"/>
+</gui>
+<euclidianView>
+	<viewNumber viewNo="1"/>
+	<size  width="978" height="565"/>
+	<coordSystem xZero="281.5980060853479" yZero="385.7473747850682" scale="44.95783833841662" yscale="44.95783833841662"/>
+	<evSettings axes="false" grid="false" gridIsBold="false" pointCapturing="1" rightAngleStyle="1" checkboxSize="26" gridType="0"/>
+	<bgColor r="255" g="255" b="255"/>
+	<axesColor r="0" g="0" b="0"/>
+	<gridColor r="192" g="192" b="192"/>
+	<lineStyle axes="1" grid="10"/>
+	<axis id="0" show="false" label="" unitLabel="" tickStyle="1" showNumbers="true"/>
+	<axis id="1" show="false" label="" unitLabel="" tickStyle="1" showNumbers="true"/>
+	<grid distX="1" distY="1" distTheta="0.5235987755982988"/>
+</euclidianView>
+<kernel>
+	<continuous val="false"/>
+	<usePathAndRegionParameters val="true"/>
+	<decimals val="2"/>
+	<angleUnit val="degree"/>
+	<algebraStyle val="0" spreadsheet="0"/>
+	<coordStyle val="0"/>
+</kernel>
+<tableview min="-2" max="2" step="1"/>
+<scripting blocked="false" disabled="false"/>
+<construction title="" author="" date="">
+<element type="numeric" label="ruler">
+	<value val="7"/>
+	<show object="false" label="false"/>
+	<objColor r="0" g="0" b="0" alpha="0.10000000149011612"/>
+	<layer val="1"/>
+	<labelMode val="1"/>
+	<animation step="1" speed="1" type="0" playing="false"/>
+</element>
+<element type="point" label="A_1">
+	<show object="false" label="true"/>
+	<objColor r="0" g="0" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<animation step="1" speed="1" type="1" playing="false"/>
+	<coords x="-5" y="2" z="1"/>
+	<pointSize val="3"/>
+	<pointStyle val="0"/>
+</element>
+<command name="Point">
+	<input a0="Circle[A_1, ruler]"/>
+	<output a0="A_6"/>
+</command>
+<element type="point" label="A_6">
+	<show object="true" label="false"/>
+	<condition showObject="g ∨ h"/>
+	<objColor r="0" g="0" b="255" alpha="0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<animation step="1" speed="1" type="1" playing="false"/>
+	<coords x="2" y="2" z="1"/>
+	<pointSize val="3"/>
+	<pointStyle val="0"/>
+</element>
+<command name="UnitOrthogonalVector">
+	<input a0="Segment[A_1, A_6]"/>
+	<output a0="v"/>
+</command>
+<element type="vector" label="v">
+	<show object="false" label="false"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<coords x="0" y="1" z="0"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<coordStyle style="cartesian"/>
+	<startPoint exp="A_1"/>
+</element>
+<command name="UnitVector">
+	<input a0="Segment[A_1, A_6]"/>
+	<output a0="u"/>
+</command>
+<element type="vector" label="u">
+	<show object="false" label="false"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<coords x="1" y="0" z="0"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<coordStyle style="cartesian"/>
+	<startPoint exp="A_1"/>
+</element>
+<expression label="A_2" exp="A_1 - (0.5 * u)" type="point" />
+<element type="point" label="A_2">
+	<show object="false" label="false"/>
+	<objColor r="64" g="64" b="64" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<coords x="-5.5" y="2" z="1"/>
+	<pointSize val="3"/>
+	<pointStyle val="0"/>
+</element>
+<expression label="A_3" exp="A_2 - (1.5 * v)" type="point" />
+<element type="point" label="A_3">
+	<show object="false" label="false"/>
+	<objColor r="64" g="64" b="64" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<coords x="-5.5" y="0.5" z="1"/>
+	<pointSize val="3"/>
+	<pointStyle val="0"/>
+</element>
+<element type="point" label="A">
+	<show object="false" label="false"/>
+	<objColor r="0" g="0" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<animation step="0.1" speed="1" type="1" playing="false"/>
+	<coords x="7" y="6" z="1"/>
+	<pointSize val="5"/>
+	<pointStyle val="0"/>
+</element>
+<command name="Point">
+	<input a0="Circle[A, 5]"/>
+	<output a0="B"/>
+</command>
+<element type="point" label="B">
+	<show object="false" label="false"/>
+	<objColor r="0" g="255" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelOffset x="-24" y="-4"/>
+	<labelMode val="0"/>
+	<animation step="1" speed="1" type="1" playing="false"/>
+	<coords x="4.000000000000001" y="1.9999999999999991" z="1"/>
+	<pointSize val="4"/>
+	<pointStyle val="0"/>
+</element>
+<expression label="C" exp="A + (6.4 * UnitVector[Segment[A, B]]) + (4.8 * UnitOrthogonalVector[Segment[A, B]])" type="point" />
+<element type="point" label="C">
+	<show object="false" label="false"/>
+	<objColor r="0" g="0" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<coords x="7.000000000000002" y="-2.0000000000000004" z="1"/>
+	<pointSize val="3"/>
+	<pointStyle val="0"/>
+</element>
+<expression label="D" exp="A + (1.4 * UnitVector[Segment[A, B]]) + (4.8 * UnitOrthogonalVector[Segment[A, B]])" type="point" />
+<element type="point" label="D">
+	<show object="false" label="false"/>
+	<objColor r="0" g="0" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<coords x="10" y="2.0000000000000004" z="1"/>
+	<pointSize val="3"/>
+	<pointStyle val="0"/>
+</element>
+<command name="Polygon">
+	<input a0="A" a1="B" a2="C" a3="D"/>
+	<output a0="poly1" a1="a" a2="b" a3="c" a4="d"/>
+</command>
+<element type="polygon" label="poly1">
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<show object="false" label="false"/>
+	<condition showObject="o1 ∧ o2"/>
+	<objColor r="0" g="0" b="255" alpha="0.10000000149011612"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+</element>
+<element type="segment" label="a">
+	<show object="true" label="false"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<auxiliary val="false"/>
+	<coords x="4.000000000000001" y="-2.999999999999999" z="-10.000000000000014"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment" label="b">
+	<show object="true" label="false"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<auxiliary val="false"/>
+	<coords x="3.9999999999999996" y="3.000000000000001" z="-22"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment" label="c">
+	<show object="true" label="false"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<auxiliary val="false"/>
+	<coords x="-4.000000000000001" y="2.9999999999999982" z="34.000000000000014"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment" label="d">
+	<show object="true" label="false"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<auxiliary val="false"/>
+	<coords x="-3.9999999999999996" y="-3" z="46"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<command name="Point">
+	<input a0="Segment[A, C]"/>
+	<output a0="A&apos;"/>
+</command>
+<element type="point" label="A&apos;">
+	<show object="true" label="false"/>
+	<condition showObject="e ∧ (¬f) ∧ o2"/>
+	<objColor r="255" g="0" b="0" alpha="0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<animation step="1" speed="1" type="1" playing="false"/>
+	<coords x="7" y="6" z="1"/>
+	<pointSize val="5"/>
+	<pointStyle val="0"/>
+</element>
+<command name="Polygon">
+	<input a0="A&apos;" a1="B" a2="D"/>
+	<output a0="poly2" a1="d_1" a2="a&apos;" a3="b_1"/>
+</command>
+<element type="polygon" label="poly2">
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<show object="true" label="false"/>
+	<condition showObject="(¬o1) ∧ o2"/>
+	<objColor r="0" g="0" b="255" alpha="0.1" dynamicr="0" dynamicg="0" dynamicb="1" dynamica="0.1 + (0.15 * (1 - ((s - 0.5) / 0.5)^(2)))" colorSpace="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+</element>
+<element type="segment" label="d_1">
+	<show object="true" label="false"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<auxiliary val="false"/>
+	<coords x="4.000000000000001" y="-2.999999999999999" z="-10.000000000000014"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment" label="a&apos;">
+	<show object="true" label="false"/>
+	<condition showObject="(¬o1) ∧ o2"/>
+	<objColor r="0" g="0" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<auxiliary val="false"/>
+	<coords x="-1.3322676295501878e-15" y="5.999999999999999" z="-11.99999999999999"/>
+	<lineStyle thickness="2" type="10" typeHidden="1"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment" label="b_1">
+	<show object="true" label="false"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<auxiliary val="false"/>
+	<coords x="-3.9999999999999996" y="-3" z="46"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<expression label="s" exp="Distance[A, A&apos;] / Distance[A, C]" />
+<element type="numeric" label="s">
+	<value val="0"/>
+	<objColor r="0" g="0" b="0" alpha="0.10000000149011612"/>
+</element>
+<command name="Polygon">
+	<input a0="B" a1="C" a2="D"/>
+	<output a0="poly3" a1="d_2" a2="b_2" a3="c_1"/>
+</command>
+<element type="polygon" label="poly3">
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<show object="true" label="false"/>
+	<condition showObject="(¬o1) ∧ o2"/>
+	<objColor r="0" g="0" b="255" alpha="0.1" dynamicr="0" dynamicg="0" dynamicb="1" dynamica="0.1" colorSpace="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+</element>
+<element type="segment" label="d_2">
+	<show object="false" label="false"/>
+	<objColor r="0" g="0" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<auxiliary val="false"/>
+	<coords x="3.9999999999999996" y="3.000000000000001" z="-22"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment" label="b_2">
+	<show object="false" label="false"/>
+	<objColor r="0" g="0" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<auxiliary val="false"/>
+	<coords x="-4.000000000000001" y="2.9999999999999982" z="34.000000000000014"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment" label="c_1">
+	<show object="false" label="false"/>
+	<objColor r="0" g="0" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<auxiliary val="false"/>
+	<coords x="1.3322676295501878e-15" y="-5.999999999999999" z="11.99999999999999"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<command name="Point">
+	<input a0="Segment[B, D]"/>
+	<output a0="B&apos;"/>
+</command>
+<element type="point" label="B&apos;">
+	<show object="true" label="false"/>
+	<condition showObject="e ∧ (¬f) ∧ o1"/>
+	<objColor r="255" g="0" b="0" alpha="0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<animation step="0.1" speed="1" type="1" playing="false"/>
+	<coords x="4.000000000000001" y="1.9999999999999991" z="1"/>
+	<pointSize val="5"/>
+	<pointStyle val="0"/>
+</element>
+<command name="Polygon">
+	<input a0="B&apos;" a1="C" a2="A"/>
+	<output a0="poly4" a1="a_1" a2="b&apos;" a3="c_2"/>
+</command>
+<element type="polygon" label="poly4">
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<show object="true" label="false"/>
+	<condition showObject="(¬o2) ∧ o1"/>
+	<objColor r="0" g="0" b="255" alpha="0.1" dynamicr="0" dynamicg="0" dynamicb="1" dynamica="0.1 + (0.15 * (1 - ((t - 0.5) / 0.5)^(2)))" colorSpace="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+</element>
+<element type="segment" label="a_1">
+	<show object="true" label="false"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<auxiliary val="false"/>
+	<coords x="3.9999999999999996" y="3.000000000000001" z="-22"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment" label="b&apos;">
+	<show object="true" label="false"/>
+	<condition showObject="(¬o2) ∧ o1"/>
+	<objColor r="0" g="0" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<auxiliary val="false"/>
+	<coords x="-8" y="-1.7763568394002505e-15" z="56.000000000000014"/>
+	<lineStyle thickness="2" type="10" typeHidden="1"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment" label="c_2">
+	<show object="true" label="false"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<auxiliary val="false"/>
+	<coords x="4.000000000000001" y="-2.999999999999999" z="-10.000000000000014"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<expression label="t" exp="Distance[B, B&apos;] / Distance[B, D]" />
+<element type="numeric" label="t">
+	<value val="0"/>
+	<objColor r="0" g="0" b="0" alpha="0.10000000149011612"/>
+</element>
+<command name="Polygon">
+	<input a0="A" a1="C" a2="D"/>
+	<output a0="poly5" a1="d_3" a2="a_2" a3="c_3"/>
+</command>
+<element type="polygon" label="poly5">
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<show object="true" label="false"/>
+	<condition showObject="(¬o2) ∧ o1"/>
+	<objColor r="0" g="0" b="255" alpha="0.1" dynamicr="0" dynamicg="0" dynamicb="1" dynamica="0.1" colorSpace="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+</element>
+<element type="segment" label="d_3">
+	<show object="false" label="false"/>
+	<objColor r="0" g="0" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<auxiliary val="false"/>
+	<coords x="8" y="1.7763568394002505e-15" z="-56.000000000000014"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment" label="a_2">
+	<show object="false" label="false"/>
+	<objColor r="0" g="0" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<auxiliary val="false"/>
+	<coords x="-4.000000000000001" y="2.9999999999999982" z="34.000000000000014"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment" label="c_3">
+	<show object="false" label="false"/>
+	<objColor r="0" g="0" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<auxiliary val="false"/>
+	<coords x="-3.9999999999999996" y="-3" z="46"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<command name="If">
+	<input a0="A ≟ A&apos;" a1="true" a2="false"/>
+	<output a0="o1"/>
+</command>
+<element type="boolean" label="o1">
+	<value val="true"/>
+	<show object="false" label="false"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<checkbox fixed="true"/>
+</element>
+<command name="If">
+	<input a0="B ≟ B&apos;" a1="true" a2="false"/>
+	<output a0="o2"/>
+</command>
+<element type="boolean" label="o2">
+	<value val="true"/>
+	<show object="false" label="false"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<checkbox fixed="true"/>
+</element>
+<element type="boolean" label="e">
+	<value val="false"/>
+	<show object="true" label="true"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelOffset x="12" y="68"/>
+	<labelMode val="0"/>
+	<checkbox fixed="true"/>
+	<ggbscript onUpdate="SetValue[f, !e]"/>
+	<caption val="角"/>
+</element>
+<element type="boolean" label="f">
+	<value val="true"/>
+	<show object="false" label="true"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelOffset x="60" y="210"/>
+	<labelMode val="0"/>
+	<checkbox fixed="true"/>
+	<ggbscript onUpdate="SetValue[e, !f]"/>
+	<caption val="轉動"/>
+</element>
+<command name="Angle">
+	<input a0="B" a1="A" a2="D"/>
+	<output a0="α"/>
+</command>
+<element type="angle" label="α">
+	<angleStyle val="1"/>
+	<value val="1.2870022175865685"/>
+	<show object="true" label="false"/>
+	<condition showObject="e"/>
+	<objColor r="255" g="0" b="0" alpha="1"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<arcSize val="30"/>
+</element>
+<command name="Angle">
+	<input a0="A" a1="B" a2="C"/>
+	<output a0="β"/>
+</command>
+<element type="angle" label="β">
+	<angleStyle val="1"/>
+	<value val="4.428594871176362"/>
+	<show object="true" label="false"/>
+	<condition showObject="e"/>
+	<objColor r="0" g="0" b="255" alpha="1"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<arcSize val="30"/>
+</element>
+<command name="Angle">
+	<input a0="B" a1="C" a2="D"/>
+	<output a0="γ"/>
+</command>
+<element type="angle" label="γ">
+	<angleStyle val="1"/>
+	<value val="4.996183089593018"/>
+	<show object="true" label="false"/>
+	<condition showObject="e"/>
+	<objColor r="255" g="255" b="0" alpha="1"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<arcSize val="30"/>
+</element>
+<expression label="A_4" exp="A_3 + ((ruler + 1) * u)" type="point" />
+<element type="point" label="A_4">
+	<show object="false" label="false"/>
+	<objColor r="64" g="64" b="64" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<coords x="2.5" y="0.5" z="1"/>
+	<pointSize val="3"/>
+	<pointStyle val="0"/>
+</element>
+<expression label="A_5" exp="A_4 + (1.5 * v)" type="point" />
+<element type="point" label="A_5">
+	<show object="false" label="false"/>
+	<objColor r="64" g="64" b="64" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<coords x="2.5" y="2" z="1"/>
+	<pointSize val="3"/>
+	<pointStyle val="0"/>
+</element>
+<command name="Polygon">
+	<input a0="A_1" a1="A_2" a2="A_3" a3="A_4" a4="A_5" a5="A_6"/>
+	<output a0="poly6" a1="a_3" a2="a_4" a3="a_5" a4="a_6" a5="a_7" a6="a_8"/>
+</command>
+<element type="polygon" label="poly6">
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<show object="true" label="false"/>
+	<condition showObject="g ∨ h"/>
+	<objColor r="0" g="0" b="0" alpha="0.10000000149011612"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+</element>
+<element type="segment" label="a_3">
+	<show object="true" label="false"/>
+	<condition showObject="g ∨ h"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<auxiliary val="false"/>
+	<coords x="0" y="-0.5" z="1"/>
+	<lineStyle thickness="3" type="0" typeHidden="1"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment" label="a_4">
+	<show object="true" label="false"/>
+	<condition showObject="g ∨ h"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<auxiliary val="false"/>
+	<coords x="1.5" y="0" z="8.25"/>
+	<lineStyle thickness="3" type="0" typeHidden="1"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment" label="a_5">
+	<show object="true" label="false"/>
+	<condition showObject="g ∨ h"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<auxiliary val="false"/>
+	<coords x="0" y="8" z="-4"/>
+	<lineStyle thickness="3" type="0" typeHidden="1"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment" label="a_6">
+	<show object="true" label="false"/>
+	<condition showObject="g ∨ h"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<auxiliary val="false"/>
+	<coords x="-1.5" y="0" z="3.75"/>
+	<lineStyle thickness="3" type="0" typeHidden="1"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment" label="a_7">
+	<show object="true" label="false"/>
+	<condition showObject="g ∨ h"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<auxiliary val="false"/>
+	<coords x="0" y="-0.5" z="1"/>
+	<lineStyle thickness="3" type="0" typeHidden="1"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment" label="a_8">
+	<show object="true" label="false"/>
+	<condition showObject="g ∨ h"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<auxiliary val="false"/>
+	<coords x="0" y="-7" z="14"/>
+	<lineStyle thickness="3" type="0" typeHidden="1"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<expression label="text2" exp="&quot;拖拉紅點對摺菱形，看看對角是否相等。&quot;"/>
+<element type="text" label="text2">
+	<show object="true" label="false"/>
+	<condition showObject="e"/>
+	<objColor r="255" g="0" b="0" alpha="0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<absoluteScreenLocation x="106" y="84"/>
+</element>
+<element type="boolean" label="g">
+	<value val="false"/>
+	<show object="true" label="true"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="1"/>
+	<labelOffset x="12" y="23"/>
+	<labelMode val="0"/>
+	<checkbox fixed="true"/>
+	<caption val="邊長"/>
+</element>
+<element type="boolean" label="h">
+	<value val="false"/>
+	<show object="true" label="true"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="1"/>
+	<labelOffset x="12" y="113"/>
+	<labelMode val="0"/>
+	<checkbox fixed="true"/>
+	<caption val="平行邊"/>
+</element>
+<expression label="text3" exp="&quot;利用直尺，看看有沒有相等的邊。&quot;"/>
+<element type="text" label="text3">
+	<show object="true" label="false"/>
+	<condition showObject="g"/>
+	<objColor r="0" g="0" b="255" alpha="0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<absoluteScreenLocation x="107" y="39"/>
+</element>
+<expression label="text4" exp="&quot;利用直尺，看看有沒有平行邊。&quot;"/>
+<element type="text" label="text4">
+	<show object="true" label="false"/>
+	<condition showObject="h"/>
+	<objColor r="0" g="0" b="255" alpha="0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<absoluteScreenLocation x="107" y="129"/>
+</element>
+<command name="Angle">
+	<input a0="B" a1="A" a2="D"/>
+	<output a0="α_1"/>
+</command>
+<element type="angle" label="α_1">
+	<angleStyle val="1"/>
+	<value val="1.2870022175865685"/>
+	<show object="true" label="false"/>
+	<condition showObject="e"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<arcSize val="30"/>
+</element>
+<command name="Angle">
+	<input a0="A" a1="B" a2="C"/>
+	<output a0="β_1"/>
+</command>
+<element type="angle" label="β_1">
+	<angleStyle val="1"/>
+	<value val="4.428594871176362"/>
+	<show object="true" label="false"/>
+	<condition showObject="e"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<arcSize val="30"/>
+</element>
+<command name="Angle">
+	<input a0="B" a1="C" a2="D"/>
+	<output a0="γ_1"/>
+</command>
+<element type="angle" label="γ_1">
+	<angleStyle val="1"/>
+	<value val="4.996183089593018"/>
+	<show object="true" label="false"/>
+	<condition showObject="e"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<arcSize val="30"/>
+</element>
+<command name="Angle">
+	<input a0="A" a1="D" a2="C"/>
+	<output a0="δ"/>
+</command>
+<element type="angle" label="δ">
+	<angleStyle val="1"/>
+	<value val="1.8545904360032248"/>
+	<show object="true" label="false"/>
+	<condition showObject="e"/>
+	<objColor r="0" g="255" b="0" alpha="1"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<arcSize val="30"/>
+</element>
+<command name="Angle">
+	<input a0="A" a1="D" a2="C"/>
+	<output a0="δ_1"/>
+</command>
+<element type="angle" label="δ_1">
+	<angleStyle val="1"/>
+	<value val="1.8545904360032248"/>
+	<show object="true" label="false"/>
+	<condition showObject="e"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<arcSize val="30"/>
+</element>
+<element type="image" label="pic1">
+	<file name="de0201444eae83d8d869a5f33c8428d9\pic7.png"/>
+	<inBackground val="false"/>
+	<startPoint number="0" exp="A_3"/>
+	<startPoint number="1" exp="A_4"/>
+	<startPoint number="2" exp="A_2"/>
+	<show object="true" label="false"/>
+	<condition showObject="g ∨ h"/>
+	<objColor r="0" g="0" b="0" alpha="1"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<animation step="1" speed="1" type="0" playing="false"/>
+	<selectionAllowed val="false"/>
+</element>
+</construction>
+</geogebra>

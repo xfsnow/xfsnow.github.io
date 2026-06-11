@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<geogebra format="4.2" version="4.2.47.0" id="ca1822d5-1044-4164-aa87-5c85c10edf42"  xsi:noNamespaceSchemaLocation="http://www.geogebra.org/ggb.xsd" xmlns="" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" >
+<gui>
+	<window width="893" height="776" />
+	<perspectives>
+<perspective id="tmp">
+	<panes>
+		<pane location="" divider="0.22396416573348266" orientation="1" />
+	</panes>
+	<views>
+		<view id="4097" visible="false" inframe="true" stylebar="true" location="1,1,1" size="400" window="155,204,971,581" />
+		<view id="4" toolbar="0 59 || 2020 , 2021 , 2022 , 66 || 2001 , 2003 , 2002 , 2004 , 2005 || 2040 , 2041 , 2042 , 2044 , 2043" visible="false" inframe="false" stylebar="false" location="1,1" size="300" window="100,100,600,400" />
+		<view id="8" toolbar="1001 | 1002 | 1003  || 1005 | 1004 || 1006 | 1007 | 1010 | 1011 || 1008 1009 || 6" visible="false" inframe="false" stylebar="false" location="1,3" size="300" window="100,100,600,400" />
+		<view id="1" visible="true" inframe="false" stylebar="true" location="1" size="874" window="100,100,600,400" />
+		<view id="2" visible="false" inframe="true" stylebar="true" location="3" size="200" window="478,125,325,739" />
+		<view id="16" visible="false" inframe="false" stylebar="false" location="1" size="150" window="50,50,500,500" />
+		<view id="32" visible="false" inframe="false" stylebar="true" location="1" size="150" window="50,50,500,500" />
+		<view id="64" visible="false" inframe="true" stylebar="true" location="1" size="150" window="50,50,500,500" />
+		<view id="70" toolbar="0 || 2020 || 2021 || 2022" visible="false" inframe="true" stylebar="true" location="1" size="150" window="50,50,500,500" />
+	</views>
+	<toolbar show="true" items="0 39 59 | 1 501 67 , 5 19 , 72 | 2 15 45 , 18 65 , 7 37 | 4 3 8 9 , 13 44 , 58 , 47 | 16 51 64 , 70 | 10 34 53 11 , 24 20 22 , 21 23 | 55 56 57 , 12 | 36 46 , 38 49 50 , 71 | 30 29 54 32 31 33 | 17 26 62 73 , 14 66 68 | 25 52 60 61 | 40 41 42 , 27 28 35 , 6" position="1" help="false" />
+	<input show="true" cmd="true" top="false" />
+	<dockBar show="true" east="true" />
+</perspective>
+	</perspectives>
+	<labelingStyle  val="3"/>
+	<font  size="24"/>
+	<graphicsSettings javaLatexFonts="false"/>
+</gui>
+<euclidianView>
+	<size  width="874" height="574"/>
+	<coordSystem xZero="149.894684666611" yZero="323.9891099407189" scale="81.82436334792716" yscale="81.82436334792729"/>
+	<evSettings axes="false" grid="false" gridIsBold="false" pointCapturing="0" rightAngleStyle="1" checkboxSize="13" gridType="0"/>
+	<bgColor r="255" g="255" b="255"/>
+	<axesColor r="0" g="0" b="0"/>
+	<gridColor r="192" g="192" b="192"/>
+	<lineStyle axes="1" grid="10"/>
+	<axis id="0" show="false" label="" unitLabel="" tickStyle="1" showNumbers="true"/>
+	<axis id="1" show="false" label="" unitLabel="" tickStyle="1" showNumbers="true"/>
+	<grid distX="1.0" distY="1.0" distTheta="0.5235987755982988"/>
+</euclidianView>
+<kernel>
+	<continuous val="false"/>
+	<usePathAndRegionParameters val="true"/>
+	<decimals val="2"/>
+	<angleUnit val="radiant"/>
+	<algebraStyle val="0"/>
+	<coordStyle val="0"/>
+	<angleFromInvTrig val="false"/>
+</kernel>
+<scripting blocked="false" disabled="false"/>
+<construction title="" author="" date="">
+<element type="angle" label="α">
+	<value val="0.0"/>
+	<slider min="0" max="6.283185307179586" absoluteScreenLocation="true" width="72.0" x="550.0" y="101.0" fixed="false" horizontal="true"/>
+	<show object="true" label="false"/>
+	<condition showObject="Show"/>
+	<objColor r="255" g="0" b="0" alpha="0.1"/>
+	<layer val="0"/>
+	<labelOffset x="71" y="-37"/>
+	<labelMode val="1"/>
+	<lineStyle thickness="2" type="0" typeHidden="2"/>
+	<arcSize val="30"/>
+	<animation step="0.017453292519943295" speed="3" type="3" playing="false"/>
+	<caption val="轉動車輪"/>
+</element>
+<expression label="C" exp="(α, 1)" type="point" />
+<element type="point" label="C">
+	<show object="true" label="false"/>
+	<objColor r="68" g="68" b="68" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<coords x="0.0" y="1.0" z="1.0"/>
+	<pointSize val="3"/>
+	<pointStyle val="0"/>
+</element>
+<expression label="P" exp="Rotate[(-1, 0), -α, (0, 1)] + (x(C), 0)" type="point" />
+<element type="point" label="P">
+	<show object="false" label="true"/>
+	<objColor r="0" g="0" b="255" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<coords x="-1.0" y="0.0" z="1.0"/>
+	<pointSize val="3"/>
+	<pointStyle val="0"/>
+</element>
+<element type="image" label="pic1">
+	<file name="f1226248f29107f59af2c8c34cf4dabe\wheel.png"/>
+	<inBackground val="false"/>
+	<startPoint number="0" exp="P"/>
+	<startPoint number="1" exp="Q"/>
+	<show object="true" label="false"/>
+	<objColor r="0" g="0" b="0" alpha="1.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<animation step="1" speed="1" type="0" playing="false"/>
+	<selectionAllowed val="false"/>
+</element>
+<expression label="Q" exp="Rotate[(1, 0), -α, (0, 1)] + (x(C), 0)" type="point" />
+<element type="point" label="Q">
+	<show object="false" label="true"/>
+	<objColor r="68" g="68" b="68" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<coords x="1.0" y="0.0" z="1.0"/>
+	<pointSize val="3"/>
+	<pointStyle val="0"/>
+</element>
+<command name="Vector">
+	<input a0="C" a1="Midpoint[P, Q]"/>
+	<output a0="u"/>
+</command>
+<element type="vector" label="u">
+	<show object="true" label="false"/>
+	<objColor r="255" g="0" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<coords x="0.0" y="-1.0" z="0.0"/>
+	<lineStyle thickness="4" type="0" typeHidden="1"/>
+	<coordStyle style="cartesian"/>
+	<startPoint exp="C"/>
+</element>
+<command name="Segment">
+	<input a0="(0, 0)" a1="(x(C), 0)"/>
+	<output a0="a"/>
+</command>
+<element type="segment" label="a">
+	<show object="true" label="false"/>
+	<objColor r="255" g="0" b="0" alpha="0.0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<coords x="0.0" y="0.0" z="0.0"/>
+	<lineStyle thickness="6" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<command name="CircleArc">
+	<input a0="C" a1="(x(C), 0)" a2="Midpoint[P, Q]"/>
+	<output a0="c"/>
+</command>
+<element type="conicpart" label="c">
+	<show object="true" label="false"/>
+	<objColor r="255" g="0" b="0" alpha="0.0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<lineStyle thickness="6" type="0" typeHidden="1"/>
+	<eigenvectors  x0="1.0" y0="0.0" z0="1.0" x1="-0.0" y1="1.0" z1="1.0"/>
+	<matrix A0="1.0" A1="1.0" A2="0.0" A3="0.0" A4="-0.0" A5="-1.0"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<command name="Circle">
+	<input a0="(0, 1)" a1="1"/>
+	<output a0="d"/>
+</command>
+<element type="conic" label="d">
+	<show object="true" label="false"/>
+	<condition showObject="α ≟ 0°"/>
+	<objColor r="255" g="0" b="0" alpha="0.0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<lineStyle thickness="6" type="0" typeHidden="1"/>
+	<eigenvectors  x0="1.0" y0="0.0" z0="1.0" x1="-0.0" y1="1.0" z1="1.0"/>
+	<matrix A0="1.0" A1="1.0" A2="0.0" A3="0.0" A4="-0.0" A5="-1.0"/>
+	<eqnStyle style="specific"/>
+</element>
+<expression label="text1" exp="&quot;哥哥的單車的車輪直徑是 60 cm。它轉動 100 次可走多遠？&quot;"/>
+<element type="text" label="text1">
+	<show object="true" label="false"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<absoluteScreenLocation  x="13" y="32"/>
+</element>
+<expression label="text2" exp="&quot;車輪轉動一周，單車可行走多遠？&quot;"/>
+<element type="text" label="text2">
+	<show object="true" label="false"/>
+	<objColor r="255" g="0" b="0" alpha="0.0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<absoluteScreenLocation  x="14" y="107"/>
+</element>
+<expression label="text2_1" exp="&quot;車輪轉動一周，單車行走的路程等於圓周的長度。&quot;"/>
+<element type="text" label="text2_1">
+	<show object="true" label="false"/>
+	<condition showObject="α ≟ 360°"/>
+	<objColor r="255" g="0" b="0" alpha="0.0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<absoluteScreenLocation  x="14" y="387"/>
+</element>
+<expression label="text3" exp="&quot;單車可行走：&quot;"/>
+<element type="text" label="text3">
+	<show object="true" label="false"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<absoluteScreenLocation  x="15" y="436"/>
+</element>
+<element type="button" label="button1">
+	<show object="true" label="true"/>
+	<objColor r="255" g="0" b="0" alpha="0.0"/>
+	<layer val="1"/>
+	<labelOffset x="414" y="87"/>
+	<labelMode val="0"/>
+	<animation step="0.1" speed="1" type="0" playing="false"/>
+	<auxiliary val="true"/>
+	<ggbscript  val="SetValue[α, 0]&#10;SetValue[Show, true]&#10;StartAnimation[α, true]"/>
+	<caption val="轉動車輪"/>
+</element>
+<element type="boolean" label="Show">
+	<value val="false"/>
+	<show object="false" label="true"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+</element>
+</construction>
+</geogebra>

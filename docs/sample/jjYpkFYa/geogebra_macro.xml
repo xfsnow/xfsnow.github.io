@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<geogebra format="5.0" version="5.0.396.0" app="classic" platform="w"  xsi:noNamespaceSchemaLocation="http://www.geogebra.org/ggt.xsd" xmlns="" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" >
+<macro cmdName="xyToZ" toolName="xyToZ" toolHelp="" iconFile="" showInToolBar="true" copyCaptions="true" viewId="1">
+<macroInput a0="a" a1="b"/>
+<macroOutput a0="z_1"/>
+<construction title="" author="" date="">
+<element type="numeric" label="a">
+	<value val="3"/>
+	<symbolic val="true" />
+	<show object="true" label="true"/>
+	<objColor r="0" g="0" b="0" alpha="0.10000000149011612"/>
+	<layer val="0"/>
+	<labelMode val="1"/>
+	<animation step="0.1" speed="1" type="0" playing="false"/>
+</element>
+<element type="numeric" label="b">
+	<value val="2"/>
+	<symbolic val="true" />
+	<show object="true" label="true"/>
+	<objColor r="0" g="0" b="0" alpha="0.10000000149011612"/>
+	<layer val="0"/>
+	<labelMode val="1"/>
+	<animation step="0.1" speed="1" type="0" playing="false"/>
+</element>
+<expression label="z_1" exp="a + (b * ί)" type="point" />
+<element type="point" label="z_1">
+	<show object="true" label="true"/>
+	<objColor r="68" g="68" b="68" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<isShape val="false"/>
+	<coords x="3" y="2" z="1"/>
+	<coordStyle style="complex"/>
+	<pointSize val="3"/>
+	<pointStyle val="0"/>
+</element>
+</construction>
+</macro>
+<macro cmdName="absc" toolName="absc" toolHelp="" iconFile="" showInToolBar="true" copyCaptions="true" viewId="1">
+<macroInput a0="f" a1="a" a2="b"/>
+<macroOutput a0="c"/>
+<construction title="" author="" date="">
+<expression label ="f" exp="f(x) = x^(2) + 1" type="function"/>
+<element type="function" label="f">
+	<show object="true" label="false" ev="4"/>
+	<objColor r="0" g="100" b="0" alpha="0.75"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<animation step="1" speed="1" type="0" playing="false"/>
+	<isShape val="false"/>
+	<lineStyle thickness="1" type="0" typeHidden="1"/>
+</element>
+<element type="numeric" label="a">
+	<value val="3"/>
+	<symbolic val="true" />
+	<show object="true" label="true"/>
+	<objColor r="0" g="0" b="0" alpha="0.10000000149011612"/>
+	<layer val="0"/>
+	<labelMode val="1"/>
+	<animation step="0.1" speed="1" type="0" playing="false"/>
+</element>
+<element type="numeric" label="b">
+	<value val="2"/>
+	<symbolic val="true" />
+	<show object="true" label="true"/>
+	<objColor r="0" g="0" b="0" alpha="0.10000000149011612"/>
+	<layer val="0"/>
+	<labelMode val="1"/>
+	<animation step="0.1" speed="1" type="0" playing="false"/>
+</element>
+<expression label="z1" exp="a + (b * ί)" type="point" />
+<element type="point" label="z1">
+	<show object="true" label="true"/>
+	<objColor r="68" g="68" b="68" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<isShape val="false"/>
+	<coords x="3" y="2" z="1"/>
+	<coordStyle style="complex"/>
+	<pointSize val="3"/>
+	<pointStyle val="0"/>
+</element>
+<expression label="g" exp="f(z1)" type="point" />
+<element type="point" label="g">
+	<show object="true" label="false" ev="4"/>
+	<objColor r="255" g="85" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<isShape val="false"/>
+	<coords x="6.000000000000001" y="12" z="1"/>
+	<coordStyle style="complex"/>
+	<pointSize val="3"/>
+	<pointStyle val="0"/>
+</element>
+<expression label="c" exp="abs(g)" />
+<element type="numeric" label="c">
+	<value val="13.416407864998739"/>
+	<symbolic val="true" />
+	<objColor r="0" g="0" b="0" alpha="0.10000000149011612"/>
+</element>
+</construction>
+</macro>
+</geogebra>

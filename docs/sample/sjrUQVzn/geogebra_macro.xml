@@ -1,0 +1,325 @@
+<?xml version="1.0" encoding="utf-8"?>
+<geogebra format="5.0" version="5.0.175.0"  xsi:noNamespaceSchemaLocation="http://www.geogebra.org/ggt.xsd" xmlns="" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" >
+<macro cmdName="LengthArrow" toolName="LengthArrow" toolHelp="LengthArrow[間距, 高度, 開口比例 (0~1), 箭頭比例 (0~1)]" iconFile="26a0acb3f78558b058ea61bcb1804d88/LengthArrow32.png" showInToolBar="true" copyCaptions="true">
+<macroInput a0="A" a1="B" a2="pad" a3="h" a4="open" a5="arrow"/>
+<macroOutput a0="M" a1="a" a2="b" a3="c" a4="e"/>
+<construction title="" author="" date="">
+<element type="point" label="A">
+	<show object="true" label="true" ev="4"/>
+	<objColor r="0" g="0" b="255" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<animation step="0.1" speed="1" type="1" playing="false"/>
+	<coords x="-3.0" y="2.0" z="1.0"/>
+	<pointSize val="3"/>
+	<pointStyle val="0"/>
+</element>
+<element type="point" label="B">
+	<show object="true" label="true"/>
+	<objColor r="0" g="0" b="255" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<animation step="1" speed="1" type="1" playing="false"/>
+	<coords x="2.0" y="2.0" z="1.0"/>
+	<pointSize val="3"/>
+	<pointStyle val="0"/>
+</element>
+<command name="UnitVector">
+	<input a0="Vector[A, B]"/>
+	<output a0="u"/>
+</command>
+<element type="vector" label="u">
+	<show object="false" label="false"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<coords x="1.0" y="0.0" z="0.0"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<coordStyle style="cartesian"/>
+	<startPoint exp="A"/>
+</element>
+<command name="OrthogonalVector">
+	<input a0="u"/>
+	<output a0="v"/>
+</command>
+<element type="vector" label="v">
+	<show object="false" label="false"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<coords x="-0.0" y="1.0" z="0.0"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<coordStyle style="cartesian"/>
+	<startPoint exp="A"/>
+</element>
+<expression label ="pad" exp="pad:0.3"/>
+<element type="numeric" label="pad">
+	<value val="0.3"/>
+	<show object="true" label="true"/>
+	<objColor r="0" g="0" b="0" alpha="0.1"/>
+	<layer val="0"/>
+	<labelMode val="1"/>
+	<animation step="1" speed="1" type="0" playing="false"/>
+</element>
+<expression label ="h" exp="h:0.3"/>
+<element type="numeric" label="h">
+	<value val="0.3"/>
+	<show object="true" label="true"/>
+	<objColor r="0" g="0" b="0" alpha="0.1"/>
+	<layer val="0"/>
+	<labelMode val="1"/>
+	<animation step="1" speed="1" type="0" playing="false"/>
+</element>
+<expression label ="open" exp="open:0.3"/>
+<element type="numeric" label="open">
+	<value val="0.3"/>
+	<show object="true" label="true"/>
+	<objColor r="0" g="0" b="0" alpha="0.1"/>
+	<layer val="0"/>
+	<labelMode val="1"/>
+	<animation step="1" speed="1" type="0" playing="false"/>
+</element>
+<expression label ="arrow" exp="arrow:0.25"/>
+<element type="numeric" label="arrow">
+	<value val="0.25"/>
+	<show object="true" label="true"/>
+	<objColor r="0" g="0" b="0" alpha="0.1"/>
+	<layer val="0"/>
+	<labelMode val="1"/>
+	<animation step="1" speed="1" type="0" playing="false"/>
+</element>
+<expression label="C" exp="A - (pad * v)" type="point" />
+<element type="point" label="C">
+	<show object="false" label="true"/>
+	<objColor r="68" g="68" b="68" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<coords x="-3.0" y="1.7" z="1.0"/>
+	<pointSize val="3"/>
+	<pointStyle val="0"/>
+</element>
+<expression label="D" exp="B - (pad * v)" type="point" />
+<element type="point" label="D">
+	<show object="false" label="true"/>
+	<objColor r="68" g="68" b="68" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<coords x="2.0" y="1.7" z="1.0"/>
+	<pointSize val="3"/>
+	<pointStyle val="0"/>
+</element>
+<expression label="E" exp="B - ((pad + h) * v)" type="point" />
+<element type="point" label="E">
+	<show object="false" label="true"/>
+	<objColor r="68" g="68" b="68" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<coords x="2.0" y="1.4" z="1.0"/>
+	<pointSize val="3"/>
+	<pointStyle val="0"/>
+</element>
+<expression label="F" exp="A - ((pad + h) * v)" type="point" />
+<element type="point" label="F">
+	<show object="false" label="true"/>
+	<objColor r="68" g="68" b="68" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<coords x="-3.0" y="1.4" z="1.0"/>
+	<pointSize val="3"/>
+	<pointStyle val="0"/>
+</element>
+<command name="Midpoint">
+	<input a0="C" a1="F"/>
+	<output a0="G"/>
+</command>
+<element type="point" label="G">
+	<show object="false" label="true"/>
+	<objColor r="68" g="68" b="68" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<coords x="-3.0" y="1.5499999999999998" z="1.0"/>
+	<pointSize val="3"/>
+	<pointStyle val="0"/>
+</element>
+<command name="Midpoint">
+	<input a0="D" a1="E"/>
+	<output a0="H"/>
+</command>
+<element type="point" label="H">
+	<show object="false" label="true"/>
+	<objColor r="68" g="68" b="68" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<coords x="2.0" y="1.5499999999999998" z="1.0"/>
+	<pointSize val="3"/>
+	<pointStyle val="0"/>
+</element>
+<command name="Distance">
+	<input a0="A" a1="B"/>
+	<output a0="d"/>
+</command>
+<element type="numeric" label="d">
+	<value val="5.0"/>
+	<objColor r="0" g="0" b="0" alpha="0.1"/>
+</element>
+<expression label="arrlen" exp="(d * (1 - open) / 2)" />
+<element type="numeric" label="arrlen">
+	<value val="1.75"/>
+	<objColor r="0" g="0" b="0" alpha="0.1"/>
+</element>
+<command name="Midpoint">
+	<input a0="G" a1="H"/>
+	<output a0="M"/>
+</command>
+<element type="point" label="M">
+	<show object="true" label="true"/>
+	<objColor r="68" g="68" b="68" alpha="0.0"/>
+	<layer val="0"/>
+	<labelOffset x="-9" y="28"/>
+	<labelMode val="0"/>
+	<coords x="-0.5" y="1.5499999999999998" z="1.0"/>
+	<pointSize val="3"/>
+	<pointStyle val="0"/>
+</element>
+<expression label="headlen" exp="(arrlen * arrow)" />
+<element type="numeric" label="headlen">
+	<value val="0.4375"/>
+	<objColor r="0" g="0" b="0" alpha="0.1"/>
+</element>
+<expression label="I" exp="G + (headlen * u)" type="point" />
+<element type="point" label="I">
+	<show object="false" label="true"/>
+	<objColor r="68" g="68" b="68" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<coords x="-2.5625" y="1.5499999999999998" z="1.0"/>
+	<pointSize val="3"/>
+	<pointStyle val="0"/>
+</element>
+<expression label="J" exp="H - (headlen * u)" type="point" />
+<element type="point" label="J">
+	<show object="false" label="true"/>
+	<objColor r="68" g="68" b="68" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<coords x="1.5625" y="1.5499999999999998" z="1.0"/>
+	<pointSize val="3"/>
+	<pointStyle val="0"/>
+</element>
+<expression label="K" exp="I + (h / 2 * v)" type="point" />
+<element type="point" label="K">
+	<show object="false" label="true"/>
+	<objColor r="68" g="68" b="68" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<coords x="-2.5625" y="1.6999999999999997" z="1.0"/>
+	<pointSize val="3"/>
+	<pointStyle val="0"/>
+</element>
+<expression label="L" exp="I - (h / 2 * v)" type="point" />
+<element type="point" label="L">
+	<show object="false" label="true"/>
+	<objColor r="68" g="68" b="68" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<coords x="-2.5625" y="1.4" z="1.0"/>
+	<pointSize val="3"/>
+	<pointStyle val="0"/>
+</element>
+<expression label="N" exp="J - (h / 2 * v)" type="point" />
+<element type="point" label="N">
+	<show object="false" label="true"/>
+	<objColor r="68" g="68" b="68" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<coords x="1.5625" y="1.4" z="1.0"/>
+	<pointSize val="3"/>
+	<pointStyle val="0"/>
+</element>
+<expression label="O" exp="J + (h / 2 * v)" type="point" />
+<element type="point" label="O">
+	<show object="false" label="true"/>
+	<objColor r="68" g="68" b="68" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<coords x="1.5625" y="1.6999999999999997" z="1.0"/>
+	<pointSize val="3"/>
+	<pointStyle val="0"/>
+</element>
+<expression label="P" exp="G + (arrlen * u)" type="point" />
+<element type="point" label="P">
+	<show object="false" label="true"/>
+	<objColor r="68" g="68" b="68" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<coords x="-1.25" y="1.5499999999999998" z="1.0"/>
+	<pointSize val="3"/>
+	<pointStyle val="0"/>
+</element>
+<expression label="Q" exp="H - (arrlen * u)" type="point" />
+<element type="point" label="Q">
+	<show object="false" label="true"/>
+	<objColor r="68" g="68" b="68" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<coords x="0.25" y="1.5499999999999998" z="1.0"/>
+	<pointSize val="3"/>
+	<pointStyle val="0"/>
+</element>
+<command name="PolyLine">
+	<input a0="P" a1="I" a2="K" a3="G" a4="L" a5="I"/>
+	<output a0="a"/>
+</command>
+<element type="polyline" label="a">
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<show object="true" label="false"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+</element>
+<command name="PolyLine">
+	<input a0="Q" a1="J" a2="N" a3="H" a4="O" a5="J"/>
+	<output a0="b"/>
+</command>
+<element type="polyline" label="b">
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<show object="true" label="false"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+</element>
+<command name="Segment">
+	<input a0="C" a1="F"/>
+	<output a0="c"/>
+</command>
+<element type="segment" label="c">
+	<show object="true" label="false" ev="4"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<coords x="0.30000000000000004" y="0.0" z="0.9000000000000004"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<command name="Segment">
+	<input a0="D" a1="E"/>
+	<output a0="e"/>
+</command>
+<element type="segment" label="e">
+	<show object="true" label="false" ev="4"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<coords x="0.30000000000000004" y="0.0" z="-0.6000000000000001"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+</construction>
+</macro>
+</geogebra>

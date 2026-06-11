@@ -1,0 +1,604 @@
+<?xml version="1.0" encoding="utf-8"?>
+<geogebra format="5.0" version="5.0.389.0" app="classic" platform="w" id="4ecb6be3-7b77-4a5f-899e-29d40c465b6c"  xsi:noNamespaceSchemaLocation="http://www.geogebra.org/ggb.xsd" xmlns="" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" >
+<gui>
+	<window width="765" height="488" />
+	<perspectives>
+<perspective id="tmp">
+	<panes>
+		<pane location="" divider="0.6130718954248366" orientation="1" />
+	</panes>
+	<views>
+		<view id="4097" visible="false" inframe="true" stylebar="true" location="1,1,1" size="400" window="587,69,700,662" />
+		<view id="4" toolbar="0 || 2020 , 2021 , 2022 , 66 || 2001 , 2003 , 2002 , 2004 , 2005 || 2040 , 2041 , 2042 , 2044 , 2043" visible="false" inframe="false" stylebar="false" location="3,1" size="300" window="100,100,600,400" />
+		<view id="2" visible="false" inframe="false" stylebar="false" location="3,3" size="186" window="100,100,250,400" />
+		<view id="512" toolbar="0 | 1 501 5 19 , 67 | 2 15 45 18 , 7 37 | 514 3 9 , 13 44 , 47 | 16 | 551 550 11 ,  20 22 21 23 , 55 56 57 , 12 | 69 | 510 511 , 512 513 | 533 531 , 534 532 , 522 523 , 537 536 , 535 | 521 520 | 36 , 38 49 560 | 571 30 29 570 31 33 | 17 | 540 40 41 42 , 27 28 35 , 6 , 502" visible="false" inframe="false" stylebar="false" location="1,1" size="500" window="100,100,600,400" />
+		<view id="1" visible="true" inframe="false" stylebar="true" location="1" size="763" window="100,100,600,400" />
+		<view id="8" toolbar="1001 | 1002 | 1003  || 1005 | 1004 || 1006 | 1007 | 1010 || 1008 1009 || 66 68 || 6" visible="false" inframe="false" stylebar="false" location="3" size="469" window="100,100,600,400" />
+		<view id="16" visible="false" inframe="false" stylebar="false" location="1" size="474" window="50,50,500,500" />
+		<view id="32" visible="false" inframe="false" stylebar="true" location="1" size="150" window="50,50,500,500" />
+		<view id="64" toolbar="0" visible="false" inframe="true" stylebar="true" location="1" size="150" window="50,50,500,500" />
+		<view id="128" visible="false" inframe="true" stylebar="false" location="1" size="480" window="50,50,500,500" />
+		<view id="70" toolbar="0 || 2020 || 2021 || 2022" visible="false" inframe="true" stylebar="true" location="1" size="150" window="50,50,500,500" />
+		<view id="43" visible="false" inframe="false" stylebar="false" location="1" size="450" window="50,50,500,500" />
+	</views>
+	<toolbar show="false" items="0 39 73 62 | 1 501 67 , 5 19 , 72 75 76 | 2 15 45 , 18 65 , 7 37 | 4 3 8 9 , 13 44 , 58 , 47 | 16 51 64 , 70 | 10 34 53 11 , 24  20 22 , 21 23 | 55 56 57 , 12 | 36 46 , 38 49  50 , 71  14  68 | 30 29 54 32 31 33 | 25 17 26 60 52 61 | 40 41 42 , 27 28 35 , 6" position="1" help="false" />
+	<input show="false" cmd="true" top="algebra" />
+	<dockBar show="false" east="false" />
+</perspective>
+	</perspectives>
+	<labelingStyle  val="3"/>
+	<font  size="16"/>
+</gui>
+<euclidianView>
+	<viewNumber viewNo="1"/>
+	<size  width="763" height="486"/>
+	<coordSystem xZero="445" yZero="238.99999999999991" scale="50.00000000000003" yscale="49.99999999999998"/>
+	<evSettings axes="false" grid="false" gridIsBold="false" pointCapturing="1" rightAngleStyle="1" checkboxSize="26" gridType="0"/>
+	<bgColor r="255" g="255" b="255"/>
+	<axesColor r="0" g="0" b="0"/>
+	<gridColor r="192" g="192" b="192"/>
+	<lineStyle axes="1" grid="0"/>
+	<axis id="0" show="false" label="" unitLabel="" tickStyle="1" showNumbers="true"/>
+	<axis id="1" show="false" label="" unitLabel="" tickStyle="1" showNumbers="true"/>
+</euclidianView>
+<kernel>
+	<continuous val="false"/>
+	<usePathAndRegionParameters val="true"/>
+	<decimals val="2"/>
+	<angleUnit val="degree"/>
+	<algebraStyle val="0" spreadsheet="0"/>
+	<coordStyle val="0"/>
+</kernel>
+<scripting blocked="false" disabled="false"/>
+<construction title="" author="" date="">
+<expression label ="ratioHandM" exp="0.9"/>
+<element type="numeric" label="ratioHandM">
+	<value val="0.9"/>
+	<symbolic val="true" />
+	<show object="false" label="true"/>
+	<objColor r="0" g="0" b="0" alpha="0.10000000149011612"/>
+	<layer val="0"/>
+	<labelMode val="1"/>
+	<animation step="1" speed="1" type="0" playing="false"/>
+	<selectionAllowed val="false"/>
+</element>
+<expression label ="ratioHandH" exp="0.6"/>
+<element type="numeric" label="ratioHandH">
+	<value val="0.6"/>
+	<symbolic val="true" />
+	<show object="false" label="true"/>
+	<objColor r="0" g="0" b="0" alpha="0.10000000149011612"/>
+	<layer val="0"/>
+	<labelMode val="1"/>
+	<animation step="1" speed="1" type="0" playing="false"/>
+	<selectionAllowed val="false"/>
+</element>
+<expression label ="O" exp="(0, 0)" type="point"/>
+<element type="point" label="O">
+	<show object="true" label="false" ev="4"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<selectionAllowed val="false"/>
+	<isShape val="false"/>
+	<coords x="0" y="0" z="1"/>
+	<pointSize val="8"/>
+	<pointStyle val="0"/>
+</element>
+<expression label ="r" exp="4"/>
+<element type="numeric" label="r">
+	<value val="4"/>
+	<symbolic val="true" />
+	<show object="false" label="true"/>
+	<objColor r="0" g="0" b="0" alpha="0.10000000149011612"/>
+	<layer val="0"/>
+	<labelMode val="1"/>
+	<animation step="1" speed="1" type="0" playing="false"/>
+	<selectionAllowed val="false"/>
+</element>
+<expression label="rm" exp="(r * ratioHandM)" />
+<element type="numeric" label="rm">
+	<value val="3.6"/>
+	<symbolic val="true" />
+	<objColor r="0" g="0" b="0" alpha="0.10000000149011612"/>
+	<selectionAllowed val="false"/>
+</element>
+<expression label="rh" exp="(r * ratioHandH)" />
+<element type="numeric" label="rh">
+	<value val="2.4"/>
+	<symbolic val="true" />
+	<objColor r="0" g="0" b="0" alpha="0.10000000149011612"/>
+	<selectionAllowed val="false"/>
+</element>
+<cascell caslabel="ωh" >
+	<cellPair>
+		<inputCell>
+			<expression value="ωh := 1/(12*60*60)"  eval="Evaluate(1 / (((12 * 60) * 60)))" evalCmd=""/>
+		</inputCell>
+		<outputCell>
+			<expression value="ωh:=1 / 43200" native="true"/>
+		</outputCell>
+	</cellPair>
+</cascell>
+<expression label ="ωh" exp="1 / 43200"/>
+<element type="numeric" label="ωh">
+	<value val="0.000023148148148148147"/>
+	<objColor r="0" g="0" b="0" alpha="0.10000000149011612"/>
+	<animation step="1" speed="1" type="0" playing="false"/>
+	<selectionAllowed val="false"/>
+</element>
+<cascell caslabel="ωm" >
+	<cellPair>
+		<inputCell>
+			<expression value="ωm:=ωh * 12"  eval="Evaluate((ωh * 12))" evalCmd=""/>
+		</inputCell>
+		<outputCell>
+			<expression value="ωm:=1 / 3600" native="true"/>
+		</outputCell>
+	</cellPair>
+</cascell>
+<element type="numeric" label="ωm">
+	<value val="0.0002777777777777778"/>
+	<objColor r="0" g="0" b="0" alpha="0.10000000149011612"/>
+	<selectionAllowed val="false"/>
+</element>
+<expression label ="s" exp="0"/>
+<element type="numeric" label="s">
+	<value val="0"/>
+	<symbolic val="true" />
+	<show object="false" label="true"/>
+	<objColor r="0" g="0" b="0" alpha="0.10000000149011612"/>
+	<layer val="0"/>
+	<labelMode val="1"/>
+	<animation step="1" speed="1" type="0" playing="false"/>
+	<selectionAllowed val="false"/>
+</element>
+<element type="numeric" label="m">
+	<value val="20"/>
+	<symbolic val="true" />
+	<show object="false" label="true"/>
+	<objColor r="0" g="0" b="0" alpha="0.10000000149011612"/>
+	<layer val="0"/>
+	<labelMode val="1"/>
+	<animation step="1" speed="1" type="0" playing="false"/>
+	<selectionAllowed val="false"/>
+</element>
+<element type="numeric" label="h">
+	<value val="0"/>
+	<symbolic val="true" />
+	<show object="false" label="true"/>
+	<objColor r="0" g="0" b="0" alpha="0.10000000149011612"/>
+	<layer val="0"/>
+	<labelMode val="1"/>
+	<animation step="1" speed="1" type="0" playing="false"/>
+	<selectionAllowed val="false"/>
+</element>
+<cascell caslabel="seconds" >
+	<cellPair>
+		<inputCell>
+			<expression value="seconds:=s+m*60+h*60*60"  eval="Evaluate(s + (m * 60) + ((h * 60) * 60))" evalCmd=""/>
+		</inputCell>
+		<outputCell>
+			<expression value="seconds:=1200" native="true"/>
+		</outputCell>
+	</cellPair>
+</cascell>
+<element type="numeric" label="seconds">
+	<value val="1200"/>
+	<objColor r="0" g="0" b="0" alpha="0.10000000149011612"/>
+	<selectionAllowed val="false"/>
+</element>
+<cascell caslabel="posM" >
+	<cellPair>
+		<inputCell>
+			<expression value="posM:=ωm * seconds"  eval="Evaluate((ωm * seconds))" evalCmd=""/>
+		</inputCell>
+		<outputCell>
+			<expression value="posM:=1 / 3" native="true"/>
+		</outputCell>
+	</cellPair>
+</cascell>
+<element type="numeric" label="posM">
+	<value val="0.3333333333333333"/>
+	<objColor r="0" g="0" b="0" alpha="0.10000000149011612"/>
+	<selectionAllowed val="false"/>
+</element>
+<expression label="PinM" exp="(rm; 90° - (360° * posM))" type="point" />
+<element type="point" label="PinM">
+	<show object="false" label="true" ev="4"/>
+	<objColor r="68" g="68" b="68" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<isShape val="false"/>
+	<coords x="3.1176914536239795" y="-1.7999999999999994" z="1"/>
+	<coordStyle style="polar"/>
+	<pointSize val="3"/>
+	<pointStyle val="0"/>
+</element>
+<cascell caslabel="posH" >
+	<cellPair>
+		<inputCell>
+			<expression value="posH:=ωh * seconds"  eval="Evaluate((ωh * seconds))" evalCmd=""/>
+		</inputCell>
+		<outputCell>
+			<expression value="posH:=1 / 36" native="true"/>
+		</outputCell>
+	</cellPair>
+</cascell>
+<element type="numeric" label="posH">
+	<value val="0.027777777777777776"/>
+	<objColor r="0" g="0" b="0" alpha="0.10000000149011612"/>
+	<selectionAllowed val="false"/>
+</element>
+<expression label="PinH" exp="(rh; 90° - (360° * posH))" type="point" />
+<element type="point" label="PinH">
+	<show object="false" label="true" ev="4"/>
+	<objColor r="68" g="68" b="68" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<isShape val="false"/>
+	<coords x="0.41675562640063296" y="2.363538607229299" z="1"/>
+	<coordStyle style="polar"/>
+	<pointSize val="3"/>
+	<pointStyle val="0"/>
+</element>
+<cascell caslabel="ωs" >
+	<cellPair>
+		<inputCell>
+			<expression value="ωs:=ωm*60"  eval="Evaluate((ωm * 60))" evalCmd=""/>
+		</inputCell>
+		<outputCell>
+			<expression value="ωs:=1 / 60" native="true"/>
+		</outputCell>
+	</cellPair>
+</cascell>
+<element type="numeric" label="ωs">
+	<value val="0.016666666666666666"/>
+	<objColor r="0" g="0" b="0" alpha="0.10000000149011612"/>
+	<selectionAllowed val="false"/>
+</element>
+<cascell caslabel="posS" >
+	<cellPair>
+		<inputCell>
+			<expression value="posS:=ωs * seconds"  eval="Evaluate((ωs * seconds))" evalCmd=""/>
+		</inputCell>
+		<outputCell>
+			<expression value="posS:=20" native="true"/>
+		</outputCell>
+	</cellPair>
+</cascell>
+<element type="numeric" label="posS">
+	<value val="20"/>
+	<objColor r="0" g="0" b="0" alpha="0.10000000149011612"/>
+	<selectionAllowed val="false"/>
+</element>
+<cascell caslabel="diffHM" >
+	<cellPair>
+		<inputCell>
+			<expression value="diffHM:=abs(posH-posM)"  eval="Evaluate(abs(posH - posM))" evalCmd=""/>
+		</inputCell>
+		<outputCell>
+			<expression value="diffHM:=11 / 36" native="true"/>
+		</outputCell>
+	</cellPair>
+</cascell>
+<element type="numeric" label="diffHM">
+	<value val="0.3055555555555556"/>
+	<objColor r="0" g="0" b="0" alpha="0.10000000149011612"/>
+	<selectionAllowed val="false"/>
+</element>
+<cascell caslabel="diff2HM" >
+	<cellPair>
+		<inputCell>
+			<expression value="diff2HM:=diffHM - floor(diffHM)"  eval="Evaluate(diffHM - floor(diffHM))" evalCmd=""/>
+		</inputCell>
+		<outputCell>
+			<expression value="diff2HM:=11 / 36" native="true"/>
+		</outputCell>
+	</cellPair>
+</cascell>
+<element type="numeric" label="diff2HM">
+	<value val="0.3055555555555556"/>
+	<objColor r="0" g="0" b="0" alpha="0.10000000149011612"/>
+	<selectionAllowed val="false"/>
+</element>
+<command name="Circle">
+	<input a0="O" a1="r"/>
+	<output a0="clock"/>
+</command>
+<element type="conic" label="clock">
+	<show object="true" label="false" ev="4"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<isShape val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="1" opacity="178"/>
+	<eigenvectors  x0="1" y0="0" z0="1.0" x1="0" y1="1" z1="1.0"/>
+	<matrix A0="1" A1="1" A2="-16" A3="0" A4="0" A5="0"/>
+	<eqnStyle style="specific"/>
+</element>
+<command name="Point">
+	<input a0="Circle[O, rh]"/>
+	<output a0="H"/>
+</command>
+<element type="point" label="H">
+	<show object="true" label="false" ev="4"/>
+	<objColor r="0" g="0" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<animation step="1" speed="1" type="1" playing="false"/>
+	<isShape val="false"/>
+	<coords x="0.3917949394251971" y="2.3678041991348877" z="1"/>
+	<pointSize val="5"/>
+	<pointStyle val="0"/>
+</element>
+<cascell caslabel="diff3HM" >
+	<cellPair>
+		<inputCell>
+			<expression value="diff3HM:=Min(diff2HM, 1-diff2HM)"  eval="Min(diff2HM,1 - diff2HM)" evalCmd=""/>
+		</inputCell>
+		<outputCell>
+			<expression value="diff3HM:=11 / 36" native="true"/>
+		</outputCell>
+	</cellPair>
+</cascell>
+<element type="numeric" label="diff3HM">
+	<value val="0.3055555555555556"/>
+	<objColor r="0" g="0" b="0" alpha="0.10000000149011612"/>
+	<selectionAllowed val="false"/>
+</element>
+<cascell caslabel="diff3HMRad" >
+	<cellPair>
+		<inputCell>
+			<expression value="diff3HMRad:=diff3HM * 2 π"  eval="Evaluate(((diff3HM * 2) * π))" evalCmd=""/>
+		</inputCell>
+		<outputCell>
+			<expression value="diff3HMRad:=(11 / 18 * π)" native="true"/>
+		</outputCell>
+	</cellPair>
+</cascell>
+<element type="numeric" label="diff3HMRad">
+	<value val="1.9198621771937625"/>
+	<objColor r="0" g="0" b="0" alpha="0.10000000149011612"/>
+	<selectionAllowed val="false"/>
+</element>
+<command name="Point">
+	<input a0="Circle[O, rm]"/>
+	<output a0="M"/>
+</command>
+<element type="point" label="M">
+	<show object="true" label="false" ev="4"/>
+	<objColor r="255" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<animation step="1" speed="1" type="1" playing="false"/>
+	<isShape val="false"/>
+	<coords x="3.04815667633577" y="-1.9153957493190985" z="1"/>
+	<pointSize val="5"/>
+	<pointStyle val="0"/>
+</element>
+<expression label ="degreeToHour" exp="degreeToHour(x) = 3 - x / 30 - (12 * floor((3 - x / 30) / 12))" type="function"/>
+<element type="function" label="degreeToHour">
+	<show object="false" label="false" ev="4"/>
+	<objColor r="0" g="100" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<selectionAllowed val="false"/>
+	<isShape val="false"/>
+	<lineStyle thickness="3" type="0" typeHidden="1" opacity="178"/>
+</element>
+<expression label ="degrees" exp="degrees(x) = x / °" type="function"/>
+<element type="function" label="degrees">
+	<show object="false" label="false" ev="4"/>
+	<objColor r="204" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<selectionAllowed val="false"/>
+	<isShape val="false"/>
+	<lineStyle thickness="3" type="0" typeHidden="1" opacity="178"/>
+</element>
+<command name="Sequence">
+	<input a0="Segment[(r; ((k * 30))°), (r; ((k * 30))° + 180°)]" a1="k" a2="0" a3="5"/>
+	<output a0="list_1"/>
+</command>
+<element type="list" label="list_1">
+	<show object="true" label="false" ev="4"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<isShape val="false"/>
+	<lineStyle thickness="2" type="20" typeHidden="1"/>
+	<pointSize val="5"/>
+	<pointStyle val="-1"/>
+</element>
+<expression label="toHours" exp="floor(degreeToHour(degrees(Angle[H])))" />
+<element type="numeric" label="toHours">
+	<value val="0"/>
+	<symbolic val="true" />
+	<objColor r="0" g="0" b="0" alpha="0.10000000149011612"/>
+	<selectionAllowed val="false"/>
+	<ggbscript onUpdate="SetValue[h, toHours]"/>
+</element>
+<expression label="toMins" exp="floor((degreeToHour(degrees(Angle[M])) * 5))" />
+<element type="numeric" label="toMins">
+	<value val="20"/>
+	<symbolic val="true" />
+	<objColor r="0" g="0" b="0" alpha="0.10000000149011612"/>
+	<selectionAllowed val="false"/>
+	<ggbscript onUpdate="SetValue[m, toMins]"/>
+</element>
+<command name="Angle">
+	<input a0="PinH" a1="O" a2="PinM"/>
+	<output a0="angHM"/>
+</command>
+<element type="angle" label="angHM">
+	<angleStyle val="0"/>
+	<value val="4.363323129985824"/>
+	<show object="false" label="true" ev="4"/>
+	<objColor r="0" g="100" b="0" alpha="0.10000000149011612"/>
+	<layer val="0"/>
+	<labelMode val="1"/>
+	<lineStyle thickness="2" type="0" typeHidden="2" opacity="178"/>
+	<arcSize val="30"/>
+	<selectionAllowed val="false"/>
+</element>
+<expression label="text1" exp="&quot;&quot; + (If[toHours ≟ 0, 12, toHours]) + &quot; : &quot; + toMins + &quot;&quot;" />
+<element type="text" label="text1">
+	<show object="true" label="false" ev="40"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<selectionAllowed val="false"/>
+	<font serif="true" sizeM="4" size="48" style="1"/>
+	<absoluteScreenLocation x="15" y="76"/>
+</element>
+<command name="Vector">
+	<input a0="O" a1="PinM"/>
+	<output a0="handM"/>
+</command>
+<element type="vector" label="handM">
+	<show object="true" label="false" ev="4"/>
+	<objColor r="255" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<isShape val="false"/>
+	<coords x="3.1176914536239795" y="-1.7999999999999994" z="0"/>
+	<lineStyle thickness="5" type="0" typeHidden="1" opacity="178"/>
+	<coordStyle style="cartesian"/>
+	<startPoint exp="O"/>
+</element>
+<command name="Vector">
+	<input a0="O" a1="PinH"/>
+	<output a0="handH"/>
+</command>
+<element type="vector" label="handH">
+	<show object="true" label="false" ev="4"/>
+	<objColor r="0" g="0" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<isShape val="false"/>
+	<coords x="0.41675562640063296" y="2.363538607229299" z="0"/>
+	<lineStyle thickness="9" type="0" typeHidden="1" opacity="178"/>
+	<coordStyle style="cartesian"/>
+	<startPoint exp="O"/>
+</element>
+<command name="CircleSector">
+	<input a0="O" a1="PinH" a2="PinM"/>
+	<output a0="d"/>
+</command>
+<element type="conicpart" label="d">
+	<show object="true" label="false" ev="4"/>
+	<condition showObject="angHM &lt; 180°"/>
+	<objColor r="153" g="204" b="0" alpha="0.44999998807907104"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<isShape val="false"/>
+	<lineStyle thickness="1" type="0" typeHidden="1" opacity="178"/>
+	<eigenvectors  x0="1" y0="0" z0="1.0" x1="0" y1="1" z1="1.0"/>
+	<matrix A0="1" A1="1" A2="-5.759999999999997" A3="0" A4="0" A5="0"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<command name="CircleSector">
+	<input a0="O" a1="PinM" a2="PinH"/>
+	<output a0="c"/>
+</command>
+<element type="conicpart" label="c">
+	<show object="false" label="false" ev="4"/>
+	<condition showObject="angHM ≥ 180°"/>
+	<objColor r="153" g="204" b="0" alpha="0.44999998807907104"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<isShape val="false"/>
+	<lineStyle thickness="1" type="0" typeHidden="1" opacity="178"/>
+	<eigenvectors  x0="1" y0="0" z0="1.0" x1="0" y1="1" z1="1.0"/>
+	<matrix A0="1" A1="1" A2="-12.96" A3="0" A4="0" A5="0"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<command name="LaTeX">
+	<input a0="diff3HMRad"/>
+	<output a0="text2"/>
+</command>
+<element type="text" label="text2">
+	<show object="true" label="false" ev="8"/>
+	<condition showObject="a"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<selectionAllowed val="false"/>
+	<isLaTeX val="true"/>
+	<font serif="true" sizeM="2" size="16" style="1"/>
+	<absoluteScreenLocation x="63" y="211"/>
+</element>
+<cascell caslabel="diff3HMDeg" >
+	<cellPair>
+		<inputCell>
+			<expression value="diff3HMDeg:=diff3HM * 360"  eval="Evaluate((diff3HM * 360))" evalCmd=""/>
+		</inputCell>
+		<outputCell>
+			<expression value="diff3HMDeg:=110" native="true"/>
+		</outputCell>
+	</cellPair>
+</cascell>
+<element type="numeric" label="diff3HMDeg">
+	<value val="110"/>
+	<objColor r="0" g="0" b="0" alpha="0.10000000149011612"/>
+	<selectionAllowed val="false"/>
+</element>
+<expression label="angHMDeg" exp="(diff3HM * 360)" />
+<element type="numeric" label="angHMDeg">
+	<value val="110.00000000000001"/>
+	<objColor r="0" g="0" b="0" alpha="0.10000000149011612"/>
+	<selectionAllowed val="false"/>
+</element>
+<expression label="text3" exp="&quot;&quot; + (LaTeX[angHMDeg]) + &quot;°&quot;" />
+<element type="text" label="text3">
+	<show object="true" label="false" ev="8"/>
+	<condition showObject="b"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<selectionAllowed val="false"/>
+	<isLaTeX val="true"/>
+	<font serif="true" sizeM="2" size="16" style="1"/>
+	<absoluteScreenLocation x="63" y="361"/>
+</element>
+<element type="boolean" label="a">
+	<value val="true"/>
+	<show object="true" label="true"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelOffset x="11" y="160"/>
+	<labelMode val="0"/>
+	<checkbox fixed="true"/>
+	<caption val="顯示弧度"/>
+</element>
+<element type="boolean" label="b">
+	<value val="true"/>
+	<show object="true" label="true"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelOffset x="11" y="310"/>
+	<labelMode val="0"/>
+	<checkbox fixed="true"/>
+	<caption val="顯示角度"/>
+</element>
+</construction>
+</geogebra>

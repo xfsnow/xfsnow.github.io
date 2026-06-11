@@ -1,0 +1,2497 @@
+<?xml version="1.0" encoding="utf-8"?>
+<geogebra format="5.0" version="5.0.214.0" id="37b6c779-7a6c-453a-a1f1-e0a7161ddccf"  xsi:noNamespaceSchemaLocation="http://www.geogebra.org/ggb.xsd" xmlns="" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" >
+<gui>
+	<window width="875" height="580" />
+	<perspectives>
+<perspective id="tmp">
+	<panes>
+		<pane location="" divider="0.1724137931034483" orientation="0" />
+		<pane location="1" divider="0.11428571428571428" orientation="1" />
+	</panes>
+	<views>
+		<view id="4097" visible="false" inframe="true" stylebar="true" location="1,1,1,1" size="400" window="89,0,846,684" />
+		<view id="1" visible="false" inframe="false" stylebar="false" location="1,3" size="254" window="100,100,600,400" />
+		<view id="4" toolbar="0 || 2020 , 2021 , 2022 , 66 || 2001 , 2003 , 2002 , 2004 , 2005 || 2040 , 2041 , 2042 , 2044 , 2043" visible="false" inframe="false" stylebar="true" location="1,1" size="300" window="100,100,600,400" />
+		<view id="8" toolbar="1001 | 1002 | 1003  || 1005 | 1004 || 1006 | 1007 | 1010 || 1008 1009 || 66 68 || 6" visible="false" inframe="false" stylebar="false" location="1,3" size="300" window="100,100,600,400" />
+		<view id="512" toolbar="0 | 1 501 5 19 , 67 | 2 15 45 18 , 7 37 | 514 3 9 , 13 44 , 47 | 16 | 551 550 11 , 22 , 23 , 55 56 57 , 12 | 69 | 510 511 , 512 513 | 533 531 , 534 532 , 522 523 , 537 536 , 535 | 521 520 | 36 , 38 49 560 | 571 30 29 570 31 33 | 17 | 540 40 41 42 , 27 28 35 , 6 , 502" visible="true" inframe="false" stylebar="false" location="2,1" size="873" window="100,100,600,400" />
+		<view id="2" visible="false" inframe="true" stylebar="true" location="3" size="210" window="387,15,250,738" />
+		<view id="16" visible="true" inframe="false" stylebar="false" location="0" size="100" window="50,50,500,500" />
+		<view id="32" visible="false" inframe="false" stylebar="true" location="1" size="150" window="50,50,500,500" />
+		<view id="64" toolbar="0" visible="false" inframe="true" stylebar="true" location="1" size="150" window="50,50,500,500" />
+		<view id="128" visible="false" inframe="true" stylebar="false" location="1" size="480" window="50,50,500,500" />
+		<view id="70" toolbar="0 || 2020 || 2021 || 2022" visible="false" inframe="true" stylebar="true" location="1" size="150" window="50,50,500,500" />
+		<view id="43" visible="false" inframe="false" stylebar="false" location="1" size="450" window="50,50,500,500" />
+	</views>
+	<toolbar show="false" items="0 39 | 1 501 67 , 5 19 , 72 | 2 15 45 , 18 65 , 7 37 | 4 3 8 9 , 13 44 , 58 , 47 | 16 51 64 , 70 | 10 34 53 11 , 24  20 22 , 21 23 | 55 56 57 , 12 | 36 46 , 38 49  50 , 71 | 30 29 54 32 31 33 | 17 26 62 73 , 14 68 | 25 52 60 61 | 40 41 42 , 27 28 35 , 6" position="1" help="false" />
+	<input show="false" cmd="true" top="false" />
+	<dockBar show="false" east="false" />
+</perspective>
+	</perspectives>
+	<labelingStyle  val="3"/>
+	<font  size="20"/>
+</gui>
+<euclidianView>
+	<viewNumber viewNo="1"/>
+	<size  width="872" height="577"/>
+	<coordSystem xZero="214.99999999999997" yZero="314.9999999999999" scale="49.999999999999986" yscale="49.999999999999986"/>
+	<evSettings axes="true" grid="false" gridIsBold="false" pointCapturing="3" rightAngleStyle="1" checkboxSize="26" gridType="0"/>
+	<bgColor r="255" g="255" b="255"/>
+	<axesColor r="0" g="0" b="0"/>
+	<gridColor r="192" g="192" b="192"/>
+	<lineStyle axes="1" grid="10"/>
+	<axis id="0" show="true" label="" unitLabel="" tickStyle="1" showNumbers="true"/>
+	<axis id="1" show="true" label="" unitLabel="" tickStyle="1" showNumbers="true"/>
+</euclidianView>
+<euclidianView>
+	<viewNumber viewNo="2"/>
+	<size  width="872" height="100"/>
+	<coordSystem xZero="214.99999999999997" yZero="307.00000000000034" scale="49.999999999999986" yscale="50.00000000000004"/>
+	<evSettings axes="false" grid="false" gridIsBold="false" pointCapturing="3" rightAngleStyle="1" checkboxSize="26" gridType="0"/>
+	<bgColor r="255" g="255" b="255"/>
+	<axesColor r="0" g="0" b="0"/>
+	<gridColor r="192" g="192" b="192"/>
+	<lineStyle axes="1" grid="10"/>
+	<axis id="0" show="false" label="" unitLabel="" tickStyle="1" showNumbers="true"/>
+	<axis id="1" show="false" label="" unitLabel="" tickStyle="1" showNumbers="true"/>
+</euclidianView>
+<kernel>
+	<uses3D val="true"/>
+	<continuous val="false"/>
+	<usePathAndRegionParameters val="true"/>
+	<decimals val="2"/>
+	<angleUnit val="degree"/>
+	<algebraStyle val="0" spreadsheet="0"/>
+	<coordStyle val="0"/>
+	<angleFromInvTrig val="false"/>
+</kernel>
+<scripting blocked="false" disabled="false"/>
+<euclidianView3D>
+	<coordSystem xZero="0.030291691006958388" yZero="-0.03263640931926681" zZero="-0.9178087140275744" scale="76.5983204355181" xAngle="24" zAngle="-69.14375000000001"/>
+	<evSettings axes="false" grid="false" gridIsBold="false" pointCapturing="1" rightAngleStyle="1" gridType="0"/>
+	<axis id="0" show="false" label="" unitLabel="" tickStyle="1" showNumbers="true"/>
+	<axis id="1" show="false" label="" unitLabel="" tickStyle="1" showNumbers="true"/>
+	<axis id="2" show="false" label="" unitLabel="" tickStyle="1" showNumbers="true"/>
+	<plate show="false"/>
+	<bgColor r="255" g="255" b="255"/>
+	<clipping use="false" show="false" size="2"/>
+	<projection type="0"/>
+</euclidianView3D>
+<construction title="" author="" date="">
+<element type="numeric" label="radius">
+	<value val="4.5"/>
+	<show object="false" label="true"/>
+	<objColor r="0" g="0" b="0" alpha="0.1"/>
+	<layer val="0"/>
+	<labelMode val="1"/>
+	<animation step="1" speed="1" type="0" playing="false"/>
+</element>
+<element type="point3d" label="G">
+	<show object="true" label="true" ev="4"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelOffset x="-5" y="26"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<selectionAllowed val="false"/>
+	<coords x="1" y="-1" z="0" w="1"/>
+	<coordStyle style="cartesian"/>
+	<pointSize val="2"/>
+</element>
+<element type="point3d" label="F">
+	<show object="true" label="true" ev="4"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelOffset x="-22" y="17"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<selectionAllowed val="false"/>
+	<coords x="-1" y="-1" z="0" w="1"/>
+	<coordStyle style="cartesian"/>
+	<pointSize val="2"/>
+</element>
+<command name="Point">
+	<input a0="Circle[G, Distance[F, G], Segment[F, G]]"/>
+	<output a0="H"/>
+</command>
+<element type="point3d" label="H">
+	<show object="true" label="true" ev="4"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelOffset x="4" y="9"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<selectionAllowed val="false"/>
+	<coords x="1" y="1" z="0" w="1"/>
+	<coordStyle style="cartesian"/>
+	<pointSize val="2"/>
+</element>
+<command name="Cube">
+	<input a0="F" a1="G" a2="H"/>
+	<output a0="a" a1="E" a2="A" a3="B" a4="C" a5="D" a6="faceABCD" a7="faceADHE" a8="faceABFE" a9="faceBCGF" a10="faceCDHG" a11="faceEFGH" a12="edgeAD_1" a13="edgeAB_1" a14="edgeBC_1" a15="edgeCD_1" a16="edgeAE" a17="edgeDH" a18="edgeEH_1" a19="edgeEF" a20="edgeBF" a21="edgeFG" a22="edgeCG" a23="edgeGH_1"/>
+</command>
+<element type="polyhedron" label="a">
+	<lineStyle thickness="4" type="0" typeHidden="1"/>
+	<show object="true" label="false" ev="4"/>
+	<objColor r="255" g="255" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+</element>
+<element type="point3d" label="E">
+	<show object="true" label="true" ev="4"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelOffset x="-24" y="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<coords x="-1" y="1" z="0" w="1"/>
+	<coordStyle style="cartesian"/>
+	<pointSize val="2"/>
+</element>
+<element type="point3d" label="A">
+	<show object="true" label="true" ev="4"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelOffset x="-31" y="12"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<coords x="-1" y="-1" z="2" w="1"/>
+	<coordStyle style="cartesian"/>
+	<pointSize val="2"/>
+</element>
+<element type="point3d" label="B">
+	<show object="true" label="true" ev="4"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelOffset x="6" y="15"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<coords x="1" y="-1" z="2" w="1"/>
+	<coordStyle style="cartesian"/>
+	<pointSize val="2"/>
+</element>
+<element type="point3d" label="C">
+	<show object="true" label="true" ev="4"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<coords x="1" y="1" z="2" w="1"/>
+	<coordStyle style="cartesian"/>
+	<pointSize val="2"/>
+</element>
+<element type="point3d" label="D">
+	<show object="true" label="true" ev="4"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelOffset x="-26" y="-1"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<coords x="-1" y="1" z="2" w="1"/>
+	<coordStyle style="cartesian"/>
+	<pointSize val="2"/>
+</element>
+<element type="polygon3d" label="faceABCD">
+	<lineStyle thickness="4" type="0" typeHidden="1"/>
+	<show object="true" label="false" ev="4"/>
+	<objColor r="255" g="255" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<auxiliary val="false"/>
+</element>
+<element type="polygon3d" label="faceADHE">
+	<lineStyle thickness="4" type="0" typeHidden="1"/>
+	<show object="true" label="false" ev="4"/>
+	<objColor r="255" g="255" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<auxiliary val="false"/>
+</element>
+<element type="polygon3d" label="faceABFE">
+	<lineStyle thickness="4" type="0" typeHidden="1"/>
+	<show object="true" label="false" ev="4"/>
+	<objColor r="255" g="255" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<auxiliary val="false"/>
+</element>
+<element type="polygon3d" label="faceBCGF">
+	<lineStyle thickness="4" type="0" typeHidden="1"/>
+	<show object="true" label="false" ev="4"/>
+	<objColor r="255" g="255" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<auxiliary val="false"/>
+</element>
+<element type="polygon3d" label="faceCDHG">
+	<lineStyle thickness="4" type="0" typeHidden="1"/>
+	<show object="true" label="false" ev="4"/>
+	<objColor r="255" g="255" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<auxiliary val="false"/>
+</element>
+<element type="polygon3d" label="faceEFGH">
+	<lineStyle thickness="4" type="0" typeHidden="1"/>
+	<show object="true" label="false" ev="4"/>
+	<objColor r="255" g="255" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<auxiliary val="false"/>
+</element>
+<element type="segment3d" label="edgeAD_1">
+	<show object="true" label="false" ev="4"/>
+	<objColor r="255" g="255" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="4" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment3d" label="edgeAB_1">
+	<show object="true" label="false" ev="4"/>
+	<objColor r="255" g="255" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="4" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment3d" label="edgeBC_1">
+	<show object="true" label="false" ev="4"/>
+	<objColor r="255" g="255" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="4" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment3d" label="edgeCD_1">
+	<show object="true" label="false" ev="4"/>
+	<objColor r="255" g="255" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="4" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment3d" label="edgeAE">
+	<show object="true" label="false" ev="4"/>
+	<objColor r="255" g="255" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="4" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment3d" label="edgeDH">
+	<show object="true" label="false" ev="4"/>
+	<objColor r="255" g="255" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="4" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment3d" label="edgeEH_1">
+	<show object="true" label="false" ev="4"/>
+	<objColor r="255" g="255" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="4" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment3d" label="edgeEF">
+	<show object="true" label="false" ev="4"/>
+	<objColor r="255" g="255" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="4" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment3d" label="edgeBF">
+	<show object="true" label="false" ev="4"/>
+	<objColor r="255" g="255" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="4" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment3d" label="edgeFG">
+	<show object="true" label="false" ev="4"/>
+	<objColor r="255" g="255" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="4" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment3d" label="edgeCG">
+	<show object="true" label="false" ev="4"/>
+	<objColor r="255" g="255" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="4" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment3d" label="edgeGH_1">
+	<show object="true" label="false" ev="4"/>
+	<objColor r="255" g="255" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="4" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<command name="Midpoint">
+	<input a0="E" a1="B"/>
+	<output a0="J"/>
+</command>
+<element type="point3d" label="J">
+	<show object="false" label="true" ev="4"/>
+	<objColor r="68" g="68" b="68" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<coords x="0" y="0" z="1" w="1"/>
+	<coordStyle style="cartesian"/>
+	<pointSize val="3"/>
+</element>
+<command name="Point">
+	<input a0="edgeEF"/>
+	<output a0="I"/>
+</command>
+<element type="point3d" label="I">
+	<show object="true" label="false" ev="4"/>
+	<condition showObject="q1"/>
+	<objColor r="255" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<animation step="1" speed="1" type="0" playing="false"/>
+	<coords x="-0.6921240092827752" y="-1" z="2" w="1"/>
+	<coordStyle style="cartesian"/>
+	<pointSize val="4"/>
+</element>
+<command name="Line">
+	<input a0="I" a1="edgeBF"/>
+	<output a0="c"/>
+</command>
+<element type="line3d" label="c">
+	<show object="false" label="false" ev="4"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<coords ox="-0.6921240092827752" oy="-1" oz="2" ow="1" vx="0" vy="0" vz="-1" vw="0"/>
+	<eqnStyle style="parametric" parameter="λ"/>
+</element>
+<command name="Mirror">
+	<input a0="I" a1="J"/>
+	<output a0="I&apos;"/>
+</command>
+<element type="point3d" label="I&apos;">
+	<show object="false" label="true" ev="4"/>
+	<objColor r="255" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<coords x="0.6921240092827752" y="1" z="0" w="1"/>
+	<coordStyle style="cartesian"/>
+	<pointSize val="4"/>
+</element>
+<command name="Line">
+	<input a0="I" a1="I&apos;"/>
+	<output a0="b"/>
+</command>
+<element type="line3d" label="b">
+	<show object="false" label="false" ev="4"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<coords ox="-0.6921240092827752" oy="-1" oz="2" ow="1" vx="1.3842480185655504" vy="2" vz="-2" vw="0"/>
+	<eqnStyle style="parametric" parameter="λ"/>
+</element>
+<command name="Plane">
+	<input a0="b" a1="c"/>
+	<output a0="d"/>
+</command>
+<element type="plane3d" label="d">
+	<show object="false" label="false" ev="4"/>
+	<objColor r="99" g="219" b="219" alpha="0.5"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<coords x="-2" y="1.3842480185655504" z="0" w="0"/>
+	<fading val="0.1"/>
+</element>
+<command name="Intersect">
+	<input a0="edgeGH_1" a1="d"/>
+	<output a0="K_1"/>
+</command>
+<element type="point3d" label="K_1">
+	<show object="false" label="true" ev="4"/>
+	<objColor r="68" g="68" b="68" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<coords x="0.6921240092827747" y="1" z="2" w="1"/>
+	<coordStyle style="cartesian"/>
+	<pointSize val="3"/>
+</element>
+<command name="Intersect">
+	<input a0="edgeAB_1" a1="d"/>
+	<output a0="L_2"/>
+</command>
+<element type="point3d" label="L_2">
+	<show object="false" label="true" ev="4"/>
+	<objColor r="68" g="68" b="68" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<coords x="-0.6921240092827753" y="-1" z="0" w="1"/>
+	<coordStyle style="cartesian"/>
+	<pointSize val="3"/>
+</element>
+<command name="Polygon">
+	<input a0="I" a1="L_2" a2="I&apos;" a3="K_1"/>
+	<output a0="poly2" a1="i" a2="l" a3="i&apos;" a4="k"/>
+</command>
+<element type="polygon3d" label="poly2">
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<show object="false" label="false" ev="4"/>
+	<objColor r="153" g="51" b="0" alpha="0.1"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+</element>
+<element type="segment3d" label="i">
+	<show object="false" label="false" ev="4"/>
+	<objColor r="153" g="51" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="2"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment3d" label="l">
+	<show object="false" label="false" ev="4"/>
+	<objColor r="153" g="51" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="2"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment3d" label="i&apos;">
+	<show object="false" label="false" ev="4"/>
+	<objColor r="153" g="51" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="2"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment3d" label="k">
+	<show object="false" label="false" ev="4"/>
+	<objColor r="153" g="51" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="2"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<command name="Prism">
+	<input a0="G" a1="L_2" a2="I&apos;" a3="H" a4="B"/>
+	<output a0="e" a1="M_2" a2="N_2" a3="O" a4="faceGHI&apos;L" a5="faceBGLM" a6="faceI&apos;LMN" a7="faceHI&apos;NO" a8="faceBGHO" a9="faceBMNO" a10="edgeGL" a11="edgeI&apos;L" a12="edgeHI&apos;" a13="edgeGH" a14="edgeBG" a15="edgeLM" a16="edgeI&apos;N" a17="edgeHO" a18="edgeBM" a19="edgeMN" a20="edgeNO" a21="edgeBO"/>
+</command>
+<element type="polyhedron" label="e">
+	<lineStyle thickness="2" type="0" typeHidden="2"/>
+	<show object="false" label="false" ev="4"/>
+	<objColor r="153" g="51" b="0" alpha="0.4"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+</element>
+<element type="point3d" label="M_2">
+	<show object="false" label="false" ev="4"/>
+	<objColor r="68" g="68" b="68" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<coords x="-0.6921240092827753" y="-1" z="2" w="1"/>
+	<coordStyle style="cartesian"/>
+	<pointSize val="3"/>
+</element>
+<element type="point3d" label="N_2">
+	<show object="false" label="true" ev="4"/>
+	<objColor r="68" g="68" b="68" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<coords x="0.6921240092827752" y="1" z="2" w="1"/>
+	<coordStyle style="cartesian"/>
+	<pointSize val="3"/>
+</element>
+<element type="point3d" label="O">
+	<show object="false" label="true" ev="4"/>
+	<objColor r="68" g="68" b="68" alpha="0"/>
+	<layer val="0"/>
+	<labelOffset x="20" y="44"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<coords x="1" y="1" z="2" w="1"/>
+	<coordStyle style="cartesian"/>
+	<pointSize val="3"/>
+</element>
+<element type="polygon3d" label="faceGHI&apos;L">
+	<lineStyle thickness="2" type="0" typeHidden="2"/>
+	<show object="false" label="false" ev="4"/>
+	<objColor r="153" g="51" b="0" alpha="0.4"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<auxiliary val="false"/>
+</element>
+<element type="polygon3d" label="faceBGLM">
+	<lineStyle thickness="2" type="0" typeHidden="2"/>
+	<show object="false" label="false" ev="4"/>
+	<objColor r="153" g="51" b="0" alpha="0.4"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<auxiliary val="false"/>
+</element>
+<element type="polygon3d" label="faceI&apos;LMN">
+	<lineStyle thickness="2" type="0" typeHidden="2"/>
+	<show object="true" label="false" ev="4"/>
+	<condition showObject="q1"/>
+	<objColor r="255" g="127" b="0" alpha="0.75"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+</element>
+<element type="polygon3d" label="faceHI&apos;NO">
+	<lineStyle thickness="2" type="0" typeHidden="2"/>
+	<show object="false" label="false" ev="4"/>
+	<objColor r="153" g="51" b="0" alpha="0.4"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<auxiliary val="false"/>
+</element>
+<element type="polygon3d" label="faceBGHO">
+	<lineStyle thickness="2" type="0" typeHidden="2"/>
+	<show object="false" label="false" ev="4"/>
+	<objColor r="153" g="51" b="0" alpha="0.4"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<auxiliary val="false"/>
+</element>
+<element type="polygon3d" label="faceBMNO">
+	<lineStyle thickness="2" type="0" typeHidden="2"/>
+	<show object="false" label="false" ev="4"/>
+	<objColor r="153" g="51" b="0" alpha="0.4"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<auxiliary val="false"/>
+</element>
+<element type="segment3d" label="edgeGL">
+	<show object="false" label="false" ev="4"/>
+	<objColor r="153" g="51" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment3d" label="edgeI&apos;L">
+	<show object="false" label="false" ev="4"/>
+	<objColor r="153" g="51" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment3d" label="edgeHI&apos;">
+	<show object="false" label="false" ev="4"/>
+	<objColor r="153" g="51" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment3d" label="edgeGH">
+	<show object="false" label="false" ev="4"/>
+	<objColor r="153" g="51" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment3d" label="edgeBG">
+	<show object="false" label="false" ev="4"/>
+	<objColor r="153" g="51" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment3d" label="edgeLM">
+	<show object="false" label="false" ev="4"/>
+	<objColor r="153" g="51" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment3d" label="edgeI&apos;N">
+	<show object="false" label="false" ev="4"/>
+	<objColor r="153" g="51" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment3d" label="edgeHO">
+	<show object="false" label="false" ev="4"/>
+	<objColor r="153" g="51" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment3d" label="edgeBM">
+	<show object="false" label="false" ev="4"/>
+	<objColor r="153" g="51" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment3d" label="edgeMN">
+	<show object="false" label="false" ev="4"/>
+	<objColor r="153" g="51" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment3d" label="edgeNO">
+	<show object="false" label="false" ev="4"/>
+	<objColor r="153" g="51" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment3d" label="edgeBO">
+	<show object="false" label="false" ev="4"/>
+	<objColor r="153" g="51" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<command name="Rotate">
+	<input a0="e" a1="0" a2="zAxis"/>
+	<output a0="e&apos;"/>
+</command>
+<element type="polyhedron" label="e&apos;">
+	<lineStyle thickness="2" type="0" typeHidden="2"/>
+	<show object="true" label="false" ev="4"/>
+	<condition showObject="q1"/>
+	<objColor r="255" g="127" b="0" alpha="0.5"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+</element>
+<command name="OrthogonalPlane">
+	<input a0="J" a1="zAxis"/>
+	<output a0="g"/>
+</command>
+<element type="plane3d" label="g">
+	<show object="false" label="false" ev="4"/>
+	<objColor r="99" g="219" b="219" alpha="0.5"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<coords x="0" y="0" z="1" w="-1"/>
+	<fading val="0.1"/>
+</element>
+<command name="Circle">
+	<input a0="J" a1="radius" a2="OrthogonalLine[J, d]"/>
+	<output a0="f"/>
+</command>
+<element type="conic3d" label="f">
+	<show object="false" label="false" ev="4"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<eigenvectors  x0="1" y0="0" z0="1.0" x1="0" y1="1" z1="1.0"/>
+	<matrix A0="1" A1="1" A2="-20.25" A3="0" A4="0" A5="0"/>
+	<eqnStyle style="implicit"/>
+</element>
+<command name="Intersect">
+	<input a0="g" a1="f"/>
+	<output a0="P_1" a1="Q_2"/>
+</command>
+<element type="point3d" label="P_1">
+	<show object="false" label="true" ev="4"/>
+	<objColor r="68" g="68" b="68" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<coords x="-2.560985434292216" y="-3.7001829151196173" z="1" w="1"/>
+	<coordStyle style="cartesian"/>
+	<pointSize val="3"/>
+</element>
+<element type="point3d" label="Q_2">
+	<show object="false" label="true" ev="4"/>
+	<objColor r="68" g="68" b="68" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<coords x="2.560985434292216" y="3.7001829151196173" z="1" w="1"/>
+	<coordStyle style="cartesian"/>
+	<pointSize val="3"/>
+</element>
+<command name="Polygon">
+	<input a0="Rotate[P_1, 45°, OrthogonalLine[J, d]]" a1="Rotate[P_1, 135°, OrthogonalLine[J, d]]" a2="Rotate[P_1, 225°, OrthogonalLine[J, d]]" a3="Rotate[P_1, 315°, OrthogonalLine[J, d]]"/>
+	<output a0="poly1" a1="poly1_1" a2="poly1_2" a3="poly1_3" a4="poly1_4"/>
+</command>
+<element type="polygon3d" label="poly1">
+	<lineStyle thickness="2" type="0" typeHidden="2"/>
+	<show object="true" label="false" ev="4"/>
+	<condition showObject="q1"/>
+	<objColor r="192" g="192" b="192" alpha="0.06"/>
+	<layer val="0"/>
+	<labelMode val="3"/>
+	<selectionAllowed val="false"/>
+</element>
+<element type="segment3d" label="poly1_1">
+	<show object="true" label="false" ev="4"/>
+	<condition showObject="q1"/>
+	<objColor r="192" g="192" b="192" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="2"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment3d" label="poly1_2">
+	<show object="true" label="false" ev="4"/>
+	<condition showObject="q1"/>
+	<objColor r="192" g="192" b="192" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="2"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment3d" label="poly1_3">
+	<show object="true" label="false" ev="4"/>
+	<condition showObject="q1"/>
+	<objColor r="192" g="192" b="192" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="2"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment3d" label="poly1_4">
+	<show object="true" label="false" ev="4"/>
+	<condition showObject="q1"/>
+	<objColor r="192" g="192" b="192" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="2"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<command name="Mirror">
+	<input a0="e&apos;" a1="poly1"/>
+	<output a0="e&apos;&apos;"/>
+</command>
+<element type="polyhedron" label="e&apos;&apos;">
+	<lineStyle thickness="1" type="0" typeHidden="1"/>
+	<show object="true" label="false" ev="4"/>
+	<condition showObject="q1"/>
+	<objColor r="255" g="215" b="0" alpha="0.35"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+</element>
+<command name="Rotate">
+	<input a0="P_1" a1="135°" a2="OrthogonalLine[J, d]"/>
+	<output a0="P&apos;"/>
+</command>
+<element type="point3d" label="P&apos;">
+	<show object="false" label="true" ev="4"/>
+	<objColor r="68" g="68" b="68" alpha="0"/>
+	<layer val="0"/>
+	<labelOffset x="8" y="23"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<coords x="1.8108901671080013" y="2.6164244309116884" z="4.181980515339465" w="1"/>
+	<coordStyle style="cartesian"/>
+	<pointSize val="3"/>
+</element>
+<expression label="text1" exp="&quot;鏡面&quot;"/>
+<element type="text" label="text1">
+	<show object="true" label="false" ev="4"/>
+	<condition showObject="q1"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<startPoint exp="P&apos;"/>
+	<labelOffset x="5" y="65"/>
+</element>
+<command name="Midpoint">
+	<input a0="edgeEF"/>
+	<output a0="K"/>
+</command>
+<element type="point3d" label="K">
+	<show object="true" label="true" ev="4"/>
+	<condition showObject="q1"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelOffset x="-12" y="33"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<coords x="0" y="-1" z="2" w="1"/>
+	<coordStyle style="cartesian"/>
+	<pointSize val="2"/>
+</element>
+<expression label="text2" exp="&quot;ABCDEFGH為一正方體，K、L、M和N是稜的中點。&#10;拖拉紅點，觀察正方體橙色部份的鏡像何時和正方體的另一部份重合。&#10;正方體的反射對稱平面的名稱是甚麼？&quot;"/>
+<element type="text" label="text2">
+	<show object="true" label="false" ev="11"/>
+	<condition showObject="q1"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<absoluteScreenLocation  x="9" y="23"/>
+</element>
+<element type="boolean" label="q1">
+	<value val="true"/>
+	<show object="true" label="true" ev="3"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelOffset x="660" y="1"/>
+	<labelMode val="0"/>
+	<checkbox fixed="true"/>
+	<ggbscript onUpdate="SetValue[q1, true]&#13;&#10;SetValue[q2, false]&#13;&#10;SetValue[q3, false]"/>
+	<caption val="題 1"/>
+</element>
+<element type="boolean" label="q2">
+	<value val="false"/>
+	<show object="true" label="true" ev="3"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelOffset x="660" y="31"/>
+	<labelMode val="0"/>
+	<checkbox fixed="true"/>
+	<ggbscript onUpdate="SetValue[q2, true]&#13;&#10;SetValue[q1, false]&#13;&#10;SetValue[q3, false]"/>
+	<caption val="題 2"/>
+</element>
+<element type="boolean" label="q3">
+	<value val="false"/>
+	<show object="true" label="true" ev="3"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelOffset x="660" y="61"/>
+	<labelMode val="0"/>
+	<checkbox fixed="true"/>
+	<ggbscript onUpdate="SetValue[q3, true]&#13;&#10;SetValue[q2, false]&#13;&#10;SetValue[q1, false]"/>
+	<caption val="題 3"/>
+</element>
+<expression label="text3" exp="&quot;ABCDEFGH為一正方體，P、Q、R和S稜的中點。&#10;拖拉紅點，觀察正方體橙色部份的鏡像何時和正方體的另一部份重合。&#10;正方體的反射對稱平面的名稱是甚麼？&quot;"/>
+<element type="text" label="text3">
+	<show object="true" label="false" ev="11"/>
+	<condition showObject="q2"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<absoluteScreenLocation  x="9" y="23"/>
+</element>
+<expression label="text4" exp="&quot;ABCDEFGH為一正方體，W、X、Y和Z是稜的中點。&#10;拖拉紅點，觀察正方體橙色部份的鏡像何時和正方體的另一部份重合。&#10;正方體的反射對稱平面的名稱是甚麼？&quot;"/>
+<element type="text" label="text4">
+	<show object="true" label="false" ev="11"/>
+	<condition showObject="q3"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<absoluteScreenLocation  x="9" y="23"/>
+</element>
+<command name="Midpoint">
+	<input a0="edgeEH_1"/>
+	<output a0="P"/>
+</command>
+<element type="point3d" label="P">
+	<show object="true" label="true" ev="4"/>
+	<condition showObject="q2"/>
+	<objColor r="68" g="68" b="68" alpha="0"/>
+	<layer val="0"/>
+	<labelOffset x="-23" y="-3"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<coords x="-1" y="0" z="2" w="1"/>
+	<coordStyle style="cartesian"/>
+	<pointSize val="2"/>
+</element>
+<command name="Point">
+	<input a0="edgeEH_1"/>
+	<output a0="R_2"/>
+</command>
+<element type="point3d" label="R_2">
+	<show object="false" label="false" ev="4"/>
+	<condition showObject="q2"/>
+	<objColor r="255" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<animation step="0.1" speed="1" type="0" playing="false"/>
+	<coords x="-1" y="0.3999822758122349" z="2" w="1"/>
+	<coordStyle style="cartesian"/>
+	<pointSize val="4"/>
+</element>
+<command name="Mirror">
+	<input a0="R_2" a1="J"/>
+	<output a0="R&apos;"/>
+</command>
+<element type="point3d" label="R&apos;">
+	<show object="false" label="false" ev="4"/>
+	<objColor r="255" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<coords x="1" y="-0.3999822758122349" z="0" w="1"/>
+	<coordStyle style="cartesian"/>
+	<pointSize val="4"/>
+</element>
+<command name="Line">
+	<input a0="R_2" a1="edgeEF"/>
+	<output a0="h"/>
+</command>
+<element type="line3d" label="h">
+	<show object="false" label="false" ev="4"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<coords ox="-1" oy="0.3999822758122349" oz="2" ow="1" vx="1" vy="0" vz="0" vw="0"/>
+	<eqnStyle style="parametric" parameter="λ"/>
+</element>
+<command name="Line">
+	<input a0="R_2" a1="R&apos;"/>
+	<output a0="j"/>
+</command>
+<element type="line3d" label="j">
+	<show object="false" label="false" ev="4"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<coords ox="-1" oy="0.3999822758122349" oz="2" ow="1" vx="2" vy="-0.7999645516244698" vz="-2" vw="0"/>
+	<eqnStyle style="parametric" parameter="λ"/>
+</element>
+<command name="Plane">
+	<input a0="h" a1="j"/>
+	<output a0="m"/>
+</command>
+<element type="plane3d" label="m">
+	<show object="false" label="false" ev="4"/>
+	<objColor r="99" g="219" b="219" alpha="0.5"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<coords x="0" y="2" z="-0.7999645516244698" w="0.7999645516244698"/>
+	<fading val="0.1"/>
+</element>
+<command name="IntersectPath">
+	<input a0="m" a1="a"/>
+	<outputSizes val="1,4,4"/>
+	<output a0="poly3" a1="S_2" a2="T" a3="U" a4="V" a5="n" a6="p" a7="q" a8="r"/>
+</command>
+<element type="polygon3d" label="poly3">
+	<lineStyle thickness="2" type="0" typeHidden="2"/>
+	<show object="true" label="false" ev="4"/>
+	<condition showObject="q2"/>
+	<objColor r="255" g="127" b="0" alpha="0.75"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+</element>
+<element type="point3d" label="S_2">
+	<show object="false" label="true" ev="4"/>
+	<objColor r="68" g="68" b="68" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="true"/>
+	<coords x="-1" y="-0.399982275812235" z="0" w="1"/>
+	<coordStyle style="cartesian"/>
+	<pointSize val="3"/>
+</element>
+<element type="point3d" label="T">
+	<show object="false" label="true" ev="4"/>
+	<objColor r="68" g="68" b="68" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="true"/>
+	<coords x="0.9999999999999998" y="-0.399982275812235" z="0" w="1"/>
+	<coordStyle style="cartesian"/>
+	<pointSize val="3"/>
+</element>
+<element type="point3d" label="U">
+	<show object="false" label="true" ev="4"/>
+	<objColor r="68" g="68" b="68" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="true"/>
+	<coords x="1" y="0.3999822758122349" z="2" w="1"/>
+	<coordStyle style="cartesian"/>
+	<pointSize val="3"/>
+</element>
+<element type="point3d" label="V">
+	<show object="false" label="true" ev="4"/>
+	<objColor r="68" g="68" b="68" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="true"/>
+	<coords x="-1" y="0.3999822758122349" z="2" w="1"/>
+	<coordStyle style="cartesian"/>
+	<pointSize val="3"/>
+</element>
+<element type="segment3d" label="n">
+	<show object="false" label="false" ev="4"/>
+	<objColor r="255" g="127" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="true"/>
+	<lineStyle thickness="2" type="0" typeHidden="2"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment3d" label="p">
+	<show object="false" label="false" ev="4"/>
+	<objColor r="255" g="127" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="true"/>
+	<lineStyle thickness="2" type="0" typeHidden="2"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment3d" label="q">
+	<show object="false" label="false" ev="4"/>
+	<objColor r="255" g="127" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="true"/>
+	<lineStyle thickness="2" type="0" typeHidden="2"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment3d" label="r">
+	<show object="false" label="false" ev="4"/>
+	<objColor r="255" g="127" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="true"/>
+	<lineStyle thickness="2" type="0" typeHidden="2"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<expression label="B_1" exp="B" type="point" />
+<element type="point3d" label="B_1">
+	<show object="false" label="true" ev="4"/>
+	<objColor r="125" g="125" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<coords x="1" y="-1" z="2" w="1"/>
+	<coordStyle style="cartesian"/>
+	<pointSize val="3"/>
+</element>
+<command name="Prism">
+	<input a0="A" a1="F" a2="S_2" a3="V" a4="B_1"/>
+	<output a0="o" a1="W_1" a2="Z_1" a3="A_1" a4="faceAFSV" a5="face1" a6="faceFSZW" a7="face3" a8="face2" a9="face4" a10="edgeAF" a11="edgeFS" a12="edgeSV" a13="edgeAV" a14="edge1" a15="edgeFW" a16="edgeSZ" a17="edge2" a18="edge3" a19="edgeWZ" a20="edge5" a21="edge4"/>
+</command>
+<element type="polyhedron" label="o">
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<show object="false" label="false" ev="4"/>
+	<objColor r="153" g="51" b="0" alpha="0.4"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+</element>
+<element type="point3d" label="W_1">
+	<show object="false" label="true" ev="4"/>
+	<objColor r="68" g="68" b="68" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<coords x="1" y="-1" z="0" w="1"/>
+	<coordStyle style="cartesian"/>
+	<pointSize val="3"/>
+</element>
+<element type="point3d" label="Z_1">
+	<show object="false" label="true" ev="4"/>
+	<objColor r="68" g="68" b="68" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<coords x="1" y="-0.399982275812235" z="0" w="1"/>
+	<coordStyle style="cartesian"/>
+	<pointSize val="3"/>
+</element>
+<element type="point3d" label="A_1">
+	<show object="false" label="true" ev="4"/>
+	<objColor r="68" g="68" b="68" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<coords x="1" y="0.3999822758122349" z="2" w="1"/>
+	<coordStyle style="cartesian"/>
+	<pointSize val="3"/>
+</element>
+<element type="polygon3d" label="faceAFSV">
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<show object="false" label="false" ev="4"/>
+	<objColor r="153" g="51" b="0" alpha="0.4"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<auxiliary val="false"/>
+</element>
+<element type="polygon3d" label="face1">
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<show object="false" label="false" ev="4"/>
+	<objColor r="153" g="51" b="0" alpha="0.4"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<auxiliary val="false"/>
+</element>
+<element type="polygon3d" label="faceFSZW">
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<show object="false" label="false" ev="4"/>
+	<objColor r="153" g="51" b="0" alpha="0.4"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<auxiliary val="false"/>
+</element>
+<element type="polygon3d" label="face3">
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<show object="false" label="false" ev="4"/>
+	<objColor r="153" g="51" b="0" alpha="0.4"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<auxiliary val="false"/>
+</element>
+<element type="polygon3d" label="face2">
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<show object="false" label="false" ev="4"/>
+	<objColor r="153" g="51" b="0" alpha="0.4"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<auxiliary val="false"/>
+</element>
+<element type="polygon3d" label="face4">
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<show object="false" label="false" ev="4"/>
+	<objColor r="153" g="51" b="0" alpha="0.4"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<auxiliary val="false"/>
+</element>
+<element type="segment3d" label="edgeAF">
+	<show object="false" label="false" ev="4"/>
+	<objColor r="153" g="51" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment3d" label="edgeFS">
+	<show object="false" label="false" ev="4"/>
+	<objColor r="153" g="51" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment3d" label="edgeSV">
+	<show object="false" label="false" ev="4"/>
+	<objColor r="153" g="51" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment3d" label="edgeAV">
+	<show object="false" label="false" ev="4"/>
+	<objColor r="153" g="51" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment3d" label="edge1">
+	<show object="false" label="false" ev="4"/>
+	<objColor r="153" g="51" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment3d" label="edgeFW">
+	<show object="false" label="false" ev="4"/>
+	<objColor r="153" g="51" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment3d" label="edgeSZ">
+	<show object="false" label="false" ev="4"/>
+	<objColor r="153" g="51" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment3d" label="edge2">
+	<show object="false" label="false" ev="4"/>
+	<objColor r="153" g="51" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment3d" label="edge3">
+	<show object="false" label="false" ev="4"/>
+	<objColor r="153" g="51" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment3d" label="edgeWZ">
+	<show object="false" label="false" ev="4"/>
+	<objColor r="153" g="51" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment3d" label="edge5">
+	<show object="false" label="false" ev="4"/>
+	<objColor r="153" g="51" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment3d" label="edge4">
+	<show object="false" label="false" ev="4"/>
+	<objColor r="153" g="51" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<command name="Rotate">
+	<input a0="o" a1="0" a2="zAxis"/>
+	<output a0="o&apos;"/>
+</command>
+<element type="polyhedron" label="o&apos;">
+	<lineStyle thickness="2" type="0" typeHidden="2"/>
+	<show object="true" label="false" ev="4"/>
+	<condition showObject="q2"/>
+	<objColor r="255" g="127" b="0" alpha="0.4"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+</element>
+<command name="Mirror">
+	<input a0="o" a1="m"/>
+	<output a0="o&apos;&apos;"/>
+</command>
+<element type="polyhedron" label="o&apos;&apos;">
+	<lineStyle thickness="1" type="0" typeHidden="1"/>
+	<show object="true" label="false" ev="4"/>
+	<condition showObject="q2"/>
+	<objColor r="255" g="215" b="0" alpha="0.35"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+</element>
+<command name="Circle">
+	<input a0="J" a1="radius" a2="OrthogonalLine[J, m]"/>
+	<output a0="s"/>
+</command>
+<element type="conic3d" label="s">
+	<show object="false" label="false" ev="4"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<eigenvectors  x0="1" y0="0" z0="1.0" x1="0" y1="1" z1="1.0"/>
+	<matrix A0="1" A1="1" A2="-20.25" A3="0" A4="0" A5="0"/>
+	<eqnStyle style="implicit"/>
+</element>
+<command name="Intersect">
+	<input a0="g" a1="s"/>
+	<output a0="C_1" a1="D_1"/>
+</command>
+<element type="point3d" label="C_1">
+	<show object="false" label="true" ev="4"/>
+	<objColor r="68" g="68" b="68" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<coords x="-4.5" y="0" z="1" w="1"/>
+	<coordStyle style="cartesian"/>
+	<pointSize val="3"/>
+</element>
+<element type="point3d" label="D_1">
+	<show object="false" label="true" ev="4"/>
+	<objColor r="68" g="68" b="68" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<coords x="4.499999999999999" y="0" z="1" w="1"/>
+	<coordStyle style="cartesian"/>
+	<pointSize val="3"/>
+</element>
+<command name="Polygon">
+	<input a0="Rotate[C_1, 45°, OrthogonalLine[J, m]]" a1="Rotate[C_1, 135°, OrthogonalLine[J, m]]" a2="Rotate[C_1, 225°, OrthogonalLine[J, m]]" a3="Rotate[C_1, 315°, OrthogonalLine[J, m]]"/>
+	<output a0="poly4" a1="poly4_2" a2="poly4_1" a3="poly4_3" a4="poly4_4"/>
+</command>
+<element type="polygon3d" label="poly4">
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<show object="true" label="false" ev="4"/>
+	<condition showObject="q2"/>
+	<objColor r="192" g="192" b="192" alpha="0.05"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+</element>
+<element type="segment3d" label="poly4_2">
+	<show object="true" label="false" ev="4"/>
+	<condition showObject="q2"/>
+	<objColor r="192" g="192" b="192" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment3d" label="poly4_1">
+	<show object="true" label="false" ev="4"/>
+	<condition showObject="q2"/>
+	<objColor r="192" g="192" b="192" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment3d" label="poly4_3">
+	<show object="true" label="false" ev="4"/>
+	<condition showObject="q2"/>
+	<objColor r="192" g="192" b="192" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment3d" label="poly4_4">
+	<show object="true" label="false" ev="4"/>
+	<condition showObject="q2"/>
+	<objColor r="192" g="192" b="192" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<command name="Point">
+	<input a0="poly4_1"/>
+	<output a0="E_1"/>
+</command>
+<element type="point3d" label="E_1">
+	<show object="false" label="true" ev="4"/>
+	<objColor r="125" g="125" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<animation step="1" speed="1" type="0" playing="false"/>
+	<selectionAllowed val="false"/>
+	<coords x="3.181980515339464" y="0.8480579483493321" z="3.1202388196506963" w="1"/>
+	<coordStyle style="cartesian"/>
+	<pointSize val="3"/>
+</element>
+<expression label="text5" exp="&quot;鏡面&quot;"/>
+<element type="text" label="text5">
+	<show object="true" label="false" ev="4"/>
+	<condition showObject="q2"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<startPoint exp="E_1"/>
+	<labelOffset x="11" y="-39"/>
+</element>
+<command name="Point">
+	<input a0="edgeAE"/>
+	<output a0="F_1"/>
+</command>
+<element type="point3d" label="F_1">
+	<show object="true" label="false" ev="4"/>
+	<condition showObject="q3"/>
+	<objColor r="255" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<animation step="0.1" speed="1" type="0" playing="false"/>
+	<coords x="-1" y="-1" z="1.4372929414675948" w="1"/>
+	<coordStyle style="cartesian"/>
+	<pointSize val="4"/>
+</element>
+<command name="Mirror">
+	<input a0="F_1" a1="J"/>
+	<output a0="G_1"/>
+</command>
+<element type="point3d" label="G_1">
+	<show object="false" label="false" ev="4"/>
+	<objColor r="255" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<coords x="1" y="1" z="0.5627070585324052" w="1"/>
+	<coordStyle style="cartesian"/>
+	<pointSize val="4"/>
+</element>
+<command name="Midpoint">
+	<input a0="edgeAE"/>
+	<output a0="W"/>
+</command>
+<element type="point3d" label="W">
+	<show object="true" label="true" ev="4"/>
+	<condition showObject="q3"/>
+	<objColor r="68" g="68" b="68" alpha="0"/>
+	<layer val="0"/>
+	<labelOffset x="-35" y="11"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<coords x="-1" y="-1" z="1" w="1"/>
+	<coordStyle style="cartesian"/>
+	<pointSize val="2"/>
+</element>
+<command name="Line">
+	<input a0="F_1" a1="edgeFG"/>
+	<output a0="t"/>
+</command>
+<element type="line3d" label="t">
+	<show object="false" label="false" ev="4"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<coords ox="-1" oy="-1" oz="1.4372929414675948" ow="1" vx="0" vy="1" vz="0" vw="0"/>
+	<eqnStyle style="parametric" parameter="λ"/>
+</element>
+<command name="Line">
+	<input a0="F_1" a1="G_1"/>
+	<output a0="a_1"/>
+</command>
+<element type="line3d" label="a_1">
+	<show object="false" label="false" ev="4"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<coords ox="-1" oy="-1" oz="1.4372929414675948" ow="1" vx="2" vy="2" vz="-0.8745858829351896" vw="0"/>
+	<eqnStyle style="parametric" parameter="λ"/>
+</element>
+<command name="Plane">
+	<input a0="a_1" a1="t"/>
+	<output a0="u"/>
+</command>
+<element type="plane3d" label="u">
+	<show object="false" label="false" ev="4"/>
+	<objColor r="99" g="219" b="219" alpha="0.5"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<coords x="0.8745858829351896" y="0" z="2" w="-2"/>
+	<fading val="0.1"/>
+</element>
+<command name="Circle">
+	<input a0="J" a1="radius" a2="OrthogonalLine[J, u]"/>
+	<output a0="f_1"/>
+</command>
+<element type="conic3d" label="f_1">
+	<show object="false" label="false" ev="4"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<eigenvectors  x0="1" y0="0" z0="1.0" x1="0" y1="1" z1="1.0"/>
+	<matrix A0="1" A1="1" A2="-20.25" A3="0" A4="0" A5="0"/>
+	<eqnStyle style="implicit"/>
+</element>
+<command name="Line">
+	<input a0="J" a1="yAxis"/>
+	<output a0="g_1"/>
+</command>
+<element type="line3d" label="g_1">
+	<show object="false" label="false" ev="4"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<coords ox="0" oy="0" oz="1" ow="1" vx="0" vy="1" vz="0" vw="0"/>
+	<eqnStyle style="parametric" parameter="λ"/>
+</element>
+<command name="Intersect">
+	<input a0="g_1" a1="f_1"/>
+	<output a0="Q_1" a1="R_1"/>
+</command>
+<element type="point3d" label="Q_1">
+	<show object="false" label="true" ev="4"/>
+	<objColor r="68" g="68" b="68" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<coords x="0" y="4.5" z="1" w="1"/>
+	<coordStyle style="cartesian"/>
+	<pointSize val="3"/>
+</element>
+<element type="point3d" label="R_1">
+	<show object="false" label="true" ev="4"/>
+	<objColor r="68" g="68" b="68" alpha="0"/>
+	<layer val="0"/>
+	<labelOffset x="-46" y="14"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<coords x="0" y="-4.5" z="1" w="1"/>
+	<coordStyle style="cartesian"/>
+	<pointSize val="3"/>
+</element>
+<command name="Polygon">
+	<input a0="Rotate[R_1, 45°, OrthogonalLine[J, u]]" a1="Rotate[R_1, 135°, OrthogonalLine[J, u]]" a2="Rotate[R_1, 225°, OrthogonalLine[J, u]]" a3="Rotate[R_1, 315°, OrthogonalLine[J, u]]"/>
+	<output a0="poly6" a1="poly6_1" a2="poly6_2" a3="poly6_3" a4="poly6_4"/>
+</command>
+<element type="polygon3d" label="poly6">
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<show object="true" label="false" ev="4"/>
+	<condition showObject="q3"/>
+	<objColor r="192" g="192" b="192" alpha="0.05"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+</element>
+<element type="segment3d" label="poly6_1">
+	<show object="true" label="false" ev="4"/>
+	<condition showObject="q3"/>
+	<objColor r="192" g="192" b="192" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment3d" label="poly6_2">
+	<show object="true" label="false" ev="4"/>
+	<condition showObject="q3"/>
+	<objColor r="192" g="192" b="192" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment3d" label="poly6_3">
+	<show object="true" label="false" ev="4"/>
+	<condition showObject="q3"/>
+	<objColor r="192" g="192" b="192" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment3d" label="poly6_4">
+	<show object="true" label="false" ev="4"/>
+	<condition showObject="q3"/>
+	<objColor r="192" g="192" b="192" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<command name="Point">
+	<input a0="poly6_3"/>
+	<output a0="S_1"/>
+</command>
+<element type="point3d" label="S_1">
+	<show object="false" label="true" ev="4"/>
+	<objColor r="125" g="125" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<animation step="1" speed="1" type="0" playing="false"/>
+	<selectionAllowed val="false"/>
+	<coords x="-2.915416417158169" y="-2.308770232343665" z="2.274891020662012" w="1"/>
+	<coordStyle style="cartesian"/>
+	<pointSize val="3"/>
+</element>
+<expression label="text6" exp="&quot;鏡面&quot;"/>
+<element type="text" label="text6">
+	<show object="true" label="false" ev="4"/>
+	<condition showObject="q3"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<startPoint exp="S_1"/>
+	<labelOffset x="-43" y="-12"/>
+</element>
+<command name="Prism">
+	<input a0="C" a1="D" a2="E" a3="H" a4="B"/>
+	<output a0="w" a1="T_1" a2="U_1" a3="V_1" a4="faceCDEH" a5="face14" a6="face13" a7="face11" a8="face12" a9="face15" a10="edgeCD" a11="edgeDE" a12="edgeEH" a13="edgeCH" a14="edgeBC" a15="edge20" a16="edge17" a17="edge16" a18="edge18" a19="edge21" a20="edge22" a21="edge19"/>
+</command>
+<element type="polyhedron" label="w">
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<show object="false" label="false" ev="4"/>
+	<objColor r="153" g="51" b="0" alpha="0.4"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+</element>
+<element type="point3d" label="T_1">
+	<show object="false" label="true" ev="4"/>
+	<objColor r="68" g="68" b="68" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<coords x="-1" y="-1" z="2" w="1"/>
+	<coordStyle style="cartesian"/>
+	<pointSize val="3"/>
+</element>
+<element type="point3d" label="U_1">
+	<show object="false" label="true" ev="4"/>
+	<objColor r="68" g="68" b="68" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<coords x="-1" y="-1" z="0" w="1"/>
+	<coordStyle style="cartesian"/>
+	<pointSize val="3"/>
+</element>
+<element type="point3d" label="V_1">
+	<show object="false" label="true" ev="4"/>
+	<objColor r="68" g="68" b="68" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<coords x="1" y="-1" z="0" w="1"/>
+	<coordStyle style="cartesian"/>
+	<pointSize val="3"/>
+</element>
+<element type="polygon3d" label="faceCDEH">
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<show object="false" label="false" ev="4"/>
+	<objColor r="153" g="51" b="0" alpha="0.4"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<auxiliary val="false"/>
+</element>
+<element type="polygon3d" label="face14">
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<show object="false" label="false" ev="4"/>
+	<objColor r="153" g="51" b="0" alpha="0.4"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<auxiliary val="false"/>
+</element>
+<element type="polygon3d" label="face13">
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<show object="false" label="false" ev="4"/>
+	<objColor r="153" g="51" b="0" alpha="0.4"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<auxiliary val="false"/>
+</element>
+<element type="polygon3d" label="face11">
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<show object="false" label="false" ev="4"/>
+	<objColor r="153" g="51" b="0" alpha="0.4"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<auxiliary val="false"/>
+</element>
+<element type="polygon3d" label="face12">
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<show object="false" label="false" ev="4"/>
+	<objColor r="153" g="51" b="0" alpha="0.4"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<auxiliary val="false"/>
+</element>
+<element type="polygon3d" label="face15">
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<show object="false" label="false" ev="4"/>
+	<objColor r="153" g="51" b="0" alpha="0.4"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<auxiliary val="false"/>
+</element>
+<element type="segment3d" label="edgeCD">
+	<show object="false" label="false" ev="4"/>
+	<objColor r="153" g="51" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment3d" label="edgeDE">
+	<show object="false" label="false" ev="4"/>
+	<objColor r="153" g="51" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment3d" label="edgeEH">
+	<show object="false" label="false" ev="4"/>
+	<objColor r="153" g="51" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment3d" label="edgeCH">
+	<show object="false" label="false" ev="4"/>
+	<objColor r="153" g="51" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment3d" label="edgeBC">
+	<show object="false" label="false" ev="4"/>
+	<objColor r="153" g="51" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment3d" label="edge20">
+	<show object="false" label="false" ev="4"/>
+	<objColor r="153" g="51" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment3d" label="edge17">
+	<show object="false" label="false" ev="4"/>
+	<objColor r="153" g="51" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment3d" label="edge16">
+	<show object="false" label="false" ev="4"/>
+	<objColor r="153" g="51" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment3d" label="edge18">
+	<show object="false" label="false" ev="4"/>
+	<objColor r="153" g="51" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment3d" label="edge21">
+	<show object="false" label="false" ev="4"/>
+	<objColor r="153" g="51" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment3d" label="edge22">
+	<show object="false" label="false" ev="4"/>
+	<objColor r="153" g="51" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment3d" label="edge19">
+	<show object="false" label="false" ev="4"/>
+	<objColor r="153" g="51" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<command name="IntersectPath">
+	<input a0="u" a1="w"/>
+	<outputSizes val="1,4,4"/>
+	<output a0="poly5" a1="H_1" a2="I_1" a3="J_1" a4="L_1" a5="b_1" a6="c_1" a7="d_1" a8="e_1"/>
+</command>
+<element type="polygon3d" label="poly5">
+	<lineStyle thickness="2" type="0" typeHidden="2"/>
+	<show object="true" label="false" ev="4"/>
+	<condition showObject="q3"/>
+	<objColor r="255" g="127" b="0" alpha="0.85"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+</element>
+<element type="point3d" label="H_1">
+	<show object="false" label="true" ev="4"/>
+	<objColor r="68" g="68" b="68" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="true"/>
+	<coords x="-1" y="1" z="1.4372929414675948" w="1"/>
+	<coordStyle style="cartesian"/>
+	<pointSize val="3"/>
+</element>
+<element type="point3d" label="I_1">
+	<show object="false" label="true" ev="4"/>
+	<objColor r="68" g="68" b="68" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="true"/>
+	<coords x="1" y="1" z="0.5627070585324051" w="1"/>
+	<coordStyle style="cartesian"/>
+	<pointSize val="3"/>
+</element>
+<element type="point3d" label="J_1">
+	<show object="false" label="true" ev="4"/>
+	<objColor r="68" g="68" b="68" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="true"/>
+	<coords x="1" y="-1" z="0.5627070585324052" w="1"/>
+	<coordStyle style="cartesian"/>
+	<pointSize val="3"/>
+</element>
+<element type="point3d" label="L_1">
+	<show object="false" label="true" ev="4"/>
+	<objColor r="68" g="68" b="68" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="true"/>
+	<coords x="-1" y="-1" z="1.4372929414675948" w="1"/>
+	<coordStyle style="cartesian"/>
+	<pointSize val="3"/>
+</element>
+<element type="segment3d" label="b_1">
+	<show object="false" label="false" ev="4"/>
+	<objColor r="255" g="127" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="true"/>
+	<lineStyle thickness="2" type="0" typeHidden="2"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment3d" label="c_1">
+	<show object="false" label="false" ev="4"/>
+	<objColor r="255" g="127" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="true"/>
+	<lineStyle thickness="2" type="0" typeHidden="2"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment3d" label="d_1">
+	<show object="false" label="false" ev="4"/>
+	<objColor r="255" g="127" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="true"/>
+	<lineStyle thickness="2" type="0" typeHidden="2"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment3d" label="e_1">
+	<show object="false" label="false" ev="4"/>
+	<objColor r="255" g="127" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="true"/>
+	<lineStyle thickness="2" type="0" typeHidden="2"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<command name="Prism">
+	<input a0="A" a1="L_1" a2="J_1" a3="B" a4="D"/>
+	<output a0="v" a1="M_1" a2="N_1" a3="O_1" a4="face5" a5="face7" a6="face10" a7="face8" a8="face6" a9="face9" a10="edge6" a11="edge11" a12="edge7" a13="edgeAB" a14="edgeAD" a15="edge13" a16="edge12" a17="edge8" a18="edge9" a19="edge14" a20="edge15" a21="edge10"/>
+</command>
+<element type="polyhedron" label="v">
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<show object="false" label="false" ev="4"/>
+	<objColor r="153" g="51" b="0" alpha="0.4"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+</element>
+<element type="point3d" label="M_1">
+	<show object="false" label="true" ev="4"/>
+	<objColor r="68" g="68" b="68" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<coords x="-1" y="1" z="1.4372929414675948" w="1"/>
+	<coordStyle style="cartesian"/>
+	<pointSize val="3"/>
+</element>
+<element type="point3d" label="N_1">
+	<show object="false" label="true" ev="4"/>
+	<objColor r="68" g="68" b="68" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<coords x="1" y="1" z="0.5627070585324052" w="1"/>
+	<coordStyle style="cartesian"/>
+	<pointSize val="3"/>
+</element>
+<element type="point3d" label="O_1">
+	<show object="false" label="true" ev="4"/>
+	<objColor r="68" g="68" b="68" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<coords x="1" y="1" z="2" w="1"/>
+	<coordStyle style="cartesian"/>
+	<pointSize val="3"/>
+</element>
+<element type="polygon3d" label="face5">
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<show object="false" label="false" ev="4"/>
+	<objColor r="153" g="51" b="0" alpha="0.4"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<auxiliary val="false"/>
+</element>
+<element type="polygon3d" label="face7">
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<show object="false" label="false" ev="4"/>
+	<objColor r="153" g="51" b="0" alpha="0.4"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<auxiliary val="false"/>
+</element>
+<element type="polygon3d" label="face10">
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<show object="false" label="false" ev="4"/>
+	<objColor r="153" g="51" b="0" alpha="0.4"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<auxiliary val="false"/>
+</element>
+<element type="polygon3d" label="face8">
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<show object="false" label="false" ev="4"/>
+	<objColor r="153" g="51" b="0" alpha="0.4"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<auxiliary val="false"/>
+</element>
+<element type="polygon3d" label="face6">
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<show object="false" label="false" ev="4"/>
+	<objColor r="153" g="51" b="0" alpha="0.4"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<auxiliary val="false"/>
+</element>
+<element type="polygon3d" label="face9">
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<show object="false" label="false" ev="4"/>
+	<objColor r="153" g="51" b="0" alpha="0.4"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<auxiliary val="false"/>
+</element>
+<element type="segment3d" label="edge6">
+	<show object="false" label="false" ev="4"/>
+	<objColor r="153" g="51" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment3d" label="edge11">
+	<show object="false" label="false" ev="4"/>
+	<objColor r="153" g="51" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment3d" label="edge7">
+	<show object="false" label="false" ev="4"/>
+	<objColor r="153" g="51" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment3d" label="edgeAB">
+	<show object="false" label="false" ev="4"/>
+	<objColor r="153" g="51" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment3d" label="edgeAD">
+	<show object="false" label="false" ev="4"/>
+	<objColor r="153" g="51" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment3d" label="edge13">
+	<show object="false" label="false" ev="4"/>
+	<objColor r="153" g="51" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment3d" label="edge12">
+	<show object="false" label="false" ev="4"/>
+	<objColor r="153" g="51" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment3d" label="edge8">
+	<show object="false" label="false" ev="4"/>
+	<objColor r="153" g="51" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment3d" label="edge9">
+	<show object="false" label="false" ev="4"/>
+	<objColor r="153" g="51" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment3d" label="edge14">
+	<show object="false" label="false" ev="4"/>
+	<objColor r="153" g="51" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment3d" label="edge15">
+	<show object="false" label="false" ev="4"/>
+	<objColor r="153" g="51" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment3d" label="edge10">
+	<show object="false" label="false" ev="4"/>
+	<objColor r="153" g="51" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<command name="Rotate">
+	<input a0="v" a1="0" a2="zAxis"/>
+	<output a0="v&apos;"/>
+</command>
+<element type="polyhedron" label="v&apos;">
+	<lineStyle thickness="2" type="0" typeHidden="2"/>
+	<show object="true" label="false" ev="4"/>
+	<condition showObject="q3"/>
+	<objColor r="255" g="127" b="0" alpha="0.5"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+</element>
+<command name="Mirror">
+	<input a0="v&apos;" a1="u"/>
+	<output a0="v&apos;&apos;"/>
+</command>
+<element type="polyhedron" label="v&apos;&apos;">
+	<lineStyle thickness="1" type="0" typeHidden="1"/>
+	<show object="true" label="false" ev="4"/>
+	<condition showObject="q3"/>
+	<objColor r="255" g="215" b="0" alpha="0.35"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+</element>
+<command name="Midpoint">
+	<input a0="edgeGH_1"/>
+	<output a0="L"/>
+</command>
+<element type="point3d" label="L">
+	<show object="true" label="true" ev="4"/>
+	<condition showObject="q1"/>
+	<objColor r="68" g="68" b="68" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<coords x="0" y="1" z="2" w="1"/>
+	<coordStyle style="cartesian"/>
+	<pointSize val="2"/>
+</element>
+<command name="Midpoint">
+	<input a0="edgeCD_1"/>
+	<output a0="M"/>
+</command>
+<element type="point3d" label="M">
+	<show object="true" label="true" ev="4"/>
+	<condition showObject="q1"/>
+	<objColor r="68" g="68" b="68" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<coords x="0" y="1" z="0" w="1"/>
+	<coordStyle style="cartesian"/>
+	<pointSize val="2"/>
+</element>
+<command name="Midpoint">
+	<input a0="edgeAB_1"/>
+	<output a0="N"/>
+</command>
+<element type="point3d" label="N">
+	<show object="true" label="true" ev="4"/>
+	<condition showObject="q1"/>
+	<objColor r="68" g="68" b="68" alpha="0"/>
+	<layer val="0"/>
+	<labelOffset x="-14" y="30"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<coords x="0" y="-1" z="0" w="1"/>
+	<coordStyle style="cartesian"/>
+	<pointSize val="2"/>
+</element>
+<command name="Midpoint">
+	<input a0="edgeFG"/>
+	<output a0="Q"/>
+</command>
+<element type="point3d" label="Q">
+	<show object="true" label="true" ev="4"/>
+	<condition showObject="q2"/>
+	<objColor r="68" g="68" b="68" alpha="0"/>
+	<layer val="0"/>
+	<labelOffset x="4" y="24"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<coords x="1" y="0" z="2" w="1"/>
+	<coordStyle style="cartesian"/>
+	<pointSize val="2"/>
+</element>
+<command name="Midpoint">
+	<input a0="edgeBC_1"/>
+	<output a0="R"/>
+</command>
+<element type="point3d" label="R">
+	<show object="true" label="true" ev="4"/>
+	<condition showObject="q2"/>
+	<objColor r="68" g="68" b="68" alpha="0"/>
+	<layer val="0"/>
+	<labelOffset x="5" y="23"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<coords x="1" y="0" z="0" w="1"/>
+	<coordStyle style="cartesian"/>
+	<pointSize val="2"/>
+</element>
+<command name="Midpoint">
+	<input a0="edgeAD_1"/>
+	<output a0="S"/>
+</command>
+<element type="point3d" label="S">
+	<show object="true" label="true" ev="4"/>
+	<condition showObject="q2"/>
+	<objColor r="68" g="68" b="68" alpha="0"/>
+	<layer val="0"/>
+	<labelOffset x="-29" y="11"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<coords x="-1" y="0" z="0" w="1"/>
+	<coordStyle style="cartesian"/>
+	<pointSize val="2"/>
+</element>
+<command name="Midpoint">
+	<input a0="edgeBF"/>
+	<output a0="X"/>
+</command>
+<element type="point3d" label="X">
+	<show object="true" label="true" ev="4"/>
+	<condition showObject="q3"/>
+	<objColor r="68" g="68" b="68" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<coords x="1" y="-1" z="1" w="1"/>
+	<coordStyle style="cartesian"/>
+	<pointSize val="2"/>
+</element>
+<command name="Midpoint">
+	<input a0="edgeCG"/>
+	<output a0="Y"/>
+</command>
+<element type="point3d" label="Y">
+	<show object="true" label="true" ev="4"/>
+	<condition showObject="q3"/>
+	<objColor r="68" g="68" b="68" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<coords x="1" y="1" z="1" w="1"/>
+	<coordStyle style="cartesian"/>
+	<pointSize val="2"/>
+</element>
+<command name="Midpoint">
+	<input a0="edgeDH"/>
+	<output a0="Z"/>
+</command>
+<element type="point3d" label="Z">
+	<show object="true" label="true" ev="4"/>
+	<condition showObject="q3"/>
+	<objColor r="68" g="68" b="68" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<coords x="-1" y="1" z="1" w="1"/>
+	<coordStyle style="cartesian"/>
+	<pointSize val="2"/>
+</element>
+</construction>
+</geogebra>

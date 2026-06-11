@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="utf-8"?>
+<geogebra format="5.0" version="5.0.290.0"  xsi:noNamespaceSchemaLocation="http://www.geogebra.org/ggt.xsd" xmlns="" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" >
+<macro cmdName="LatexFraction" toolName="LatexFraction" toolHelp="最簡分數：LatexFraction[分子, 分母, 分子顏色(如：&quot;ff0000&quot;), 分母顏色, 顯示正號]" iconFile="dc4e974d857447bcc80d54909a0e417a/FractionLatexColored.png" showInToolBar="true" copyCaptions="true" viewId="1">
+<macroInput a0="m" a1="n" a2="color1" a3="color2" a4="showPlusSign"/>
+<macroOutput a0="latex"/>
+<construction title="" author="" date="">
+<element type="boolean" label="showPlusSign">
+	<value val="true"/>
+	<show object="true" label="true"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelOffset x="28" y="125"/>
+	<labelMode val="0"/>
+	<checkbox fixed="true"/>
+</element>
+<expression label="color2" exp="&quot;0000ff&quot;"/>
+<element type="text" label="color2">
+	<symbolic val="true" />
+	<show object="false" label="false"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<startPoint  x="0.31999999999999895" y="0.559999999999998" z="1"/>
+</element>
+<expression label="color1" exp="&quot;ff0000&quot;"/>
+<element type="text" label="color1">
+	<symbolic val="true" />
+	<show object="false" label="false"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<startPoint  x="0.31999999999999895" y="0.559999999999998" z="1"/>
+</element>
+<element type="numeric" label="n">
+	<value val="10"/>
+	<symbolic val="true" />
+	<show object="true" label="true"/>
+	<objColor r="0" g="0" b="255" alpha="0.1"/>
+	<layer val="0"/>
+	<labelMode val="1"/>
+	<animation step="1" speed="1" type="0" playing="false"/>
+</element>
+<element type="numeric" label="m">
+	<value val="-1"/>
+	<symbolic val="true" />
+	<show object="true" label="true"/>
+	<objColor r="255" g="0" b="0" alpha="0.1"/>
+	<layer val="0"/>
+	<labelMode val="1"/>
+	<animation step="1" speed="1" type="0" playing="false"/>
+</element>
+<command name="GCD">
+	<input a0="m" a1="n"/>
+	<output a0="d"/>
+</command>
+<element type="numeric" label="d">
+	<value val="1"/>
+	<symbolic val="true" />
+	<objColor r="0" g="0" b="0" alpha="0.1"/>
+</element>
+<expression label="q" exp="n / d" />
+<element type="numeric" label="q">
+	<value val="10"/>
+	<symbolic val="true" />
+	<objColor r="0" g="0" b="0" alpha="0.1"/>
+</element>
+<expression label="p" exp="m / d" />
+<element type="numeric" label="p">
+	<value val="-1"/>
+	<symbolic val="true" />
+	<objColor r="0" g="0" b="0" alpha="0.1"/>
+</element>
+<expression label="latex" exp="&quot;&quot; + (LaTeX[If[(¬Defined[m / n]) ∨ abs(m / n) ≟ Infinity, &quot;?&quot;, If[showPlusSign ∧ (m / n &gt; 0), &quot;+&quot;, &quot;&quot;] + (If[abs(q) ≟ 1, &quot;\fgcolor{&quot; + color1 + &quot;}{&quot; + ((p * q)) + &quot;}&quot;, If[m / n  &lt;  0, &quot;-&quot;, &quot;&quot;] + &quot;\frac{\fgcolor{&quot; + color1 + &quot;}{&quot; + (abs(p)) + &quot;}}{\fgcolor{&quot; + color2 + &quot;}{&quot; + (abs(q)) + &quot;}}&quot;])]]) + &quot;&quot;" />
+<element type="text" label="latex">
+	<show object="true" label="true" ev="8"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<isLaTeX val="true"/>
+	<font serif="false" sizeM="1" size="0" style="0"/>
+	<startPoint  x="0" y="0" z="1"/>
+</element>
+</construction>
+</macro>
+<macro cmdName="LatexFraction1" toolName="LatexFraction" toolHelp="最簡分數：LatexFraction[分子, 分母, 分子顏色(如：&quot;ff0000&quot;), 分母顏色, 顯示正號]" iconFile="dc4e974d857447bcc80d54909a0e417a/FractionLatexColored.png" showInToolBar="true" copyCaptions="true" viewId="1">
+<macroInput a0="m" a1="n" a2="color1" a3="color2" a4="showPlusSign"/>
+<macroOutput a0="latex"/>
+<construction title="" author="" date="">
+<element type="boolean" label="showPlusSign">
+	<value val="true"/>
+	<show object="true" label="true"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelOffset x="28" y="125"/>
+	<labelMode val="0"/>
+	<checkbox fixed="true"/>
+</element>
+<expression label="color2" exp="&quot;0000ff&quot;"/>
+<element type="text" label="color2">
+	<symbolic val="true" />
+	<show object="false" label="false"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<startPoint  x="0.31999999999999895" y="0.559999999999998" z="1"/>
+</element>
+<expression label="color1" exp="&quot;ff0000&quot;"/>
+<element type="text" label="color1">
+	<symbolic val="true" />
+	<show object="false" label="false"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<startPoint  x="0.31999999999999895" y="0.559999999999998" z="1"/>
+</element>
+<element type="numeric" label="n">
+	<value val="10"/>
+	<symbolic val="true" />
+	<show object="true" label="true"/>
+	<objColor r="0" g="0" b="255" alpha="0.1"/>
+	<layer val="0"/>
+	<labelMode val="1"/>
+	<animation step="1" speed="1" type="0" playing="false"/>
+</element>
+<element type="numeric" label="m">
+	<value val="-1"/>
+	<symbolic val="true" />
+	<show object="true" label="true"/>
+	<objColor r="255" g="0" b="0" alpha="0.1"/>
+	<layer val="0"/>
+	<labelMode val="1"/>
+	<animation step="1" speed="1" type="0" playing="false"/>
+</element>
+<command name="GCD">
+	<input a0="m" a1="n"/>
+	<output a0="d"/>
+</command>
+<element type="numeric" label="d">
+	<value val="1"/>
+	<symbolic val="true" />
+	<objColor r="0" g="0" b="0" alpha="0.1"/>
+</element>
+<expression label="q" exp="n / d" />
+<element type="numeric" label="q">
+	<value val="10"/>
+	<symbolic val="true" />
+	<objColor r="0" g="0" b="0" alpha="0.1"/>
+</element>
+<expression label="p" exp="m / d" />
+<element type="numeric" label="p">
+	<value val="-1"/>
+	<symbolic val="true" />
+	<objColor r="0" g="0" b="0" alpha="0.1"/>
+</element>
+<expression label="latex" exp="&quot;&quot; + (LaTeX[If[(¬Defined[m / n]) ∨ abs(m / n) ≟ Infinity, &quot;?&quot;, If[showPlusSign ∧ (m / n &gt; 0), &quot;+&quot;, &quot;&quot;] + (If[abs(q) ≟ 1, &quot;\fgcolor{&quot; + color1 + &quot;}{&quot; + ((p * q)) + &quot;}&quot;, If[m / n  &lt;  0, &quot;-&quot;, &quot;&quot;] + &quot;\frac{\fgcolor{&quot; + color1 + &quot;}{&quot; + (abs(p)) + &quot;}}{\fgcolor{&quot; + color2 + &quot;}{&quot; + (abs(q)) + &quot;}}&quot;])]]) + &quot;&quot;" />
+<element type="text" label="latex">
+	<show object="true" label="true" ev="8"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<isLaTeX val="true"/>
+	<font serif="false" sizeM="1" size="0" style="0"/>
+	<startPoint  x="0" y="0" z="1"/>
+</element>
+</construction>
+</macro>
+<macro cmdName="LatexFractionCoefficient" toolName="LatexFractionCoefficient" toolHelp="LatexFractionCoefficient[分子, 分母, 分子顏色, 分母顏色, 係數後的 latex, 顯示正號, 顯示零]" iconFile="43d79fed1a199dc270c2021b2751e9d9/LatexFractionCoefficient.png" showInToolBar="true" copyCaptions="true" viewId="1">
+<macroInput a0="m" a1="n" a2="color1" a3="color2" a4="latexAfter" a5="showPlus" a6="showZero"/>
+<macroOutput a0="latex"/>
+<construction title="" author="" date="">
+<expression label="latexAfter" exp="&quot;\vec{a}&quot;"/>
+<element type="text" label="latexAfter">
+	<symbolic val="true" />
+	<show object="false" label="true"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<startPoint  x="0.31999999999999895" y="0.559999999999998" z="1"/>
+</element>
+<element type="numeric" label="m">
+	<value val="5"/>
+	<symbolic val="true" />
+	<show object="true" label="true"/>
+	<objColor r="255" g="0" b="0" alpha="0.1"/>
+	<layer val="0"/>
+	<labelMode val="1"/>
+	<animation step="1" speed="1" type="0" playing="false"/>
+</element>
+<element type="numeric" label="n">
+	<value val="2"/>
+	<symbolic val="true" />
+	<show object="true" label="true"/>
+	<objColor r="0" g="0" b="255" alpha="0.1"/>
+	<layer val="0"/>
+	<labelMode val="1"/>
+	<animation step="1" speed="1" type="0" playing="false"/>
+</element>
+<expression label="color1" exp="&quot;ff0000&quot;"/>
+<element type="text" label="color1">
+	<symbolic val="true" />
+	<show object="false" label="false"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<startPoint  x="0.31999999999999895" y="0.559999999999998" z="1"/>
+</element>
+<expression label="color2" exp="&quot;0000ff&quot;"/>
+<element type="text" label="color2">
+	<symbolic val="true" />
+	<show object="false" label="false"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<startPoint  x="0.31999999999999895" y="0.559999999999998" z="1"/>
+</element>
+<element type="boolean" label="showPlus">
+	<value val="true"/>
+	<show object="true" label="true"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelOffset x="5" y="5"/>
+	<labelMode val="0"/>
+	<checkbox fixed="true"/>
+</element>
+<element type="boolean" label="showZero">
+	<value val="true"/>
+	<show object="true" label="true"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelOffset x="5" y="35"/>
+	<labelMode val="0"/>
+	<checkbox fixed="true"/>
+</element>
+<expression label="f" exp="m / n" />
+<element type="numeric" label="f">
+	<value val="2.5"/>
+	<symbolic val="true" />
+	<objColor r="0" g="0" b="0" alpha="0.1"/>
+</element>
+<command name="If">
+	<input a0="f ≟ Infinity ∨ (¬Defined[f])" a1="&quot;?&quot;" a2="If[m ≟ 0, If[showZero, &quot;0&quot; + latexAfter, &quot;&quot;], If[(f &gt; 0) ∧ showPlus, &quot;+&quot;, &quot;&quot;] + (If[f ≟ 1, &quot;&quot;, If[f ≟ -1, &quot;-&quot;, LatexFraction[m, n, color1, color2, false]]]) + latexAfter]"/>
+	<output a0="latex"/>
+</command>
+<element type="text" label="latex">
+	<symbolic val="true" />
+	<show object="false" label="false" ev="8"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+</element>
+</construction>
+</macro>
+</geogebra>

@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<geogebra format="5.0" version="5.0.290.0"  xsi:noNamespaceSchemaLocation="http://www.geogebra.org/ggt.xsd" xmlns="" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" >
+<macro cmdName="TextPin" toolName="TextPin" toolHelp="TextPin[point, offset, angle, width, height]" iconFile="60b5454cb5a61a6bb2df3424ce67b1d6/TextPin.png" showInToolBar="true" copyCaptions="true" viewId="1">
+<macroInput a0="A" a1="r" a2="ang" a3="w" a4="h"/>
+<macroOutput a0="P"/>
+<construction title="" author="" date="">
+<element type="point" label="A">
+	<show object="true" label="true"/>
+	<objColor r="0" g="0" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<animation step="1" speed="1" type="1" playing="false"/>
+	<coords x="1" y="2" z="1"/>
+	<pointSize val="5"/>
+	<pointStyle val="0"/>
+</element>
+<expression label ="r" exp="40"/>
+<element type="numeric" label="r">
+	<value val="40"/>
+	<symbolic val="true" />
+	<show object="true" label="true"/>
+	<objColor r="0" g="0" b="0" alpha="0.1"/>
+	<layer val="0"/>
+	<labelMode val="1"/>
+	<animation step="1" speed="1" type="0" playing="false"/>
+</element>
+<expression label ="ang" exp="30°"/>
+<element type="angle" label="ang">
+	<angleStyle val="3"/>
+	<value val="0.5235987755982988"/>
+	<show object="true" label="true"/>
+	<objColor r="0" g="100" b="0" alpha="0.1"/>
+	<layer val="0"/>
+	<labelMode val="1"/>
+	<lineStyle thickness="2" type="0" typeHidden="2"/>
+	<arcSize val="30"/>
+	<animation step="1" speed="1" type="0" playing="false"/>
+</element>
+<expression label ="w" exp="1"/>
+<element type="numeric" label="w">
+	<value val="1"/>
+	<symbolic val="true" />
+	<show object="true" label="true"/>
+	<objColor r="0" g="0" b="0" alpha="0.1"/>
+	<layer val="0"/>
+	<labelMode val="1"/>
+	<animation step="1" speed="1" type="0" playing="false"/>
+</element>
+<expression label ="h" exp="1"/>
+<element type="numeric" label="h">
+	<value val="1"/>
+	<symbolic val="true" />
+	<show object="true" label="true"/>
+	<objColor r="0" g="0" b="0" alpha="0.1"/>
+	<layer val="0"/>
+	<labelMode val="1"/>
+	<animation step="1" speed="1" type="0" playing="false"/>
+</element>
+<expression label="P" exp="A + ((0.02 * r); ang) + ((-w), h) / 2" type="point" />
+<element type="point" label="P">
+	<show object="true" label="true"/>
+	<objColor r="68" g="68" b="68" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<coords x="1.1928203230275511" y="2.9" z="1"/>
+	<pointSize val="3"/>
+	<pointStyle val="0"/>
+</element>
+</construction>
+</macro>
+<macro cmdName="MidAngle" toolName="MidAngle" toolHelp="MidAngle[ang1, ang2]：兩個角的中分角（面向劣弧）" iconFile="b08b79ed170aafda933765564b6f83d6/MidAngle.png" showInToolBar="true" copyCaptions="true" viewId="1">
+<macroInput a0="a" a1="b"/>
+<macroOutput a0="midAngle"/>
+<construction title="" author="" date="">
+<expression label ="a" exp="10°"/>
+<element type="angle" label="a">
+	<angleStyle val="3"/>
+	<value val="0.17453292519943295"/>
+	<show object="true" label="true"/>
+	<objColor r="0" g="100" b="0" alpha="0.1"/>
+	<layer val="0"/>
+	<labelMode val="1"/>
+	<lineStyle thickness="2" type="0" typeHidden="2"/>
+	<arcSize val="30"/>
+	<animation step="1" speed="1" type="0" playing="false"/>
+</element>
+<expression label ="b" exp="140°"/>
+<element type="angle" label="b">
+	<angleStyle val="3"/>
+	<value val="2.443460952792061"/>
+	<show object="true" label="true"/>
+	<objColor r="0" g="100" b="0" alpha="0.1"/>
+	<layer val="0"/>
+	<labelMode val="1"/>
+	<lineStyle thickness="2" type="0" typeHidden="2"/>
+	<arcSize val="30"/>
+	<animation step="1" speed="1" type="0" playing="false"/>
+</element>
+<command name="Mod">
+	<input a0="b - a" a1="(2 * π)"/>
+	<output a0="m"/>
+</command>
+<element type="numeric" label="m">
+	<value val="2.2689280275926285"/>
+	<symbolic val="true" />
+	<objColor r="0" g="0" b="0" alpha="0.1"/>
+</element>
+<command name="If">
+	<input a0="m &gt; π" a1="a + m / 2 + π" a2="a + m / 2"/>
+	<output a0="midAngle"/>
+</command>
+<element type="numeric" label="midAngle">
+	<value val="1.3089969389957472"/>
+	<symbolic val="true" />
+	<objColor r="0" g="0" b="0" alpha="0.1"/>
+</element>
+</construction>
+</macro>
+</geogebra>

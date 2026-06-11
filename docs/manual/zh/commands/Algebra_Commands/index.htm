@@ -1,0 +1,796 @@
+<!DOCTYPE html>
+
+<html lang="zh">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<title>
+   代数命令 :: GeoGebra 手册
+  </title>
+<meta content="Antora 3.1.14" name="generator"/>
+<link href="/docs/_/css/site.css" rel="stylesheet" tppabs="https://geogebra.github.io/docs/_/css/site.css"/>
+<link href="https://www.geogebra.org/favicon.ico" rel="shortcut icon"/>
+</head>
+<body class="article">
+<header class="header">
+<nav class="navbar">
+<div class="navbar-brand">
+<a class="navbar-item" href="/docs" tppabs="https://geogebra.github.io/docs">
+<!-- logo omitted -->
+      手册
+     </a>
+<div class="navbar-item search hide-for-print">
+<div class="field" id="search-field">
+<input id="search-input" placeholder="搜索" type="text"/>
+<div class="gcse-wrapper">
+<gcse:searchresults-only gname="searchresults">
+</gcse:searchresults-only>
+</div>
+</div>
+</div>
+<button aria-controls="topbar-nav" aria-expanded="false" aria-label="Toggle main menu" class="navbar-burger">
+<span>
+</span>
+<span>
+</span>
+<span>
+</span>
+</button>
+</div>
+<div class="navbar-menu" id="topbar-nav">
+<div class="navbar-end">
+<a class="navbar-item" href="https://www.geogebra.org/" tppabs="https://www.geogebra.org/">
+       首页
+      </a>
+<a class="navbar-item" href="https://www.geogebra.org/math" tppabs="https://www.geogebra.org/math">
+       资源
+      </a>
+<a class="navbar-item" href="https://www.geogebra.org/download" tppabs="https://www.geogebra.org/download">
+       下载
+      </a>
+</div>
+</div>
+</nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="manual" data-version="en">
+<aside class="nav">
+<div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+<nav class="nav-menu">
+<button aria-label="Toggle expand/collapse all" class="nav-menu-toggle" style="display: none">
+</button>
+<h3 class="title">
+<a href="/docs/manual/zh/" tppabs="https://geogebra.github.io/docs/manual/zh/">
+          手册
+         </a>
+</h3>
+<ul class="nav-list">
+<li class="nav-item" data-depth="0">
+<ul class="nav-list">
+<li class="nav-item" data-depth="1">
+<button class="nav-item-toggle">
+</button>
+<span class="nav-text">
+             命令
+            </span>
+<ul class="nav-list">
+<li class="nav-item" data-depth="2">
+<a class="nav-link" href="/docs/manual/zh/commands/3D_Commands/" tppabs="https://geogebra.github.io/docs/manual/zh/commands/3D_Commands/">
+               3D 命令
+              </a>
+</li>
+<li class="nav-item is-current-page" data-depth="2">
+<a class="nav-link" href="/docs/manual/zh/commands/Algebra_Commands/" tppabs="https://geogebra.github.io/docs/manual/zh/commands/Algebra_Commands/">
+               代数命令
+              </a>
+</li>
+<li class="nav-item" data-depth="2">
+<a class="nav-link" href="/docs/manual/zh/commands/Chart_Commands/" tppabs="https://geogebra.github.io/docs/manual/zh/commands/Chart_Commands/">
+               图表命令
+              </a>
+</li>
+<li class="nav-item" data-depth="2">
+<a class="nav-link" href="/docs/manual/zh/commands/Conic_Commands/" tppabs="https://geogebra.github.io/docs/manual/zh/commands/Conic_Commands/">
+               圆锥曲线命令
+              </a>
+</li>
+<li class="nav-item" data-depth="2">
+<a class="nav-link" href="/docs/manual/zh/commands/Discrete_Math_Commands/" tppabs="https://geogebra.github.io/docs/manual/zh/commands/Discrete_Math_Commands/">
+               离散数学命令
+              </a>
+</li>
+<li class="nav-item" data-depth="2">
+<a class="nav-link" href="/docs/manual/zh/commands/Functions_and_Calculus_Commands/" tppabs="https://geogebra.github.io/docs/manual/zh/commands/Functions_and_Calculus_Commands/">
+               函数与微积分命令
+              </a>
+</li>
+<li class="nav-item" data-depth="2">
+<a class="nav-link" href="/docs/manual/zh/commands/Geometry_Commands/" tppabs="https://geogebra.github.io/docs/manual/zh/commands/Geometry_Commands/">
+               几何命令
+              </a>
+</li>
+<li class="nav-item" data-depth="2">
+<a class="nav-link" href="/docs/manual/zh/commands/GeoGebra_Commands/" tppabs="https://geogebra.github.io/docs/manual/zh/commands/GeoGebra_Commands/">
+               GeoGebra 命令
+              </a>
+</li>
+<li class="nav-item" data-depth="2">
+<a class="nav-link" href="/docs/manual/zh/commands/List_Commands/" tppabs="https://geogebra.github.io/docs/manual/zh/commands/List_Commands/">
+               列表命令
+              </a>
+</li>
+<li class="nav-item" data-depth="2">
+<a class="nav-link" href="/docs/manual/zh/commands/Logic_Commands/" tppabs="https://geogebra.github.io/docs/manual/zh/commands/Logic_Commands/">
+               逻辑命令
+              </a>
+</li>
+<li class="nav-item" data-depth="2">
+<a class="nav-link" href="/docs/manual/zh/commands/Optimization_Commands/" tppabs="https://geogebra.github.io/docs/manual/zh/commands/Optimization_Commands/">
+               优化命令
+              </a>
+</li>
+<li class="nav-item" data-depth="2">
+<a class="nav-link" href="/docs/manual/zh/commands/Probability_Commands/" tppabs="https://geogebra.github.io/docs/manual/zh/commands/Probability_Commands/">
+               概率命令
+              </a>
+</li>
+<li class="nav-item" data-depth="2">
+<a class="nav-link" href="/docs/manual/zh/commands/Scripting_Commands/" tppabs="https://geogebra.github.io/docs/manual/zh/commands/Scripting_Commands/">
+               脚本命令
+              </a>
+</li>
+<li class="nav-item" data-depth="2">
+<a class="nav-link" href="/docs/manual/zh/commands/Spreadsheet_Commands/" tppabs="https://geogebra.github.io/docs/manual/zh/commands/Spreadsheet_Commands/">
+               电子表格命令
+              </a>
+</li>
+<li class="nav-item" data-depth="2">
+<a class="nav-link" href="/docs/manual/zh/commands/Statistics_Commands/" tppabs="https://geogebra.github.io/docs/manual/zh/commands/Statistics_Commands/">
+               统计命令
+              </a>
+</li>
+<li class="nav-item" data-depth="2">
+<a class="nav-link" href="/docs/manual/zh/commands/Financial_Commands/" tppabs="https://geogebra.github.io/docs/manual/zh/commands/Financial_Commands/">
+               金融命令
+              </a>
+</li>
+<li class="nav-item" data-depth="2">
+<a class="nav-link" href="/docs/manual/zh/commands/Text_Commands/" tppabs="https://geogebra.github.io/docs/manual/zh/commands/Text_Commands/">
+               文本命令
+              </a>
+</li>
+<li class="nav-item" data-depth="2">
+<a class="nav-link" href="/docs/manual/zh/commands/Transformation_Commands/" tppabs="https://geogebra.github.io/docs/manual/zh/commands/Transformation_Commands/">
+               变换命令
+              </a>
+</li>
+<li class="nav-item" data-depth="2">
+<a class="nav-link" href="/docs/manual/zh/commands/Vector_and_Matrix_Commands/" tppabs="https://geogebra.github.io/docs/manual/zh/commands/Vector_and_Matrix_Commands/">
+               向量与矩阵命令
+              </a>
+</li>
+<li class="nav-item" data-depth="2">
+<a class="nav-link" href="/docs/manual/zh/commands/CAS_Specific_Commands/" tppabs="https://geogebra.github.io/docs/manual/zh/commands/CAS_Specific_Commands/">
+               CAS 专用命令
+              </a>
+</li>
+</ul>
+</li>
+<li class="nav-item" data-depth="1">
+<button class="nav-item-toggle">
+</button>
+<span class="nav-text">
+             工具
+            </span>
+<!-- tools list omitted for brevity -->
+</li>
+</ul>
+</li>
+</ul>
+</nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+<div class="context">
+<span class="title">
+         手册
+        </span>
+<span class="version">
+         中文
+        </span>
+</div>
+<ul class="components">
+<li class="component is-current">
+<div class="title">
+<a href="/docs/manual/zh/" tppabs="https://geogebra.github.io/docs/manual/zh/">
+           手册
+          </a>
+</div>
+</li>
+<li class="component">
+<div class="title">
+<a href="/docs/reference/en/" tppabs="https://geogebra.github.io/docs/reference/en/">
+           参考
+          </a>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle">
+</button>
+<a class="home-link" href="/docs/manual/zh/" tppabs="https://geogebra.github.io/docs/manual/zh/">
+</a>
+<nav aria-label="breadcrumbs" class="breadcrumbs">
+<ul>
+<li>
+<a href="/docs/manual/zh/" tppabs="https://geogebra.github.io/docs/manual/zh/">
+         手册
+        </a>
+</li>
+<li>
+        命令
+       </li>
+<li>
+<a href="/docs/manual/zh/commands/Algebra_Commands/" tppabs="https://geogebra.github.io/docs/manual/zh/commands/Algebra_Commands/">
+         代数命令
+        </a>
+</li>
+</ul>
+</nav>
+<div class="page-versions" data-en="commands/Algebra_Commands">
+<button class="version-menu-toggle" title="Show other versions of page">中文</button>
+<div class="version-menu"><span class="version is-current">中文</span>
+       <a class="version" href="../../../en/commands/Algebra_Commands/">English</a></div>
+</div>
+<div class="edit-this-page">
+<a href="https://github.com/geogebra/manual/edit/main/en/modules/ROOT/pages/commands/Algebra_Commands.adoc" tppabs="https://github.com/geogebra/manual/edit/main/en/modules/ROOT/pages/commands/Algebra_Commands.adoc">
+       编辑此页面
+      </a>
+</div>
+</div>
+<div class="content">
+<aside class="toc sidebar" data-levels="2" data-title="Contents">
+<div class="toc-menu">
+</div>
+</aside>
+<article class="doc">
+<h1 class="page">
+       代数命令
+      </h1>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note">
+</i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>
+            另见
+            <a class="xref page" href="/docs/manual/zh/nPr_Function/">nPr_Function</a>
+            。
+           </p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>
+<a class="xref page" href="/docs/manual/zh/commands/AreEqual/" tppabs="https://geogebra.github.io/docs/manual/zh/commands/AreEqual/">
+           AreEqual
+          </a>
+</p>
+</li>
+<li>
+<p>
+<a class="xref page" href="/docs/manual/zh/commands/Assume/" tppabs="https://geogebra.github.io/docs/manual/zh/commands/Assume/">
+           Assume
+          </a>
+</p>
+</li>
+<li>
+<p>
+<a class="xref page" href="/docs/manual/zh/commands/CFactor/" tppabs="https://geogebra.github.io/docs/manual/zh/commands/CFactor/">
+           CFactor
+          </a>
+</p>
+</li>
+<li>
+<p>
+<a class="xref page" href="/docs/manual/zh/commands/CIFactor/" tppabs="https://geogebra.github.io/docs/manual/zh/commands/CIFactor/">
+           CIFactor
+          </a>
+</p>
+</li>
+<li>
+<p>
+<a class="xref page" href="/docs/manual/zh/commands/CSolutions/" tppabs="https://geogebra.github.io/docs/manual/zh/commands/CSolutions/">
+           CSolutions
+          </a>
+</p>
+</li>
+<li>
+<p>
+<a class="xref page" href="/docs/manual/zh/commands/CSolve/" tppabs="https://geogebra.github.io/docs/manual/zh/commands/CSolve/">
+           CSolve
+          </a>
+</p>
+</li>
+<li>
+<p>
+<a class="xref page" href="/docs/manual/zh/commands/Coefficients/" tppabs="https://geogebra.github.io/docs/manual/zh/commands/Coefficients/">
+           Coefficients
+          </a>
+</p>
+</li>
+<li>
+<p>
+<a class="xref page" href="/docs/manual/zh/commands/CommonDenominator/" tppabs="https://geogebra.github.io/docs/manual/zh/commands/CommonDenominator/">
+           CommonDenominator
+          </a>
+</p>
+</li>
+<li>
+<p>
+<a class="xref page" href="/docs/manual/zh/commands/CompleteSquare/" tppabs="https://geogebra.github.io/docs/manual/zh/commands/CompleteSquare/">
+           CompleteSquare
+          </a>
+</p>
+</li>
+<li>
+<p>
+<a class="xref page" href="/docs/manual/zh/commands/ComplexRoot/" tppabs="https://geogebra.github.io/docs/manual/zh/commands/ComplexRoot/">
+           ComplexRoot
+          </a>
+</p>
+</li>
+<li>
+<p>
+<a class="xref page" href="/docs/manual/zh/commands/ContinuedFraction/" tppabs="https://geogebra.github.io/docs/manual/zh/commands/ContinuedFraction/">
+           ContinuedFraction
+          </a>
+</p>
+</li>
+<li>
+<p>
+<a class="xref page" href="/docs/manual/zh/commands/Degree/" tppabs="https://geogebra.github.io/docs/manual/zh/commands/Degree/">
+           Degree
+          </a>
+</p>
+</li>
+<li>
+<p>
+<a class="xref page" href="/docs/manual/zh/commands/Denominator/" tppabs="https://geogebra.github.io/docs/manual/zh/commands/Denominator/">
+           Denominator
+          </a>
+</p>
+</li>
+<li>
+<p>
+<a class="xref page" href="/docs/manual/zh/commands/Div/" tppabs="https://geogebra.github.io/docs/manual/zh/commands/Div/">
+           Div
+          </a>
+</p>
+</li>
+<li>
+<p>
+<a class="xref page" href="/docs/manual/zh/commands/Division/" tppabs="https://geogebra.github.io/docs/manual/zh/commands/Division/">
+           Division
+          </a>
+</p>
+</li>
+<li>
+<p>
+<a class="xref page" href="/docs/manual/zh/commands/Divisors/" tppabs="https://geogebra.github.io/docs/manual/zh/commands/Divisors/">
+           Divisors
+          </a>
+</p>
+</li>
+<li>
+<p>
+<a class="xref page" href="/docs/manual/zh/commands/DivisorsList/" tppabs="https://geogebra.github.io/docs/manual/zh/commands/DivisorsList/">
+           DivisorsList
+          </a>
+</p>
+</li>
+<li>
+<p>
+<a class="xref page" href="/docs/manual/zh/commands/DivisorsSum/" tppabs="https://geogebra.github.io/docs/manual/zh/commands/DivisorsSum/">
+           DivisorsSum
+          </a>
+</p>
+</li>
+<li>
+<p>
+<a class="xref page" href="/docs/manual/zh/commands/Eliminate/" tppabs="https://geogebra.github.io/docs/manual/zh/commands/Eliminate/">
+           Eliminate
+          </a>
+</p>
+</li>
+<li>
+<p>
+<a class="xref page" href="/docs/manual/zh/commands/Expand/" tppabs="https://geogebra.github.io/docs/manual/zh/commands/Expand/">
+           Expand
+          </a>
+</p>
+</li>
+<li>
+<p>
+<a class="xref page" href="/docs/manual/zh/commands/ExtendedGCD/" tppabs="https://geogebra.github.io/docs/manual/zh/commands/ExtendedGCD/">
+           ExtendedGCD
+          </a>
+</p>
+</li>
+<li>
+<p>
+<a class="xref page" href="/docs/manual/zh/commands/Factor/" tppabs="https://geogebra.github.io/docs/manual/zh/commands/Factor/">
+           Factor
+          </a>
+</p>
+</li>
+<li>
+<p>
+<a class="xref page" href="/docs/manual/zh/commands/Factors/" tppabs="https://geogebra.github.io/docs/manual/zh/commands/Factors/">
+           Factors
+          </a>
+</p>
+</li>
+<li>
+<p>
+<a class="xref page" href="/docs/manual/zh/commands/FromBase/" tppabs="https://geogebra.github.io/docs/manual/zh/commands/FromBase/">
+           FromBase
+          </a>
+</p>
+</li>
+<li>
+<p>
+<a class="xref page" href="/docs/manual/zh/commands/GCD/" tppabs="https://geogebra.github.io/docs/manual/zh/commands/GCD/">
+           GCD
+          </a>
+</p>
+</li>
+<li>
+<p>
+<a class="xref page" href="/docs/manual/zh/commands/GeometricMean/" tppabs="https://geogebra.github.io/docs/manual/zh/commands/GeometricMean/">
+           GeometricMean
+          </a>
+</p>
+</li>
+<li>
+<p>
+<a class="xref page" href="/docs/manual/zh/commands/HarmonicMean/" tppabs="https://geogebra.github.io/docs/manual/zh/commands/HarmonicMean/">
+           HarmonicMean
+          </a>
+</p>
+</li>
+<li>
+<p>
+<a class="xref page" href="/docs/manual/zh/commands/IFactor/" tppabs="https://geogebra.github.io/docs/manual/zh/commands/IFactor/">
+           IFactor
+          </a>
+</p>
+</li>
+<li>
+<p>
+<a class="xref page" href="/docs/manual/zh/commands/IsFactored/" tppabs="https://geogebra.github.io/docs/manual/zh/commands/IsFactored/">
+           IsFactored
+          </a>
+</p>
+</li>
+<li>
+<p>
+<a class="xref page" href="/docs/manual/zh/commands/IsInteger/" tppabs="https://geogebra.github.io/docs/manual/zh/commands/IsInteger/">
+           IsInteger
+          </a>
+</p>
+</li>
+<li>
+<p>
+<a class="xref page" href="/docs/manual/zh/commands/IsPrime/" tppabs="https://geogebra.github.io/docs/manual/zh/commands/IsPrime/">
+           IsPrime
+          </a>
+</p>
+</li>
+<li>
+<p>
+<a class="xref page" href="/docs/manual/zh/commands/LCM/" tppabs="https://geogebra.github.io/docs/manual/zh/commands/LCM/">
+           LCM
+          </a>
+</p>
+</li>
+<li>
+<p>
+<a class="xref page" href="/docs/manual/zh/commands/LeftSide/" tppabs="https://geogebra.github.io/docs/manual/zh/commands/LeftSide/">
+           LeftSide
+          </a>
+</p>
+</li>
+<li>
+<p>
+<a class="xref page" href="/docs/manual/zh/commands/Max/" tppabs="https://geogebra.github.io/docs/manual/zh/commands/Max/">
+           Max
+          </a>
+</p>
+</li>
+<li>
+<p>
+<a class="xref page" href="/docs/manual/zh/commands/Mean/" tppabs="https://geogebra.github.io/docs/manual/zh/commands/Mean/">
+           Mean
+          </a>
+</p>
+</li>
+<li>
+<p>
+<a class="xref page" href="/docs/manual/zh/commands/Midpoint/" tppabs="https://geogebra.github.io/docs/manual/zh/commands/Midpoint/">
+           Midpoint
+          </a>
+</p>
+</li>
+<li>
+<p>
+<a class="xref page" href="/docs/manual/zh/commands/Min/" tppabs="https://geogebra.github.io/docs/manual/zh/commands/Min/">
+           Min
+          </a>
+</p>
+</li>
+<li>
+<p>
+<a class="xref page" href="/docs/manual/zh/commands/MixedNumber/" tppabs="https://geogebra.github.io/docs/manual/zh/commands/MixedNumber/">
+           MixedNumber
+          </a>
+</p>
+</li>
+<li>
+<p>
+<a class="xref page" href="/docs/manual/zh/commands/Mod/" tppabs="https://geogebra.github.io/docs/manual/zh/commands/Mod/">
+           Mod
+          </a>
+</p>
+</li>
+<li>
+<p>
+<a class="xref page" href="/docs/manual/zh/commands/ModularExponent/" tppabs="https://geogebra.github.io/docs/manual/zh/commands/ModularExponent/">
+           ModularExponent
+          </a>
+</p>
+</li>
+<li>
+<p>
+<a class="xref page" href="/docs/manual/zh/commands/NSolutions/" tppabs="https://geogebra.github.io/docs/manual/zh/commands/NSolutions/">
+           NSolutions
+          </a>
+</p>
+</li>
+<li>
+<p>
+<a class="xref page" href="/docs/manual/zh/commands/NSolve/" tppabs="https://geogebra.github.io/docs/manual/zh/commands/NSolve/">
+           NSolve
+          </a>
+</p>
+</li>
+<li>
+<p>
+<a class="xref page" href="/docs/manual/zh/commands/NextPrime/" tppabs="https://geogebra.github.io/docs/manual/zh/commands/NextPrime/">
+           NextPrime
+          </a>
+</p>
+</li>
+<li>
+<p>
+<a class="xref page" href="/docs/manual/zh/commands/Normalize/" tppabs="https://geogebra.github.io/docs/manual/zh/commands/Normalize/">
+           Normalize
+          </a>
+</p>
+</li>
+<li>
+<p>
+<a class="xref page" href="/docs/manual/zh/commands/Numerator/" tppabs="https://geogebra.github.io/docs/manual/zh/commands/Numerator/">
+           Numerator
+          </a>
+</p>
+</li>
+<li>
+<p>
+<a class="xref page" href="/docs/manual/zh/commands/Numeric/" tppabs="https://geogebra.github.io/docs/manual/zh/commands/Numeric/">
+           Numeric
+          </a>
+</p>
+</li>
+<li>
+<p>
+<a class="xref page" href="/docs/manual/zh/commands/ParseToNumber/" tppabs="https://geogebra.github.io/docs/manual/zh/commands/ParseToNumber/">
+           ParseToNumber
+          </a>
+</p>
+</li>
+<li>
+<p>
+<a class="xref page" href="/docs/manual/zh/commands/PartialFractions/" tppabs="https://geogebra.github.io/docs/manual/zh/commands/PartialFractions/">
+           PartialFractions
+          </a>
+</p>
+</li>
+<li>
+<p>
+<a class="xref page" href="/docs/manual/zh/commands/PlotSolve/" tppabs="https://geogebra.github.io/docs/manual/zh/commands/PlotSolve/">
+           PlotSolve
+          </a>
+</p>
+</li>
+<li>
+<p>
+<a class="xref page" href="/docs/manual/zh/commands/Polynomial/" tppabs="https://geogebra.github.io/docs/manual/zh/commands/Polynomial/">
+           Polynomial
+          </a>
+</p>
+</li>
+<li>
+<p>
+<a class="xref page" href="/docs/manual/zh/commands/PreviousPrime/" tppabs="https://geogebra.github.io/docs/manual/zh/commands/PreviousPrime/">
+           PreviousPrime
+          </a>
+</p>
+</li>
+<li>
+<p>
+<a class="xref page" href="/docs/manual/zh/commands/PrimeFactors/" tppabs="https://geogebra.github.io/docs/manual/zh/commands/PrimeFactors/">
+           PrimeFactors
+          </a>
+</p>
+</li>
+<li>
+<p>
+<a class="xref page" href="/docs/manual/zh/commands/Product/" tppabs="https://geogebra.github.io/docs/manual/zh/commands/Product/">
+           Product
+          </a>
+</p>
+</li>
+<li>
+<p>
+<a class="xref page" href="/docs/manual/zh/commands/RandomBetween/" tppabs="https://geogebra.github.io/docs/manual/zh/commands/RandomBetween/">
+           RandomBetween
+          </a>
+</p>
+</li>
+<li>
+<p>
+<a class="xref page" href="/docs/manual/zh/commands/RandomPolynomial/" tppabs="https://geogebra.github.io/docs/manual/zh/commands/RandomPolynomial/">
+           RandomPolynomial
+          </a>
+</p>
+</li>
+<li>
+<p>
+<a class="xref page" href="/docs/manual/zh/commands/Rationalize/" tppabs="https://geogebra.github.io/docs/manual/zh/commands/Rationalize/">
+           Rationalize
+          </a>
+</p>
+</li>
+<li>
+<p>
+<a class="xref page" href="/docs/manual/zh/commands/RightSide/" tppabs="https://geogebra.github.io/docs/manual/zh/commands/RightSide/">
+           RightSide
+          </a>
+</p>
+</li>
+<li>
+<p>
+<a class="xref page" href="/docs/manual/zh/commands/Root/" tppabs="https://geogebra.github.io/docs/manual/zh/commands/Root/">
+           Root
+          </a>
+</p>
+</li>
+<li>
+<p>
+<a class="xref page" href="/docs/manual/zh/commands/Simplify/" tppabs="https://geogebra.github.io/docs/manual/zh/commands/Simplify/">
+           Simplify
+          </a>
+</p>
+</li>
+<li>
+<p>
+<a class="xref page" href="/docs/manual/zh/commands/Solutions/" tppabs="https://geogebra.github.io/docs/manual/zh/commands/Solutions/">
+           Solutions
+          </a>
+</p>
+</li>
+<li>
+<p>
+<a class="xref page" href="/docs/manual/zh/commands/Solve/" tppabs="https://geogebra.github.io/docs/manual/zh/commands/Solve/">
+           Solve
+          </a>
+</p>
+</li>
+<li>
+<p>
+<a class="xref page" href="/docs/manual/zh/commands/SolveCubic/" tppabs="https://geogebra.github.io/docs/manual/zh/commands/SolveCubic/">
+           SolveCubic
+          </a>
+</p>
+</li>
+<li>
+<p>
+<a class="xref page" href="/docs/manual/zh/commands/SolveQuartic/" tppabs="https://geogebra.github.io/docs/manual/zh/commands/SolveQuartic/">
+           SolveQuartic
+          </a>
+</p>
+</li>
+<li>
+<p>
+<a class="xref page" href="/docs/manual/zh/commands/Substitute/" tppabs="https://geogebra.github.io/docs/manual/zh/commands/Substitute/">
+           Substitute
+          </a>
+</p>
+</li>
+<li>
+<p>
+<a class="xref page" href="/docs/manual/zh/commands/Sum/" tppabs="https://geogebra.github.io/docs/manual/zh/commands/Sum/">
+           Sum
+          </a>
+</p>
+</li>
+<li>
+<p>
+<a class="xref page" href="/docs/manual/zh/commands/ToBase/" tppabs="https://geogebra.github.io/docs/manual/zh/commands/ToBase/">
+           ToBase
+          </a>
+</p>
+</li>
+<li>
+<p>
+<a class="xref page" href="/docs/manual/zh/commands/Vertex/" tppabs="https://geogebra.github.io/docs/manual/zh/commands/Vertex/">
+           Vertex
+          </a>
+</p>
+</li>
+</ul>
+</div>
+</article>
+</div>
+</main>
+</div>
+<footer class="footer">
+<div class="footer-content">
+<p>
+<span class="footer-item">
+      © GeoGebra®
+     </span>
+     |
+     <a class="footer-item" href="https://www.geogebra.org/license" tppabs="https://www.geogebra.org/license">
+      License
+     </a>
+     |
+     <a class="footer-item" href="https://help.geogebra.org/" tppabs="https://help.geogebra.org/">
+      Help Center
+     </a>
+     |
+     <span class="footer-item">
+      Built using
+      <a href="https://antora.org/" nofollow="" target="_blank" tppabs="https://antora.org/">
+       Antora
+      </a>
+</span>
+</p>
+</div>
+<div class="soc">
+<!-- social icons omitted -->
+</div>
+</footer>
+<style>
+   .doc .admonitionblock td.icon i[title='Note']::after {
+     content: "Note"
+   }
+  </style>
+<script data-ui-root-path="../../../../_" id="site-script" src="../../../../_/js/site.js" tppabs="https://geogebra.github.io/docs/_/js/site.js">
+</script>
+</body>
+</html>

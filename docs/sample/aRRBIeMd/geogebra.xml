@@ -1,0 +1,377 @@
+<?xml version="1.0" encoding="utf-8"?>
+<geogebra format="5.0" version="5.0.377.0" id="6a001dd8-0dd1-42bc-96af-9023871b7414"  xsi:noNamespaceSchemaLocation="http://www.geogebra.org/ggb.xsd" xmlns="" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" >
+<gui>
+	<window width="1000" height="690" />
+	<perspectives>
+<perspective id="tmp">
+	<panes>
+		<pane location="" divider="0.396" orientation="1" />
+		<pane location="0" divider="0.4623188405797101" orientation="0" />
+	</panes>
+	<views>
+		<view id="1" visible="true" inframe="false" stylebar="false" location="3,0" size="319" window="100,100,600,400" />
+		<view id="4" toolbar="0 || 2020 , 2021 , 2022 , 66 || 2001 , 2003 , 2002 , 2004 , 2005 || 2040 , 2041 , 2042 , 2044 , 2043" visible="false" inframe="false" stylebar="true" location="1,1" size="300" window="100,100,600,400" />
+		<view id="2" visible="false" inframe="false" stylebar="true" location="1,1" size="120" window="100,100,250,400" />
+		<view id="8" toolbar="1001 | 1002 | 1003  || 1005 | 1004 || 1006 | 1007 | 1010 || 1008 1009 || 66 68 || 6" visible="false" inframe="false" stylebar="false" location="1,3" size="300" window="100,100,600,400" />
+		<view id="16" visible="true" inframe="false" stylebar="false" location="3,2" size="361" window="50,50,500,500" />
+		<view id="4097" visible="false" inframe="true" stylebar="true" location="1,1" size="366" window="256,183,1024,613" />
+		<view id="32" visible="false" inframe="false" stylebar="true" location="1" size="150" window="50,50,500,500" />
+		<view id="64" toolbar="0" visible="false" inframe="true" stylebar="true" location="1" size="150" window="50,50,500,500" />
+		<view id="128" visible="false" inframe="true" stylebar="false" location="1" size="480" window="50,50,500,500" />
+		<view id="70" toolbar="0 || 2020 || 2021 || 2022" visible="false" inframe="true" stylebar="true" location="1" size="150" window="50,50,500,500" />
+		<view id="43" visible="false" inframe="false" stylebar="false" location="1" size="450" window="50,50,500,500" />
+		<view id="512" toolbar="0 | 1 501 5 19 , 67 | 2 15 45 18 , 7 37 | 514 3 9 , 13 44 , 47 | 16 | 551 550 11 , 22 , 23 , 55 56 57 , 12 | 69 | 510 511 , 512 513 | 533 531 , 534 532 , 522 523 , 537 536 , 535 | 521 520 | 36 , 38 49 560 | 571 30 29 570 31 33 | 17 | 540 40 41 42 , 27 28 35 , 6 , 502" visible="true" inframe="false" stylebar="false" location="1" size="594" window="100,100,600,400" />
+	</views>
+	<toolbar show="false" items="0 39 | 1 501 67 , 5 19 , 72 | 2 15 45 , 18 65 , 7 37 | 4 3 8 9 , 13 44 , 58 , 47 | 16 51 64 , 70 | 10 34 53 11 , 24  20 22 , 21 23 | 55 56 57 , 12 | 36 46 , 38 49  50 , 71 | 30 29 54 32 31 33 | 17 26 62 73 , 14 68 | 25 52 60 61 | 40 41 42 , 27 28 35 , 6" position="7" help="false" />
+	<input show="false" cmd="true" top="true" />
+	<dockBar show="false" east="false" />
+</perspective>
+	</perspectives>
+	<labelingStyle  val="3"/>
+	<font  size="24"/>
+</gui>
+<euclidianView>
+	<viewNumber viewNo="1"/>
+	<size  width="396" height="319"/>
+	<coordSystem xZero="180.27202014774252" yZero="132.1165097518011" scale="17.844475970793535" yscale="17.844475970793557"/>
+	<evSettings axes="false" grid="true" gridIsBold="false" pointCapturing="2" rightAngleStyle="1" checkboxSize="26" gridType="0"/>
+	<bgColor r="255" g="255" b="255"/>
+	<axesColor r="0" g="0" b="0"/>
+	<gridColor r="192" g="192" b="192"/>
+	<lineStyle axes="1" grid="0"/>
+	<axis id="0" show="false" label="" unitLabel="" tickStyle="1" showNumbers="true"/>
+	<axis id="1" show="false" label="" unitLabel="" tickStyle="1" showNumbers="true"/>
+	<grid distX="1" distY="1" distTheta="0.5235987755982988"/>
+</euclidianView>
+<euclidianView>
+	<viewNumber viewNo="2"/>
+	<size  width="396" height="361"/>
+	<coordSystem xZero="218.39980334771482" yZero="168.7356224253457" scale="20.499347965854344" yscale="20.49934796585431"/>
+	<evSettings axes="false" grid="false" gridIsBold="false" pointCapturing="3" rightAngleStyle="1" checkboxSize="26" gridType="0"/>
+	<bgColor r="255" g="250" b="205"/>
+	<axesColor r="0" g="0" b="0"/>
+	<gridColor r="192" g="192" b="192"/>
+	<lineStyle axes="1" grid="0"/>
+	<axis id="0" show="false" label="" unitLabel="" tickStyle="1" showNumbers="true"/>
+	<axis id="1" show="false" label="" unitLabel="" tickStyle="1" showNumbers="true"/>
+	<grid distX="1" distY="1" distTheta="0.5235987755982988"/>
+</euclidianView>
+<kernel>
+	<uses3D val="true"/>
+	<continuous val="false"/>
+	<usePathAndRegionParameters val="true"/>
+	<decimals val="2"/>
+	<angleUnit val="degree"/>
+	<algebraStyle val="0" spreadsheet="0"/>
+	<coordStyle val="0"/>
+</kernel>
+<scripting blocked="false" disabled="false"/>
+<euclidianView3D>
+	<coordSystem xZero="-0.030880053161115806" yZero="0.07539888003551598" zZero="-9.112374549209783" scale="15.271506438067249" xAngle="22" zAngle="1020.6492320567968"/>
+	<evSettings axes="false" grid="false" gridIsBold="false" pointCapturing="3" rightAngleStyle="1" gridType="0"/>
+	<axis id="0" show="false" label="" unitLabel="" tickStyle="1" showNumbers="true"/>
+	<axis id="1" show="false" label="" unitLabel="" tickStyle="1" showNumbers="true"/>
+	<axis id="2" show="false" label="" unitLabel="" tickStyle="1" showNumbers="true"/>
+	<plate show="true"/>
+	<bgColor r="255" g="255" b="255"/>
+	<clipping use="false" show="false" size="2"/>
+	<projection type="0"/>
+</euclidianView3D>
+<construction title="" author="" date="">
+<command name="Intersect">
+	<input a0="xAxis" a1="yAxis"/>
+	<output a0="O"/>
+</command>
+<element type="point" label="O">
+	<show object="true" label="true" ev="4"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelOffset x="-22" y="35"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<selectionAllowed val="false"/>
+	<isShape val="false"/>
+	<coords x="0" y="0" z="1"/>
+	<pointSize val="3"/>
+	<pointStyle val="1"/>
+</element>
+<command name="Point">
+	<input a0="xAxis"/>
+	<output a0="R"/>
+</command>
+<element type="point" label="R">
+	<show object="true" label="false" ev="8"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelOffset x="5" y="15"/>
+	<labelMode val="0"/>
+	<animation step="0.1" speed="1" type="1" playing="false"/>
+	<isShape val="false"/>
+	<coords x="6" y="0" z="1"/>
+	<pointSize val="3"/>
+	<pointStyle val="1"/>
+</element>
+<command name="Circle">
+	<input a0="O" a1="R"/>
+	<output a0="c"/>
+</command>
+<element type="conic" label="c">
+	<show object="true" label="false" ev="4"/>
+	<objColor r="0" g="0" b="255" alpha="0.25"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<isShape val="false"/>
+	<lineStyle thickness="3" type="0" typeHidden="2"/>
+	<eigenvectors  x0="1" y0="0" z0="1.0" x1="0" y1="1" z1="1.0"/>
+	<matrix A0="1" A1="1" A2="-36" A3="0" A4="0" A5="0"/>
+	<eqnStyle style="specific"/>
+</element>
+<element type="point" label="V&apos;">
+	<show object="true" label="true" ev="4"/>
+	<objColor r="255" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<animation step="0.1" speed="1" type="1" playing="false"/>
+	<isShape val="false"/>
+	<coords x="0" y="0" z="1"/>
+	<pointSize val="3"/>
+	<pointStyle val="0"/>
+</element>
+<element type="numeric" label="h">
+	<value val="8"/>
+	<show object="true" label="false" ev="3"/>
+	<objColor r="255" g="0" b="0" alpha="0.10000000149011612"/>
+	<layer val="0"/>
+	<labelOffset x="23" y="-12"/>
+	<labelMode val="1"/>
+	<slider min="0" max="20" absoluteScreenLocation="true" width="140" x="209" y="53" fixed="true" horizontal="true" showAlgebra="false"/>
+	<lineStyle thickness="10" type="0" typeHidden="1"/>
+	<animation step="1" speed="1" type="0" playing="false"/>
+</element>
+<expression label="V" exp="(x(V&apos;), y(V&apos;), h)" type="point" />
+<element type="point3d" label="V">
+	<show object="true" label="true" ev="4"/>
+	<objColor r="255" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<isShape val="false"/>
+	<coords x="0" y="0" z="8" w="1"/>
+	<pointSize val="3"/>
+</element>
+<element type="numeric" label="h&apos;">
+	<value val="0"/>
+	<show object="true" label="false" ev="3"/>
+	<condition showObject="h &gt; 0"/>
+	<objColor r="0" g="0" b="255" alpha="0.10000000149011612"/>
+	<layer val="0"/>
+	<labelOffset x="-80" y="6"/>
+	<labelMode val="3"/>
+	<slider min="0" max="h" absoluteScreenLocation="true" width="140" x="209" y="82" fixed="true" horizontal="true" showAlgebra="false"/>
+	<lineStyle thickness="10" type="0" typeHidden="1"/>
+	<animation step="0.01" speed="1" type="0" playing="false"/>
+	<caption val="建造圓錐體"/>
+</element>
+<command name="Circle">
+	<input a0="O + (h&apos; / h * (V - O))" a1="(x(R) * (1 - h&apos; / h))" a2="zAxis"/>
+	<output a0="f"/>
+</command>
+<element type="conic3d" label="f">
+	<show object="true" label="false" ev="5"/>
+	<objColor r="0" g="0" b="255" alpha="0.25"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<isShape val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<eigenvectors  x0="1" y0="0" z0="1.0" x1="0" y1="1" z1="1.0"/>
+	<matrix A0="1" A1="1" A2="-36" A3="0" A4="0" A5="0"/>
+	<eqnStyle style="implicit"/>
+</element>
+<command name="Segment">
+	<input a0="V" a1="V&apos;"/>
+	<output a0="a"/>
+</command>
+<element type="segment3d" label="a">
+	<show object="true" label="true" ev="4"/>
+	<objColor r="255" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="3"/>
+	<selectionAllowed val="false"/>
+	<isShape val="false"/>
+	<lineStyle thickness="5" type="20" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+	<caption val="%v cm"/>
+</element>
+<command name="Sequence">
+	<input a0="Segment[V, ((x(R) * cos(theta)), (x(R) * sin(theta)), 0)]" a1="theta" a2="0°" a3="360°" a4="30°"/>
+	<output a0="list1"/>
+</command>
+<element type="list" label="list1">
+	<show object="true" label="false" ev="5"/>
+	<condition showObject="(h&apos; ≠ h) ∧ (h &gt; 0)"/>
+	<objColor r="255" g="0" b="0" alpha="0"/>
+	<bgColor r="255" g="255" b="255" alpha="255"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<isShape val="false"/>
+	<lineStyle thickness="1" type="0" typeHidden="2"/>
+	<pointSize val="3"/>
+	<pointStyle val="-1"/>
+</element>
+<command name="Segment">
+	<input a0="O" a1="R"/>
+	<output a0="d"/>
+</command>
+<element type="segment" label="d">
+	<show object="true" label="true" ev="4"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelOffset x="-25" y="19"/>
+	<labelMode val="3"/>
+	<selectionAllowed val="false"/>
+	<isShape val="false"/>
+	<coords x="0" y="6" z="0"/>
+	<lineStyle thickness="4" type="20" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+	<caption val="%v cm"/>
+</element>
+<element type="boolean" label="showVol">
+	<value val="false"/>
+	<show object="true" label="true" ev="3"/>
+	<condition showObject="(h &gt; 0) ∧ h ≟ h&apos;"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelOffset x="12" y="102"/>
+	<labelMode val="3"/>
+	<checkbox fixed="true"/>
+	<ggbscript onUpdate="SetValue[showArea,false]"/>
+	<caption val="Volume of cone"/>
+</element>
+<element type="boolean" label="showArea">
+	<value val="false"/>
+	<show object="true" label="true" ev="3"/>
+	<condition showObject="(h &gt; 0) ∧ h ≟ h&apos; ∧ V&apos; ≟ O"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelOffset x="12" y="138"/>
+	<labelMode val="3"/>
+	<checkbox fixed="true"/>
+	<ggbscript onUpdate="SetValue[showVol,false]"/>
+	<caption val="Curved surface area of cone"/>
+</element>
+<command name="Surface">
+	<input a0="x(O + (v / h * (V - O))) + ((x(R) * (1 - v / h)) * cos(u))" a1="y(O + (v / h * (V - O))) + ((x(R) * (1 - v / h)) * sin(u))" a2="v" a3="u" a4="0" a5="6.28319" a6="v" a7="0" a8="h&apos;"/>
+	<output a0="g"/>
+</command>
+<element type="surfacecartesian3d" label="g">
+	<show object="true" label="false" ev="5"/>
+	<objColor r="0" g="0" b="255" alpha="0.25"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<isShape val="false"/>
+	<lineStyle thickness="0" type="0" typeHidden="1"/>
+</element>
+<command name="Segment">
+	<input a0="V" a1="R"/>
+	<output a0="l"/>
+</command>
+<element type="segment3d" label="l">
+	<show object="true" label="true" ev="7"/>
+	<condition showObject="h ≟ h&apos; ∧ showArea"/>
+	<objColor r="0" g="100" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelOffset x="15" y="27"/>
+	<labelMode val="3"/>
+	<selectionAllowed val="false"/>
+	<isShape val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+	<caption val="%v cm"/>
+</element>
+<element type="button" label="button0">
+	<show object="true" label="true" ev="3"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelOffset x="330" y="10"/>
+	<labelMode val="3"/>
+	<animation step="1" speed="1" type="0" playing="false"/>
+	<isShape val="false"/>
+	<auxiliary val="true"/>
+	<ggbscript val="SetValue[lang,If[lang==1,2,1]]&#10;RunClickScript[buttonLang]"/>
+	<font serif="false" sizeM="1.4" size="10" style="0"/>
+	<caption val="中文"/>
+</element>
+<element type="button" label="buttonLang">
+	<show object="false" label="true" ev="3"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelOffset x="197" y="249"/>
+	<labelMode val="0"/>
+	<animation step="1" speed="1" type="0" playing="false"/>
+	<isShape val="false"/>
+	<auxiliary val="true"/>
+	<ggbscript val="SetCaption[button0,If[lang==1,&quot;ENG&quot;,&quot;中文&quot;]]&#10;SetCaption[showVol,If[lang==1,&quot;圓錐體的體積&quot;,&quot;Volume of cone&quot;]]&#10;SetCaption[showArea,If[lang==1,&quot;圓錐體的曲面面積&quot;,&quot;Curved surface area of cone&quot;]]"/>
+	<font serif="false" sizeM="2" size="24" style="0"/>
+</element>
+<element type="numeric" label="lang">
+	<value val="2"/>
+	<symbolic val="true" />
+	<show object="false" label="true"/>
+	<objColor r="0" g="0" b="0" alpha="0.10000000149011612"/>
+	<layer val="0"/>
+	<labelMode val="1"/>
+	<animation step="1" speed="1" type="0" playing="false"/>
+</element>
+<expression label="text3" exp="&quot;=\pi(&quot; + (LaTeX[x(R)]) + &quot;)\sqrt{&quot; + (LaTeX[x(R)]) + &quot;^2+&quot; + (LaTeX[h]) + &quot;^2}\\&#10;=\pi(&quot; + (LaTeX[x(R)]) + &quot;)(&quot; + (LaTeX[sqrt(x(R)^(2) + h^(2))]) + &quot;)\text{ cm²}\\&#10;=&quot; + (LaTeX[(x(R) * sqrt(x(R)^(2) + h^(2)))]) + &quot;\pi\text{ cm²}\\&#10;=&quot; + (LaTeX[((x(R) * sqrt(x(R)^(2) + h^(2))) * π)]) + &quot;\text{ cm²}&quot;" />
+<element type="text" label="text3">
+	<show object="true" label="false" ev="11"/>
+	<condition showObject="V&apos; ≟ O ∧ h&apos; ≟ h ∧ (h &gt; 0) ∧ showArea ∧ (¬showVol)"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<isLaTeX val="true"/>
+	<font serif="true" sizeM="1" size="0" style="0"/>
+	<absoluteScreenLocation x="49" y="182"/>
+</element>
+<expression label="text2" exp="&quot;= \pi (&quot; + (LaTeX[x(R)]) + &quot;)^2×&quot; + (LaTeX[h]) + &quot;×\frac{1}{3}\\&#10;=&quot; + (LaTeX[FractionText[(x(R)^(2) * h / 3)]]) + &quot;\pi\text{ cm³}\\&#10;=&quot; + (LaTeX[((x(R)^(2) * h / 3) * π)]) + &quot;\text{ cm³}&quot;" />
+<element type="text" label="text2">
+	<show object="true" label="true" ev="11"/>
+	<condition showObject="showVol ∧ (¬showArea) ∧ (h &gt; 0) ∧ h ≟ h&apos;"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<isLaTeX val="true"/>
+	<font serif="true" sizeM="1" size="0" style="0"/>
+	<absoluteScreenLocation x="49" y="181"/>
+</element>
+<expression label="text1" exp="&quot;&quot; + (If[lang ≟ 1, &quot;圓錐體的高&quot;, &quot;height of cone&quot;]) + &quot; = &quot; + h + &quot; cm&quot;" />
+<element type="text" label="text1">
+	<show object="true" label="false" ev="11"/>
+	<objColor r="255" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<font serif="false" sizeM="0.85" size="-4" style="0"/>
+	<absoluteScreenLocation x="14" y="33"/>
+</element>
+<expression label="text4" exp="&quot;&quot; + (If[lang ≟ 1, &quot;建造圓錐體&quot;, &quot;build the cone&quot;]) + &quot;&quot;" />
+<element type="text" label="text4">
+	<show object="true" label="true" ev="11"/>
+	<condition showObject="h &gt; 0"/>
+	<objColor r="0" g="0" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<font serif="false" sizeM="0.85" size="-4" style="0"/>
+	<absoluteScreenLocation x="63" y="86"/>
+</element>
+</construction>
+</geogebra>

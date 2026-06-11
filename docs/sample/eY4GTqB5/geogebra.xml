@@ -1,0 +1,689 @@
+<?xml version="1.0" encoding="utf-8"?>
+<geogebra format="5.0" version="5.0.396.0" app="classic" platform="d" id="11d5a1b4-c923-4ac0-b216-19ca07c3817b"  xsi:noNamespaceSchemaLocation="http://www.geogebra.org/ggb.xsd" xmlns="" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" >
+<gui>
+	<window width="765" height="650" />
+	<perspectives>
+<perspective id="tmp">
+	<panes>
+		<pane location="" divider="0.30980392156862746" orientation="1" />
+	</panes>
+	<views>
+		<view id="4097" visible="false" inframe="true" stylebar="true" location="1,1,1,1" size="400" window="559,139,700,550" />
+		<view id="8" toolbar="1001 | 1002 | 1003  || 1005 | 1004 || 1006 | 1007 | 1010 || 1008 1009 || 66 68 || 6" visible="false" inframe="false" stylebar="false" location="1,3,3" size="300" window="100,100,600,400" />
+		<view id="1" visible="false" inframe="false" stylebar="false" location="1,3" size="500" window="100,100,600,400" />
+		<view id="4" toolbar="0 || 2020 , 2021 , 2022 , 66 || 2001 , 2003 , 2002 , 2004 , 2005 || 2040 , 2041 , 2042 , 2044 , 2043" visible="false" inframe="false" stylebar="false" location="1,1" size="300" window="100,100,600,400" />
+		<view id="2" visible="false" inframe="false" stylebar="true" location="3" size="237" window="100,100,250,400" />
+		<view id="16" visible="false" inframe="false" stylebar="false" location="1" size="474" window="50,50,500,500" />
+		<view id="32" visible="false" inframe="false" stylebar="true" location="1" size="150" window="50,50,500,500" />
+		<view id="64" toolbar="0" visible="false" inframe="true" stylebar="true" location="1" size="150" window="50,50,500,500" />
+		<view id="70" toolbar="0 || 2020 || 2021 || 2022" visible="false" inframe="true" stylebar="true" location="1" size="150" window="50,50,500,500" />
+		<view id="512" toolbar="0 | 1 501 5 19 , 67 | 2 15 45 18 , 7 37 | 514 3 9 , 13 44 , 47 | 16 | 551 550 11 ,  20 22 21 23 , 55 56 57 , 12 | 69 | 510 511 , 512 513 | 533 531 , 534 532 , 522 523 , 537 536 , 535 | 521 520 | 36 , 38 49 560 | 571 30 29 570 31 33 | 17 | 540 40 41 42 , 27 28 35 , 6 , 502" visible="true" inframe="false" stylebar="true" location="1" size="738" window="100,100,600,400" />
+	</views>
+	<toolbar show="true" items="0 39 73 62 | 1 501 67 , 5 19 , 72 75 76 | 2 15 45 , 18 65 , 7 37 | 4 3 8 9 , 13 44 , 58 , 47 | 16 51 64 , 70 | 10 34 53 11 , 24  20 22 , 21 23 | 55 56 57 , 12 | 36 46 , 38 49  50 , 71  14  68 | 30 29 54 32 31 33 | 25 17 26 60 52 61 | 40 41 42 , 27 28 35 , 6" position="1" help="false" />
+	<input show="true" cmd="true" top="algebra" />
+	<dockBar show="true" east="true" />
+</perspective>
+	</perspectives>
+	<labelingStyle  val="3"/>
+	<font  size="16"/>
+</gui>
+<euclidianView>
+	<viewNumber viewNo="1"/>
+	<size  width="718" height="440"/>
+	<coordSystem xZero="343.00000000000006" yZero="247.9999999999999" scale="50.00000000000003" yscale="49.99999999999998"/>
+	<evSettings axes="false" grid="true" gridIsBold="false" pointCapturing="2" rightAngleStyle="1" checkboxSize="26" gridType="0"/>
+	<bgColor r="255" g="255" b="255"/>
+	<axesColor r="0" g="0" b="0"/>
+	<gridColor r="192" g="192" b="192"/>
+	<lineStyle axes="1" grid="0"/>
+	<axis id="0" show="false" label="" unitLabel="" tickStyle="1" showNumbers="true"/>
+	<axis id="1" show="false" label="" unitLabel="" tickStyle="1" showNumbers="true"/>
+</euclidianView>
+<algebraView>
+	<auxiliary show="true"/>
+</algebraView>
+<kernel>
+	<uses3D val="true"/>
+	<continuous val="false"/>
+	<usePathAndRegionParameters val="true"/>
+	<decimals val="2"/>
+	<angleUnit val="degree"/>
+	<algebraStyle val="0" spreadsheet="0"/>
+	<coordStyle val="0"/>
+</kernel>
+<scripting blocked="false" disabled="false"/>
+<euclidianView3D>
+	<coordSystem xZero="0.0" yZero="0.0" zZero="-2.7496402047198147" scale="50.0" xAngle="26.0" zAngle="229.94820657236232"/>
+	<evSettings axes="false" grid="false" gridIsBold="false" pointCapturing="3" rightAngleStyle="1" gridType="3"/>
+	<axis id="0" show="false" label="" unitLabel="" tickStyle="1" showNumbers="true"/>
+	<axis id="1" show="false" label="" unitLabel="" tickStyle="1" showNumbers="true"/>
+	<axis id="2" show="false" label="" unitLabel="" tickStyle="1" showNumbers="true"/>
+	<plate show="false"/>
+	<bgColor r="255" g="255" b="255"/>
+	<clipping use="false" show="false" size="1"/>
+	<projection type="1"/>
+</euclidianView3D>
+<construction title="" author="" date="">
+<command name="Point">
+	<input a0="xAxis"/>
+	<output a0="A"/>
+</command>
+<element type="point" label="A">
+	<show object="false" label="true" ev="4"/>
+	<objColor r="255" g="0" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<animation step="1" speed="1" type="1" playing="false"/>
+	<selectionAllowed val="false"/>
+	<isShape val="false"/>
+	<coords x="2.506827082101048" y="0.0" z="1.0"/>
+	<coordStyle style="cartesian3d"/>
+	<pointSize val="7"/>
+	<pointStyle val="0"/>
+</element>
+<expression label="a" exp="abs(x(A))" />
+<element type="numeric" label="a">
+	<value val="2.506827082101048"/>
+	<symbolic val="true" />
+	<objColor r="0" g="0" b="0" alpha="0.10000000149011612"/>
+	<selectionAllowed val="false"/>
+</element>
+<expression label="B" exp="(a, a)" type="point" />
+<element type="point" label="B">
+	<show object="false" label="true" ev="4"/>
+	<objColor r="255" g="215" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<isShape val="false"/>
+	<coords x="2.506827082101048" y="2.506827082101048" z="1.0"/>
+	<pointSize val="7"/>
+	<pointStyle val="0"/>
+</element>
+<expression label="C" exp="((-a), a)" type="point" />
+<element type="point" label="C">
+	<show object="false" label="true" ev="4"/>
+	<objColor r="255" g="215" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<isShape val="false"/>
+	<coords x="-2.506827082101048" y="2.506827082101048" z="1.0"/>
+	<pointSize val="7"/>
+	<pointStyle val="0"/>
+</element>
+<expression label="D" exp="((-a), (-a))" type="point" />
+<element type="point" label="D">
+	<show object="false" label="true" ev="4"/>
+	<objColor r="255" g="215" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<isShape val="false"/>
+	<coords x="-2.506827082101048" y="-2.506827082101048" z="1.0"/>
+	<pointSize val="7"/>
+	<pointStyle val="0"/>
+</element>
+<expression label="E" exp="(a, (-a))" type="point" />
+<element type="point" label="E">
+	<show object="false" label="true" ev="4"/>
+	<objColor r="255" g="215" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<isShape val="false"/>
+	<coords x="2.506827082101048" y="-2.506827082101048" z="1.0"/>
+	<pointSize val="7"/>
+	<pointStyle val="0"/>
+</element>
+<command name="Polygon">
+	<input a0="B" a1="C" a2="D" a3="E"/>
+	<output a0="q1" a1="BC" a2="CD" a3="DE" a4="BE"/>
+</command>
+<element type="polygon" label="q1">
+	<lineStyle thickness="2" type="0" typeHidden="0"/>
+	<show object="true" label="false" ev="4"/>
+	<objColor r="191" g="255" b="0" alpha="0.6399999856948853"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<isShape val="false"/>
+	<auxiliary val="false"/>
+</element>
+<element type="segment" label="BC">
+	<show object="true" label="false" ev="4"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<isShape val="false"/>
+	<auxiliary val="false"/>
+	<coords x="0.0" y="-5.013654164202096" z="12.56836403911051"/>
+	<lineStyle thickness="5" type="0" typeHidden="0"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment" label="CD">
+	<show object="true" label="false" ev="4"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<isShape val="false"/>
+	<auxiliary val="false"/>
+	<coords x="5.013654164202096" y="0.0" z="12.56836403911051"/>
+	<lineStyle thickness="5" type="0" typeHidden="0"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment" label="DE">
+	<show object="true" label="false" ev="4"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<isShape val="false"/>
+	<auxiliary val="false"/>
+	<coords x="0.0" y="5.013654164202096" z="12.56836403911051"/>
+	<lineStyle thickness="5" type="0" typeHidden="0"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment" label="BE">
+	<show object="true" label="false" ev="4"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<isShape val="false"/>
+	<auxiliary val="false"/>
+	<coords x="-5.013654164202096" y="0.0" z="12.56836403911051"/>
+	<lineStyle thickness="5" type="0" typeHidden="0"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<expression label="F" exp="(a, a, (2 * a))" type="point" />
+<element type="point3d" label="F">
+	<show object="false" label="true" ev="4"/>
+	<objColor r="255" g="215" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<isShape val="false"/>
+	<coords x="2.506827082101048" y="2.506827082101048" z="5.013654164202096" w="1.0"/>
+	<pointSize val="7"/>
+</element>
+<command name="Prism">
+	<input a0="q1" a1="F"/>
+	<output a0="prsm" a1="G" a2="H" a3="I" a4="faceBCGF" a5="faceCDHG" a6="faceDEIH" a7="faceBEIF" a8="faceFGHI" a9="BF" a10="CG" a11="DH" a12="EI" a13="FG" a14="GH" a15="HI" a16="FI"/>
+</command>
+<element type="polyhedron" label="prsm">
+	<lineStyle thickness="5" type="0" typeHidden="1"/>
+	<show object="true" label="false" ev="4"/>
+	<objColor r="153" g="51" b="0" alpha="0.4000000059604645"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<isShape val="false"/>
+</element>
+<element type="point3d" label="G">
+	<show object="false" label="true" ev="4"/>
+	<objColor r="255" g="215" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<isShape val="false"/>
+	<coords x="-2.506827082101048" y="2.506827082101048" z="5.013654164202096" w="1.0"/>
+	<pointSize val="7"/>
+</element>
+<element type="point3d" label="H">
+	<show object="false" label="true" ev="4"/>
+	<objColor r="255" g="215" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<isShape val="false"/>
+	<coords x="-2.506827082101048" y="-2.506827082101048" z="5.013654164202096" w="1.0"/>
+	<pointSize val="7"/>
+</element>
+<element type="point3d" label="I">
+	<show object="false" label="true" ev="4"/>
+	<objColor r="255" g="215" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<isShape val="false"/>
+	<coords x="2.506827082101048" y="-2.506827082101048" z="5.013654164202096" w="1.0"/>
+	<pointSize val="7"/>
+</element>
+<element type="polygon3d" label="faceBCGF">
+	<lineStyle thickness="5" type="0" typeHidden="0"/>
+	<show object="true" label="false" ev="4"/>
+	<objColor r="191" g="255" b="0" alpha="0.6399999856948853"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<isShape val="false"/>
+	<auxiliary val="false"/>
+</element>
+<element type="polygon3d" label="faceCDHG">
+	<lineStyle thickness="5" type="0" typeHidden="0"/>
+	<show object="true" label="false" ev="4"/>
+	<objColor r="191" g="255" b="0" alpha="0.6399999856948853"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<isShape val="false"/>
+	<auxiliary val="false"/>
+</element>
+<element type="polygon3d" label="faceDEIH">
+	<lineStyle thickness="5" type="0" typeHidden="0"/>
+	<show object="true" label="false" ev="4"/>
+	<objColor r="191" g="255" b="0" alpha="0.6399999856948853"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<isShape val="false"/>
+	<auxiliary val="false"/>
+</element>
+<element type="polygon3d" label="faceBEIF">
+	<lineStyle thickness="5" type="0" typeHidden="0"/>
+	<show object="true" label="false" ev="4"/>
+	<objColor r="191" g="255" b="0" alpha="0.6399999856948853"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<isShape val="false"/>
+	<auxiliary val="false"/>
+</element>
+<element type="polygon3d" label="faceFGHI">
+	<lineStyle thickness="5" type="0" typeHidden="0"/>
+	<show object="true" label="false" ev="4"/>
+	<objColor r="191" g="255" b="0" alpha="0.6399999856948853"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<isShape val="false"/>
+	<auxiliary val="false"/>
+</element>
+<element type="segment3d" label="BF">
+	<show object="true" label="false" ev="4"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<isShape val="false"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="5" type="0" typeHidden="0"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment3d" label="CG">
+	<show object="true" label="false" ev="4"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<isShape val="false"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="5" type="0" typeHidden="0"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment3d" label="DH">
+	<show object="true" label="false" ev="4"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<isShape val="false"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="5" type="0" typeHidden="0"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment3d" label="EI">
+	<show object="true" label="false" ev="4"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<isShape val="false"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="5" type="0" typeHidden="0"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment3d" label="FG">
+	<show object="true" label="false" ev="4"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<isShape val="false"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="5" type="0" typeHidden="0"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment3d" label="GH">
+	<show object="true" label="false" ev="4"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<isShape val="false"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="5" type="0" typeHidden="0"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment3d" label="HI">
+	<show object="true" label="false" ev="4"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<isShape val="false"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="5" type="0" typeHidden="0"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment3d" label="FI">
+	<show object="true" label="false" ev="4"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<isShape val="false"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="5" type="0" typeHidden="0"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="polygon" label="q1">
+	<lineStyle thickness="2" type="0" typeHidden="0"/>
+	<show object="true" label="false" ev="4"/>
+	<objColor r="191" g="255" b="0" alpha="0.6399999856948853"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<isShape val="false"/>
+	<auxiliary val="false"/>
+</element>
+<element type="segment" label="BC">
+	<show object="true" label="false" ev="4"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<isShape val="false"/>
+	<auxiliary val="false"/>
+	<coords x="0.0" y="-5.013654164202096" z="12.56836403911051"/>
+	<lineStyle thickness="5" type="0" typeHidden="0"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment" label="BE">
+	<show object="true" label="false" ev="4"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<isShape val="false"/>
+	<auxiliary val="false"/>
+	<coords x="-5.013654164202096" y="0.0" z="12.56836403911051"/>
+	<lineStyle thickness="5" type="0" typeHidden="0"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment" label="CD">
+	<show object="true" label="false" ev="4"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<isShape val="false"/>
+	<auxiliary val="false"/>
+	<coords x="5.013654164202096" y="0.0" z="12.56836403911051"/>
+	<lineStyle thickness="5" type="0" typeHidden="0"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment" label="DE">
+	<show object="true" label="false" ev="4"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<isShape val="false"/>
+	<auxiliary val="false"/>
+	<coords x="0.0" y="5.013654164202096" z="12.56836403911051"/>
+	<lineStyle thickness="5" type="0" typeHidden="0"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<expression label="path" exp="{BC, BE, BF, CD, CG, DE, DH, EI, FG, FI, GH, HI}" />
+<element type="list" label="path">
+	<show object="true" label="false" ev="4"/>
+	<objColor r="0" g="100" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<isShape val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<pointSize val="5"/>
+	<pointStyle val="-1"/>
+</element>
+<command name="Point">
+	<input a0="path"/>
+	<output a0="J"/>
+</command>
+<element type="point3d" label="J">
+	<show object="true" label="false" ev="4"/>
+	<objColor r="255" g="0" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<animation step="0.1" speed="1" type="0" playing="false"/>
+	<isShape val="false"/>
+	<coords x="-0.116953594014646" y="-2.506827082101048" z="5.013654164202096" w="1.0"/>
+	<pointSize val="6"/>
+</element>
+<command name="Point">
+	<input a0="path"/>
+	<output a0="K"/>
+</command>
+<element type="point3d" label="K">
+	<show object="true" label="false" ev="4"/>
+	<objColor r="0" g="100" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<animation step="0.1" speed="1" type="0" playing="false"/>
+	<isShape val="false"/>
+	<coords x="-0.08894315866369773" y="2.506827082101048" z="5.013654164202096" w="1.0"/>
+	<pointSize val="6"/>
+</element>
+<command name="Point">
+	<input a0="path"/>
+	<output a0="L"/>
+</command>
+<element type="point3d" label="L">
+	<show object="true" label="false" ev="4"/>
+	<objColor r="0" g="0" b="255" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<animation step="0.1" speed="1" type="0" playing="false"/>
+	<isShape val="false"/>
+	<coords x="-2.506827082101048" y="-2.506827082101048" z="2.4874303939920894" w="1.0"/>
+	<pointSize val="6"/>
+</element>
+<command name="Plane">
+	<input a0="K" a1="J" a2="L"/>
+	<output a0="p"/>
+</command>
+<element type="plane3d" label="p">
+	<show object="true" label="false" ev="4"/>
+	<objColor r="102" g="204" b="255" alpha="0.25"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<isShape val="false"/>
+	<coords x="12.665612325219719" y="-0.0707606275974962" z="-11.981999165460579" w="61.37750423560025"/>
+	<fading val="0.0"/>
+	<lineStyle thickness="0" type="0" typeHidden="2"/>
+</element>
+<command name="IntersectPath">
+	<input a0="p" a1="prsm"/>
+	<outputSizes val="1,6,6"/>
+	<output a0="poly1" a1="M" a2="N" a3="O" a4="P" a5="Q" a6="Z" a7="f" a8="g" a9="h" a10="i" a11="j" a12="s"/>
+</command>
+<element type="polygon3d" label="poly1">
+	<lineStyle thickness="7" type="0" typeHidden="2"/>
+	<show object="true" label="false" ev="4"/>
+	<objColor r="255" g="102" b="0" alpha="0.5"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<isShape val="false"/>
+</element>
+<element type="point3d" label="M">
+	<show object="false" label="true" ev="4"/>
+	<objColor r="68" g="68" b="68" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<isShape val="false"/>
+	<auxiliary val="true"/>
+	<coords x="-2.506827082101048" y="2.506827082101048" z="2.457821869544984" w="1.0"/>
+	<pointSize val="3"/>
+</element>
+<element type="point3d" label="N">
+	<show object="false" label="true" ev="4"/>
+	<objColor r="68" g="68" b="68" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<isShape val="false"/>
+	<auxiliary val="true"/>
+	<coords x="-0.08894315866369773" y="2.506827082101048" z="5.013654164202096" w="1.0"/>
+	<pointSize val="3"/>
+</element>
+<element type="point3d" label="O">
+	<show object="false" label="true" ev="4"/>
+	<objColor r="68" g="68" b="68" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<isShape val="false"/>
+	<auxiliary val="true"/>
+	<coords x="-0.116953594014646" y="-2.506827082101048" z="5.013654164202096" w="1.0"/>
+	<pointSize val="3"/>
+</element>
+<element type="point3d" label="P">
+	<show object="false" label="true" ev="4"/>
+	<objColor r="68" g="68" b="68" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<isShape val="false"/>
+	<auxiliary val="true"/>
+	<coords x="-2.506827082101048" y="-2.506827082101048" z="2.48743039399209" w="1.0"/>
+	<pointSize val="3"/>
+</element>
+<element type="point3d" label="Q">
+	<show object="false" label="true" ev="4"/>
+	<objColor r="68" g="68" b="68" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<isShape val="false"/>
+	<auxiliary val="true"/>
+	<coords x="NaN" y="NaN" z="NaN" w="NaN"/>
+	<pointSize val="3"/>
+</element>
+<element type="point3d" label="Z">
+	<show object="false" label="true" ev="4"/>
+	<objColor r="68" g="68" b="68" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<isShape val="false"/>
+	<auxiliary val="true"/>
+	<coords x="NaN" y="NaN" z="NaN" w="NaN"/>
+	<pointSize val="3"/>
+</element>
+<element type="segment3d" label="f">
+	<show object="true" label="false" ev="4"/>
+	<objColor r="255" g="102" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<isShape val="false"/>
+	<auxiliary val="true"/>
+	<lineStyle thickness="7" type="0" typeHidden="2"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment3d" label="g">
+	<show object="true" label="false" ev="4"/>
+	<objColor r="255" g="102" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<isShape val="false"/>
+	<auxiliary val="true"/>
+	<lineStyle thickness="7" type="0" typeHidden="2"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment3d" label="h">
+	<show object="true" label="false" ev="4"/>
+	<objColor r="255" g="102" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<isShape val="false"/>
+	<auxiliary val="true"/>
+	<lineStyle thickness="7" type="0" typeHidden="2"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment3d" label="i">
+	<show object="true" label="false" ev="4"/>
+	<objColor r="255" g="102" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<isShape val="false"/>
+	<auxiliary val="true"/>
+	<lineStyle thickness="7" type="0" typeHidden="2"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment3d" label="j">
+	<show object="true" label="false" ev="4"/>
+	<objColor r="255" g="102" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<isShape val="false"/>
+	<auxiliary val="true"/>
+	<lineStyle thickness="7" type="0" typeHidden="2"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment3d" label="s">
+	<show object="true" label="false" ev="4"/>
+	<objColor r="255" g="102" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<isShape val="false"/>
+	<auxiliary val="true"/>
+	<lineStyle thickness="7" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+</construction>
+</geogebra>

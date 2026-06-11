@@ -1,0 +1,466 @@
+<?xml version="1.0" encoding="utf-8"?>
+<geogebra format="5.0" version="5.0.574.0" app="classic" platform="w" id="95dd08ff-aafc-49f8-a767-b2cb5eb48cdc"  xsi:noNamespaceSchemaLocation="http://www.geogebra.org/apps/xsd/ggb.xsd" xmlns="" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" >
+<gui>
+	<window width="1339" height="566" />
+	<perspectives>
+<perspective id="tmp">
+	<panes>
+		<pane location="" divider="0.2083644510828977" orientation="1" />
+	</panes>
+	<views>
+		<view id="512" toolbar="0 | 1 501 5 19 , 67 | 2 15 45 18 , 7 37 | 514 3 9 , 13 44 , 47 | 16 51 | 551 550 11 ,  20 22 21 23 , 55 56 57 , 12 | 69 | 510 511 , 512 513 | 533 531 , 534 532 , 522 523 , 537 536 , 535 | 521 520 | 36 , 38 49 560 | 571 30 29 570 31 33 | 17 | 540 40 41 42 , 27 28 35 , 6 , 502" visible="false" inframe="false" stylebar="false" location="1,1,1" size="500" window="100,100,600,400" />
+		<view id="4" toolbar="0 || 2020 , 2021 , 2022 , 66 || 2001 , 2003 , 2002 , 2004 , 2005 || 2040 , 2041 , 2042 , 2044 , 2043" visible="false" inframe="false" stylebar="false" location="1,1" size="300" window="100,100,600,400" />
+		<view id="8" toolbar="1001 | 1002 | 1003  || 1005 | 1004 || 1006 | 1007 | 1010 || 1008 1009 || 66 68 || 6" visible="false" inframe="false" stylebar="false" location="1,3" size="300" window="100,100,600,400" />
+		<view id="4097" visible="false" inframe="false" stylebar="true" location="1,1" size="362" window="100,100,700,550" />
+		<view id="1" visible="true" inframe="false" stylebar="true" location="1" size="1339" window="100,100,600,400" />
+		<view id="2" visible="false" inframe="false" stylebar="false" location="3" size="279" window="100,100,600,400" />
+		<view id="16" visible="false" inframe="false" stylebar="false" location="1" size="150" window="50,50,500,500" />
+		<view id="32" visible="false" inframe="false" stylebar="true" location="1" size="150" window="50,50,500,500" />
+		<view id="64" toolbar="0" visible="false" inframe="false" stylebar="false" location="1" size="150" window="50,50,500,500" />
+		<view id="128" visible="false" inframe="false" stylebar="false" location="1" size="480" window="50,50,500,500" />
+		<view id="70" toolbar="0 || 2020 || 2021 || 2022" visible="false" inframe="false" stylebar="true" location="1" size="150" window="50,50,500,500" />
+		<view id="43" visible="false" inframe="false" stylebar="false" location="1" size="450" window="50,50,500,500" />
+	</views>
+	<toolbar show="false" items="0 39 73 62 | 1 501 67 , 5 19 , 72 75 76 | 2 15 45 , 18 65 , 7 37 | 4 3 8 9 , 13 44 , 58 , 47 | 16 51 64 , 70 | 10 34 53 11 , 24  20 22 , 21 23 | 55 56 57 , 12 | 36 46 , 38 49  50 , 71  14  68 | 30 29 54 32 31 33 | 25 17 26 60 52 61 | 40 41 42 , 27 28 35 , 6" position="1" help="false" />
+	<input show="false" cmd="true" top="algebra" />
+	<dockBar show="false" east="false" />
+</perspective>
+	</perspectives>
+	<labelingStyle  val="0"/>
+	<font  size="12"/>
+</gui>
+<euclidianView>
+	<viewNumber viewNo="1"/>
+	<size  width="1339" height="566"/>
+	<coordSystem xZero="280.11019910348637" yZero="273.12044572061797" scale="37.10214632681543" yscale="37.10214632681535"/>
+	<evSettings axes="true" grid="false" gridIsBold="false" pointCapturing="3" rightAngleStyle="1" checkboxSize="26" gridType="3"/>
+	<bgColor r="255" g="255" b="255"/>
+	<axesColor r="0" g="0" b="0"/>
+	<gridColor r="192" g="192" b="192"/>
+	<lineStyle axes="1" grid="0"/>
+	<axis id="0" show="true" label="" unitLabel="" tickStyle="1" showNumbers="true"/>
+	<axis id="1" show="true" label="" unitLabel="" tickStyle="1" showNumbers="true"/>
+</euclidianView>
+<kernel>
+	<continuous val="false"/>
+	<usePathAndRegionParameters val="true"/>
+	<decimals val="2"/>
+	<angleUnit val="degree"/>
+	<algebraStyle val="0" spreadsheet="0"/>
+	<coordStyle val="0"/>
+</kernel>
+<tableview min="-2" max="2" step="1"/>
+<scripting blocked="false" disabled="false"/>
+<construction title="" author="" date="">
+<element type="point" label="dUL">
+	<show object="true" label="false" ev="4"/>
+	<objColor r="77" g="77" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<animation step="0.1" speed="1" type="1" playing="false"/>
+	<auxiliary val="true"/>
+	<coords x="-7.390782353977023" y="7.197284239281268" z="1"/>
+	<pointSize val="5"/>
+	<pointStyle val="0"/>
+</element>
+<element type="point" label="dDR">
+	<show object="true" label="false" ev="4"/>
+	<objColor r="77" g="77" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<animation step="0.1" speed="1" type="1" playing="false"/>
+	<auxiliary val="true"/>
+	<coords x="7.204282894129527" y="-7.345468947004106" z="1"/>
+	<pointSize val="5"/>
+	<pointStyle val="0"/>
+</element>
+<expression label="幕布" exp="幕布(x, y) = x ≤ x(dUL) ∨ x ≥ x(dDR) ∨ y ≤ y(dDR) ∨ y ≥ y(dUL)" />
+<element type="functionNVar" label="幕布">
+	<show object="true" label="false" ev="4"/>
+	<objColor r="224" g="224" b="224" alpha="1"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<auxiliary val="true"/>
+	<lineStyle thickness="1" type="0" typeHidden="1"/>
+</element>
+<command name="Vector">
+	<input a0="(x(dUL), 0)" a1="(x(dDR), 0)"/>
+	<output a0="轴x"/>
+</command>
+<element type="vector" label="轴x">
+	<show object="true" label="false" ev="4"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<auxiliary val="true"/>
+	<coords x="14.59506524810655" y="0" z="0"/>
+	<lineStyle thickness="5" type="0" typeHidden="1" opacity="178"/>
+	<coordStyle style="cartesian"/>
+	<startPoint  x="-7.390782353977023" y="0" z="1"/>
+</element>
+<command name="Vector">
+	<input a0="(0, y(dDR))" a1="(0, y(dUL))"/>
+	<output a0="轴y"/>
+</command>
+<element type="vector" label="轴y">
+	<show object="true" label="false" ev="4"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<auxiliary val="true"/>
+	<coords x="0" y="14.542753186285374" z="0"/>
+	<lineStyle thickness="5" type="0" typeHidden="1" opacity="178"/>
+	<coordStyle style="cartesian"/>
+	<startPoint  x="0" y="-7.345468947004106" z="1"/>
+</element>
+<element type="numeric" label="a">
+	<value val="3"/>
+	<show object="true" label="true"/>
+	<objColor r="0" g="0" b="0" alpha="0.10000000149011612"/>
+	<layer val="0"/>
+	<labelMode val="1"/>
+	<slider min="-5" max="5" absoluteScreenLocation="true" width="80" x="28" y="59" fixed="false" horizontal="true" showAlgebra="true"/>
+	<lineStyle thickness="10" type="0" typeHidden="1"/>
+	<animation step="1" speed="1" type="0" playing="false"/>
+</element>
+<element type="numeric" label="h">
+	<value val="2"/>
+	<show object="true" label="true"/>
+	<objColor r="0" g="0" b="0" alpha="0.10000000149011612"/>
+	<layer val="0"/>
+	<labelMode val="1"/>
+	<slider min="-5" max="5" absoluteScreenLocation="true" width="80" x="30" y="111" fixed="false" horizontal="true" showAlgebra="true"/>
+	<lineStyle thickness="10" type="0" typeHidden="1"/>
+	<animation step="1" speed="1" type="0" playing="false"/>
+</element>
+<element type="numeric" label="k">
+	<value val="-3"/>
+	<show object="true" label="true"/>
+	<objColor r="0" g="0" b="0" alpha="0.10000000149011612"/>
+	<layer val="0"/>
+	<labelMode val="1"/>
+	<slider min="-5" max="5" absoluteScreenLocation="true" width="80" x="30" y="164" fixed="false" horizontal="true" showAlgebra="true"/>
+	<lineStyle thickness="10" type="0" typeHidden="1"/>
+	<animation step="1" speed="1" type="0" playing="false"/>
+</element>
+<expression label="f" exp="f(x) = (a * abs(x - h)) + k" />
+<element type="function" label="f">
+	<show object="true" label="true" ev="4"/>
+	<objColor r="255" g="85" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<lineStyle thickness="5" type="0" typeHidden="1" opacity="178"/>
+</element>
+<command name="LaTeX">
+	<input a0="f" a1="true" a2="true"/>
+	<output a0="text3"/>
+</command>
+<element type="text" label="text3">
+	<show object="true" label="true" ev="8"/>
+	<objColor r="0" g="0" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<isLaTeX val="true"/>
+	<font serif="true" sizeM="1.4" size="5" style="1"/>
+	<absoluteScreenLocation x="565" y="101"/>
+</element>
+<command name="Solutions">
+	<input a0="f(x) = 0"/>
+	<output a0="jj解集"/>
+</command>
+<element type="list" label="jj解集">
+	<objColor r="0" g="100" b="0" alpha="0.10000000149011612"/>
+	<auxiliary val="true"/>
+	<lineStyle thickness="5" type="0" typeHidden="1"/>
+	<pointSize val="5"/>
+	<angleStyle val="0"/>
+	<symbolic val="true" />
+</element>
+<command name="Point">
+	<input a0="Segment[(x(dUL), 0), (x(dDR), 0)]"/>
+	<output a0="A"/>
+</command>
+<element type="point" label="A">
+	<show object="false" label="true" ev="4"/>
+	<objColor r="125" g="125" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<animation step="1" speed="1" type="1" playing="false"/>
+	<auxiliary val="true"/>
+	<coords x="-1.1571334811205283" y="0" z="1"/>
+	<pointSize val="5"/>
+	<pointStyle val="0"/>
+</element>
+<command name="If">
+	<input a0="f(x(A)) &lt; y(dUL) ∧ f(x(A)) &gt; 0" a1="f(x(A))"/>
+	<output a0="yUp"/>
+</command>
+<element type="numeric" label="yUp">
+	<value val="6.471400443361585"/>
+	<objColor r="0" g="0" b="0" alpha="0.10000000149011612"/>
+	<auxiliary val="true"/>
+</element>
+<command name="Locus">
+	<input a0="(x(A), yUp)" a1="A"/>
+	<output a0="loc1"/>
+</command>
+<element type="locus" label="loc1">
+	<show object="true" label="false" ev="4"/>
+	<objColor r="128" g="0" b="128" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="11" type="0" typeHidden="1" opacity="178"/>
+</element>
+<command name="If">
+	<input a0="f(x(A)) &gt; y(dDR) ∧ f(x(A)) &lt; 0" a1="f(x(A))"/>
+	<output a0="yDown"/>
+</command>
+<element type="numeric" label="yDown">
+	<value val="NaN"/>
+	<objColor r="0" g="0" b="0" alpha="0.10000000149011612"/>
+	<auxiliary val="true"/>
+</element>
+<command name="Locus">
+	<input a0="(x(A), yDown)" a1="A"/>
+	<output a0="loc2"/>
+</command>
+<element type="locus" label="loc2">
+	<show object="true" label="false" ev="4"/>
+	<objColor r="220" g="20" b="60" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="11" type="0" typeHidden="1" opacity="178"/>
+</element>
+<expression label="dcz" exp="x = h" type="line" />
+<element type="line" label="dcz">
+	<show object="true" label="true" ev="4"/>
+	<objColor r="160" g="160" b="160" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<auxiliary val="true"/>
+	<coords x="1" y="0" z="-2"/>
+	<lineStyle thickness="5" type="30" typeHidden="1" opacity="178"/>
+	<eqnStyle style="implicit"/>
+</element>
+<expression label="x1" exp="(jj解集(1), 0)" type="point" />
+<element type="point" label="x1">
+	<show object="true" label="true" ev="4"/>
+	<objColor r="68" g="68" b="68" alpha="0"/>
+	<layer val="0"/>
+	<labelOffset x="-30" y="7"/>
+	<labelMode val="3"/>
+	<coords x="1" y="0" z="1"/>
+	<pointSize val="4"/>
+	<pointStyle val="0"/>
+	<caption val="$\large x_1$"/>
+</element>
+<expression label="x2" exp="(jj解集(2), 0)" type="point" />
+<element type="point" label="x2">
+	<show object="true" label="true" ev="4"/>
+	<objColor r="68" g="68" b="68" alpha="0"/>
+	<layer val="0"/>
+	<labelOffset x="-1" y="5"/>
+	<labelMode val="3"/>
+	<coords x="3" y="0" z="1"/>
+	<pointSize val="4"/>
+	<pointStyle val="0"/>
+	<caption val="$\large x_2$"/>
+</element>
+<expression label="txtfD0" exp="&quot;&quot; + (LaTeX[f]) + &quot;&gt;0&quot;" />
+<element type="text" label="txtfD0">
+	<symbolic val="true" />
+	<show object="false" label="true" ev="40"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<isLaTeX val="true"/>
+	<font serif="true" sizeM="1" size="0" style="0"/>
+	<auxiliary val="true"/>
+	<startPoint  x="8.620496283842076" y="0.38067609732498386" z="1"/>
+</element>
+<expression label="txtfX0" exp="&quot;&quot; + (LaTeX[f]) + &quot;&lt;0&quot;" />
+<element type="text" label="txtfX0">
+	<symbolic val="true" />
+	<show object="false" label="true" ev="40"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<isLaTeX val="true"/>
+	<font serif="true" sizeM="1" size="0" style="0"/>
+	<auxiliary val="true"/>
+	<startPoint  x="8.365215169124415" y="0.23885325581517108" z="1"/>
+</element>
+<expression label="xlfD0" exp="{txtfD0, If[a &gt; 0, If[k ≤ 0, ((((&quot;(-∞,&quot; * jj解集(1)) * &quot;)∪(&quot;) * jj解集(2)) * &quot;,+∞)&quot;), &quot;R&quot;], If[k &gt; 0, ((((&quot;(&quot; * jj解集(1)) * &quot;,&quot;) * jj解集(2)) * &quot;)&quot;), &quot;∅&quot;]]}" />
+<element type="list" label="xlfD0">
+	<show object="false" label="true" ev="4"/>
+	<objColor r="0" g="100" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<auxiliary val="true"/>
+	<lineStyle thickness="5" type="0" typeHidden="1"/>
+	<pointSize val="5"/>
+	<angleStyle val="0"/>
+	<symbolic val="true" />
+</element>
+<expression label="xlfX0" exp="{txtfX0, If[a &gt; 0, If[k &lt; 0, ((((&quot;(&quot; * jj解集(1)) * &quot;,&quot;) * jj解集(2)) * &quot;)&quot;), &quot;∅&quot;], If[k ≥ 0, ((((&quot;(-∞,&quot; * jj解集(1)) * &quot;)∪(&quot;) * jj解集(2)) * &quot;,+∞)&quot;), &quot;R&quot;]]}" />
+<element type="list" label="xlfX0">
+	<show object="false" label="true" ev="4"/>
+	<objColor r="0" g="100" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<auxiliary val="true"/>
+	<lineStyle thickness="5" type="0" typeHidden="1"/>
+	<pointSize val="5"/>
+	<angleStyle val="0"/>
+	<symbolic val="true" />
+</element>
+<expression label="xl标题" exp="{&quot;不等式&quot;, &quot;解集&quot;}"/>
+<element type="list" label="xl标题">
+	<show object="false" label="true" ev="4"/>
+	<objColor r="0" g="100" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<animation step="1" speed="1" type="0" playing="false"/>
+	<auxiliary val="true"/>
+	<lineStyle thickness="5" type="0" typeHidden="1"/>
+	<pointSize val="5"/>
+	<angleStyle val="0"/>
+	<symbolic val="true" />
+</element>
+<command name="TableText">
+	<input a0="xl标题" a1="xlfD0" a2="xlfX0" a3="&quot;|_c&quot;"/>
+	<output a0="txt不含等号"/>
+</command>
+<element type="text" label="txt不含等号">
+	<show object="true" label="true" ev="8"/>
+	<condition showObject="a ≠ 0"/>
+	<objColor r="153" g="51" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<isLaTeX val="true"/>
+	<font serif="true" sizeM="1.4" size="5" style="1"/>
+	<absoluteScreenLocation x="583" y="264"/>
+</element>
+<expression label="txtfDD0" exp="&quot;&quot; + (LaTeX[f]) + &quot;≥0&quot;" />
+<element type="text" label="txtfDD0">
+	<symbolic val="true" />
+	<show object="false" label="true" ev="40"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<isLaTeX val="true"/>
+	<font serif="true" sizeM="1" size="0" style="0"/>
+	<auxiliary val="true"/>
+	<startPoint  x="8.195027759312639" y="-2.7961555524948225" z="1"/>
+</element>
+<expression label="txtfXD0" exp="&quot;&quot; + (LaTeX[f]) + &quot;≤0&quot;" />
+<element type="text" label="txtfXD0">
+	<symbolic val="true" />
+	<show object="false" label="true" ev="40"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<isLaTeX val="true"/>
+	<font serif="true" sizeM="1" size="0" style="0"/>
+	<auxiliary val="true"/>
+	<startPoint  x="8.365215169124415" y="-3.9307382845733247" z="1"/>
+</element>
+<expression label="xlfDD0" exp="{txtfDD0, If[a &gt; 0, If[k &lt; 0, ((((&quot;(-∞,&quot; * jj解集(1)) * &quot;]∪[&quot;) * jj解集(2)) * &quot;,+∞)&quot;), &quot;R&quot;], If[k &gt; 0, ((((&quot;[&quot; * jj解集(1)) * &quot;,&quot;) * jj解集(2)) * &quot;]&quot;), If[k ≟ 0, ((&quot;\{&quot; * jj解集(1)) * &quot;\}&quot;), &quot;∅&quot;]]]}" />
+<element type="list" label="xlfDD0">
+	<show object="false" label="true" ev="4"/>
+	<objColor r="0" g="100" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<auxiliary val="true"/>
+	<lineStyle thickness="5" type="0" typeHidden="1"/>
+	<pointSize val="5"/>
+	<angleStyle val="0"/>
+	<symbolic val="true" />
+</element>
+<expression label="xlfXD0" exp="{txtfXD0, If[a &gt; 0, If[k &lt; 0, ((((&quot;[&quot; * jj解集(1)) * &quot;,&quot;) * jj解集(2)) * &quot;]&quot;), If[k ≟ 0, ((&quot;\{&quot; * jj解集(1)) * &quot;\}&quot;), &quot;∅&quot;]], If[k &gt; 0, ((((&quot;(-∞,&quot; * jj解集(1)) * &quot;]∪[&quot;) * jj解集(2)) * &quot;,+∞)&quot;), &quot;R&quot;]]}" />
+<element type="list" label="xlfXD0">
+	<show object="false" label="true" ev="4"/>
+	<objColor r="0" g="100" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<auxiliary val="true"/>
+	<lineStyle thickness="5" type="0" typeHidden="1"/>
+	<pointSize val="5"/>
+	<angleStyle val="0"/>
+	<symbolic val="true" />
+</element>
+<command name="TableText">
+	<input a0="xl标题" a1="xlfDD0" a2="xlfXD0" a3="&quot;|_c&quot;"/>
+	<output a0="txt含等号"/>
+</command>
+<element type="text" label="txt含等号">
+	<show object="true" label="true" ev="4"/>
+	<condition showObject="a ≠ 0"/>
+	<objColor r="128" g="0" b="128" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<isLaTeX val="true"/>
+	<font serif="false" sizeM="1.4" size="5" style="1"/>
+	<absoluteScreenLocation x="581" y="391"/>
+</element>
+<expression label="text5" exp="&quot;对应方程：&quot; + (LaTeX[f]) + &quot;=0\\&#xa;的解集为：&quot; + (LaTeX[jj解集]) + &quot;&quot;" />
+<element type="text" label="text5">
+	<show object="true" label="true" ev="8"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<isLaTeX val="true"/>
+	<font serif="true" sizeM="1.4" size="5" style="1"/>
+	<auxiliary val="true"/>
+	<absoluteScreenLocation x="592" y="135"/>
+</element>
+<expression label="text4" exp="&quot;含绝对值的不等式与函数&quot;"/>
+<element type="text" label="text4">
+	<show object="true" label="true" ev="40"/>
+	<objColor r="255" g="255" b="0" alpha="0"/>
+	<bgColor r="255" g="0" b="0" alpha="255"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<isLaTeX val="true"/>
+	<font serif="true" sizeM="2" size="12" style="1"/>
+	<absoluteScreenLocation x="574" y="23"/>
+</element>
+<command name="Text">
+	<input a0="&quot;y&quot;" a1="(0, y(dUL) - 0.5)" a2="true" a3="true"/>
+	<output a0="text2"/>
+</command>
+<element type="text" label="text2">
+	<show object="true" label="false" ev="8"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<isLaTeX val="true"/>
+	<font serif="true" sizeM="1.4" size="5" style="0"/>
+	<auxiliary val="true"/>
+	<startPoint  x="0" y="6.697284239281268" z="1"/>
+</element>
+<command name="Text">
+	<input a0="&quot;x&quot;" a1="(x(dDR) - 0.5, 0)" a2="true" a3="true"/>
+	<output a0="text1"/>
+</command>
+<element type="text" label="text1">
+	<show object="true" label="false" ev="8"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<isLaTeX val="true"/>
+	<font serif="true" sizeM="1.4" size="5" style="0"/>
+	<auxiliary val="true"/>
+	<startPoint  x="6.704282894129527" y="0" z="1"/>
+</element>
+</construction>
+</geogebra>

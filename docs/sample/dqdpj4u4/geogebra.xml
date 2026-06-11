@@ -1,0 +1,2612 @@
+<?xml version="1.0" encoding="utf-8"?>
+<geogebra format="5.0" version="5.0.625.0" app="classic" platform="w" id="7914f69a-379e-42b5-9a1e-a0de318e302e"  xsi:noNamespaceSchemaLocation="http://www.geogebra.org/apps/xsd/ggb.xsd" xmlns="" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" >
+<gui>
+	<window width="773" height="731" />
+	<perspectives>
+<perspective id="tmp">
+	<panes>
+		<pane location="" divider="0.6714100905562742" orientation="1" />
+		<pane location="1" divider="0.466484268125855" orientation="0" />
+	</panes>
+	<views>
+		<view id="1" visible="true" inframe="false" stylebar="false" location="1,0" size="341" window="100,100,600,400" />
+		<view id="16" visible="true" inframe="false" stylebar="false" location="1,2" size="380" window="50,50,500,500" />
+		<view id="4" toolbar="0 || 2020 , 2021 , 2022 , 66 || 2001 , 2003 , 2002 , 2004 , 2005 || 2040 , 2041 , 2042 , 2044 , 2043" visible="false" inframe="false" stylebar="true" location="1" size="295" window="980,520,600,400" />
+		<view id="2" visible="false" inframe="false" stylebar="false" location="3" size="250" tab="ALGEBRA" window="1141,520,277,400" />
+		<view id="8" toolbar="1001 | 1002 | 1003  || 1005 | 1004 || 1006 | 1007 | 1010 || 1008 1009 || 66 68 || 6" visible="false" inframe="false" stylebar="true" location="3" size="300" window="100,100,600,400" />
+		<view id="32" visible="false" inframe="false" stylebar="true" location="1" size="150" window="50,50,500,500" />
+		<view id="64" toolbar="0" visible="false" inframe="false" stylebar="true" location="1" size="150" window="50,50,500,500" />
+		<view id="128" visible="false" inframe="false" stylebar="false" location="1" size="480" window="50,50,500,500" />
+		<view id="4097" visible="false" inframe="false" stylebar="true" location="1" size="385" window="7,657,986,697" />
+		<view id="70" toolbar="0 || 2020 || 2021 || 2022" visible="false" inframe="false" stylebar="true" location="1" size="150" window="50,50,500,500" />
+		<view id="512" toolbar="0 | 1 501 5 19 , 67 | 2 15 45 18 , 7 37 | 514 3 9 , 13 44 , 47 | 16 51 | 551 550 11 ,  20 22 21 23 , 55 56 57 , 12 | 69 | 510 511 , 512 513 | 533 531 , 534 532 , 522 523 , 537 536 , 535 , 538 | 521 520 | 36 , 38 49 560 | 571 30 29 570 31 33 | 17 | 540 40 41 42 , 27 28 35 , 6 , 502" visible="true" inframe="false" stylebar="false" location="3" size="519" window="1234,443,600,400" />
+	</views>
+	<toolbar show="false" items="0 39 73 62 | 1 501 67 , 5 19 , 72 75 76 | 2 15 45 , 18 65 , 7 37 | 4 3 8 9 , 13 44 , 58 , 47 | 16 51 64 , 70 | 10 34 53 11 , 24  20 22 , 21 23 | 55 56 57 , 12 | 36 46 , 38 49  50 , 71  14  68 | 30 29 54 32 31 33 | 25 17 26 60 52 61 | 40 41 42 , 27 28 35 , 6" position="1" help="false" />
+	<input show="false" cmd="true" top="algebra" />
+	<dockBar show="false" east="false" />
+</perspective>
+	</perspectives>
+	<labelingStyle  val="0"/>
+	<font  size="16"/>
+</gui>
+<euclidianView>
+	<viewNumber viewNo="1"/>
+	<size  width="243" height="340"/>
+	<coordSystem xZero="138.05942310199998" yZero="252.16932772848367" scale="46.56909922943701" yscale="46.56909922943657"/>
+	<evSettings axes="false" grid="false" gridIsBold="false" pointCapturing="3" rightAngleStyle="1" checkboxSize="26" gridType="3"/>
+	<bgColor r="255" g="255" b="255"/>
+	<axesColor r="0" g="0" b="0"/>
+	<gridColor r="192" g="192" b="192"/>
+	<lineStyle axes="1" grid="0"/>
+	<axis id="0" show="false" label="" unitLabel="" tickStyle="1" showNumbers="true"/>
+	<axis id="1" show="false" label="" unitLabel="" tickStyle="1" showNumbers="true"/>
+</euclidianView>
+<euclidianView>
+	<viewNumber viewNo="2"/>
+	<size  width="243" height="379"/>
+	<coordSystem xZero="9.494596330016325" yZero="268.8783223301365" scale="65.03749999999995" yscale="65.0375"/>
+	<evSettings axes="false" grid="false" gridIsBold="false" pointCapturing="3" rightAngleStyle="1" checkboxSize="26" gridType="3"/>
+	<bgColor r="255" g="255" b="255"/>
+	<axesColor r="0" g="0" b="0"/>
+	<gridColor r="192" g="192" b="192"/>
+	<lineStyle axes="1" grid="0"/>
+	<axis id="0" show="false" label="" unitLabel="" tickStyle="1" showNumbers="true"/>
+	<axis id="1" show="false" label="" unitLabel="" tickStyle="1" showNumbers="true"/>
+</euclidianView>
+<kernel>
+	<uses3D val="true"/>
+	<continuous val="false"/>
+	<usePathAndRegionParameters val="true"/>
+	<decimals val="3"/>
+	<angleUnit val="degree"/>
+	<algebraStyle val="0" spreadsheet="0"/>
+	<coordStyle val="0"/>
+</kernel>
+<tableview min="-2" max="2" step="1"/>
+<scripting blocked="false" disabled="false"/>
+<euclidianView3D>
+	<coordSystem xZero="-0.30992065150859127" yZero="1.176835071454374" zZero="-0.5445542200006362" scale="63.328903163923755" xAngle="51.32655062386467" zAngle="-38.659808254090095"/>
+	<evSettings axes="false" grid="false" gridIsBold="false" pointCapturing="3" rightAngleStyle="1" gridType="3"/>
+	<axis id="0" show="false" label="" unitLabel="" tickStyle="1" showNumbers="false"/>
+	<axis id="1" show="false" label="" unitLabel="" tickStyle="1" showNumbers="false"/>
+	<axis id="2" show="false" label="" unitLabel="" tickStyle="1" showNumbers="false"/>
+	<plate show="false"/>
+	<bgColor r="255" g="255" b="255"/>
+	<clipping use="false" show="false" size="1"/>
+	<projection type="0"/>
+</euclidianView3D>
+<construction title="正立方體展開圖" author="" date="">
+<element type="numeric" label="t2">
+	<value val="1.475"/>
+	<show object="true" label="false"/>
+	<objColor r="255" g="0" b="0" alpha="0.10000000149011612"/>
+	<layer val="0"/>
+	<labelOffset x="35" y="20"/>
+	<labelMode val="1"/>
+	<slider min="3 - len" max="3" absoluteScreenLocation="true" width="100" x="74" y="227" fixed="true" horizontal="true" showAlgebra="true"/>
+	<pointSize val="10"/>
+	<lineStyle thickness="10" type="0" typeHidden="1"/>
+	<animation step="0.025" speed="speed" type="0" playing="false"/>
+	<ggbscript onUpdate="SetValue(t1,t2)"/>
+</element>
+<expression label="拖曳點" exp="(-0.5, -0.5, 0)" type="point"/>
+<element type="point3d" label="拖曳點">
+	<show object="true" label="false" ev="5"/>
+	<objColor r="255" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<animation step="0.1" speed="1" type="1" playing="false"/>
+	<coords x="-0.5" y="-0.5" z="0" w="1"/>
+	<pointSize val="5"/>
+</element>
+<element type="numeric" label="縮放比例">
+	<value val="1"/>
+	<show object="false" label="true"/>
+	<objColor r="255" g="0" b="255" alpha="0.10000000149011612"/>
+	<layer val="0"/>
+	<labelOffset x="-18" y="0"/>
+	<labelMode val="1"/>
+	<slider min="0.5" max="1.5" absoluteScreenLocation="true" width="80" x="223" y="34" fixed="false" horizontal="true" showAlgebra="true"/>
+	<lineStyle thickness="10" type="0" typeHidden="1"/>
+	<animation step="0.1" speed="1" type="0" playing="false"/>
+</element>
+<expression label="qB" exp="拖曳點 + (縮放比例, (-縮放比例), 0)" type="point" />
+<element type="point3d" label="qB">
+	<show object="false" label="true" ev="5"/>
+	<objColor r="68" g="68" b="68" alpha="0"/>
+	<layer val="0"/>
+	<labelOffset x="-9" y="38"/>
+	<labelMode val="0"/>
+	<coords x="0.5" y="-1.5" z="0" w="1"/>
+	<pointSize val="4"/>
+</element>
+<expression label="QB" exp="qB + (0, 0, (2 * 縮放比例))" type="point" />
+<element type="point3d" label="QB">
+	<show object="false" label="false" ev="5"/>
+	<objColor r="255" g="127" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelOffset x="-19" y="-4"/>
+	<labelMode val="0"/>
+	<coords x="0.5" y="-1.5" z="2" w="1"/>
+	<pointSize val="4"/>
+</element>
+<expression label="qD" exp="拖曳點 + ((-縮放比例), 縮放比例, 0)" type="point" />
+<element type="point3d" label="qD">
+	<show object="false" label="true" ev="5"/>
+	<objColor r="255" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelOffset x="-26" y="-8"/>
+	<labelMode val="0"/>
+	<coords x="-1.5" y="0.5" z="0" w="1"/>
+	<pointSize val="4"/>
+</element>
+<expression label="QD" exp="qD + (0, 0, (2 * 縮放比例))" type="point" />
+<element type="point3d" label="QD">
+	<show object="false" label="true" ev="5"/>
+	<objColor r="255" g="127" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelOffset x="-4" y="-4"/>
+	<labelMode val="0"/>
+	<coords x="-1.5" y="0.5" z="2" w="1"/>
+	<pointSize val="4"/>
+</element>
+<expression label="tt" exp="3 - t2" />
+<element type="numeric" label="tt">
+	<value val="1.525"/>
+	<objColor r="255" g="0" b="0" alpha="0.10000000149011612"/>
+	<caption val="收合展開"/>
+</element>
+<expression label="qC" exp="拖曳點 + ((-縮放比例), (-縮放比例), 0)" type="point" />
+<element type="point3d" label="qC">
+	<show object="false" label="true" ev="5"/>
+	<objColor r="68" g="68" b="68" alpha="0"/>
+	<layer val="0"/>
+	<labelOffset x="-38" y="12"/>
+	<labelMode val="0"/>
+	<coords x="-1.5" y="-1.5" z="0" w="1"/>
+	<pointSize val="4"/>
+</element>
+<command name="Segment">
+	<input a0="qC" a1="qB"/>
+	<output a0="f3"/>
+</command>
+<element type="segment3d" label="f3">
+	<show object="true" label="false" ev="5"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<lineStyle thickness="3" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<expression label="qA" exp="拖曳點 + (縮放比例, 縮放比例, 0)" type="point" />
+<element type="point3d" label="qA">
+	<show object="false" label="true" ev="5"/>
+	<objColor r="68" g="68" b="68" alpha="0"/>
+	<layer val="0"/>
+	<labelOffset x="16" y="7"/>
+	<labelMode val="0"/>
+	<coords x="0.5" y="0.5" z="0" w="1"/>
+	<pointSize val="4"/>
+</element>
+<expression label="QA" exp="qA + (0, 0, (2 * 縮放比例))" type="point" />
+<element type="point3d" label="QA">
+	<show object="false" label="true" ev="5"/>
+	<objColor r="255" g="127" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<coords x="0.5" y="0.5" z="2" w="1"/>
+	<pointSize val="4"/>
+</element>
+<expression label="A1" exp="0"/>
+<element type="numeric" label="A1">
+	<value val="0"/>
+	<show object="false" label="true"/>
+	<objColor r="0" g="0" b="0" alpha="0.10000000149011612"/>
+	<layer val="0"/>
+	<labelMode val="2"/>
+	<animation speed="1" type="0" playing="false"/>
+	<auxiliary val="true"/>
+</element>
+<command name="If">
+	<input a0="tt ≤ A1" a1="0" a2="If[tt &lt; A1 + 1, tt - A1, 1]"/>
+	<output a0="B1"/>
+</command>
+<element type="numeric" label="B1">
+	<value val="1"/>
+	<objColor r="0" g="0" b="0" alpha="0.10000000149011612"/>
+	<auxiliary val="true"/>
+</element>
+<command name="Rotate">
+	<input a0="QB" a1="(B1 * π / 2)" a2="f3"/>
+	<output a0="QB&apos;&apos;"/>
+</command>
+<element type="point3d" label="QB&apos;&apos;">
+	<show object="false" label="true" ev="5"/>
+	<objColor r="68" g="68" b="68" alpha="0"/>
+	<layer val="0"/>
+	<labelOffset x="-27" y="35"/>
+	<labelMode val="0"/>
+	<coords x="0.5" y="-3.5" z="1.2246467991473532e-16" w="1"/>
+	<pointSize val="4"/>
+</element>
+<command name="Segment">
+	<input a0="qB" a1="QB&apos;&apos;"/>
+	<output a0="g7"/>
+</command>
+<element type="segment3d" label="g7">
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="case ≟ 1 ∨ case ≟ 2 ∨ case ≟ 5 ∨ case ≟ 7 ∨ case ≟ 8 ∨ case ≟ 10"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<lineStyle thickness="3" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<expression label="C2" exp="0.75"/>
+<element type="numeric" label="C2">
+	<value val="0.75"/>
+	<show object="false" label="true"/>
+	<objColor r="0" g="0" b="0" alpha="0.10000000149011612"/>
+	<layer val="0"/>
+	<labelMode val="2"/>
+	<animation speed="1" type="0" playing="false"/>
+	<auxiliary val="true"/>
+</element>
+<command name="If">
+	<input a0="tt ≤ C2" a1="0" a2="If[tt &lt; C2 + 0.750000000000002, tt - C2, 1]"/>
+	<output a0="D2"/>
+</command>
+<element type="numeric" label="D2">
+	<value val="1"/>
+	<objColor r="0" g="0" b="0" alpha="0.10000000149011612"/>
+	<auxiliary val="true"/>
+</element>
+<expression label="A2" exp="1"/>
+<element type="numeric" label="A2">
+	<value val="1"/>
+	<show object="false" label="true"/>
+	<objColor r="0" g="0" b="0" alpha="0.10000000149011612"/>
+	<layer val="0"/>
+	<labelMode val="2"/>
+	<animation speed="1" type="0" playing="false"/>
+	<auxiliary val="true"/>
+</element>
+<command name="If">
+	<input a0="tt ≤ A2" a1="0" a2="If[tt &lt; A2 + 1, tt - A2, 1]"/>
+	<output a0="B2"/>
+</command>
+<element type="numeric" label="B2">
+	<value val="0.5249999999999999"/>
+	<objColor r="0" g="0" b="0" alpha="0.10000000149011612"/>
+	<auxiliary val="true"/>
+</element>
+<command name="If">
+	<input a0="tt ≤ 1" a1="Rotate[QA, (B1 * π / 2), f3]" a2="Rotate[Rotate[QA, π / 2, f3], ((-B2) * π / 2), g7]"/>
+	<output a0="QA2"/>
+</command>
+<element type="point3d" label="QA2">
+	<show object="false" label="true" ev="5"/>
+	<objColor r="255" g="0" b="0" alpha="0.10000000149011612"/>
+	<layer val="0"/>
+	<labelOffset x="-29" y="37"/>
+	<labelMode val="0"/>
+	<auxiliary val="true"/>
+	<coords x="1.9686450188713707" y="-3.5" z="1.3576014910658838" w="1"/>
+	<pointSize val="4"/>
+</element>
+<command name="If">
+	<input a0="tt ≤ 1" a1="Rotate[qA, (B1 * π / 2), f3]" a2="Rotate[Rotate[qA, π / 2, f3], ((-B2) * π / 2), g7]"/>
+	<output a0="qA2"/>
+</command>
+<element type="point3d" label="qA2">
+	<show object="false" label="true" ev="5"/>
+	<objColor r="68" g="68" b="68" alpha="0"/>
+	<layer val="0"/>
+	<labelOffset x="8" y="6"/>
+	<labelMode val="0"/>
+	<coords x="1.9686450188713709" y="-1.4999999999999998" z="1.3576014910658838" w="1"/>
+	<pointSize val="4"/>
+</element>
+<command name="Segment">
+	<input a0="QA2" a1="qA2"/>
+	<output a0="g35"/>
+</command>
+<element type="segment3d" label="g35">
+	<show object="true" label="false" ev="5"/>
+	<condition showObject="case ≟ 10"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<lineStyle thickness="3" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="numeric" label="C3">
+	<value val="1.5"/>
+	<show object="false" label="true"/>
+	<objColor r="0" g="0" b="0" alpha="0.10000000149011612"/>
+	<layer val="0"/>
+	<labelMode val="2"/>
+	<animation speed="1" type="0" playing="false"/>
+	<auxiliary val="true"/>
+</element>
+<command name="If">
+	<input a0="tt ≤ C3" a1="0" a2="If[tt &lt; C3 + 0.750000000000002, tt - C3, 1]"/>
+	<output a0="D3"/>
+</command>
+<element type="numeric" label="D3">
+	<value val="0.02499999999999991"/>
+	<objColor r="0" g="0" b="0" alpha="0.10000000149011612"/>
+	<auxiliary val="true"/>
+</element>
+<command name="If">
+	<input a0="tt ≤ 1.5" a1="Rotate[qA, (D2 * π / 2), f3]" a2="Rotate[Rotate[qA, π / 2, f3], ((-D3) * π / 2), g7]"/>
+	<output a0="qA6"/>
+</command>
+<element type="point3d" label="qA6">
+	<show object="false" label="true" ev="5"/>
+	<objColor r="68" g="68" b="68" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<coords x="0.5785196315181369" y="-1.4999999999999998" z="1.9984580724814458" w="1"/>
+	<pointSize val="4"/>
+</element>
+<command name="If">
+	<input a0="tt ≤ 1.5" a1="Rotate[QA, (D2 * π / 2), f3]" a2="Rotate[Rotate[QA, π / 2, f3], ((-D3) * π / 2), g7]"/>
+	<output a0="QA6"/>
+</command>
+<element type="point3d" label="QA6">
+	<show object="false" label="true" ev="5"/>
+	<objColor r="68" g="68" b="68" alpha="0"/>
+	<layer val="0"/>
+	<labelOffset x="-40" y="32"/>
+	<labelMode val="0"/>
+	<coords x="0.5785196315181369" y="-3.5" z="1.9984580724814458" w="1"/>
+	<pointSize val="4"/>
+</element>
+<element type="numeric" label="C4">
+	<value val="2.25"/>
+	<show object="false" label="true"/>
+	<objColor r="0" g="0" b="0" alpha="0.10000000149011612"/>
+	<layer val="0"/>
+	<labelMode val="2"/>
+	<animation speed="1" type="0" playing="false"/>
+	<auxiliary val="true"/>
+</element>
+<command name="If">
+	<input a0="tt ≤ C4" a1="0" a2="If[tt &lt; C4 + 0.750000000000002, tt - C4, 1]"/>
+	<output a0="D4"/>
+</command>
+<element type="numeric" label="D4">
+	<value val="0"/>
+	<objColor r="0" g="0" b="0" alpha="0.10000000149011612"/>
+	<auxiliary val="true"/>
+</element>
+<command name="If">
+	<input a0="tt ≤ 1.5" a1="Rotate[qD, (D2 * π / 2), f3]" a2="If[tt ≤ 2.25, Rotate[Rotate[qD, π / 2, f3], ((-D3) * π / 2), g7], Rotate[Rotate[Rotate[qD, π / 2, f3], ((-π)) / 2, g7], (D4 * π / 2), g35]]"/>
+	<output a0="qD6"/>
+</command>
+<element type="point3d" label="qD6">
+	<show object="false" label="true" ev="5"/>
+	<objColor r="68" g="68" b="68" alpha="0"/>
+	<layer val="0"/>
+	<labelOffset x="7" y="7"/>
+	<labelMode val="0"/>
+	<coords x="-1.419938440963309" y="-1.4999999999999998" z="2.076977703999583" w="1"/>
+	<pointSize val="4"/>
+</element>
+<command name="If">
+	<input a0="tt ≤ 1.5" a1="Rotate[QD, (D2 * π / 2), f3]" a2="If[tt ≤ 2.25, Rotate[Rotate[QD, π / 2, f3], ((-D3) * π / 2), g7], Rotate[Rotate[Rotate[QD, π / 2, f3], ((-π)) / 2, g7], (D4 * π / 2), g35]]"/>
+	<output a0="QD6"/>
+</command>
+<element type="point3d" label="QD6">
+	<show object="false" label="true" ev="5"/>
+	<objColor r="68" g="68" b="68" alpha="0"/>
+	<layer val="0"/>
+	<labelOffset x="-60" y="24"/>
+	<labelMode val="0"/>
+	<coords x="-1.419938440963309" y="-3.5" z="2.0769777039995825" w="1"/>
+	<pointSize val="4"/>
+</element>
+<command name="Segment">
+	<input a0="qD" a1="qC"/>
+	<output a0="f2"/>
+</command>
+<element type="segment3d" label="f2">
+	<show object="true" label="false" ev="5"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<lineStyle thickness="3" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<expression label="QC" exp="qC + (0, 0, (2 * 縮放比例))" type="point" />
+<element type="point3d" label="QC">
+	<show object="false" label="false" ev="5"/>
+	<objColor r="255" g="127" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelOffset x="-23" y="-7"/>
+	<labelMode val="0"/>
+	<coords x="-1.5" y="-1.5" z="2" w="1"/>
+	<pointSize val="4"/>
+</element>
+<command name="Rotate">
+	<input a0="QD" a1="(B1 * π / 2)" a2="f2"/>
+	<output a0="QD&apos;&apos;&apos;"/>
+</command>
+<element type="point3d" label="QD&apos;&apos;&apos;">
+	<show object="false" label="true" ev="5"/>
+	<objColor r="68" g="68" b="68" alpha="0"/>
+	<layer val="0"/>
+	<labelOffset x="-41" y="3"/>
+	<labelMode val="0"/>
+	<coords x="-3.5" y="0.5" z="1.2246467991473532e-16" w="1"/>
+	<pointSize val="4"/>
+</element>
+<command name="Rotate">
+	<input a0="QC" a1="(B1 * π / 2)" a2="f2"/>
+	<output a0="QC&apos;&apos;&apos;"/>
+</command>
+<element type="point3d" label="QC&apos;&apos;&apos;">
+	<show object="false" label="true" ev="5"/>
+	<objColor r="68" g="68" b="68" alpha="0"/>
+	<layer val="0"/>
+	<labelOffset x="-25" y="-6"/>
+	<labelMode val="0"/>
+	<coords x="-3.5" y="-1.5" z="1.2246467991473532e-16" w="1"/>
+	<pointSize val="4"/>
+</element>
+<command name="Segment">
+	<input a0="QD&apos;&apos;&apos;" a1="QC&apos;&apos;&apos;"/>
+	<output a0="g14"/>
+</command>
+<element type="segment3d" label="g14">
+	<show object="true" label="false" ev="5"/>
+	<condition showObject="case ≠ 7 ∧ case ≠ 1 ∧ case ≠ 11"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<lineStyle thickness="3" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<expression label="C1" exp="0"/>
+<element type="numeric" label="C1">
+	<value val="0"/>
+	<show object="false" label="true"/>
+	<objColor r="0" g="0" b="0" alpha="0.10000000149011612"/>
+	<layer val="0"/>
+	<labelMode val="2"/>
+	<animation speed="1" type="0" playing="false"/>
+	<auxiliary val="true"/>
+</element>
+<command name="If">
+	<input a0="tt ≤ C1" a1="0" a2="If[tt &lt; C1 + 0.75, tt - C1, 1]"/>
+	<output a0="D1"/>
+</command>
+<element type="numeric" label="D1">
+	<value val="1"/>
+	<objColor r="0" g="0" b="0" alpha="0.10000000149011612"/>
+	<auxiliary val="true"/>
+</element>
+<command name="Rotate">
+	<input a0="QC" a1="(D1 * π / 2)" a2="f2"/>
+	<output a0="QC5"/>
+</command>
+<element type="point3d" label="QC5">
+	<show object="false" label="true" ev="5"/>
+	<objColor r="255" g="127" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelOffset x="-42" y="30"/>
+	<labelMode val="0"/>
+	<coords x="-3.5" y="-1.5" z="1.2246467991473532e-16" w="1"/>
+	<pointSize val="4"/>
+</element>
+<command name="Rotate">
+	<input a0="QD" a1="(D1 * π / 2)" a2="f2"/>
+	<output a0="QD5"/>
+</command>
+<element type="point3d" label="QD5">
+	<show object="false" label="true" ev="5"/>
+	<objColor r="255" g="127" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<coords x="-3.5" y="0.5" z="1.2246467991473532e-16" w="1"/>
+	<pointSize val="4"/>
+</element>
+<command name="If">
+	<input a0="tt ≤ 0.75" a1="Rotate[QB, (D1 * π / 2), f2]" a2="Rotate[Rotate[QB, π / 2, f2], (D2 * π / 2), g14]"/>
+	<output a0="QB4"/>
+</command>
+<element type="point3d" label="QB4">
+	<show object="false" label="true" ev="5"/>
+	<objColor r="68" g="68" b="68" alpha="0"/>
+	<layer val="0"/>
+	<labelOffset x="-10" y="-13"/>
+	<labelMode val="0"/>
+	<coords x="-5.5" y="-1.5" z="2.449293598294706e-16" w="1"/>
+	<pointSize val="4"/>
+</element>
+<command name="If">
+	<input a0="tt ≤ 0.75" a1="Rotate[QA, (D1 * π / 2), f2]" a2="Rotate[Rotate[QA, π / 2, f2], (D2 * π / 2), g14]"/>
+	<output a0="QA4"/>
+</command>
+<element type="point3d" label="QA4">
+	<show object="false" label="true" ev="5"/>
+	<objColor r="68" g="68" b="68" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<coords x="-5.5" y="0.5" z="2.449293598294706e-16" w="1"/>
+	<pointSize val="4"/>
+</element>
+<command name="Segment">
+	<input a0="qA" a1="qD"/>
+	<output a0="f1"/>
+</command>
+<element type="segment3d" label="f1">
+	<show object="true" label="false" ev="5"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<lineStyle thickness="3" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<command name="Rotate">
+	<input a0="QD" a1="(B1 * π / 2)" a2="f1"/>
+	<output a0="QD&apos;&apos;"/>
+</command>
+<element type="point3d" label="QD&apos;&apos;">
+	<show object="false" label="true" ev="5"/>
+	<objColor r="68" g="68" b="68" alpha="0"/>
+	<layer val="0"/>
+	<labelOffset x="5" y="6"/>
+	<labelMode val="0"/>
+	<coords x="-1.5" y="2.5" z="1.2246467991473532e-16" w="1"/>
+	<pointSize val="4"/>
+</element>
+<command name="Segment">
+	<input a0="QD&apos;&apos;" a1="qD"/>
+	<output a0="g12"/>
+</command>
+<element type="segment3d" label="g12">
+	<show object="true" label="false" ev="5"/>
+	<condition showObject="case ≟ 5 ∨ case ≟ 1 ∨ case ≟ 6 ∨ case ≟ 7"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<lineStyle thickness="3" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<command name="If">
+	<input a0="tt ≤ 1" a1="Rotate[qC, (B1 * π / 2), f1]" a2="Rotate[Rotate[qC, π / 2, f1], (B2 * π / 2), g12]"/>
+	<output a0="qC2"/>
+</command>
+<element type="point3d" label="qC2">
+	<show object="false" label="true" ev="5"/>
+	<objColor r="68" g="68" b="68" alpha="0"/>
+	<layer val="0"/>
+	<labelOffset x="-19" y="30"/>
+	<labelMode val="0"/>
+	<coords x="-2.9686450188713707" y="0.5" z="1.3576014910658838" w="1"/>
+	<pointSize val="4"/>
+</element>
+<command name="If">
+	<input a0="tt ≤ 1" a1="Rotate[QC, (B1 * π / 2), f1]" a2="Rotate[Rotate[QC, π / 2, f1], (B2 * π / 2), g12]"/>
+	<output a0="QC2"/>
+</command>
+<element type="point3d" label="QC2">
+	<show object="false" label="true" ev="5"/>
+	<objColor r="68" g="68" b="68" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<coords x="-2.9686450188713707" y="2.5" z="1.3576014910658838" w="1"/>
+	<pointSize val="4"/>
+</element>
+<command name="Segment">
+	<input a0="qB" a1="qA"/>
+	<output a0="f4"/>
+</command>
+<element type="segment3d" label="f4">
+	<show object="true" label="false" ev="5"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<lineStyle thickness="3" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<command name="Intersect">
+	<input a0="xAxis" a1="zAxis"/>
+	<output a0="vecO"/>
+</command>
+<element type="point3d" label="vecO">
+	<show object="false" label="false" ev="5"/>
+	<objColor r="68" g="68" b="68" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<auxiliary val="true"/>
+	<coords x="0" y="0" z="0" w="1"/>
+	<pointSize val="4"/>
+</element>
+<command name="Point">
+	<input a0="xAxis"/>
+	<output a0="vecX"/>
+</command>
+<element type="point" label="vecX">
+	<show object="false" label="false" ev="5"/>
+	<objColor r="125" g="125" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<animation step="0.1" speed="1" type="1" playing="false"/>
+	<auxiliary val="true"/>
+	<coords x="4" y="0" z="1"/>
+	<coordStyle style="cartesian3d"/>
+	<pointSize val="5"/>
+	<pointStyle val="0"/>
+</element>
+<command name="Point">
+	<input a0="yAxis"/>
+	<output a0="vecY"/>
+</command>
+<element type="point" label="vecY">
+	<show object="false" label="false" ev="5"/>
+	<objColor r="125" g="125" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<animation step="0.1" speed="1" type="1" playing="false"/>
+	<auxiliary val="true"/>
+	<coords x="0" y="4" z="1"/>
+	<coordStyle style="cartesian3d"/>
+	<pointSize val="5"/>
+	<pointStyle val="0"/>
+</element>
+<command name="Point">
+	<input a0="zAxis"/>
+	<output a0="vecZ"/>
+</command>
+<element type="point3d" label="vecZ">
+	<show object="false" label="false" ev="5"/>
+	<objColor r="125" g="125" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<animation step="0.1" speed="1" type="1" playing="false"/>
+	<auxiliary val="true"/>
+	<coords x="0" y="0" z="4" w="1"/>
+	<pointSize val="5"/>
+</element>
+<command name="Polygon">
+	<input a0="{qA, qB, qC, qD}"/>
+	<output a0="q1"/>
+</command>
+<element type="polygon3d" label="q1">
+	<lineStyle thickness="0" type="0" typeHidden="1" opacity="191"/>
+	<show object="true" label="false" ev="5"/>
+	<objColor r="0" g="153" b="204" alpha="0.75"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+</element>
+<command name="Segment">
+	<input a0="QA" a1="QD"/>
+	<output a0="f5"/>
+</command>
+<element type="segment3d" label="f5">
+	<show object="true" label="false" ev="5"/>
+	<condition showObject="inner"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<lineStyle thickness="1" type="20" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<command name="Segment">
+	<input a0="QD" a1="QC"/>
+	<output a0="f6"/>
+</command>
+<element type="segment3d" label="f6">
+	<show object="true" label="false" ev="5"/>
+	<condition showObject="inner"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<lineStyle thickness="1" type="20" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<command name="Segment">
+	<input a0="QC" a1="QB"/>
+	<output a0="f7"/>
+</command>
+<element type="segment3d" label="f7">
+	<show object="true" label="false" ev="5"/>
+	<condition showObject="inner"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<lineStyle thickness="1" type="20" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<command name="Segment">
+	<input a0="QB" a1="QA"/>
+	<output a0="f8"/>
+</command>
+<element type="segment3d" label="f8">
+	<show object="true" label="false" ev="5"/>
+	<condition showObject="inner"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<lineStyle thickness="1" type="20" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<command name="Segment">
+	<input a0="qA" a1="QA"/>
+	<output a0="f9"/>
+</command>
+<element type="segment3d" label="f9">
+	<show object="true" label="false" ev="5"/>
+	<condition showObject="inner"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<lineStyle thickness="1" type="20" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<command name="Segment">
+	<input a0="qD" a1="QD"/>
+	<output a0="f10"/>
+</command>
+<element type="segment3d" label="f10">
+	<show object="true" label="false" ev="5"/>
+	<condition showObject="inner"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<lineStyle thickness="1" type="20" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<command name="Segment">
+	<input a0="qC" a1="QC"/>
+	<output a0="f11"/>
+</command>
+<element type="segment3d" label="f11">
+	<show object="true" label="false" ev="5"/>
+	<condition showObject="inner"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<lineStyle thickness="1" type="20" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<command name="Segment">
+	<input a0="qB" a1="QB"/>
+	<output a0="f12"/>
+</command>
+<element type="segment3d" label="f12">
+	<show object="true" label="false" ev="5"/>
+	<condition showObject="inner"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<lineStyle thickness="1" type="20" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<command name="Rotate">
+	<input a0="QA" a1="(B1 * π / 2)" a2="f4"/>
+	<output a0="QA&apos;"/>
+</command>
+<element type="point3d" label="QA&apos;">
+	<show object="false" label="true" ev="5"/>
+	<objColor r="68" g="68" b="68" alpha="0"/>
+	<layer val="0"/>
+	<labelOffset x="5" y="8"/>
+	<labelMode val="0"/>
+	<coords x="2.5" y="0.5" z="1.2246467991473532e-16" w="1"/>
+	<pointSize val="4"/>
+</element>
+<element type="button" label="button重設">
+	<show object="true" label="true"/>
+	<objColor r="255" g="255" b="0" alpha="1"/>
+	<bgColor r="64" g="64" b="64" alpha="255"/>
+	<layer val="0"/>
+	<labelOffset x="145" y="149"/>
+	<labelMode val="3"/>
+	<fixed val="true"/>
+	<auxiliary val="true"/>
+	<ggbscript val="SetCaption(button1, &quot;動　畫&quot; )&#xa;StartAnimation( t2,false)&#xa;move = false &#xa;SetViewDirection(vector((0,0,0),(-1,0.8,-1.6)))&#xa;SetValue(O,(-0.5, -0.5, 0))&#xa;case = 1&#xa;show1 = 1&#xa;show2 = 0&#xa;show3 = 0&#xa;show4 = 0&#xa;show5 = 0&#xa;show6 = 0&#xa;show7 = 0&#xa;show8 = 0&#xa;show9 = 0&#xa;show10 = 0&#xa;show11 = 0&#xa;len=3&#xa;t2=0&#xa;tt=3-t2&#xa;"/>
+	<font serif="false" sizeM="2" size="16" style="1"/>
+	<dimensions width="100" height="80" />
+	<startPoint x="0" y="3.2" z="1"/>
+	<caption val="重　設"/>
+</element>
+<command name="Rotate">
+	<input a0="QB" a1="(B1 * π / 2)" a2="f4"/>
+	<output a0="QB&apos;"/>
+</command>
+<element type="point3d" label="QB&apos;">
+	<show object="false" label="true" ev="5"/>
+	<objColor r="68" g="68" b="68" alpha="0"/>
+	<layer val="0"/>
+	<labelOffset x="-12" y="38"/>
+	<labelMode val="0"/>
+	<coords x="2.5" y="-1.5" z="1.2246467991473532e-16" w="1"/>
+	<pointSize val="4"/>
+</element>
+<command name="Segment">
+	<input a0="qA" a1="QA&apos;"/>
+	<output a0="g1"/>
+</command>
+<element type="segment3d" label="g1">
+	<show object="true" label="false" ev="5"/>
+	<condition showObject="case ≤ 9"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<lineStyle thickness="3" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<command name="Segment">
+	<input a0="qB" a1="QB&apos;"/>
+	<output a0="g3"/>
+</command>
+<element type="segment3d" label="g3">
+	<show object="true" label="false" ev="5"/>
+	<condition showObject="case ≤ 9"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<lineStyle thickness="3" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<command name="Segment">
+	<input a0="QA&apos;" a1="QB&apos;"/>
+	<output a0="g2"/>
+</command>
+<element type="segment3d" label="g2">
+	<show object="true" label="false" ev="5"/>
+	<condition showObject="case ≤ 9"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<lineStyle thickness="3" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="numeric" label="A3">
+	<value val="2"/>
+	<show object="false" label="true"/>
+	<objColor r="0" g="0" b="0" alpha="0.10000000149011612"/>
+	<layer val="0"/>
+	<labelMode val="2"/>
+	<animation speed="1" type="0" playing="false"/>
+	<auxiliary val="true"/>
+</element>
+<command name="If">
+	<input a0="tt ≤ A3" a1="0" a2="If[tt &lt; A3 + 1, tt - A3, 1]"/>
+	<output a0="B3"/>
+</command>
+<element type="numeric" label="B3">
+	<value val="0"/>
+	<objColor r="0" g="0" b="0" alpha="0.10000000149011612"/>
+	<auxiliary val="true"/>
+</element>
+<command name="If">
+	<input a0="tt ≤ 1" a1="Rotate[QD, (B1 * π / 2), f4]" a2="Rotate[Rotate[QD, π / 2, f4], ((-B2) * π / 2), g2]"/>
+	<output a0="QD&apos;"/>
+</command>
+<element type="point3d" label="QD&apos;">
+	<show object="false" label="true" ev="5"/>
+	<objColor r="68" g="68" b="68" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<coords x="3.9686450188713707" y="0.5" z="1.3576014910658838" w="1"/>
+	<pointSize val="4"/>
+</element>
+<command name="If">
+	<input a0="tt ≤ 1" a1="Rotate[QC, (B1 * π / 2), f4]" a2="Rotate[Rotate[QC, π / 2, f4], ((-B2) * π / 2), g2]"/>
+	<output a0="QC&apos;"/>
+</command>
+<element type="point3d" label="QC&apos;">
+	<show object="false" label="true" ev="5"/>
+	<objColor r="68" g="68" b="68" alpha="0"/>
+	<layer val="0"/>
+	<labelOffset x="-8" y="35"/>
+	<labelMode val="0"/>
+	<coords x="3.9686450188713707" y="-1.5" z="1.3576014910658838" w="1"/>
+	<pointSize val="4"/>
+</element>
+<command name="Segment">
+	<input a0="QA&apos;" a1="QD&apos;"/>
+	<output a0="g4"/>
+</command>
+<element type="segment3d" label="g4">
+	<show object="true" label="false" ev="5"/>
+	<condition showObject="case ≤ 7"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<lineStyle thickness="3" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<command name="Segment">
+	<input a0="QD&apos;" a1="QC&apos;"/>
+	<output a0="g5"/>
+</command>
+<element type="segment3d" label="g5">
+	<show object="true" label="false" ev="5"/>
+	<condition showObject="case ≤ 7"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<lineStyle thickness="3" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<command name="Segment">
+	<input a0="QC&apos;" a1="QB&apos;"/>
+	<output a0="g6"/>
+</command>
+<element type="segment3d" label="g6">
+	<show object="true" label="false" ev="5"/>
+	<condition showObject="case ≠ 8 ∧ case ≠ 9 ∧ case ≠ 10 ∧ case ≠ 11"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<lineStyle thickness="3" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<command name="Polygon">
+	<input a0="{qA, qB, QB&apos;, QA&apos;}"/>
+	<output a0="q2"/>
+</command>
+<element type="polygon3d" label="q2">
+	<lineStyle thickness="0" type="0" typeHidden="1" opacity="191"/>
+	<show object="true" label="false" ev="5"/>
+	<condition showObject="case ≤ 9"/>
+	<objColor r="0" g="204" b="0" alpha="0.75"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+</element>
+<command name="Polygon">
+	<input a0="{QD&apos;, QC&apos;, QB&apos;, QA&apos;}"/>
+	<output a0="q3"/>
+</command>
+<element type="polygon3d" label="q3">
+	<lineStyle thickness="0" type="0" typeHidden="1" opacity="191"/>
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="case ≤ 7"/>
+	<objColor r="0" g="153" b="204" alpha="0.75"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+</element>
+<command name="Rotate">
+	<input a0="QC" a1="(B1 * π / 2)" a2="f3"/>
+	<output a0="QC&apos;&apos;"/>
+</command>
+<element type="point3d" label="QC&apos;&apos;">
+	<show object="false" label="true" ev="5"/>
+	<objColor r="68" g="68" b="68" alpha="0"/>
+	<layer val="0"/>
+	<labelOffset x="-19" y="-6"/>
+	<labelMode val="0"/>
+	<coords x="-1.5" y="-3.5" z="1.2246467991473532e-16" w="1"/>
+	<pointSize val="4"/>
+</element>
+<command name="Segment">
+	<input a0="qC" a1="QC&apos;&apos;"/>
+	<output a0="g9"/>
+</command>
+<element type="segment3d" label="g9">
+	<show object="true" label="false" ev="5"/>
+	<condition showObject="case ≟ 1 ∨ case ≟ 2 ∨ case ≟ 5 ∨ case ≟ 7 ∨ case ≟ 8 ∨ case ≟ 10"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<lineStyle thickness="3" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<command name="Segment">
+	<input a0="QB&apos;&apos;" a1="QC&apos;&apos;"/>
+	<output a0="g8"/>
+</command>
+<element type="segment3d" label="g8">
+	<show object="true" label="false" ev="5"/>
+	<condition showObject="case ≟ 1 ∨ case ≟ 2 ∨ case ≟ 5 ∨ case ≟ 7 ∨ case ≟ 8 ∨ case ≟ 10"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<lineStyle thickness="3" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<command name="Rotate">
+	<input a0="QA" a1="(B1 * π / 2)" a2="f1"/>
+	<output a0="QA&apos;&apos;"/>
+</command>
+<element type="point3d" label="QA&apos;&apos;">
+	<show object="false" label="true" ev="5"/>
+	<objColor r="68" g="68" b="68" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<coords x="0.5" y="2.5" z="1.2246467991473532e-16" w="1"/>
+	<pointSize val="4"/>
+</element>
+<command name="Segment">
+	<input a0="qA" a1="QA&apos;&apos;"/>
+	<output a0="g10"/>
+</command>
+<element type="segment3d" label="g10">
+	<show object="true" label="false" ev="5"/>
+	<condition showObject="case ≟ 5 ∨ case ≟ 1 ∨ case ≟ 6 ∨ case ≟ 7"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<lineStyle thickness="3" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<command name="Segment">
+	<input a0="QD&apos;&apos;" a1="QA&apos;&apos;"/>
+	<output a0="g11"/>
+</command>
+<element type="segment3d" label="g11">
+	<show object="true" label="false" ev="5"/>
+	<condition showObject="case ≟ 5 ∨ case ≟ 1 ∨ case ≟ 6 ∨ case ≟ 7"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<lineStyle thickness="3" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<command name="Segment">
+	<input a0="QD&apos;&apos;&apos;" a1="qD"/>
+	<output a0="g13"/>
+</command>
+<element type="segment3d" label="g13">
+	<show object="true" label="false" ev="5"/>
+	<condition showObject="case ≟ 2 ∨ case ≟ 3 ∨ case ≟ 4 ∨ case ≟ 5 ∨ case ≟ 6 ∨ case ≟ 8 ∨ case ≟ 9 ∨ case ≟ 10"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<lineStyle thickness="3" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<command name="Segment">
+	<input a0="qC" a1="QC&apos;&apos;&apos;"/>
+	<output a0="g15"/>
+</command>
+<element type="segment3d" label="g15">
+	<show object="true" label="false" ev="5"/>
+	<condition showObject="case ≠ 7 ∧ case ≠ 1 ∧ case ≠ 11"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<lineStyle thickness="3" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<command name="Polygon">
+	<input a0="{qC, QC&apos;&apos;, QB&apos;&apos;, qB}"/>
+	<output a0="q4"/>
+</command>
+<element type="polygon3d" label="q4">
+	<lineStyle thickness="0" type="0" typeHidden="1" opacity="178"/>
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="case ≟ 1 ∨ case ≟ 2 ∨ case ≟ 5 ∨ case ≟ 7 ∨ case ≟ 8 ∨ case ≟ 10"/>
+	<objColor r="255" g="127" b="0" alpha="0.75"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+</element>
+<command name="Polygon">
+	<input a0="{qA, QA&apos;&apos;, QD&apos;&apos;, qD}"/>
+	<output a0="q5"/>
+</command>
+<element type="polygon3d" label="q5">
+	<lineStyle thickness="0" type="0" typeHidden="1" opacity="178"/>
+	<show object="true" label="false" ev="5"/>
+	<condition showObject="case ≟ 5 ∨ case ≟ 1 ∨ case ≟ 6 ∨ case ≟ 7"/>
+	<objColor r="255" g="127" b="0" alpha="0.75"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+</element>
+<command name="Polygon">
+	<input a0="{qC, QC&apos;&apos;&apos;, QD&apos;&apos;&apos;, qD}"/>
+	<output a0="q6"/>
+</command>
+<element type="polygon3d" label="q6">
+	<lineStyle thickness="0" type="0" typeHidden="1" opacity="178"/>
+	<show object="true" label="false" ev="5"/>
+	<condition showObject="case ≠ 7 ∧ case ≠ 1 ∧ case ≠ 11"/>
+	<objColor r="0" g="255" b="0" alpha="0.75"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+</element>
+<element type="boolean" label="inner">
+	<value val="false"/>
+	<show object="false" label="true"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelOffset x="7" y="14"/>
+	<labelMode val="0"/>
+	<checkbox fixed="true"/>
+	<caption val="內框"/>
+</element>
+<element type="numeric" label="case">
+	<value val="1"/>
+	<show object="false" label="true" ev="3"/>
+	<objColor r="0" g="0" b="0" alpha="0.10000000149011612"/>
+	<layer val="0"/>
+	<labelMode val="1"/>
+	<slider min="1" max="11" absoluteScreenLocation="true" width="200" x="96" y="44" fixed="false" horizontal="true" showAlgebra="true"/>
+	<pointSize val="6"/>
+	<lineStyle thickness="10" type="0" typeHidden="1"/>
+	<animation step="1" speed="1" type="0" playing="false"/>
+</element>
+<command name="If">
+	<input a0="tt ≤ 1" a1="Rotate[qC, (B1 * π / 2), f4]" a2="If[tt ≤ 2, Rotate[Rotate[qC, π / 2, f4], ((-B2) * π / 2), g2], Rotate[Rotate[Rotate[qC, π / 2, f4], ((-π)) / 2, g2], ((-B3) * π / 2), g5]]"/>
+	<output a0="qC&apos;"/>
+</command>
+<element type="point3d" label="qC&apos;">
+	<show object="false" label="true" ev="5"/>
+	<objColor r="68" g="68" b="68" alpha="0"/>
+	<layer val="0"/>
+	<labelOffset x="1" y="23"/>
+	<labelMode val="0"/>
+	<coords x="2.611043527805487" y="-1.5" z="2.8262465099372545" w="1"/>
+	<pointSize val="4"/>
+</element>
+<command name="If">
+	<input a0="tt ≤ 1" a1="Rotate[qD, (B1 * π / 2), f4]" a2="If[tt ≤ 2, Rotate[Rotate[qD, π / 2, f4], ((-B2) * π / 2), g2], Rotate[Rotate[Rotate[qD, π / 2, f4], ((-π)) / 2, g2], ((-B3) * π / 2), g5]]"/>
+	<output a0="qD&apos;"/>
+</command>
+<element type="point3d" label="qD&apos;">
+	<show object="false" label="true" ev="5"/>
+	<objColor r="68" g="68" b="68" alpha="0"/>
+	<layer val="0"/>
+	<labelOffset x="-22" y="-8"/>
+	<labelMode val="0"/>
+	<coords x="2.611043527805487" y="0.5" z="2.8262465099372545" w="1"/>
+	<pointSize val="4"/>
+</element>
+<command name="Segment">
+	<input a0="QD&apos;" a1="qD&apos;"/>
+	<output a0="g16"/>
+</command>
+<element type="segment3d" label="g16">
+	<show object="true" label="false" ev="5"/>
+	<condition showObject="case ≟ 1"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<lineStyle thickness="3" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<command name="Segment">
+	<input a0="qC&apos;" a1="qD&apos;"/>
+	<output a0="g17"/>
+</command>
+<element type="segment3d" label="g17">
+	<show object="true" label="false" ev="5"/>
+	<condition showObject="case ≟ 1"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<lineStyle thickness="3" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<command name="Segment">
+	<input a0="qC&apos;" a1="QC&apos;"/>
+	<output a0="g18"/>
+</command>
+<element type="segment3d" label="g18">
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="case ≟ 1"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<lineStyle thickness="3" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<command name="Polygon">
+	<input a0="{QD&apos;, qD&apos;, qC&apos;, QC&apos;}"/>
+	<output a0="q7"/>
+</command>
+<element type="polygon3d" label="q7">
+	<lineStyle thickness="0" type="0" typeHidden="1" opacity="178"/>
+	<show object="true" label="false" ev="5"/>
+	<condition showObject="case ≟ 1"/>
+	<objColor r="0" g="255" b="0" alpha="0.75"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+</element>
+<command name="If">
+	<input a0="tt ≤ 1" a1="Rotate[QA, (B1 * π / 2), f2]" a2="Rotate[Rotate[QA, π / 2, f2], ((-B2) * π / 2), g13]"/>
+	<output a0="QA&apos;&apos;&apos;"/>
+</command>
+<element type="point3d" label="QA&apos;&apos;&apos;">
+	<show object="false" label="true" ev="5"/>
+	<objColor r="68" g="68" b="68" alpha="0"/>
+	<layer val="0"/>
+	<labelOffset x="-41" y="11"/>
+	<labelMode val="0"/>
+	<coords x="-3.5" y="1.9686450188713707" z="1.3576014910658838" w="1"/>
+	<pointSize val="4"/>
+</element>
+<command name="Segment">
+	<input a0="QD&apos;&apos;&apos;" a1="QA&apos;&apos;&apos;"/>
+	<output a0="g19"/>
+</command>
+<element type="segment3d" label="g19">
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="case ≟ 2 ∨ case ≟ 3 ∨ case ≟ 4 ∨ case ≟ 8 ∨ case ≟ 9 ∨ case ≟ 10"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<lineStyle thickness="3" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<command name="If">
+	<input a0="tt ≤ 1" a1="Rotate[qA, (B1 * π / 2), f2]" a2="Rotate[Rotate[qA, π / 2, f2], ((-B2) * π / 2), g13]"/>
+	<output a0="qA&apos;"/>
+</command>
+<element type="point3d" label="qA&apos;">
+	<show object="false" label="true" ev="5"/>
+	<objColor r="68" g="68" b="68" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<coords x="-1.5" y="1.9686450188713709" z="1.3576014910658838" w="1"/>
+	<pointSize val="4"/>
+</element>
+<command name="Segment">
+	<input a0="qA&apos;" a1="QA&apos;&apos;&apos;"/>
+	<output a0="g20"/>
+</command>
+<element type="segment3d" label="g20">
+	<show object="true" label="false" ev="5"/>
+	<condition showObject="case ≟ 2 ∨ case ≟ 3 ∨ case ≟ 4 ∨ case ≟ 8 ∨ case ≟ 9 ∨ case ≟ 10"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<lineStyle thickness="3" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<command name="Segment">
+	<input a0="qA&apos;" a1="qD"/>
+	<output a0="g21"/>
+</command>
+<element type="segment3d" label="g21">
+	<show object="true" label="false" ev="5"/>
+	<condition showObject="case ≟ 2 ∨ case ≟ 3 ∨ case ≟ 4 ∨ case ≟ 8 ∨ case ≟ 9 ∨ case ≟ 10"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<lineStyle thickness="3" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<command name="Polygon">
+	<input a0="{qD, QD&apos;&apos;&apos;, QA&apos;&apos;&apos;, qA&apos;}"/>
+	<output a0="q8"/>
+</command>
+<element type="polygon3d" label="q8">
+	<lineStyle thickness="0" type="0" typeHidden="1" opacity="178"/>
+	<show object="true" label="false" ev="5"/>
+	<condition showObject="case ≟ 2 ∨ case ≟ 3 ∨ case ≟ 4 ∨ case ≟ 8 ∨ case ≟ 9 ∨ case ≟ 10"/>
+	<objColor r="255" g="127" b="0" alpha="0.75"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+</element>
+<command name="If">
+	<input a0="tt ≤ 1" a1="Rotate[QC, (B1 * π / 2), f4]" a2="Rotate[Rotate[QC, π / 2, f4], (B2 * π / 2), g3]"/>
+	<output a0="QC4"/>
+</command>
+<element type="point3d" label="QC4">
+	<show object="false" label="true" ev="5"/>
+	<objColor r="255" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelOffset x="-70" y="29"/>
+	<labelMode val="0"/>
+	<coords x="2.5" y="-2.9686450188713707" z="1.3576014910658838" w="1"/>
+	<pointSize val="4"/>
+</element>
+<command name="If">
+	<input a0="tt ≤ 1" a1="Rotate[qC, (B1 * π / 2), f4]" a2="Rotate[Rotate[qC, π / 2, f4], (B2 * π / 2), g3]"/>
+	<output a0="qC4"/>
+</command>
+<element type="point3d" label="qC4">
+	<show object="false" label="true" ev="5"/>
+	<objColor r="68" g="68" b="68" alpha="0"/>
+	<layer val="0"/>
+	<labelOffset x="-15" y="-12"/>
+	<labelMode val="0"/>
+	<coords x="0.49999999999999994" y="-2.9686450188713707" z="1.3576014910658838" w="1"/>
+	<pointSize val="4"/>
+</element>
+<command name="Polygon">
+	<input a0="{qB, QB&apos;, QC4, qC4}"/>
+	<output a0="q9"/>
+</command>
+<element type="polygon3d" label="q9">
+	<lineStyle thickness="0" type="0" typeHidden="1" opacity="178"/>
+	<show object="true" label="false" ev="5"/>
+	<condition showObject="case ≟ 3 ∨ case ≟ 6 ∨ case ≟ 9"/>
+	<objColor r="255" g="127" b="0" alpha="0.75"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+</element>
+<command name="Segment">
+	<input a0="qB" a1="qC4"/>
+	<output a0="g22"/>
+</command>
+<element type="segment3d" label="g22">
+	<show object="true" label="false" ev="5"/>
+	<condition showObject="case ≟ 3 ∨ case ≟ 6 ∨ case ≟ 9"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<lineStyle thickness="3" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<command name="Segment">
+	<input a0="QC4" a1="qC4"/>
+	<output a0="g23"/>
+</command>
+<element type="segment3d" label="g23">
+	<show object="true" label="false" ev="5"/>
+	<condition showObject="case ≟ 3 ∨ case ≟ 6 ∨ case ≟ 9"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<lineStyle thickness="3" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<command name="Segment">
+	<input a0="QC4" a1="QB&apos;"/>
+	<output a0="g24"/>
+</command>
+<element type="segment3d" label="g24">
+	<show object="true" label="false" ev="5"/>
+	<condition showObject="case ≟ 3 ∨ case ≟ 6 ∨ case ≟ 9"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<lineStyle thickness="3" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<command name="If">
+	<input a0="tt ≤ 1" a1="Rotate[qC, (B1 * π / 2), f4]" a2="If[tt ≤ 2, Rotate[Rotate[qC, π / 2, f4], ((-B2) * π / 2), g2], Rotate[Rotate[Rotate[qC, π / 2, f4], ((-π)) / 2, g2], ((-B3) * π / 2), g6]]"/>
+	<output a0="qC3"/>
+</command>
+<element type="point3d" label="qC3">
+	<show object="false" label="true" ev="5"/>
+	<objColor r="68" g="68" b="68" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<coords x="2.611043527805487" y="-1.5" z="2.8262465099372545" w="1"/>
+	<pointSize val="4"/>
+</element>
+<command name="If">
+	<input a0="tt ≤ 1" a1="Rotate[qB, (B1 * π / 2), f4]" a2="If[tt ≤ 2, Rotate[Rotate[qB, π / 2, f4], ((-B2) * π / 2), g2], Rotate[Rotate[Rotate[qB, π / 2, f4], ((-π)) / 2, g2], ((-B3) * π / 2), g6]]"/>
+	<output a0="qB3"/>
+</command>
+<element type="point3d" label="qB3">
+	<show object="false" label="true" ev="5"/>
+	<objColor r="68" g="68" b="68" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<coords x="1.1423985089341162" y="-1.5" z="1.468645018871371" w="1"/>
+	<pointSize val="4"/>
+</element>
+<command name="Segment">
+	<input a0="QB&apos;" a1="qB3"/>
+	<output a0="g25"/>
+</command>
+<element type="segment3d" label="g25">
+	<show object="true" label="false" ev="5"/>
+	<condition showObject="case ≟ 4"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<lineStyle thickness="3" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<command name="Segment">
+	<input a0="qC3" a1="qB3"/>
+	<output a0="g26"/>
+</command>
+<element type="segment3d" label="g26">
+	<show object="true" label="false" ev="5"/>
+	<condition showObject="case ≟ 4"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<lineStyle thickness="3" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<command name="Segment">
+	<input a0="qC3" a1="QC&apos;"/>
+	<output a0="g27"/>
+</command>
+<element type="segment3d" label="g27">
+	<show object="true" label="false" ev="5"/>
+	<condition showObject="case ≟ 4"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<lineStyle thickness="3" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<command name="Polygon">
+	<input a0="{QC&apos;, qC3, qB3, QB&apos;}"/>
+	<output a0="q10"/>
+</command>
+<element type="polygon3d" label="q10">
+	<lineStyle thickness="0" type="0" typeHidden="1" opacity="178"/>
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="case ≟ 4"/>
+	<objColor r="255" g="127" b="0" alpha="0.75"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+</element>
+<command name="Segment">
+	<input a0="QD&apos;&apos;" a1="QC2"/>
+	<output a0="g28"/>
+</command>
+<element type="segment3d" label="g28">
+	<show object="true" label="false" ev="5"/>
+	<condition showObject="case ≟ 7"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<lineStyle thickness="3" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<command name="If">
+	<input a0="tt ≤ 1" a1="Rotate[QB, (B1 * π / 2), f2]" a2="If[tt ≤ 2, Rotate[Rotate[QB, π / 2, f2], ((-B2) * π / 2), g13], Rotate[Rotate[Rotate[QB, π / 2, f2], ((-π)) / 2, g13], ((-B3) * π / 2), g19]]"/>
+	<output a0="QB3"/>
+</command>
+<element type="point3d" label="QB3">
+	<show object="false" label="true" ev="5"/>
+	<objColor r="255" g="0" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<coords x="-3.5" y="0.6110435278054869" z="2.8262465099372545" w="1"/>
+	<pointSize val="4"/>
+</element>
+<command name="If">
+	<input a0="tt ≤ 1" a1="Rotate[QC, (B1 * π / 2), f2]" a2="If[tt ≤ 2, Rotate[Rotate[QC, π / 2, f2], ((-B2) * π / 2), g13], Rotate[Rotate[Rotate[QC, π / 2, f2], ((-π)) / 2, g13], ((-B3) * π / 2), g19]]"/>
+	<output a0="QC3"/>
+</command>
+<element type="point3d" label="QC3">
+	<show object="false" label="false" ev="5"/>
+	<objColor r="255" g="0" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelOffset x="-50" y="-18"/>
+	<labelMode val="0"/>
+	<coords x="-3.5" y="-0.8576014910658838" z="1.468645018871371" w="1"/>
+	<pointSize val="4"/>
+</element>
+<command name="Segment">
+	<input a0="QB3" a1="QC3"/>
+	<output a0="g32"/>
+</command>
+<element type="segment3d" label="g32">
+	<show object="true" label="false" ev="5"/>
+	<condition showObject="case ≟ 8 ∨ case ≟ 9 ∨ case ≟ 10"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<lineStyle thickness="3" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<command name="Polygon">
+	<input a0="{QC3, QB3, QA&apos;&apos;&apos;, QD&apos;&apos;&apos;}"/>
+	<output a0="q12"/>
+</command>
+<element type="polygon3d" label="q12">
+	<lineStyle thickness="0" type="0" typeHidden="1" opacity="178"/>
+	<show object="true" label="false" ev="5"/>
+	<condition showObject="case ≟ 8 ∨ case ≟ 9 ∨ case ≟ 10"/>
+	<objColor r="0" g="153" b="204" alpha="0.75"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+</element>
+<command name="Segment">
+	<input a0="QD&apos;&apos;&apos;" a1="QC3"/>
+	<output a0="g31"/>
+</command>
+<element type="segment3d" label="g31">
+	<show object="true" label="false" ev="5"/>
+	<condition showObject="case ≟ 8 ∨ case ≟ 9 ∨ case ≟ 10"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<lineStyle thickness="3" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<command name="Segment">
+	<input a0="QB3" a1="QA&apos;&apos;&apos;"/>
+	<output a0="g33"/>
+</command>
+<element type="segment3d" label="g33">
+	<show object="true" label="false" ev="5"/>
+	<condition showObject="case ≟ 8 ∨ case ≟ 9 ∨ case ≟ 10"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<lineStyle thickness="3" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<command name="Segment">
+	<input a0="QA2" a1="QB&apos;&apos;"/>
+	<output a0="g34"/>
+</command>
+<element type="segment3d" label="g34">
+	<show object="true" label="false" ev="5"/>
+	<condition showObject="case ≟ 10"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<lineStyle thickness="3" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<command name="Segment">
+	<input a0="qB" a1="qA2"/>
+	<output a0="g36"/>
+</command>
+<element type="segment3d" label="g36">
+	<show object="true" label="false" ev="5"/>
+	<condition showObject="case ≟ 10"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<lineStyle thickness="3" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<command name="Polygon">
+	<input a0="{QA2, qA2, qB, QB&apos;&apos;}"/>
+	<output a0="q13"/>
+</command>
+<element type="polygon3d" label="q13">
+	<lineStyle thickness="0" type="0" typeHidden="1" opacity="178"/>
+	<show object="true" label="false" ev="5"/>
+	<condition showObject="case ≟ 10"/>
+	<objColor r="0" g="255" b="0" alpha="0.75"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+</element>
+<command name="Segment">
+	<input a0="qD6" a1="QD6"/>
+	<output a0="g38"/>
+</command>
+<element type="segment3d" label="g38">
+	<show object="true" label="false" ev="5"/>
+	<condition showObject="case ≟ 11"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<lineStyle thickness="3" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<command name="Polygon">
+	<input a0="{qD6, QD6, QA6, qA6}"/>
+	<output a0="q14"/>
+</command>
+<element type="polygon3d" label="q14">
+	<lineStyle thickness="0" type="0" typeHidden="1" opacity="178"/>
+	<show object="true" label="false" ev="5"/>
+	<condition showObject="case ≟ 11"/>
+	<objColor r="255" g="127" b="0" alpha="0.75"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+</element>
+<command name="Polygon">
+	<input a0="{QC2, qC2, qD, QD&apos;&apos;}"/>
+	<output a0="q11"/>
+</command>
+<element type="polygon3d" label="q11">
+	<lineStyle thickness="0" type="0" typeHidden="1" opacity="178"/>
+	<show object="true" label="false" ev="5"/>
+	<condition showObject="case ≟ 7"/>
+	<objColor r="0" g="255" b="0" alpha="0.75"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+</element>
+<command name="Segment">
+	<input a0="qC2" a1="qD"/>
+	<output a0="g30"/>
+</command>
+<element type="segment3d" label="g30">
+	<show object="true" label="false" ev="5"/>
+	<condition showObject="case ≟ 7"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<lineStyle thickness="3" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<command name="Segment">
+	<input a0="qC2" a1="QC2"/>
+	<output a0="g29"/>
+</command>
+<element type="segment3d" label="g29">
+	<show object="true" label="false" ev="5"/>
+	<condition showObject="case ≟ 7"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<lineStyle thickness="3" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<command name="Segment">
+	<input a0="QB4" a1="QA4"/>
+	<output a0="g41"/>
+</command>
+<element type="segment3d" label="g41">
+	<show object="true" label="false" ev="5"/>
+	<condition showObject="case ≟ 11"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<lineStyle thickness="3" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<command name="Polygon">
+	<input a0="{QA4, QB4, QC5, QD5}"/>
+	<output a0="q15"/>
+</command>
+<element type="polygon3d" label="q15">
+	<lineStyle thickness="0" type="0" typeHidden="1" opacity="178"/>
+	<show object="true" label="false" ev="5"/>
+	<condition showObject="case ≟ 11"/>
+	<objColor r="0" g="153" b="204" alpha="0.75"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+</element>
+<command name="Segment">
+	<input a0="QD5" a1="qD"/>
+	<output a0="g43"/>
+</command>
+<element type="segment3d" label="g43">
+	<show object="true" label="false" ev="5"/>
+	<condition showObject="case ≟ 11"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<lineStyle thickness="3" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<command name="Segment">
+	<input a0="QC5" a1="qC"/>
+	<output a0="g44"/>
+</command>
+<element type="segment3d" label="g44">
+	<show object="true" label="false" ev="5"/>
+	<condition showObject="case ≟ 11"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<lineStyle thickness="3" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<command name="Segment">
+	<input a0="QC5" a1="QD5"/>
+	<output a0="g45"/>
+</command>
+<element type="segment3d" label="g45">
+	<show object="true" label="false" ev="5"/>
+	<condition showObject="case ≟ 11"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<lineStyle thickness="3" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<command name="Segment">
+	<input a0="QD5" a1="QA4"/>
+	<output a0="g40"/>
+</command>
+<element type="segment3d" label="g40">
+	<show object="true" label="false" ev="5"/>
+	<condition showObject="case ≟ 11"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<lineStyle thickness="3" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<command name="Segment">
+	<input a0="QB4" a1="QC5"/>
+	<output a0="g42"/>
+</command>
+<element type="segment3d" label="g42">
+	<show object="true" label="false" ev="5"/>
+	<condition showObject="case ≟ 11"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<lineStyle thickness="3" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<command name="Rotate">
+	<input a0="QC" a1="(D2 * π / 2)" a2="f3"/>
+	<output a0="QC6"/>
+</command>
+<element type="point3d" label="QC6">
+	<show object="false" label="true" ev="5"/>
+	<objColor r="255" g="127" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelOffset x="-32" y="-10"/>
+	<labelMode val="0"/>
+	<coords x="-1.5" y="-3.5" z="1.2246467991473532e-16" w="1"/>
+	<pointSize val="4"/>
+</element>
+<command name="Rotate">
+	<input a0="QB" a1="(D2 * π / 2)" a2="f3"/>
+	<output a0="QB6"/>
+</command>
+<element type="point3d" label="QB6">
+	<show object="false" label="true" ev="5"/>
+	<objColor r="255" g="127" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelOffset x="-46" y="31"/>
+	<labelMode val="0"/>
+	<coords x="0.5" y="-3.5" z="1.2246467991473532e-16" w="1"/>
+	<pointSize val="4"/>
+</element>
+<command name="Segment">
+	<input a0="QA6" a1="QD6"/>
+	<output a0="g37"/>
+</command>
+<element type="segment3d" label="g37">
+	<show object="true" label="false" ev="5"/>
+	<condition showObject="case ≟ 11"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<lineStyle thickness="3" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<command name="Segment">
+	<input a0="qD6" a1="qA6"/>
+	<output a0="g39"/>
+</command>
+<element type="segment3d" label="g39">
+	<show object="true" label="false" ev="5"/>
+	<condition showObject="case ≟ 11"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<lineStyle thickness="3" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<command name="Segment">
+	<input a0="QC6" a1="qC"/>
+	<output a0="g46"/>
+</command>
+<element type="segment3d" label="g46">
+	<show object="true" label="false" ev="5"/>
+	<condition showObject="case ≟ 11"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<lineStyle thickness="3" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<command name="Segment">
+	<input a0="QC6" a1="QB6"/>
+	<output a0="g47"/>
+</command>
+<element type="segment3d" label="g47">
+	<show object="true" label="false" ev="5"/>
+	<condition showObject="case ≟ 11"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<lineStyle thickness="3" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<command name="Segment">
+	<input a0="QB6" a1="qB"/>
+	<output a0="g48"/>
+</command>
+<element type="segment3d" label="g48">
+	<show object="true" label="false" ev="5"/>
+	<condition showObject="case ≟ 11"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<lineStyle thickness="3" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<command name="Segment">
+	<input a0="QB6" a1="QA6"/>
+	<output a0="g49"/>
+</command>
+<element type="segment3d" label="g49">
+	<show object="true" label="false" ev="5"/>
+	<condition showObject="case ≟ 11"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<lineStyle thickness="3" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<command name="Segment">
+	<input a0="qA6" a1="QA6"/>
+	<output a0="g50"/>
+</command>
+<element type="segment3d" label="g50">
+	<show object="true" label="false" ev="5"/>
+	<condition showObject="case ≟ 11"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<lineStyle thickness="3" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<command name="Segment">
+	<input a0="qA6" a1="qB"/>
+	<output a0="g51"/>
+</command>
+<element type="segment3d" label="g51">
+	<show object="true" label="false" ev="5"/>
+	<condition showObject="case ≟ 11"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<lineStyle thickness="3" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<command name="Segment">
+	<input a0="QA6" a1="QD6"/>
+	<output a0="g52"/>
+</command>
+<element type="segment3d" label="g52">
+	<show object="true" label="false" ev="5"/>
+	<condition showObject="case ≟ 11"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<lineStyle thickness="3" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<command name="Segment">
+	<input a0="qD6" a1="QD6"/>
+	<output a0="g53"/>
+</command>
+<element type="segment3d" label="g53">
+	<show object="true" label="false" ev="5"/>
+	<condition showObject="case ≟ 11"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<lineStyle thickness="3" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<command name="Segment">
+	<input a0="qD6" a1="qA6"/>
+	<output a0="g54"/>
+</command>
+<element type="segment3d" label="g54">
+	<show object="true" label="false" ev="5"/>
+	<condition showObject="case ≟ 11"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<lineStyle thickness="3" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<command name="Polygon">
+	<input a0="{qD, QD5, QC5, qC}"/>
+	<output a0="q16"/>
+</command>
+<element type="polygon3d" label="q16">
+	<lineStyle thickness="0" type="0" typeHidden="1" opacity="178"/>
+	<show object="true" label="false" ev="5"/>
+	<condition showObject="case ≟ 11"/>
+	<objColor r="0" g="255" b="0" alpha="0.75"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+</element>
+<command name="Polygon">
+	<input a0="{qB, QB6, QC6, qC}"/>
+	<output a0="q17"/>
+</command>
+<element type="polygon3d" label="q17">
+	<lineStyle thickness="0" type="0" typeHidden="1" opacity="178"/>
+	<show object="true" label="false" ev="5"/>
+	<condition showObject="case ≟ 11"/>
+	<objColor r="255" g="127" b="0" alpha="0.75"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+</element>
+<command name="Polygon">
+	<input a0="{qB, QB6, QA6, qA6}"/>
+	<output a0="q18"/>
+</command>
+<element type="polygon3d" label="q18">
+	<lineStyle thickness="0" type="0" typeHidden="1" opacity="178"/>
+	<show object="true" label="false" ev="5"/>
+	<condition showObject="case ≟ 11"/>
+	<objColor r="0" g="255" b="0" alpha="0.75"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+</element>
+<element type="point" label="picA">
+	<show object="false" label="false" ev="11"/>
+	<objColor r="77" g="77" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<animation step="0.1" speed="1" type="1" playing="false"/>
+	<coords x="0.025414454153118826" y="1.9872927729234404" z="1"/>
+	<pointSize val="5"/>
+	<pointStyle val="0"/>
+</element>
+<element type="point" label="picB">
+	<show object="false" label="false" ev="11"/>
+	<objColor r="77" g="77" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<animation step="0.1" speed="1" type="1" playing="false"/>
+	<coords x="1.0254144541531187" y="1.9872927729234404" z="1"/>
+	<pointSize val="5"/>
+	<pointStyle val="0"/>
+</element>
+<element type="image" label="pic1">
+	<file name="0e6743d6bb3b986a9c472af1b387743b/1A.png"/>
+	<inBackground val="false"/>
+	<startPoint number="0" exp="picA"/>
+	<startPoint number="1" exp="picB"/>
+	<show object="true" label="false" ev="3"/>
+	<condition showObject="show1 ≟ 0"/>
+	<objColor r="0" g="0" b="0" alpha="1"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<animation step="1" speed="1" type="0" playing="false"/>
+	<ggbscript val="case=1&#xd;&#xa;show1 = 1&#xd;&#xa;show2 = 0&#xd;&#xa;show3 = 0&#xd;&#xa;show4 = 0&#xd;&#xa;show5 = 0&#xd;&#xa;show6 = 0&#xd;&#xa;show7 = 0&#xd;&#xa;show8 = 0&#xd;&#xa;show9 = 0&#xd;&#xa;show10 = 0&#xd;&#xa;show11 = 0&#xd;&#xa;len=3&#xd;&#xa;t2=0&#xd;&#xa;tt=3-t2"/>
+</element>
+<expression label="picHand" exp="(0, 3.3)" type="point"/>
+<element type="point" label="picHand">
+	<show object="false" label="false" ev="11"/>
+	<objColor r="77" g="77" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<animation step="0.1" speed="1" type="1" playing="false"/>
+	<coords x="0" y="3.3" z="1"/>
+	<pointSize val="5"/>
+	<pointStyle val="0"/>
+</element>
+<element type="image" label="Hand">
+	<file name="85418a8a00a3457379b78e9bba8298c4/手.png"/>
+	<inBackground val="false"/>
+	<startPoint number="0" exp="picHand"/>
+	<startPoint number="1" exp="picHand + (0.5, 0)"/>
+	<show object="true" label="false" ev="3"/>
+	<objColor r="0" g="0" b="0" alpha="1"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+</element>
+<element type="image" label="pic2">
+	<file name="e388b9d7bf4c6c7da98ff7fcb9b99ddc/2A.png"/>
+	<inBackground val="false"/>
+	<startPoint number="0" exp="picA + (sp, 0)"/>
+	<startPoint number="1" exp="picB + (sp, 0)"/>
+	<show object="true" label="false" ev="3"/>
+	<condition showObject="show2 ≟ 0"/>
+	<objColor r="0" g="0" b="0" alpha="1"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<animation step="1" speed="1" type="0" playing="false"/>
+	<ggbscript val="case=2&#xd;&#xa;show1 = 0&#xd;&#xa;show2 = 1&#xd;&#xa;show3 = 0&#xd;&#xa;show4 = 0&#xd;&#xa;show5 = 0&#xd;&#xa;show6 = 0&#xd;&#xa;show7 = 0&#xd;&#xa;show8 = 0&#xd;&#xa;show9 = 0&#xd;&#xa;show10 = 0&#xd;&#xa;show11 = 0&#xd;&#xa;len=2&#xd;&#xa;t2=0&#xd;&#xa;tt=3-t2&#xd;&#xa;&#xd;&#xa;"/>
+</element>
+<element type="image" label="pic3">
+	<file name="12054b5d86a04f4a4efb83c78a3939d3/3A.png"/>
+	<inBackground val="false"/>
+	<startPoint number="0" exp="picA + ((2 * sp), 0)"/>
+	<startPoint number="1" exp="picB + ((2 * sp), 0)"/>
+	<show object="true" label="false" ev="3"/>
+	<condition showObject="show3 ≟ 0"/>
+	<objColor r="0" g="0" b="0" alpha="1"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<animation step="1" speed="1" type="0" playing="false"/>
+	<ggbscript val="case = 3&#xd;&#xa;show1 = 0&#xd;&#xa;show2 = 0&#xd;&#xa;show3 = 1&#xd;&#xa;show4 = 0&#xd;&#xa;show5 = 0&#xd;&#xa;show6 = 0&#xd;&#xa;show7 = 0&#xd;&#xa;show8 = 0&#xd;&#xa;show9 = 0&#xd;&#xa;show10 = 0&#xd;&#xa;show11 = 0&#xd;&#xa;len=2&#xd;&#xa;t2=0&#xd;&#xa;tt=3-t2"/>
+</element>
+<element type="image" label="pic4">
+	<file name="f58a8a7d477feaeb13de4bf656fbd10c/4A.png"/>
+	<inBackground val="false"/>
+	<startPoint number="0" exp="picA + (0, (-sp))"/>
+	<startPoint number="1" exp="picB + (0, (-sp))"/>
+	<show object="true" label="false" ev="3"/>
+	<condition showObject="show4 ≟ 0"/>
+	<objColor r="0" g="0" b="0" alpha="1"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<animation step="1" speed="1" type="0" playing="false"/>
+	<ggbscript val="case=4&#xd;&#xa;show1 = 0&#xd;&#xa;show2 = 0&#xd;&#xa;show3 = 0&#xd;&#xa;show4 = 1&#xd;&#xa;show5 = 0&#xd;&#xa;show6 = 0&#xd;&#xa;show7 = 0&#xd;&#xa;show8 = 0&#xd;&#xa;show9 = 0&#xd;&#xa;show10 = 0&#xd;&#xa;show11 = 0&#xd;&#xa;len=3&#xd;&#xa;t2=0&#xd;&#xa;tt=3-t2&#xd;&#xa;"/>
+</element>
+<element type="image" label="pic5">
+	<file name="e82f202643ed1baaef1c3b369b5ac15c/5A無影.png"/>
+	<inBackground val="false"/>
+	<startPoint number="0" exp="picA + (sp, (-sp))"/>
+	<startPoint number="1" exp="picB + (sp, (-sp))"/>
+	<show object="true" label="false" ev="3"/>
+	<condition showObject="show5 ≟ 0"/>
+	<objColor r="0" g="0" b="0" alpha="1"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<animation step="1" speed="1" type="0" playing="false"/>
+	<ggbscript val="case=5&#xd;&#xa;show1 = 0&#xd;&#xa;show2 = 0&#xd;&#xa;show3 = 0&#xd;&#xa;show4 = 0&#xd;&#xa;show5 = 1&#xd;&#xa;show6 = 0&#xd;&#xa;show7 = 0&#xd;&#xa;show8 = 0&#xd;&#xa;show9 = 0&#xd;&#xa;show10 = 0&#xd;&#xa;show11 = 0&#xd;&#xa;len=2&#xd;&#xa;t2=0&#xd;&#xa;tt=3-t2&#xd;&#xa;"/>
+</element>
+<element type="image" label="pic6">
+	<file name="484c6e4ec1d081e16e7cfb13a2935f6e/6A.png"/>
+	<inBackground val="false"/>
+	<startPoint number="0" exp="picA + ((2 * sp), (-sp))"/>
+	<startPoint number="1" exp="picB + ((2 * sp), (-sp))"/>
+	<show object="true" label="false" ev="3"/>
+	<condition showObject="show6 ≟ 0"/>
+	<objColor r="0" g="0" b="0" alpha="1"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<animation step="1" speed="1" type="0" playing="false"/>
+	<ggbscript val="case=6&#xd;&#xa;show1 = 0&#xd;&#xa;show2 = 0&#xd;&#xa;show3 = 0&#xd;&#xa;show4 = 0&#xd;&#xa;show5 = 0&#xd;&#xa;show6 = 1&#xd;&#xa;show7 = 0&#xd;&#xa;show8 = 0&#xd;&#xa;show9 = 0&#xd;&#xa;show10 = 0&#xd;&#xa;show11 = 0&#xd;&#xa;len=2&#xd;&#xa;t2=0&#xd;&#xa;tt=3-t2&#xd;&#xa;"/>
+</element>
+<element type="image" label="pic7">
+	<file name="ede7371d809c8858e6532cbebb5036d1/7A.png"/>
+	<inBackground val="false"/>
+	<startPoint number="0" exp="picA + (0, (-2 * sp))"/>
+	<startPoint number="1" exp="picB + (0, (-2 * sp))"/>
+	<show object="true" label="false" ev="3"/>
+	<condition showObject="show7 ≟ 0"/>
+	<objColor r="0" g="0" b="0" alpha="1"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<animation step="1" speed="1" type="0" playing="false"/>
+	<ggbscript val="case=7&#xd;&#xa;show1 = 0&#xd;&#xa;show2 = 0&#xd;&#xa;show3 = 0&#xd;&#xa;show4 = 0&#xd;&#xa;show5 = 0&#xd;&#xa;show6 = 0&#xd;&#xa;show7 = 1&#xd;&#xa;show8 = 0&#xd;&#xa;show9 = 0&#xd;&#xa;show10 = 0&#xd;&#xa;show11 = 0&#xd;&#xa;len=2&#xd;&#xa;t2=0&#xd;&#xa;tt=3-t2"/>
+</element>
+<expression label="sp" exp="1.2"/>
+<element type="numeric" label="sp">
+	<value val="1.2"/>
+	<show object="false" label="true" ev="3"/>
+	<objColor r="0" g="0" b="0" alpha="0.10000000149011612"/>
+	<layer val="0"/>
+	<labelMode val="2"/>
+	<animation speed="1" type="0" playing="false"/>
+</element>
+<element type="image" label="pic8">
+	<file name="0a7bd0c7610005dcf0c2a2ad7c1e14c9/8A.png"/>
+	<inBackground val="false"/>
+	<startPoint number="0" exp="picA + (sp, (-2 * sp))"/>
+	<startPoint number="1" exp="picB + (sp, (-2 * sp))"/>
+	<show object="true" label="false" ev="3"/>
+	<condition showObject="show8 ≟ 0"/>
+	<objColor r="0" g="0" b="0" alpha="1"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<animation step="1" speed="1" type="0" playing="false"/>
+	<ggbscript val="case=8&#xd;&#xa;show1 = 0&#xd;&#xa;show2 = 0&#xd;&#xa;show3 = 0&#xd;&#xa;show4 = 0&#xd;&#xa;show5 = 0&#xd;&#xa;show6 = 0&#xd;&#xa;show7 = 0&#xd;&#xa;show8 =1&#xd;&#xa;show9 = 0&#xd;&#xa;show10 = 0&#xd;&#xa;show11 = 0&#xd;&#xa;len=3&#xd;&#xa;t2=0&#xd;&#xa;tt=3-t2&#xd;&#xa;&#xd;&#xa;"/>
+</element>
+<element type="image" label="pic9">
+	<file name="abf9ee7d30fa06314274d92415cc7fb2/9A.png"/>
+	<inBackground val="false"/>
+	<startPoint number="0" exp="picA + ((2 * sp), (-2 * sp))"/>
+	<startPoint number="1" exp="picB + ((2 * sp), (-2 * sp))"/>
+	<show object="true" label="false" ev="3"/>
+	<condition showObject="show9 ≟ 0"/>
+	<objColor r="0" g="0" b="0" alpha="1"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<animation step="1" speed="1" type="0" playing="false"/>
+	<ggbscript val="case=9&#xd;&#xa;show1 = 0&#xd;&#xa;show2 = 0&#xd;&#xa;show3 = 0&#xd;&#xa;show4 = 0&#xd;&#xa;show5 = 0&#xd;&#xa;show6 = 0&#xd;&#xa;show7 = 0&#xd;&#xa;show8 = 0&#xd;&#xa;show9 = 1&#xd;&#xa;show10 = 0&#xd;&#xa;show11 = 0&#xd;&#xa;len=3&#xd;&#xa;t2=0&#xd;&#xa;tt=3-t2"/>
+</element>
+<element type="image" label="pic10">
+	<file name="fb625f44c9db1de3a2cdf7635a186973/10A.png"/>
+	<inBackground val="false"/>
+	<startPoint number="0" exp="picA + (0, (-3 * sp))"/>
+	<startPoint number="1" exp="picB + (0, (-3 * sp))"/>
+	<show object="true" label="false" ev="3"/>
+	<condition showObject="show10 ≟ 0"/>
+	<objColor r="0" g="0" b="0" alpha="1"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<animation step="1" speed="1" type="0" playing="false"/>
+	<ggbscript val="case=10&#xd;&#xa;show1 = 0&#xd;&#xa;show2 = 0&#xd;&#xa;show3 = 0&#xd;&#xa;show4 = 0&#xd;&#xa;show5 = 0&#xd;&#xa;show6 = 0&#xd;&#xa;show7 = 0&#xd;&#xa;show8 = 0&#xd;&#xa;show9 = 0&#xd;&#xa;show10 = 1&#xd;&#xa;show11 = 0&#xd;&#xa;len=3&#xd;&#xa;t2=0&#xd;&#xa;tt=3-t2"/>
+</element>
+<element type="image" label="pic11">
+	<file name="78e17102670be040bd45b957ae1a945c/11A.png"/>
+	<inBackground val="false"/>
+	<startPoint number="0" exp="picA + (sp, (-3 * sp))"/>
+	<startPoint number="1" exp="picB + ((1.23 * sp), (-3 * sp))"/>
+	<show object="true" label="false" ev="3"/>
+	<condition showObject="show11 ≟ 0"/>
+	<objColor r="0" g="0" b="0" alpha="1"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<animation step="1" speed="1" type="0" playing="false"/>
+	<ggbscript val="case=11&#xd;&#xa;show1 = 0&#xd;&#xa;show2 = 0&#xd;&#xa;show3 = 0&#xd;&#xa;show4 = 0&#xd;&#xa;show5 = 0&#xd;&#xa;show6 = 0&#xd;&#xa;show7 = 0&#xd;&#xa;show8 = 0&#xd;&#xa;show9 = 0&#xd;&#xa;show10 = 0&#xd;&#xa;show11 = 1&#xd;&#xa;len=3&#xd;&#xa;t2=0&#xd;&#xa;tt=3-t2"/>
+</element>
+<expression label="show1" exp="1"/>
+<element type="numeric" label="show1">
+	<value val="1"/>
+	<show object="false" label="true" ev="3"/>
+	<objColor r="0" g="0" b="0" alpha="0.10000000149011612"/>
+	<layer val="0"/>
+	<labelMode val="2"/>
+	<animation speed="1" type="0" playing="false"/>
+</element>
+<expression label="show2" exp="0"/>
+<element type="numeric" label="show2">
+	<value val="0"/>
+	<show object="false" label="true" ev="3"/>
+	<objColor r="0" g="0" b="0" alpha="0.10000000149011612"/>
+	<layer val="0"/>
+	<labelMode val="2"/>
+	<animation speed="1" type="0" playing="false"/>
+</element>
+<expression label="show3" exp="0"/>
+<element type="numeric" label="show3">
+	<value val="0"/>
+	<show object="false" label="true" ev="3"/>
+	<objColor r="0" g="0" b="0" alpha="0.10000000149011612"/>
+	<layer val="0"/>
+	<labelMode val="2"/>
+	<animation speed="1" type="0" playing="false"/>
+</element>
+<expression label="show4" exp="0"/>
+<element type="numeric" label="show4">
+	<value val="0"/>
+	<show object="false" label="true" ev="3"/>
+	<objColor r="0" g="0" b="0" alpha="0.10000000149011612"/>
+	<layer val="0"/>
+	<labelMode val="2"/>
+	<animation speed="1" type="0" playing="false"/>
+</element>
+<expression label="show5" exp="0"/>
+<element type="numeric" label="show5">
+	<value val="0"/>
+	<show object="false" label="true" ev="3"/>
+	<objColor r="0" g="0" b="0" alpha="0.10000000149011612"/>
+	<layer val="0"/>
+	<labelMode val="2"/>
+	<animation speed="1" type="0" playing="false"/>
+</element>
+<expression label="show6" exp="0"/>
+<element type="numeric" label="show6">
+	<value val="0"/>
+	<show object="false" label="true" ev="3"/>
+	<objColor r="0" g="0" b="0" alpha="0.10000000149011612"/>
+	<layer val="0"/>
+	<labelMode val="2"/>
+	<animation speed="1" type="0" playing="false"/>
+</element>
+<expression label="show7" exp="0"/>
+<element type="numeric" label="show7">
+	<value val="0"/>
+	<show object="false" label="true" ev="3"/>
+	<objColor r="0" g="0" b="0" alpha="0.10000000149011612"/>
+	<layer val="0"/>
+	<labelMode val="2"/>
+	<animation speed="1" type="0" playing="false"/>
+</element>
+<expression label="show8" exp="0"/>
+<element type="numeric" label="show8">
+	<value val="0"/>
+	<show object="false" label="true" ev="3"/>
+	<objColor r="0" g="0" b="0" alpha="0.10000000149011612"/>
+	<layer val="0"/>
+	<labelMode val="2"/>
+	<animation speed="1" type="0" playing="false"/>
+</element>
+<expression label="show9" exp="0"/>
+<element type="numeric" label="show9">
+	<value val="0"/>
+	<show object="false" label="true" ev="3"/>
+	<objColor r="0" g="0" b="0" alpha="0.10000000149011612"/>
+	<layer val="0"/>
+	<labelMode val="2"/>
+	<animation speed="1" type="0" playing="false"/>
+</element>
+<expression label="show10" exp="0"/>
+<element type="numeric" label="show10">
+	<value val="0"/>
+	<show object="false" label="true" ev="3"/>
+	<objColor r="0" g="0" b="0" alpha="0.10000000149011612"/>
+	<layer val="0"/>
+	<labelMode val="2"/>
+	<animation speed="1" type="0" playing="false"/>
+</element>
+<expression label="show11" exp="0"/>
+<element type="numeric" label="show11">
+	<value val="0"/>
+	<show object="false" label="true" ev="3"/>
+	<objColor r="0" g="0" b="0" alpha="0.10000000149011612"/>
+	<layer val="0"/>
+	<labelMode val="2"/>
+	<animation speed="1" type="0" playing="false"/>
+</element>
+<element type="image" label="pic12">
+	<file name="20833f0c539a8b7f8596b12384aab004/1淡.png"/>
+	<inBackground val="false"/>
+	<startPoint number="0" exp="picA"/>
+	<startPoint number="1" exp="picB"/>
+	<show object="true" label="false" ev="3"/>
+	<condition showObject="show1 ≟ 1"/>
+	<objColor r="0" g="0" b="0" alpha="1"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<animation step="1" speed="1" type="0" playing="false"/>
+</element>
+<element type="image" label="pic13">
+	<file name="8e8c84e793863a211e198e7cde78531b/2淡.png"/>
+	<inBackground val="false"/>
+	<startPoint number="0" exp="picA + (sp, 0)"/>
+	<startPoint number="1" exp="picB + (sp, 0)"/>
+	<show object="true" label="false" ev="3"/>
+	<condition showObject="show2 ≟ 1"/>
+	<objColor r="0" g="0" b="0" alpha="1"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<animation step="1" speed="1" type="0" playing="false"/>
+</element>
+<element type="image" label="pic14">
+	<file name="740552a44e7f3a5907697ae3db4bb3da/3淡.png"/>
+	<inBackground val="false"/>
+	<startPoint number="0" exp="picA + ((2 * sp), 0)"/>
+	<startPoint number="1" exp="picB + ((2 * sp), 0)"/>
+	<show object="true" label="false" ev="3"/>
+	<condition showObject="show3 ≟ 1"/>
+	<objColor r="0" g="0" b="0" alpha="1"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<animation step="1" speed="1" type="0" playing="false"/>
+</element>
+<element type="image" label="pic15">
+	<file name="a4191233fc7bbe5b45812c91392b4567/4淡.png"/>
+	<inBackground val="false"/>
+	<startPoint number="0" exp="picA + (0, (-sp))"/>
+	<startPoint number="1" exp="picB + (0, (-sp))"/>
+	<show object="true" label="false" ev="3"/>
+	<condition showObject="show4 ≟ 1"/>
+	<objColor r="0" g="0" b="0" alpha="1"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<animation step="1" speed="1" type="0" playing="false"/>
+</element>
+<element type="image" label="pic16">
+	<file name="f1710e0b6a31fbe3d7dfc19fe15dd89f/5無影淡.png"/>
+	<inBackground val="false"/>
+	<startPoint number="0" exp="picA + (sp, (-sp))"/>
+	<startPoint number="1" exp="picB + (sp, (-sp))"/>
+	<show object="true" label="false" ev="3"/>
+	<condition showObject="show5 ≟ 1"/>
+	<objColor r="0" g="0" b="0" alpha="1"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<animation step="1" speed="1" type="0" playing="false"/>
+</element>
+<element type="image" label="pic17">
+	<file name="996b4e9c87fb607158c512603a191cb8/6淡.png"/>
+	<inBackground val="false"/>
+	<startPoint number="0" exp="picA + ((2 * sp), (-sp))"/>
+	<startPoint number="1" exp="picB + ((2 * sp), (-sp))"/>
+	<show object="true" label="false" ev="3"/>
+	<condition showObject="show6 ≟ 1"/>
+	<objColor r="0" g="0" b="0" alpha="1"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<animation step="1" speed="1" type="0" playing="false"/>
+</element>
+<element type="image" label="pic18">
+	<file name="d1c10b3ef0f8b829ad8b3f436459ec3a/7淡.png"/>
+	<inBackground val="false"/>
+	<startPoint number="0" exp="picA + (0, (-2 * sp))"/>
+	<startPoint number="1" exp="picB + (0, (-2 * sp))"/>
+	<show object="true" label="false" ev="3"/>
+	<condition showObject="show7 ≟ 1"/>
+	<objColor r="0" g="0" b="0" alpha="1"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<animation step="1" speed="1" type="0" playing="false"/>
+</element>
+<element type="image" label="pic19">
+	<file name="51c492ba41f877da69c236cc93f377e5/8淡.png"/>
+	<inBackground val="false"/>
+	<startPoint number="0" exp="picA + (sp, (-2 * sp))"/>
+	<startPoint number="1" exp="picB + (sp, (-2 * sp))"/>
+	<show object="true" label="false" ev="3"/>
+	<condition showObject="show8 ≟ 1"/>
+	<objColor r="0" g="0" b="0" alpha="1"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<animation step="1" speed="1" type="0" playing="false"/>
+</element>
+<element type="image" label="pic20">
+	<file name="d6b1bc889523f293ff53b91b805768a2/9淡.png"/>
+	<inBackground val="false"/>
+	<startPoint number="0" exp="picA + ((2 * sp), (-2 * sp))"/>
+	<startPoint number="1" exp="picB + ((2 * sp), (-2 * sp))"/>
+	<show object="true" label="false" ev="3"/>
+	<condition showObject="show9 ≟ 1"/>
+	<objColor r="0" g="0" b="0" alpha="1"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<animation step="1" speed="1" type="0" playing="false"/>
+</element>
+<element type="image" label="pic21">
+	<file name="44975ba1594c1779e243b3229218303d/10淡.png"/>
+	<inBackground val="false"/>
+	<startPoint number="0" exp="picA + (0, (-3 * sp))"/>
+	<startPoint number="1" exp="picB + (0, (-3 * sp))"/>
+	<show object="true" label="false" ev="3"/>
+	<condition showObject="show10 ≟ 1"/>
+	<objColor r="0" g="0" b="0" alpha="1"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<animation step="1" speed="1" type="0" playing="false"/>
+</element>
+<element type="image" label="pic22">
+	<file name="992a54b48a1655f73b1859c5d3cc9453/11淡.png"/>
+	<inBackground val="false"/>
+	<startPoint number="0" exp="picA + (sp, (-3 * sp))"/>
+	<startPoint number="1" exp="picB + ((1.23 * sp), (-3 * sp))"/>
+	<show object="true" label="false" ev="3"/>
+	<condition showObject="show11 ≟ 1"/>
+	<objColor r="0" g="0" b="0" alpha="1"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<animation step="1" speed="1" type="0" playing="false"/>
+</element>
+<expression label="text1" exp="&quot;點擊切換正方體展開圖：&quot;"/>
+<element type="text" label="text1">
+	<show object="true" label="false" ev="43"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<font serif="false" sizeM="1" size="0" style="1"/>
+	<startPoint x="0.6216108898018948" y="3.4399624330633047" z="1"/>
+</element>
+<expression label="text2" exp="&quot;閉合&quot;"/>
+<element type="text" label="text2">
+	<show object="true" label="false" ev="40"/>
+	<objColor r="255" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<font serif="false" sizeM="1.4" size="7" style="1"/>
+	<startPoint x="1.2" y="0.4" z="1"/>
+</element>
+<expression label="text3" exp="&quot;展開&quot;"/>
+<element type="text" label="text3">
+	<show object="true" label="false" ev="40"/>
+	<objColor r="255" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<font serif="false" sizeM="1.4" size="7" style="1"/>
+	<startPoint x="-2.8" y="0.4" z="1"/>
+</element>
+<element type="button" label="button閉合">
+	<show object="false" label="true"/>
+	<objColor r="255" g="255" b="0" alpha="1"/>
+	<bgColor r="64" g="64" b="64" alpha="255"/>
+	<layer val="0"/>
+	<labelOffset x="145" y="87"/>
+	<labelMode val="3"/>
+	<fixed val="true"/>
+	<auxiliary val="true"/>
+	<ggbscript val="move = false&#xa;SetCaption(button1, &quot;動　畫&quot; )&#xa;&#xa;StartAnimation(t3,false )&#xa;StartAnimation(t1,false )&#xa;tt=3-t2&#xa;StartAnimation( t2,true)"/>
+	<font serif="false" sizeM="2" size="16" style="1"/>
+	<dimensions width="100" height="40" />
+	<startPoint x="0" y="3.5" z="1"/>
+	<caption val="閉　合"/>
+</element>
+<expression label="E1" exp="0"/>
+<element type="numeric" label="E1">
+	<value val="0"/>
+	<show object="false" label="true"/>
+	<objColor r="0" g="0" b="0" alpha="0.10000000149011612"/>
+	<layer val="0"/>
+	<labelMode val="2"/>
+	<animation speed="1" type="0" playing="false"/>
+	<auxiliary val="true"/>
+</element>
+<expression label="E2" exp="1.5"/>
+<element type="numeric" label="E2">
+	<value val="1.5"/>
+	<show object="false" label="true"/>
+	<objColor r="0" g="0" b="0" alpha="0.10000000149011612"/>
+	<layer val="0"/>
+	<labelMode val="2"/>
+	<animation speed="1" type="0" playing="false"/>
+	<auxiliary val="true"/>
+</element>
+<command name="If">
+	<input a0="tt ≤ E1" a1="0" a2="If[tt &lt; E1 + 1.5, tt - E1, 1]"/>
+	<output a0="F1"/>
+</command>
+<element type="numeric" label="F1">
+	<value val="1"/>
+	<objColor r="0" g="0" b="0" alpha="0.10000000149011612"/>
+	<auxiliary val="true"/>
+</element>
+<command name="If">
+	<input a0="tt ≤ E2" a1="0" a2="If[tt &lt; E2 + 1.5, tt - E2, 1]"/>
+	<output a0="F2"/>
+</command>
+<element type="numeric" label="F2">
+	<value val="0.02499999999999991"/>
+	<objColor r="0" g="0" b="0" alpha="0.10000000149011612"/>
+	<auxiliary val="true"/>
+</element>
+<expression label="len" exp="3"/>
+<element type="numeric" label="len">
+	<value val="3"/>
+	<show object="false" label="true" ev="3"/>
+	<objColor r="0" g="0" b="0" alpha="0.10000000149011612"/>
+	<layer val="0"/>
+	<labelMode val="1"/>
+	<animation speed="1" type="0" playing="false"/>
+</element>
+<element type="button" label="button展開">
+	<show object="false" label="true"/>
+	<objColor r="255" g="255" b="0" alpha="1"/>
+	<bgColor r="64" g="64" b="64" alpha="255"/>
+	<layer val="0"/>
+	<labelOffset x="20" y="87"/>
+	<labelMode val="3"/>
+	<fixed val="true"/>
+	<auxiliary val="true"/>
+	<ggbscript val="&#xa;move = false&#xa;SetCaption(button1, &quot;動　畫&quot; )&#xa;SetValue(t1,t2)&#xa;StartAnimation(t3,false )&#xa;StartAnimation(t2,false )&#xa;tt=3-t1&#xa;StartAnimation(t1,true )&#xa;"/>
+	<font serif="false" sizeM="2" size="16" style="1"/>
+	<dimensions width="100" height="40" />
+	<startPoint x="-2.8" y="3.5" z="1"/>
+	<caption val="展　開"/>
+</element>
+<expression label="open" exp="1"/>
+<element type="numeric" label="open">
+	<value val="1"/>
+	<show object="false" label="true"/>
+	<objColor r="0" g="0" b="0" alpha="0.10000000149011612"/>
+	<layer val="0"/>
+	<labelMode val="1"/>
+	<animation speed="1" type="0" playing="false"/>
+</element>
+<expression label="show" exp="1"/>
+<element type="numeric" label="show">
+	<value val="1"/>
+	<show object="false" label="true"/>
+	<objColor r="0" g="0" b="0" alpha="0.10000000149011612"/>
+	<layer val="0"/>
+	<labelMode val="1"/>
+	<animation speed="1" type="0" playing="false"/>
+</element>
+<element type="button" label="button1">
+	<show object="true" label="true"/>
+	<objColor r="255" g="255" b="0" alpha="1"/>
+	<bgColor r="64" g="64" b="64" alpha="255"/>
+	<layer val="0"/>
+	<labelOffset x="20" y="149"/>
+	<labelMode val="3"/>
+	<fixed val="true"/>
+	<auxiliary val="true"/>
+	<ggbscript val="move = !move&#xa;If(move,SetCaption(button1, &quot;停　止&quot; ),SetCaption(button1, &quot;動　畫&quot; ))&#xa;tt=3-t2&#xa;StartAnimation( t2,move)"/>
+	<font serif="false" sizeM="2" size="16" style="1"/>
+	<dimensions width="100" height="80" />
+	<startPoint x="-2.8" y="3.2" z="1"/>
+	<caption val="動　畫"/>
+</element>
+<expression label="logoA" exp="(-3, 4)" type="point"/>
+<element type="point" label="logoA">
+	<show object="false" label="false" ev="4"/>
+	<objColor r="77" g="77" b="255" alpha="0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<animation step="0.1" speed="1" type="1" playing="false"/>
+	<coords x="-3" y="4" z="1"/>
+	<pointSize val="5"/>
+	<pointStyle val="0"/>
+</element>
+<expression label="logoB" exp="(2.4, 4)" type="point"/>
+<element type="point" label="logoB">
+	<show object="false" label="false" ev="4"/>
+	<objColor r="77" g="77" b="255" alpha="0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<animation step="0.1" speed="1" type="1" playing="false"/>
+	<coords x="2.4" y="4" z="1"/>
+	<pointSize val="5"/>
+	<pointStyle val="0"/>
+</element>
+<element type="image" label="pic23">
+	<file name="22c3d225704272e6dfe7bcc62b0f384d/商標2.png"/>
+	<inBackground val="false"/>
+	<startPoint number="0" exp="logoA"/>
+	<startPoint number="1" exp="logoB"/>
+	<show object="true" label="false"/>
+	<objColor r="0" g="0" b="0" alpha="1"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+</element>
+<element type="boolean" label="move">
+	<value val="false"/>
+	<show object="false" label="true"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<checkbox fixed="true"/>
+</element>
+<element type="numeric" label="speed">
+	<value val="9"/>
+	<show object="true" label="true"/>
+	<condition showObject="move"/>
+	<objColor r="0" g="0" b="0" alpha="0.10000000149011612"/>
+	<layer val="1"/>
+	<labelOffset x="-38" y="70"/>
+	<labelMode val="1"/>
+	<slider min="1" max="15" absoluteScreenLocation="true" width="130" x="62" y="302" fixed="false" horizontal="true" showAlgebra="true"/>
+	<pointSize val="10"/>
+	<lineStyle thickness="10" type="0" typeHidden="1"/>
+	<animation step="1" speed="1" type="0" playing="false"/>
+	<caption val="速度"/>
+</element>
+</construction>
+</geogebra>

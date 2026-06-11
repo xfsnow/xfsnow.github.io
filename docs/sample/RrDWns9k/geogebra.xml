@@ -1,0 +1,4762 @@
+<?xml version="1.0" encoding="utf-8"?>
+<geogebra format="4.0" id="4a798150-1eb2-45dd-b921-f0302f439d6b"  xsi:noNamespaceSchemaLocation="http://www.geogebra.org/ggb.xsd" xmlns="" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" >
+<gui>
+	<window width="988" height="734" />
+	<perspectives>
+<perspective id="tmp">
+	<panes>
+		<pane location="" divider="0.618421052631579" orientation="1" />
+	</panes>
+	<views>
+		<view id="1" visible="true" inframe="false" stylebar="false" location="3" size="611" window="558,188,465,548" />
+		<view id="4" toolbar="0 || 2020 , 2021 , 2022 , 66 || 2001 , 2003 , 2002 , 2004 , 2005 || 2040 , 2041 , 2042 , 2044 , 2043" visible="true" inframe="false" stylebar="false" location="1" size="364" window="747,253,364,423" />
+		<view id="2" visible="false" inframe="false" stylebar="true" location="3" size="356" window="100,100,250,400" />
+		<view id="16" visible="false" inframe="false" stylebar="false" location="1" size="255" window="497,141,588,675" />
+		<view id="32" visible="false" inframe="true" stylebar="true" location="1" size="150" window="50,50,500,500" />
+		<view id="64" visible="false" inframe="true" stylebar="false" location="1" size="150" window="50,50,500,500" />
+	</views>
+	<toolbar show="true" items="0 39 59 || 1 501 67 , 5 19 , 72 | 2 15 45 , 18 65 , 7 37 | 4 3 8 9 , 13 44 , 58 , 47 || 16 51 64 , 70 | 10 34 53 11 , 24 20 22 , 21 23 | 55 56 57 , 12 || 36 46 , 38 49 50 , 71 | 30 29 54 32 31 33 | 17 26 62 , 14 66 68 | 25 52 60 61 || 40 41 42 , 27 28 35 , 6" />
+	<input show="false" cmd="true" top="false" />
+</perspective>
+	</perspectives>
+	<labelingStyle  val="2"/>
+	<font  size="18"/>
+	<graphicsSettings javaLatexFonts="false"/>
+	<consProtColumns  col0="true" col1="true" col2="false" col3="true" col4="false" col5="true" col6="true" col7="false"/>
+	<consProtocol useColors="true" addIcons="false" showOnlyBreakpoints="false"/>
+</gui>
+<euclidianView>
+	<size  width="611" height="588"/>
+	<coordSystem xZero="43.567386559447804" yZero="153.16191192571378" scale="45.635506667918875" yscale="45.63550666791887"/>
+	<evSettings axes="false" grid="false" gridIsBold="false" pointCapturing="2" rightAngleStyle="1" checkboxSize="13" gridType="0"/>
+	<bgColor r="255" g="255" b="255"/>
+	<axesColor r="0" g="0" b="0"/>
+	<gridColor r="192" g="192" b="192"/>
+	<lineStyle axes="1" grid="10"/>
+	<axis id="0" show="false" label="" unitLabel="" tickStyle="1" showNumbers="true"/>
+	<axis id="1" show="false" label="" unitLabel="" tickStyle="1" showNumbers="true"/>
+	<grid distX="1.0" distY="1.0" distTheta="0.5235987755982988"/>
+</euclidianView>
+<spreadsheetView>
+	<size  width="364" height="588"/>
+	<prefCellSize  width="105" height="33"/>
+	<spreadsheetColumn id="0" width="43"/>
+	<spreadsheetColumn id="1" width="95"/>
+	<spreadsheetColumn id="2" width="79"/>
+	<spreadsheetColumn id="3" width="79"/>
+	<spreadsheetColumn id="4" width="75"/>
+	<spreadsheetColumn id="5" width="75"/>
+	<spreadsheetColumn id="6" width="75"/>
+	<spreadsheetColumn id="7" width="75"/>
+	<spreadsheetColumn id="8" width="75"/>
+	<spreadsheetColumn id="9" width="75"/>
+	<spreadsheetColumn id="10" width="75"/>
+	<spreadsheetColumn id="11" width="75"/>
+	<spreadsheetColumn id="12" width="75"/>
+	<spreadsheetColumn id="13" width="75"/>
+	<spreadsheetColumn id="14" width="75"/>
+	<spreadsheetColumn id="15" width="75"/>
+	<spreadsheetColumn id="16" width="75"/>
+	<spreadsheetColumn id="17" width="75"/>
+	<spreadsheetColumn id="18" width="75"/>
+	<spreadsheetColumn id="19" width="75"/>
+	<spreadsheetColumn id="20" width="75"/>
+	<spreadsheetColumn id="21" width="75"/>
+	<spreadsheetColumn id="22" width="75"/>
+	<spreadsheetColumn id="23" width="75"/>
+	<spreadsheetColumn id="24" width="75"/>
+	<spreadsheetColumn id="25" width="75"/>
+	<selection  hScroll="0" vScroll="0" column="-1" row="-1"/>
+	<layout  showFormulaBar="false" showGrid="true" showHScrollBar="true" showVScrollBar="true" showBrowserPanel="false" showColumnHeader="true" showRowHeader ="true" allowSpecialEditor="false" allowToolTips="true" equalsRequired="false"/>
+</spreadsheetView>
+<kernel>
+	<continuous val="false"/>
+	<decimals val="2"/>
+	<angleUnit val="degree"/>
+	<algebraStyle val="0"/>
+	<coordStyle val="0"/>
+	<angleFromInvTrig val="false"/>
+</kernel>
+<scripting blocked="false" disabled="false"/>
+<construction title="" author="" date="">
+<command name="Polygon">
+	<input a0="(2, 0)" a1="(3, 0)" a2="(3, 1)" a3="(2, 1)"/>
+	<output a0="sqr_1" a1="a_1" a2="b_1" a3="c_1" a4="d_1"/>
+</command>
+<element type="polygon" label="sqr_1">
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<show object="true" label="false"/>
+	<objColor r="255" g="255" b="255" alpha="0.1"/>
+	<layer val="0"/>
+	<labelOffset x="66" y="-45"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<ggbscript  val="SetValue[o_1, !o_1]&#10;&#10;SetColor[sqr_1, If[o_1, &quot;red&quot;, &quot;white&quot;]]&#10;SetColor[a_1, &quot;black&quot;]&#10;SetColor[b_1, &quot;black&quot;]&#10;SetColor[c_1, &quot;black&quot;]&#10;SetColor[d_1, &quot;black&quot;]"/>
+</element>
+<element type="segment" label="a_1">
+	<show object="false" label="false"/>
+	<condition showObject="o_1"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="1"/>
+	<labelOffset x="1" y="0"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<selectionAllowed val="false"/>
+	<coords x="0.0" y="1.0" z="0.0"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment" label="b_1">
+	<show object="true" label="false"/>
+	<condition showObject="o_1"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="1"/>
+	<labelOffset x="0" y="-2"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<selectionAllowed val="false"/>
+	<coords x="-1.0" y="0.0" z="3.0"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment" label="c_1">
+	<show object="true" label="false"/>
+	<condition showObject="o_1"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<selectionAllowed val="false"/>
+	<coords x="0.0" y="-1.0" z="1.0"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment" label="d_1">
+	<show object="true" label="false"/>
+	<condition showObject="o_1"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<selectionAllowed val="false"/>
+	<coords x="1.0" y="0.0" z="-2.0"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="boolean" label="o_1">
+	<value val="false"/>
+	<show object="false" label="true"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+</element>
+<command name="Polygon">
+	<input a0="(3, 0)" a1="(4, 0)" a2="(4, 1)" a3="(3, 1)"/>
+	<output a0="sqr_2" a1="a_2" a2="b_2" a3="c_2" a4="d_2"/>
+</command>
+<element type="polygon" label="sqr_2">
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<show object="true" label="false"/>
+	<objColor r="255" g="255" b="255" alpha="0.1"/>
+	<layer val="0"/>
+	<labelOffset x="66" y="-45"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<ggbscript  val="SetValue[o_2, !o_2]&#10;&#10;SetColor[sqr_2, If[o_2, &quot;red&quot;, &quot;white&quot;]]&#10;SetColor[a_2, &quot;black&quot;]&#10;SetColor[b_2, &quot;black&quot;]&#10;SetColor[c_2, &quot;black&quot;]&#10;SetColor[d_2, &quot;black&quot;]"/>
+</element>
+<element type="segment" label="a_2">
+	<show object="true" label="false"/>
+	<condition showObject="o_2"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<selectionAllowed val="false"/>
+	<coords x="0.0" y="1.0" z="0.0"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment" label="b_2">
+	<show object="true" label="false"/>
+	<condition showObject="o_2"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<selectionAllowed val="false"/>
+	<coords x="-1.0" y="0.0" z="4.0"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment" label="c_2">
+	<show object="true" label="false"/>
+	<condition showObject="o_2"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<selectionAllowed val="false"/>
+	<coords x="0.0" y="-1.0" z="1.0"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment" label="d_2">
+	<show object="true" label="false"/>
+	<condition showObject="o_2"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<selectionAllowed val="false"/>
+	<coords x="1.0" y="0.0" z="-3.0"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<command name="Polygon">
+	<input a0="(4, 0)" a1="(5, 0)" a2="(5, 1)" a3="(4, 1)"/>
+	<output a0="sqr_3" a1="a_3" a2="b_3" a3="c_3" a4="d_3"/>
+</command>
+<element type="polygon" label="sqr_3">
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<show object="true" label="false"/>
+	<objColor r="255" g="255" b="255" alpha="0.1"/>
+	<layer val="0"/>
+	<labelOffset x="66" y="-45"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<ggbscript  val="SetValue[o_3, !o_3]&#10;&#10;SetColor[sqr_3, If[o_3, &quot;red&quot;, &quot;white&quot;]]&#10;SetColor[a_3, &quot;black&quot;]&#10;SetColor[b_3, &quot;black&quot;]&#10;SetColor[c_3, &quot;black&quot;]&#10;SetColor[d_3, &quot;black&quot;]"/>
+</element>
+<element type="segment" label="a_3">
+	<show object="true" label="false"/>
+	<condition showObject="o_3"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<selectionAllowed val="false"/>
+	<coords x="0.0" y="1.0" z="0.0"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment" label="b_3">
+	<show object="true" label="false"/>
+	<condition showObject="o_3"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<selectionAllowed val="false"/>
+	<coords x="-1.0" y="0.0" z="5.0"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment" label="c_3">
+	<show object="true" label="false"/>
+	<condition showObject="o_3"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<selectionAllowed val="false"/>
+	<coords x="0.0" y="-1.0" z="1.0"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment" label="d_3">
+	<show object="true" label="false"/>
+	<condition showObject="o_3"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<selectionAllowed val="false"/>
+	<coords x="1.0" y="0.0" z="-4.0"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<command name="Polygon">
+	<input a0="(5, 0)" a1="(6, 0)" a2="(6, 1)" a3="(5, 1)"/>
+	<output a0="sqr_4" a1="a_4" a2="b_4" a3="c_4" a4="d_4"/>
+</command>
+<element type="polygon" label="sqr_4">
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<show object="true" label="false"/>
+	<objColor r="255" g="255" b="255" alpha="0.1"/>
+	<layer val="0"/>
+	<labelOffset x="66" y="-45"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<ggbscript  val="SetValue[o_4, !o_4]&#10;&#10;SetColor[sqr_4, If[o_4, &quot;red&quot;, &quot;white&quot;]]&#10;SetColor[a_4, &quot;black&quot;]&#10;SetColor[b_4, &quot;black&quot;]&#10;SetColor[c_4, &quot;black&quot;]&#10;SetColor[d_4, &quot;black&quot;]"/>
+</element>
+<element type="segment" label="a_4">
+	<show object="true" label="false"/>
+	<condition showObject="o_4"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<selectionAllowed val="false"/>
+	<coords x="0.0" y="1.0" z="0.0"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment" label="b_4">
+	<show object="true" label="false"/>
+	<condition showObject="o_4"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<selectionAllowed val="false"/>
+	<coords x="-1.0" y="0.0" z="6.0"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment" label="c_4">
+	<show object="true" label="false"/>
+	<condition showObject="o_4"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<selectionAllowed val="false"/>
+	<coords x="0.0" y="-1.0" z="1.0"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment" label="d_4">
+	<show object="true" label="false"/>
+	<condition showObject="o_4"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<selectionAllowed val="false"/>
+	<coords x="1.0" y="0.0" z="-5.0"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<command name="Polygon">
+	<input a0="(6, 0)" a1="(7, 0)" a2="(7, 1)" a3="(6, 1)"/>
+	<output a0="sqr_5" a1="a_5" a2="b_5" a3="c_5" a4="d_5"/>
+</command>
+<element type="polygon" label="sqr_5">
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<show object="true" label="false"/>
+	<objColor r="255" g="255" b="255" alpha="0.1"/>
+	<layer val="0"/>
+	<labelOffset x="66" y="-45"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<ggbscript  val="SetValue[o_5, !o_5]&#10;&#10;SetColor[sqr_5, If[o_5, &quot;red&quot;, &quot;white&quot;]]&#10;SetColor[a_5, &quot;black&quot;]&#10;SetColor[b_5, &quot;black&quot;]&#10;SetColor[c_5, &quot;black&quot;]&#10;SetColor[d_5, &quot;black&quot;]"/>
+</element>
+<element type="segment" label="a_5">
+	<show object="true" label="false"/>
+	<condition showObject="o_5"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<selectionAllowed val="false"/>
+	<coords x="0.0" y="1.0" z="0.0"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment" label="b_5">
+	<show object="true" label="false"/>
+	<condition showObject="o_5"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<selectionAllowed val="false"/>
+	<coords x="-1.0" y="0.0" z="7.0"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment" label="c_5">
+	<show object="true" label="false"/>
+	<condition showObject="o_5"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<selectionAllowed val="false"/>
+	<coords x="0.0" y="-1.0" z="1.0"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment" label="d_5">
+	<show object="true" label="false"/>
+	<condition showObject="o_5"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<selectionAllowed val="false"/>
+	<coords x="1.0" y="0.0" z="-6.0"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<command name="Polygon">
+	<input a0="(1, -2)" a1="(2, -2)" a2="(2, -1)" a3="(1, -1)"/>
+	<output a0="sqr_6" a1="a_6" a2="b_6" a3="c_6" a4="d_6"/>
+</command>
+<element type="polygon" label="sqr_6">
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<show object="true" label="false"/>
+	<objColor r="255" g="255" b="255" alpha="0.1"/>
+	<layer val="0"/>
+	<labelOffset x="66" y="-45"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<ggbscript  val="SetValue[o_6, !o_6]&#10;&#10;SetColor[sqr_6, If[o_6, &quot;red&quot;, &quot;white&quot;]]&#10;SetColor[a_6, &quot;black&quot;]&#10;SetColor[b_6, &quot;black&quot;]&#10;SetColor[c_6, &quot;black&quot;]&#10;SetColor[d_6, &quot;black&quot;]"/>
+</element>
+<element type="segment" label="a_6">
+	<show object="true" label="false"/>
+	<condition showObject="o_6"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<selectionAllowed val="false"/>
+	<coords x="0.0" y="1.0" z="2.0"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment" label="b_6">
+	<show object="true" label="false"/>
+	<condition showObject="o_6"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<selectionAllowed val="false"/>
+	<coords x="-1.0" y="0.0" z="2.0"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment" label="c_6">
+	<show object="true" label="false"/>
+	<condition showObject="o_6"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<selectionAllowed val="false"/>
+	<coords x="0.0" y="-1.0" z="-1.0"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment" label="d_6">
+	<show object="true" label="false"/>
+	<condition showObject="o_6"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<selectionAllowed val="false"/>
+	<coords x="1.0" y="0.0" z="-1.0"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<command name="Polygon">
+	<input a0="(2, -2)" a1="(3, -2)" a2="(3, -1)" a3="(2, -1)"/>
+	<output a0="sqr_7" a1="a_7" a2="b_7" a3="c_7" a4="d_7"/>
+</command>
+<element type="polygon" label="sqr_7">
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<show object="true" label="false"/>
+	<objColor r="255" g="255" b="255" alpha="0.1"/>
+	<layer val="0"/>
+	<labelOffset x="66" y="-45"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<ggbscript  val="SetValue[o_7, !o_7]&#10;&#10;SetColor[sqr_7, If[o_7, &quot;red&quot;, &quot;white&quot;]]&#10;&#10;SetColor[a_7, &quot;black&quot;]&#10;SetColor[b_7, &quot;black&quot;]&#10;SetColor[c_7, &quot;black&quot;]&#10;SetColor[d_7, &quot;black&quot;]"/>
+</element>
+<element type="segment" label="a_7">
+	<show object="true" label="false"/>
+	<condition showObject="o_7"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<selectionAllowed val="false"/>
+	<coords x="0.0" y="1.0" z="2.0"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment" label="b_7">
+	<show object="true" label="false"/>
+	<condition showObject="o_7"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<selectionAllowed val="false"/>
+	<coords x="-1.0" y="0.0" z="3.0"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment" label="c_7">
+	<show object="true" label="false"/>
+	<condition showObject="o_7"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<selectionAllowed val="false"/>
+	<coords x="0.0" y="-1.0" z="-1.0"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment" label="d_7">
+	<show object="true" label="false"/>
+	<condition showObject="o_7"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<selectionAllowed val="false"/>
+	<coords x="1.0" y="0.0" z="-2.0"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<command name="Polygon">
+	<input a0="(1, -3)" a1="(2, -3)" a2="(2, -2)" a3="(1, -2)"/>
+	<output a0="sqr_8" a1="a_8" a2="b_8" a3="c_8" a4="d_8"/>
+</command>
+<element type="polygon" label="sqr_8">
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<show object="true" label="false"/>
+	<objColor r="255" g="255" b="255" alpha="0.1"/>
+	<layer val="0"/>
+	<labelOffset x="66" y="-45"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<ggbscript  val="SetValue[o_8, !o_8]&#10;&#10;SetColor[sqr_8, If[o_8, &quot;red&quot;, &quot;white&quot;]]&#10;SetColor[a_8, &quot;black&quot;]&#10;SetColor[b_8, &quot;black&quot;]&#10;SetColor[c_8, &quot;black&quot;]&#10;SetColor[d_8, &quot;black&quot;]&#10;"/>
+</element>
+<element type="segment" label="a_8">
+	<show object="true" label="false"/>
+	<condition showObject="o_8"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<selectionAllowed val="false"/>
+	<coords x="0.0" y="1.0" z="3.0"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment" label="b_8">
+	<show object="true" label="false"/>
+	<condition showObject="o_8"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<selectionAllowed val="false"/>
+	<coords x="-1.0" y="0.0" z="2.0"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment" label="c_8">
+	<show object="true" label="false"/>
+	<condition showObject="o_8"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<selectionAllowed val="false"/>
+	<coords x="0.0" y="-1.0" z="-2.0"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment" label="d_8">
+	<show object="true" label="false"/>
+	<condition showObject="o_8"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<selectionAllowed val="false"/>
+	<coords x="1.0" y="0.0" z="-1.0"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<command name="Polygon">
+	<input a0="(2, -3)" a1="(3, -3)" a2="(3, -2)" a3="(2, -2)"/>
+	<output a0="sqr_9" a1="a_9" a2="b_9" a3="c_9" a4="d_9"/>
+</command>
+<element type="polygon" label="sqr_9">
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<show object="true" label="false"/>
+	<objColor r="255" g="255" b="255" alpha="0.1"/>
+	<layer val="0"/>
+	<labelOffset x="66" y="-45"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<ggbscript  val="SetValue[o_9, !o_9]&#10;&#10;SetColor[sqr_9, If[o_9, &quot;red&quot;, &quot;white&quot;]]&#10;SetColor[a_9, &quot;black&quot;]&#10;SetColor[b_9, &quot;black&quot;]&#10;SetColor[c_9, &quot;black&quot;]&#10;SetColor[d_9, &quot;black&quot;]&#10;"/>
+</element>
+<element type="segment" label="a_9">
+	<show object="true" label="false"/>
+	<condition showObject="o_9"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<selectionAllowed val="false"/>
+	<coords x="0.0" y="1.0" z="3.0"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment" label="b_9">
+	<show object="true" label="false"/>
+	<condition showObject="o_9"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<selectionAllowed val="false"/>
+	<coords x="-1.0" y="0.0" z="3.0"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment" label="c_9">
+	<show object="true" label="false"/>
+	<condition showObject="o_9"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<selectionAllowed val="false"/>
+	<coords x="0.0" y="-1.0" z="-2.0"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment" label="d_9">
+	<show object="true" label="false"/>
+	<condition showObject="o_9"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<selectionAllowed val="false"/>
+	<coords x="1.0" y="0.0" z="-2.0"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<command name="Polygon">
+	<input a0="(1, -4)" a1="(2, -4)" a2="(2, -3)" a3="(1, -3)"/>
+	<output a0="sqr_{10}" a1="a_{10}" a2="b_{10}" a3="c_{10}" a4="d_{10}"/>
+</command>
+<element type="polygon" label="sqr_{10}">
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<show object="true" label="false"/>
+	<objColor r="255" g="255" b="255" alpha="0.1"/>
+	<layer val="0"/>
+	<labelOffset x="66" y="-45"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<ggbscript  val="SetValue[o_{10}, !o_{10}]&#10;&#10;SetColor[sqr_{10}, If[o_{10}, &quot;red&quot;, &quot;white&quot;]]&#10;SetColor[a_{10}, &quot;black&quot;]&#10;SetColor[b_{10}, &quot;black&quot;]&#10;SetColor[c_{10}, &quot;black&quot;]&#10;SetColor[d_{10}, &quot;black&quot;]&#10;"/>
+</element>
+<element type="segment" label="a_{10}">
+	<show object="true" label="false"/>
+	<condition showObject="o_{10}"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<selectionAllowed val="false"/>
+	<coords x="0.0" y="1.0" z="4.0"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment" label="b_{10}">
+	<show object="true" label="false"/>
+	<condition showObject="o_{10}"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<selectionAllowed val="false"/>
+	<coords x="-1.0" y="0.0" z="2.0"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment" label="c_{10}">
+	<show object="true" label="false"/>
+	<condition showObject="o_{10}"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<selectionAllowed val="false"/>
+	<coords x="0.0" y="-1.0" z="-3.0"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment" label="d_{10}">
+	<show object="true" label="false"/>
+	<condition showObject="o_{10}"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<selectionAllowed val="false"/>
+	<coords x="1.0" y="0.0" z="-1.0"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<command name="Polygon">
+	<input a0="(2, -4)" a1="(3, -4)" a2="(3, -3)" a3="(2, -3)"/>
+	<output a0="sqr_{11}" a1="a_{11}" a2="b_{11}" a3="c_{11}" a4="d_{11}"/>
+</command>
+<element type="polygon" label="sqr_{11}">
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<show object="true" label="false"/>
+	<objColor r="255" g="255" b="255" alpha="0.1"/>
+	<layer val="0"/>
+	<labelOffset x="66" y="-45"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<ggbscript  val="SetValue[o_{11}, !o_{11}]&#10;SetColor[sqr_{11}, If[o_{11}, &quot;red&quot;, &quot;white&quot;]]&#10;SetColor[a_{11}, &quot;black&quot;]&#10;SetColor[b_{11}, &quot;black&quot;]&#10;SetColor[c_{11}, &quot;black&quot;]&#10;SetColor[d_{11}, &quot;black&quot;]&#10;"/>
+</element>
+<element type="segment" label="a_{11}">
+	<show object="true" label="false"/>
+	<condition showObject="o_{11}"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<selectionAllowed val="false"/>
+	<coords x="0.0" y="1.0" z="4.0"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment" label="b_{11}">
+	<show object="true" label="false"/>
+	<condition showObject="o_{11}"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<selectionAllowed val="false"/>
+	<coords x="-1.0" y="0.0" z="3.0"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment" label="c_{11}">
+	<show object="true" label="false"/>
+	<condition showObject="o_{11}"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<selectionAllowed val="false"/>
+	<coords x="0.0" y="-1.0" z="-3.0"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment" label="d_{11}">
+	<show object="true" label="false"/>
+	<condition showObject="o_{11}"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<selectionAllowed val="false"/>
+	<coords x="1.0" y="0.0" z="-2.0"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<command name="Polygon">
+	<input a0="(1, -5)" a1="(2, -5)" a2="(2, -4)" a3="(1, -4)"/>
+	<output a0="sqr_{12}" a1="a_{12}" a2="b_{12}" a3="c_{12}" a4="d_{12}"/>
+</command>
+<element type="polygon" label="sqr_{12}">
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<show object="true" label="false"/>
+	<objColor r="255" g="255" b="255" alpha="0.1"/>
+	<layer val="0"/>
+	<labelOffset x="66" y="-45"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<ggbscript  val="SetValue[o_{12}, !o_{12}]&#10;SetColor[sqr_{12}, If[o_{12}, &quot;red&quot;, &quot;white&quot;]]&#10;SetColor[a_{12}, &quot;black&quot;]&#10;SetColor[b_{12}, &quot;black&quot;]&#10;SetColor[c_{12}, &quot;black&quot;]&#10;SetColor[d_{12}, &quot;black&quot;]&#10;&#10;"/>
+</element>
+<element type="segment" label="a_{12}">
+	<show object="true" label="false"/>
+	<condition showObject="o_{12}"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<selectionAllowed val="false"/>
+	<coords x="0.0" y="1.0" z="5.0"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment" label="b_{12}">
+	<show object="true" label="false"/>
+	<condition showObject="o_{12}"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<selectionAllowed val="false"/>
+	<coords x="-1.0" y="0.0" z="2.0"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment" label="c_{12}">
+	<show object="true" label="false"/>
+	<condition showObject="o_{12}"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<selectionAllowed val="false"/>
+	<coords x="0.0" y="-1.0" z="-4.0"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment" label="d_{12}">
+	<show object="true" label="false"/>
+	<condition showObject="o_{12}"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<selectionAllowed val="false"/>
+	<coords x="1.0" y="0.0" z="-1.0"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<command name="Polygon">
+	<input a0="(2, -5)" a1="(3, -5)" a2="(3, -4)" a3="(2, -4)"/>
+	<output a0="sqr_{13}" a1="a_{13}" a2="b_{13}" a3="c_{13}" a4="d_{13}"/>
+</command>
+<element type="polygon" label="sqr_{13}">
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<show object="true" label="false"/>
+	<objColor r="255" g="255" b="255" alpha="0.1"/>
+	<layer val="0"/>
+	<labelOffset x="66" y="-45"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<ggbscript  val="SetValue[o_{13}, !o_{13}]&#10;SetColor[sqr_{13}, If[o_{13}, &quot;red&quot;, &quot;white&quot;]]&#10;SetColor[a_{13}, &quot;black&quot;]&#10;SetColor[b_{13}, &quot;black&quot;]&#10;SetColor[c_{13}, &quot;black&quot;]&#10;SetColor[d_{13}, &quot;black&quot;]&#10;&#10;"/>
+</element>
+<element type="segment" label="a_{13}">
+	<show object="true" label="false"/>
+	<condition showObject="o_{13}"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<selectionAllowed val="false"/>
+	<coords x="0.0" y="1.0" z="5.0"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment" label="b_{13}">
+	<show object="true" label="false"/>
+	<condition showObject="o_{13}"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<selectionAllowed val="false"/>
+	<coords x="-1.0" y="0.0" z="3.0"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment" label="c_{13}">
+	<show object="true" label="false"/>
+	<condition showObject="o_{13}"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<selectionAllowed val="false"/>
+	<coords x="0.0" y="-1.0" z="-4.0"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment" label="d_{13}">
+	<show object="true" label="false"/>
+	<condition showObject="o_{13}"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<selectionAllowed val="false"/>
+	<coords x="1.0" y="0.0" z="-2.0"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<command name="Polygon">
+	<input a0="(5, -2)" a1="(6, -2)" a2="(6, -1)" a3="(5, -1)"/>
+	<output a0="sqr_{14}" a1="a_{14}" a2="b_{14}" a3="c_{14}" a4="d_{14}"/>
+</command>
+<element type="polygon" label="sqr_{14}">
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<show object="true" label="false"/>
+	<objColor r="255" g="255" b="255" alpha="0.1"/>
+	<layer val="0"/>
+	<labelOffset x="66" y="-45"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<ggbscript  val="SetValue[o_{14}, !o_{14}]&#10;SetColor[sqr_{14}, If[o_{14}, &quot;red&quot;, &quot;white&quot;]]&#10;SetColor[a_{14}, &quot;black&quot;]&#10;SetColor[b_{14}, &quot;black&quot;]&#10;SetColor[c_{14}, &quot;black&quot;]&#10;SetColor[d_{14}, &quot;black&quot;]&#10;&#10;"/>
+</element>
+<element type="segment" label="a_{14}">
+	<show object="true" label="false"/>
+	<condition showObject="o_{14}"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<selectionAllowed val="false"/>
+	<coords x="0.0" y="1.0" z="2.0"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment" label="b_{14}">
+	<show object="true" label="false"/>
+	<condition showObject="o_{14}"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<selectionAllowed val="false"/>
+	<coords x="-1.0" y="0.0" z="6.0"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment" label="c_{14}">
+	<show object="true" label="false"/>
+	<condition showObject="o_{14}"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<coords x="0.0" y="-1.0" z="-1.0"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment" label="d_{14}">
+	<show object="true" label="false"/>
+	<condition showObject="o_{14}"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<selectionAllowed val="false"/>
+	<coords x="1.0" y="0.0" z="-5.0"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<command name="Polygon">
+	<input a0="(6, -2)" a1="(7, -2)" a2="(7, -1)" a3="(6, -1)"/>
+	<output a0="sqr_{15}" a1="a_{15}" a2="b_{15}" a3="c_{15}" a4="d_{15}"/>
+</command>
+<element type="polygon" label="sqr_{15}">
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<show object="true" label="false"/>
+	<objColor r="255" g="255" b="255" alpha="0.1"/>
+	<layer val="0"/>
+	<labelOffset x="66" y="-45"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<ggbscript  val="SetValue[o_{15}, !o_{15}]&#10;SetColor[sqr_{15}, If[o_{15}, &quot;red&quot;, &quot;white&quot;]]&#10;SetColor[a_{15}, &quot;black&quot;]&#10;SetColor[b_{15}, &quot;black&quot;]&#10;SetColor[c_{15}, &quot;black&quot;]&#10;SetColor[d_{15}, &quot;black&quot;]&#10;&#10;"/>
+</element>
+<element type="segment" label="a_{15}">
+	<show object="true" label="false"/>
+	<condition showObject="o_{15}"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<selectionAllowed val="false"/>
+	<coords x="0.0" y="1.0" z="2.0"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment" label="b_{15}">
+	<show object="true" label="false"/>
+	<condition showObject="o_{15}"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<selectionAllowed val="false"/>
+	<coords x="-1.0" y="0.0" z="7.0"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment" label="c_{15}">
+	<show object="true" label="false"/>
+	<condition showObject="o_{15}"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<selectionAllowed val="false"/>
+	<coords x="0.0" y="-1.0" z="-1.0"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment" label="d_{15}">
+	<show object="true" label="false"/>
+	<condition showObject="o_{15}"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<selectionAllowed val="false"/>
+	<coords x="1.0" y="0.0" z="-6.0"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<command name="Polygon">
+	<input a0="(7, -2)" a1="(8, -2)" a2="(8, -1)" a3="(7, -1)"/>
+	<output a0="sqr_{16}" a1="a_{16}" a2="b_{16}" a3="c_{16}" a4="d_{16}"/>
+</command>
+<element type="polygon" label="sqr_{16}">
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<show object="true" label="false"/>
+	<objColor r="255" g="255" b="255" alpha="0.1"/>
+	<layer val="0"/>
+	<labelOffset x="66" y="-45"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<ggbscript  val="SetValue[o_{16}, !o_{16}]&#10;SetColor[sqr_{16}, If[o_{16}, &quot;red&quot;, &quot;white&quot;]]&#10;SetColor[a_{16}, &quot;black&quot;]&#10;SetColor[b_{16}, &quot;black&quot;]&#10;SetColor[c_{16}, &quot;black&quot;]&#10;SetColor[d_{16}, &quot;black&quot;]&#10;&#10;"/>
+</element>
+<element type="segment" label="a_{16}">
+	<show object="true" label="false"/>
+	<condition showObject="o_{16}"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<selectionAllowed val="false"/>
+	<coords x="0.0" y="1.0" z="2.0"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment" label="b_{16}">
+	<show object="true" label="false"/>
+	<condition showObject="o_{16}"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<selectionAllowed val="false"/>
+	<coords x="-1.0" y="0.0" z="8.0"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment" label="c_{16}">
+	<show object="true" label="false"/>
+	<condition showObject="o_{16}"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<selectionAllowed val="false"/>
+	<coords x="0.0" y="-1.0" z="-1.0"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment" label="d_{16}">
+	<show object="true" label="false"/>
+	<condition showObject="o_{16}"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<selectionAllowed val="false"/>
+	<coords x="1.0" y="0.0" z="-7.0"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<command name="Polygon">
+	<input a0="(5, -3)" a1="(6, -3)" a2="(6, -2)" a3="(5, -2)"/>
+	<output a0="sqr_{17}" a1="a_{17}" a2="b_{17}" a3="c_{17}" a4="d_{17}"/>
+</command>
+<element type="polygon" label="sqr_{17}">
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<show object="true" label="false"/>
+	<objColor r="255" g="255" b="255" alpha="0.1"/>
+	<layer val="0"/>
+	<labelOffset x="66" y="-45"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<ggbscript  val="SetValue[o_{17}, !o_{17}]&#10;SetColor[sqr_{17}, If[o_{17}, &quot;red&quot;, &quot;white&quot;]]&#10;SetColor[a_{17}, &quot;black&quot;]&#10;SetColor[b_{17}, &quot;black&quot;]&#10;SetColor[c_{17}, &quot;black&quot;]&#10;SetColor[d_{17}, &quot;black&quot;]&#10;&#10;"/>
+</element>
+<element type="segment" label="a_{17}">
+	<show object="true" label="false"/>
+	<condition showObject="o_{17}"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<selectionAllowed val="false"/>
+	<coords x="0.0" y="1.0" z="3.0"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment" label="b_{17}">
+	<show object="true" label="false"/>
+	<condition showObject="o_{17}"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<selectionAllowed val="false"/>
+	<coords x="-1.0" y="0.0" z="6.0"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment" label="c_{17}">
+	<show object="true" label="false"/>
+	<condition showObject="o_{17}"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<selectionAllowed val="false"/>
+	<coords x="0.0" y="-1.0" z="-2.0"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment" label="d_{17}">
+	<show object="true" label="false"/>
+	<condition showObject="o_{17}"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<selectionAllowed val="false"/>
+	<coords x="1.0" y="0.0" z="-5.0"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<command name="Polygon">
+	<input a0="(6, -3)" a1="(7, -3)" a2="(7, -2)" a3="(6, -2)"/>
+	<output a0="sqr_{18}" a1="a_{18}" a2="b_{18}" a3="c_{18}" a4="d_{18}"/>
+</command>
+<element type="polygon" label="sqr_{18}">
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<show object="true" label="false"/>
+	<objColor r="255" g="255" b="255" alpha="0.1"/>
+	<layer val="0"/>
+	<labelOffset x="66" y="-45"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<ggbscript  val="SetValue[o_{18}, !o_{18}]&#10;SetColor[sqr_{18}, If[o_{18}, &quot;red&quot;, &quot;white&quot;]]&#10;SetColor[a_{18}, &quot;black&quot;]&#10;SetColor[b_{18}, &quot;black&quot;]&#10;SetColor[c_{18}, &quot;black&quot;]&#10;SetColor[d_{18}, &quot;black&quot;]&#10;&#10;"/>
+</element>
+<element type="segment" label="a_{18}">
+	<show object="true" label="false"/>
+	<condition showObject="o_{18}"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<selectionAllowed val="false"/>
+	<coords x="0.0" y="1.0" z="3.0"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment" label="b_{18}">
+	<show object="true" label="false"/>
+	<condition showObject="o_{18}"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<selectionAllowed val="false"/>
+	<coords x="-1.0" y="0.0" z="7.0"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment" label="c_{18}">
+	<show object="true" label="false"/>
+	<condition showObject="o_{18}"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<selectionAllowed val="false"/>
+	<coords x="0.0" y="-1.0" z="-2.0"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment" label="d_{18}">
+	<show object="true" label="false"/>
+	<condition showObject="o_{18}"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<selectionAllowed val="false"/>
+	<coords x="1.0" y="0.0" z="-6.0"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<command name="Polygon">
+	<input a0="(7, -3)" a1="(8, -3)" a2="(8, -2)" a3="(7, -2)"/>
+	<output a0="sqr_{19}" a1="a_{19}" a2="b_{19}" a3="c_{19}" a4="d_{19}"/>
+</command>
+<element type="polygon" label="sqr_{19}">
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<show object="true" label="false"/>
+	<objColor r="255" g="255" b="255" alpha="0.1"/>
+	<layer val="0"/>
+	<labelOffset x="66" y="-45"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<ggbscript  val="SetValue[o_{19}, !o_{19}]&#10;SetColor[sqr_{19}, If[o_{19}, &quot;red&quot;, &quot;white&quot;]]&#10;SetColor[a_{19}, &quot;black&quot;]&#10;SetColor[b_{19}, &quot;black&quot;]&#10;SetColor[c_{19}, &quot;black&quot;]&#10;SetColor[d_{19}, &quot;black&quot;]&#10;&#10;"/>
+</element>
+<element type="segment" label="a_{19}">
+	<show object="true" label="false"/>
+	<condition showObject="o_{19}"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<selectionAllowed val="false"/>
+	<coords x="0.0" y="1.0" z="3.0"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment" label="b_{19}">
+	<show object="true" label="false"/>
+	<condition showObject="o_{19}"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<selectionAllowed val="false"/>
+	<coords x="-1.0" y="0.0" z="8.0"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment" label="c_{19}">
+	<show object="true" label="false"/>
+	<condition showObject="o_{19}"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<selectionAllowed val="false"/>
+	<coords x="0.0" y="-1.0" z="-2.0"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment" label="d_{19}">
+	<show object="true" label="false"/>
+	<condition showObject="o_{19}"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<selectionAllowed val="false"/>
+	<coords x="1.0" y="0.0" z="-7.0"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<command name="Polygon">
+	<input a0="(5, -4)" a1="(6, -4)" a2="(6, -3)" a3="(5, -3)"/>
+	<output a0="sqr_{20}" a1="a_{20}" a2="b_{20}" a3="c_{20}" a4="d_{20}"/>
+</command>
+<element type="polygon" label="sqr_{20}">
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<show object="true" label="false"/>
+	<objColor r="255" g="255" b="255" alpha="0.1"/>
+	<layer val="0"/>
+	<labelOffset x="66" y="-45"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<ggbscript  val="SetValue[o_{20}, !o_{20}]&#10;SetColor[sqr_{20}, If[o_{20}, &quot;red&quot;, &quot;white&quot;]]&#10;SetColor[a_{20}, &quot;black&quot;]&#10;SetColor[b_{20}, &quot;black&quot;]&#10;SetColor[c_{20}, &quot;black&quot;]&#10;SetColor[d_{20}, &quot;black&quot;]&#10;&#10;"/>
+</element>
+<element type="segment" label="a_{20}">
+	<show object="true" label="false"/>
+	<condition showObject="o_{20}"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<selectionAllowed val="false"/>
+	<coords x="0.0" y="1.0" z="4.0"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment" label="b_{20}">
+	<show object="true" label="false"/>
+	<condition showObject="o_{20}"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<selectionAllowed val="false"/>
+	<coords x="-1.0" y="0.0" z="6.0"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment" label="c_{20}">
+	<show object="true" label="false"/>
+	<condition showObject="o_{20}"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<selectionAllowed val="false"/>
+	<coords x="0.0" y="-1.0" z="-3.0"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment" label="d_{20}">
+	<show object="true" label="false"/>
+	<condition showObject="o_{20}"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<selectionAllowed val="false"/>
+	<coords x="1.0" y="0.0" z="-5.0"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<command name="Polygon">
+	<input a0="(6, -4)" a1="(7, -4)" a2="(7, -3)" a3="(6, -3)"/>
+	<output a0="sqr_{21}" a1="a_{21}" a2="b_{21}" a3="c_{21}" a4="d_{21}"/>
+</command>
+<element type="polygon" label="sqr_{21}">
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<show object="true" label="false"/>
+	<objColor r="255" g="255" b="255" alpha="0.1"/>
+	<layer val="0"/>
+	<labelOffset x="66" y="-45"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<ggbscript  val="SetValue[o_{21}, !o_{21}]&#10;SetColor[sqr_{21}, If[o_{21}, &quot;red&quot;, &quot;white&quot;]]&#10;SetColor[a_{21}, &quot;black&quot;]&#10;SetColor[b_{21}, &quot;black&quot;]&#10;SetColor[c_{21}, &quot;black&quot;]&#10;SetColor[d_{21}, &quot;black&quot;]&#10;"/>
+</element>
+<element type="segment" label="a_{21}">
+	<show object="true" label="false"/>
+	<condition showObject="o_{21}"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<selectionAllowed val="false"/>
+	<coords x="0.0" y="1.0" z="4.0"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment" label="b_{21}">
+	<show object="true" label="false"/>
+	<condition showObject="o_{21}"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<selectionAllowed val="false"/>
+	<coords x="-1.0" y="0.0" z="7.0"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment" label="c_{21}">
+	<show object="true" label="false"/>
+	<condition showObject="o_{21}"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<selectionAllowed val="false"/>
+	<coords x="0.0" y="-1.0" z="-3.0"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment" label="d_{21}">
+	<show object="true" label="false"/>
+	<condition showObject="o_{21}"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<selectionAllowed val="false"/>
+	<coords x="1.0" y="0.0" z="-6.0"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<command name="Polygon">
+	<input a0="(7, -4)" a1="(8, -4)" a2="(8, -3)" a3="(7, -3)"/>
+	<output a0="sqr_{22}" a1="a_{22}" a2="b_{22}" a3="c_{22}" a4="d_{22}"/>
+</command>
+<element type="polygon" label="sqr_{22}">
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<show object="true" label="false"/>
+	<objColor r="255" g="255" b="255" alpha="0.1"/>
+	<layer val="0"/>
+	<labelOffset x="66" y="-45"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<ggbscript  val="SetValue[o_{22}, !o_{22}]&#10;SetColor[sqr_{22}, If[o_{22}, &quot;red&quot;, &quot;white&quot;]]&#10;SetColor[a_{22}, &quot;black&quot;]&#10;SetColor[b_{22}, &quot;black&quot;]&#10;SetColor[c_{22}, &quot;black&quot;]&#10;SetColor[d_{22}, &quot;black&quot;]&#10;"/>
+</element>
+<element type="segment" label="a_{22}">
+	<show object="true" label="false"/>
+	<condition showObject="o_{22}"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<selectionAllowed val="false"/>
+	<coords x="0.0" y="1.0" z="4.0"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment" label="b_{22}">
+	<show object="true" label="false"/>
+	<condition showObject="o_{22}"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<selectionAllowed val="false"/>
+	<coords x="-1.0" y="0.0" z="8.0"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment" label="c_{22}">
+	<show object="true" label="false"/>
+	<condition showObject="o_{22}"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<selectionAllowed val="false"/>
+	<coords x="0.0" y="-1.0" z="-3.0"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment" label="d_{22}">
+	<show object="true" label="false"/>
+	<condition showObject="o_{22}"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<selectionAllowed val="false"/>
+	<coords x="1.0" y="0.0" z="-7.0"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<command name="Polygon">
+	<input a0="(0, -7)" a1="(1, -7)" a2="(1, -6)" a3="(0, -6)"/>
+	<output a0="sqr_{23}" a1="a_{23}" a2="b_{23}" a3="c_{23}" a4="d_{23}"/>
+</command>
+<element type="polygon" label="sqr_{23}">
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<show object="true" label="false"/>
+	<objColor r="255" g="255" b="255" alpha="0.1"/>
+	<layer val="0"/>
+	<labelOffset x="66" y="-45"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<ggbscript  val="SetValue[o_{23}, !o_{23}]&#10;SetColor[sqr_{23}, If[o_{23}, &quot;red&quot;, &quot;white&quot;]]&#10;SetColor[a_{23}, &quot;black&quot;]&#10;SetColor[b_{23}, &quot;black&quot;]&#10;SetColor[c_{23}, &quot;black&quot;]&#10;SetColor[d_{23}, &quot;black&quot;]&#10;"/>
+</element>
+<element type="segment" label="a_{23}">
+	<show object="true" label="false"/>
+	<condition showObject="o_{23}"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<selectionAllowed val="false"/>
+	<coords x="0.0" y="1.0" z="7.0"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment" label="b_{23}">
+	<show object="true" label="false"/>
+	<condition showObject="o_{23}"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<selectionAllowed val="false"/>
+	<coords x="-1.0" y="0.0" z="1.0"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment" label="c_{23}">
+	<show object="true" label="false"/>
+	<condition showObject="o_{23}"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<selectionAllowed val="false"/>
+	<coords x="0.0" y="-1.0" z="-6.0"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment" label="d_{23}">
+	<show object="true" label="false"/>
+	<condition showObject="o_{23}"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<selectionAllowed val="false"/>
+	<coords x="1.0" y="0.0" z="0.0"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<command name="Polygon">
+	<input a0="(1, -7)" a1="(2, -7)" a2="(2, -6)" a3="(1, -6)"/>
+	<output a0="sqr_{24}" a1="a_{24}" a2="b_{24}" a3="c_{24}" a4="d_{24}"/>
+</command>
+<element type="polygon" label="sqr_{24}">
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<show object="true" label="false"/>
+	<objColor r="255" g="255" b="255" alpha="0.1"/>
+	<layer val="0"/>
+	<labelOffset x="66" y="-45"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<ggbscript  val="SetValue[o_{24}, !o_{24}]&#10;SetColor[sqr_{24}, If[o_{24}, &quot;red&quot;, &quot;white&quot;]]&#10;SetColor[a_{24}, &quot;black&quot;]&#10;SetColor[b_{24}, &quot;black&quot;]&#10;SetColor[c_{24}, &quot;black&quot;]&#10;SetColor[d_{24}, &quot;black&quot;]&#10;"/>
+</element>
+<element type="segment" label="a_{24}">
+	<show object="true" label="false"/>
+	<condition showObject="o_{24}"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<selectionAllowed val="false"/>
+	<coords x="0.0" y="1.0" z="7.0"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment" label="b_{24}">
+	<show object="true" label="false"/>
+	<condition showObject="o_{24}"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<selectionAllowed val="false"/>
+	<coords x="-1.0" y="0.0" z="2.0"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment" label="c_{24}">
+	<show object="true" label="false"/>
+	<condition showObject="o_{24}"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<selectionAllowed val="false"/>
+	<coords x="0.0" y="-1.0" z="-6.0"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment" label="d_{24}">
+	<show object="true" label="false"/>
+	<condition showObject="o_{24}"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<selectionAllowed val="false"/>
+	<coords x="1.0" y="0.0" z="-1.0"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<command name="Polygon">
+	<input a0="(2, -7)" a1="(3, -7)" a2="(3, -6)" a3="(2, -6)"/>
+	<output a0="sqr_{25}" a1="a_{25}" a2="b_{25}" a3="c_{25}" a4="d_{25}"/>
+</command>
+<element type="polygon" label="sqr_{25}">
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<show object="true" label="false"/>
+	<objColor r="255" g="255" b="255" alpha="0.1"/>
+	<layer val="0"/>
+	<labelOffset x="66" y="-45"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<ggbscript  val="SetValue[o_{25}, !o_{25}]&#10;SetColor[sqr_{25}, If[o_{25}, &quot;red&quot;, &quot;white&quot;]]&#10;SetColor[a_{25}, &quot;black&quot;]&#10;SetColor[b_{25}, &quot;black&quot;]&#10;SetColor[c_{25}, &quot;black&quot;]&#10;SetColor[d_{25}, &quot;black&quot;]&#10;"/>
+</element>
+<element type="segment" label="a_{25}">
+	<show object="true" label="false"/>
+	<condition showObject="o_{25}"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<selectionAllowed val="false"/>
+	<coords x="0.0" y="1.0" z="7.0"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment" label="b_{25}">
+	<show object="true" label="false"/>
+	<condition showObject="o_{25}"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<selectionAllowed val="false"/>
+	<coords x="-1.0" y="0.0" z="3.0"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment" label="c_{25}">
+	<show object="true" label="false"/>
+	<condition showObject="o_{25}"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<selectionAllowed val="false"/>
+	<coords x="0.0" y="-1.0" z="-6.0"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment" label="d_{25}">
+	<show object="true" label="false"/>
+	<condition showObject="o_{25}"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<selectionAllowed val="false"/>
+	<coords x="1.0" y="0.0" z="-2.0"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<command name="Polygon">
+	<input a0="(3, -7)" a1="(4, -7)" a2="(4, -6)" a3="(3, -6)"/>
+	<output a0="sqr_{26}" a1="a_{26}" a2="b_{26}" a3="c_{26}" a4="d_{26}"/>
+</command>
+<element type="polygon" label="sqr_{26}">
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<show object="true" label="false"/>
+	<objColor r="255" g="255" b="255" alpha="0.1"/>
+	<layer val="0"/>
+	<labelOffset x="66" y="-45"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<ggbscript  val="SetValue[o_{26}, !o_{26}]&#10;SetColor[sqr_{26}, If[o_{26}, &quot;red&quot;, &quot;white&quot;]]&#10;SetColor[a_{26}, &quot;black&quot;]&#10;SetColor[b_{26}, &quot;black&quot;]&#10;SetColor[c_{26}, &quot;black&quot;]&#10;SetColor[d_{26}, &quot;black&quot;]&#10;"/>
+</element>
+<element type="segment" label="a_{26}">
+	<show object="true" label="false"/>
+	<condition showObject="o_{26}"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<selectionAllowed val="false"/>
+	<coords x="0.0" y="1.0" z="7.0"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment" label="b_{26}">
+	<show object="true" label="false"/>
+	<condition showObject="o_{26}"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<selectionAllowed val="false"/>
+	<coords x="-1.0" y="0.0" z="4.0"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment" label="c_{26}">
+	<show object="true" label="false"/>
+	<condition showObject="o_{26}"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<selectionAllowed val="false"/>
+	<coords x="0.0" y="-1.0" z="-6.0"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment" label="d_{26}">
+	<show object="true" label="false"/>
+	<condition showObject="o_{26}"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<selectionAllowed val="false"/>
+	<coords x="1.0" y="0.0" z="-3.0"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<command name="Polygon">
+	<input a0="(4, -7)" a1="(5, -7)" a2="(5, -6)" a3="(4, -6)"/>
+	<output a0="sqr_{27}" a1="a_{27}" a2="b_{27}" a3="c_{27}" a4="d_{27}"/>
+</command>
+<element type="polygon" label="sqr_{27}">
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<show object="true" label="false"/>
+	<objColor r="255" g="255" b="255" alpha="0.1"/>
+	<layer val="0"/>
+	<labelOffset x="66" y="-45"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<ggbscript  val="SetValue[o_{27}, !o_{27}]&#10;SetColor[sqr_{27}, If[o_{27}, &quot;red&quot;, &quot;white&quot;]]&#10;SetColor[a_{27}, &quot;black&quot;]&#10;SetColor[b_{27}, &quot;black&quot;]&#10;SetColor[c_{27}, &quot;black&quot;]&#10;SetColor[d_{27}, &quot;black&quot;]&#10;"/>
+</element>
+<element type="segment" label="a_{27}">
+	<show object="true" label="false"/>
+	<condition showObject="o_{27}"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<selectionAllowed val="false"/>
+	<coords x="0.0" y="1.0" z="7.0"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment" label="b_{27}">
+	<show object="true" label="false"/>
+	<condition showObject="o_{27}"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<selectionAllowed val="false"/>
+	<coords x="-1.0" y="0.0" z="5.0"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment" label="c_{27}">
+	<show object="true" label="false"/>
+	<condition showObject="o_{27}"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<selectionAllowed val="false"/>
+	<coords x="0.0" y="-1.0" z="-6.0"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment" label="d_{27}">
+	<show object="true" label="false"/>
+	<condition showObject="o_{27}"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<selectionAllowed val="false"/>
+	<coords x="1.0" y="0.0" z="-4.0"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<command name="Polygon">
+	<input a0="(0, -8)" a1="(1, -8)" a2="(1, -7)" a3="(0, -7)"/>
+	<output a0="sqr_{28}" a1="a_{28}" a2="b_{28}" a3="c_{28}" a4="d_{28}"/>
+</command>
+<element type="polygon" label="sqr_{28}">
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<show object="true" label="false"/>
+	<objColor r="255" g="255" b="255" alpha="0.1"/>
+	<layer val="0"/>
+	<labelOffset x="66" y="-45"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<ggbscript  val="SetValue[o_{28}, !o_{28}]&#10;SetColor[sqr_{28}, If[o_{28}, &quot;red&quot;, &quot;white&quot;]]&#10;SetColor[a_{28}, &quot;black&quot;]&#10;SetColor[b_{28}, &quot;black&quot;]&#10;SetColor[c_{28}, &quot;black&quot;]&#10;SetColor[d_{28}, &quot;black&quot;]&#10;"/>
+</element>
+<element type="segment" label="a_{28}">
+	<show object="true" label="false"/>
+	<condition showObject="o_{28}"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<selectionAllowed val="false"/>
+	<coords x="0.0" y="1.0" z="8.0"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment" label="b_{28}">
+	<show object="true" label="false"/>
+	<condition showObject="o_{28}"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<selectionAllowed val="false"/>
+	<coords x="-1.0" y="0.0" z="1.0"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment" label="c_{28}">
+	<show object="true" label="false"/>
+	<condition showObject="o_{28}"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<selectionAllowed val="false"/>
+	<coords x="0.0" y="-1.0" z="-7.0"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment" label="d_{28}">
+	<show object="true" label="false"/>
+	<condition showObject="o_{28}"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<selectionAllowed val="false"/>
+	<coords x="1.0" y="0.0" z="0.0"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<command name="Polygon">
+	<input a0="(1, -8)" a1="(2, -8)" a2="(2, -7)" a3="(1, -7)"/>
+	<output a0="sqr_{29}" a1="a_{29}" a2="b_{29}" a3="c_{29}" a4="d_{29}"/>
+</command>
+<element type="polygon" label="sqr_{29}">
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<show object="true" label="false"/>
+	<objColor r="255" g="255" b="255" alpha="0.1"/>
+	<layer val="0"/>
+	<labelOffset x="66" y="-45"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<ggbscript  val="SetValue[o_{29}, !o_{29}]&#10;SetColor[sqr_{29}, If[o_{29}, &quot;red&quot;, &quot;white&quot;]]&#10;SetColor[a_{29}, &quot;black&quot;]&#10;SetColor[b_{29}, &quot;black&quot;]&#10;SetColor[c_{29}, &quot;black&quot;]&#10;SetColor[d_{29}, &quot;black&quot;]&#10;"/>
+</element>
+<element type="segment" label="a_{29}">
+	<show object="true" label="false"/>
+	<condition showObject="o_{29}"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<selectionAllowed val="false"/>
+	<coords x="0.0" y="1.0" z="8.0"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment" label="b_{29}">
+	<show object="true" label="false"/>
+	<condition showObject="o_{29}"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<selectionAllowed val="false"/>
+	<coords x="-1.0" y="0.0" z="2.0"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment" label="c_{29}">
+	<show object="true" label="false"/>
+	<condition showObject="o_{29}"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<selectionAllowed val="false"/>
+	<coords x="0.0" y="-1.0" z="-7.0"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment" label="d_{29}">
+	<show object="true" label="false"/>
+	<condition showObject="o_{29}"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<selectionAllowed val="false"/>
+	<coords x="1.0" y="0.0" z="-1.0"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<command name="Polygon">
+	<input a0="(2, -8)" a1="(3, -8)" a2="(3, -7)" a3="(2, -7)"/>
+	<output a0="sqr_{30}" a1="a_{30}" a2="b_{30}" a3="c_{30}" a4="d_{30}"/>
+</command>
+<element type="polygon" label="sqr_{30}">
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<show object="true" label="false"/>
+	<objColor r="255" g="255" b="255" alpha="0.1"/>
+	<layer val="0"/>
+	<labelOffset x="66" y="-45"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<ggbscript  val="SetValue[o_{30}, !o_{30}]&#10;SetColor[sqr_{30}, If[o_{30}, &quot;red&quot;, &quot;white&quot;]]&#10;SetColor[a_{30}, &quot;black&quot;]&#10;SetColor[b_{30}, &quot;black&quot;]&#10;SetColor[c_{30}, &quot;black&quot;]&#10;SetColor[d_{30}, &quot;black&quot;]&#10;"/>
+</element>
+<element type="segment" label="a_{30}">
+	<show object="true" label="false"/>
+	<condition showObject="o_{30}"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<selectionAllowed val="false"/>
+	<coords x="0.0" y="1.0" z="8.0"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment" label="b_{30}">
+	<show object="true" label="false"/>
+	<condition showObject="o_{30}"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<selectionAllowed val="false"/>
+	<coords x="-1.0" y="0.0" z="3.0"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment" label="c_{30}">
+	<show object="true" label="false"/>
+	<condition showObject="o_{30}"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<selectionAllowed val="false"/>
+	<coords x="0.0" y="-1.0" z="-7.0"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment" label="d_{30}">
+	<show object="true" label="false"/>
+	<condition showObject="o_{30}"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<selectionAllowed val="false"/>
+	<coords x="1.0" y="0.0" z="-2.0"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<command name="Polygon">
+	<input a0="(3, -8)" a1="(4, -8)" a2="(4, -7)" a3="(3, -7)"/>
+	<output a0="sqr_{31}" a1="a_{31}" a2="b_{31}" a3="c_{31}" a4="d_{31}"/>
+</command>
+<element type="polygon" label="sqr_{31}">
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<show object="true" label="false"/>
+	<objColor r="255" g="255" b="255" alpha="0.1"/>
+	<layer val="0"/>
+	<labelOffset x="66" y="-45"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<ggbscript  val="SetValue[o_{31}, !o_{31}]&#10;SetColor[sqr_{31}, If[o_{31}, &quot;red&quot;, &quot;white&quot;]]&#10;SetColor[a_{31}, &quot;black&quot;]&#10;SetColor[b_{31}, &quot;black&quot;]&#10;SetColor[c_{31}, &quot;black&quot;]&#10;SetColor[d_{31}, &quot;black&quot;]&#10;"/>
+</element>
+<element type="segment" label="a_{31}">
+	<show object="true" label="false"/>
+	<condition showObject="o_{31}"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<selectionAllowed val="false"/>
+	<coords x="0.0" y="1.0" z="8.0"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment" label="b_{31}">
+	<show object="true" label="false"/>
+	<condition showObject="o_{31}"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<selectionAllowed val="false"/>
+	<coords x="-1.0" y="0.0" z="4.0"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment" label="c_{31}">
+	<show object="true" label="false"/>
+	<condition showObject="o_{31}"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<selectionAllowed val="false"/>
+	<coords x="0.0" y="-1.0" z="-7.0"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment" label="d_{31}">
+	<show object="true" label="false"/>
+	<condition showObject="o_{31}"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<selectionAllowed val="false"/>
+	<coords x="1.0" y="0.0" z="-3.0"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<command name="Polygon">
+	<input a0="(4, -8)" a1="(5, -8)" a2="(5, -7)" a3="(4, -7)"/>
+	<output a0="sqr_{32}" a1="a_{32}" a2="b_{32}" a3="c_{32}" a4="d_{32}"/>
+</command>
+<element type="polygon" label="sqr_{32}">
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<show object="true" label="false"/>
+	<objColor r="255" g="255" b="255" alpha="0.1"/>
+	<layer val="0"/>
+	<labelOffset x="66" y="-45"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<ggbscript  val="SetValue[o_{32}, !o_{32}]&#10;SetColor[sqr_{32}, If[o_{32}, &quot;red&quot;, &quot;white&quot;]]&#10;SetColor[a_{32}, &quot;black&quot;]&#10;SetColor[b_{32}, &quot;black&quot;]&#10;SetColor[c_{32}, &quot;black&quot;]&#10;SetColor[d_{32}, &quot;black&quot;]&#10;"/>
+</element>
+<element type="segment" label="a_{32}">
+	<show object="true" label="false"/>
+	<condition showObject="o_{32}"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<selectionAllowed val="false"/>
+	<coords x="0.0" y="1.0" z="8.0"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment" label="b_{32}">
+	<show object="true" label="false"/>
+	<condition showObject="o_{32}"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<selectionAllowed val="false"/>
+	<coords x="-1.0" y="0.0" z="5.0"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment" label="c_{32}">
+	<show object="true" label="false"/>
+	<condition showObject="o_{32}"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<selectionAllowed val="false"/>
+	<coords x="0.0" y="-1.0" z="-7.0"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment" label="d_{32}">
+	<show object="true" label="false"/>
+	<condition showObject="o_{32}"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<selectionAllowed val="false"/>
+	<coords x="1.0" y="0.0" z="-4.0"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<command name="Polygon">
+	<input a0="(0, -9)" a1="(1, -9)" a2="(1, -8)" a3="(0, -8)"/>
+	<output a0="sqr_{33}" a1="a_{33}" a2="b_{33}" a3="c_{33}" a4="d_{33}"/>
+</command>
+<element type="polygon" label="sqr_{33}">
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<show object="true" label="false"/>
+	<objColor r="255" g="255" b="255" alpha="0.1"/>
+	<layer val="0"/>
+	<labelOffset x="66" y="-45"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<ggbscript  val="SetValue[o_{33}, !o_{33}]&#10;SetColor[sqr_{33}, If[o_{33}, &quot;red&quot;, &quot;white&quot;]]&#10;SetColor[a_{33}, &quot;black&quot;]&#10;SetColor[b_{33}, &quot;black&quot;]&#10;SetColor[c_{33}, &quot;black&quot;]&#10;SetColor[d_{33}, &quot;black&quot;]&#10;"/>
+</element>
+<element type="segment" label="a_{33}">
+	<show object="true" label="false"/>
+	<condition showObject="o_{33}"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<selectionAllowed val="false"/>
+	<coords x="0.0" y="1.0" z="9.0"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment" label="b_{33}">
+	<show object="true" label="false"/>
+	<condition showObject="o_{33}"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<selectionAllowed val="false"/>
+	<coords x="-1.0" y="0.0" z="1.0"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment" label="c_{33}">
+	<show object="true" label="false"/>
+	<condition showObject="o_{33}"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<selectionAllowed val="false"/>
+	<coords x="0.0" y="-1.0" z="-8.0"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment" label="d_{33}">
+	<show object="true" label="false"/>
+	<condition showObject="o_{33}"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<selectionAllowed val="false"/>
+	<coords x="1.0" y="0.0" z="0.0"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<command name="Polygon">
+	<input a0="(1, -9)" a1="(2, -9)" a2="(2, -8)" a3="(1, -8)"/>
+	<output a0="sqr_{34}" a1="a_{34}" a2="b_{34}" a3="c_{34}" a4="d_{34}"/>
+</command>
+<element type="polygon" label="sqr_{34}">
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<show object="true" label="false"/>
+	<objColor r="255" g="255" b="255" alpha="0.1"/>
+	<layer val="0"/>
+	<labelOffset x="66" y="-45"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<ggbscript  val="SetValue[o_{34}, !o_{34}]&#10;SetColor[sqr_{34}, If[o_{34}, &quot;red&quot;, &quot;white&quot;]]&#10;SetColor[a_{34}, &quot;black&quot;]&#10;SetColor[b_{34}, &quot;black&quot;]&#10;SetColor[c_{34}, &quot;black&quot;]&#10;SetColor[d_{34}, &quot;black&quot;]&#10;"/>
+</element>
+<element type="segment" label="a_{34}">
+	<show object="true" label="false"/>
+	<condition showObject="o_{34}"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<selectionAllowed val="false"/>
+	<coords x="0.0" y="1.0" z="9.0"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment" label="b_{34}">
+	<show object="true" label="false"/>
+	<condition showObject="o_{34}"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<selectionAllowed val="false"/>
+	<coords x="-1.0" y="0.0" z="2.0"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment" label="c_{34}">
+	<show object="true" label="false"/>
+	<condition showObject="o_{34}"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<selectionAllowed val="false"/>
+	<coords x="0.0" y="-1.0" z="-8.0"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment" label="d_{34}">
+	<show object="true" label="false"/>
+	<condition showObject="o_{34}"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<selectionAllowed val="false"/>
+	<coords x="1.0" y="0.0" z="-1.0"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<command name="Polygon">
+	<input a0="(2, -9)" a1="(3, -9)" a2="(3, -8)" a3="(2, -8)"/>
+	<output a0="sqr_{35}" a1="a_{35}" a2="b_{35}" a3="c_{35}" a4="d_{35}"/>
+</command>
+<element type="polygon" label="sqr_{35}">
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<show object="true" label="false"/>
+	<objColor r="255" g="255" b="255" alpha="0.1"/>
+	<layer val="0"/>
+	<labelOffset x="66" y="-45"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<ggbscript  val="SetValue[o_{35}, !o_{35}]&#10;SetColor[sqr_{35}, If[o_{35}, &quot;red&quot;, &quot;white&quot;]]&#10;SetColor[a_{35}, &quot;black&quot;]&#10;SetColor[b_{35}, &quot;black&quot;]&#10;SetColor[c_{35}, &quot;black&quot;]&#10;SetColor[d_{35}, &quot;black&quot;]&#10;"/>
+</element>
+<element type="segment" label="a_{35}">
+	<show object="true" label="false"/>
+	<condition showObject="o_{35}"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<selectionAllowed val="false"/>
+	<coords x="0.0" y="1.0" z="9.0"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment" label="b_{35}">
+	<show object="true" label="false"/>
+	<condition showObject="o_{35}"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<selectionAllowed val="false"/>
+	<coords x="-1.0" y="0.0" z="3.0"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment" label="c_{35}">
+	<show object="true" label="false"/>
+	<condition showObject="o_{35}"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<selectionAllowed val="false"/>
+	<coords x="0.0" y="-1.0" z="-8.0"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment" label="d_{35}">
+	<show object="true" label="false"/>
+	<condition showObject="o_{35}"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<selectionAllowed val="false"/>
+	<coords x="1.0" y="0.0" z="-2.0"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<command name="Polygon">
+	<input a0="(3, -9)" a1="(4, -9)" a2="(4, -8)" a3="(3, -8)"/>
+	<output a0="sqr_{36}" a1="a_{36}" a2="b_{36}" a3="c_{36}" a4="d_{36}"/>
+</command>
+<element type="polygon" label="sqr_{36}">
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<show object="true" label="false"/>
+	<objColor r="255" g="255" b="255" alpha="0.1"/>
+	<layer val="0"/>
+	<labelOffset x="66" y="-45"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<ggbscript  val="SetValue[o_{36}, !o_{36}]&#10;SetColor[sqr_{36}, If[o_{36}, &quot;red&quot;, &quot;white&quot;]]&#10;SetColor[a_{36}, &quot;black&quot;]&#10;SetColor[b_{36}, &quot;black&quot;]&#10;SetColor[c_{36}, &quot;black&quot;]&#10;SetColor[d_{36}, &quot;black&quot;]&#10;"/>
+</element>
+<element type="segment" label="a_{36}">
+	<show object="true" label="false"/>
+	<condition showObject="o_{36}"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<selectionAllowed val="false"/>
+	<coords x="0.0" y="1.0" z="9.0"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment" label="b_{36}">
+	<show object="true" label="false"/>
+	<condition showObject="o_{36}"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<selectionAllowed val="false"/>
+	<coords x="-1.0" y="0.0" z="4.0"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment" label="c_{36}">
+	<show object="true" label="false"/>
+	<condition showObject="o_{36}"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<selectionAllowed val="false"/>
+	<coords x="0.0" y="-1.0" z="-8.0"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment" label="d_{36}">
+	<show object="true" label="false"/>
+	<condition showObject="o_{36}"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<selectionAllowed val="false"/>
+	<coords x="1.0" y="0.0" z="-3.0"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<command name="Polygon">
+	<input a0="(4, -9)" a1="(5, -9)" a2="(5, -8)" a3="(4, -8)"/>
+	<output a0="sqr_{37}" a1="a_{37}" a2="b_{37}" a3="c_{37}" a4="d_{37}"/>
+</command>
+<element type="polygon" label="sqr_{37}">
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<show object="true" label="false"/>
+	<objColor r="255" g="255" b="255" alpha="0.1"/>
+	<layer val="0"/>
+	<labelOffset x="66" y="-45"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<ggbscript  val="SetValue[o_{37}, !o_{37}]&#10;SetColor[sqr_{37}, If[o_{37}, &quot;red&quot;, &quot;white&quot;]]&#10;SetColor[a_{37}, &quot;black&quot;]&#10;SetColor[b_{37}, &quot;black&quot;]&#10;SetColor[c_{37}, &quot;black&quot;]&#10;SetColor[d_{37}, &quot;black&quot;]&#10;"/>
+</element>
+<element type="segment" label="a_{37}">
+	<show object="true" label="false"/>
+	<condition showObject="o_{37}"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<selectionAllowed val="false"/>
+	<coords x="0.0" y="1.0" z="9.0"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment" label="b_{37}">
+	<show object="true" label="false"/>
+	<condition showObject="o_{37}"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<selectionAllowed val="false"/>
+	<coords x="-1.0" y="0.0" z="5.0"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment" label="c_{37}">
+	<show object="true" label="false"/>
+	<condition showObject="o_{37}"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<selectionAllowed val="false"/>
+	<coords x="0.0" y="-1.0" z="-8.0"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment" label="d_{37}">
+	<show object="true" label="false"/>
+	<condition showObject="o_{37}"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<selectionAllowed val="false"/>
+	<coords x="1.0" y="0.0" z="-4.0"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<command name="Polygon">
+	<input a0="(7, -6)" a1="(8, -6)" a2="(8, -5)" a3="(7, -5)"/>
+	<output a0="sqr_{38}" a1="a_{38}" a2="b_{38}" a3="c_{38}" a4="d_{38}"/>
+</command>
+<element type="polygon" label="sqr_{38}">
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<show object="true" label="false"/>
+	<objColor r="255" g="255" b="255" alpha="0.1"/>
+	<layer val="0"/>
+	<labelOffset x="66" y="-45"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<ggbscript  val="SetValue[o_{38}, !o_{38}]&#10;SetColor[sqr_{38}, If[o_{38}, &quot;red&quot;, &quot;white&quot;]]&#10;SetColor[a_{38}, &quot;black&quot;]&#10;SetColor[b_{38}, &quot;black&quot;]&#10;SetColor[c_{38}, &quot;black&quot;]&#10;SetColor[d_{38}, &quot;black&quot;]&#10;"/>
+</element>
+<element type="segment" label="a_{38}">
+	<show object="true" label="false"/>
+	<condition showObject="o_{38}"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<selectionAllowed val="false"/>
+	<coords x="0.0" y="1.0" z="6.0"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment" label="b_{38}">
+	<show object="true" label="false"/>
+	<condition showObject="o_{38}"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<selectionAllowed val="false"/>
+	<coords x="-1.0" y="0.0" z="8.0"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment" label="c_{38}">
+	<show object="true" label="false"/>
+	<condition showObject="o_{38}"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<selectionAllowed val="false"/>
+	<coords x="0.0" y="-1.0" z="-5.0"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment" label="d_{38}">
+	<show object="true" label="false"/>
+	<condition showObject="o_{38}"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<selectionAllowed val="false"/>
+	<coords x="1.0" y="0.0" z="-7.0"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<command name="Polygon">
+	<input a0="(8, -6)" a1="(9, -6)" a2="(9, -5)" a3="(8, -5)"/>
+	<output a0="sqr_{39}" a1="a_{39}" a2="b_{39}" a3="c_{39}" a4="d_{39}"/>
+</command>
+<element type="polygon" label="sqr_{39}">
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<show object="true" label="false"/>
+	<objColor r="255" g="255" b="255" alpha="0.1"/>
+	<layer val="0"/>
+	<labelOffset x="66" y="-45"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<ggbscript  val="SetValue[o_{39}, !o_{39}]&#10;SetColor[sqr_{39}, If[o_{39}, &quot;red&quot;, &quot;white&quot;]]&#10;SetColor[a_{39}, &quot;black&quot;]&#10;SetColor[b_{39}, &quot;black&quot;]&#10;SetColor[c_{39}, &quot;black&quot;]&#10;SetColor[d_{39}, &quot;black&quot;]"/>
+</element>
+<element type="segment" label="a_{39}">
+	<show object="true" label="false"/>
+	<condition showObject="o_{39}"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<selectionAllowed val="false"/>
+	<coords x="0.0" y="1.0" z="6.0"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment" label="b_{39}">
+	<show object="true" label="false"/>
+	<condition showObject="o_{39}"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<selectionAllowed val="false"/>
+	<coords x="-1.0" y="0.0" z="9.0"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment" label="c_{39}">
+	<show object="true" label="false"/>
+	<condition showObject="o_{39}"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<selectionAllowed val="false"/>
+	<coords x="0.0" y="-1.0" z="-5.0"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment" label="d_{39}">
+	<show object="true" label="false"/>
+	<condition showObject="o_{39}"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<selectionAllowed val="false"/>
+	<coords x="1.0" y="0.0" z="-8.0"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<command name="Polygon">
+	<input a0="(9, -6)" a1="(10, -6)" a2="(10, -5)" a3="(9, -5)"/>
+	<output a0="sqr_{40}" a1="a_{40}" a2="b_{40}" a3="c_{40}" a4="d_{40}"/>
+</command>
+<element type="polygon" label="sqr_{40}">
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<show object="true" label="false"/>
+	<objColor r="255" g="255" b="255" alpha="0.1"/>
+	<layer val="0"/>
+	<labelOffset x="66" y="-45"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<ggbscript  val="SetValue[o_{40}, !o_{40}]&#10;SetColor[sqr_{40}, If[o_{40}, &quot;red&quot;, &quot;white&quot;]]&#10;SetColor[a_{40}, &quot;black&quot;]&#10;SetColor[b_{40}, &quot;black&quot;]&#10;SetColor[c_{40}, &quot;black&quot;]&#10;SetColor[d_{40}, &quot;black&quot;]&#10;"/>
+</element>
+<element type="segment" label="a_{40}">
+	<show object="true" label="false"/>
+	<condition showObject="o_{40}"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<selectionAllowed val="false"/>
+	<coords x="0.0" y="1.0" z="6.0"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment" label="b_{40}">
+	<show object="true" label="false"/>
+	<condition showObject="o_{40}"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<selectionAllowed val="false"/>
+	<coords x="-1.0" y="0.0" z="10.0"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment" label="c_{40}">
+	<show object="true" label="false"/>
+	<condition showObject="o_{40}"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<selectionAllowed val="false"/>
+	<coords x="0.0" y="-1.0" z="-5.0"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment" label="d_{40}">
+	<show object="true" label="false"/>
+	<condition showObject="o_{40}"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<selectionAllowed val="false"/>
+	<coords x="1.0" y="0.0" z="-9.0"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<command name="Polygon">
+	<input a0="(10, -6)" a1="(11, -6)" a2="(11, -5)" a3="(10, -5)"/>
+	<output a0="sqr_{41}" a1="a_{41}" a2="b_{41}" a3="c_{41}" a4="d_{41}"/>
+</command>
+<element type="polygon" label="sqr_{41}">
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<show object="true" label="false"/>
+	<objColor r="255" g="255" b="255" alpha="0.1"/>
+	<layer val="0"/>
+	<labelOffset x="66" y="-45"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<ggbscript  val="SetValue[o_{41}, !o_{41}]&#10;SetColor[sqr_{41}, If[o_{41}, &quot;red&quot;, &quot;white&quot;]]&#10;SetColor[a_{41}, &quot;black&quot;]&#10;SetColor[b_{41}, &quot;black&quot;]&#10;SetColor[c_{41}, &quot;black&quot;]&#10;SetColor[d_{41}, &quot;black&quot;]&#10;&#10;"/>
+</element>
+<element type="segment" label="a_{41}">
+	<show object="true" label="false"/>
+	<condition showObject="o_{41}"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<selectionAllowed val="false"/>
+	<coords x="0.0" y="1.0" z="6.0"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment" label="b_{41}">
+	<show object="true" label="false"/>
+	<condition showObject="o_{41}"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<selectionAllowed val="false"/>
+	<coords x="-1.0" y="0.0" z="11.0"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment" label="c_{41}">
+	<show object="true" label="false"/>
+	<condition showObject="o_{41}"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<selectionAllowed val="false"/>
+	<coords x="0.0" y="-1.0" z="-5.0"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment" label="d_{41}">
+	<show object="true" label="false"/>
+	<condition showObject="o_{41}"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<selectionAllowed val="false"/>
+	<coords x="1.0" y="0.0" z="-10.0"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<command name="Polygon">
+	<input a0="(7, -7)" a1="(8, -7)" a2="(8, -6)" a3="(7, -6)"/>
+	<output a0="sqr_{42}" a1="a_{42}" a2="b_{42}" a3="c_{42}" a4="d_{42}"/>
+</command>
+<element type="polygon" label="sqr_{42}">
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<show object="true" label="false"/>
+	<objColor r="255" g="255" b="255" alpha="0.1"/>
+	<layer val="0"/>
+	<labelOffset x="66" y="-45"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<ggbscript  val="SetValue[o_{42}, !o_{42}]&#10;SetColor[sqr_{42}, If[o_{42}, &quot;red&quot;, &quot;white&quot;]]&#10;SetColor[a_{42}, &quot;black&quot;]&#10;SetColor[b_{42}, &quot;black&quot;]&#10;SetColor[c_{42}, &quot;black&quot;]&#10;SetColor[d_{42}, &quot;black&quot;]&#10;&#10;"/>
+</element>
+<element type="segment" label="a_{42}">
+	<show object="true" label="false"/>
+	<condition showObject="o_{42}"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<selectionAllowed val="false"/>
+	<coords x="0.0" y="1.0" z="7.0"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment" label="b_{42}">
+	<show object="true" label="false"/>
+	<condition showObject="o_{42}"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<selectionAllowed val="false"/>
+	<coords x="-1.0" y="0.0" z="8.0"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment" label="c_{42}">
+	<show object="true" label="false"/>
+	<condition showObject="o_{42}"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<selectionAllowed val="false"/>
+	<coords x="0.0" y="-1.0" z="-6.0"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment" label="d_{42}">
+	<show object="true" label="false"/>
+	<condition showObject="o_{42}"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<selectionAllowed val="false"/>
+	<coords x="1.0" y="0.0" z="-7.0"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<command name="Polygon">
+	<input a0="(8, -7)" a1="(9, -7)" a2="(9, -6)" a3="(8, -6)"/>
+	<output a0="sqr_{43}" a1="a_{43}" a2="b_{43}" a3="c_{43}" a4="d_{43}"/>
+</command>
+<element type="polygon" label="sqr_{43}">
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<show object="true" label="false"/>
+	<objColor r="255" g="255" b="255" alpha="0.1"/>
+	<layer val="0"/>
+	<labelOffset x="66" y="-45"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<ggbscript  val="SetValue[o_{43}, !o_{43}]&#10;SetColor[sqr_{43}, If[o_{43}, &quot;red&quot;, &quot;white&quot;]]&#10;SetColor[a_{43}, &quot;black&quot;]&#10;SetColor[b_{43}, &quot;black&quot;]&#10;SetColor[c_{43}, &quot;black&quot;]&#10;SetColor[d_{43}, &quot;black&quot;]&#10;&#10;"/>
+</element>
+<element type="segment" label="a_{43}">
+	<show object="true" label="false"/>
+	<condition showObject="o_{43}"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<selectionAllowed val="false"/>
+	<coords x="0.0" y="1.0" z="7.0"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment" label="b_{43}">
+	<show object="true" label="false"/>
+	<condition showObject="o_{43}"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<selectionAllowed val="false"/>
+	<coords x="-1.0" y="0.0" z="9.0"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment" label="c_{43}">
+	<show object="true" label="false"/>
+	<condition showObject="o_{43}"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<selectionAllowed val="false"/>
+	<coords x="0.0" y="-1.0" z="-6.0"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment" label="d_{43}">
+	<show object="true" label="false"/>
+	<condition showObject="o_{43}"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<selectionAllowed val="false"/>
+	<coords x="1.0" y="0.0" z="-8.0"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<command name="Polygon">
+	<input a0="(9, -7)" a1="(10, -7)" a2="(10, -6)" a3="(9, -6)"/>
+	<output a0="sqr_{44}" a1="a_{44}" a2="b_{44}" a3="c_{44}" a4="d_{44}"/>
+</command>
+<element type="polygon" label="sqr_{44}">
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<show object="true" label="false"/>
+	<objColor r="255" g="255" b="255" alpha="0.1"/>
+	<layer val="0"/>
+	<labelOffset x="66" y="-45"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<ggbscript  val="SetValue[o_{44}, !o_{44}]&#10;SetColor[sqr_{44}, If[o_{44}, &quot;red&quot;, &quot;white&quot;]]&#10;SetColor[a_{44}, &quot;black&quot;]&#10;SetColor[b_{44}, &quot;black&quot;]&#10;SetColor[c_{44}, &quot;black&quot;]&#10;SetColor[d_{44}, &quot;black&quot;]&#10;&#10;"/>
+</element>
+<element type="segment" label="a_{44}">
+	<show object="true" label="false"/>
+	<condition showObject="o_{44}"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<selectionAllowed val="false"/>
+	<coords x="0.0" y="1.0" z="7.0"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment" label="b_{44}">
+	<show object="true" label="false"/>
+	<condition showObject="o_{44}"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<selectionAllowed val="false"/>
+	<coords x="-1.0" y="0.0" z="10.0"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment" label="c_{44}">
+	<show object="true" label="false"/>
+	<condition showObject="o_{44}"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<selectionAllowed val="false"/>
+	<coords x="0.0" y="-1.0" z="-6.0"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment" label="d_{44}">
+	<show object="true" label="false"/>
+	<condition showObject="o_{44}"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<selectionAllowed val="false"/>
+	<coords x="1.0" y="0.0" z="-9.0"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<command name="Polygon">
+	<input a0="(10, -7)" a1="(11, -7)" a2="(11, -6)" a3="(10, -6)"/>
+	<output a0="sqr_{45}" a1="a_{45}" a2="b_{45}" a3="c_{45}" a4="d_{45}"/>
+</command>
+<element type="polygon" label="sqr_{45}">
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<show object="true" label="false"/>
+	<objColor r="255" g="255" b="255" alpha="0.1"/>
+	<layer val="0"/>
+	<labelOffset x="66" y="-45"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<ggbscript  val="SetValue[o_{45}, !o_{45}]&#10;SetColor[sqr_{45}, If[o_{45}, &quot;red&quot;, &quot;white&quot;]]&#10;SetColor[a_{45}, &quot;black&quot;]&#10;SetColor[b_{45}, &quot;black&quot;]&#10;SetColor[c_{45}, &quot;black&quot;]&#10;SetColor[d_{45}, &quot;black&quot;]&#10;&#10;"/>
+</element>
+<element type="segment" label="a_{45}">
+	<show object="true" label="false"/>
+	<condition showObject="o_{45}"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<selectionAllowed val="false"/>
+	<coords x="0.0" y="1.0" z="7.0"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment" label="b_{45}">
+	<show object="true" label="false"/>
+	<condition showObject="o_{45}"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<selectionAllowed val="false"/>
+	<coords x="-1.0" y="0.0" z="11.0"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment" label="c_{45}">
+	<show object="true" label="false"/>
+	<condition showObject="o_{45}"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<selectionAllowed val="false"/>
+	<coords x="0.0" y="-1.0" z="-6.0"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment" label="d_{45}">
+	<show object="true" label="false"/>
+	<condition showObject="o_{45}"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<selectionAllowed val="false"/>
+	<coords x="1.0" y="0.0" z="-10.0"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<command name="Polygon">
+	<input a0="(7, -8)" a1="(8, -8)" a2="(8, -7)" a3="(7, -7)"/>
+	<output a0="sqr_{46}" a1="a_{46}" a2="b_{46}" a3="c_{46}" a4="d_{46}"/>
+</command>
+<element type="polygon" label="sqr_{46}">
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<show object="true" label="false"/>
+	<objColor r="255" g="255" b="255" alpha="0.1"/>
+	<layer val="0"/>
+	<labelOffset x="66" y="-45"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<ggbscript  val="SetValue[o_{46}, !o_{46}]&#10;SetColor[sqr_{46}, If[o_{46}, &quot;red&quot;, &quot;white&quot;]]&#10;SetColor[a_{46}, &quot;black&quot;]&#10;SetColor[b_{46}, &quot;black&quot;]&#10;SetColor[c_{46}, &quot;black&quot;]&#10;SetColor[d_{46}, &quot;black&quot;]&#10;"/>
+</element>
+<element type="segment" label="a_{46}">
+	<show object="true" label="false"/>
+	<condition showObject="o_{46}"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<selectionAllowed val="false"/>
+	<coords x="0.0" y="1.0" z="8.0"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment" label="b_{46}">
+	<show object="true" label="false"/>
+	<condition showObject="o_{46}"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<selectionAllowed val="false"/>
+	<coords x="-1.0" y="0.0" z="8.0"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment" label="c_{46}">
+	<show object="true" label="false"/>
+	<condition showObject="o_{46}"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<selectionAllowed val="false"/>
+	<coords x="0.0" y="-1.0" z="-7.0"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment" label="d_{46}">
+	<show object="true" label="false"/>
+	<condition showObject="o_{46}"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<selectionAllowed val="false"/>
+	<coords x="1.0" y="0.0" z="-7.0"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<command name="Polygon">
+	<input a0="(8, -8)" a1="(9, -8)" a2="(9, -7)" a3="(8, -7)"/>
+	<output a0="sqr_{47}" a1="a_{47}" a2="b_{47}" a3="c_{47}" a4="d_{47}"/>
+</command>
+<element type="polygon" label="sqr_{47}">
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<show object="true" label="false"/>
+	<objColor r="255" g="255" b="255" alpha="0.1"/>
+	<layer val="0"/>
+	<labelOffset x="66" y="-45"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<ggbscript  val="SetValue[o_{47}, !o_{47}]&#10;SetColor[sqr_{47}, If[o_{47}, &quot;red&quot;, &quot;white&quot;]]&#10;SetColor[a_{47}, &quot;black&quot;]&#10;SetColor[b_{47}, &quot;black&quot;]&#10;SetColor[c_{47}, &quot;black&quot;]&#10;SetColor[d_{47}, &quot;black&quot;]&#10;"/>
+</element>
+<element type="segment" label="a_{47}">
+	<show object="true" label="false"/>
+	<condition showObject="o_{47}"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<selectionAllowed val="false"/>
+	<coords x="0.0" y="1.0" z="8.0"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment" label="b_{47}">
+	<show object="true" label="false"/>
+	<condition showObject="o_{47}"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<selectionAllowed val="false"/>
+	<coords x="-1.0" y="0.0" z="9.0"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment" label="c_{47}">
+	<show object="true" label="false"/>
+	<condition showObject="o_{47}"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<selectionAllowed val="false"/>
+	<coords x="0.0" y="-1.0" z="-7.0"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment" label="d_{47}">
+	<show object="true" label="false"/>
+	<condition showObject="o_{47}"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<selectionAllowed val="false"/>
+	<coords x="1.0" y="0.0" z="-8.0"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<command name="Polygon">
+	<input a0="(9, -8)" a1="(10, -8)" a2="(10, -7)" a3="(9, -7)"/>
+	<output a0="sqr_{48}" a1="a_{48}" a2="b_{48}" a3="c_{48}" a4="d_{48}"/>
+</command>
+<element type="polygon" label="sqr_{48}">
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<show object="true" label="false"/>
+	<objColor r="255" g="255" b="255" alpha="0.1"/>
+	<layer val="0"/>
+	<labelOffset x="66" y="-45"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<ggbscript  val="SetValue[o_{48}, !o_{48}]&#10;SetColor[sqr_{48}, If[o_{48}, &quot;red&quot;, &quot;white&quot;]]&#10;SetColor[a_{48}, &quot;black&quot;]&#10;SetColor[b_{48}, &quot;black&quot;]&#10;SetColor[c_{48}, &quot;black&quot;]&#10;SetColor[d_{48}, &quot;black&quot;]&#10;&#10;"/>
+</element>
+<element type="segment" label="a_{48}">
+	<show object="true" label="false"/>
+	<condition showObject="o_{48}"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<selectionAllowed val="false"/>
+	<coords x="0.0" y="1.0" z="8.0"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment" label="b_{48}">
+	<show object="true" label="false"/>
+	<condition showObject="o_{48}"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<selectionAllowed val="false"/>
+	<coords x="-1.0" y="0.0" z="10.0"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment" label="c_{48}">
+	<show object="true" label="false"/>
+	<condition showObject="o_{48}"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<selectionAllowed val="false"/>
+	<coords x="0.0" y="-1.0" z="-7.0"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment" label="d_{48}">
+	<show object="true" label="false"/>
+	<condition showObject="o_{48}"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<selectionAllowed val="false"/>
+	<coords x="1.0" y="0.0" z="-9.0"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<command name="Polygon">
+	<input a0="(10, -9)" a1="(11, -9)" a2="(11, -8)" a3="(10, -8)"/>
+	<output a0="sqr_{49}" a1="a_{49}" a2="b_{49}" a3="c_{49}" a4="d_{49}"/>
+</command>
+<element type="polygon" label="sqr_{49}">
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<show object="true" label="false"/>
+	<objColor r="255" g="255" b="255" alpha="0.1"/>
+	<layer val="0"/>
+	<labelOffset x="66" y="-45"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<ggbscript  val="SetValue[o_{49}, !o_{49}]&#10;SetColor[sqr_{49}, If[o_{49}, &quot;red&quot;, &quot;white&quot;]]&#10;SetColor[a_{49}, &quot;black&quot;]&#10;SetColor[b_{49}, &quot;black&quot;]&#10;SetColor[c_{49}, &quot;black&quot;]&#10;SetColor[d_{49}, &quot;black&quot;]&#10;"/>
+</element>
+<element type="segment" label="a_{49}">
+	<show object="true" label="false"/>
+	<condition showObject="o_{49}"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<selectionAllowed val="false"/>
+	<coords x="0.0" y="1.0" z="9.0"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment" label="b_{49}">
+	<show object="true" label="false"/>
+	<condition showObject="o_{49}"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<selectionAllowed val="false"/>
+	<coords x="-1.0" y="0.0" z="11.0"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment" label="c_{49}">
+	<show object="true" label="false"/>
+	<condition showObject="o_{49}"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<selectionAllowed val="false"/>
+	<coords x="0.0" y="-1.0" z="-8.0"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment" label="d_{49}">
+	<show object="true" label="false"/>
+	<condition showObject="o_{49}"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<selectionAllowed val="false"/>
+	<coords x="1.0" y="0.0" z="-10.0"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<command name="Polygon">
+	<input a0="(7, -9)" a1="(8, -9)" a2="(8, -8)" a3="(7, -8)"/>
+	<output a0="sqr_{50}" a1="a_{50}" a2="b_{50}" a3="c_{50}" a4="d_{50}"/>
+</command>
+<element type="polygon" label="sqr_{50}">
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<show object="true" label="false"/>
+	<objColor r="255" g="255" b="255" alpha="0.1"/>
+	<layer val="0"/>
+	<labelOffset x="66" y="-45"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<ggbscript  val="SetValue[o_{50}, !o_{50}]&#10;SetColor[sqr_{50}, If[o_{50}, &quot;red&quot;, &quot;white&quot;]]&#10;SetColor[a_{50}, &quot;black&quot;]&#10;SetColor[b_{50}, &quot;black&quot;]&#10;SetColor[c_{50}, &quot;black&quot;]&#10;SetColor[d_{50}, &quot;black&quot;]&#10;"/>
+</element>
+<element type="segment" label="a_{50}">
+	<show object="true" label="false"/>
+	<condition showObject="o_{50}"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<selectionAllowed val="false"/>
+	<coords x="0.0" y="1.0" z="9.0"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment" label="b_{50}">
+	<show object="true" label="false"/>
+	<condition showObject="o_{50}"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<selectionAllowed val="false"/>
+	<coords x="-1.0" y="0.0" z="8.0"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment" label="c_{50}">
+	<show object="true" label="false"/>
+	<condition showObject="o_{50}"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<selectionAllowed val="false"/>
+	<coords x="0.0" y="-1.0" z="-8.0"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment" label="d_{50}">
+	<show object="true" label="false"/>
+	<condition showObject="o_{50}"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<selectionAllowed val="false"/>
+	<coords x="1.0" y="0.0" z="-7.0"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<command name="Polygon">
+	<input a0="(8, -9)" a1="(9, -9)" a2="(9, -8)" a3="(8, -8)"/>
+	<output a0="sqr_{51}" a1="a_{51}" a2="b_{51}" a3="c_{51}" a4="d_{51}"/>
+</command>
+<element type="polygon" label="sqr_{51}">
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<show object="true" label="false"/>
+	<objColor r="255" g="255" b="255" alpha="0.1"/>
+	<layer val="0"/>
+	<labelOffset x="66" y="-45"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<ggbscript  val="SetValue[o_{51}, !o_{51}]&#10;SetColor[sqr_{51}, If[o_{51}, &quot;red&quot;, &quot;white&quot;]]&#10;SetColor[a_{51}, &quot;black&quot;]&#10;SetColor[b_{51}, &quot;black&quot;]&#10;SetColor[c_{51}, &quot;black&quot;]&#10;SetColor[d_{51}, &quot;black&quot;]&#10;"/>
+</element>
+<element type="segment" label="a_{51}">
+	<show object="true" label="false"/>
+	<condition showObject="o_{51}"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<selectionAllowed val="false"/>
+	<coords x="0.0" y="1.0" z="9.0"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment" label="b_{51}">
+	<show object="true" label="false"/>
+	<condition showObject="o_{51}"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<selectionAllowed val="false"/>
+	<coords x="-1.0" y="0.0" z="9.0"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment" label="c_{51}">
+	<show object="true" label="false"/>
+	<condition showObject="o_{51}"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<selectionAllowed val="false"/>
+	<coords x="0.0" y="-1.0" z="-8.0"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment" label="d_{51}">
+	<show object="true" label="false"/>
+	<condition showObject="o_{51}"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<selectionAllowed val="false"/>
+	<coords x="1.0" y="0.0" z="-8.0"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<command name="Polygon">
+	<input a0="(9, -9)" a1="(10, -9)" a2="(10, -8)" a3="(9, -8)"/>
+	<output a0="sqr_{52}" a1="a_{52}" a2="b_{52}" a3="c_{52}" a4="d_{52}"/>
+</command>
+<element type="polygon" label="sqr_{52}">
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<show object="true" label="false"/>
+	<objColor r="255" g="255" b="255" alpha="0.1"/>
+	<layer val="0"/>
+	<labelOffset x="66" y="-45"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<ggbscript  val="SetValue[o_{52}, !o_{52}]&#10;SetColor[sqr_{52}, If[o_{52}, &quot;red&quot;, &quot;white&quot;]]&#10;SetColor[a_{52}, &quot;black&quot;]&#10;SetColor[b_{52}, &quot;black&quot;]&#10;SetColor[c_{52}, &quot;black&quot;]&#10;SetColor[d_{52}, &quot;black&quot;]&#10;"/>
+</element>
+<element type="segment" label="a_{52}">
+	<show object="true" label="false"/>
+	<condition showObject="o_{52}"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<selectionAllowed val="false"/>
+	<coords x="0.0" y="1.0" z="9.0"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment" label="b_{52}">
+	<show object="true" label="false"/>
+	<condition showObject="o_{52}"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<selectionAllowed val="false"/>
+	<coords x="-1.0" y="0.0" z="10.0"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment" label="c_{52}">
+	<show object="true" label="false"/>
+	<condition showObject="o_{52}"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<selectionAllowed val="false"/>
+	<coords x="0.0" y="-1.0" z="-8.0"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment" label="d_{52}">
+	<show object="true" label="false"/>
+	<condition showObject="o_{52}"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<selectionAllowed val="false"/>
+	<coords x="1.0" y="0.0" z="-9.0"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<command name="Polygon">
+	<input a0="(10, -8)" a1="(11, -8)" a2="(11, -7)" a3="(10, -7)"/>
+	<output a0="sqr_{53}" a1="a_{53}" a2="b_{53}" a3="c_{53}" a4="d_{53}"/>
+</command>
+<element type="polygon" label="sqr_{53}">
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<show object="true" label="false"/>
+	<objColor r="255" g="255" b="255" alpha="0.1"/>
+	<layer val="0"/>
+	<labelOffset x="66" y="-45"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<ggbscript  val="SetValue[o_{53}, !o_{53}]&#10;SetColor[sqr_{53}, If[o_{53}, &quot;red&quot;, &quot;white&quot;]]&#10;SetColor[a_{53}, &quot;black&quot;]&#10;SetColor[b_{53}, &quot;black&quot;]&#10;SetColor[c_{53}, &quot;black&quot;]&#10;SetColor[d_{53}, &quot;black&quot;]&#10;"/>
+</element>
+<element type="segment" label="a_{53}">
+	<show object="true" label="false"/>
+	<condition showObject="o_{53}"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<selectionAllowed val="false"/>
+	<coords x="0.0" y="1.0" z="8.0"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment" label="b_{53}">
+	<show object="true" label="false"/>
+	<condition showObject="o_{53}"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<selectionAllowed val="false"/>
+	<coords x="-1.0" y="0.0" z="11.0"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment" label="c_{53}">
+	<show object="true" label="false"/>
+	<condition showObject="o_{53}"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<selectionAllowed val="false"/>
+	<coords x="0.0" y="-1.0" z="-7.0"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment" label="d_{53}">
+	<show object="true" label="false"/>
+	<condition showObject="o_{53}"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<selectionAllowed val="false"/>
+	<coords x="1.0" y="0.0" z="-10.0"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="boolean" label="o_2">
+	<value val="false"/>
+	<show object="false" label="true"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelOffset x="389" y="128"/>
+	<labelMode val="0"/>
+</element>
+<element type="boolean" label="o_3">
+	<value val="false"/>
+	<show object="false" label="true"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelOffset x="390" y="128"/>
+	<labelMode val="0"/>
+</element>
+<element type="boolean" label="o_4">
+	<value val="false"/>
+	<show object="false" label="true"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelOffset x="391" y="128"/>
+	<labelMode val="0"/>
+</element>
+<element type="boolean" label="o_5">
+	<value val="false"/>
+	<show object="false" label="true"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelOffset x="391" y="128"/>
+	<labelMode val="0"/>
+</element>
+<element type="boolean" label="o_6">
+	<value val="false"/>
+	<show object="false" label="true"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelOffset x="391" y="128"/>
+	<labelMode val="0"/>
+</element>
+<element type="boolean" label="o_7">
+	<value val="false"/>
+	<show object="false" label="true"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelOffset x="391" y="128"/>
+	<labelMode val="0"/>
+</element>
+<element type="boolean" label="o_8">
+	<value val="false"/>
+	<show object="false" label="true"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelOffset x="391" y="128"/>
+	<labelMode val="0"/>
+</element>
+<element type="boolean" label="o_9">
+	<value val="false"/>
+	<show object="false" label="true"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelOffset x="389" y="128"/>
+	<labelMode val="0"/>
+</element>
+<element type="boolean" label="o_{10}">
+	<value val="false"/>
+	<show object="false" label="true"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelOffset x="436" y="162"/>
+	<labelMode val="0"/>
+</element>
+<element type="boolean" label="o_{11}">
+	<value val="false"/>
+	<show object="false" label="true"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelOffset x="434" y="162"/>
+	<labelMode val="0"/>
+</element>
+<element type="boolean" label="o_{12}">
+	<value val="false"/>
+	<show object="false" label="true"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelOffset x="482" y="199"/>
+	<labelMode val="0"/>
+</element>
+<element type="boolean" label="o_{13}">
+	<value val="false"/>
+	<show object="false" label="true"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelOffset x="871" y="327"/>
+	<labelMode val="0"/>
+</element>
+<element type="boolean" label="o_{14}">
+	<value val="false"/>
+	<show object="false" label="true"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelOffset x="872" y="327"/>
+	<labelMode val="0"/>
+</element>
+<element type="boolean" label="o_{15}">
+	<value val="false"/>
+	<show object="false" label="true"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelOffset x="873" y="327"/>
+	<labelMode val="0"/>
+</element>
+<element type="boolean" label="o_{16}">
+	<value val="false"/>
+	<show object="false" label="true"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelOffset x="873" y="327"/>
+	<labelMode val="0"/>
+</element>
+<element type="boolean" label="o_{17}">
+	<value val="false"/>
+	<show object="false" label="true"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelOffset x="873" y="327"/>
+	<labelMode val="0"/>
+</element>
+<element type="boolean" label="o_{18}">
+	<value val="false"/>
+	<show object="false" label="true"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelOffset x="873" y="327"/>
+	<labelMode val="0"/>
+</element>
+<element type="boolean" label="o_{19}">
+	<value val="false"/>
+	<show object="false" label="true"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelOffset x="873" y="327"/>
+	<labelMode val="0"/>
+</element>
+<element type="boolean" label="o_{20}">
+	<value val="false"/>
+	<show object="false" label="true"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelOffset x="871" y="327"/>
+	<labelMode val="0"/>
+</element>
+<element type="boolean" label="o_{21}">
+	<value val="false"/>
+	<show object="false" label="true"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelOffset x="918" y="361"/>
+	<labelMode val="0"/>
+</element>
+<element type="boolean" label="o_{22}">
+	<value val="false"/>
+	<show object="false" label="true"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelOffset x="427" y="196"/>
+	<labelMode val="0"/>
+</element>
+<element type="boolean" label="o_{23}">
+	<value val="false"/>
+	<show object="false" label="true"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelOffset x="816" y="324"/>
+	<labelMode val="0"/>
+</element>
+<element type="boolean" label="o_{24}">
+	<value val="false"/>
+	<show object="false" label="true"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelOffset x="817" y="324"/>
+	<labelMode val="0"/>
+</element>
+<element type="boolean" label="o_{25}">
+	<value val="false"/>
+	<show object="false" label="true"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelOffset x="818" y="324"/>
+	<labelMode val="0"/>
+</element>
+<element type="boolean" label="o_{26}">
+	<value val="false"/>
+	<show object="false" label="true"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelOffset x="818" y="324"/>
+	<labelMode val="0"/>
+</element>
+<element type="boolean" label="o_{27}">
+	<value val="false"/>
+	<show object="false" label="true"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelOffset x="818" y="324"/>
+	<labelMode val="0"/>
+</element>
+<element type="boolean" label="o_{28}">
+	<value val="false"/>
+	<show object="false" label="true"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelOffset x="818" y="324"/>
+	<labelMode val="0"/>
+</element>
+<element type="boolean" label="o_{29}">
+	<value val="false"/>
+	<show object="false" label="true"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelOffset x="818" y="324"/>
+	<labelMode val="0"/>
+</element>
+<element type="boolean" label="o_{30}">
+	<value val="false"/>
+	<show object="false" label="true"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelOffset x="816" y="324"/>
+	<labelMode val="0"/>
+</element>
+<element type="boolean" label="o_{31}">
+	<value val="false"/>
+	<show object="false" label="true"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelOffset x="863" y="358"/>
+	<labelMode val="0"/>
+</element>
+<element type="boolean" label="o_{32}">
+	<value val="false"/>
+	<show object="false" label="true"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelOffset x="449" y="193"/>
+	<labelMode val="0"/>
+</element>
+<element type="boolean" label="o_{33}">
+	<value val="false"/>
+	<show object="false" label="true"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelOffset x="838" y="321"/>
+	<labelMode val="0"/>
+</element>
+<element type="boolean" label="o_{34}">
+	<value val="false"/>
+	<show object="false" label="true"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelOffset x="839" y="321"/>
+	<labelMode val="0"/>
+</element>
+<element type="boolean" label="o_{35}">
+	<value val="false"/>
+	<show object="false" label="true"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelOffset x="840" y="321"/>
+	<labelMode val="0"/>
+</element>
+<element type="boolean" label="o_{36}">
+	<value val="false"/>
+	<show object="false" label="true"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelOffset x="840" y="321"/>
+	<labelMode val="0"/>
+</element>
+<element type="boolean" label="o_{37}">
+	<value val="false"/>
+	<show object="false" label="true"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelOffset x="840" y="321"/>
+	<labelMode val="0"/>
+</element>
+<element type="boolean" label="o_{38}">
+	<value val="false"/>
+	<show object="false" label="true"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelOffset x="840" y="321"/>
+	<labelMode val="0"/>
+</element>
+<element type="boolean" label="o_{39}">
+	<value val="false"/>
+	<show object="false" label="true"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelOffset x="840" y="321"/>
+	<labelMode val="0"/>
+</element>
+<element type="boolean" label="o_{40}">
+	<value val="false"/>
+	<show object="false" label="true"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelOffset x="838" y="321"/>
+	<labelMode val="0"/>
+</element>
+<element type="boolean" label="o_{41}">
+	<value val="false"/>
+	<show object="false" label="true"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelOffset x="885" y="355"/>
+	<labelMode val="0"/>
+</element>
+<element type="boolean" label="o_{42}">
+	<value val="false"/>
+	<show object="false" label="true"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelOffset x="408" y="139"/>
+	<labelMode val="0"/>
+</element>
+<element type="boolean" label="o_{43}">
+	<value val="false"/>
+	<show object="false" label="true"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelOffset x="797" y="267"/>
+	<labelMode val="0"/>
+</element>
+<element type="boolean" label="o_{44}">
+	<value val="false"/>
+	<show object="false" label="true"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelOffset x="798" y="267"/>
+	<labelMode val="0"/>
+</element>
+<element type="boolean" label="o_{45}">
+	<value val="false"/>
+	<show object="false" label="true"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelOffset x="799" y="267"/>
+	<labelMode val="0"/>
+</element>
+<element type="boolean" label="o_{46}">
+	<value val="false"/>
+	<show object="false" label="true"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelOffset x="799" y="267"/>
+	<labelMode val="0"/>
+</element>
+<element type="boolean" label="o_{47}">
+	<value val="false"/>
+	<show object="false" label="true"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelOffset x="799" y="267"/>
+	<labelMode val="0"/>
+</element>
+<element type="boolean" label="o_{48}">
+	<value val="false"/>
+	<show object="false" label="true"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelOffset x="799" y="267"/>
+	<labelMode val="0"/>
+</element>
+<element type="boolean" label="o_{49}">
+	<value val="false"/>
+	<show object="false" label="true"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelOffset x="799" y="267"/>
+	<labelMode val="0"/>
+</element>
+<element type="boolean" label="o_{50}">
+	<value val="false"/>
+	<show object="false" label="true"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelOffset x="797" y="267"/>
+	<labelMode val="0"/>
+</element>
+<element type="boolean" label="o_{51}">
+	<value val="false"/>
+	<show object="false" label="true"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelOffset x="844" y="301"/>
+	<labelMode val="0"/>
+</element>
+<element type="boolean" label="o_{52}">
+	<value val="false"/>
+	<show object="false" label="true"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelOffset x="203" y="0"/>
+	<labelMode val="0"/>
+</element>
+<element type="boolean" label="o_{53}">
+	<value val="false"/>
+	<show object="false" label="true"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelOffset x="250" y="34"/>
+	<labelMode val="0"/>
+</element>
+<expression label="text1" exp="&quot;A&quot;"/>
+<element type="text" label="text1">
+	<show object="true" label="false"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<font serif="false" size="16" style="0"/>
+	<startPoint  x="1.3112246201344606" y="0.2952436759440406" z="1.0"/>
+</element>
+<expression label="text1_1" exp="&quot;B&quot;"/>
+<element type="text" label="text1_1">
+	<show object="true" label="false"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<font serif="false" size="16" style="0"/>
+	<startPoint  x="0.31625842451088937" y="-1.7713857909484851" z="1.0"/>
+</element>
+<expression label="text1_2" exp="&quot;C&quot;"/>
+<element type="text" label="text1_2">
+	<show object="true" label="false"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<font serif="false" size="16" style="0"/>
+	<startPoint  x="4.304381123013614" y="-1.7494730288687999" z="1.0"/>
+</element>
+<expression label="text1_3" exp="&quot;D&quot;"/>
+<element type="text" label="text1_3">
+	<show object="true" label="false"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<font serif="false" size="16" style="0"/>
+	<startPoint  x="-0.7151340929640908" y="-6.745033910709302" z="1.0"/>
+</element>
+<expression label="text1_4" exp="&quot;E&quot;"/>
+<element type="text" label="text1_4">
+	<show object="true" label="false"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<font serif="false" size="16" style="0"/>
+	<startPoint  x="6.320355234344663" y="-5.759508489451219" z="1.0"/>
+</element>
+<expression label="A1" exp="&quot;圖&quot;"/>
+<element type="text" label="A1">
+	<show object="false" label="false"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+</element>
+<expression label="A2" exp="&quot;A&quot;"/>
+<element type="text" label="A2">
+	<show object="false" label="false"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+</element>
+<expression label="A3" exp="&quot;B&quot;"/>
+<element type="text" label="A3">
+	<show object="false" label="false"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+</element>
+<expression label="A4" exp="&quot;C&quot;"/>
+<element type="text" label="A4">
+	<show object="false" label="false"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+</element>
+<expression label="A5" exp="&quot;D&quot;"/>
+<element type="text" label="A5">
+	<show object="false" label="false"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+</element>
+<expression label="A6" exp="&quot;E&quot;"/>
+<element type="text" label="A6">
+	<show object="false" label="false"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+</element>
+<expression label="B1" exp="&quot;面積 (cm²)&quot;"/>
+<element type="text" label="B1">
+	<show object="false" label="false"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+</element>
+<expression label="C1" exp="&quot;長 (cm)&quot;"/>
+<element type="text" label="C1">
+	<show object="false" label="false"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+</element>
+<expression label="D1" exp="&quot;闊 (cm)&quot;"/>
+<element type="text" label="D1">
+	<show object="false" label="false"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+</element>
+<command name="Polygon">
+	<input a0="(9.5, 0.5)" a1="(10.5, 0.5)" a2="(10.5, 1.5)" a3="(9.5, 1.5)"/>
+	<output a0="poly6" a1="f_1" a2="g_1" a3="h_1" a4="i_1"/>
+</command>
+<element type="polygon" label="poly6">
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<show object="true" label="false"/>
+	<objColor r="255" g="0" b="0" alpha="0.1"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+</element>
+<element type="segment" label="f_1">
+	<show object="true" label="false"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<coords x="0.0" y="1.0" z="-0.5"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment" label="g_1">
+	<show object="true" label="false"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<coords x="-1.0" y="0.0" z="10.5"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment" label="h_1">
+	<show object="true" label="false"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<coords x="0.0" y="-1.0" z="1.5"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment" label="i_1">
+	<show object="true" label="false"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<coords x="1.0" y="0.0" z="-9.5"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<expression label="text2" exp="&quot;1 cm² :&quot;"/>
+<element type="text" label="text2">
+	<show object="true" label="false"/>
+	<objColor r="255" g="0" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<font serif="false" size="0" style="1"/>
+	<startPoint  x="7.810423055763273" y="0.8800584206934416" z="1.0"/>
+</element>
+<expression label="text3" exp="&quot;1 cm&quot;"/>
+<element type="text" label="text3">
+	<show object="true" label="false"/>
+	<objColor r="255" g="0" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<startPoint  x="10.571431077803627" y="0.858145658613757" z="1.0"/>
+</element>
+<expression label="text3_1" exp="&quot;1 cm&quot;"/>
+<element type="text" label="text3_1">
+	<show object="true" label="false"/>
+	<objColor r="255" g="0" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<startPoint  x="9.519618497978731" y="1.668917855562115" z="1.0"/>
+</element>
+<expression label="text4" exp="&quot;點擊 &quot;"/>
+<element type="text" label="text4">
+	<show object="true" label="false"/>
+	<objColor r="255" g="0" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<font serif="false" size="0" style="1"/>
+	<startPoint  x="-0.12533424480792377" y="2.5393593887146095" z="1.0"/>
+</element>
+<expression label="text5" exp="&quot;       各圖形內的空白位置，找出各圖形的面積。&quot;"/>
+<element type="text" label="text5">
+	<show object="true" label="false"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<startPoint  x="0.0603332265991714" y="2.5361537595342933" z="1.0"/>
+</element>
+<command name="Segment">
+	<input a0="(2, 0)" a1="(7, 0)"/>
+	<output a0="a"/>
+</command>
+<element type="segment" label="a">
+	<show object="true" label="false"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<coords x="0.0" y="5.0" z="0.0"/>
+	<lineStyle thickness="4" type="0" typeHidden="1"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<command name="Segment">
+	<input a0="(2, 0)" a1="(2, 1)"/>
+	<output a0="b"/>
+</command>
+<element type="segment" label="b">
+	<show object="true" label="false"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<coords x="-1.0" y="0.0" z="2.0"/>
+	<lineStyle thickness="4" type="0" typeHidden="1"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<command name="Segment">
+	<input a0="(2, 1)" a1="(7, 1)"/>
+	<output a0="c"/>
+</command>
+<element type="segment" label="c">
+	<show object="true" label="false"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<coords x="0.0" y="5.0" z="-5.0"/>
+	<lineStyle thickness="4" type="0" typeHidden="1"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<command name="Segment">
+	<input a0="(7, 0)" a1="(7, 1)"/>
+	<output a0="d"/>
+</command>
+<element type="segment" label="d">
+	<show object="true" label="false"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<coords x="-1.0" y="0.0" z="7.0"/>
+	<lineStyle thickness="4" type="0" typeHidden="1"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<command name="Segment">
+	<input a0="(1, -1)" a1="(3, -1)"/>
+	<output a0="e"/>
+</command>
+<element type="segment" label="e">
+	<show object="true" label="false"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<coords x="0.0" y="2.0" z="2.0"/>
+	<lineStyle thickness="4" type="0" typeHidden="1"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<command name="Segment">
+	<input a0="(1, -1)" a1="(1, -5)"/>
+	<output a0="f"/>
+</command>
+<element type="segment" label="f">
+	<show object="true" label="false"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<coords x="4.0" y="0.0" z="-4.0"/>
+	<lineStyle thickness="4" type="0" typeHidden="1"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<command name="Segment">
+	<input a0="(3, -5)" a1="(3, -1)"/>
+	<output a0="g"/>
+</command>
+<element type="segment" label="g">
+	<show object="true" label="false"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<coords x="-4.0" y="0.0" z="12.0"/>
+	<lineStyle thickness="4" type="0" typeHidden="1"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<command name="Segment">
+	<input a0="(3, -5)" a1="(1, -5)"/>
+	<output a0="h"/>
+</command>
+<element type="segment" label="h">
+	<show object="true" label="false"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<coords x="0.0" y="-2.0" z="-10.0"/>
+	<lineStyle thickness="4" type="0" typeHidden="1"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<command name="Segment">
+	<input a0="(5, -4)" a1="(5, -1)"/>
+	<output a0="i"/>
+</command>
+<element type="segment" label="i">
+	<show object="true" label="false"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<coords x="-3.0" y="0.0" z="15.0"/>
+	<lineStyle thickness="4" type="0" typeHidden="1"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<command name="Segment">
+	<input a0="(0, -6)" a1="(0, -9)"/>
+	<output a0="m"/>
+</command>
+<element type="segment" label="m">
+	<show object="true" label="false"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<coords x="3.0" y="0.0" z="0.0"/>
+	<lineStyle thickness="4" type="0" typeHidden="1"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<command name="Segment">
+	<input a0="(5, -9)" a1="(0, -9)"/>
+	<output a0="n"/>
+</command>
+<element type="segment" label="n">
+	<show object="true" label="false"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<coords x="0.0" y="-5.0" z="-45.0"/>
+	<lineStyle thickness="4" type="0" typeHidden="1"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<command name="Segment">
+	<input a0="(5, -9)" a1="(5, -6)"/>
+	<output a0="p"/>
+</command>
+<element type="segment" label="p">
+	<show object="true" label="false"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<coords x="-3.0" y="0.0" z="15.0"/>
+	<lineStyle thickness="4" type="0" typeHidden="1"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<command name="Segment">
+	<input a0="(0, -6)" a1="(5, -6)"/>
+	<output a0="q"/>
+</command>
+<element type="segment" label="q">
+	<show object="true" label="false"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<coords x="0.0" y="5.0" z="30.0"/>
+	<lineStyle thickness="4" type="0" typeHidden="1"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<command name="Segment">
+	<input a0="(7, -5)" a1="(11, -5)"/>
+	<output a0="r"/>
+</command>
+<element type="segment" label="r">
+	<show object="true" label="false"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<coords x="0.0" y="4.0" z="20.0"/>
+	<lineStyle thickness="4" type="0" typeHidden="1"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<command name="Segment">
+	<input a0="(7, -5)" a1="(7, -9)"/>
+	<output a0="s"/>
+</command>
+<element type="segment" label="s">
+	<show object="true" label="false"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<coords x="4.0" y="0.0" z="-28.0"/>
+	<lineStyle thickness="4" type="0" typeHidden="1"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<command name="Segment">
+	<input a0="(11, -9)" a1="(7, -9)"/>
+	<output a0="t"/>
+</command>
+<element type="segment" label="t">
+	<show object="true" label="false"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<coords x="0.0" y="-4.0" z="-36.0"/>
+	<lineStyle thickness="4" type="0" typeHidden="1"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<command name="Segment">
+	<input a0="(11, -9)" a1="(11, -5)"/>
+	<output a0="e_1"/>
+</command>
+<element type="segment" label="e_1">
+	<show object="true" label="false"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<coords x="-4.0" y="0.0" z="44.0"/>
+	<lineStyle thickness="4" type="0" typeHidden="1"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<command name="Segment">
+	<input a0="(5, -1)" a1="(8, -1)"/>
+	<output a0="k"/>
+</command>
+<element type="segment" label="k">
+	<show object="true" label="false"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<coords x="0.0" y="3.0" z="3.0"/>
+	<lineStyle thickness="4" type="0" typeHidden="1"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<command name="Segment">
+	<input a0="(8, -4)" a1="(8, -1)"/>
+	<output a0="l"/>
+</command>
+<element type="segment" label="l">
+	<show object="true" label="false"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<coords x="-3.0" y="0.0" z="24.0"/>
+	<lineStyle thickness="4" type="0" typeHidden="1"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<command name="Segment">
+	<input a0="(5, -4)" a1="(8, -4)"/>
+	<output a0="j"/>
+</command>
+<element type="segment" label="j">
+	<show object="true" label="false"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<coords x="0.0" y="3.0" z="12.0"/>
+	<lineStyle thickness="4" type="0" typeHidden="1"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+</construction>
+</geogebra>

@@ -1,0 +1,1009 @@
+<?xml version="1.0" encoding="utf-8"?>
+<geogebra format="5.0" version="5.0.574.0" app="classic" platform="w" id="81b5b492-6523-4fda-9bc8-1476baf96447"  xsi:noNamespaceSchemaLocation="http://www.geogebra.org/apps/xsd/ggb.xsd" xmlns="" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" >
+<gui>
+	<window width="1339" height="566" />
+	<perspectives>
+<perspective id="tmp">
+	<panes>
+		<pane location="" divider="1" orientation="1" />
+	</panes>
+	<views>
+		<view id="512" toolbar="0 | 1 501 5 19 , 67 | 2 15 45 18 , 7 37 | 514 3 9 , 13 44 , 47 | 16 51 | 551 550 11 ,  20 22 21 23 , 55 56 57 , 12 | 69 | 510 511 , 512 513 | 533 531 , 534 532 , 522 523 , 537 536 , 535 | 521 520 | 36 , 38 49 560 | 571 30 29 570 31 33 | 17 | 540 40 41 42 , 27 28 35 , 6 , 502" visible="false" inframe="false" stylebar="false" location="1,1,1" size="500" window="100,100,600,400" />
+		<view id="4" toolbar="0 || 2020 , 2021 , 2022 , 66 || 2001 , 2003 , 2002 , 2004 , 2005 || 2040 , 2041 , 2042 , 2044 , 2043" visible="false" inframe="false" stylebar="false" location="1,1" size="300" window="100,100,600,400" />
+		<view id="2" visible="false" inframe="false" stylebar="false" location="3,3" size="160" window="100,100,600,400" />
+		<view id="8" toolbar="1001 | 1002 | 1003  || 1005 | 1004 || 1006 | 1007 | 1010 || 1008 1009 || 66 68 || 6" visible="false" inframe="false" stylebar="false" location="1,3" size="300" window="100,100,600,400" />
+		<view id="1" visible="true" inframe="false" stylebar="true" location="3" size="1339" window="100,100,600,400" />
+		<view id="16" visible="false" inframe="false" stylebar="false" location="1" size="150" window="50,50,500,500" />
+		<view id="32" visible="false" inframe="false" stylebar="true" location="1" size="150" window="50,50,500,500" />
+		<view id="64" toolbar="0" visible="false" inframe="false" stylebar="false" location="1" size="150" window="50,50,500,500" />
+		<view id="128" visible="false" inframe="false" stylebar="false" location="1" size="480" window="50,50,500,500" />
+		<view id="4097" visible="false" inframe="false" stylebar="true" location="1" size="284" window="100,100,700,550" />
+		<view id="70" toolbar="0 || 2020 || 2021 || 2022" visible="false" inframe="false" stylebar="true" location="1" size="150" window="50,50,500,500" />
+		<view id="43" visible="false" inframe="false" stylebar="false" location="1" size="450" window="50,50,500,500" />
+	</views>
+	<toolbar show="false" items="0 39 73 62 | 1 501 67 , 5 19 , 72 75 76 | 2 15 45 , 18 65 , 7 37 | 4 3 8 9 , 13 44 , 58 , 47 | 16 51 64 , 70 | 10 34 53 11 , 24  20 22 , 21 23 | 55 56 57 , 12 | 36 46 , 38 49  50 , 71  14  68 | 30 29 54 32 31 33 | 25 17 26 60 52 61 | 40 41 42 , 27 28 35 , 6" position="1" help="false" />
+	<input show="false" cmd="true" top="algebra" />
+	<dockBar show="false" east="false" />
+</perspective>
+	</perspectives>
+	<labelingStyle  val="0"/>
+	<font  size="12"/>
+</gui>
+<euclidianView>
+	<viewNumber viewNo="1"/>
+	<size  width="1338" height="565"/>
+	<coordSystem xZero="87.76382725133361" yZero="440.5325509677853" scale="51.296352024818106" yscale="51.29635202481768"/>
+	<evSettings axes="false" grid="false" gridIsBold="false" pointCapturing="3" rightAngleStyle="1" checkboxSize="26" gridType="3"/>
+	<bgColor r="255" g="255" b="255"/>
+	<axesColor r="0" g="0" b="0"/>
+	<gridColor r="192" g="192" b="192"/>
+	<lineStyle axes="1" grid="0"/>
+	<axis id="0" show="false" label="" unitLabel="" tickStyle="1" showNumbers="true"/>
+	<axis id="1" show="false" label="" unitLabel="" tickStyle="1" showNumbers="true"/>
+</euclidianView>
+<kernel>
+	<continuous val="false"/>
+	<usePathAndRegionParameters val="true"/>
+	<decimals val="2"/>
+	<angleUnit val="degree"/>
+	<algebraStyle val="0" spreadsheet="0"/>
+	<coordStyle val="0"/>
+</kernel>
+<tableview min="-2" max="2" step="1"/>
+<scripting blocked="false" disabled="false"/>
+<construction title="" author="" date="">
+<element type="point" label="定位点集A">
+	<show object="true" label="true" ev="4"/>
+	<condition showObject="显示集合A"/>
+	<objColor r="128" g="0" b="0" alpha="0"/>
+	<layer val="3"/>
+	<labelMode val="3"/>
+	<animation step="0.1" speed="1" type="1" playing="false"/>
+	<auxiliary val="true"/>
+	<coords x="1.2110933785533378" y="1.5930452644471302" z="1"/>
+	<pointSize val="5"/>
+	<pointStyle val="0"/>
+	<caption val="$\Huge A$"/>
+</element>
+<command name="Vector">
+	<input a0="(4, 0)"/>
+	<output a0="u"/>
+</command>
+<element type="vector" label="u">
+	<show object="false" label="true" ev="4"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<auxiliary val="true"/>
+	<coords x="4" y="0" z="0"/>
+	<lineStyle thickness="5" type="0" typeHidden="1" opacity="178"/>
+	<coordStyle style="cartesian"/>
+</element>
+<command name="Vector">
+	<input a0="(0, (2 * sqrt(5)) - 2)"/>
+	<output a0="v"/>
+</command>
+<element type="vector" label="v">
+	<show object="false" label="true" ev="4"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<auxiliary val="true"/>
+	<coords x="0" y="2.4721359549995796" z="0"/>
+	<lineStyle thickness="5" type="0" typeHidden="1" opacity="178"/>
+	<coordStyle style="cartesian"/>
+</element>
+<command name="Polygon">
+	<input a0="定位点集A" a1="Translate[定位点集A, u]" a2="Translate[Translate[定位点集A, u], v]" a3="Translate[定位点集A, v]"/>
+	<output a0="集合A" a1="a" a2="f" a3="g" a4="h"/>
+</command>
+<element type="polygon" label="集合A">
+	<lineStyle thickness="5" type="0" typeHidden="1" opacity="178"/>
+	<show object="true" label="false" ev="4"/>
+	<condition showObject="显示集合A"/>
+	<objColor r="153" g="51" b="0" alpha="0.10000000149011612"/>
+	<layer val="3"/>
+	<labelMode val="0"/>
+	<auxiliary val="true"/>
+</element>
+<element type="segment" label="a">
+	<show object="true" label="false" ev="4"/>
+	<condition showObject="显示集合A"/>
+	<objColor r="153" g="51" b="0" alpha="0"/>
+	<layer val="3"/>
+	<labelMode val="0"/>
+	<auxiliary val="false"/>
+	<coords x="0" y="4" z="-6.372181057788521"/>
+	<lineStyle thickness="5" type="0" typeHidden="1" opacity="178"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment" label="f">
+	<show object="true" label="false" ev="4"/>
+	<condition showObject="显示集合A"/>
+	<objColor r="153" g="51" b="0" alpha="0"/>
+	<layer val="3"/>
+	<labelMode val="0"/>
+	<auxiliary val="false"/>
+	<coords x="-2.4721359549995796" y="0" z="12.88253130598194"/>
+	<lineStyle thickness="5" type="0" typeHidden="1" opacity="178"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment" label="g">
+	<show object="true" label="false" ev="4"/>
+	<condition showObject="显示集合A"/>
+	<objColor r="153" g="51" b="0" alpha="0"/>
+	<layer val="3"/>
+	<labelMode val="0"/>
+	<auxiliary val="false"/>
+	<coords x="0" y="-4" z="16.26072487778684"/>
+	<lineStyle thickness="5" type="0" typeHidden="1" opacity="178"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment" label="h">
+	<show object="true" label="false" ev="4"/>
+	<condition showObject="显示集合A"/>
+	<objColor r="153" g="51" b="0" alpha="0"/>
+	<layer val="3"/>
+	<labelMode val="0"/>
+	<auxiliary val="false"/>
+	<coords x="2.4721359549995796" y="0" z="-2.993987485983623"/>
+	<lineStyle thickness="5" type="0" typeHidden="1" opacity="178"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="point" label="定位点集B">
+	<show object="true" label="true" ev="4"/>
+	<condition showObject="显示集合B"/>
+	<objColor r="255" g="0" b="255" alpha="0"/>
+	<layer val="1"/>
+	<labelMode val="3"/>
+	<animation step="0.1" speed="1" type="1" playing="false"/>
+	<auxiliary val="true"/>
+	<coords x="2.8487346444938204" y="-0.11797968236938089" z="1"/>
+	<pointSize val="5"/>
+	<pointStyle val="0"/>
+	<caption val="$\Huge B$"/>
+</element>
+<command name="Polygon">
+	<input a0="定位点集B" a1="Translate[定位点集B, Vector[(1.5 * u)]]" a2="Translate[Translate[定位点集B, Vector[(1.5 * u)]], Vector[(1.5 * v)]]" a3="Translate[定位点集B, Vector[(1.5 * v)]]"/>
+	<output a0="集合B" a1="i" a2="j" a3="k" a4="l"/>
+</command>
+<element type="polygon" label="集合B">
+	<lineStyle thickness="5" type="0" typeHidden="1" opacity="178"/>
+	<show object="true" label="false" ev="4"/>
+	<condition showObject="显示集合B"/>
+	<objColor r="255" g="0" b="255" alpha="0.10000000149011612"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<auxiliary val="true"/>
+</element>
+<element type="segment" label="i">
+	<show object="true" label="false" ev="4"/>
+	<condition showObject="显示集合B"/>
+	<objColor r="255" g="0" b="255" alpha="0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<auxiliary val="false"/>
+	<coords x="0" y="6" z="0.7078780942162854"/>
+	<lineStyle thickness="5" type="0" typeHidden="1" opacity="178"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment" label="j">
+	<show object="true" label="false" ev="4"/>
+	<condition showObject="显示集合B"/>
+	<objColor r="255" g="0" b="255" alpha="0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<auxiliary val="false"/>
+	<coords x="-3.7082039324993694" y="0" z="32.81291260635539"/>
+	<lineStyle thickness="5" type="0" typeHidden="1" opacity="178"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment" label="k">
+	<show object="true" label="false" ev="4"/>
+	<condition showObject="显示集合B"/>
+	<objColor r="255" g="0" b="255" alpha="0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<auxiliary val="false"/>
+	<coords x="0" y="-6" z="21.54134550077993"/>
+	<lineStyle thickness="5" type="0" typeHidden="1" opacity="178"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment" label="l">
+	<show object="true" label="false" ev="4"/>
+	<condition showObject="显示集合B"/>
+	<objColor r="255" g="0" b="255" alpha="0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<auxiliary val="false"/>
+	<coords x="3.7082039324993694" y="0" z="-10.563689011359177"/>
+	<lineStyle thickness="5" type="0" typeHidden="1" opacity="178"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="numeric" label="n">
+	<value val="5"/>
+	<show object="true" label="true"/>
+	<objColor r="0" g="0" b="0" alpha="0.10000000149011612"/>
+	<layer val="0"/>
+	<labelMode val="1"/>
+	<slider min="1" max="10" absoluteScreenLocation="true" width="200" x="68" y="46" fixed="false" horizontal="true" showAlgebra="true"/>
+	<lineStyle thickness="10" type="0" typeHidden="1"/>
+	<animation step="1" speed="1" type="0" playing="false"/>
+	<auxiliary val="true"/>
+</element>
+<element type="point" label="D1">
+	<show object="true" label="false" ev="4"/>
+	<condition showObject="n ≥ 1"/>
+	<objColor r="220" g="20" b="60" alpha="0"/>
+	<layer val="5"/>
+	<labelOffset x="-16" y="1"/>
+	<labelMode val="0"/>
+	<animation step="0.1" speed="1" type="1" playing="false"/>
+	<auxiliary val="true"/>
+	<coords x="6.184380764448548" y="1.121571977281162" z="1"/>
+	<pointSize val="9"/>
+	<pointStyle val="0"/>
+</element>
+<element type="point" label="D2">
+	<show object="true" label="false" ev="4"/>
+	<condition showObject="n ≥ 2"/>
+	<objColor r="220" g="20" b="60" alpha="0"/>
+	<layer val="5"/>
+	<labelMode val="0"/>
+	<animation step="0.1" speed="1" type="1" playing="false"/>
+	<auxiliary val="true"/>
+	<coords x="6.418315528351333" y="2.544675124356453" z="1"/>
+	<pointSize val="9"/>
+	<pointStyle val="0"/>
+</element>
+<element type="point" label="D3">
+	<show object="true" label="false" ev="4"/>
+	<condition showObject="n ≥ 3"/>
+	<objColor r="220" g="20" b="60" alpha="0"/>
+	<layer val="5"/>
+	<labelMode val="0"/>
+	<animation step="0.1" speed="1" type="1" playing="false"/>
+	<auxiliary val="true"/>
+	<coords x="2.0515332688326695" y="3.2854685433819464" z="1"/>
+	<pointSize val="9"/>
+	<pointStyle val="0"/>
+</element>
+<element type="point" label="D4">
+	<show object="true" label="false" ev="4"/>
+	<condition showObject="n ≥ 4"/>
+	<objColor r="220" g="20" b="60" alpha="0"/>
+	<layer val="5"/>
+	<labelMode val="0"/>
+	<animation step="0.1" speed="1" type="1" playing="false"/>
+	<auxiliary val="true"/>
+	<coords x="7.7829349844509155" y="2.1742784148437058" z="1"/>
+	<pointSize val="9"/>
+	<pointStyle val="0"/>
+</element>
+<element type="point" label="D5">
+	<show object="true" label="false" ev="4"/>
+	<condition showObject="n ≥ 5"/>
+	<objColor r="220" g="20" b="60" alpha="0"/>
+	<layer val="5"/>
+	<labelMode val="0"/>
+	<animation step="0.1" speed="1" type="1" playing="false"/>
+	<auxiliary val="true"/>
+	<coords x="3.825538561762127" y="2.369224051429362" z="1"/>
+	<pointSize val="9"/>
+	<pointStyle val="0"/>
+</element>
+<element type="point" label="D6">
+	<show object="true" label="false" ev="4"/>
+	<condition showObject="n ≥ 6"/>
+	<objColor r="220" g="20" b="60" alpha="0"/>
+	<layer val="5"/>
+	<labelMode val="0"/>
+	<animation step="0.1" speed="1" type="1" playing="false"/>
+	<auxiliary val="true"/>
+	<coords x="7.471021965913868" y="4.3966586719201874" z="1"/>
+	<pointSize val="9"/>
+	<pointStyle val="0"/>
+</element>
+<element type="point" label="D7">
+	<show object="true" label="false" ev="4"/>
+	<condition showObject="n ≥ 7"/>
+	<objColor r="220" g="20" b="60" alpha="0"/>
+	<layer val="5"/>
+	<labelMode val="0"/>
+	<animation step="0.1" speed="1" type="1" playing="false"/>
+	<auxiliary val="true"/>
+	<coords x="4.5078482898119185" y="0.9071317770369403" z="1"/>
+	<pointSize val="9"/>
+	<pointStyle val="0"/>
+</element>
+<element type="point" label="D8">
+	<show object="true" label="false" ev="4"/>
+	<condition showObject="n ≥ 8"/>
+	<objColor r="220" g="20" b="60" alpha="0"/>
+	<layer val="5"/>
+	<labelMode val="0"/>
+	<animation step="0.1" speed="1" type="1" playing="false"/>
+	<auxiliary val="true"/>
+	<coords x="7.373549147621041" y="0.7511752677684153" z="1"/>
+	<pointSize val="9"/>
+	<pointStyle val="0"/>
+</element>
+<element type="point" label="D9">
+	<show object="true" label="false" ev="4"/>
+	<condition showObject="n ≥ 9"/>
+	<objColor r="220" g="20" b="60" alpha="0"/>
+	<layer val="5"/>
+	<labelMode val="0"/>
+	<animation step="0.1" speed="1" type="1" playing="false"/>
+	<auxiliary val="true"/>
+	<coords x="1.7201256866370567" y="0.38077855825566836" z="1"/>
+	<pointSize val="9"/>
+	<pointStyle val="0"/>
+</element>
+<element type="point" label="D10">
+	<show object="true" label="false" ev="4"/>
+	<condition showObject="n ≥ 10"/>
+	<objColor r="220" g="20" b="60" alpha="0"/>
+	<layer val="5"/>
+	<labelMode val="0"/>
+	<animation step="0.1" speed="1" type="1" playing="false"/>
+	<auxiliary val="true"/>
+	<coords x="6.008929691521458" y="4.299185853627359" z="1"/>
+	<pointSize val="9"/>
+	<pointStyle val="0"/>
+</element>
+<expression label="inA1" exp="IsInRegion[D1, 集合A] ∧ n ≥ 1" />
+<element type="boolean" label="inA1">
+	<value val="0"/>
+	<show object="false" label="true"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<auxiliary val="true"/>
+	<checkbox fixed="true"/>
+</element>
+<expression label="inA2" exp="IsInRegion[D2, 集合A] ∧ n ≥ 2" />
+<element type="boolean" label="inA2">
+	<value val="0"/>
+	<show object="false" label="true"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<auxiliary val="true"/>
+	<checkbox fixed="true"/>
+</element>
+<expression label="inA3" exp="IsInRegion[D3, 集合A] ∧ n ≥ 3" />
+<element type="boolean" label="inA3">
+	<value val="true"/>
+	<show object="false" label="true"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<auxiliary val="true"/>
+	<checkbox fixed="true"/>
+</element>
+<expression label="inA4" exp="IsInRegion[D4, 集合A] ∧ n ≥ 4" />
+<element type="boolean" label="inA4">
+	<value val="0"/>
+	<show object="false" label="true"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<auxiliary val="true"/>
+	<checkbox fixed="true"/>
+</element>
+<expression label="inA5" exp="IsInRegion[D5, 集合A] ∧ n ≥ 5" />
+<element type="boolean" label="inA5">
+	<value val="true"/>
+	<show object="false" label="true"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<auxiliary val="true"/>
+	<checkbox fixed="true"/>
+</element>
+<expression label="inA6" exp="IsInRegion[D6, 集合A] ∧ n ≥ 6" />
+<element type="boolean" label="inA6">
+	<value val="0"/>
+	<show object="false" label="true"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<auxiliary val="true"/>
+	<checkbox fixed="true"/>
+</element>
+<expression label="inA7" exp="IsInRegion[D7, 集合A] ∧ n ≥ 7" />
+<element type="boolean" label="inA7">
+	<value val="0"/>
+	<show object="false" label="true"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<auxiliary val="true"/>
+	<checkbox fixed="true"/>
+</element>
+<expression label="inA8" exp="IsInRegion[D8, 集合A] ∧ n ≥ 8" />
+<element type="boolean" label="inA8">
+	<value val="0"/>
+	<show object="false" label="true"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<auxiliary val="true"/>
+	<checkbox fixed="true"/>
+</element>
+<expression label="inA9" exp="IsInRegion[D9, 集合A] ∧ n ≥ 9" />
+<element type="boolean" label="inA9">
+	<value val="0"/>
+	<show object="false" label="true"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<auxiliary val="true"/>
+	<checkbox fixed="true"/>
+</element>
+<expression label="inA10" exp="IsInRegion[D10, 集合A] ∧ n ≥ 10" />
+<element type="boolean" label="inA10">
+	<value val="0"/>
+	<show object="false" label="true"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<auxiliary val="true"/>
+	<checkbox fixed="true"/>
+</element>
+<expression label="inB1" exp="IsInRegion[D1, 集合B] ∧ n ≥ 1" />
+<element type="boolean" label="inB1">
+	<value val="true"/>
+	<show object="false" label="true"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<auxiliary val="true"/>
+	<checkbox fixed="true"/>
+</element>
+<expression label="inB2" exp="IsInRegion[D2, 集合B] ∧ n ≥ 2" />
+<element type="boolean" label="inB2">
+	<value val="true"/>
+	<show object="false" label="true"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<auxiliary val="true"/>
+	<checkbox fixed="true"/>
+</element>
+<expression label="inB3" exp="IsInRegion[D3, 集合B] ∧ n ≥ 3" />
+<element type="boolean" label="inB3">
+	<value val="0"/>
+	<show object="false" label="true"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<auxiliary val="true"/>
+	<checkbox fixed="true"/>
+</element>
+<expression label="inB4" exp="IsInRegion[D4, 集合B] ∧ n ≥ 4" />
+<element type="boolean" label="inB4">
+	<value val="true"/>
+	<show object="false" label="true"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<auxiliary val="true"/>
+	<checkbox fixed="true"/>
+</element>
+<expression label="inB5" exp="IsInRegion[D5, 集合B] ∧ n ≥ 5" />
+<element type="boolean" label="inB5">
+	<value val="true"/>
+	<show object="false" label="true"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<auxiliary val="true"/>
+	<checkbox fixed="true"/>
+</element>
+<expression label="inB6" exp="IsInRegion[D6, 集合B] ∧ n ≥ 6" />
+<element type="boolean" label="inB6">
+	<value val="0"/>
+	<show object="false" label="true"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<auxiliary val="true"/>
+	<checkbox fixed="true"/>
+</element>
+<expression label="inB7" exp="IsInRegion[D7, 集合B] ∧ n ≥ 7" />
+<element type="boolean" label="inB7">
+	<value val="false"/>
+	<show object="false" label="true"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<auxiliary val="true"/>
+	<checkbox fixed="true"/>
+</element>
+<expression label="inB8" exp="IsInRegion[D8, 集合B] ∧ n ≥ 8" />
+<element type="boolean" label="inB8">
+	<value val="false"/>
+	<show object="false" label="true"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<auxiliary val="true"/>
+	<checkbox fixed="true"/>
+</element>
+<expression label="inB9" exp="IsInRegion[D9, 集合B] ∧ n ≥ 9" />
+<element type="boolean" label="inB9">
+	<value val="0"/>
+	<show object="false" label="true"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<auxiliary val="true"/>
+	<checkbox fixed="true"/>
+</element>
+<expression label="inB10" exp="IsInRegion[D10, 集合B] ∧ n ≥ 10" />
+<element type="boolean" label="inB10">
+	<value val="0"/>
+	<show object="false" label="true"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<auxiliary val="true"/>
+	<checkbox fixed="true"/>
+</element>
+<expression label="定位集" exp="{D1, D2, D3, D4, D5, D6, D7, D8, D9, D10}" />
+<element type="list" label="定位集">
+	<show object="true" label="true" ev="4"/>
+	<objColor r="220" g="20" b="60" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<auxiliary val="true"/>
+	<lineStyle thickness="5" type="0" typeHidden="1"/>
+	<pointSize val="9"/>
+	<pointStyle val="0"/>
+	<angleStyle val="0"/>
+</element>
+<element type="boolean" label="显示集合A">
+	<value val="true"/>
+	<show object="true" label="true"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelOffset x="283" y="87"/>
+	<labelMode val="0"/>
+	<auxiliary val="true"/>
+	<checkbox fixed="true"/>
+	<caption val="集合A"/>
+</element>
+<element type="boolean" label="显示集合B">
+	<value val="true"/>
+	<show object="true" label="true"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelOffset x="400" y="87"/>
+	<labelMode val="0"/>
+	<auxiliary val="true"/>
+	<checkbox fixed="true"/>
+	<caption val="集合B"/>
+</element>
+<expression label="标题" exp="&quot;集合的运算&quot;"/>
+<element type="text" label="标题">
+	<show object="true" label="true" ev="40"/>
+	<objColor r="255" g="0" b="0" alpha="0"/>
+	<layer val="5"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<isLaTeX val="true"/>
+	<font serif="true" sizeM="2" size="12" style="1"/>
+	<auxiliary val="true"/>
+	<absoluteScreenLocation x="387" y="24"/>
+</element>
+<element type="point" label="定位点集U">
+	<show object="true" label="true" ev="4"/>
+	<condition showObject="显示全集U"/>
+	<objColor r="0" g="0" b="255" alpha="0"/>
+	<layer val="5"/>
+	<labelMode val="3"/>
+	<animation step="0.1" speed="1" type="1" playing="false"/>
+	<auxiliary val="true"/>
+	<coords x="-0.22593359405152563" y="-0.7932123331127865" z="1"/>
+	<pointSize val="5"/>
+	<pointStyle val="0"/>
+	<caption val="$\Huge U$"/>
+</element>
+<command name="Polygon">
+	<input a0="定位点集U" a1="Translate[定位点集U, Vector[(2.5 * u)]]" a2="Translate[Translate[定位点集U, Vector[(2.5 * u)]], Vector[(2.5 * v)]]" a3="Translate[定位点集U, Vector[(2.5 * v)]]"/>
+	<output a0="全集U" a1="o" a2="m" a3="p" a4="q"/>
+</command>
+<element type="polygon" label="全集U">
+	<lineStyle thickness="5" type="0" typeHidden="1" opacity="178"/>
+	<show object="true" label="false" ev="4"/>
+	<condition showObject="显示全集U"/>
+	<objColor r="0" g="100" b="0" alpha="0.10000000149011612"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<auxiliary val="true"/>
+</element>
+<element type="segment" label="o">
+	<show object="true" label="false" ev="4"/>
+	<condition showObject="显示全集U"/>
+	<objColor r="0" g="100" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<auxiliary val="true"/>
+	<coords x="0" y="10" z="7.9321233311278645"/>
+	<lineStyle thickness="5" type="0" typeHidden="1" opacity="178"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment" label="m">
+	<show object="true" label="false" ev="4"/>
+	<condition showObject="显示全集U"/>
+	<objColor r="0" g="100" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<auxiliary val="true"/>
+	<coords x="-6.180339887498949" y="0" z="60.407052471746844"/>
+	<lineStyle thickness="5" type="0" typeHidden="1" opacity="178"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment" label="p">
+	<show object="true" label="false" ev="4"/>
+	<condition showObject="显示全集U"/>
+	<objColor r="0" g="100" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<auxiliary val="true"/>
+	<coords x="0" y="-10" z="53.87127554386162"/>
+	<lineStyle thickness="5" type="0" typeHidden="1" opacity="178"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment" label="q">
+	<show object="true" label="false" ev="4"/>
+	<condition showObject="显示全集U"/>
+	<objColor r="0" g="100" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<auxiliary val="true"/>
+	<coords x="6.180339887498949" y="0" z="1.396346403242639"/>
+	<lineStyle thickness="5" type="0" typeHidden="1" opacity="178"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<expression label="inU1" exp="IsInRegion[D1, 全集U] ∧ n ≥ 1" />
+<element type="boolean" label="inU1">
+	<value val="true"/>
+	<show object="false" label="true"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<auxiliary val="true"/>
+	<checkbox fixed="true"/>
+</element>
+<expression label="inU2" exp="IsInRegion[D2, 全集U] ∧ n ≥ 2" />
+<element type="boolean" label="inU2">
+	<value val="true"/>
+	<show object="false" label="true"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<auxiliary val="true"/>
+	<checkbox fixed="true"/>
+</element>
+<expression label="inU3" exp="IsInRegion[D3, 全集U] ∧ n ≥ 3" />
+<element type="boolean" label="inU3">
+	<value val="true"/>
+	<show object="false" label="true"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<auxiliary val="true"/>
+	<checkbox fixed="true"/>
+</element>
+<expression label="inU4" exp="IsInRegion[D4, 全集U] ∧ n ≥ 4" />
+<element type="boolean" label="inU4">
+	<value val="true"/>
+	<show object="false" label="true"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<auxiliary val="true"/>
+	<checkbox fixed="true"/>
+</element>
+<expression label="inU5" exp="IsInRegion[D5, 全集U] ∧ n ≥ 5" />
+<element type="boolean" label="inU5">
+	<value val="true"/>
+	<show object="false" label="true"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<auxiliary val="true"/>
+	<checkbox fixed="true"/>
+</element>
+<expression label="inU6" exp="IsInRegion[D6, 全集U] ∧ n ≥ 6" />
+<element type="boolean" label="inU6">
+	<value val="false"/>
+	<show object="false" label="true"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<auxiliary val="true"/>
+	<checkbox fixed="true"/>
+</element>
+<expression label="inU7" exp="IsInRegion[D7, 全集U] ∧ n ≥ 7" />
+<element type="boolean" label="inU7">
+	<value val="false"/>
+	<show object="false" label="true"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<auxiliary val="true"/>
+	<checkbox fixed="true"/>
+</element>
+<expression label="inU8" exp="IsInRegion[D8, 全集U] ∧ n ≥ 8" />
+<element type="boolean" label="inU8">
+	<value val="false"/>
+	<show object="false" label="true"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<auxiliary val="true"/>
+	<checkbox fixed="true"/>
+</element>
+<expression label="inU9" exp="IsInRegion[D9, 全集U] ∧ n ≥ 9" />
+<element type="boolean" label="inU9">
+	<value val="false"/>
+	<show object="false" label="true"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<auxiliary val="true"/>
+	<checkbox fixed="true"/>
+</element>
+<expression label="inU10" exp="IsInRegion[D10, 全集U] ∧ n ≥ 10" />
+<element type="boolean" label="inU10">
+	<value val="false"/>
+	<show object="false" label="true"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<auxiliary val="true"/>
+	<checkbox fixed="true"/>
+</element>
+<expression label="元素集" exp="{&quot;a&quot;, &quot;b&quot;, &quot;c&quot;, &quot;d&quot;, &quot;e&quot;, &quot;f&quot;, &quot;g&quot;, &quot;h&quot;, &quot;i&quot;, &quot;j&quot;}"/>
+<element type="list" label="元素集">
+	<show object="false" label="true" ev="4"/>
+	<objColor r="0" g="100" b="0" alpha="0"/>
+	<layer val="5"/>
+	<labelMode val="0"/>
+	<animation step="0.1" speed="1" type="0" playing="false"/>
+	<lineStyle thickness="5" type="0" typeHidden="1"/>
+	<pointSize val="5"/>
+	<angleStyle val="0"/>
+	<symbolic val="true" />
+</element>
+<command name="Sequence">
+	<input a0="Text[元素集(i), 定位集(i), true, true]" a1="i" a2="1" a3="n"/>
+	<output a0="l1"/>
+</command>
+<element type="list" label="l1">
+	<show object="true" label="true" ev="4"/>
+	<objColor r="220" g="20" b="60" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<auxiliary val="true"/>
+	<lineStyle thickness="5" type="0" typeHidden="1"/>
+	<pointSize val="5"/>
+	<font serif="true" sizeM="2" size="12" style="1"/>
+	<angleStyle val="0"/>
+</element>
+<expression label="文本集合A" exp="&quot;A=\{&quot; + (LaTeX[(((((((((If[inA1, (元素集(1) * &quot;,&quot;), &quot;&quot;] * If[inA2, (元素集(2) * &quot;,&quot;), &quot;&quot;]) * If[inA3, (元素集(3) * &quot;,&quot;), &quot;&quot;]) * If[inA4, (元素集(4) * &quot;,&quot;), &quot;&quot;]) * If[inA5, (元素集(5) * &quot;,&quot;), &quot;&quot;]) * If[inA6, (元素集(6) * &quot;,&quot;), &quot;&quot;]) * If[inA7, (元素集(7) * &quot;,&quot;), &quot;&quot;]) * If[inA8, (元素集(8) * &quot;,&quot;), &quot;&quot;]) * If[inA9, (元素集(9) * &quot;,&quot;), &quot;&quot;]) * If[inA10, (元素集(10) * &quot;,&quot;), &quot;&quot;])]) + &quot; \}&quot;" />
+<element type="text" label="文本集合A">
+	<show object="true" label="true" ev="8"/>
+	<condition showObject="显示集合A"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<isLaTeX val="true"/>
+	<font serif="true" sizeM="1.4" size="5" style="1"/>
+	<auxiliary val="true"/>
+	<absoluteScreenLocation x="655" y="62"/>
+</element>
+<expression label="文本集合B" exp="&quot;B=\{&quot; + (LaTeX[(((((((((If[inB1, (元素集(1) * &quot;,&quot;), &quot;&quot;] * If[inB2, (元素集(2) * &quot;,&quot;), &quot;&quot;]) * If[inB3, (元素集(3) * &quot;,&quot;), &quot;&quot;]) * If[inB4, (元素集(4) * &quot;,&quot;), &quot;&quot;]) * If[inB5, (元素集(5) * &quot;,&quot;), &quot;&quot;]) * If[inB6, (元素集(6) * &quot;,&quot;), &quot;&quot;]) * If[inB7, (元素集(7) * &quot;,&quot;), &quot;&quot;]) * If[inB8, (元素集(8) * &quot;,&quot;), &quot;&quot;]) * If[inB9, (元素集(9) * &quot;,&quot;), &quot;&quot;]) * If[inB10, (元素集(10) * &quot;,&quot;), &quot;&quot;])]) + &quot;\}&quot;" />
+<element type="text" label="文本集合B">
+	<show object="true" label="true" ev="8"/>
+	<condition showObject="显示集合B"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<isLaTeX val="true"/>
+	<font serif="true" sizeM="1.4" size="5" style="1"/>
+	<auxiliary val="true"/>
+	<absoluteScreenLocation x="654" y="102"/>
+</element>
+<expression label="文本全集U" exp="&quot;U=\{&quot; + (LaTeX[(((((((((If[inU1, (元素集(1) * &quot;,&quot;), &quot;&quot;] * If[inU2, (元素集(2) * &quot;,&quot;), &quot;&quot;]) * If[inU3, (元素集(3) * &quot;,&quot;), &quot;&quot;]) * If[inU4, (元素集(4) * &quot;,&quot;), &quot;&quot;]) * If[inU5, (元素集(5) * &quot;,&quot;), &quot;&quot;]) * If[inU6, (元素集(6) * &quot;,&quot;), &quot;&quot;]) * If[inU7, (元素集(7) * &quot;,&quot;), &quot;&quot;]) * If[inU8, (元素集(8) * &quot;,&quot;), &quot;&quot;]) * If[inU9, (元素集(9) * &quot;,&quot;), &quot;&quot;]) * If[inU10, (元素集(10) * &quot;,&quot;), &quot;&quot;])]) + &quot;\}&quot;" />
+<element type="text" label="文本全集U">
+	<show object="true" label="true" ev="8"/>
+	<condition showObject="显示全集U"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="5"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<isLaTeX val="true"/>
+	<font serif="true" sizeM="1.4" size="5" style="1"/>
+	<auxiliary val="true"/>
+	<absoluteScreenLocation x="654" y="22"/>
+</element>
+<expression label="文本集合A交B" exp="&quot;A∩B=\{&quot; + (LaTeX[(((((((((If[inA1 ∧ inB1, (元素集(1) * &quot;,&quot;), &quot;&quot;] * If[inA2 ∧ inB2, (元素集(2) * &quot;,&quot;), &quot;&quot;]) * If[inA3 ∧ inB3, (元素集(3) * &quot;,&quot;), &quot;&quot;]) * If[inA4 ∧ inB4, (元素集(4) * &quot;,&quot;), &quot;&quot;]) * If[inA5 ∧ inB5, (元素集(5) * &quot;,&quot;), &quot;&quot;]) * If[inA6 ∧ inB6, (元素集(6) * &quot;,&quot;), &quot;&quot;]) * If[inA7 ∧ inB7, (元素集(7) * &quot;,&quot;), &quot;&quot;]) * If[inA8 ∧ inB8, (元素集(8) * &quot;,&quot;), &quot;&quot;]) * If[inA9 ∧ inB9, (元素集(9) * &quot;,&quot;), &quot;&quot;]) * If[inA10 ∧ inB10, (元素集(10) * &quot;,&quot;), &quot;&quot;])]) + &quot;\}&quot;" />
+<element type="text" label="文本集合A交B">
+	<show object="true" label="true" ev="8"/>
+	<condition showObject="显示集合A ∧ 显示集合B ∧ 显示交集"/>
+	<objColor r="0" g="0" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<isLaTeX val="true"/>
+	<font serif="true" sizeM="1.4" size="5" style="1"/>
+	<auxiliary val="true"/>
+	<absoluteScreenLocation x="723" y="152"/>
+</element>
+<expression label="文本集合A并B" exp="&quot;A∪B=\{&quot; + (LaTeX[(((((((((If[inA1 ∨ inB1, (元素集(1) * &quot;,&quot;), &quot;&quot;] * If[inA2 ∨ inB2, (元素集(2) * &quot;,&quot;), &quot;&quot;]) * If[inA3 ∨ inB3, (元素集(3) * &quot;,&quot;), &quot;&quot;]) * If[inA4 ∨ inB4, (元素集(4) * &quot;,&quot;), &quot;&quot;]) * If[inA5 ∨ inB5, (元素集(5) * &quot;,&quot;), &quot;&quot;]) * If[inA6 ∨ inB6, (元素集(6) * &quot;,&quot;), &quot;&quot;]) * If[inA7 ∨ inB7, (元素集(7) * &quot;,&quot;), &quot;&quot;]) * If[inA8 ∨ inB8, (元素集(8) * &quot;,&quot;), &quot;&quot;]) * If[inA9 ∨ inB9, (元素集(9) * &quot;,&quot;), &quot;&quot;]) * If[inA10 ∨ inB10, (元素集(10) * &quot;,&quot;), &quot;&quot;])]) + &quot;\}&quot;" />
+<element type="text" label="文本集合A并B">
+	<show object="true" label="true" ev="8"/>
+	<condition showObject="显示集合A ∧ 显示集合B ∧ 显示并集"/>
+	<objColor r="0" g="0" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<isLaTeX val="true"/>
+	<font serif="true" sizeM="1.4" size="5" style="1"/>
+	<auxiliary val="true"/>
+	<absoluteScreenLocation x="723" y="197"/>
+</element>
+<expression label="A在U中的补" exp="&quot;∁_UA=\{&quot; + (LaTeX[(((((((((If[(¬inA1) ∧ inU1, (元素集(1) * &quot;,&quot;), &quot;&quot;] * If[(¬inA2) ∧ inU2, (元素集(2) * &quot;,&quot;), &quot;&quot;]) * If[(¬inA3) ∧ inU3, (元素集(3) * &quot;,&quot;), &quot;&quot;]) * If[(¬inA4) ∧ inU4, (元素集(4) * &quot;,&quot;), &quot;&quot;]) * If[(¬inA5) ∧ inU5, (元素集(5) * &quot;,&quot;), &quot;&quot;]) * If[(¬inA6) ∧ inU6, (元素集(6) * &quot;,&quot;), &quot;&quot;]) * If[(¬inA7) ∧ inU7, (元素集(7) * &quot;,&quot;), &quot;&quot;]) * If[(¬inA8) ∧ inU8, (元素集(8) * &quot;,&quot;), &quot;&quot;]) * If[(¬inA9) ∧ inU9, (元素集(9) * &quot;,&quot;), &quot;&quot;]) * If[(¬inA10) ∧ inU10, (元素集(10) * &quot;,&quot;), &quot;&quot;])]) + &quot;\}&quot;" />
+<element type="text" label="A在U中的补">
+	<show object="true" label="true" ev="40"/>
+	<condition showObject="显示全集U ∧ 显示集合A ∧ 显示补集"/>
+	<objColor r="0" g="100" b="0" alpha="0"/>
+	<layer val="5"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<isLaTeX val="true"/>
+	<font serif="true" sizeM="1.4" size="5" style="1"/>
+	<auxiliary val="true"/>
+	<absoluteScreenLocation x="727" y="243"/>
+</element>
+<expression label="B在U中的补" exp="&quot;∁_UB=\{&quot; + (LaTeX[(((((((((If[(¬inB1) ∧ inU1, (元素集(1) * &quot;,&quot;), &quot;&quot;] * If[(¬inB2) ∧ inU2, (元素集(2) * &quot;,&quot;), &quot;&quot;]) * If[(¬inB3) ∧ inU3, (元素集(3) * &quot;,&quot;), &quot;&quot;]) * If[(¬inB4) ∧ inU4, (元素集(4) * &quot;,&quot;), &quot;&quot;]) * If[(¬inB5) ∧ inU5, (元素集(5) * &quot;,&quot;), &quot;&quot;]) * If[(¬inB6) ∧ inU6, (元素集(6) * &quot;,&quot;), &quot;&quot;]) * If[(¬inB7) ∧ inU7, (元素集(7) * &quot;,&quot;), &quot;&quot;]) * If[(¬inB8) ∧ inU8, (元素集(8) * &quot;,&quot;), &quot;&quot;]) * If[(¬inB9) ∧ inU9, (元素集(9) * &quot;,&quot;), &quot;&quot;]) * If[(¬inB10) ∧ inU10, (元素集(10) * &quot;,&quot;), &quot;&quot;])]) + &quot;\}&quot;" />
+<element type="text" label="B在U中的补">
+	<show object="true" label="true" ev="40"/>
+	<condition showObject="显示全集U ∧ 显示集合B ∧ 显示补集"/>
+	<objColor r="0" g="100" b="0" alpha="0"/>
+	<layer val="5"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<isLaTeX val="true"/>
+	<font serif="true" sizeM="1.4" size="5" style="1"/>
+	<auxiliary val="true"/>
+	<absoluteScreenLocation x="727" y="278"/>
+</element>
+<expression label="A并B后的补" exp="&quot;∁_U(A∪B)=\{&quot; + (LaTeX[(((((((((If[(¬(inA1 ∨ inB1)) ∧ inU1, (元素集(1) * &quot;,&quot;), &quot;&quot;] * If[(¬(inA2 ∨ inB2)) ∧ inU2, (元素集(2) * &quot;,&quot;), &quot;&quot;]) * If[(¬(inA3 ∨ inB3)) ∧ inU3, (元素集(3) * &quot;,&quot;), &quot;&quot;]) * If[(¬(inA4 ∨ inB4)) ∧ inU4, (元素集(4) * &quot;,&quot;), &quot;&quot;]) * If[(¬(inA5 ∨ inB5)) ∧ inU5, (元素集(5) * &quot;,&quot;), &quot;&quot;]) * If[(¬(inA6 ∨ inB6)) ∧ inU6, (元素集(6) * &quot;,&quot;), &quot;&quot;]) * If[(¬(inA7 ∨ inB7)) ∧ inU7, (元素集(7) * &quot;,&quot;), &quot;&quot;]) * If[(¬(inA8 ∨ inB8)) ∧ inU8, (元素集(8) * &quot;,&quot;), &quot;&quot;]) * If[(¬(inA9 ∨ inB9)) ∧ inU9, (元素集(9) * &quot;,&quot;), &quot;&quot;]) * If[(¬(inA10 ∨ inB10)) ∧ inU10, (元素集(10) * &quot;,&quot;), &quot;&quot;])]) + &quot;\}&quot;" />
+<element type="text" label="A并B后的补">
+	<show object="true" label="true" ev="40"/>
+	<condition showObject="显示全集U ∧ 显示集合A ∧ 显示集合B ∧ 显示性质"/>
+	<objColor r="75" g="0" b="130" alpha="0"/>
+	<layer val="5"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<isLaTeX val="true"/>
+	<font serif="true" sizeM="1.4" size="5" style="1"/>
+	<auxiliary val="true"/>
+	<absoluteScreenLocation x="728" y="409"/>
+</element>
+<expression label="A交B后的补" exp="&quot;∁_U(A∩B)=\{&quot; + (LaTeX[(((((((((If[(¬(inA1 ∧ inB1)) ∧ inU1, (元素集(1) * &quot;,&quot;), &quot;&quot;] * If[(¬(inA2 ∧ inB2)) ∧ inU2, (元素集(2) * &quot;,&quot;), &quot;&quot;]) * If[(¬(inA3 ∧ inB3)) ∧ inU3, (元素集(3) * &quot;,&quot;), &quot;&quot;]) * If[(¬(inA4 ∧ inB4)) ∧ inU4, (元素集(4) * &quot;,&quot;), &quot;&quot;]) * If[(¬(inA5 ∧ inB5)) ∧ inU5, (元素集(5) * &quot;,&quot;), &quot;&quot;]) * If[(¬(inA6 ∧ inB6)) ∧ inU6, (元素集(6) * &quot;,&quot;), &quot;&quot;]) * If[(¬(inA7 ∧ inB7)) ∧ inU7, (元素集(7) * &quot;,&quot;), &quot;&quot;]) * If[(¬(inA8 ∧ inB8)) ∧ inU8, (元素集(8) * &quot;,&quot;), &quot;&quot;]) * If[(¬(inA9 ∧ inB9)) ∧ inU9, (元素集(9) * &quot;,&quot;), &quot;&quot;]) * If[(¬(inA10 ∧ inB10)) ∧ inU10, (元素集(10) * &quot;,&quot;), &quot;&quot;])]) + &quot;\}&quot;" />
+<element type="text" label="A交B后的补">
+	<show object="true" label="true" ev="8"/>
+	<condition showObject="显示全集U ∧ 显示集合A ∧ 显示集合B ∧ 显示性质"/>
+	<objColor r="255" g="0" b="255" alpha="0"/>
+	<layer val="5"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<isLaTeX val="true"/>
+	<font serif="true" sizeM="1.4" size="5" style="1"/>
+	<auxiliary val="true"/>
+	<absoluteScreenLocation x="727" y="326"/>
+</element>
+<expression label="A的补交B的补" exp="&quot;∁_UA∩∁_UB=\{&quot; + (LaTeX[(((((((((If[(¬inA1) ∧ inU1 ∧ (¬inB1) ∧ inU1, (元素集(1) * &quot;,&quot;), &quot;&quot;] * If[(¬inA2) ∧ inU2 ∧ (¬inB2) ∧ inU2, (元素集(2) * &quot;,&quot;), &quot;&quot;]) * If[(¬inA3) ∧ inU3 ∧ (¬inB3) ∧ inU3, (元素集(3) * &quot;,&quot;), &quot;&quot;]) * If[(¬inA4) ∧ inU4 ∧ (¬inB4) ∧ inU4, (元素集(4) * &quot;,&quot;), &quot;&quot;]) * If[(¬inA5) ∧ inU5 ∧ (¬inB5) ∧ inU5, (元素集(5) * &quot;,&quot;), &quot;&quot;]) * If[(¬inA6) ∧ inU6 ∧ (¬inB6) ∧ inU6, (元素集(6) * &quot;,&quot;), &quot;&quot;]) * If[(¬inA7) ∧ inU7 ∧ (¬inB7) ∧ inU7, (元素集(7) * &quot;,&quot;), &quot;&quot;]) * If[(¬inA8) ∧ inU8 ∧ (¬inB8) ∧ inU8, (元素集(8) * &quot;,&quot;), &quot;&quot;]) * If[(¬inA9) ∧ inU9 ∧ (¬inB9) ∧ inU9, (元素集(9) * &quot;,&quot;), &quot;&quot;]) * If[(¬inA10) ∧ inU10 ∧ (¬inB10) ∧ inU10, (元素集(10) * &quot;,&quot;), &quot;&quot;])]) + &quot;\}&quot;" />
+<element type="text" label="A的补交B的补">
+	<show object="true" label="true" ev="40"/>
+	<condition showObject="显示全集U ∧ 显示集合A ∧ 显示集合B ∧ 显示性质"/>
+	<objColor r="75" g="0" b="130" alpha="0"/>
+	<layer val="5"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<isLaTeX val="true"/>
+	<font serif="true" sizeM="1.4" size="5" style="1"/>
+	<auxiliary val="true"/>
+	<absoluteScreenLocation x="728" y="446"/>
+</element>
+<expression label="A的补并B的补" exp="&quot;∁_UA∪∁_UB=\{&quot; + (LaTeX[(((((((((If[(¬inA1) ∧ inU1 ∨ (¬inB1) ∧ inU1, (元素集(1) * &quot;,&quot;), &quot;&quot;] * If[(¬inA2) ∧ inU2 ∨ (¬inB2) ∧ inU2, (元素集(2) * &quot;,&quot;), &quot;&quot;]) * If[(¬inA3) ∧ inU3 ∨ (¬inB3) ∧ inU3, (元素集(3) * &quot;,&quot;), &quot;&quot;]) * If[(¬inA4) ∧ inU4 ∨ (¬inB4) ∧ inU4, (元素集(4) * &quot;,&quot;), &quot;&quot;]) * If[(¬inA5) ∧ inU5 ∨ (¬inB5) ∧ inU5, (元素集(5) * &quot;,&quot;), &quot;&quot;]) * If[(¬inA6) ∧ inU6 ∨ (¬inB6) ∧ inU6, (元素集(6) * &quot;,&quot;), &quot;&quot;]) * If[(¬inA7) ∧ inU7 ∨ (¬inB7) ∧ inU7, (元素集(7) * &quot;,&quot;), &quot;&quot;]) * If[(¬inA8) ∧ inU8 ∨ (¬inB8) ∧ inU8, (元素集(8) * &quot;,&quot;), &quot;&quot;]) * If[(¬inA9) ∧ inU9 ∨ (¬inB9) ∧ inU9, (元素集(9) * &quot;,&quot;), &quot;&quot;]) * If[(¬inA10) ∧ inU10 ∨ (¬inB10) ∧ inU10, (元素集(10) * &quot;,&quot;), &quot;&quot;])]) + &quot;\}&quot;" />
+<element type="text" label="A的补并B的补">
+	<show object="true" label="true" ev="40"/>
+	<condition showObject="显示全集U ∧ 显示集合A ∧ 显示集合B ∧ 显示性质"/>
+	<objColor r="255" g="0" b="255" alpha="0"/>
+	<layer val="5"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<isLaTeX val="true"/>
+	<font serif="true" sizeM="1.4" size="5" style="1"/>
+	<auxiliary val="true"/>
+	<absoluteScreenLocation x="727" y="362"/>
+</element>
+<element type="boolean" label="显示补集">
+	<value val="true"/>
+	<show object="true" label="true"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelOffset x="633" y="243"/>
+	<labelMode val="0"/>
+	<auxiliary val="true"/>
+	<checkbox fixed="true"/>
+	<caption val="补集"/>
+</element>
+<element type="boolean" label="显示性质">
+	<value val="true"/>
+	<show object="true" label="true"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelOffset x="633" y="323"/>
+	<labelMode val="0"/>
+	<auxiliary val="true"/>
+	<checkbox fixed="true"/>
+	<caption val="性质"/>
+</element>
+<element type="boolean" label="显示全集U">
+	<value val="true"/>
+	<show object="true" label="true"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelOffset x="168" y="87"/>
+	<labelMode val="0"/>
+	<auxiliary val="true"/>
+	<checkbox fixed="true"/>
+	<caption val="全集U"/>
+</element>
+<element type="boolean" label="显示交集">
+	<value val="true"/>
+	<show object="true" label="true"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelOffset x="633" y="148"/>
+	<labelMode val="0"/>
+	<auxiliary val="true"/>
+	<checkbox fixed="true"/>
+	<caption val="交集"/>
+</element>
+<element type="boolean" label="显示并集">
+	<value val="true"/>
+	<show object="true" label="true"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelOffset x="632" y="192"/>
+	<labelMode val="0"/>
+	<auxiliary val="true"/>
+	<checkbox fixed="true"/>
+	<caption val="并集"/>
+</element>
+</construction>
+</geogebra>

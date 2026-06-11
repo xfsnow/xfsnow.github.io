@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="utf-8"?>
+<geogebra format="5.0" version="5.0.524.0" app="classic" platform="w"  xsi:noNamespaceSchemaLocation="http://www.geogebra.org/ggt.xsd" xmlns="" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" >
+<macro cmdName="NormalPlane" toolName="NormalPlane" toolHelp="NormalPlane(point, normal vector)" iconFile="" showInToolBar="false" copyCaptions="true" viewId="512">
+<macroInput a0="S_1" a1="n"/>
+<macroOutput a0="c"/>
+<construction title="" author="" date="">
+<expression label="S_1" exp="(1, 2, 3)" type="point"/>
+<element type="point3d" label="S_1">
+	<show object="true" label="true" ev="4"/>
+	<objColor r="255" g="255" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<animation step="0.1" speed="1" type="0" playing="false"/>
+	<coords x="1" y="2" z="3" w="1"/>
+	<pointSize val="7"/>
+</element>
+<expression label="n" exp="(1, 1, 1)" type="vector"/>
+<element type="vector3d" label="n">
+	<show object="true" label="false" ev="4"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<animation step="0.1" speed="1" type="0" playing="false"/>
+	<coords x="1" y="1" z="1" w="0"/>
+	<lineStyle thickness="11" type="0" typeHidden="1"/>
+</element>
+<expression label="c" exp="(n * (x - x(S_1), y - y(S_1), z - z(S_1))) = 0" type="plane" />
+<element type="plane3d" label="c">
+	<show object="true" label="false" ev="4"/>
+	<objColor r="99" g="219" b="219" alpha="0.5"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<coords x="1" y="1" z="1" w="-6"/>
+	<fading val="0.1"/>
+	<lineStyle thickness="0" type="0" typeHidden="1"/>
+</element>
+</construction>
+</macro>
+<macro cmdName="DivisionPoint" toolName="DivisionPoint" toolHelp="DivisionPoint(A, B, t)" iconFile="" showInToolBar="false" copyCaptions="true" viewId="1">
+<macroInput a0="A" a1="B" a2="t"/>
+<macroOutput a0="D"/>
+<construction title="" author="" date="">
+<expression label="A" exp="(3, 0, 0)" type="point"/>
+<element type="point3d" label="A">
+	<show object="true" label="true" ev="4"/>
+	<objColor r="255" g="255" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<animation step="1" speed="1" type="0" playing="false"/>
+	<coords x="3" y="0" z="0" w="1"/>
+	<pointSize val="7"/>
+</element>
+<expression label="B" exp="(0, 5, 0)" type="point"/>
+<element type="point3d" label="B">
+	<show object="true" label="true" ev="4"/>
+	<objColor r="255" g="255" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<animation step="1" speed="1" type="0" playing="false"/>
+	<coords x="0" y="5" z="0" w="1"/>
+	<pointSize val="7"/>
+</element>
+<expression label="t" exp="0.3"/>
+<element type="numeric" label="t">
+	<value val="0.3"/>
+	<show object="true" label="true"/>
+	<objColor r="0" g="0" b="0" alpha="0.10000000149011612"/>
+	<layer val="0"/>
+	<labelMode val="1"/>
+	<animation speed="1" type="0" playing="false"/>
+</element>
+<expression label="D" exp="((1 - t) * A) + (t * B)" type="point" />
+<element type="point3d" label="D">
+	<show object="true" label="true" ev="4"/>
+	<objColor r="255" g="255" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<coords x="2.0999999999999996" y="1.5" z="0" w="1"/>
+	<pointSize val="7"/>
+</element>
+</construction>
+</macro>
+<macro cmdName="DivisionPoint1" toolName="DivisionPoint" toolHelp="DivisionPoint(A, B, t)" iconFile="" showInToolBar="false" copyCaptions="true" viewId="1">
+<macroInput a0="A" a1="B" a2="t"/>
+<macroOutput a0="D"/>
+<construction title="" author="" date="">
+<expression label="A" exp="(3, 0, 0)" type="point"/>
+<element type="point3d" label="A">
+	<show object="true" label="true" ev="4"/>
+	<objColor r="255" g="255" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<animation step="1" speed="1" type="0" playing="false"/>
+	<coords x="3" y="0" z="0" w="1"/>
+	<pointSize val="7"/>
+</element>
+<expression label="B" exp="(0, 5, 0)" type="point"/>
+<element type="point3d" label="B">
+	<show object="true" label="true" ev="4"/>
+	<objColor r="255" g="255" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<animation step="1" speed="1" type="0" playing="false"/>
+	<coords x="0" y="5" z="0" w="1"/>
+	<pointSize val="7"/>
+</element>
+<expression label="t" exp="0.3"/>
+<element type="numeric" label="t">
+	<value val="0.3"/>
+	<show object="true" label="true"/>
+	<objColor r="0" g="0" b="0" alpha="0.10000000149011612"/>
+	<layer val="0"/>
+	<labelMode val="1"/>
+	<animation speed="1" type="0" playing="false"/>
+</element>
+<expression label="D" exp="((1 - t) * A) + (t * B)" type="point" />
+<element type="point3d" label="D">
+	<show object="true" label="true" ev="4"/>
+	<objColor r="255" g="255" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<coords x="2.0999999999999996" y="1.5" z="0" w="1"/>
+	<pointSize val="7"/>
+</element>
+</construction>
+</macro>
+<macro cmdName="ChamferPoints" toolName="ChamferPoints" toolHelp="ChamferPoints(V, A, B,C, t)" iconFile="" showInToolBar="false" copyCaptions="true" viewId="1">
+<macroInput a0="D" a1="A" a2="B" a3="C" a4="t"/>
+<macroOutput a0="H" a1="I" a2="J" a3="K" a4="a" a5="b" a6="c"/>
+<construction title="" author="" date="">
+<element type="point3d" label="D">
+	<show object="true" label="true" ev="4"/>
+	<objColor r="255" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<animation step="0.1" speed="1" type="0" playing="false"/>
+	<coords x="-3.441212464411733" y="-1.9121752930334832" z="0" w="1"/>
+	<pointSize val="7"/>
+</element>
+<element type="numeric" label="t">
+	<value val="0.55"/>
+	<show object="true" label="true"/>
+	<objColor r="0" g="0" b="0" alpha="0.10000000149011612"/>
+	<layer val="0"/>
+	<labelMode val="1"/>
+	<animation speed="1" type="0" playing="false"/>
+</element>
+<element type="point3d" label="C">
+	<show object="true" label="true" ev="4"/>
+	<objColor r="125" g="125" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<animation step="0.1" speed="1" type="0" playing="false"/>
+	<coords x="-0.01564692717975058" y="0.23097636520509573" z="4" w="1"/>
+	<pointSize val="7"/>
+</element>
+<element type="point3d" label="A">
+	<show object="true" label="true" ev="4"/>
+	<objColor r="125" g="125" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<animation step="0.1" speed="1" type="0" playing="false"/>
+	<coords x="3.8677936785281055" y="-3.742290243783127" z="0" w="1"/>
+	<pointSize val="7"/>
+</element>
+<element type="point3d" label="B">
+	<show object="true" label="true" ev="4"/>
+	<objColor r="125" g="125" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<animation step="1" speed="1" type="0" playing="false"/>
+	<coords x="-1.6941253199149158" y="4.826240802462976" z="0" w="1"/>
+	<pointSize val="7"/>
+</element>
+<command name="DivisionPoint">
+	<input a0="D" a1="A" a2="t"/>
+	<output a0="E"/>
+</command>
+<element type="point3d" label="E">
+	<show object="true" label="true" ev="4"/>
+	<objColor r="255" g="127" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<coords x="0.5787409142051787" y="-2.9187385159457873" z="0" w="1"/>
+	<pointSize val="7"/>
+</element>
+<command name="DivisionPoint">
+	<input a0="D" a1="C" a2="t"/>
+	<output a0="G"/>
+</command>
+<element type="point3d" label="G">
+	<show object="true" label="true" ev="4"/>
+	<objColor r="255" g="127" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<coords x="-1.5571514189341424" y="-0.7334418810022647" z="2.2" w="1"/>
+	<pointSize val="7"/>
+</element>
+<command name="DivisionPoint">
+	<input a0="D" a1="B" a2="t"/>
+	<output a0="F"/>
+</command>
+<element type="point3d" label="F">
+	<show object="true" label="true" ev="4"/>
+	<objColor r="255" g="127" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<coords x="-2.480314534938483" y="1.79395355948957" z="0" w="1"/>
+	<pointSize val="7"/>
+</element>
+<expression label="H" exp="G + F - D" type="point" />
+<element type="point3d" label="H">
+	<show object="true" label="true" ev="4"/>
+	<objColor r="255" g="255" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<coords x="-0.5962534894608926" y="2.9726869715207886" z="2.2" w="1"/>
+	<pointSize val="7"/>
+</element>
+<expression label="I" exp="E + F - D" type="point" />
+<element type="point3d" label="I">
+	<show object="true" label="true" ev="4"/>
+	<objColor r="255" g="255" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<coords x="1.5396388436784283" y="0.7873903365772659" z="0" w="1"/>
+	<pointSize val="7"/>
+</element>
+<expression label="J" exp="G + E - D" type="point" />
+<element type="point3d" label="J">
+	<show object="true" label="true" ev="4"/>
+	<objColor r="255" g="255" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<coords x="2.462801959682769" y="-1.7400051039145685" z="2.2" w="1"/>
+	<pointSize val="7"/>
+</element>
+<command name="Midpoint">
+	<input a0="G" a1="I"/>
+	<output a0="K"/>
+</command>
+<element type="point3d" label="K">
+	<show object="true" label="true" ev="4"/>
+	<objColor r="102" g="153" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<coords x="-0.008756287627857073" y="0.026974227787500582" z="1.1" w="1"/>
+	<pointSize val="7"/>
+</element>
+<command name="Segment">
+	<input a0="K" a1="J"/>
+	<output a0="c"/>
+</command>
+<element type="segment3d" label="c">
+	<show object="true" label="false" ev="4"/>
+	<objColor r="255" g="255" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<lineStyle thickness="7" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<command name="Segment">
+	<input a0="K" a1="I"/>
+	<output a0="b"/>
+</command>
+<element type="segment3d" label="b">
+	<show object="true" label="false" ev="4"/>
+	<objColor r="255" g="255" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<lineStyle thickness="7" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<command name="Segment">
+	<input a0="K" a1="H"/>
+	<output a0="a"/>
+</command>
+<element type="segment3d" label="a">
+	<show object="true" label="false" ev="4"/>
+	<objColor r="255" g="255" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<lineStyle thickness="7" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+</construction>
+</macro>
+</geogebra>

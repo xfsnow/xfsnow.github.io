@@ -1,0 +1,507 @@
+<?xml version="1.0" encoding="utf-8"?>
+<geogebra format="5.0" version="5.0.526.0" app="classic" platform="w" id="c14fc88e-bc84-49df-adbb-cbc0ee9b2e97"  xsi:noNamespaceSchemaLocation="http://www.geogebra.org/ggb.xsd" xmlns="" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" >
+<gui>
+	<window width="1000" height="690" />
+	<perspectives>
+<perspective id="tmp">
+	<panes>
+		<pane location="" divider="0.09130434782608696" orientation="0" />
+	</panes>
+	<views>
+		<view id="4097" visible="false" inframe="false" stylebar="true" location="1,1,1" size="400" window="132,91,995,639" />
+		<view id="8" toolbar="1001 | 1002 | 1003  || 1005 | 1004 || 1006 | 1007 | 1010 | 1011 || 1008 1009 || 6" visible="false" inframe="false" stylebar="true" location="1,3" size="300" window="100,100,600,400" />
+		<view id="1" visible="true" inframe="false" stylebar="false" location="2" size="617" window="100,100,600,400" />
+		<view id="4" toolbar="0 59 || 2020 , 2021 , 2022 , 66 || 2001 , 2003 , 2002 , 2004 , 2005 || 2040 , 2041 , 2042 , 2044 , 2043" visible="false" inframe="false" stylebar="true" location="1" size="291" window="100,100,600,400" />
+		<view id="2" visible="false" inframe="false" stylebar="false" location="1" size="289" window="100,100,250,400" />
+		<view id="16" visible="true" inframe="false" stylebar="false" location="0" size="63" window="50,50,500,500" />
+		<view id="32" visible="false" inframe="false" stylebar="true" location="1" size="150" window="50,50,500,500" />
+		<view id="64" toolbar="0" visible="false" inframe="false" stylebar="true" location="1" size="150" window="50,50,500,500" />
+		<view id="128" visible="false" inframe="false" stylebar="false" location="1" size="480" window="50,50,500,500" />
+		<view id="70" toolbar="0 || 2020 || 2021 || 2022" visible="false" inframe="false" stylebar="true" location="1" size="150" window="50,50,500,500" />
+		<view id="43" visible="false" inframe="false" stylebar="false" location="1" size="450" window="50,50,500,500" />
+		<view id="512" toolbar="0 | 1 501 5 19 , 67 | 2 15 45 18 , 7 37 | 514 3 9 , 13 44 , 47 | 16 | 551 550 11 , 22 , 23 , 55 56 57 , 12 | 69 | 510 511 , 512 513 | 533 531 , 534 532 , 522 523 , 537 536 , 535 | 521 520 | 36 , 38 49 560 | 571 30 29 570 31 33 | 17 | 540 40 41 42 , 27 28 35 , 6 , 502" visible="false" inframe="false" stylebar="true" location="1" size="300" window="50,50,500,500" />
+	</views>
+	<toolbar show="false" items="0 39 59 | 1 501 67 , 5 19 , 72 | 2 15 45 , 18 65 , 7 37 | 4 3 8 9 , 13 44 , 58 , 47 | 16 51 64 , 70 | 10 34 53 11 , 24 20 22 , 21 23 | 55 56 57 , 12 | 36 46 , 38 49 50 , 71 | 30 29 54 32 31 33 | 17 26 62 73 , 14 66 68 | 25 52 60 61 | 40 41 42 , 27 28 35 , 6" position="1" help="false" />
+	<input show="false" cmd="true" top="false" />
+	<dockBar show="false" east="false" />
+</perspective>
+	</perspectives>
+	<labelingStyle  val="3"/>
+	<font  size="20"/>
+</gui>
+<euclidianView>
+	<viewNumber viewNo="1"/>
+	<size  width="998" height="617"/>
+	<coordSystem xZero="498.9999999999999" yZero="308.5" scale="38.941966603684676" yscale="38.941966603684676"/>
+	<evSettings axes="false" grid="false" gridIsBold="false" pointCapturing="1" rightAngleStyle="1" checkboxSize="26" gridType="2"/>
+	<bgColor r="255" g="255" b="255"/>
+	<axesColor r="0" g="0" b="0"/>
+	<gridColor r="128" g="128" b="128"/>
+	<lineStyle axes="3" grid="0"/>
+	<axis id="0" show="false" label="x" unitLabel="" tickStyle="1" showNumbers="true" tickDistance="1" tickExpression="1"/>
+	<axis id="1" show="false" label="y" unitLabel="" tickStyle="1" showNumbers="true" tickDistance="1" tickExpression="1"/>
+	<grid distX="1" distY="1" distTheta="0.2617993877991494"/>
+</euclidianView>
+<euclidianView>
+	<viewNumber viewNo="2"/>
+	<size  width="998" height="63"/>
+	<coordSystem xZero="278.05402455869563" yZero="73.01633326105647" scale="27.817348515033828" yscale="27.817348515033743"/>
+	<evSettings axes="false" grid="false" gridIsBold="false" pointCapturing="3" rightAngleStyle="1" checkboxSize="26" gridType="0"/>
+	<bgColor r="255" g="255" b="0"/>
+	<axesColor r="0" g="0" b="0"/>
+	<gridColor r="192" g="192" b="192"/>
+	<lineStyle axes="1" grid="10"/>
+	<axis id="0" show="false" label="" unitLabel="" tickStyle="1" showNumbers="true"/>
+	<axis id="1" show="false" label="" unitLabel="" tickStyle="1" showNumbers="true"/>
+	<grid distX="1" distY="1" distTheta="0.5235987755982988"/>
+</euclidianView>
+<algebraView>
+	<mode val="1"/>
+</algebraView>
+<kernel>
+	<continuous val="false"/>
+	<usePathAndRegionParameters val="true"/>
+	<decimals val="2"/>
+	<angleUnit val="degree"/>
+	<algebraStyle val="0" spreadsheet="0"/>
+	<coordStyle val="0"/>
+</kernel>
+<tableview min="-2" max="2" step="1"/>
+<scripting blocked="false" disabled="false"/>
+<construction title="" author="" date="">
+<element type="numeric" label="R">
+	<value val="6"/>
+	<show object="false" label="true"/>
+	<objColor r="0" g="0" b="0" alpha="0.10000000149011612"/>
+	<layer val="0"/>
+	<labelOffset x="-40" y="3"/>
+	<labelMode val="1"/>
+	<animation step="1" speed="1" type="0" playing="false"/>
+	<caption val="半徑 = %v"/>
+</element>
+<expression label="listAngle" exp="{10°, 15°, 30°}"/>
+<element type="list" label="listAngle">
+	<show object="false" label="true" ev="11"/>
+	<objColor r="0" g="0" b="0" alpha="0.10000000149011612"/>
+	<bgColor r="255" g="255" b="255" alpha="255"/>
+	<layer val="1"/>
+	<labelOffset x="802" y="14"/>
+	<labelMode val="0"/>
+	<animation step="1" speed="1" type="0" playing="false"/>
+	<selectionAllowed val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<selectedIndex val="1"/>
+	<comboBox val="true"/>
+	<pointSize val="3"/>
+	<pointStyle val="-1"/>
+	<caption val="角度間隔 ="/>
+</element>
+<command name="SelectedElement">
+	<input a0="listAngle"/>
+	<output a0="angle"/>
+</command>
+<element type="angle" label="angle">
+	<angleStyle val="0"/>
+	<value val="0.2617993877991494"/>
+	<show object="false" label="true"/>
+	<objColor r="0" g="100" b="0" alpha="0.10000000149011612"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<lineStyle thickness="2" type="0" typeHidden="2"/>
+	<arcSize val="30"/>
+	<selectionAllowed val="false"/>
+</element>
+<command name="RandomElement">
+	<input a0="Sequence[(i * angle), i, 0, (360 * ° / angle) - 1]"/>
+	<output a0="theta"/>
+</command>
+<element type="angle" label="theta">
+	<angleStyle val="0"/>
+	<value val="1.5707963267948966"/>
+	<show object="false" label="true"/>
+	<objColor r="0" g="100" b="0" alpha="0.10000000149011612"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<lineStyle thickness="2" type="0" typeHidden="2"/>
+	<arcSize val="30"/>
+	<selectionAllowed val="false"/>
+</element>
+<command name="Random">
+	<input a0="1" a1="R"/>
+	<output a0="r"/>
+</command>
+<element type="numeric" label="r">
+	<value val="1"/>
+	<objColor r="0" g="0" b="0" alpha="0.10000000149011612"/>
+	<selectionAllowed val="false"/>
+</element>
+<expression label="Q" exp="(r; theta)" type="point" />
+<element type="point" label="Q">
+	<show object="true" label="true" ev="5"/>
+	<objColor r="255" g="127" b="0" alpha="0"/>
+	<layer val="1"/>
+	<labelOffset x="0" y="4"/>
+	<labelMode val="3"/>
+	<coords x="6.123233995736766e-17" y="1" z="1"/>
+	<coordStyle style="polar"/>
+	<pointSize val="4"/>
+	<pointStyle val="0"/>
+	<caption val="P"/>
+</element>
+<command name="Sequence">
+	<input a0="Circle[(0, 0), r]" a1="r" a2="1" a3="R"/>
+	<output a0="listCircle"/>
+</command>
+<element type="list" label="listCircle">
+	<show object="true" label="true" ev="4"/>
+	<objColor r="0" g="102" b="153" alpha="0"/>
+	<bgColor r="255" g="255" b="255" alpha="255"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<lineStyle thickness="3" type="0" typeHidden="1"/>
+	<pointSize val="3"/>
+	<pointStyle val="-1"/>
+</element>
+<command name="Text">
+	<input a0="&quot;90°&quot;" a1="(-0.3, R + 0.5)"/>
+	<output a0="text2"/>
+</command>
+<element type="text" label="text2">
+	<show object="true" label="false" ev="8"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<startPoint  x="-0.3" y="6.5" z="1"/>
+</element>
+<command name="Vector">
+	<input a0="(R + 1, 0)"/>
+	<output a0="u"/>
+</command>
+<element type="vector" label="u">
+	<show object="true" label="false" ev="4"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<coords x="7" y="0" z="0"/>
+	<lineStyle thickness="6" type="0" typeHidden="1"/>
+	<coordStyle style="cartesian"/>
+</element>
+<command name="Text">
+	<input a0="&quot;180°&quot;" a1="((-R) - 1.8, -0.2)"/>
+	<output a0="text3"/>
+</command>
+<element type="text" label="text3">
+	<show object="true" label="false" ev="8"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<startPoint  x="-7.8" y="-0.2" z="1"/>
+</element>
+<command name="Text">
+	<input a0="&quot;0°&quot;" a1="(R + 1.2, -0.2)"/>
+	<output a0="text1"/>
+</command>
+<element type="text" label="text1">
+	<show object="true" label="false" ev="8"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<startPoint  x="7.2" y="-0.2" z="1"/>
+</element>
+<command name="Text">
+	<input a0="&quot;270°&quot;" a1="(-0.5, (-R) - 1.2)"/>
+	<output a0="text4"/>
+</command>
+<element type="text" label="text4">
+	<show object="true" label="false" ev="8"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<startPoint  x="-0.5" y="-7.2" z="1"/>
+</element>
+<command name="Sequence">
+	<input a0="Text[r, (r - 0.2, -0.7)]" a1="r" a2="1" a3="R"/>
+	<output a0="listTextAxis"/>
+</command>
+<element type="list" label="listTextAxis">
+	<show object="true" label="false" ev="4"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<bgColor r="255" g="255" b="255" alpha="255"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="true"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<pointSize val="3"/>
+	<pointStyle val="-1"/>
+</element>
+<element type="button" label="buttonNext">
+	<show object="true" label="true" ev="1"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="1"/>
+	<labelOffset x="695" y="17"/>
+	<labelMode val="3"/>
+	<animation step="1" speed="1" type="0" playing="false"/>
+	<auxiliary val="true"/>
+	<ggbscript val="UpdateConstruction[]&#xa;SetValue[P,(0,0)]&#xa;SetVisibleInView[picCorrect,1,false]&#xa;SetVisibleInView[picWrong,1,false]&#xa;SetVisibleInView[Q,1,false]&#xa;SetVisibleInView[buttonCheck,2,true]&#xa;SetVisibleInView[buttonNext,2,false]"/>
+	<font serif="false" sizeM="2" size="20" style="0"/>
+	<caption val="Next"/>
+</element>
+<command name="Sequence">
+	<input a0="Text[((theta / π * 180))°, (((R + 0.5) * cos(theta)), ((R + 0.5) * sin(theta)))]" a1="theta" a2="angle" a3="89°" a4="angle"/>
+	<output a0="listTextQ1"/>
+</command>
+<element type="list" label="listTextQ1">
+	<show object="true" label="false" ev="4"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<bgColor r="255" g="255" b="255" alpha="255"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="true"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<pointSize val="3"/>
+	<pointStyle val="-1"/>
+</element>
+<command name="Sequence">
+	<input a0="Text[((theta / π * 180))°, (((R + 0.4) * cos(theta)) - 1, ((R + 0.4) * sin(theta)))]" a1="theta" a2="90° + angle" a3="179°" a4="angle"/>
+	<output a0="listTextQ2"/>
+</command>
+<element type="list" label="listTextQ2">
+	<show object="true" label="false" ev="4"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<bgColor r="255" g="255" b="255" alpha="255"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="true"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<pointSize val="3"/>
+	<pointStyle val="-1"/>
+</element>
+<command name="Sequence">
+	<input a0="Text[((theta / π * 180))°, (((R + 0.4) * cos(theta)) - 1, ((R + 0.4) * sin(theta)) - 0.6)]" a1="theta" a2="180° + angle" a3="269°" a4="angle"/>
+	<output a0="listTextQ3"/>
+</command>
+<element type="list" label="listTextQ3">
+	<show object="true" label="false" ev="4"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<bgColor r="255" g="255" b="255" alpha="255"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="true"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<pointSize val="3"/>
+	<pointStyle val="-1"/>
+</element>
+<command name="Sequence">
+	<input a0="Text[((theta / π * 180))°, (((R + 0.4) * cos(theta)), ((R + 0.4) * sin(theta)) - 0.6)]" a1="theta" a2="270° + angle" a3="359°" a4="angle"/>
+	<output a0="listTextQ4"/>
+</command>
+<element type="list" label="listTextQ4">
+	<show object="true" label="false" ev="4"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<bgColor r="255" g="255" b="255" alpha="255"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="true"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<pointSize val="3"/>
+	<pointStyle val="-1"/>
+</element>
+<command name="Sequence">
+	<input a0="Segment[(0, 0), ((R * cos(theta)), (R * sin(theta)))]" a1="theta" a2="0°" a3="360°" a4="angle"/>
+	<output a0="listRadiusThick"/>
+</command>
+<element type="list" label="listRadiusThick">
+	<show object="true" label="true" ev="4"/>
+	<objColor r="0" g="102" b="153" alpha="0"/>
+	<bgColor r="255" g="255" b="255" alpha="255"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<lineStyle thickness="3" type="0" typeHidden="1"/>
+	<pointSize val="3"/>
+	<pointStyle val="-1"/>
+</element>
+<element type="numeric" label="marks">
+	<value val="0"/>
+	<show object="false" label="true"/>
+	<objColor r="0" g="0" b="0" alpha="0.10000000149011612"/>
+	<layer val="1"/>
+	<labelMode val="1"/>
+	<slider min="0" max="100" absoluteScreenLocation="true" width="200" x="30" y="50" fixed="false" horizontal="true" showAlgebra="false"/>
+	<lineStyle thickness="10" type="0" typeHidden="1"/>
+	<animation step="1" speed="1" type="0" playing="false"/>
+</element>
+<expression label="P" exp="(0, 0)" type="point"/>
+<element type="point" label="P">
+	<show object="true" label="true" ev="4"/>
+	<objColor r="255" g="0" b="0" alpha="0"/>
+	<layer val="3"/>
+	<labelOffset x="-14" y="2"/>
+	<labelMode val="0"/>
+	<animation step="0.1" speed="1" type="1" playing="false"/>
+	<coords x="0" y="0" z="1"/>
+	<pointSize val="4"/>
+	<pointStyle val="0"/>
+</element>
+<expression label="correct" exp="P ≟ Q" />
+<element type="boolean" label="correct">
+	<value val="false"/>
+	<show object="false" label="true"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<checkbox fixed="true"/>
+</element>
+<command name="Vector">
+	<input a0="P"/>
+	<output a0="v"/>
+</command>
+<element type="vector" label="v">
+	<show object="true" label="false"/>
+	<objColor r="0" g="204" b="0" alpha="0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<coords x="0" y="0" z="0"/>
+	<lineStyle thickness="5" type="0" typeHidden="1"/>
+	<coordStyle style="cartesian"/>
+</element>
+<command name="Angle">
+	<input a0="(8, 0)" a1="(0, 0)" a2="P"/>
+	<output a0="α"/>
+</command>
+<element type="angle" label="α">
+	<angleStyle val="0"/>
+	<value val="3.665191429188092"/>
+	<show object="true" label="false"/>
+	<objColor r="0" g="204" b="0" alpha="0.25"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<lineStyle thickness="0" type="0" typeHidden="2"/>
+	<arcSize val="50"/>
+	<selectionAllowed val="false"/>
+</element>
+<element type="image" label="picCorrect">
+	<file name="96bee65b9df1ebf3a821122f720c42ff/clap_small.png"/>
+	<inBackground val="false"/>
+	<startPoint number="0" exp="P - (0, 1)"/>
+	<startPoint number="2" exp="P + (0, 1)"/>
+	<show object="true" label="true" ev="1"/>
+	<objColor r="0" g="0" b="0" alpha="1"/>
+	<layer val="2"/>
+	<labelMode val="0"/>
+	<animation step="1" speed="1" type="0" playing="false"/>
+	<selectionAllowed val="false"/>
+</element>
+<element type="image" label="picWrong">
+	<file name="a94e0f31e7dfd448c35c108f5edd6f90/Cold Sweat.png"/>
+	<inBackground val="false"/>
+	<startPoint number="0" exp="P - (0, 1)"/>
+	<startPoint number="2" exp="P + (0, 1)"/>
+	<show object="true" label="true" ev="1"/>
+	<objColor r="0" g="0" b="0" alpha="1"/>
+	<layer val="2"/>
+	<labelMode val="0"/>
+	<animation step="1" speed="1" type="0" playing="false"/>
+	<selectionAllowed val="false"/>
+</element>
+<element type="button" label="buttonCheck">
+	<show object="true" label="true" ev="3"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="1"/>
+	<labelOffset x="695" y="17"/>
+	<labelMode val="3"/>
+	<animation step="1" speed="1" type="0" playing="false"/>
+	<auxiliary val="true"/>
+	<ggbscript val="SetValue[marks,If[correct,marks+1,marks-1]]&#xa;SetVisibleInView[picCorrect,1,correct]&#xa;SetVisibleInView[picWrong,1,!correct]&#xa;SetVisibleInView[Q,1,!correct]&#xa;SetVisibleInView[buttonCheck,2,false]&#xa;SetVisibleInView[buttonNext,2,true]"/>
+	<font serif="false" sizeM="2" size="20" style="0"/>
+	<caption val="Check"/>
+</element>
+<element type="numeric" label="lang">
+	<value val="2"/>
+	<symbolic val="true" />
+	<show object="false" label="true"/>
+	<objColor r="0" g="0" b="0" alpha="0.10000000149011612"/>
+	<layer val="3"/>
+	<labelMode val="1"/>
+	<animation step="1" speed="1" type="0" playing="false"/>
+</element>
+<element type="button" label="button0">
+	<show object="true" label="true" ev="3"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="3"/>
+	<labelOffset x="834" y="17"/>
+	<labelMode val="3"/>
+	<animation step="1" speed="1" type="0" playing="false"/>
+	<auxiliary val="true"/>
+	<ggbscript val="SetValue[lang,If[lang==1,2,1]]&#xa;RunClickScript[buttonLang]&#xa;"/>
+	<font serif="false" sizeM="1.4" size="8" style="0"/>
+	<caption val="中文"/>
+</element>
+<element type="button" label="buttonLang">
+	<show object="false" label="true" ev="3"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="3"/>
+	<labelOffset x="918" y="17"/>
+	<labelMode val="0"/>
+	<animation step="1" speed="1" type="0" playing="false"/>
+	<auxiliary val="true"/>
+	<ggbscript val="SetCaption[button0,If[lang==1,&quot;ENG&quot;,&quot;中文&quot;]]&#xa;SetCaption[buttonCheck,If[lang==1,&quot;核對&quot;,&quot;Check&quot;]]&#xa;SetCaption[buttonNext,If[lang==1,&quot;下一題&quot;,&quot;Next&quot;]]"/>
+	<font serif="false" sizeM="1.4" size="8" style="0"/>
+</element>
+<expression label="textMarks" exp="&quot;&quot; + (If[lang ≟ 1, &quot;分數&quot;, &quot;Marks&quot;]) + &quot; = &quot; + marks + &quot; &quot;" />
+<element type="text" label="textMarks">
+	<show object="true" label="false" ev="11"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<absoluteScreenLocation x="531" y="40"/>
+</element>
+<expression label="textQ" exp="&quot;&quot; + (If[lang ≟ 1, &quot;移動P點到&quot;, &quot;Move the point P to&quot;]) + &quot; (&quot; + r + &quot;, &quot; + theta + &quot;)&quot; + (If[lang ≟ 1, &quot;。&quot;, &quot; .&quot;]) + &quot;&quot;" />
+<element type="text" label="textQ">
+	<show object="true" label="false" ev="11"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<font serif="false" sizeM="1.5" size="10" style="0"/>
+	<absoluteScreenLocation x="13" y="43"/>
+</element>
+<element type="point" label="star">
+	<show object="false" label="true" ev="11"/>
+	<objColor r="0" g="0" b="255" alpha="0"/>
+	<layer val="3"/>
+	<labelOffset x="-13" y="32"/>
+	<labelMode val="0"/>
+	<animation step="0.1" speed="1" type="1" playing="false"/>
+	<coords x="6.720481477243242" y="0.39602384300224563" z="1"/>
+	<pointSize val="5"/>
+	<pointStyle val="0"/>
+</element>
+<element type="image" label="picStar">
+	<file name="a1438ea254ee24f940dc2e1cb2430ccf/star.png"/>
+	<inBackground val="false"/>
+	<startPoint number="0" exp="star"/>
+	<startPoint number="1" exp="star + (2, 0)"/>
+	<show object="true" label="true" ev="3"/>
+	<condition showObject="marks ≥ 100"/>
+	<objColor r="0" g="0" b="0" alpha="1"/>
+	<layer val="3"/>
+	<labelMode val="0"/>
+	<animation step="1" speed="1" type="0" playing="false"/>
+	<selectionAllowed val="false"/>
+</element>
+</construction>
+</geogebra>

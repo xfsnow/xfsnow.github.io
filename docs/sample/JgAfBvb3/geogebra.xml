@@ -1,0 +1,1178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<geogebra format="4.2" version="4.2.47.0" id="7a0836e4-3254-4c67-9be5-a0041e645c99"  xsi:noNamespaceSchemaLocation="http://www.geogebra.org/ggb.xsd" xmlns="" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" >
+<gui>
+	<window width="888" height="665" />
+	<perspectives>
+<perspective id="tmp">
+	<panes>
+		<pane location="" divider="0.5765765765765766" orientation="1" />
+	</panes>
+	<views>
+		<view id="1" visible="true" inframe="false" stylebar="true" location="3" size="880" window="0,0,400,400" />
+		<view id="4" toolbar="0 || 2020 , 2021 , 2022 , 66 || 2001 , 2003 , 2002 , 2004 , 2005 || 2040 , 2041 , 2042 , 2044 , 2043" visible="false" inframe="false" stylebar="false" location="1" size="355" window="0,0,400,400" />
+		<view id="2" visible="false" inframe="true" stylebar="true" location="3" size="264" window="20,161,388,673" />
+		<view id="8" toolbar="1001 | 1002 | 1003  || 1005 | 1004 || 1006 | 1007 | 1010 | 1011 || 1008 1009 || 6" visible="false" inframe="false" stylebar="false" location="1" size="150" window="50,50,500,500" />
+		<view id="16" visible="false" inframe="true" stylebar="false" location="1" size="150" window="50,50,500,500" />
+		<view id="32" visible="false" inframe="true" stylebar="true" location="1" size="150" window="50,50,500,500" />
+		<view id="64" visible="false" inframe="true" stylebar="false" location="1" size="150" window="50,50,500,500" />
+		<view id="4097" visible="false" inframe="true" stylebar="true" location="1" size="150" window="413,-5,812,634" />
+		<view id="70" toolbar="0 || 2020 || 2021 || 2022" visible="false" inframe="true" stylebar="true" location="1" size="150" window="50,50,500,500" />
+	</views>
+	<toolbar show="true" items="0 || 41 | 42 | 40" position="1" help="true" />
+	<input show="false" cmd="true" top="false" />
+	<dockBar show="false" east="false" />
+</perspective>
+	</perspectives>
+	<labelingStyle  val="3"/>
+	<font  size="18"/>
+	<graphicsSettings javaLatexFonts="false"/>
+</gui>
+<euclidianView>
+	<size  width="880" height="520"/>
+	<coordSystem xZero="120.45311593085495" yZero="369.24536691059353" scale="72.7263294667795" yscale="72.72632946677959"/>
+	<evSettings axes="false" grid="false" gridIsBold="false" pointCapturing="0" rightAngleStyle="1" checkboxSize="26" gridType="0"/>
+	<bgColor r="255" g="255" b="255"/>
+	<axesColor r="64" g="64" b="64"/>
+	<gridColor r="192" g="192" b="192"/>
+	<lineStyle axes="1" grid="10"/>
+	<axis id="0" show="false" label="" unitLabel="" tickStyle="1" showNumbers="true"/>
+	<axis id="1" show="false" label="" unitLabel="" tickStyle="1" showNumbers="true"/>
+	<grid distX="0.1" distY="0.025" distTheta="0.5235987755982988"/>
+</euclidianView>
+<kernel>
+	<continuous val="false"/>
+	<usePathAndRegionParameters val="true"/>
+	<decimals val="5"/>
+	<angleUnit val="radiant"/>
+	<algebraStyle val="0"/>
+	<coordStyle val="0"/>
+	<angleFromInvTrig val="false"/>
+</kernel>
+<scripting blocked="false" disabled="false"/>
+<construction title="" author="教育局 評估及考評局組" date="22 November 2013">
+<element type="numeric" label="r">
+	<value val="0.9999999999999996"/>
+	<show object="false" label="false"/>
+	<objColor r="0" g="0" b="255" alpha="0.1"/>
+	<layer val="0"/>
+	<labelOffset x="-5" y="3"/>
+	<labelMode val="1"/>
+	<slider min="0.1" max="1.5" absoluteScreenLocation="true" width="100.0" x="56.0" y="72.0" fixed="true" horizontal="true"/>
+	<lineStyle thickness="3" type="0" typeHidden="1"/>
+	<animation step="0.05" speed="1" type="0" playing="false"/>
+</element>
+<command name="Point">
+	<input a0="yAxis"/>
+	<output a0="B"/>
+</command>
+<element type="point" label="B">
+	<show object="false" label="false"/>
+	<objColor r="125" g="125" b="255" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<animation step="0.1" speed="1" type="0" playing="false"/>
+	<coords x="0.0" y="0.0" z="1.0"/>
+	<pointSize val="3"/>
+	<pointStyle val="1"/>
+</element>
+<expression label="D0" exp="(0, y(B) - 0.5)" type="point" />
+<element type="point" label="D0">
+	<show object="false" label="false"/>
+	<objColor r="64" g="64" b="64" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<coords x="0.0" y="-0.5" z="1.0"/>
+	<pointSize val="3"/>
+	<pointStyle val="1"/>
+</element>
+<command name="CurveCartesian">
+	<input a0="r * (t - sin(t))" a1="r * (1 - cos(t)) + y(B)" a2="t" a3="0" a4="6.28319"/>
+	<output a0="f"/>
+</command>
+<element type="curvecartesian" label="f">
+	<show object="false" label="false"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+</element>
+<command name="Point">
+	<input a0="f"/>
+	<output a0="P"/>
+</command>
+<element type="point" label="P">
+	<curveParam t="8.550782814032012E-7"/>
+	<show object="true" label="true"/>
+	<objColor r="255" g="0" b="0" alpha="0.0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<animation step="0.1" speed="1" type="0" playing="false"/>
+	<coords x="1.0418505251227889E-19" y="3.655964420090639E-13" z="1.0"/>
+	<pointSize val="4"/>
+	<pointStyle val="1"/>
+</element>
+<command name="If">
+	<input a0="x(P) &lt; r * 3.141592653589793" a1="acos(1 - (y(P) - y(B)) / r)" a2="2 * 3.141592653589793 - acos(1 - (y(P) - y(B)) / r)"/>
+	<output a0="θ"/>
+</command>
+<element type="numeric" label="θ">
+	<value val="8.550981721522814E-7"/>
+	<objColor r="0" g="0" b="0" alpha="0.1"/>
+</element>
+<expression label="C_1" exp="(r * θ, r + y(B))" type="point" />
+<element type="point" label="C_1">
+	<show object="true" label="false"/>
+	<condition showObject="y(A) ≥ r"/>
+	<objColor r="64" g="64" b="64" alpha="0.0"/>
+	<layer val="0"/>
+	<labelOffset x="-5" y="1"/>
+	<labelMode val="0"/>
+	<coords x="8.55098172152281E-7" y="0.9999999999999996" z="1.0"/>
+	<pointSize val="3"/>
+	<pointStyle val="1"/>
+</element>
+<command name="Point">
+	<input a0="Segment[(x(D0), y(D0) + 0.25), (r * θ - r, r + y(B))]"/>
+	<output a0="A"/>
+</command>
+<element type="point" label="A">
+	<show object="true" label="false"/>
+	<objColor r="0" g="255" b="0" alpha="0.0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<animation step="0.1" speed="1" type="0" playing="false"/>
+	<coords x="-0.9999991449018274" y="0.9999999999999996" z="1.0"/>
+	<pointSize val="4"/>
+	<pointStyle val="1"/>
+</element>
+<command name="Segment">
+	<input a0="B" a1="(x(C_1), y(B))"/>
+	<output a0="c1"/>
+</command>
+<element type="segment" label="c1">
+	<show object="true" label="false"/>
+	<objColor r="255" g="0" b="0" alpha="0.0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<coords x="0.0" y="8.55098172152281E-7" z="0.0"/>
+	<lineStyle thickness="5" type="0" typeHidden="1"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<command name="CircleArc">
+	<input a0="C_1" a1="(x(C_1), y(B))" a2="P"/>
+	<output a0="c2"/>
+</command>
+<element type="conicpart" label="c2">
+	<show object="true" label="false"/>
+	<objColor r="255" g="0" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<lineStyle thickness="5" type="0" typeHidden="1"/>
+	<eigenvectors  x0="1.0" y0="0.0" z0="1.0" x1="-0.0" y1="1.0" z1="1.0"/>
+	<matrix A0="1.0" A1="1.0" A2="7.311928840181281E-13" A3="0.0" A4="-8.55098172152281E-7" A5="-0.9999999999999996"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<expression label="D" exp="(x(C_1), y(B))" type="point" />
+<element type="point" label="D">
+	<show object="false" label="false"/>
+	<objColor r="64" g="64" b="64" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<coords x="8.55098172152281E-7" y="0.0" z="1.0"/>
+	<pointSize val="3"/>
+	<pointStyle val="1"/>
+</element>
+<command name="CircleArc">
+	<input a0="C_1" a1="P" a2="(x(C_1), y(B))"/>
+	<output a0="e"/>
+</command>
+<element type="conicpart" label="e">
+	<show object="true" label="false"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<eigenvectors  x0="1.0" y0="0.0" z0="1.0" x1="-0.0" y1="1.0" z1="1.0"/>
+	<matrix A0="1.0" A1="1.0" A2="7.314149286230531E-13" A3="0.0" A4="-8.55098172152281E-7" A5="-0.9999999999999996"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<command name="Segment">
+	<input a0="A" a1="(x(A) + 2 * r, y(A))"/>
+	<output a0="j"/>
+</command>
+<element type="segment" label="j">
+	<show object="true" label="false"/>
+	<objColor r="0" g="0" b="255" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<coords x="0.0" y="1.9999999999999991" z="-1.9999999999999982"/>
+	<lineStyle thickness="5" type="0" typeHidden="1"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<command name="Sequence">
+	<input a0="Segment[(2 * i * r, 0), (2 * i * r, -1 * 0.25)]" a1="i" a2="0" a3="10"/>
+	<output a0="list1"/>
+</command>
+<element type="list" label="list1">
+	<show object="true" label="false"/>
+	<condition showObject="以直徑為量度單位"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<pointSize val="4"/>
+	<pointStyle val="1"/>
+</element>
+<element type="point" label="C">
+	<show object="false" label="false"/>
+	<objColor r="0" g="0" b="255" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<coords x="0.0" y="-0.25" z="1.0"/>
+	<pointSize val="4"/>
+	<pointStyle val="1"/>
+</element>
+<expression label="E" exp="(2 * r, -1 * 0.25)" type="point" />
+<element type="point" label="E">
+	<show object="false" label="false"/>
+	<objColor r="64" g="64" b="64" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<coords x="1.9999999999999991" y="-0.25" z="1.0"/>
+	<pointSize val="4"/>
+	<pointStyle val="1"/>
+</element>
+<expression label="F" exp="(4 * r, -1 * 0.25)" type="point" />
+<element type="point" label="F">
+	<show object="false" label="false"/>
+	<objColor r="64" g="64" b="64" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<coords x="3.9999999999999982" y="-0.25" z="1.0"/>
+	<pointSize val="4"/>
+	<pointStyle val="1"/>
+</element>
+<expression label="G" exp="(6 * r, -1 * 0.25)" type="point" />
+<element type="point" label="G">
+	<show object="false" label="false"/>
+	<objColor r="64" g="64" b="64" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<coords x="5.999999999999997" y="-0.25" z="1.0"/>
+	<pointSize val="4"/>
+	<pointStyle val="1"/>
+</element>
+<expression label="H" exp="(8 * r, -1 * 0.25)" type="point" />
+<element type="point" label="H">
+	<show object="false" label="false"/>
+	<objColor r="64" g="64" b="64" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<coords x="7.9999999999999964" y="-0.25" z="1.0"/>
+	<pointSize val="4"/>
+	<pointStyle val="1"/>
+</element>
+<expression label="I" exp="(10 * r, -1 * 0.25)" type="point" />
+<element type="point" label="I">
+	<show object="false" label="false"/>
+	<objColor r="64" g="64" b="64" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<coords x="9.999999999999996" y="-0.25" z="1.0"/>
+	<pointSize val="4"/>
+	<pointStyle val="1"/>
+</element>
+<expression label="J" exp="(12 * r, -1 * 0.25)" type="point" />
+<element type="point" label="J">
+	<show object="false" label="false"/>
+	<objColor r="64" g="64" b="64" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<coords x="11.999999999999995" y="-0.25" z="1.0"/>
+	<pointSize val="4"/>
+	<pointStyle val="1"/>
+</element>
+<expression label="K" exp="(14 * r, -1 * 0.25)" type="point" />
+<element type="point" label="K">
+	<show object="false" label="false"/>
+	<objColor r="64" g="64" b="64" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<coords x="13.999999999999993" y="-0.25" z="1.0"/>
+	<pointSize val="4"/>
+	<pointStyle val="1"/>
+</element>
+<expression label="L" exp="(16 * r, -1 * 0.25)" type="point" />
+<element type="point" label="L">
+	<show object="false" label="false"/>
+	<objColor r="64" g="64" b="64" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<coords x="15.999999999999993" y="-0.25" z="1.0"/>
+	<pointSize val="4"/>
+	<pointStyle val="1"/>
+</element>
+<expression label="M" exp="(18 * r, -1 * 0.25)" type="point" />
+<element type="point" label="M">
+	<show object="false" label="false"/>
+	<objColor r="64" g="64" b="64" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<coords x="17.999999999999993" y="-0.25" z="1.0"/>
+	<pointSize val="4"/>
+	<pointStyle val="1"/>
+</element>
+<expression label="N" exp="(20 * r, -1 * 0.25)" type="point" />
+<element type="point" label="N">
+	<show object="false" label="false"/>
+	<objColor r="64" g="64" b="64" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<coords x="19.999999999999993" y="-0.25" z="1.0"/>
+	<pointSize val="4"/>
+	<pointStyle val="1"/>
+</element>
+<expression label="text1" exp="&quot;0&quot;"/>
+<element type="text" label="text1">
+	<show object="true" label="false"/>
+	<condition showObject="以直徑為量度單位"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<font serif="false" sizeM="1.2222222222222223" size="4" style="0"/>
+	<startPoint exp="C"/>
+	<labelOffset x="-6" y="23"/>
+</element>
+<expression label="text2" exp="&quot;1&quot;"/>
+<element type="text" label="text2">
+	<show object="true" label="false"/>
+	<condition showObject="以直徑為量度單位"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<font serif="false" sizeM="1.2222222222222223" size="4" style="0"/>
+	<startPoint exp="E"/>
+	<labelOffset x="-5" y="22"/>
+</element>
+<expression label="text3" exp="&quot;2&quot;"/>
+<element type="text" label="text3">
+	<show object="true" label="false"/>
+	<condition showObject="以直徑為量度單位"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<font serif="false" sizeM="1.2222222222222223" size="4" style="0"/>
+	<startPoint exp="F"/>
+	<labelOffset x="-12" y="22"/>
+</element>
+<expression label="text4" exp="&quot;3&quot;"/>
+<element type="text" label="text4">
+	<show object="true" label="false"/>
+	<condition showObject="以直徑為量度單位"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<font serif="false" sizeM="1.2222222222222223" size="4" style="0"/>
+	<startPoint exp="G"/>
+	<labelOffset x="-10" y="22"/>
+</element>
+<expression label="text5" exp="&quot;4&quot;"/>
+<element type="text" label="text5">
+	<show object="true" label="false"/>
+	<condition showObject="以直徑為量度單位"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<font serif="false" sizeM="1.2222222222222223" size="4" style="0"/>
+	<startPoint exp="H"/>
+	<labelOffset x="-11" y="22"/>
+</element>
+<expression label="text6" exp="&quot;5&quot;"/>
+<element type="text" label="text6">
+	<show object="true" label="false"/>
+	<condition showObject="以直徑為量度單位"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<font serif="false" sizeM="1.2222222222222223" size="4" style="0"/>
+	<startPoint exp="I"/>
+	<labelOffset x="-10" y="23"/>
+</element>
+<expression label="text7" exp="&quot;6&quot;"/>
+<element type="text" label="text7">
+	<show object="true" label="false"/>
+	<condition showObject="以直徑為量度單位"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<font serif="false" sizeM="1.2222222222222223" size="4" style="0"/>
+	<startPoint exp="J"/>
+	<labelOffset x="-11" y="22"/>
+</element>
+<expression label="text8" exp="&quot;7&quot;"/>
+<element type="text" label="text8">
+	<show object="true" label="false"/>
+	<condition showObject="以直徑為量度單位"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<font serif="false" sizeM="1.2222222222222223" size="4" style="0"/>
+	<startPoint exp="K"/>
+	<labelOffset x="-11" y="22"/>
+</element>
+<expression label="text9" exp="&quot;8&quot;"/>
+<element type="text" label="text9">
+	<show object="true" label="false"/>
+	<condition showObject="以直徑為量度單位"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<font serif="false" sizeM="1.2222222222222223" size="4" style="0"/>
+	<startPoint exp="L"/>
+	<labelOffset x="-11" y="22"/>
+</element>
+<expression label="text10" exp="&quot;9&quot;"/>
+<element type="text" label="text10">
+	<show object="true" label="false"/>
+	<condition showObject="以直徑為量度單位"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<font serif="false" sizeM="1.2222222222222223" size="4" style="0"/>
+	<startPoint exp="M"/>
+	<labelOffset x="-11" y="22"/>
+</element>
+<expression label="text11" exp="&quot;10&quot;"/>
+<element type="text" label="text11">
+	<show object="true" label="false"/>
+	<condition showObject="以直徑為量度單位"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<font serif="false" sizeM="1.2222222222222223" size="4" style="0"/>
+	<startPoint exp="N"/>
+	<labelOffset x="-15" y="22"/>
+</element>
+<command name="Sequence">
+	<input a0="Segment[((2 * i - 1) * r, 0), ((2 * i - 1) * r, -1 * 0.2)]" a1="i" a2="1" a3="10"/>
+	<output a0="list2"/>
+</command>
+<element type="list" label="list2">
+	<show object="true" label="false"/>
+	<condition showObject="以直徑為量度單位"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<pointSize val="4"/>
+	<pointStyle val="1"/>
+</element>
+<command name="Sequence">
+	<input a0="Sequence[Segment[(i * r + 0.2 * j * r, 0), (i * r + 0.2 * j * r, -1 * 0.15)], j, 1, 4]" a1="i" a2="0" a3="19"/>
+	<output a0="list3"/>
+</command>
+<element type="list" label="list3">
+	<show object="true" label="false"/>
+	<condition showObject="以直徑為量度單位"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<pointSize val="4"/>
+	<pointStyle val="1"/>
+</element>
+<command name="Segment">
+	<input a0="B" a1="(x(B) + 20 * r, y(B))"/>
+	<output a0="c"/>
+</command>
+<element type="segment" label="c">
+	<show object="true" label="false"/>
+	<condition showObject="以直徑為量度單位"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<coords x="0.0" y="19.999999999999993" z="0.0"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="boolean" label="細分刻度">
+	<value val="false"/>
+	<show object="true" label="true"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="1"/>
+	<labelOffset x="98" y="458"/>
+	<labelMode val="0"/>
+</element>
+<command name="Sequence">
+	<input a0="Segment[(i, 0), (i, -1 * 0.25)]" a1="i" a2="0" a3="10"/>
+	<output a0="list6"/>
+</command>
+<element type="list" label="list6">
+	<show object="true" label="true"/>
+	<condition showObject="以直徑為量度單位 ≟ false"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<pointSize val="4"/>
+	<pointStyle val="1"/>
+</element>
+<command name="Sequence">
+	<input a0="Segment[((2 * i - 1) / 2, 0), ((2 * i - 1) / 2, -1 * 0.2)]" a1="i" a2="1" a3="10"/>
+	<output a0="list7"/>
+</command>
+<element type="list" label="list7">
+	<show object="true" label="true"/>
+	<condition showObject="以直徑為量度單位 ≟ false"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<pointSize val="4"/>
+	<pointStyle val="1"/>
+</element>
+<command name="Sequence">
+	<input a0="Sequence[Segment[(i / 2 + 0.1 * j, 0), (i / 2 + 0.1 * j, -1 * 0.15)], j, 1, 4]" a1="i" a2="0" a3="19"/>
+	<output a0="list8"/>
+</command>
+<element type="list" label="list8">
+	<show object="true" label="true"/>
+	<condition showObject="以直徑為量度單位 ≟ false"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<pointSize val="4"/>
+	<pointStyle val="1"/>
+</element>
+<element type="point" label="O">
+	<show object="false" label="true"/>
+	<objColor r="0" g="0" b="255" alpha="0.0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<animation step="0.1" speed="1" type="0" playing="false"/>
+	<coords x="0.0" y="-0.25" z="1.0"/>
+	<pointSize val="4"/>
+	<pointStyle val="1"/>
+</element>
+<element type="point" label="Q">
+	<show object="false" label="true"/>
+	<objColor r="0" g="0" b="255" alpha="0.0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<animation step="0.1" speed="1" type="0" playing="false"/>
+	<coords x="1.0" y="-0.25" z="1.0"/>
+	<pointSize val="4"/>
+	<pointStyle val="1"/>
+</element>
+<element type="point" label="R">
+	<show object="false" label="true"/>
+	<objColor r="0" g="0" b="255" alpha="0.0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<animation step="0.1" speed="1" type="0" playing="false"/>
+	<coords x="2.0" y="-0.25" z="1.0"/>
+	<pointSize val="4"/>
+	<pointStyle val="1"/>
+</element>
+<element type="point" label="S">
+	<show object="false" label="true"/>
+	<objColor r="0" g="0" b="255" alpha="0.0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<animation step="0.1" speed="1" type="0" playing="false"/>
+	<coords x="3.0" y="-0.25" z="1.0"/>
+	<pointSize val="4"/>
+	<pointStyle val="1"/>
+</element>
+<element type="point" label="T">
+	<show object="false" label="true"/>
+	<objColor r="0" g="0" b="255" alpha="0.0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<animation step="0.1" speed="1" type="0" playing="false"/>
+	<coords x="4.0" y="-0.25" z="1.0"/>
+	<pointSize val="4"/>
+	<pointStyle val="1"/>
+</element>
+<element type="point" label="U">
+	<show object="false" label="true"/>
+	<objColor r="0" g="0" b="255" alpha="0.0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<animation step="0.1" speed="1" type="0" playing="false"/>
+	<coords x="5.0" y="-0.25" z="1.0"/>
+	<pointSize val="4"/>
+	<pointStyle val="1"/>
+</element>
+<element type="point" label="V">
+	<show object="false" label="true"/>
+	<objColor r="0" g="0" b="255" alpha="0.0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<animation step="0.1" speed="1" type="0" playing="false"/>
+	<coords x="6.0" y="-0.25" z="1.0"/>
+	<pointSize val="4"/>
+	<pointStyle val="1"/>
+</element>
+<element type="point" label="W">
+	<show object="false" label="true"/>
+	<objColor r="0" g="0" b="255" alpha="0.0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<animation step="0.1" speed="1" type="0" playing="false"/>
+	<coords x="7.0" y="-0.25" z="1.0"/>
+	<pointSize val="4"/>
+	<pointStyle val="1"/>
+</element>
+<element type="point" label="Z">
+	<show object="false" label="true"/>
+	<objColor r="0" g="0" b="255" alpha="0.0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<animation step="0.1" speed="1" type="0" playing="false"/>
+	<coords x="8.0" y="-0.25" z="1.0"/>
+	<pointSize val="4"/>
+	<pointStyle val="1"/>
+</element>
+<element type="point" label="A_1">
+	<show object="false" label="true"/>
+	<objColor r="0" g="0" b="255" alpha="0.0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<animation step="0.1" speed="1" type="0" playing="false"/>
+	<coords x="9.0" y="-0.25" z="1.0"/>
+	<pointSize val="4"/>
+	<pointStyle val="1"/>
+</element>
+<element type="point" label="B_1">
+	<show object="false" label="true"/>
+	<objColor r="0" g="0" b="255" alpha="0.0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<animation step="0.1" speed="1" type="0" playing="false"/>
+	<coords x="10.0" y="-0.25" z="1.0"/>
+	<pointSize val="4"/>
+	<pointStyle val="1"/>
+</element>
+<expression label="text12" exp="&quot;0 cm&quot;"/>
+<element type="text" label="text12">
+	<show object="true" label="false"/>
+	<condition showObject="以直徑為量度單位 ≟ false"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<font serif="false" sizeM="1.2222222222222223" size="4" style="0"/>
+	<startPoint exp="O"/>
+	<labelOffset x="-13" y="19"/>
+</element>
+<expression label="text13" exp="&quot;1&quot;"/>
+<element type="text" label="text13">
+	<show object="true" label="false"/>
+	<condition showObject="以直徑為量度單位 ≟ false"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<font serif="false" sizeM="1.2222222222222223" size="4" style="0"/>
+	<startPoint exp="Q"/>
+	<labelOffset x="-6" y="19"/>
+</element>
+<expression label="text14" exp="&quot;2&quot;"/>
+<element type="text" label="text14">
+	<show object="true" label="false"/>
+	<condition showObject="以直徑為量度單位 ≟ false"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<font serif="false" sizeM="1.2222222222222223" size="4" style="0"/>
+	<startPoint exp="R"/>
+	<labelOffset x="-4" y="20"/>
+</element>
+<expression label="text15" exp="&quot;3&quot;"/>
+<element type="text" label="text15">
+	<show object="true" label="false"/>
+	<condition showObject="以直徑為量度單位 ≟ false"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<font serif="false" sizeM="1.2222222222222223" size="4" style="0"/>
+	<startPoint exp="S"/>
+	<labelOffset x="-6" y="20"/>
+</element>
+<expression label="text16" exp="&quot;4&quot;"/>
+<element type="text" label="text16">
+	<show object="true" label="false"/>
+	<condition showObject="以直徑為量度單位 ≟ false"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<font serif="false" sizeM="1.2222222222222223" size="4" style="0"/>
+	<startPoint exp="T"/>
+	<labelOffset x="-5" y="20"/>
+</element>
+<expression label="text17" exp="&quot;5&quot;"/>
+<element type="text" label="text17">
+	<show object="true" label="false"/>
+	<condition showObject="以直徑為量度單位 ≟ false"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<font serif="false" sizeM="1.2222222222222223" size="4" style="0"/>
+	<startPoint exp="U"/>
+	<labelOffset x="-5" y="20"/>
+</element>
+<expression label="text18" exp="&quot;6&quot;"/>
+<element type="text" label="text18">
+	<show object="true" label="false"/>
+	<condition showObject="以直徑為量度單位 ≟ false"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<font serif="false" sizeM="1.2222222222222223" size="4" style="0"/>
+	<startPoint exp="V"/>
+	<labelOffset x="-4" y="20"/>
+</element>
+<expression label="text19" exp="&quot;7&quot;"/>
+<element type="text" label="text19">
+	<show object="true" label="false"/>
+	<condition showObject="以直徑為量度單位 ≟ false"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<font serif="false" sizeM="1.2222222222222223" size="4" style="0"/>
+	<startPoint exp="W"/>
+	<labelOffset x="-4" y="20"/>
+</element>
+<expression label="text20" exp="&quot;8&quot;"/>
+<element type="text" label="text20">
+	<show object="true" label="false"/>
+	<condition showObject="以直徑為量度單位 ≟ false"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<font serif="false" sizeM="1.2222222222222223" size="4" style="0"/>
+	<startPoint exp="Z"/>
+	<labelOffset x="-3" y="20"/>
+</element>
+<expression label="text21" exp="&quot;9&quot;"/>
+<element type="text" label="text21">
+	<show object="true" label="false"/>
+	<condition showObject="以直徑為量度單位 ≟ false"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<font serif="false" sizeM="1.2222222222222223" size="4" style="0"/>
+	<startPoint exp="A_1"/>
+	<labelOffset x="-5" y="20"/>
+</element>
+<expression label="text22" exp="&quot;10&quot;"/>
+<element type="text" label="text22">
+	<show object="true" label="false"/>
+	<condition showObject="以直徑為量度單位 ≟ false"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<font serif="false" sizeM="1.2222222222222223" size="4" style="0"/>
+	<startPoint exp="B_1"/>
+	<labelOffset x="-10" y="20"/>
+</element>
+<element type="boolean" label="以直徑為量度單位">
+	<value val="false"/>
+	<show object="false" label="true"/>
+	<objColor r="0" g="0" b="255" alpha="0.0"/>
+	<layer val="1"/>
+	<labelOffset x="239" y="57"/>
+	<labelMode val="0"/>
+</element>
+<command name="Sequence">
+	<input a0="Segment[((2 * i - 1) / 20, 0), ((2 * i - 1) / 20, -1 * 0.1)]" a1="i" a2="1" a3="100"/>
+	<output a0="list10"/>
+</command>
+<element type="list" label="list10">
+	<show object="true" label="false"/>
+	<condition showObject="細分刻度 ∧ 以直徑為量度單位 ≟ false"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<pointSize val="4"/>
+	<pointStyle val="1"/>
+</element>
+<command name="Sequence">
+	<input a0="Segment[((2 * i - 1) * r / 10, 0), ((2 * i - 1) * r / 10, -1 * 0.1)]" a1="i" a2="1" a3="100"/>
+	<output a0="list4"/>
+</command>
+<element type="list" label="list4">
+	<show object="true" label="false"/>
+	<condition showObject="以直徑為量度單位 ∧ 細分刻度"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<pointSize val="4"/>
+	<pointStyle val="1"/>
+</element>
+<expression label="text23" exp="&quot;圓的直徑&quot;"/>
+<element type="text" label="text23">
+	<show object="false" label="false"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<font serif="false" sizeM="1.0" size="0" style="1"/>
+	<absoluteScreenLocation  x="71" y="33"/>
+</element>
+<expression label="D_1" exp="(x(A) + r, y(A))" type="point" />
+<element type="point" label="D_1">
+	<show object="false" label="false"/>
+	<objColor r="64" g="64" b="64" alpha="0.0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<coords x="8.550981721588968E-7" y="0.9999999999999996" z="1.0"/>
+	<pointSize val="4"/>
+	<pointStyle val="1"/>
+</element>
+<expression label="text24" exp="&quot;d&quot;"/>
+<element type="text" label="text24">
+	<show object="false" label="false"/>
+	<objColor r="0" g="0" b="255" alpha="0.0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<font serif="false" sizeM="1.1111111111111112" size="2" style="0"/>
+	<startPoint exp="D_1"/>
+	<labelOffset x="-5" y="21"/>
+</element>
+<element type="boolean" label="再細分">
+	<value val="false"/>
+	<show object="true" label="true"/>
+	<condition showObject="細分刻度 ∧ 以直徑為量度單位 ≟ false"/>
+	<objColor r="51" g="51" b="51" alpha="0.0"/>
+	<layer val="1"/>
+	<labelOffset x="275" y="458"/>
+	<labelMode val="0"/>
+</element>
+<command name="Segment">
+	<input a0="(0, 0)" a1="(10, 0)"/>
+	<output a0="a"/>
+</command>
+<element type="segment" label="a">
+	<show object="true" label="false"/>
+	<condition showObject="以直徑為量度單位 ≟ false"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<selectionAllowed val="false"/>
+	<coords x="0.0" y="10.0" z="0.0"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<command name="Sequence">
+	<input a0="Segment[((2 * i - 1) / 200, 0), ((2 * i - 1) / 200, -1 * 0.03)]" a1="i" a2="1" a3="1000"/>
+	<output a0="list11"/>
+</command>
+<element type="list" label="list11">
+	<show object="true" label="false"/>
+	<condition showObject="以直徑為量度單位 ≟ false ∧ 細分刻度 ∧ 再細分"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<lineStyle thickness="1" type="0" typeHidden="1"/>
+	<pointSize val="4"/>
+	<pointStyle val="1"/>
+</element>
+<command name="Sequence">
+	<input a0="Sequence[Segment[(i / 20 + 0.01 * j, 0), (i / 20 + 0.01 * j, -1 * 0.06)], j, 1, 4]" a1="i" a2="0" a3="199"/>
+	<output a0="list9"/>
+</command>
+<element type="list" label="list9">
+	<show object="true" label="false"/>
+	<condition showObject="細分刻度 ∧ 以直徑為量度單位 ≟ false"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<lineStyle thickness="1" type="0" typeHidden="1"/>
+	<pointSize val="4"/>
+	<pointStyle val="1"/>
+</element>
+<command name="Sequence">
+	<input a0="Sequence[Segment[(i * r / 10 + 0.02 * j * r, 0), (i * r / 10 + 0.02 * j * r, -1 * 0.06)], j, 1, 4]" a1="i" a2="0" a3="199"/>
+	<output a0="list5"/>
+</command>
+<element type="list" label="list5">
+	<show object="true" label="false"/>
+	<condition showObject="以直徑為量度單位 ∧ 細分刻度"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<lineStyle thickness="1" type="0" typeHidden="1"/>
+	<pointSize val="4"/>
+	<pointStyle val="1"/>
+</element>
+<command name="Circle">
+	<input a0="(0, r)" a1="r"/>
+	<output a0="d"/>
+</command>
+<element type="conic" label="d">
+	<show object="true" label="false"/>
+	<condition showObject="P ≟ (0, 0)"/>
+	<objColor r="255" g="0" b="0" alpha="0.0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<lineStyle thickness="5" type="0" typeHidden="1"/>
+	<eigenvectors  x0="1.0" y0="0.0" z0="1.0" x1="-0.0" y1="1.0" z1="1.0"/>
+	<matrix A0="1.0" A1="1.0" A2="0.0" A3="0.0" A4="-0.0" A5="-0.9999999999999996"/>
+	<eqnStyle style="specific"/>
+</element>
+<expression label="B1" exp="&quot;\scalebox{0.8}\begin{array}{} circumference \\ (cm)  \end{array}&quot;"/>
+<element type="text" label="B1">
+	<show object="false" label="false"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<isLaTeX val="true"/>
+	<font serif="false" sizeM="1.0" size="0" style="0"/>
+</element>
+<expression label="C1" exp="&quot;\scalebox{0.8} \frac{circumference}{diameter}&quot;"/>
+<element type="text" label="C1">
+	<show object="false" label="false"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<isLaTeX val="true"/>
+	<font serif="false" sizeM="1.0" size="0" style="0"/>
+</element>
+<element type="numeric" label="A2">
+	<value val="1.0"/>
+	<show object="false" label="false"/>
+	<objColor r="0" g="0" b="0" alpha="0.1"/>
+	<layer val="1"/>
+	<labelMode val="1"/>
+	<animation step="1" speed="1" type="0" playing="false"/>
+	<auxiliary val="true"/>
+</element>
+<expression label="A1" exp="&quot;\scalebox{0.8}\begin{array}{} diameter \\ (cm)  \end{array}&quot;"/>
+<element type="text" label="A1">
+	<show object="false" label="false"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<isLaTeX val="true"/>
+	<font serif="false" sizeM="1.0" size="0" style="0"/>
+	<startPoint  x="1.5221111342709879" y="1.2903175605241386" z="1.0"/>
+</element>
+<element type="numeric" label="A3">
+	<value val="2.0"/>
+	<show object="false" label="false"/>
+	<objColor r="0" g="0" b="0" alpha="0.1"/>
+	<layer val="1"/>
+	<labelMode val="1"/>
+	<animation step="1" speed="1" type="0" playing="false"/>
+	<auxiliary val="true"/>
+</element>
+<element type="numeric" label="A4">
+	<value val="3.0"/>
+	<show object="false" label="false"/>
+	<objColor r="0" g="0" b="0" alpha="0.1"/>
+	<layer val="1"/>
+	<labelMode val="1"/>
+	<animation step="1" speed="1" type="0" playing="false"/>
+	<auxiliary val="true"/>
+</element>
+<element type="button" label="button1">
+	<show object="false" label="true"/>
+	<objColor r="0" g="0" b="255" alpha="0.0"/>
+	<layer val="1"/>
+	<labelOffset x="19" y="54"/>
+	<labelMode val="0"/>
+	<animation step="1" speed="1" type="0" playing="false"/>
+	<auxiliary val="true"/>
+	<ggbscript  val="SetValue[r, r-0.05]"/>
+	<caption val="－"/>
+</element>
+<element type="button" label="button2">
+	<show object="false" label="true"/>
+	<objColor r="0" g="0" b="255" alpha="0.0"/>
+	<layer val="1"/>
+	<labelOffset x="165" y="54"/>
+	<labelMode val="0"/>
+	<animation step="1" speed="1" type="0" playing="false"/>
+	<auxiliary val="true"/>
+	<ggbscript  val="SetValue[r, r+0.05]"/>
+	<caption val="＋"/>
+</element>
+<expression label="Min_x" exp="x(Corner[1])" />
+<element type="numeric" label="Min_x">
+	<value val="-1.6700020036943188"/>
+	<objColor r="0" g="0" b="0" alpha="0.1"/>
+</element>
+<expression label="Min_y" exp="y(Corner[1])" />
+<element type="numeric" label="Min_y">
+	<value val="-2.086653268521216"/>
+	<objColor r="0" g="0" b="0" alpha="0.1"/>
+</element>
+<expression label="Max_x" exp="x(Corner[3])" />
+<element type="numeric" label="Max_x">
+	<value val="10.45765528998069"/>
+	<objColor r="0" g="0" b="0" alpha="0.1"/>
+</element>
+<expression label="Max_y" exp="y(Corner[3])" />
+<element type="numeric" label="Max_y">
+	<value val="5.0909398236537795"/>
+	<objColor r="0" g="0" b="0" alpha="0.1"/>
+</element>
+<element type="button" label="button3">
+	<show object="false" label="true"/>
+	<objColor r="255" g="0" b="0" alpha="0.0"/>
+	<layer val="1"/>
+	<labelOffset x="657" y="21"/>
+	<labelMode val="0"/>
+	<animation step="1" speed="1" type="0" playing="false"/>
+	<auxiliary val="true"/>
+	<ggbscript  val="ZoomIn[ -1.1245, -1.32168, 7.14007, 3.45716]&#13;&#10;SetAxesRatio[ 1,1 ]"/>
+	<caption val="回復原來檢視比例"/>
+</element>
+<command name="Segment">
+	<input a0="(0, -0.55)" a1="(0, -0.8)"/>
+	<output a0="b"/>
+</command>
+<element type="segment" label="b">
+	<show object="true" label="false"/>
+	<condition showObject="以直徑為量度單位"/>
+	<objColor r="0" g="0" b="255" alpha="0.0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<coords x="0.25" y="0.0" z="0.0"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<command name="Segment">
+	<input a0="(2 * r, -0.55)" a1="(2 * r, -0.8)"/>
+	<output a0="g"/>
+</command>
+<element type="segment" label="g">
+	<show object="true" label="false"/>
+	<condition showObject="以直徑為量度單位"/>
+	<objColor r="0" g="0" b="255" alpha="0.0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<coords x="0.25" y="0.0" z="-0.4999999999999998"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<expression label="text25" exp="&quot;直徑&quot;"/>
+<element type="text" label="text25">
+	<show object="true" label="false"/>
+	<condition showObject="以直徑為量度單位"/>
+	<objColor r="0" g="0" b="255" alpha="0.0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<startPoint exp="(r, -0.675)"/>
+	<labelOffset x="-18" y="5"/>
+</element>
+<command name="Vector">
+	<input a0="(1.3 * r, -0.675)" a1="(2 * r, -0.675)"/>
+	<output a0="u"/>
+</command>
+<element type="vector" label="u">
+	<show object="true" label="false"/>
+	<condition showObject="以直徑為量度單位"/>
+	<objColor r="0" g="0" b="255" alpha="0.0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<coords x="0.6999999999999997" y="0.0" z="0.0"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<coordStyle style="cartesian"/>
+	<startPoint  x="1.2999999999999994" y="-0.675" z="1.0"/>
+</element>
+<command name="Vector">
+	<input a0="(0.7 * r, -0.675)" a1="(0, -0.675)"/>
+	<output a0="v"/>
+</command>
+<element type="vector" label="v">
+	<show object="true" label="false"/>
+	<condition showObject="以直徑為量度單位"/>
+	<objColor r="0" g="0" b="255" alpha="0.0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<coords x="-0.6999999999999996" y="0.0" z="0.0"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<coordStyle style="cartesian"/>
+	<startPoint  x="0.6999999999999996" y="-0.675" z="1.0"/>
+</element>
+<expression label="text26" exp="&quot;圓的直徑是多少？將圓周拉直，量度圓周至小數點後兩個位。&quot;"/>
+<element type="text" label="text26">
+	<show object="true" label="false"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<font serif="false" sizeM="1.4" size="8" style="0"/>
+	<absoluteScreenLocation  x="48" y="42"/>
+</element>
+</construction>
+</geogebra>

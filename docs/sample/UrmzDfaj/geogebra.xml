@@ -1,0 +1,453 @@
+<?xml version="1.0" encoding="utf-8"?>
+<geogebra format="5.0" version="5.0.290.0" id="c0396c6b-e424-44c3-9caf-2555629168a6"  xsi:noNamespaceSchemaLocation="http://www.geogebra.org/ggb.xsd" xmlns="" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" >
+<gui>
+	<window width="950" height="650" />
+	<perspectives>
+<perspective id="tmp">
+	<panes>
+		<pane location="" divider="0.9978947368421053" orientation="1" />
+	</panes>
+	<views>
+		<view id="4" toolbar="0 59 || 2020 , 2021 , 2022 , 66 || 2001 , 2003 , 2002 , 2004 , 2005 || 2040 , 2041 , 2042 , 2044 , 2043" visible="false" inframe="false" stylebar="false" location="1,1" size="300" window="100,100,600,400" />
+		<view id="8" toolbar="1001 | 1002 | 1003  || 1005 | 1004 || 1006 | 1007 | 1010 | 1011 || 1008 1009 || 6" visible="false" inframe="false" stylebar="false" location="1,3" size="300" window="100,100,600,400" />
+		<view id="1" visible="true" inframe="false" stylebar="true" location="3" size="948" window="100,100,600,400" />
+		<view id="2" visible="false" inframe="false" stylebar="false" location="3" size="226" window="100,100,250,400" />
+		<view id="16" visible="false" inframe="false" stylebar="false" location="1" size="150" window="50,50,500,500" />
+		<view id="32" visible="false" inframe="false" stylebar="true" location="1" size="150" window="50,50,500,500" />
+		<view id="64" toolbar="0" visible="false" inframe="true" stylebar="true" location="1" size="150" window="50,50,500,500" />
+		<view id="128" visible="false" inframe="true" stylebar="false" location="1" size="480" window="50,50,500,500" />
+		<view id="4097" visible="false" inframe="true" stylebar="true" location="1" size="390" window="503,130,700,543" />
+		<view id="70" toolbar="0 || 2020 || 2021 || 2022" visible="false" inframe="true" stylebar="true" location="1" size="150" window="50,50,500,500" />
+		<view id="43" visible="false" inframe="false" stylebar="false" location="1" size="450" window="50,50,500,500" />
+		<view id="512" toolbar="0 | 1 501 5 19 , 67 | 2 15 45 18 , 7 37 | 514 3 9 , 13 44 , 47 | 16 | 551 550 11 ,  20 22 21 23 , 55 56 57 , 12 | 69 | 510 511 , 512 513 | 533 531 , 534 532 , 522 523 , 537 536 , 535 | 521 520 | 36 , 38 49 560 | 571 30 29 570 31 33 | 17 | 540 40 41 42 , 27 28 35 , 6 , 502" visible="false" inframe="false" stylebar="false" location="1" size="300" window="50,50,500,500" />
+	</views>
+	<toolbar show="false" items="0 39 59 | 1 501 67 , 5 19 , 72 | 2 15 45 , 18 65 , 7 37 | 4 3 8 9 , 13 44 , 58 , 47 | 16 51 64 , 70 | 10 34 53 11 , 24  20 22 , 21 23 | 55 56 57 , 12 | 36 46 , 38 49 50 , 71 | 30 29 54 32 31 33 | 17 26 62 73 , 14 66 68 | 25 52 60 61 | 40 41 42 , 27 28 35 , 6 ||" position="1" help="false" />
+	<input show="false" cmd="true" top="false" />
+	<dockBar show="false" east="false" />
+</perspective>
+	</perspectives>
+	<labelingStyle  val="3"/>
+	<font  size="12"/>
+</gui>
+<euclidianView>
+	<viewNumber viewNo="1"/>
+	<size  width="948" height="648"/>
+	<coordSystem xZero="439.99999999999966" yZero="453.75" scale="49.99999999999998" yscale="50.00000000000002"/>
+	<evSettings axes="false" grid="true" gridIsBold="false" pointCapturing="2" rightAngleStyle="1" checkboxSize="26" gridType="0"/>
+	<bgColor r="255" g="255" b="255"/>
+	<axesColor r="0" g="0" b="0"/>
+	<gridColor r="0" g="0" b="0"/>
+	<lineStyle axes="1" grid="20"/>
+	<axis id="0" show="false" label="" unitLabel="" tickStyle="1" showNumbers="true"/>
+	<axis id="1" show="false" label="" unitLabel="" tickStyle="1" showNumbers="true"/>
+</euclidianView>
+<kernel>
+	<continuous val="false"/>
+	<usePathAndRegionParameters val="true"/>
+	<decimals val="2"/>
+	<angleUnit val="degree"/>
+	<algebraStyle val="0" spreadsheet="0"/>
+	<coordStyle val="0"/>
+</kernel>
+<scripting blocked="false" disabled="false"/>
+<construction title="" author="" date="">
+<element type="point" label="V">
+	<show object="true" label="false" ev="4"/>
+	<objColor r="0" g="0" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<animation step="0.1" speed="1" type="1" playing="false"/>
+	<coords x="5" y="6" z="1"/>
+	<pointSize val="5"/>
+	<pointStyle val="2"/>
+</element>
+<element type="point" label="A">
+	<show object="true" label="false" ev="4"/>
+	<objColor r="255" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<animation step="0.1" speed="1" type="1" playing="false"/>
+	<coords x="3" y="1" z="1"/>
+	<pointSize val="5"/>
+	<pointStyle val="2"/>
+</element>
+<command name="Vector">
+	<input a0="A"/>
+	<output a0="a"/>
+</command>
+<element type="vector" label="a">
+	<show object="true" label="false" ev="4"/>
+	<objColor r="255" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<coords x="3" y="1" z="0"/>
+	<lineStyle thickness="10" type="0" typeHidden="1"/>
+	<coordStyle style="cartesian"/>
+</element>
+<expression label="n" exp="((-y(a)), x(a))" type="vector" />
+<element type="vector" label="n">
+	<show object="true" label="false" ev="4"/>
+	<objColor r="51" g="153" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<coords x="-1" y="3" z="0"/>
+	<lineStyle thickness="10" type="0" typeHidden="1"/>
+	<coordStyle style="cartesian"/>
+</element>
+<expression label="u1" exp="a / Length[a]" type="vector" />
+<element type="vector" label="u1">
+	<show object="false" label="false" ev="4"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<coords x="0.9486832980505138" y="0.31622776601683794" z="0"/>
+	<lineStyle thickness="3" type="0" typeHidden="1"/>
+	<coordStyle style="cartesian"/>
+</element>
+<expression label="v1" exp="n / Length[n]" type="vector" />
+<element type="vector" label="v1">
+	<show object="false" label="false" ev="4"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<coords x="-0.31622776601683794" y="0.9486832980505138" z="0"/>
+	<lineStyle thickness="3" type="0" typeHidden="1"/>
+	<coordStyle style="cartesian"/>
+</element>
+<command name="Vector">
+	<input a0="V"/>
+	<output a0="v"/>
+</command>
+<element type="vector" label="v">
+	<show object="true" label="false" ev="4"/>
+	<objColor r="0" g="0" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<coords x="5" y="6" z="0"/>
+	<lineStyle thickness="10" type="0" typeHidden="1"/>
+	<coordStyle style="cartesian"/>
+</element>
+<expression label="s" exp="(v * u1)" />
+<element type="numeric" label="s">
+	<value val="6.640783086353597"/>
+	<objColor r="0" g="0" b="0" alpha="0.1"/>
+	<selectionAllowed val="false"/>
+</element>
+<expression label="t" exp="(v * v1)" />
+<element type="numeric" label="t">
+	<value val="4.110960958218892"/>
+	<objColor r="0" g="0" b="0" alpha="0.1"/>
+	<selectionAllowed val="false"/>
+</element>
+<element type="point" label="O">
+	<show object="false" label="true" ev="4"/>
+	<objColor r="0" g="0" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<selectionAllowed val="false"/>
+	<coords x="0" y="0" z="1"/>
+	<pointSize val="3"/>
+	<pointStyle val="0"/>
+</element>
+<expression label="au" exp="(s * u1)" type="vector" />
+<element type="vector" label="au">
+	<show object="true" label="false" ev="4"/>
+	<objColor r="255" g="102" b="153" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<coords x="6.3" y="2.1" z="0"/>
+	<lineStyle thickness="5" type="0" typeHidden="1"/>
+	<coordStyle style="cartesian"/>
+</element>
+<expression label="av" exp="(t * v1)" type="vector" />
+<element type="vector" label="av">
+	<show object="true" label="false" ev="4"/>
+	<objColor r="102" g="204" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<coords x="-1.2999999999999998" y="3.899999999999999" z="0"/>
+	<lineStyle thickness="5" type="0" typeHidden="1"/>
+	<coordStyle style="cartesian"/>
+</element>
+<command name="Segment">
+	<input a0="O + v" a1="O + au"/>
+	<output a0="b"/>
+</command>
+<element type="segment" label="b">
+	<show object="true" label="false" ev="4"/>
+	<objColor r="255" g="127" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<coords x="3.9" y="1.2999999999999998" z="-27.299999999999997"/>
+	<lineStyle thickness="2" type="10" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<command name="Segment">
+	<input a0="O + v" a1="O + av"/>
+	<output a0="c"/>
+</command>
+<element type="segment" label="c">
+	<show object="true" label="false" ev="4"/>
+	<objColor r="255" g="127" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<coords x="2.100000000000001" y="-6.3" z="27.299999999999997"/>
+	<lineStyle thickness="2" type="10" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<expression label="txtU" exp="&quot;\vec{a}&quot;"/>
+<element type="text" label="txtU">
+	<show object="true" label="false" ev="4"/>
+	<objColor r="255" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<isLaTeX val="true"/>
+	<font serif="true" sizeM="2" size="12" style="1"/>
+	<startPoint exp="O + a"/>
+	<labelOffset x="11" y="-25"/>
+</element>
+<expression label="txtV" exp="&quot;\vec{b}&quot;"/>
+<element type="text" label="txtV">
+	<show object="true" label="false" ev="4"/>
+	<objColor r="0" g="0" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<isLaTeX val="true"/>
+	<font serif="true" sizeM="2" size="12" style="1"/>
+	<startPoint exp="O + v"/>
+	<labelOffset x="-6" y="-44"/>
+</element>
+<expression label="txtW" exp="&quot;\vec{n}&quot;"/>
+<element type="text" label="txtW">
+	<show object="true" label="false" ev="4"/>
+	<objColor r="0" g="100" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<isLaTeX val="true"/>
+	<font serif="true" sizeM="2" size="12" style="1"/>
+	<startPoint exp="O + n"/>
+	<labelOffset x="-24" y="-35"/>
+</element>
+<element type="image" label="pic1">
+	<file name="65fa5a523f4b4eb7a49a1d5451c69200/bullet_star.png"/>
+	<inBackground val="false"/>
+	<absoluteScreenLocation x="13" y="274"/>	<show object="true" label="false"/>
+	<objColor r="0" g="0" b="0" alpha="1"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<animation step="1" speed="1" type="0" playing="false"/>
+	<selectionAllowed val="false"/>
+</element>
+<expression label="x1" exp="((v * a)) / ((a * a))" />
+<element type="numeric" label="x1">
+	<value val="2.1"/>
+	<symbolic val="true" />
+	<objColor r="0" g="0" b="0" alpha="0.1"/>
+	<selectionAllowed val="false"/>
+</element>
+<expression label="y1" exp="((v * n)) / ((a * a))" />
+<element type="numeric" label="y1">
+	<value val="1.3"/>
+	<symbolic val="true" />
+	<objColor r="0" g="0" b="0" alpha="0.1"/>
+	<selectionAllowed val="false"/>
+</element>
+<expression label="text8" exp="&quot;\vec{n}=&quot; + (LaTeX[(x(n), y(n))]) + &quot;&quot;" />
+<element type="text" label="text8">
+	<show object="true" label="false" ev="8"/>
+	<objColor r="0" g="100" b="0" alpha="0"/>
+	<bgColor r="255" g="255" b="255" alpha="255"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<isLaTeX val="true"/>
+	<font serif="true" sizeM="2" size="12" style="1"/>
+	<absoluteScreenLocation  x="17" y="122"/>
+</element>
+<expression label="text1" exp="&quot;\vec{a}=&quot; + (LaTeX[LaTeX[(x(a), y(a))]]) + &quot;&quot;" />
+<element type="text" label="text1">
+	<show object="true" label="false" ev="8"/>
+	<objColor r="255" g="0" b="0" alpha="0"/>
+	<bgColor r="255" g="255" b="255" alpha="255"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<isLaTeX val="true"/>
+	<font serif="true" sizeM="2" size="12" style="1"/>
+	<absoluteScreenLocation  x="18" y="24"/>
+</element>
+<command name="LatexFraction">
+	<input a0="(v * a)" a1="(a * a)" a2="&quot;&quot;" a3="&quot;&quot;" a4="false"/>
+	<output a0="latexX"/>
+</command>
+<element type="text" label="latexX">
+	<symbolic val="true" />
+	<show object="false" label="true" ev="8"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<isLaTeX val="true"/>
+	<font serif="false" sizeM="1" size="0" style="0"/>
+	<decimals val="2"/>
+	<startPoint  x="0" y="0" z="1"/>
+</element>
+<command name="LatexFraction">
+	<input a0="(v * n)" a1="(a * a)" a2="&quot;&quot;" a3="&quot;&quot;" a4="false"/>
+	<output a0="latexY"/>
+</command>
+<element type="text" label="latexY">
+	<symbolic val="true" />
+	<show object="false" label="true" ev="8"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<isLaTeX val="true"/>
+	<font serif="false" sizeM="1" size="0" style="0"/>
+	<decimals val="2"/>
+	<startPoint  x="0" y="0" z="1"/>
+</element>
+<expression label="a0a" exp="(a * a)" />
+<element type="numeric" label="a0a">
+	<value val="10"/>
+	<symbolic val="true" />
+	<objColor r="0" g="0" b="0" alpha="0.1"/>
+	<selectionAllowed val="false"/>
+</element>
+<expression label="v0a" exp="(v * a)" />
+<element type="numeric" label="v0a">
+	<value val="21"/>
+	<symbolic val="true" />
+	<objColor r="0" g="0" b="0" alpha="0.1"/>
+	<selectionAllowed val="false"/>
+</element>
+<expression label="v0n" exp="(v * n)" />
+<element type="numeric" label="v0n">
+	<value val="13"/>
+	<symbolic val="true" />
+	<objColor r="0" g="0" b="0" alpha="0.1"/>
+	<selectionAllowed val="false"/>
+</element>
+<expression label="txtSU" exp="&quot;&quot; + (LaTeX[LatexFractionCoefficient[(v * a), (a * a), &quot;&quot;, &quot;&quot;, &quot;\vec{a}&quot;, false, false]]) + &quot; &quot;" />
+<element type="text" label="txtSU">
+	<show object="true" label="false" ev="4"/>
+	<condition showObject="d"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<isLaTeX val="true"/>
+	<font serif="true" sizeM="1.4" size="5" style="1"/>
+	<startPoint exp="O + au"/>
+	<labelOffset x="-5" y="1"/>
+</element>
+<expression label="txtTV" exp="&quot;&quot; + (LaTeX[LatexFractionCoefficient[(v * n), (a * a), &quot;&quot;, &quot;&quot;, &quot;\vec{n}&quot;, false, false]]) + &quot; &quot;" />
+<element type="text" label="txtTV">
+	<show object="true" label="false" ev="4"/>
+	<condition showObject="d"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<isLaTeX val="true"/>
+	<font serif="true" sizeM="1.4" size="5" style="1"/>
+	<startPoint exp="O + av"/>
+	<labelOffset x="-61" y="-11"/>
+</element>
+<expression label="red" exp="&quot;ff0000&quot;"/>
+<element type="text" label="red">
+	<symbolic val="true" />
+	<show object="false" label="false" ev="8"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<startPoint  x="0.24000000000000243" y="4.084999999999999" z="1"/>
+</element>
+<expression label="blue" exp="&quot;0000ff&quot;"/>
+<element type="text" label="blue">
+	<symbolic val="true" />
+	<show object="false" label="false" ev="8"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<startPoint  x="0.24000000000000243" y="4.084999999999999" z="1"/>
+</element>
+<expression label="text2" exp="&quot;\vec{b}=&quot; + (LaTeX[LaTeX[(x(v), y(v))]]) + &quot;&quot;" />
+<element type="text" label="text2">
+	<show object="true" label="false" ev="8"/>
+	<objColor r="0" g="0" b="255" alpha="0"/>
+	<bgColor r="255" g="255" b="255" alpha="255"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<isLaTeX val="true"/>
+	<font serif="true" sizeM="2" size="12" style="1"/>
+	<absoluteScreenLocation  x="18" y="73"/>
+</element>
+<expression label="text3" exp="&quot;\fgcolor{ff0000}{\vec{a}} \times \fgcolor{0000ff}{\vec{b}}= \left\vert &#10; \begin{array}{}&#10; &quot; + (LaTeX[x(a)]) + &quot; &amp; &quot; + (LaTeX[y(a)]) + &quot; \\&#10; &quot; + (LaTeX[x(v)]) + &quot; &amp; &quot; + (LaTeX[y(v)]) + &quot; \\ &#10;\end{array}&#10; \right\vert &#10;= &quot; + (LaTeX[(v * n)]) + &quot;&quot;" />
+<element type="text" label="text3">
+	<show object="true" label="false" ev="8"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<bgColor r="255" g="255" b="255" alpha="255"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<isLaTeX val="true"/>
+	<font serif="true" sizeM="1.4" size="5" style="1"/>
+	<absoluteScreenLocation  x="20" y="273"/>
+</element>
+<expression label="txB2" exp="&quot;\fgcolor{0000ff}{\vec{b}}= &quot; + (LaTeX[LatexFractionCoefficient[(v * a), (a * a), &quot;&quot;, &quot;&quot;, &quot;\fgcolor{ff0000}{\vec{a}}&quot;, false, false]]) + &quot; &quot; + (LaTeX[LatexFractionCoefficient[(v * n), (a * a), &quot;&quot;, &quot;&quot;, &quot;\fgcolor{006600}{\vec{n}}&quot;, true, false]]) + &quot;&quot;" />
+<element type="text" label="txB2">
+	<show object="true" label="false" ev="8"/>
+	<condition showObject="d"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<bgColor r="255" g="255" b="255" alpha="255"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<isLaTeX val="true"/>
+	<font serif="true" sizeM="2" size="12" style="1"/>
+	<absoluteScreenLocation  x="18" y="174"/>
+</element>
+<expression label="text9" exp="&quot;\fgcolor{0000ff}{\vec{b}}=&#10;\left ( \frac{\vec{a} \cdot \fgcolor{&quot; + (LaTeX[blue]) + &quot;}{\vec{b}} }{\vec{a}\cdot\vec{a}} \right )&#10;\fgcolor{ff0000}{\vec{a}} +&#10;\left ( \frac{ \vec{a} \times \fgcolor{0000ff}{\vec{b}} }{\vec{a}\cdot\vec{a}} \right ) &#10;\fgcolor{006600}{\vec{n}}&quot;" />
+<element type="text" label="text9">
+	<show object="true" label="false" ev="8"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<bgColor r="255" g="255" b="255" alpha="255"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<isLaTeX val="true"/>
+	<font serif="true" sizeM="2" size="12" style="1"/>
+	<absoluteScreenLocation  x="269" y="24"/>
+</element>
+<element type="boolean" label="d">
+	<value val="true"/>
+	<show object="true" label="true"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelOffset x="735" y="49"/>
+	<labelMode val="0"/>
+	<checkbox fixed="true"/>
+	<caption val="顯示分量"/>
+</element>
+</construction>
+</geogebra>

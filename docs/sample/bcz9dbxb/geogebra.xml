@@ -1,0 +1,344 @@
+<?xml version="1.0" encoding="utf-8"?>
+<geogebra format="5.0" version="5.0.574.0" app="classic" platform="w" id="ad157636-08a5-4a71-9350-6f2e76133128"  xsi:noNamespaceSchemaLocation="https://ggb123.cn/apps/xsd/ggb.xsd" xmlns="" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" >
+<gui>
+	<window width="1000" height="560" />
+	<perspectives>
+<perspective id="tmp">
+	<panes>
+		<pane location="" divider="0.281" orientation="1" />
+	</panes>
+	<views>
+		<view id="4097" visible="false" inframe="false" stylebar="true" location="1,1,1" size="390" window="783,76,847,904" />
+		<view id="4" toolbar="0 || 2020 , 2021 , 2022 , 66 || 2001 , 2003 , 2002 , 2004 , 2005 || 2040 , 2041 , 2042 , 2044 , 2043" visible="false" inframe="false" stylebar="true" location="1,1" size="300" window="100,100,600,400" />
+		<view id="8" toolbar="1001 | 1002 | 1003  || 1005 | 1004 || 1006 | 1007 | 1010 || 1008 1009 || 66 68 || 6" visible="false" inframe="false" stylebar="true" location="1,3" size="300" window="100,100,600,400" />
+		<view id="1" visible="true" inframe="false" stylebar="true" location="3" size="281" window="100,100,600,400" />
+		<view id="2" visible="false" inframe="false" stylebar="true" location="3" size="369" window="100,100,600,400" />
+		<view id="16" visible="false" inframe="false" stylebar="true" location="1" size="150" window="50,50,500,500" />
+		<view id="32" visible="false" inframe="false" stylebar="true" location="1" size="150" window="50,50,500,500" />
+		<view id="64" toolbar="0" visible="false" inframe="false" stylebar="true" location="1" size="150" window="50,50,500,500" />
+		<view id="128" visible="false" inframe="false" stylebar="false" location="1" size="480" window="50,50,500,500" />
+		<view id="70" toolbar="0 || 2020 || 2021 || 2022" visible="false" inframe="false" stylebar="true" location="1" size="150" window="50,50,500,500" />
+		<view id="43" visible="false" inframe="false" stylebar="false" location="1" size="450" window="50,50,500,500" />
+		<view id="512" toolbar="0 | 1 501 5 19 , 67 | 2 15 45 18 , 7 37 | 514 3 9 , 13 44 , 47 | 16 51 | 551 550 11 ,  20 22 21 23 , 55 56 57 , 12 | 69 | 510 511 , 512 513 | 533 531 , 534 532 , 522 523 , 537 536 , 535 | 521 520 | 36 , 38 49 560 | 571 30 29 570 31 33 | 17 | 540 40 41 42 , 27 28 35 , 6 , 502" visible="true" inframe="false" stylebar="true" location="1" size="709" window="100,100,600,400" />
+	</views>
+	<toolbar show="false" items="0 39 73 62 | 1 501 67 , 5 19 , 72 75 76 | 2 15 45 , 18 65 , 7 37 | 4 3 8 9 , 13 44 , 58 , 47 | 16 51 64 , 70 | 10 34 53 11 , 24  20 22 , 21 23 | 55 56 57 , 12 | 36 46 , 38 49  50 , 71  14  68 | 30 29 54 32 31 33 | 25 17 26 60 52 61 | 40 41 42 , 27 28 35 , 6" position="1" help="false" />
+	<input show="false" cmd="true" top="algebra" />
+	<dockBar show="false" east="false" />
+</perspective>
+	</perspectives>
+	<labelingStyle  val="0"/>
+	<font  size="24"/>
+</gui>
+<euclidianView>
+	<viewNumber viewNo="1"/>
+	<size  width="281" height="558"/>
+	<coordSystem xZero="564.1044327573255" yZero="297.31855747558217" scale="37.565740045078876" yscale="37.565740045078805"/>
+	<evSettings axes="false" grid="false" gridIsBold="false" pointCapturing="3" rightAngleStyle="1" checkboxSize="26" gridType="3"/>
+	<bgColor r="0" g="0" b="0"/>
+	<axesColor r="0" g="0" b="0"/>
+	<gridColor r="192" g="192" b="192"/>
+	<lineStyle axes="1" grid="0"/>
+	<axis id="0" show="false" label="" unitLabel="" tickStyle="1" showNumbers="true"/>
+	<axis id="1" show="false" label="" unitLabel="" tickStyle="1" showNumbers="true"/>
+</euclidianView>
+<kernel>
+	<uses3D val="true"/>
+	<continuous val="false"/>
+	<usePathAndRegionParameters val="true"/>
+	<decimals val="2"/>
+	<angleUnit val="degree"/>
+	<algebraStyle val="0" spreadsheet="0"/>
+	<coordStyle val="0"/>
+</kernel>
+<tableview min="-2" max="2" step="1"/>
+<scripting blocked="false" disabled="false"/>
+<euclidianView3D>
+	<coordSystem xZero="0" yZero="0" zZero="-1.5" scale="50" xAngle="20" zAngle="-60"/>
+	<evSettings axes="true" grid="false" gridIsBold="false" pointCapturing="3" rightAngleStyle="1" gridType="3"/>
+	<axis id="0" show="true" label="" unitLabel="" tickStyle="2" showNumbers="false"/>
+	<axis id="1" show="true" label="" unitLabel="" tickStyle="2" showNumbers="false"/>
+	<axis id="2" show="true" label="" unitLabel="" tickStyle="2" showNumbers="false"/>
+	<plate show="false"/>
+	<bgColor r="0" g="0" b="0"/>
+	<clipping use="false" show="false" size="2"/>
+	<projection type="0"/>
+</euclidianView3D>
+<construction title="" author="" date="">
+<element type="numeric" label="r">
+	<value val="1.5"/>
+	<show object="true" label="true"/>
+	<objColor r="255" g="255" b="255" alpha="0.10000000149011612"/>
+	<bgColor r="255" g="255" b="255" alpha="255"/>
+	<layer val="0"/>
+	<labelMode val="1"/>
+	<slider min="0" max="5" absoluteScreenLocation="true" width="200" x="38" y="147" fixed="false" horizontal="true" showAlgebra="true"/>
+	<lineStyle thickness="10" type="0" typeHidden="1"/>
+	<animation step="0.1" speed="1" type="0" playing="false"/>
+</element>
+<element type="numeric" label="h">
+	<value val="2.6"/>
+	<show object="true" label="true"/>
+	<objColor r="255" g="255" b="255" alpha="0.10000000149011612"/>
+	<bgColor r="255" g="255" b="255" alpha="255"/>
+	<layer val="0"/>
+	<labelMode val="1"/>
+	<slider min="0" max="5" absoluteScreenLocation="true" width="200" x="38" y="222" fixed="false" horizontal="true" showAlgebra="true"/>
+	<lineStyle thickness="10" type="0" typeHidden="1"/>
+	<animation step="0.1" speed="1" type="0" playing="false"/>
+</element>
+<element type="angle" label="β">
+	<angleStyle val="3"/>
+	<value val="3.141592653589793"/>
+	<slider min="0" max="3.141592653589793" absoluteScreenLocation="true" width="200" x="38" y="297" fixed="false" horizontal="true" showAlgebra="true"/>
+	<show object="true" label="true" ev="4"/>
+	<objColor r="255" g="255" b="255" alpha="0.10000000149011612"/>
+	<bgColor r="255" g="255" b="255" alpha="255"/>
+	<layer val="0"/>
+	<labelMode val="1"/>
+	<lineStyle thickness="10" type="0" typeHidden="2" opacity="178"/>
+	<arcSize val="30"/>
+	<animation step="0.017453292519943295" speed="1" type="0" playing="false"/>
+</element>
+<command name="Surface">
+	<input a0="(r * sin(α))" a1="(r * cos(α))" a2="u" a3="α" a4="(-β)" a5="β" a6="u" a7="0" a8="h"/>
+	<output a0="a"/>
+</command>
+<element type="surfacecartesian3d" label="a">
+	<show object="true" label="false" ev="4"/>
+	<objColor r="102" g="204" b="255" alpha="1"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<lineStyle thickness="0" type="0" typeHidden="1"/>
+</element>
+<command name="Tangent">
+	<input a0="((r * sin(β)), (r * cos(β)), 0)" a1="CurveCartesian[(r * sin(α)), (r * cos(α)), 0, α, 0, (2 * π)]"/>
+	<output a0="f"/>
+</command>
+<element type="line3d" label="f">
+	<show object="false" label="false" ev="4"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<lineStyle thickness="1" type="15" typeHidden="1"/>
+	<coords ox="1.8369701987210297e-16" oy="-1.5" oz="0" ow="1" vx="-1" vy="-1.224646799147353e-16" vz="0" vw="0"/>
+	<eqnStyle style="parametric" parameter="λ"/>
+</element>
+<command name="Tangent">
+	<input a0="((r * sin(β)), (r * cos(β)), h)" a1="CurveCartesian[(r * sin(α)), (r * cos(α)), h, α, 0, (2 * π)]"/>
+	<output a0="g"/>
+</command>
+<element type="line3d" label="g">
+	<show object="false" label="false" ev="4"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<lineStyle thickness="1" type="15" typeHidden="1"/>
+	<coords ox="1.8369701987210297e-16" oy="-1.5" oz="2.6" ow="1" vx="-1" vy="-1.224646799147353e-16" vz="0" vw="0"/>
+	<eqnStyle style="parametric" parameter="λ"/>
+</element>
+<expression label="A" exp="((r * sin(β)), (r * cos(β)), 0)" type="point" />
+<element type="point3d" label="A">
+	<show object="false" label="true" ev="4"/>
+	<objColor r="77" g="77" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<coords x="0" y="-1.5" z="0" w="1"/>
+	<pointSize val="5"/>
+</element>
+<expression label="B" exp="((r * sin(β)), (r * cos(β)), h)" type="point" />
+<element type="point3d" label="B">
+	<show object="false" label="true" ev="4"/>
+	<objColor r="68" g="68" b="68" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<coords x="0" y="-1.5" z="2.6" w="1"/>
+	<pointSize val="4"/>
+</element>
+<command name="Circle">
+	<input a0="zAxis" a1="A"/>
+	<output a0="b"/>
+</command>
+<element type="conic3d" label="b">
+	<show object="false" label="false" ev="4"/>
+	<objColor r="255" g="0" b="0" alpha="0.44999998807907104"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<lineStyle thickness="1" type="0" typeHidden="1"/>
+	<eigenvectors  x0="1" y0="0" z0="1.0" x1="0" y1="1" z1="1.0"/>
+	<matrix A0="1" A1="1" A2="-2.25" A3="0" A4="0" A5="0"/>
+	<eqnStyle style="parametric"/>
+</element>
+<command name="Circle">
+	<input a0="zAxis" a1="B"/>
+	<output a0="c"/>
+</command>
+<element type="conic3d" label="c">
+	<show object="false" label="false" ev="4"/>
+	<objColor r="255" g="0" b="0" alpha="0.44999998807907104"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<lineStyle thickness="1" type="0" typeHidden="1"/>
+	<eigenvectors  x0="1" y0="0" z0="1.0" x1="0" y1="1" z1="1.0"/>
+	<matrix A0="1" A1="1" A2="-2.25" A3="0" A4="0" A5="0"/>
+	<eqnStyle style="parametric"/>
+</element>
+<command name="Circle">
+	<input a0="B" a1="((180° - β) * r)" a2="Vector[A, B]"/>
+	<output a0="e"/>
+</command>
+<element type="conic3d" label="e">
+	<show object="false" label="true" ev="4"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<lineStyle thickness="1" type="15" typeHidden="1"/>
+	<eigenvectors  x0="1" y0="0" z0="1.0" x1="0" y1="1" z1="1.0"/>
+	<matrix A0="1" A1="1" A2="0" A3="0" A4="0" A5="0"/>
+	<eqnStyle style="parametric"/>
+</element>
+<command name="Circle">
+	<input a0="A" a1="((180° - β) * r)" a2="Vector[A, B]"/>
+	<output a0="d"/>
+</command>
+<element type="conic3d" label="d">
+	<show object="false" label="true" ev="4"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<lineStyle thickness="1" type="15" typeHidden="1"/>
+	<eigenvectors  x0="1" y0="0" z0="1.0" x1="0" y1="1" z1="1.0"/>
+	<matrix A0="1" A1="1" A2="0" A3="0" A4="0" A5="0"/>
+	<eqnStyle style="parametric"/>
+</element>
+<command name="Intersect">
+	<input a0="g" a1="e" a2="1"/>
+	<output a0="D"/>
+</command>
+<element type="point3d" label="D">
+	<show object="false" label="true" ev="4"/>
+	<objColor r="68" g="68" b="68" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<coords x="2.75501402599016e-48" y="-1.5" z="2.6" w="1"/>
+	<pointSize val="4"/>
+</element>
+<command name="Intersect">
+	<input a0="f" a1="d" a2="1"/>
+	<output a0="C"/>
+</command>
+<element type="point3d" label="C">
+	<show object="false" label="true" ev="4"/>
+	<objColor r="68" g="68" b="68" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<coords x="2.75501402599016e-48" y="-1.5" z="0" w="1"/>
+	<pointSize val="4"/>
+</element>
+<command name="Polygon">
+	<input a0="A" a1="B" a2="D" a3="C"/>
+	<output a0="q1" a1="a_1" a2="b_1" a3="d_1" a4="c_1"/>
+</command>
+<element type="polygon3d" label="q1">
+	<lineStyle thickness="0" type="0" typeHidden="1" opacity="178"/>
+	<show object="true" label="false" ev="4"/>
+	<objColor r="102" g="204" b="255" alpha="1"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+</element>
+<element type="segment3d" label="a_1">
+	<show object="true" label="false" ev="4"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<auxiliary val="true"/>
+	<lineStyle thickness="0" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment3d" label="b_1">
+	<show object="true" label="false" ev="4"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<auxiliary val="true"/>
+	<lineStyle thickness="0" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment3d" label="d_1">
+	<show object="true" label="false" ev="4"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<auxiliary val="true"/>
+	<lineStyle thickness="0" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment3d" label="c_1">
+	<show object="true" label="false" ev="4"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<auxiliary val="true"/>
+	<lineStyle thickness="0" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<expression label="γ" exp="90° - β / 2" />
+<element type="angle" label="γ">
+	<angleStyle val="0"/>
+	<value val="0"/>
+</element>
+<command name="Rotate">
+	<input a0="c" a1="(-γ)" a2="Line[(0, r, h), xAxis]"/>
+	<output a0="c&apos;"/>
+</command>
+<element type="conic3d" label="c&apos;">
+	<show object="true" label="false" ev="4"/>
+	<objColor r="102" g="204" b="255" alpha="1"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<lineStyle thickness="1" type="0" typeHidden="1"/>
+	<eigenvectors  x0="1" y0="0" z0="1.0" x1="0" y1="1" z1="1.0"/>
+	<matrix A0="1" A1="1" A2="-2.25" A3="0" A4="0" A5="0"/>
+	<eqnStyle style="parametric"/>
+</element>
+<command name="Rotate">
+	<input a0="b" a1="γ" a2="Line[(0, r, 0), xAxis]"/>
+	<output a0="b&apos;"/>
+</command>
+<element type="conic3d" label="b&apos;">
+	<show object="true" label="false" ev="4"/>
+	<objColor r="102" g="204" b="255" alpha="1"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<lineStyle thickness="1" type="0" typeHidden="1"/>
+	<eigenvectors  x0="1" y0="0" z0="1.0" x1="0" y1="1" z1="1.0"/>
+	<matrix A0="1" A1="1" A2="-2.25" A3="0" A4="0" A5="0"/>
+	<eqnStyle style="parametric"/>
+</element>
+<command name="Mirror">
+	<input a0="a" a1="Plane[x = 0]"/>
+	<output a0="a&apos;"/>
+</command>
+<element type="surfacecartesian3d" label="a&apos;">
+	<show object="false" label="false" ev="4"/>
+	<objColor r="102" g="204" b="255" alpha="1"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<lineStyle thickness="0" type="0" typeHidden="1"/>
+</element>
+<command name="Mirror">
+	<input a0="q1" a1="Plane[x = 0]"/>
+	<output a0="q1&apos;"/>
+</command>
+<element type="polygon3d" label="q1&apos;">
+	<lineStyle thickness="0" type="0" typeHidden="1" opacity="178"/>
+	<show object="true" label="false" ev="4"/>
+	<objColor r="102" g="204" b="255" alpha="1"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+</element>
+</construction>
+</geogebra>

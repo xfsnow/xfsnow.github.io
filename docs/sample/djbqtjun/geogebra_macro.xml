@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<geogebra format="5.0" version="5.0.574.0" app="classic" platform="w"  xsi:noNamespaceSchemaLocation="http://www.geogebra.org/apps/xsd/ggt.xsd" xmlns="" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" >
+<macro cmdName="直角坐标系" toolName="直角坐标系" toolHelp="直角坐标系[ &lt;点&gt;, &lt;点&gt; ]" iconFile="" showInToolBar="true" copyCaptions="true" viewId="1">
+<macroInput a0="dFW1" a1="dFW2"/>
+<macroOutput a0="刻度x" a1="刻度y" a2="数值x" a3="数值y" a4="网格线横" a5="网格线纵" a6="箭头x" a7="箭头y" a8="dKx" a9="dKy" a10="横轴" a11="纵轴" a12="maxX" a13="maxY" a14="minX" a15="minY"/>
+<construction title="" author="" date="">
+<element type="point" label="dFW1">
+	<show object="true" label="false" ev="4"/>
+	<objColor r="153" g="51" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<animation step="0.1" speed="1" type="1" playing="false"/>
+	<coords x="-3.751622270771744" y="-3.480537607567009" z="1"/>
+	<pointSize val="5"/>
+	<pointStyle val="3"/>
+</element>
+<element type="point" label="dFW2">
+	<show object="true" label="false" ev="4"/>
+	<objColor r="153" g="51" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<animation step="0.1" speed="1" type="1" playing="false"/>
+	<coords x="4.4259950480822825" y="3.950460033564932" z="1"/>
+	<pointSize val="5"/>
+	<pointStyle val="3"/>
+</element>
+<command name="Min">
+	<input a0="x(dFW1)" a1="x(dFW2)"/>
+	<output a0="minX"/>
+</command>
+<element type="numeric" label="minX">
+	<value val="-3.751622270771744"/>
+	<objColor r="0" g="0" b="0" alpha="0.10000000149011612"/>
+</element>
+<command name="Max">
+	<input a0="x(dFW1)" a1="x(dFW2)"/>
+	<output a0="maxX"/>
+</command>
+<element type="numeric" label="maxX">
+	<value val="4.4259950480822825"/>
+	<objColor r="0" g="0" b="0" alpha="0.10000000149011612"/>
+</element>
+<command name="Min">
+	<input a0="y(dFW1)" a1="y(dFW2)"/>
+	<output a0="minY"/>
+</command>
+<element type="numeric" label="minY">
+	<value val="-3.480537607567009"/>
+	<objColor r="0" g="0" b="0" alpha="0.10000000149011612"/>
+</element>
+<command name="Max">
+	<input a0="y(dFW1)" a1="y(dFW2)"/>
+	<output a0="maxY"/>
+</command>
+<element type="numeric" label="maxY">
+	<value val="3.950460033564932"/>
+	<objColor r="0" g="0" b="0" alpha="0.10000000149011612"/>
+</element>
+<command name="Segment">
+	<input a0="(minX, 0)" a1="(maxX, 0)"/>
+	<output a0="横轴"/>
+</command>
+<element type="segment" label="横轴">
+	<show object="true" label="false" ev="4"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<coords x="0" y="8.177617318854026" z="0"/>
+	<lineStyle thickness="1" type="0" typeHidden="1" opacity="178"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<command name="Segment">
+	<input a0="(0, minY)" a1="(0, maxY)"/>
+	<output a0="纵轴"/>
+</command>
+<element type="segment" label="纵轴">
+	<show object="true" label="false" ev="4"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<coords x="-7.430997641131941" y="0" z="0"/>
+	<lineStyle thickness="1" type="0" typeHidden="1" opacity="178"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<command name="Vector">
+	<input a0="(maxX - 0.2, 0)" a1="(maxX, 0)"/>
+	<output a0="箭头x"/>
+</command>
+<element type="vector" label="箭头x">
+	<show object="true" label="true" ev="4"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelOffset x="-6" y="28"/>
+	<labelMode val="3"/>
+	<coords x="0.20000000000000018" y="0" z="0"/>
+	<lineStyle thickness="1" type="0" typeHidden="1" opacity="178"/>
+	<coordStyle style="cartesian"/>
+	<startPoint  x="4.225995048082282" y="0" z="1"/>
+	<caption val="$x$"/>
+</element>
+<command name="Vector">
+	<input a0="(0, maxY - 0.2)" a1="(0, maxY)"/>
+	<output a0="箭头y"/>
+</command>
+<element type="vector" label="箭头y">
+	<show object="true" label="true" ev="4"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelOffset x="7" y="13"/>
+	<labelMode val="3"/>
+	<coords x="0" y="0.20000000000000018" z="0"/>
+	<lineStyle thickness="1" type="0" typeHidden="1" opacity="178"/>
+	<coordStyle style="cartesian"/>
+	<startPoint  x="0" y="3.7504600335649316" z="1"/>
+	<caption val="$y$"/>
+</element>
+<command name="Sequence">
+	<input a0="Segment[(i, -0.05), (i, 0.05)]" a1="i" a2="ceil(minX)" a3="ceil(maxX - 1)"/>
+	<output a0="刻度x"/>
+</command>
+<element type="list" label="刻度x">
+	<show object="true" label="true" ev="4"/>
+	<objColor r="0" g="100" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<lineStyle thickness="1" type="0" typeHidden="1"/>
+	<pointSize val="5"/>
+	<angleStyle val="0"/>
+</element>
+<command name="Sequence">
+	<input a0="Segment[(-0.05, i), (0.05, i)]" a1="i" a2="ceil(minY)" a3="ceil(maxY - 1)"/>
+	<output a0="刻度y"/>
+</command>
+<element type="list" label="刻度y">
+	<show object="true" label="true" ev="4"/>
+	<objColor r="0" g="100" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<lineStyle thickness="1" type="0" typeHidden="1"/>
+	<pointSize val="5"/>
+	<angleStyle val="0"/>
+</element>
+<command name="Point">
+	<input a0="Segment[(minX - 0.5, -1), (minX - 0.5, 1)]"/>
+	<output a0="dKx"/>
+</command>
+<element type="point" label="dKx">
+	<show object="true" label="false" ev="4"/>
+	<objColor r="224" g="224" b="224" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<animation step="0.1" speed="1" type="1" playing="false"/>
+	<coords x="-4.251622270771744" y="-0.4874268921730476" z="1"/>
+	<pointSize val="5"/>
+	<pointStyle val="8"/>
+</element>
+<command name="Sequence">
+	<input a0="Text[i, (i, y(dKx))]" a1="i" a2="ceil(minX)" a3="ceil(maxX - 1)"/>
+	<output a0="数值x"/>
+</command>
+<element type="list" label="数值x">
+	<show object="true" label="true" ev="4"/>
+	<objColor r="0" g="100" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<lineStyle thickness="5" type="0" typeHidden="1"/>
+	<pointSize val="5"/>
+	<font serif="true" sizeM="1" size="0" style="0"/>
+	<angleStyle val="0"/>
+</element>
+<command name="Point">
+	<input a0="Segment[(-1, minY - 0.5), (1, minY - 0.5)]"/>
+	<output a0="dKy"/>
+</command>
+<element type="point" label="dKy">
+	<show object="true" label="false" ev="4"/>
+	<objColor r="224" g="224" b="224" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<animation step="0.1" speed="1" type="1" playing="false"/>
+	<coords x="0.22895213046494245" y="-3.980537607567009" z="1"/>
+	<pointSize val="5"/>
+	<pointStyle val="6"/>
+</element>
+<command name="Sequence">
+	<input a0="Text[i, (x(dKy), i)]" a1="i" a2="ceil(minY)" a3="ceil(maxY - 1)"/>
+	<output a0="数值y"/>
+</command>
+<element type="list" label="数值y">
+	<show object="true" label="true" ev="4"/>
+	<objColor r="0" g="100" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<lineStyle thickness="5" type="0" typeHidden="1"/>
+	<pointSize val="5"/>
+	<font serif="true" sizeM="1" size="0" style="0"/>
+	<angleStyle val="0"/>
+</element>
+<command name="Sequence">
+	<input a0="Segment[(minX, i), (maxX, i)]" a1="i" a2="ceil(minY)" a3="ceil(maxY) - 1" a4="1"/>
+	<output a0="网格线横"/>
+</command>
+<element type="list" label="网格线横">
+	<show object="true" label="true" ev="4"/>
+	<objColor r="224" g="224" b="224" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<lineStyle thickness="1" type="0" typeHidden="1"/>
+	<pointSize val="5"/>
+	<angleStyle val="0"/>
+</element>
+<command name="Sequence">
+	<input a0="Segment[(i, minY), (i, maxY)]" a1="i" a2="ceil(minX)" a3="ceil(maxX) - 1" a4="1"/>
+	<output a0="网格线纵"/>
+</command>
+<element type="list" label="网格线纵">
+	<show object="true" label="true" ev="4"/>
+	<objColor r="224" g="224" b="224" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<lineStyle thickness="1" type="0" typeHidden="1"/>
+	<pointSize val="5"/>
+	<angleStyle val="0"/>
+</element>
+</construction>
+</macro>
+</geogebra>

@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<geogebra format="5.0" version="5.0.56.0" id="db3dbb0c-ff6b-4861-b2d4-eb6d4a789f1c"  xsi:noNamespaceSchemaLocation="http://www.geogebra.org/ggb.xsd" xmlns="" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" >
+<gui>
+	<window width="782" height="604" />
+	<perspectives>
+<perspective id="tmp">
+	<panes>
+		<pane location="" divider="0.3273657289002558" orientation="1" />
+	</panes>
+	<views>
+		<view id="4" toolbar="0 || 2020 , 2021 , 2022 , 66 || 2001 , 2003 , 2002 , 2004 , 2005 || 2040 , 2041 , 2042 , 2044 , 2043" visible="false" inframe="false" stylebar="false" location="1,1" size="200" window="0,0,400,400" />
+		<view id="1" visible="true" inframe="false" stylebar="false" location="1" size="766" window="0,0,400,400" />
+		<view id="2" visible="false" inframe="false" stylebar="false" location="3" size="200" window="0,0,200,400" />
+		<view id="8" visible="false" inframe="false" stylebar="false" location="1" size="150" window="50,50,500,500" />
+		<view id="16" visible="false" inframe="false" stylebar="false" location="1" size="150" window="50,50,500,500" />
+		<view id="32" visible="false" inframe="false" stylebar="true" location="1" size="150" window="50,50,500,500" />
+		<view id="64" visible="false" inframe="true" stylebar="true" location="1" size="150" window="50,50,500,500" />
+		<view id="4097" visible="false" inframe="true" stylebar="true" location="1" size="150" window="1053,410,500,500" />
+		<view id="70" visible="false" inframe="true" stylebar="true" location="1" size="150" window="50,50,500,500" />
+		<view id="512" visible="false" inframe="false" stylebar="false" location="1" size="300" window="50,50,500,500" />
+	</views>
+	<toolbar show="true" items="0 39 | 1 501 67 , 5 19 , 72 | 2 15 45 , 18 65 , 7 37 | 4 3 8 9 , 13 44 , 58 , 47 | 16 51 64 , 70 | 10 34 53 11 , 24  20 22 , 21 23 | 55 56 57 , 12 | 36 46 , 38 49  50 , 71 | 30 29 54 32 31 33 | 17 26 62 73 , 14 68 | 25 52 60 61 | 40 41 42 , 27 28 35 , 6 ||" position="1" help="false" />
+	<input show="true" cmd="true" top="false" />
+	<dockBar show="false" east="false" />
+</perspective>
+	</perspectives>
+	<labelingStyle  val="2"/>
+	<font  size="12"/>
+	<graphicsSettings javaLatexFonts="false"/>
+</gui>
+<euclidianView>
+	<viewNumber viewNo="1"/>
+	<size  width="766" height="445"/>
+	<coordSystem xZero="26.00000000000001" yZero="432.9999999999999" scale="50.00000000000003" yscale="49.999999999999986"/>
+	<evSettings axes="true" grid="false" gridIsBold="false" pointCapturing="3" rightAngleStyle="1" checkboxSize="13" gridType="0"/>
+	<bgColor r="255" g="255" b="255"/>
+	<axesColor r="51" g="51" b="51"/>
+	<gridColor r="192" g="192" b="192"/>
+	<lineStyle axes="0" grid="10"/>
+	<axis id="0" show="true" label="" unitLabel="" tickStyle="1" showNumbers="true"/>
+	<axis id="1" show="true" label="" unitLabel="" tickStyle="1" showNumbers="true"/>
+</euclidianView>
+<kernel>
+	<continuous val="false"/>
+	<usePathAndRegionParameters val="true"/>
+	<decimals val="2"/>
+	<angleUnit val="degree"/>
+	<algebraStyle val="0"/>
+	<coordStyle val="0"/>
+	<angleFromInvTrig val="false"/>
+	<startAnimation val="true"/>
+</kernel>
+<scripting blocked="false" disabled="false"/>
+<construction title="" author="" date="">
+<element type="numeric" label="v">
+	<value val="11.25"/>
+	<show object="true" label="true"/>
+	<objColor r="0" g="0" b="0" alpha="0.1"/>
+	<layer val="5"/>
+	<labelMode val="1"/>
+	<slider min="0" max="15" absoluteScreenLocation="true" width="100.0" x="482.0" y="54.0" fixed="false" horizontal="true"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<animation step="0.01" speed="1" type="0" playing="false"/>
+</element>
+<element type="numeric" label="g">
+	<value val="9.8"/>
+	<show object="false" label="false"/>
+	<objColor r="0" g="0" b="0" alpha="0.1"/>
+	<layer val="5"/>
+	<labelMode val="1"/>
+	<animation step="0.1" speed="1" type="0" playing="false"/>
+</element>
+<element type="angle" label="θ">
+	<angleStyle val="0"/>
+	<value val="1.0314895879286488"/>
+	<slider min="0" max="1.5707963267948966" absoluteScreenLocation="true" width="100.0" x="482.0" y="105.0" fixed="false" horizontal="true"/>
+	<show object="true" label="true"/>
+	<objColor r="0" g="100" b="0" alpha="0.1"/>
+	<layer val="5"/>
+	<labelMode val="1"/>
+	<lineStyle thickness="2" type="0" typeHidden="2"/>
+	<arcSize val="30"/>
+	<animation step="0.0017453292519943296" speed="1" type="0" playing="true"/>
+</element>
+<expression label="T" exp="tan(θ)" />
+<element type="numeric" label="T">
+	<value val="1.670878244512379"/>
+	<objColor r="0" g="0" b="0" alpha="0.1"/>
+</element>
+<expression label="f" exp="f(x) = (T * x) - ((g / ((2 * v^(2))) * (1 + T^(2))) * x^(2))" />
+<element type="function" label="f">
+	<show object="false" label="false"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="5"/>
+	<labelMode val="0"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+</element>
+<expression label="R" exp="(v^(2) * sin((2 * θ)) / g)" />
+<element type="numeric" label="R">
+	<value val="11.381629403262814"/>
+	<objColor r="0" g="0" b="0" alpha="0.1"/>
+</element>
+<command name="Function">
+	<input a0="f" a1="0" a2="R"/>
+	<output a0="h"/>
+</command>
+<element type="function" label="h">
+	<show object="true" label="false"/>
+	<objColor r="0" g="0" b="255" alpha="0.0"/>
+	<layer val="5"/>
+	<labelMode val="0"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+</element>
+<expression label="vec" exp="(v * (1; θ))" type="vector" />
+<element type="vector" label="vec">
+	<show object="false" label="false"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="5"/>
+	<labelMode val="0"/>
+	<coords x="5.777339085654414" y="9.653230189391001" z="0.0"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<coordStyle style="polar"/>
+</element>
+<expression label="f2" exp="f2(x) = v^(2) / ((2 * g)) - (g / ((2 * v^(2))) * x^(2))" />
+<element type="function" label="f2">
+	<show object="true" label="false"/>
+	<objColor r="255" g="51" b="51" alpha="0.0"/>
+	<layer val="5"/>
+	<labelMode val="0"/>
+	<lineStyle thickness="2" type="10" typeHidden="1"/>
+</element>
+</construction>
+</geogebra>

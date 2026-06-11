@@ -1,0 +1,1807 @@
+<?xml version="1.0" encoding="utf-8"?>
+<geogebra format="5.0" version="5.0.620.0" app="classic" platform="w"  xsi:noNamespaceSchemaLocation="https://ggb123.cn/apps/xsd/ggt.xsd" xmlns="" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" >
+<macro cmdName="期望方差" toolName="期望方差" toolHelp="期望方差[ &lt;列表&gt;, &lt;列表&gt; ]" iconFile="" showInToolBar="true" copyCaptions="true" viewId="1">
+<macroInput a0="l1" a1="l2"/>
+<macroOutput a0="text1"/>
+<construction title="" author="" date="">
+<expression label="l1" exp="{1, 2, 3}"/>
+<element type="list" label="l1">
+	<objColor r="0" g="100" b="0" alpha="0.10000000149011612"/>
+	<animation step="1" speed="1" type="0" playing="false"/>
+	<lineStyle thickness="5" type="0" typeHidden="1"/>
+	<pointSize val="5"/>
+	<pointStyle val="0"/>
+	<angleStyle val="0"/>
+	<symbolic val="true" />
+</element>
+<expression label="l2" exp="{1 / 4, 1 / 2, 1 / 4}"/>
+<element type="list" label="l2">
+	<objColor r="0" g="100" b="0" alpha="0.10000000149011612"/>
+	<animation step="1" speed="1" type="0" playing="false"/>
+	<lineStyle thickness="5" type="0" typeHidden="1"/>
+	<pointSize val="5"/>
+	<pointStyle val="0"/>
+	<angleStyle val="0"/>
+	<symbolic val="true" />
+</element>
+<expression label="l3" exp="(l1 * l2)" />
+<element type="list" label="l3">
+	<objColor r="0" g="100" b="0" alpha="0.10000000149011612"/>
+	<lineStyle thickness="5" type="0" typeHidden="1"/>
+	<pointSize val="5"/>
+	<pointStyle val="0"/>
+	<angleStyle val="0"/>
+	<symbolic val="true" />
+</element>
+<expression label="l4" exp="l1^(2)" />
+<element type="list" label="l4">
+	<objColor r="0" g="100" b="0" alpha="0.10000000149011612"/>
+	<lineStyle thickness="5" type="0" typeHidden="1"/>
+	<pointSize val="5"/>
+	<pointStyle val="0"/>
+	<angleStyle val="0"/>
+	<symbolic val="true" />
+</element>
+<expression label="l5" exp="(l4 * l2)" />
+<element type="list" label="l5">
+	<objColor r="0" g="100" b="0" alpha="0.10000000149011612"/>
+	<lineStyle thickness="5" type="0" typeHidden="1"/>
+	<pointSize val="5"/>
+	<pointStyle val="0"/>
+	<angleStyle val="0"/>
+</element>
+<command name="Sum">
+	<input a0="l3"/>
+	<output a0="a"/>
+</command>
+<element type="numeric" label="a">
+	<value val="2"/>
+	<symbolic val="true" />
+	<objColor r="0" g="0" b="0" alpha="0.10000000149011612"/>
+</element>
+<expression label="b" exp="a^(2)" />
+<element type="numeric" label="b">
+	<value val="4"/>
+	<objColor r="0" g="0" b="0" alpha="0.10000000149011612"/>
+</element>
+<command name="Sum">
+	<input a0="l5"/>
+	<output a0="c"/>
+</command>
+<element type="numeric" label="c">
+	<value val="4.5"/>
+	<symbolic val="true" />
+	<objColor r="0" g="0" b="0" alpha="0.10000000149011612"/>
+</element>
+<expression label="d" exp="c - b" />
+<element type="numeric" label="d">
+	<value val="0.5"/>
+	<objColor r="0" g="0" b="0" alpha="0.10000000149011612"/>
+</element>
+<expression label="text1" exp="&quot;期望=&quot; + (LaTeX[a]) + &quot;,方差=&quot; + (LaTeX[d]) + &quot;&quot;" />
+<element type="text" label="text1">
+	<show object="true" label="false" ev="40"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<isLaTeX val="true"/>
+	<font serif="true" sizeM="1" size="0" style="0"/>
+	<startPoint x="-2.7744022149013574" y="-2.8318044671924834" z="1"/>
+</element>
+</construction>
+</macro>
+<macro cmdName="边长列表" toolName="边长列表" toolHelp="边长列表[ &lt;多边形&gt; ]" iconFile="5a92d9fccfb161717ab39e23541e777d/1.png" showInToolBar="true" copyCaptions="true" viewId="1">
+<macroInput a0="poly1"/>
+<macroOutput a0="l3"/>
+<construction title="" author="" date="">
+<element type="point" label="A">
+	<show object="true" label="true"/>
+	<objColor r="77" g="77" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<animation step="1" speed="1" type="1" playing="false"/>
+	<coords x="-5.9635893780138325" y="-2.579422704621072" z="1"/>
+	<pointSize val="5"/>
+	<pointStyle val="0"/>
+</element>
+<element type="point" label="B">
+	<show object="true" label="true"/>
+	<objColor r="77" g="77" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<animation step="1" speed="1" type="1" playing="false"/>
+	<coords x="-1.9484256834477665" y="-1.5698956543354246" z="1"/>
+	<pointSize val="5"/>
+	<pointStyle val="0"/>
+</element>
+<element type="point" label="C">
+	<show object="true" label="true"/>
+	<objColor r="77" g="77" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<animation step="1" speed="1" type="1" playing="false"/>
+	<coords x="1.9061314633356572" y="-2.625310297815874" z="1"/>
+	<pointSize val="5"/>
+	<pointStyle val="0"/>
+</element>
+<element type="point" label="D">
+	<show object="true" label="true"/>
+	<objColor r="77" g="77" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<animation step="1" speed="1" type="1" playing="false"/>
+	<coords x="3.4204217710005738" y="-7.833552125425917" z="1"/>
+	<pointSize val="5"/>
+	<pointStyle val="0"/>
+</element>
+<element type="point" label="E">
+	<show object="true" label="true"/>
+	<objColor r="77" g="77" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<animation step="1" speed="1" type="1" playing="false"/>
+	<coords x="-3.646266331435703" y="-9.80671863280241" z="1"/>
+	<pointSize val="5"/>
+	<pointStyle val="0"/>
+</element>
+<element type="point" label="F">
+	<show object="true" label="true"/>
+	<objColor r="77" g="77" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<animation step="1" speed="1" type="1" playing="false"/>
+	<coords x="-7.500823478219127" y="-7.810608328828516" z="1"/>
+	<pointSize val="5"/>
+	<pointStyle val="0"/>
+</element>
+<command name="Polygon">
+	<input a0="A" a1="B" a2="C" a3="D" a4="E" a5="F"/>
+	<output a0="poly1" a1="a" a2="b" a3="c" a4="d" a5="e" a6="f"/>
+</command>
+<element type="polygon" label="poly1">
+	<lineStyle thickness="5" type="0" typeHidden="1" opacity="178"/>
+	<show object="true" label="false"/>
+	<objColor r="153" g="51" b="0" alpha="0.10000000149011612"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+</element>
+<element type="segment" label="a">
+	<show object="true" label="false"/>
+	<objColor r="153" g="51" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<auxiliary val="false"/>
+	<coords x="-1.0095270502856473" y="4.015163694566066" z="4.336399602632815"/>
+	<lineStyle thickness="5" type="0" typeHidden="1" opacity="178"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment" label="b">
+	<show object="true" label="false"/>
+	<objColor r="153" g="51" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<auxiliary val="false"/>
+	<coords x="1.0554146434804494" y="3.8545571467834234" z="8.107649512167026"/>
+	<lineStyle thickness="5" type="0" typeHidden="1" opacity="178"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment" label="c">
+	<show object="true" label="false"/>
+	<objColor r="153" g="51" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<auxiliary val="false"/>
+	<coords x="5.208241827610043" y="1.5142903076649166" z="-5.952111677672834"/>
+	<lineStyle thickness="5" type="0" typeHidden="1" opacity="178"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment" label="d">
+	<show object="true" label="false"/>
+	<objColor r="153" g="51" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<auxiliary val="false"/>
+	<coords x="1.9731665073764928" y="-7.066688102436277" z="-62.10633128420146"/>
+	<lineStyle thickness="5" type="0" typeHidden="1" opacity="178"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment" label="e">
+	<show object="true" label="false"/>
+	<objColor r="153" g="51" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<auxiliary val="false"/>
+	<coords x="-1.9961103039738939" y="-3.854557146783424" z="-45.07890718777459"/>
+	<lineStyle thickness="5" type="0" typeHidden="1" opacity="178"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment" label="f">
+	<show object="true" label="false"/>
+	<objColor r="153" g="51" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<auxiliary val="false"/>
+	<coords x="-5.231185624207444" y="1.5372341002052945" z="-27.231466482554893"/>
+	<lineStyle thickness="5" type="0" typeHidden="1" opacity="178"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<expression label="l1" exp="{Vertex[poly1]}" />
+<element type="list" label="l1">
+	<show object="true" label="false"/>
+	<objColor r="0" g="100" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<lineStyle thickness="5" type="0" typeHidden="1"/>
+	<pointSize val="5"/>
+	<pointStyle val="0"/>
+	<angleStyle val="0"/>
+</element>
+<command name="Length">
+	<input a0="l1"/>
+	<output a0="g"/>
+</command>
+<element type="numeric" label="g">
+	<value val="6"/>
+	<symbolic val="true" />
+	<objColor r="0" g="0" b="0" alpha="0.10000000149011612"/>
+</element>
+<command name="Append">
+	<input a0="l1" a1="l1(1)"/>
+	<output a0="l2"/>
+</command>
+<element type="list" label="l2">
+	<show object="true" label="false"/>
+	<objColor r="0" g="100" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<lineStyle thickness="5" type="0" typeHidden="1"/>
+	<pointSize val="5"/>
+	<pointStyle val="0"/>
+	<angleStyle val="0"/>
+</element>
+<command name="Sequence">
+	<input a0="Segment[l2(i), l2(i + 1)]" a1="i" a2="1" a3="g"/>
+	<output a0="l3"/>
+</command>
+<element type="list" label="l3">
+	<show object="true" label="false"/>
+	<objColor r="0" g="100" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<lineStyle thickness="5" type="0" typeHidden="1"/>
+	<pointSize val="5"/>
+	<pointStyle val="0"/>
+	<angleStyle val="0"/>
+</element>
+</construction>
+</macro>
+<macro cmdName="动点匀变速工具1" toolName="动点匀变速工具1" toolHelp="工具8[ &lt;列表&gt;, &lt;函数&gt;, &lt;数字&gt; ]" iconFile="" showInToolBar="true" copyCaptions="true" viewId="1">
+<macroInput a0="l1" a1="f" a2="a"/>
+<macroOutput a0="A"/>
+<construction title="" author="" date="">
+<expression label="f" exp="f(x) = If[x &lt; 2, 5, x &lt; 3, 0, 4]" type="function"/>
+<element type="function" label="f">
+	<show object="true" label="false" ev="4"/>
+	<objColor r="153" g="51" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<lineStyle thickness="5" type="0" typeHidden="1" opacity="178"/>
+</element>
+<element type="numeric" label="a">
+	<value val="0"/>
+	<show object="true" label="true"/>
+	<objColor r="0" g="0" b="0" alpha="0.10000000149011612"/>
+	<layer val="0"/>
+	<labelMode val="1"/>
+	<animation speed="1" type="0" playing="false"/>
+</element>
+<command name="Integral">
+	<input a0="f" a1="0" a2="a"/>
+	<output a0="b"/>
+</command>
+<element type="numeric" label="b">
+	<value val="0"/>
+	<symbolic val="true" />
+	<show object="true" label="true"/>
+	<objColor r="153" g="51" b="0" alpha="0.10000000149011612"/>
+	<layer val="0"/>
+	<labelMode val="1"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+</element>
+<expression label="l1" exp="{(1, 2), (3, 4), (5, -1), (6, 0)}"/>
+<element type="list" label="l1">
+	<show object="true" label="false"/>
+	<objColor r="0" g="100" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<animation step="1" speed="1" type="0" playing="false"/>
+	<lineStyle thickness="5" type="0" typeHidden="1"/>
+	<pointSize val="5"/>
+	<pointStyle val="0"/>
+	<angleStyle val="0"/>
+</element>
+<command name="Length">
+	<input a0="l1"/>
+	<output a0="c"/>
+</command>
+<element type="numeric" label="c">
+	<value val="4"/>
+	<symbolic val="true" />
+	<objColor r="0" g="0" b="0" alpha="0.10000000149011612"/>
+</element>
+<command name="Sequence">
+	<input a0="PolyLine[First[l1, i]]" a1="i" a2="1" a3="c"/>
+	<output a0="l2"/>
+</command>
+<element type="list" label="l2">
+	<show object="true" label="false"/>
+	<objColor r="0" g="100" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<lineStyle thickness="5" type="0" typeHidden="1"/>
+	<pointSize val="5"/>
+	<pointStyle val="0"/>
+	<angleStyle val="0"/>
+</element>
+<command name="CountIf">
+	<input a0="b ≥ p" a1="p" a2="l2"/>
+	<output a0="d"/>
+</command>
+<element type="numeric" label="d">
+	<value val="1"/>
+	<symbolic val="true" />
+	<objColor r="0" g="0" b="0" alpha="0.10000000149011612"/>
+</element>
+<command name="If">
+	<input a0="d ≟ c" a1="l1(-1)" a2="l1(d) + ((b - l2(d)) * UnitVector[l1(d + 1) - l1(d)])"/>
+	<output a0="A"/>
+</command>
+<element type="point" label="A">
+	<show object="true" label="true"/>
+	<objColor r="68" g="68" b="68" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<coords x="1" y="2" z="1"/>
+	<pointSize val="4"/>
+	<pointStyle val="0"/>
+</element>
+</construction>
+</macro>
+<macro cmdName="变速动点工具" toolName="变速动点工具2" toolHelp="变速动点工具[ &lt;点列表&gt;, &lt;速度列表&gt;, &lt;停留时间列表&gt;, &lt;数字&gt; ]" iconFile="" showInToolBar="true" copyCaptions="true" viewId="1">
+<macroInput a0="l1" a1="l2" a2="l3" a3="c"/>
+<macroOutput a0="b" a1="A"/>
+<construction title="" author="" date="">
+<expression label="l1" exp="{(1, 2), (3, 4), (5, -1), (6, 3)}"/>
+<element type="list" label="l1">
+	<show object="true" label="false"/>
+	<objColor r="0" g="100" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<animation step="1" speed="1" type="0" playing="false"/>
+	<lineStyle thickness="5" type="0" typeHidden="1"/>
+	<pointSize val="5"/>
+	<pointStyle val="0"/>
+	<angleStyle val="0"/>
+</element>
+<expression label="l2" exp="{1, 2, 3}"/>
+<element type="list" label="l2">
+	<objColor r="0" g="100" b="0" alpha="0.10000000149011612"/>
+	<animation step="1" speed="1" type="0" playing="false"/>
+	<lineStyle thickness="5" type="0" typeHidden="1"/>
+	<pointSize val="5"/>
+	<pointStyle val="0"/>
+	<angleStyle val="0"/>
+	<symbolic val="true" />
+</element>
+<expression label="l3" exp="{0, 2, 2, 0}"/>
+<element type="list" label="l3">
+	<objColor r="0" g="100" b="0" alpha="0.10000000149011612"/>
+	<animation step="1" speed="1" type="0" playing="false"/>
+	<lineStyle thickness="5" type="0" typeHidden="1"/>
+	<pointSize val="5"/>
+	<pointStyle val="0"/>
+	<angleStyle val="0"/>
+	<symbolic val="true" />
+</element>
+<command name="Sequence">
+	<input a0="Segment[l1(i), l1(i + 1)]" a1="i" a2="1" a3="Length[l1] - 1"/>
+	<output a0="l4"/>
+</command>
+<element type="list" label="l4">
+	<show object="true" label="false"/>
+	<objColor r="0" g="100" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<lineStyle thickness="5" type="0" typeHidden="1"/>
+	<pointSize val="5"/>
+	<pointStyle val="0"/>
+	<angleStyle val="0"/>
+</element>
+<expression label="l5" exp="l4 / l2" />
+<element type="list" label="l5">
+	<objColor r="0" g="100" b="0" alpha="0.10000000149011612"/>
+	<lineStyle thickness="5" type="0" typeHidden="1"/>
+	<pointSize val="5"/>
+	<pointStyle val="0"/>
+	<angleStyle val="0"/>
+</element>
+<command name="Append">
+	<input a0="0" a1="l5"/>
+	<output a0="l6"/>
+</command>
+<element type="list" label="l6">
+	<objColor r="0" g="100" b="0" alpha="0.10000000149011612"/>
+	<lineStyle thickness="5" type="0" typeHidden="1"/>
+	<pointSize val="5"/>
+	<pointStyle val="0"/>
+	<angleStyle val="0"/>
+</element>
+<command name="Zip">
+	<input a0="If[p ≟ 0, {q}, {q, p}]" a1="p" a2="l3" a3="q" a4="l6"/>
+	<output a0="l7"/>
+</command>
+<element type="list" label="l7">
+	<objColor r="0" g="100" b="0" alpha="0.10000000149011612"/>
+	<lineStyle thickness="5" type="0" typeHidden="1"/>
+	<pointSize val="5"/>
+	<pointStyle val="0"/>
+	<angleStyle val="0"/>
+	<symbolic val="true" />
+</element>
+<command name="Flatten">
+	<input a0="l7"/>
+	<output a0="l8"/>
+</command>
+<element type="list" label="l8">
+	<objColor r="0" g="100" b="0" alpha="0.10000000149011612"/>
+	<lineStyle thickness="5" type="0" typeHidden="1"/>
+	<pointSize val="5"/>
+	<pointStyle val="0"/>
+	<angleStyle val="0"/>
+</element>
+<command name="Sequence">
+	<input a0="Sum[First[l8, i]]" a1="i" a2="1" a3="Length[l8]"/>
+	<output a0="l9"/>
+</command>
+<element type="list" label="l9">
+	<objColor r="0" g="100" b="0" alpha="0.10000000149011612"/>
+	<lineStyle thickness="5" type="0" typeHidden="1"/>
+	<pointSize val="5"/>
+	<pointStyle val="0"/>
+	<angleStyle val="0"/>
+	<symbolic val="true" />
+</element>
+<element type="numeric" label="c">
+	<value val="8.5"/>
+	<symbolic val="true" />
+	<show object="true" label="true"/>
+	<objColor r="0" g="0" b="0" alpha="0.10000000149011612"/>
+	<layer val="0"/>
+	<labelMode val="1"/>
+	<animation step="0.01" speed="1" type="3" playing="false"/>
+</element>
+<expression label="b" exp="l9(-1)" />
+<element type="numeric" label="b">
+	<value val="10.895378070185995"/>
+	<objColor r="0" g="0" b="0" alpha="0.10000000149011612"/>
+</element>
+<command name="Zip">
+	<input a0="If[p ≟ 0, {q}, {q, q}]" a1="p" a2="l3" a3="q" a4="l1"/>
+	<output a0="l11"/>
+</command>
+<element type="list" label="l11">
+	<show object="true" label="false"/>
+	<objColor r="0" g="100" b="0" alpha="0.10000000149011612"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<lineStyle thickness="5" type="0" typeHidden="1"/>
+	<pointSize val="5"/>
+	<pointStyle val="0"/>
+	<angleStyle val="0"/>
+</element>
+<command name="Flatten">
+	<input a0="l11"/>
+	<output a0="l13"/>
+</command>
+<element type="list" label="l13">
+	<show object="true" label="false"/>
+	<objColor r="0" g="100" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<lineStyle thickness="5" type="0" typeHidden="1"/>
+	<pointSize val="5"/>
+	<pointStyle val="0"/>
+	<angleStyle val="0"/>
+</element>
+<command name="CountIf">
+	<input a0="c ≥ p" a1="p" a2="l9"/>
+	<output a0="e"/>
+</command>
+<element type="numeric" label="e">
+	<value val="4"/>
+	<objColor r="0" g="100" b="0" alpha="0.10000000149011612"/>
+</element>
+<command name="Length">
+	<input a0="l9"/>
+	<output a0="d"/>
+</command>
+<element type="numeric" label="d">
+	<value val="6"/>
+	<symbolic val="true" />
+	<objColor r="0" g="0" b="0" alpha="0.10000000149011612"/>
+</element>
+<command name="If">
+	<input a0="e ≟ d" a1="l1(-1)" a2="l13(e) + ((c - l9(e)) / l8(e + 1) * (l13(e + 1) - l13(e)))"/>
+	<output a0="A"/>
+</command>
+<element type="point" label="A">
+	<show object="true" label="true"/>
+	<objColor r="68" g="68" b="68" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<coords x="5" y="-1" z="1"/>
+	<pointSize val="4"/>
+	<pointStyle val="0"/>
+</element>
+</construction>
+</macro>
+<macro cmdName="根式文本工具12" toolName="根式文本工具12" toolHelp="工具12[ &lt;文本&gt; ]" iconFile="" showInToolBar="true" copyCaptions="true" viewId="1">
+<macroInput a0="text3"/>
+<macroOutput a0="text4"/>
+<construction title="" author="" date="">
+<expression label="text3" exp="&quot;sqrt(2)&quot;"/>
+<element type="text" label="text3">
+	<symbolic val="true" />
+	<show object="true" label="false"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<font serif="true" sizeM="1" size="0" style="0"/>
+	<startPoint x="7.924193920478908" y="5.603368347987809" z="1"/>
+</element>
+<command name="Sequence">
+	<input a0="If[Element[text3, i] ≟ &quot;(&quot;, &quot;{&quot;, Element[text3, i] ≟ &quot;)&quot;, &quot;}&quot;, Element[text3, i]]" a1="i" a2="1" a3="Length[text3]"/>
+	<output a0="l1"/>
+</command>
+<element type="list" label="l1">
+	<show object="true" label="false"/>
+	<objColor r="0" g="100" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<lineStyle thickness="5" type="0" typeHidden="1"/>
+	<pointSize val="5"/>
+	<pointStyle val="0"/>
+	<angleStyle val="0"/>
+	<symbolic val="true" />
+</element>
+<command name="Sum">
+	<input a0="l1"/>
+	<output a0="text4"/>
+</command>
+<element type="text" label="text4">
+	<symbolic val="true" />
+	<show object="true" label="false"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<font serif="true" sizeM="1" size="0" style="0"/>
+</element>
+</construction>
+</macro>
+<macro cmdName="是否相似" toolName="是否相似" toolHelp="是否相似[ &lt;三角形&gt;, &lt;三角形&gt; ]" iconFile="" showInToolBar="true" copyCaptions="true" viewId="1">
+<macroInput a0="t1" a1="t2"/>
+<macroOutput a0="text1"/>
+<construction title="" author="" date="">
+<element type="point" label="A">
+	<show object="true" label="true" ev="4"/>
+	<objColor r="77" g="77" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<animation step="1" speed="1" type="1" playing="false"/>
+	<coords x="-7.700322798040428" y="16.08381526160898" z="1"/>
+	<pointSize val="5"/>
+	<pointStyle val="0"/>
+</element>
+<element type="point" label="B">
+	<show object="true" label="true"/>
+	<objColor r="77" g="77" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<animation step="1" speed="1" type="1" playing="false"/>
+	<coords x="-13.373224252764372" y="7.093707129282563" z="1"/>
+	<pointSize val="5"/>
+	<pointStyle val="0"/>
+</element>
+<element type="point" label="C">
+	<show object="true" label="true"/>
+	<objColor r="77" g="77" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<animation step="1" speed="1" type="1" playing="false"/>
+	<coords x="-2.1235722154304493" y="5.170689346966752" z="1"/>
+	<pointSize val="5"/>
+	<pointStyle val="0"/>
+</element>
+<command name="Polygon">
+	<input a0="A" a1="B" a2="C"/>
+	<output a0="t1" a1="c" a2="a" a3="b"/>
+</command>
+<element type="polygon" label="t1">
+	<lineStyle thickness="5" type="0" typeHidden="1" opacity="178"/>
+	<show object="true" label="false" ev="4"/>
+	<objColor r="153" g="51" b="0" alpha="0.10000000149011612"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+</element>
+<element type="segment" label="c">
+	<show object="true" label="false"/>
+	<objColor r="153" g="51" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<auxiliary val="false"/>
+	<coords x="8.990108132326416" y="-5.672901454723943" z="160.4686336032945"/>
+	<lineStyle thickness="5" type="0" typeHidden="1" opacity="178"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment" label="a">
+	<show object="true" label="false"/>
+	<objColor r="153" g="51" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<auxiliary val="false"/>
+	<coords x="1.923017782315811" y="11.249652037333922" z="-54.084788814220786"/>
+	<lineStyle thickness="5" type="0" typeHidden="1" opacity="178"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment" label="b">
+	<show object="true" label="false"/>
+	<objColor r="153" g="51" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<auxiliary val="false"/>
+	<coords x="-10.913125914642228" y="-5.576750582609979" z="5.660833852363801"/>
+	<lineStyle thickness="5" type="0" typeHidden="1" opacity="178"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="point" label="D">
+	<show object="true" label="true"/>
+	<objColor r="77" g="77" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<animation step="1" speed="1" type="1" playing="false"/>
+	<coords x="17.29890395159051" y="13.199288588135262" z="1"/>
+	<pointSize val="5"/>
+	<pointStyle val="0"/>
+</element>
+<element type="point" label="E">
+	<show object="true" label="true"/>
+	<objColor r="77" g="77" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<animation step="1" speed="1" type="1" playing="false"/>
+	<coords x="5.616572989743746" y="5.362991125198333" z="1"/>
+	<pointSize val="5"/>
+	<pointStyle val="0"/>
+</element>
+<element type="point" label="F">
+	<show object="true" label="true"/>
+	<objColor r="77" g="77" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<animation step="1" speed="1" type="1" playing="false"/>
+	<coords x="18.693091597243008" y="4.593784012272009" z="1"/>
+	<pointSize val="5"/>
+	<pointStyle val="0"/>
+</element>
+<command name="Polygon">
+	<input a0="D" a1="E" a2="F"/>
+	<output a0="t2" a1="f" a2="d" a3="e"/>
+</command>
+<element type="polygon" label="t2">
+	<lineStyle thickness="5" type="0" typeHidden="1" opacity="178"/>
+	<show object="true" label="false"/>
+	<objColor r="153" g="51" b="0" alpha="0.10000000149011612"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+</element>
+<element type="segment" label="f">
+	<show object="true" label="false"/>
+	<objColor r="153" g="51" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<auxiliary val="false"/>
+	<coords x="7.83629746293693" y="-11.682330961846764" z="18.6391006000849"/>
+	<lineStyle thickness="5" type="0" typeHidden="1" opacity="178"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment" label="d">
+	<show object="true" label="false"/>
+	<objColor r="153" g="51" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<auxiliary val="false"/>
+	<coords x="0.769207112926324" y="13.076518607499262" z="-74.44956113449017"/>
+	<lineStyle thickness="5" type="0" typeHidden="1" opacity="178"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment" label="e">
+	<show object="true" label="false"/>
+	<objColor r="153" g="51" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<auxiliary val="false"/>
+	<coords x="-8.605504575863254" y="-1.3941876456524973" z="167.26808219381124"/>
+	<lineStyle thickness="5" type="0" typeHidden="1" opacity="178"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<expression label="l1" exp="{InteriorAngles[t1]}" />
+<element type="list" label="l1">
+	<show object="false" label="false"/>
+	<objColor r="0" g="100" b="0" alpha="0.10000000149011612"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<lineStyle thickness="5" type="0" typeHidden="1"/>
+	<pointSize val="5"/>
+	<pointStyle val="0"/>
+	<angleStyle val="0"/>
+</element>
+<expression label="l2" exp="{InteriorAngles[t2]}" />
+<element type="list" label="l2">
+	<show object="true" label="false"/>
+	<objColor r="0" g="100" b="0" alpha="0.10000000149011612"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<lineStyle thickness="5" type="0" typeHidden="1"/>
+	<pointSize val="5"/>
+	<pointStyle val="0"/>
+	<angleStyle val="0"/>
+	<symbolic val="true" />
+</element>
+<command name="Sort">
+	<input a0="l1"/>
+	<output a0="l3"/>
+</command>
+<element type="list" label="l3">
+	<objColor r="0" g="100" b="0" alpha="0.10000000149011612"/>
+	<lineStyle thickness="5" type="0" typeHidden="1"/>
+	<pointSize val="5"/>
+	<pointStyle val="0"/>
+	<angleStyle val="0"/>
+</element>
+<command name="Sort">
+	<input a0="l2"/>
+	<output a0="l4"/>
+</command>
+<element type="list" label="l4">
+	<objColor r="0" g="100" b="0" alpha="0.10000000149011612"/>
+	<lineStyle thickness="5" type="0" typeHidden="1"/>
+	<pointSize val="5"/>
+	<pointStyle val="0"/>
+	<angleStyle val="0"/>
+</element>
+<expression label="g" exp="l3 ≟ l4" />
+<element type="boolean" label="g">
+	<value val="false"/>
+	<show object="false" label="true"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<checkbox fixed="true"/>
+</element>
+<expression label="l5" exp="{Vertex[t1]}" />
+<element type="list" label="l5">
+	<show object="true" label="false"/>
+	<objColor r="0" g="100" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<lineStyle thickness="5" type="0" typeHidden="1"/>
+	<pointSize val="5"/>
+	<pointStyle val="0"/>
+	<angleStyle val="0"/>
+</element>
+<expression label="l6" exp="{Vertex[t2]}" />
+<element type="list" label="l6">
+	<show object="true" label="false"/>
+	<objColor r="0" g="100" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<lineStyle thickness="5" type="0" typeHidden="1"/>
+	<pointSize val="5"/>
+	<pointStyle val="0"/>
+	<angleStyle val="0"/>
+</element>
+<command name="Append">
+	<input a0="l5" a1="l5(1)"/>
+	<output a0="l7"/>
+</command>
+<element type="list" label="l7">
+	<show object="true" label="false"/>
+	<objColor r="0" g="100" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<lineStyle thickness="5" type="0" typeHidden="1"/>
+	<pointSize val="5"/>
+	<pointStyle val="0"/>
+	<angleStyle val="0"/>
+</element>
+<command name="Append">
+	<input a0="l6" a1="l6(1)"/>
+	<output a0="l8"/>
+</command>
+<element type="list" label="l8">
+	<show object="true" label="false"/>
+	<objColor r="0" g="100" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<lineStyle thickness="5" type="0" typeHidden="1"/>
+	<pointSize val="5"/>
+	<pointStyle val="0"/>
+	<angleStyle val="0"/>
+</element>
+<command name="Sequence">
+	<input a0="Segment[l7(i), l7(i + 1)]" a1="i" a2="1" a3="Length[l5]"/>
+	<output a0="l9"/>
+</command>
+<element type="list" label="l9">
+	<show object="true" label="false"/>
+	<objColor r="0" g="100" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<lineStyle thickness="5" type="0" typeHidden="1"/>
+	<pointSize val="5"/>
+	<pointStyle val="0"/>
+	<angleStyle val="0"/>
+</element>
+<command name="Sequence">
+	<input a0="Segment[l8(i), l8(i + 1)]" a1="i" a2="1" a3="Length[l6]"/>
+	<output a0="l10"/>
+</command>
+<element type="list" label="l10">
+	<show object="true" label="false"/>
+	<objColor r="0" g="100" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<lineStyle thickness="5" type="0" typeHidden="1"/>
+	<pointSize val="5"/>
+	<pointStyle val="0"/>
+	<angleStyle val="0"/>
+</element>
+<command name="Sort">
+	<input a0="l9"/>
+	<output a0="l11"/>
+</command>
+<element type="list" label="l11">
+	<show object="true" label="false"/>
+	<objColor r="0" g="100" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<lineStyle thickness="5" type="0" typeHidden="1"/>
+	<pointSize val="5"/>
+	<pointStyle val="0"/>
+	<angleStyle val="0"/>
+</element>
+<command name="Sort">
+	<input a0="l10"/>
+	<output a0="l12"/>
+</command>
+<element type="list" label="l12">
+	<show object="true" label="false"/>
+	<objColor r="0" g="100" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<lineStyle thickness="5" type="0" typeHidden="1"/>
+	<pointSize val="5"/>
+	<pointStyle val="0"/>
+	<angleStyle val="0"/>
+</element>
+<expression label="l13" exp="l11 / l12" />
+<element type="list" label="l13">
+	<objColor r="0" g="100" b="0" alpha="0.10000000149011612"/>
+	<lineStyle thickness="5" type="0" typeHidden="1"/>
+	<pointSize val="5"/>
+	<pointStyle val="0"/>
+	<angleStyle val="0"/>
+</element>
+<command name="Unique">
+	<input a0="l13"/>
+	<output a0="l14"/>
+</command>
+<element type="list" label="l14">
+	<objColor r="0" g="100" b="0" alpha="0.10000000149011612"/>
+	<lineStyle thickness="5" type="0" typeHidden="1"/>
+	<pointSize val="5"/>
+	<pointStyle val="0"/>
+	<angleStyle val="0"/>
+</element>
+<expression label="h" exp="Length[l14] ≟ 1" />
+<element type="boolean" label="h">
+	<value val="false"/>
+	<show object="false" label="true"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<checkbox fixed="true"/>
+</element>
+<expression label="text1" exp="&quot;&quot; + (Name[t1]) + &quot;与&quot; + (Name[t2]) + &quot;&quot; + (LaTeX[If[h ∧ g, &quot;相似&quot;, &quot;不相似&quot;]]) + &quot;&quot;" />
+<element type="text" label="text1">
+	<show object="true" label="false" ev="8"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<isLaTeX val="true"/>
+	<font serif="true" sizeM="1" size="0" style="0"/>
+	<startPoint x="1.678416412474042" y="13.823170500083725" z="1"/>
+</element>
+</construction>
+</macro>
+<macro cmdName="圆内部分" toolName="in" toolHelp="yuannei[ &lt;圆&gt; ]" iconFile="" showInToolBar="true" copyCaptions="true" viewId="1">
+<macroInput a0="c"/>
+<macroOutput a0="b"/>
+<construction title="" author="" date="">
+<element type="conic" label="c">
+	<show object="true" label="false"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<animation step="1" speed="1" type="0" playing="false"/>
+	<lineStyle thickness="5" type="0" typeHidden="1" opacity="178"/>
+	<eigenvectors  x0="1" y0="0" z0="1.0" x1="0" y1="1" z1="1.0"/>
+	<matrix A0="1" A1="1" A2="-4" A3="0" A4="0" A5="0"/>
+	<eqnStyle style="specific"/>
+</element>
+<expression label="b" exp="b(x, y) = LeftSide[c] ≤ RightSide[c]" />
+<element type="functionnvar" label="b">
+	<show object="false" label="false"/>
+	<objColor r="219" g="97" b="20" alpha="0.75"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<lineStyle thickness="1" type="0" typeHidden="1"/>
+</element>
+</construction>
+</macro>
+<macro cmdName="圆外部分" toolName="圆外部分" toolHelp="圆外[ &lt;圆&gt; ]" iconFile="" showInToolBar="true" copyCaptions="true" viewId="1">
+<macroInput a0="c"/>
+<macroOutput a0="a"/>
+<construction title="" author="" date="">
+<element type="conic" label="c">
+	<show object="true" label="false"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<animation step="1" speed="1" type="0" playing="false"/>
+	<lineStyle thickness="5" type="0" typeHidden="1" opacity="178"/>
+	<eigenvectors  x0="1" y0="0" z0="1.0" x1="0" y1="1" z1="1.0"/>
+	<matrix A0="1" A1="1" A2="-4" A3="0" A4="0" A5="0"/>
+	<eqnStyle style="specific"/>
+</element>
+<expression label="a" exp="a(x, y) = LeftSide[c] ≥ RightSide[c]" />
+<element type="functionnvar" label="a">
+	<show object="false" label="false"/>
+	<objColor r="219" g="97" b="20" alpha="0.75"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<lineStyle thickness="1" type="0" typeHidden="1"/>
+</element>
+</construction>
+</macro>
+<macro cmdName="小数" toolName="小数部分" toolHelp="小数部分[ &lt;数字&gt; ]" iconFile="" showInToolBar="true" copyCaptions="true" viewId="1">
+<macroInput a0="a"/>
+<macroOutput a0="b"/>
+<construction title="" author="" date="">
+<expression label="a" exp="1.2"/>
+<element type="numeric" label="a">
+	<value val="1.2"/>
+	<show object="true" label="true"/>
+	<objColor r="0" g="0" b="0" alpha="0.10000000149011612"/>
+	<layer val="0"/>
+	<labelMode val="1"/>
+	<animation speed="1" type="0" playing="false"/>
+</element>
+<expression label="b" exp="a - floor(a)" />
+<element type="numeric" label="b">
+	<value val="0.19999999999999996"/>
+	<objColor r="0" g="0" b="0" alpha="0.10000000149011612"/>
+</element>
+</construction>
+</macro>
+<macro cmdName="圆锥侧面展开图1" toolName="圆锥侧面展开图" toolHelp="圆锥侧面展开图(&lt;半径&gt;,&lt;高&gt;,&lt;展开角度&gt;)" iconFile="" showInToolBar="true" copyCaptions="true" viewId="1">
+<macroInput a0="a" a1="b" a2="α"/>
+<macroOutput a0="d" a1="A"/>
+<construction title="" author="" date="">
+<element type="numeric" label="a">
+	<value val="3"/>
+	<show object="true" label="true"/>
+	<objColor r="0" g="0" b="0" alpha="0.10000000149011612"/>
+	<layer val="0"/>
+	<labelMode val="1"/>
+	<animation speed="1" type="0" playing="false"/>
+</element>
+<element type="numeric" label="b">
+	<value val="3.5"/>
+	<show object="true" label="true"/>
+	<objColor r="0" g="0" b="0" alpha="0.10000000149011612"/>
+	<layer val="0"/>
+	<labelMode val="1"/>
+	<animation speed="1" type="0" playing="false"/>
+</element>
+<element type="angle" label="α">
+	<angleStyle val="3"/>
+	<value val="6.283185307179586"/>
+	<show object="true" label="true" ev="4"/>
+	<objColor r="0" g="100" b="0" alpha="0.10000000149011612"/>
+	<layer val="0"/>
+	<labelMode val="1"/>
+	<lineStyle thickness="10" type="0" typeHidden="2" opacity="178"/>
+	<arcSize val="30"/>
+	<animation step="0.017453292519943295" speed="1" type="0" playing="false"/>
+</element>
+<expression label="A" exp="(0, 0, b)" type="point" />
+<element type="point3d" label="A">
+	<show object="true" label="true" ev="4"/>
+	<objColor r="68" g="68" b="68" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<coords x="0" y="0" z="3.5" w="1"/>
+	<pointSize val="4"/>
+</element>
+<expression label="B" exp="(a; α)" type="point" />
+<element type="point" label="B">
+	<show object="true" label="true" ev="4"/>
+	<objColor r="68" g="68" b="68" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<coords x="3" y="-7.347880794884119e-16" z="1"/>
+	<coordStyle style="polar"/>
+	<pointSize val="4"/>
+	<pointStyle val="0"/>
+</element>
+<command name="CurveCartesian">
+	<input a0="(a; θ)" a1="θ" a2="0" a3="(2 * π)"/>
+	<output a0="c"/>
+</command>
+<element type="curvecartesian" label="c">
+	<show object="true" label="false" ev="4"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<lineStyle thickness="5" type="0" typeHidden="1" opacity="178"/>
+</element>
+<command name="Tangent">
+	<input a0="B" a1="c"/>
+	<output a0="f"/>
+</command>
+<element type="line" label="f">
+	<show object="true" label="false" ev="4"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<coords x="-2.9999999999827884" y="-0.000010162108781017743" z="9"/>
+	<lineStyle thickness="5" type="0" typeHidden="1" opacity="178"/>
+	<eqnStyle style="explicit"/>
+</element>
+<command name="Segment">
+	<input a0="A" a1="B"/>
+	<output a0="g"/>
+</command>
+<element type="segment3d" label="g">
+	<show object="true" label="false" ev="4"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<lineStyle thickness="5" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<command name="Vector">
+	<input a0="A" a1="B"/>
+	<output a0="u"/>
+</command>
+<element type="vector3d" label="u">
+	<show object="true" label="false" ev="4"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<coords x="3" y="-7.347880794884119e-16" z="-3.5" w="0"/>
+	<lineStyle thickness="5" type="0" typeHidden="1"/>
+	<startPoint exp="A"/>
+</element>
+<expression label="v" exp="(g * UnitVector[f])" type="vector" />
+<element type="vector" label="v">
+	<show object="true" label="false" ev="4"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<coords x="-0.00001561500228107325" y="4.609772228619996" z="0"/>
+	<lineStyle thickness="5" type="0" typeHidden="1" opacity="178"/>
+	<coordStyle style="cartesian"/>
+</element>
+<command name="Surface">
+	<input a0="((1 - t) * A) + (t * If[θ &lt; α, c(θ), A + (u * cos((a / g * (θ - α)))) + (v * sin((a / g * (θ - α))))])" a1="θ" a2="0" a3="(2 * π)" a4="t" a5="0" a6="1"/>
+	<output a0="d"/>
+</command>
+<element type="surfacecartesian3d" label="d">
+	<show object="true" label="false" ev="4"/>
+	<objColor r="213" g="0" b="249" alpha="0.75"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<lineStyle thickness="1" type="0" typeHidden="1"/>
+</element>
+</construction>
+</macro>
+<macro cmdName="圆柱侧面展开图1" toolName="圆柱侧面展开图" toolHelp="圆柱侧面展开图(&lt;半径&gt;,&lt;高&gt;,&lt;展开角度&gt;)" iconFile="e97514afe05a0cfc9dc6b4b9ce85e343/TIM截图20200330222809.png" showInToolBar="true" copyCaptions="true" viewId="1">
+<macroInput a0="a" a1="b" a2="α"/>
+<macroOutput a0="e"/>
+<construction title="" author="" date="">
+<element type="numeric" label="a">
+	<value val="3"/>
+	<show object="true" label="true"/>
+	<objColor r="0" g="0" b="0" alpha="0.10000000149011612"/>
+	<layer val="0"/>
+	<labelMode val="1"/>
+	<animation speed="1" type="0" playing="false"/>
+</element>
+<element type="numeric" label="b">
+	<value val="3.5"/>
+	<show object="true" label="true"/>
+	<objColor r="0" g="0" b="0" alpha="0.10000000149011612"/>
+	<layer val="0"/>
+	<labelMode val="1"/>
+	<animation speed="1" type="0" playing="false"/>
+</element>
+<element type="angle" label="α">
+	<angleStyle val="3"/>
+	<value val="0"/>
+	<show object="true" label="true" ev="4"/>
+	<objColor r="0" g="100" b="0" alpha="0.10000000149011612"/>
+	<layer val="0"/>
+	<labelMode val="1"/>
+	<lineStyle thickness="10" type="0" typeHidden="2" opacity="178"/>
+	<arcSize val="30"/>
+	<animation step="0.017453292519943295" speed="1" type="0" playing="false"/>
+</element>
+<expression label="B" exp="(a; α)" type="point" />
+<element type="point" label="B">
+	<show object="true" label="true" ev="4"/>
+	<objColor r="68" g="68" b="68" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<coords x="3" y="0" z="1"/>
+	<coordStyle style="polar"/>
+	<pointSize val="4"/>
+	<pointStyle val="0"/>
+</element>
+<command name="CurveCartesian">
+	<input a0="(a; θ)" a1="θ" a2="0" a3="(2 * π)"/>
+	<output a0="c"/>
+</command>
+<element type="curvecartesian" label="c">
+	<show object="true" label="false" ev="4"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<lineStyle thickness="5" type="0" typeHidden="1" opacity="178"/>
+</element>
+<command name="Tangent">
+	<input a0="B" a1="c"/>
+	<output a0="f"/>
+</command>
+<element type="line" label="f">
+	<show object="true" label="false" ev="4"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<coords x="-2.9999999999827884" y="-0.000010162108781017743" z="9"/>
+	<lineStyle thickness="5" type="0" typeHidden="1" opacity="178"/>
+	<eqnStyle style="explicit"/>
+</element>
+<command name="Surface">
+	<input a0="If[θ &lt; α, c(θ), B + ((UnitVector[f] * (θ - α)) * a)] + (0, 0, h)" a1="θ" a2="0" a3="(2 * π)" a4="h" a5="0" a6="b"/>
+	<output a0="e"/>
+</command>
+<element type="surfacecartesian3d" label="e">
+	<show object="true" label="false" ev="4"/>
+	<objColor r="101" g="87" b="210" alpha="0.75"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<lineStyle thickness="1" type="0" typeHidden="1"/>
+</element>
+</construction>
+</macro>
+<macro cmdName="yznet11" toolName="yuanzhui" toolHelp="圆锥展开图(圆,顶点,角)" iconFile="f4ae19275b5722dd3c1d1c19ddd6bc6f/TIM截图202003302225371.png" showInToolBar="true" copyCaptions="true" viewId="1">
+<macroInput a0="c" a1="B" a2="α"/>
+<macroOutput a0="j"/>
+<construction title="" author="" date="">
+<element type="point3d" label="B">
+	<show object="true" label="true" ev="4"/>
+	<objColor r="125" g="125" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<animation step="1" speed="1" type="0" playing="false"/>
+	<coords x="0" y="0" z="4" w="1"/>
+	<pointSize val="5"/>
+</element>
+<element type="numeric" label="a">
+	<value val="0"/>
+	<show object="true" label="false"/>
+	<objColor r="219" g="97" b="20" alpha="0.4000000059604645"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<animation speed="1" type="0" playing="false"/>
+</element>
+<element type="numeric" label="b">
+	<value val="0"/>
+	<show object="true" label="false"/>
+	<objColor r="219" g="97" b="20" alpha="0.4000000059604645"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<animation speed="1" type="0" playing="false"/>
+</element>
+<element type="conic3d" label="c">
+	<coords ox="0" oy="0" oz="0" ow="1" vx="0" vy="0" vz="0" wx="0" wy="0" wz="0"/>
+	<show object="true" label="false" ev="4"/>
+	<objColor r="219" g="97" b="20" alpha="0.4000000059604645"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<animation step="1" speed="1" type="0" playing="false"/>
+	<lineStyle thickness="5" type="0" typeHidden="1"/>
+	<eigenvectors  x0="1" y0="0" z0="1.0" x1="0" y1="1" z1="1.0"/>
+	<matrix A0="1" A1="1" A2="-4" A3="0" A4="0" A5="0"/>
+	<eqnStyle style="parametric"/>
+</element>
+<command name="Radius">
+	<input a0="c"/>
+	<output a0="e"/>
+</command>
+<element type="numeric" label="e">
+	<value val="2"/>
+	<symbolic val="true" />
+	<objColor r="0" g="0" b="0" alpha="0.10000000149011612"/>
+</element>
+<element type="angle" label="α">
+	<angleStyle val="3"/>
+	<value val="0"/>
+	<show object="true" label="true" ev="4"/>
+	<objColor r="0" g="100" b="0" alpha="0.10000000149011612"/>
+	<layer val="0"/>
+	<labelMode val="1"/>
+	<lineStyle thickness="10" type="0" typeHidden="2" opacity="178"/>
+	<arcSize val="30"/>
+	<animation step="0.017453292519943295" speed="1" type="0" playing="false"/>
+</element>
+<expression label="C" exp="(e; α)" type="point" />
+<element type="point" label="C">
+	<show object="true" label="true" ev="4"/>
+	<objColor r="68" g="68" b="68" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<coords x="2" y="0" z="1"/>
+	<coordStyle style="polar"/>
+	<pointSize val="4"/>
+	<pointStyle val="0"/>
+</element>
+<command name="Tangent">
+	<input a0="C" a1="c"/>
+	<output a0="g" a1=""/>
+</command>
+<element type="line3d" label="g">
+	<show object="true" label="false" ev="4"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<lineStyle thickness="5" type="0" typeHidden="1"/>
+	<coords ox="2" oy="0" oz="0" ow="1" vx="0" vy="-2" vz="0" vw="0"/>
+	<eqnStyle style="parametric" parameter="λ"/>
+</element>
+<element type="line3d" label="">
+	<show object="true" label="false"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<animation step="1" speed="1" type="0" playing="false"/>
+	<lineStyle thickness="5" type="0" typeHidden="1"/>
+	<coords ox="2" oy="0" oz="0" ow="1" vx="0" vy="-2" vz="0" vw="0"/>
+	<eqnStyle style="parametric" parameter="λ"/>
+</element>
+<command name="Vector">
+	<input a0="B" a1="C"/>
+	<output a0="u"/>
+</command>
+<element type="vector3d" label="u">
+	<show object="true" label="false" ev="4"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<coords x="2" y="0" z="-4" w="0"/>
+	<lineStyle thickness="5" type="0" typeHidden="1"/>
+	<startPoint exp="B"/>
+</element>
+<command name="Segment">
+	<input a0="B" a1="C"/>
+	<output a0="h"/>
+</command>
+<element type="segment3d" label="h">
+	<show object="true" label="false" ev="4"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<lineStyle thickness="5" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<expression label="i" exp="e / h" />
+<element type="numeric" label="i">
+	<value val="0.4472135954999579"/>
+	<objColor r="0" g="0" b="0" alpha="0.10000000149011612"/>
+</element>
+<expression label="v" exp="((-h) * UnitVector[g])" type="vector" />
+<element type="vector3d" label="v">
+	<show object="true" label="false" ev="4"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<coords x="0" y="4.47213595499958" z="0" w="0"/>
+	<lineStyle thickness="5" type="0" typeHidden="1"/>
+</element>
+<command name="Surface">
+	<input a0="((1 - t) * B) + (t * If[θ &lt; α, (e; θ), B + (u * cos((i * (θ - α)))) + (v * sin((i * (θ - α))))])" a1="θ" a2="0" a3="(2 * π)" a4="t" a5="0" a6="1"/>
+	<output a0="j"/>
+</command>
+<element type="surfacecartesian3d" label="j">
+	<show object="true" label="false" ev="4"/>
+	<objColor r="219" g="97" b="20" alpha="0.75"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<lineStyle thickness="1" type="0" typeHidden="1"/>
+</element>
+</construction>
+</macro>
+<macro cmdName="圆台工具" toolName="圆台工具" toolHelp="上底圆心下底圆心上底半径下底半径" iconFile="fa788e60b549d9d16d79555cd981e62b/圆台.png" showInToolBar="true" copyCaptions="true" viewId="1">
+<macroInput a0="A" a1="B" a2="a" a3="b"/>
+<macroOutput a0="e" a1="j" a2="k" a3="d" a4="c"/>
+<construction title="" author="" date="">
+<expression label="A" exp="(1, 2, 3)" type="point"/>
+<element type="point3d" label="A">
+	<show object="true" label="true" ev="4"/>
+	<objColor r="77" g="77" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<animation step="1" speed="1" type="0" playing="false"/>
+	<coords x="1" y="2" z="3" w="1"/>
+	<pointSize val="5"/>
+</element>
+<expression label="B" exp="(0, 0, 2)" type="point"/>
+<element type="point3d" label="B">
+	<show object="true" label="true" ev="4"/>
+	<objColor r="77" g="77" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<animation step="1" speed="1" type="0" playing="false"/>
+	<coords x="0" y="0" z="2" w="1"/>
+	<pointSize val="5"/>
+</element>
+<command name="Segment">
+	<input a0="B" a1="A"/>
+	<output a0="f"/>
+</command>
+<element type="segment3d" label="f">
+	<show object="true" label="false" ev="4"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<lineStyle thickness="5" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<expression label="a" exp="1"/>
+<element type="numeric" label="a">
+	<value val="1"/>
+	<show object="true" label="true"/>
+	<objColor r="0" g="0" b="0" alpha="0.10000000149011612"/>
+	<layer val="0"/>
+	<labelMode val="1"/>
+	<animation speed="1" type="0" playing="false"/>
+</element>
+<expression label="b" exp="2"/>
+<element type="numeric" label="b">
+	<value val="2"/>
+	<show object="true" label="true"/>
+	<objColor r="0" g="0" b="0" alpha="0.10000000149011612"/>
+	<layer val="0"/>
+	<labelMode val="1"/>
+	<animation speed="1" type="0" playing="false"/>
+</element>
+<command name="Vector">
+	<input a0="B" a1="A"/>
+	<output a0="u"/>
+</command>
+<element type="vector3d" label="u">
+	<show object="true" label="false" ev="4"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<coords x="1" y="2" z="1" w="0"/>
+	<lineStyle thickness="5" type="0" typeHidden="1"/>
+	<startPoint exp="B"/>
+</element>
+<command name="Circle">
+	<input a0="B" a1="b" a2="u"/>
+	<output a0="c"/>
+</command>
+<element type="conic3d" label="c">
+	<show object="true" label="false" ev="4"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<lineStyle thickness="5" type="0" typeHidden="1"/>
+	<eigenvectors  x0="1" y0="0" z0="1.0" x1="0" y1="1" z1="1.0"/>
+	<matrix A0="1" A1="1" A2="-4" A3="0" A4="0" A5="0"/>
+	<eqnStyle style="parametric"/>
+</element>
+<command name="Circle">
+	<input a0="A" a1="a" a2="u"/>
+	<output a0="d"/>
+</command>
+<element type="conic3d" label="d">
+	<show object="true" label="false" ev="4"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<lineStyle thickness="5" type="0" typeHidden="1"/>
+	<eigenvectors  x0="1" y0="0" z0="1.0" x1="0" y1="1" z1="1.0"/>
+	<matrix A0="1" A1="1" A2="-1" A3="0" A4="0" A5="0"/>
+	<eqnStyle style="parametric"/>
+</element>
+<command name="Point">
+	<input a0="c"/>
+	<output a0="C"/>
+</command>
+<element type="point3d" label="C">
+	<show object="true" label="true" ev="4"/>
+	<objColor r="125" g="125" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<animation step="1" speed="1" type="0" playing="false"/>
+	<coords x="1.7125400075517616" y="-0.37496824313796107" z="1.0373964787241605" w="1"/>
+	<pointSize val="5"/>
+</element>
+<expression label="D" exp="A + (a / b * (C - B))" type="point" />
+<element type="point3d" label="D">
+	<show object="true" label="true" ev="4"/>
+	<objColor r="68" g="68" b="68" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<coords x="1.8562700037758808" y="1.8125158784310194" z="2.51869823936208" w="1"/>
+	<pointSize val="4"/>
+</element>
+<command name="Segment">
+	<input a0="C" a1="D"/>
+	<output a0="g"/>
+</command>
+<element type="segment3d" label="g">
+	<show object="true" label="false" ev="4"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<lineStyle thickness="5" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<command name="Surface">
+	<input a0="g" a1="(2 * π)" a2="f"/>
+	<output a0="e"/>
+</command>
+<element type="surfacecartesian3d" label="e">
+	<show object="true" label="false" ev="4"/>
+	<objColor r="216" g="27" b="96" alpha="0.75"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<lineStyle thickness="1" type="0" typeHidden="1"/>
+</element>
+<command name="Segment">
+	<input a0="A" a1="D"/>
+	<output a0="h"/>
+</command>
+<element type="segment3d" label="h">
+	<show object="true" label="false" ev="4"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<lineStyle thickness="5" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<command name="Segment">
+	<input a0="B" a1="C"/>
+	<output a0="i"/>
+</command>
+<element type="segment3d" label="i">
+	<show object="true" label="false" ev="4"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<lineStyle thickness="5" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<command name="Surface">
+	<input a0="h" a1="(2 * π)" a2="f"/>
+	<output a0="j"/>
+</command>
+<element type="surfacecartesian3d" label="j">
+	<show object="true" label="false" ev="4"/>
+	<objColor r="101" g="87" b="210" alpha="0.75"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<lineStyle thickness="1" type="0" typeHidden="1"/>
+</element>
+<command name="Surface">
+	<input a0="i" a1="(2 * π)" a2="f"/>
+	<output a0="k"/>
+</command>
+<element type="surfacecartesian3d" label="k">
+	<show object="true" label="false" ev="4"/>
+	<objColor r="219" g="97" b="20" alpha="0.75"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<lineStyle thickness="1" type="0" typeHidden="1"/>
+</element>
+</construction>
+</macro>
+<macro cmdName="工具14" toolName="工具14" toolHelp="工具14[ &lt;列表&gt; ]" iconFile="" showInToolBar="true" copyCaptions="true" viewId="1">
+<macroInput a0="l1"/>
+<macroOutput a0="poly1"/>
+<construction title="" author="" date="">
+<expression label="l1" exp="{}"/>
+<element type="list" label="l1">
+	<show object="true" label="false"/>
+	<objColor r="0" g="100" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<animation step="1" speed="1" type="0" playing="false"/>
+	<lineStyle thickness="5" type="0" typeHidden="1"/>
+	<pointSize val="5"/>
+	<pointStyle val="0"/>
+	<angleStyle val="0"/>
+</element>
+<command name="Sequence">
+	<input a0="Sequence[Point[Take[l1, i, i], j], j, 0, 1, 0.5]" a1="i" a2="1" a3="5"/>
+	<output a0="l2"/>
+</command>
+<element type="list" label="l2">
+	<show object="false" label="false"/>
+	<objColor r="0" g="100" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<lineStyle thickness="5" type="0" typeHidden="1"/>
+	<pointSize val="5"/>
+	<pointStyle val="0"/>
+	<angleStyle val="0"/>
+</element>
+<command name="Zip">
+	<input a0="AreCollinear[Element[p, 1], Element[p, 2], Element[p, 3]]" a1="p" a2="l2"/>
+	<output a0="l3"/>
+</command>
+<element type="list" label="l3">
+	<objColor r="0" g="100" b="0" alpha="0"/>
+	<lineStyle thickness="5" type="0" typeHidden="1"/>
+	<pointSize val="5"/>
+	<pointStyle val="0"/>
+	<angleStyle val="0"/>
+</element>
+<command name="Sequence">
+	<input a0="Sequence[Point[Take[l1, i, i], j], j, 0, 1, If[l3(i) ≟ true, 1, 0.01]]" a1="i" a2="1" a3="Length[l1]"/>
+	<output a0="l4"/>
+</command>
+<element type="list" label="l4">
+	<show object="false" label="true"/>
+	<objColor r="0" g="100" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<lineStyle thickness="5" type="0" typeHidden="1"/>
+<listType val="list"/>
+	<pointSize val="5"/>
+	<pointStyle val="0"/>
+	<angleStyle val="0"/>
+</element>
+<command name="Sequence">
+	<input a0="If[l4(i + 1, 1) ∈ l4(i), l4(i + 1), Reverse[l4(i + 1)]]" a1="i" a2="1" a3="Length[l4] - 1"/>
+	<output a0="l5"/>
+</command>
+<element type="list" label="l5">
+	<show object="false" label="false"/>
+	<objColor r="0" g="100" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<lineStyle thickness="5" type="0" typeHidden="1"/>
+<listType val="list"/>
+	<pointSize val="5"/>
+	<pointStyle val="0"/>
+	<angleStyle val="0"/>
+</element>
+<expression label="a" exp="l4(1, -1) ∈ l4(2)" />
+<element type="boolean" label="a">
+	<value val="false"/>
+	<show object="false" label="true"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<checkbox fixed="true"/>
+</element>
+<command name="If">
+	<input a0="a" a1="l4(1)" a2="Reverse[l4(1)]"/>
+	<output a0="l6"/>
+</command>
+<element type="list" label="l6">
+	<show object="false" label="false"/>
+	<objColor r="0" g="100" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<lineStyle thickness="5" type="0" typeHidden="1"/>
+	<pointSize val="5"/>
+	<pointStyle val="0"/>
+	<angleStyle val="0"/>
+</element>
+<command name="Join">
+	<input a0="{l6, l5}"/>
+	<output a0="l7"/>
+</command>
+<element type="list" label="l7">
+	<show object="true" label="false"/>
+	<objColor r="0" g="100" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<lineStyle thickness="5" type="0" typeHidden="1"/>
+<listType val="list"/>
+	<pointSize val="5"/>
+	<pointStyle val="0"/>
+	<angleStyle val="0"/>
+</element>
+<command name="Polygon">
+	<input a0="Flatten[l7]"/>
+	<output a0="poly1"/>
+</command>
+<element type="polygon" label="poly1">
+	<lineStyle thickness="5" type="0" typeHidden="1" opacity="178"/>
+	<show object="true" label="false"/>
+	<objColor r="153" g="51" b="0" alpha="0.10000000149011612"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+</element>
+</construction>
+</macro>
+<macro cmdName="工具15" toolName="工具15" toolHelp="" iconFile="" showInToolBar="true" copyCaptions="true" viewId="1">
+<macroInput a0="l1"/>
+<macroOutput a0="poly1"/>
+<construction title="" author="" date="">
+<expression label="l1" exp="{}"/>
+<element type="list" label="l1">
+	<show object="true" label="false"/>
+	<objColor r="0" g="100" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<animation step="1" speed="1" type="0" playing="false"/>
+	<lineStyle thickness="5" type="0" typeHidden="1"/>
+	<pointSize val="5"/>
+	<pointStyle val="0"/>
+	<angleStyle val="0"/>
+</element>
+<command name="Sequence">
+	<input a0="Sequence[Point[Take[l1, i, i], j], j, 0, 1, 0.5]" a1="i" a2="1" a3="5"/>
+	<output a0="l2"/>
+</command>
+<element type="list" label="l2">
+	<show object="false" label="false"/>
+	<objColor r="0" g="100" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<lineStyle thickness="5" type="0" typeHidden="1"/>
+	<pointSize val="5"/>
+	<pointStyle val="0"/>
+	<angleStyle val="0"/>
+</element>
+<command name="Zip">
+	<input a0="AreCollinear[Element[p, 1], Element[p, 2], Element[p, 3]]" a1="p" a2="l2"/>
+	<output a0="l3"/>
+</command>
+<element type="list" label="l3">
+	<objColor r="0" g="100" b="0" alpha="0"/>
+	<lineStyle thickness="5" type="0" typeHidden="1"/>
+	<pointSize val="5"/>
+	<pointStyle val="0"/>
+	<angleStyle val="0"/>
+</element>
+<command name="Sequence">
+	<input a0="Sequence[Point[Take[l1, i, i], j], j, 0, 1, If[l3(i) ≟ true, 1, 0.01]]" a1="i" a2="1" a3="Length[l1]"/>
+	<output a0="l4"/>
+</command>
+<element type="list" label="l4">
+	<show object="false" label="true"/>
+	<objColor r="0" g="100" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<lineStyle thickness="5" type="0" typeHidden="1"/>
+<listType val="list"/>
+	<pointSize val="5"/>
+	<pointStyle val="0"/>
+	<angleStyle val="0"/>
+</element>
+<command name="Sequence">
+	<input a0="If[l4(i + 1, 1) ∈ l4(i), l4(i + 1), Reverse[l4(i + 1)]]" a1="i" a2="1" a3="Length[l4] - 1"/>
+	<output a0="l5"/>
+</command>
+<element type="list" label="l5">
+	<show object="false" label="false"/>
+	<objColor r="0" g="100" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<lineStyle thickness="5" type="0" typeHidden="1"/>
+<listType val="list"/>
+	<pointSize val="5"/>
+	<pointStyle val="0"/>
+	<angleStyle val="0"/>
+</element>
+<expression label="a" exp="l4(1, -1) ∈ l4(2)" />
+<element type="boolean" label="a">
+	<value val="true"/>
+	<show object="false" label="true"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<checkbox fixed="true"/>
+</element>
+<command name="If">
+	<input a0="a" a1="l4(1)" a2="Reverse[l4(1)]"/>
+	<output a0="l6"/>
+</command>
+<element type="list" label="l6">
+	<show object="false" label="false"/>
+	<objColor r="0" g="100" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<lineStyle thickness="5" type="0" typeHidden="1"/>
+	<pointSize val="5"/>
+	<pointStyle val="0"/>
+	<angleStyle val="0"/>
+</element>
+<command name="Join">
+	<input a0="{l6, l5}"/>
+	<output a0="l7"/>
+</command>
+<element type="list" label="l7">
+	<show object="false" label="false"/>
+	<objColor r="0" g="100" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<lineStyle thickness="5" type="0" typeHidden="1"/>
+<listType val="list"/>
+	<pointSize val="5"/>
+	<pointStyle val="0"/>
+	<angleStyle val="0"/>
+</element>
+<command name="Polygon">
+	<input a0="Flatten[l7]"/>
+	<output a0="poly1"/>
+</command>
+<element type="polygon" label="poly1">
+	<lineStyle thickness="5" type="0" typeHidden="1" opacity="178"/>
+	<show object="true" label="false"/>
+	<objColor r="153" g="51" b="0" alpha="0.10000000149011612"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+</element>
+</construction>
+</macro>
+</geogebra>

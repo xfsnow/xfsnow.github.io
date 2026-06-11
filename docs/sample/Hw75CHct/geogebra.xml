@@ -1,0 +1,727 @@
+<?xml version="1.0" encoding="utf-8"?>
+<geogebra format="5.0" version="5.0.570.0" app="classic" platform="w" id="c14fc88e-bc84-49df-adbb-cbc0ee9b2e97"  xsi:noNamespaceSchemaLocation="http://www.geogebra.org/ggb.xsd" xmlns="" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" >
+<gui>
+	<window width="1000" height="690" />
+	<perspectives>
+<perspective id="tmp">
+	<panes>
+		<pane location="" divider="0.10289855072463767" orientation="0" />
+	</panes>
+	<views>
+		<view id="4" toolbar="0 59 || 2020 , 2021 , 2022 , 66 || 2001 , 2003 , 2002 , 2004 , 2005 || 2040 , 2041 , 2042 , 2044 , 2043" visible="false" inframe="false" stylebar="true" location="1,1" size="300" window="100,100,600,400" />
+		<view id="8" toolbar="1001 | 1002 | 1003  || 1005 | 1004 || 1006 | 1007 | 1010 | 1011 || 1008 1009 || 6" visible="false" inframe="false" stylebar="true" location="1,3" size="300" window="100,100,600,400" />
+		<view id="1" visible="true" inframe="false" stylebar="false" location="2" size="609" window="100,100,600,400" />
+		<view id="2" visible="false" inframe="false" stylebar="false" location="1" size="191" window="100,100,250,400" />
+		<view id="16" visible="true" inframe="false" stylebar="false" location="0" size="71" window="50,50,500,500" />
+		<view id="32" visible="false" inframe="false" stylebar="true" location="1" size="150" window="50,50,500,500" />
+		<view id="64" toolbar="0" visible="false" inframe="false" stylebar="true" location="1" size="150" window="50,50,500,500" />
+		<view id="128" visible="false" inframe="false" stylebar="false" location="1" size="480" window="50,50,500,500" />
+		<view id="4097" visible="false" inframe="false" stylebar="true" location="1" size="604" window="166,78,947,666" />
+		<view id="70" toolbar="0 || 2020 || 2021 || 2022" visible="false" inframe="false" stylebar="true" location="1" size="150" window="50,50,500,500" />
+		<view id="43" visible="false" inframe="false" stylebar="false" location="1" size="450" window="50,50,500,500" />
+		<view id="512" toolbar="0 | 1 501 5 19 , 67 | 2 15 45 18 , 7 37 | 514 3 9 , 13 44 , 47 | 16 | 551 550 11 ,  20 22 21 23 , 55 56 57 , 12 | 69 | 510 511 , 512 513 | 533 531 , 534 532 , 522 523 , 537 536 , 535 | 521 520 | 36 , 38 49 560 | 571 30 29 570 31 33 | 17 | 540 40 41 42 , 27 28 35 , 6 , 502" visible="false" inframe="false" stylebar="true" location="1" size="480" window="50,50,500,500" />
+	</views>
+	<toolbar show="false" items="0 39 | 1 501 67 , 5 19 , 72 75 76 | 2 15 45 , 18 65 , 7 37 | 4 3 8 9 , 13 44 , 58 , 47 | 16 51 64 , 70 | 10 34 53 11 , 24 20 22 , 21 23 | 55 56 57 , 12 | 36 46 , 38 49 50 , 71 | 30 29 54 32 31 33 | 17 26 62 73 , 14 68 | 25 52 60 61 | 40 41 42 , 27 28 35 , 6" position="7" help="false" />
+	<input show="false" cmd="true" top="false" />
+	<dockBar show="false" east="false" />
+</perspective>
+	</perspectives>
+	<labelingStyle  val="3"/>
+	<font  size="20"/>
+</gui>
+<euclidianView>
+	<viewNumber viewNo="1"/>
+	<size  width="998" height="609"/>
+	<coordSystem xZero="499" yZero="304.5" scale="28.96281604498158" yscale="28.96281604498155"/>
+	<evSettings axes="false" grid="false" gridIsBold="false" pointCapturing="3" rightAngleStyle="1" checkboxSize="26" gridType="0"/>
+	<bgColor r="255" g="255" b="255"/>
+	<axesColor r="0" g="153" b="255"/>
+	<gridColor r="128" g="128" b="128"/>
+	<lineStyle axes="3" grid="0"/>
+	<axis id="0" show="false" label="x" unitLabel="" tickStyle="1" showNumbers="true" tickDistance="1" tickExpression="1"/>
+	<axis id="1" show="false" label="y" unitLabel="" tickStyle="1" showNumbers="true" tickDistance="1" tickExpression="1"/>
+	<grid distX="1" distY="1" distTheta="0.5235987755982988"/>
+</euclidianView>
+<euclidianView>
+	<viewNumber viewNo="2"/>
+	<size  width="998" height="71"/>
+	<coordSystem xZero="199.12534410798563" yZero="70.03527747992996" scale="31.327632970502382" yscale="31.32763297050227"/>
+	<evSettings axes="false" grid="false" gridIsBold="false" pointCapturing="3" rightAngleStyle="1" checkboxSize="26" gridType="0"/>
+	<bgColor r="255" g="250" b="205"/>
+	<axesColor r="0" g="0" b="0"/>
+	<gridColor r="192" g="192" b="192"/>
+	<lineStyle axes="1" grid="10"/>
+	<axis id="0" show="false" label="" unitLabel="" tickStyle="1" showNumbers="true"/>
+	<axis id="1" show="false" label="" unitLabel="" tickStyle="1" showNumbers="true"/>
+	<grid distX="1" distY="1" distTheta="0.5235987755982988"/>
+</euclidianView>
+<algebraView>
+	<mode val="1"/>
+</algebraView>
+<kernel>
+	<continuous val="false"/>
+	<usePathAndRegionParameters val="true"/>
+	<decimals val="2"/>
+	<angleUnit val="degree"/>
+	<algebraStyle val="0" spreadsheet="0"/>
+	<coordStyle val="0"/>
+</kernel>
+<tableview min="-2" max="2" step="1"/>
+<scripting blocked="false" disabled="false"/>
+<construction title="" author="" date="">
+<expression label="R" exp="floor(Min[{abs(x(Corner[1])), abs(y(Corner[1, 1])), abs(x(Corner[1, 3])), abs(y(Corner[1, 3]))}]) - 1" />
+<element type="numeric" label="R">
+	<value val="9"/>
+	<objColor r="0" g="0" b="0" alpha="0.10000000149011612"/>
+	<labelOffset x="-40" y="3"/>
+	<selectionAllowed val="false"/>
+	<caption val="半徑 = %v"/>
+</element>
+<expression label="listAngle" exp="{°, 5°, 10°, 15°, 30°}"/>
+<element type="list" label="listAngle">
+	<show object="true" label="true" ev="11"/>
+	<condition showObject="showPolar"/>
+	<objColor r="0" g="0" b="255" alpha="0.10000000149011612"/>
+	<bgColor r="255" g="255" b="255" alpha="255"/>
+	<layer val="0"/>
+	<labelOffset x="202" y="5"/>
+	<labelMode val="3"/>
+	<animation step="1" speed="1" type="0" playing="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<selectedIndex val="4"/>
+	<comboBox val="true"/>
+	<pointSize val="3"/>
+	<angleStyle val="0"/>
+	<caption val="interval ="/>
+</element>
+<command name="Sequence">
+	<input a0="Sequence[((r * cos(theta)), (r * sin(theta))), theta, 0°, 359°, SelectedElement[listAngle]]" a1="r" a2="0" a3="R"/>
+	<output a0="listPoint"/>
+</command>
+<element type="list" label="listPoint">
+	<show object="false" label="true" ev="4"/>
+	<objColor r="160" g="160" b="160" alpha="0"/>
+	<bgColor r="255" g="255" b="255" alpha="255"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<pointSize val="1"/>
+	<angleStyle val="0"/>
+</element>
+<command name="Point">
+	<input a0="listPoint"/>
+	<output a0="P_{pol}"/>
+</command>
+<element type="point" label="P_{pol}">
+	<show object="true" label="true" ev="4"/>
+	<condition showObject="fixPolar"/>
+	<objColor r="255" g="0" b="0" alpha="0"/>
+	<layer val="9"/>
+	<labelOffset x="5" y="15"/>
+	<labelMode val="3"/>
+	<animation step="0.1" speed="1" type="1" playing="false"/>
+	<ggbscript val="SetValue[showRectCo,If[showRect,!showRectCo,showRectCo]]&#xd;&#xa;SetValue[showPolarCo,If[showPolar,!showPolarCo,showPolarCo]]"/>
+	<coords x="1.0000000000000002" y="-1.7320508075688772" z="1"/>
+	<coordStyle style="polar"/>
+	<pointSize val="4"/>
+	<pointStyle val="0"/>
+	<caption val="P"/>
+</element>
+<element type="boolean" label="showRect">
+	<value val="false"/>
+	<show object="true" label="true" ev="3"/>
+	<objColor r="127" g="0" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelOffset x="6" y="34"/>
+	<labelMode val="3"/>
+	<checkbox fixed="true"/>
+	<ggbscript onUpdate="ShowGrid[1,showRect]&#xd;&#xa;ShowAxes[1,showRect]&#xd;&#xa;SetValue[showRectCo,false]"/>
+	<caption val="　"/>
+</element>
+<element type="boolean" label="showPolar">
+	<value val="true"/>
+	<show object="true" label="true" ev="3"/>
+	<objColor r="0" g="0" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelOffset x="6" y="2"/>
+	<labelMode val="3"/>
+	<checkbox fixed="true"/>
+	<ggbscript onUpdate="SetValue[showPolarCo,false]&#xa;SetVisibleInView(g,1,false)&#xa;SetVisibleInView(α,1,false)"/>
+	<caption val="　"/>
+</element>
+<command name="Sequence">
+	<input a0="Circle[(0, 0), r]" a1="r" a2="1" a3="R"/>
+	<output a0="listCircle"/>
+</command>
+<element type="list" label="listCircle">
+	<show object="true" label="true" ev="4"/>
+	<condition showObject="showPolar"/>
+	<objColor r="0" g="102" b="153" alpha="0"/>
+	<bgColor r="255" g="255" b="255" alpha="255"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<lineStyle thickness="3" type="0" typeHidden="1"/>
+	<pointSize val="3"/>
+	<angleStyle val="0"/>
+</element>
+<command name="Vector">
+	<input a0="(R + 1, 0)"/>
+	<output a0="u"/>
+</command>
+<element type="vector" label="u">
+	<show object="true" label="false"/>
+	<condition showObject="showPolar ∧ (¬showRect)"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<coords x="10" y="0" z="0"/>
+	<lineStyle thickness="6" type="0" typeHidden="1"/>
+	<coordStyle style="cartesian"/>
+</element>
+<command name="Text">
+	<input a0="&quot;180°&quot;" a1="((-R) - 1.8, -0.2)"/>
+	<output a0="text3"/>
+</command>
+<element type="text" label="text3">
+	<show object="true" label="false"/>
+	<condition showObject="showPolar ∧ (¬showRect)"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<startPoint  x="-10.8" y="-0.2" z="1"/>
+</element>
+<command name="Text">
+	<input a0="&quot;0°&quot;" a1="(R + 1.2, -0.2)"/>
+	<output a0="text1"/>
+</command>
+<element type="text" label="text1">
+	<show object="false" label="false"/>
+	<condition showObject="showPolar ∧ (¬showRect)"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<startPoint  x="10.2" y="-0.2" z="1"/>
+</element>
+<command name="Sequence">
+	<input a0="Text[r, (r - 0.2, -0.7)]" a1="r" a2="1" a3="R"/>
+	<output a0="listTextAxis"/>
+</command>
+<element type="list" label="listTextAxis">
+	<show object="false" label="false" ev="4"/>
+	<condition showObject="showPolar ∧ (¬showRect)"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<bgColor r="255" g="255" b="255" alpha="255"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<pointSize val="3"/>
+	<angleStyle val="0"/>
+</element>
+<element type="boolean" label="showPolarCo">
+	<value val="false"/>
+	<show object="true" label="true" ev="3"/>
+	<condition showObject="showPolar"/>
+	<objColor r="0" g="0" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelOffset x="382" y="2"/>
+	<labelMode val="3"/>
+	<checkbox fixed="true"/>
+	<caption val="　"/>
+</element>
+<element type="boolean" label="showRectCo">
+	<value val="false"/>
+	<show object="false" label="true" ev="3"/>
+	<condition showObject="showRect"/>
+	<objColor r="127" g="0" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelOffset x="382" y="34"/>
+	<labelMode val="3"/>
+	<checkbox fixed="true"/>
+	<caption val="　"/>
+</element>
+<command name="SelectedElement">
+	<input a0="listAngle"/>
+	<output a0="angle"/>
+</command>
+<element type="angle" label="angle">
+	<angleStyle val="0"/>
+	<value val="0.5235987755982988"/>
+	<show object="false" label="true"/>
+	<objColor r="0" g="100" b="0" alpha="0.10000000149011612"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<lineStyle thickness="2" type="0" typeHidden="2"/>
+	<arcSize val="30"/>
+	<selectionAllowed val="false"/>
+</element>
+<command name="Sequence">
+	<input a0="Segment[(0, 0), ((R * cos(theta)), (R * sin(theta)))]" a1="theta" a2="0°" a3="360°" a4="angle"/>
+	<output a0="listRadiusThin"/>
+</command>
+<element type="list" label="listRadiusThin">
+	<show object="true" label="true" ev="4"/>
+	<condition showObject="showPolar ∧ angleIndex ≤ 2"/>
+	<objColor r="0" g="102" b="153" alpha="0"/>
+	<bgColor r="255" g="255" b="255" alpha="255"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<lineStyle thickness="1" type="0" typeHidden="1"/>
+	<pointSize val="3"/>
+	<angleStyle val="0"/>
+</element>
+<command name="SelectedIndex">
+	<input a0="listAngle"/>
+	<output a0="angleIndex"/>
+</command>
+<element type="numeric" label="angleIndex">
+	<value val="5"/>
+	<objColor r="0" g="0" b="0" alpha="0.10000000149011612"/>
+	<selectionAllowed val="false"/>
+</element>
+<command name="Sequence">
+	<input a0="Text[((theta / π * 180))°, (((R + 0.5) * cos(theta)), ((R + 0.5) * sin(theta)))]" a1="theta" a2="If[angleIndex ≥ 3, angle, 10°]" a3="89°" a4="If[angleIndex ≥ 3, angle, 10°]"/>
+	<output a0="listTextQ1"/>
+</command>
+<element type="list" label="listTextQ1">
+	<show object="true" label="false" ev="4"/>
+	<condition showObject="showPolar"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<bgColor r="255" g="255" b="255" alpha="255"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<pointSize val="3"/>
+	<angleStyle val="0"/>
+</element>
+<command name="Sequence">
+	<input a0="Text[((theta / π * 180))°, (((R + 0.4) * cos(theta)) - 1, ((R + 0.4) * sin(theta)))]" a1="theta" a2="90° + If[angleIndex ≥ 3, angle, 10°]" a3="179°" a4="If[angleIndex ≥ 3, angle, 10°]"/>
+	<output a0="listTextQ2"/>
+</command>
+<element type="list" label="listTextQ2">
+	<show object="true" label="false" ev="4"/>
+	<condition showObject="showPolar"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<bgColor r="255" g="255" b="255" alpha="255"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<pointSize val="3"/>
+	<angleStyle val="0"/>
+</element>
+<command name="Sequence">
+	<input a0="Text[((theta / π * 180))°, (((R + 0.4) * cos(theta)) - 1, ((R + 0.4) * sin(theta)) - 0.6)]" a1="theta" a2="180° + If[angleIndex ≥ 3, angle, 10°]" a3="269°" a4="If[angleIndex ≥ 3, angle, 10°]"/>
+	<output a0="listTextQ3"/>
+</command>
+<element type="list" label="listTextQ3">
+	<show object="true" label="false" ev="4"/>
+	<condition showObject="showPolar"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<bgColor r="255" g="255" b="255" alpha="255"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<pointSize val="3"/>
+	<angleStyle val="0"/>
+</element>
+<command name="Sequence">
+	<input a0="Text[((theta / π * 180))°, (((R + 0.4) * cos(theta)), ((R + 0.4) * sin(theta)) - 0.6)]" a1="theta" a2="270° + If[angleIndex ≥ 3, angle, 10°]" a3="359°" a4="If[angleIndex ≥ 3, angle, 10°]"/>
+	<output a0="listTextQ4"/>
+</command>
+<element type="list" label="listTextQ4">
+	<show object="true" label="false" ev="4"/>
+	<condition showObject="showPolar"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<bgColor r="255" g="255" b="255" alpha="255"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<pointSize val="3"/>
+	<angleStyle val="0"/>
+</element>
+<command name="Sequence">
+	<input a0="Segment[(0, 0), ((R * cos(theta)), (R * sin(theta)))]" a1="theta" a2="0°" a3="360°" a4="If[angleIndex ≥ 3, angle, 10°]"/>
+	<output a0="listRadiusThick"/>
+</command>
+<element type="list" label="listRadiusThick">
+	<show object="false" label="true" ev="4"/>
+	<condition showObject="showPolar"/>
+	<objColor r="0" g="102" b="153" alpha="0"/>
+	<bgColor r="255" g="255" b="255" alpha="255"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<lineStyle thickness="3" type="0" typeHidden="1"/>
+	<pointSize val="3"/>
+	<angleStyle val="0"/>
+</element>
+<expression label="P_{rec}" exp="(0, 0)" type="point"/>
+<element type="point" label="P_{rec}">
+	<show object="true" label="true" ev="4"/>
+	<condition showObject="¬fixPolar"/>
+	<objColor r="255" g="0" b="0" alpha="0"/>
+	<layer val="1"/>
+	<labelOffset x="0" y="1"/>
+	<labelMode val="3"/>
+	<animation step="0.1" speed="1" type="1" playing="false"/>
+	<ggbscript val="SetValue[showRectCo,If[showRect,!showRectCo,showRectCo]]&#xd;&#xa;SetValue[showPolarCo,If[showPolar,!showPolarCo,showPolarCo]]"/>
+	<coords x="0" y="0" z="1"/>
+	<pointSize val="4"/>
+	<pointStyle val="0"/>
+	<caption val="P"/>
+</element>
+<element type="boolean" label="fixPolar">
+	<value val="true"/>
+	<show object="true" label="true" ev="3"/>
+	<condition showObject="showPolar"/>
+	<objColor r="0" g="0" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelOffset x="664" y="2"/>
+	<labelMode val="3"/>
+	<checkbox fixed="true"/>
+	<ggbscript onUpdate="SetValue[P_{pol},(4;120deg)]&#xa;SetValue[P_{rec},(0,0)]&#xa;SetValue[Q_{pol},(3;30deg)]&#xa;SetValue[Q_{rec},(4,0)]"/>
+	<caption val="　"/>
+</element>
+<expression label="Export_1" exp="(R + 2.5, R + 2.5)" type="point" />
+<element type="point" label="Export_1">
+	<show object="false" label="true"/>
+	<objColor r="68" g="68" b="68" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<coords x="11.5" y="11.5" z="1"/>
+	<pointSize val="3"/>
+	<pointStyle val="0"/>
+</element>
+<expression label="Export_2" exp="((-R) - 2.5, (-R) - 2.5)" type="point" />
+<element type="point" label="Export_2">
+	<show object="false" label="true"/>
+	<objColor r="68" g="68" b="68" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<coords x="-11.5" y="-11.5" z="1"/>
+	<pointSize val="3"/>
+	<pointStyle val="0"/>
+</element>
+<command name="Point">
+	<input a0="listPoint"/>
+	<output a0="Q_{pol}"/>
+</command>
+<element type="point" label="Q_{pol}">
+	<show object="true" label="true" ev="4"/>
+	<condition showObject="fixPolar ∧ showQ"/>
+	<objColor r="255" g="0" b="0" alpha="0"/>
+	<layer val="1"/>
+	<labelOffset x="7" y="17"/>
+	<labelMode val="3"/>
+	<animation step="0.1" speed="1" type="1" playing="false"/>
+	<coords x="1.0000000000000002" y="-1.7320508075688772" z="1"/>
+	<coordStyle style="polar"/>
+	<pointSize val="4"/>
+	<pointStyle val="0"/>
+	<caption val="Q"/>
+</element>
+<expression label="Q_{rec}" exp="(4, 0)" type="point"/>
+<element type="point" label="Q_{rec}">
+	<show object="true" label="true" ev="4"/>
+	<condition showObject="(¬fixPolar) ∧ showQ"/>
+	<objColor r="255" g="0" b="0" alpha="0"/>
+	<layer val="1"/>
+	<labelOffset x="1" y="3"/>
+	<labelMode val="3"/>
+	<animation step="0.1" speed="1" type="1" playing="false"/>
+	<coords x="4" y="0" z="1"/>
+	<pointSize val="4"/>
+	<pointStyle val="0"/>
+	<caption val="Q"/>
+</element>
+<command name="If">
+	<input a0="fixPolar" a1="Segment[P_{pol}, Q_{pol}]" a2="Segment[P_{rec}, Q_{rec}]"/>
+	<output a0="a"/>
+</command>
+<element type="segment" label="a">
+	<show object="true" label="false" ev="4"/>
+	<condition showObject="showQ"/>
+	<objColor r="255" g="0" b="0" alpha="0"/>
+	<layer val="5"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<coords x="0" y="0" z="0"/>
+	<lineStyle thickness="5" type="10" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="boolean" label="showQ">
+	<value val="false"/>
+	<show object="true" label="true" ev="3"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelOffset x="664" y="34"/>
+	<labelMode val="3"/>
+	<checkbox fixed="true"/>
+	<caption val="　"/>
+</element>
+<expression label="textRect" exp="&quot;&quot; + (If[fixPolar, &quot;P(&quot; + (x(P_{pol})) + &quot;, &quot; + (y(P_{pol})) + &quot;)&quot;, &quot;P(&quot; + (x(P_{rec})) + &quot;, &quot; + (y(P_{rec})) + &quot;)&quot;]) + &quot;&#xa;&quot; + (If[showQ, If[fixPolar, &quot;Q(&quot; + (x(Q_{pol})) + &quot;, &quot; + (y(Q_{pol})) + &quot;)&quot;, &quot;Q(&quot; + (x(Q_{rec})) + &quot;, &quot; + (y(Q_{rec})) + &quot;)&quot;], &quot;&quot;]) + &quot;&quot;" />
+<element type="text" label="textRect">
+	<show object="true" label="false" ev="8"/>
+	<condition showObject="showRectCo"/>
+	<objColor r="127" g="0" b="255" alpha="0"/>
+	<bgColor r="255" g="255" b="255" alpha="255"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<font serif="false" sizeM="1.6" size="12" style="0"/>
+	<absoluteScreenLocation x="24" y="173"/>
+</element>
+<command name="Text">
+	<input a0="&quot;90°&quot;" a1="(-0.3, R + 0.4)"/>
+	<output a0="text2"/>
+</command>
+<element type="text" label="text2">
+	<show object="true" label="false" ev="8"/>
+	<condition showObject="showPolar ∧ (¬showRect)"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<startPoint  x="-0.3" y="9.4" z="1"/>
+</element>
+<command name="Text">
+	<input a0="&quot;270°&quot;" a1="(-0.5, (-R) - 1)"/>
+	<output a0="text4"/>
+</command>
+<element type="text" label="text4">
+	<show object="true" label="false" ev="8"/>
+	<condition showObject="showPolar ∧ (¬showRect)"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<startPoint  x="-0.5" y="-10" z="1"/>
+</element>
+<element type="numeric" label="lang">
+	<value val="2"/>
+	<symbolic val="true" />
+	<show object="false" label="true"/>
+	<objColor r="0" g="0" b="0" alpha="0.10000000149011612"/>
+	<layer val="5"/>
+	<labelMode val="1"/>
+	<animation step="1" speed="1" type="0" playing="false"/>
+</element>
+<element type="button" label="button0">
+	<show object="true" label="true" ev="3"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="5"/>
+	<labelOffset x="920" y="39"/>
+	<labelMode val="3"/>
+	<animation step="1" speed="1" type="0" playing="false"/>
+	<auxiliary val="true"/>
+	<ggbscript val="SetValue[lang,If[lang==1,2,1]]&#xa;RunClickScript[buttonLang]&#xa;"/>
+	<caption val="中文"/>
+</element>
+<element type="button" label="buttonLang">
+	<show object="false" label="true" ev="3"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="5"/>
+	<labelOffset x="879" y="39"/>
+	<labelMode val="0"/>
+	<animation step="1" speed="1" type="0" playing="false"/>
+	<auxiliary val="true"/>
+	<ggbscript val="SetCaption[button0,If[lang==1,&quot;ENG&quot;,&quot;中文&quot;]]&#xa;SetCaption[showPolar,If[lang==1,&quot;顯示極坐標平面&quot;,&quot;　&quot;]]&#xa;SetCaption[showRect,If[lang==1,&quot;顯示直角坐標平面&quot;,&quot;　&quot;]]&#xa;SetCaption[showPolarCo,If[lang==1,&quot;顯示極坐標&quot;,&quot;　&quot;]]&#xa;SetCaption[showRectCo,If[lang==1,&quot;顯示直角坐標&quot;,&quot;　&quot;]]&#xa;SetCaption[fixPolar,If[lang==1,&quot;局限點在極坐標平面格線&quot;,&quot;　&quot;]]&#xa;SetCaption[showQ,If[lang==1,&quot;顯示兩點&quot;,&quot;　&quot;]]&#xa;SetCaption[listAngle,If[lang==1,&quot;間隔 =&quot;,&quot;interval =&quot;]]&#xa;SetCaption[button1,If[lang==1,&quot;動畫&quot;,&quot;Animate&quot;]]"/>
+	<font serif="false" sizeM="1.4" size="8" style="0"/>
+</element>
+<expression label="text5" exp="&quot;Cartesian plane&quot;"/>
+<element type="text" label="text5">
+	<show object="true" label="false" ev="43"/>
+	<condition showObject="lang ≠ 1"/>
+	<objColor r="127" g="0" b="255" alpha="0"/>
+	<layer val="5"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<font serif="false" sizeM="0.85" size="-3" style="0"/>
+	<absoluteScreenLocation x="43" y="59"/>
+</element>
+<expression label="text6" exp="&quot;Polar plane&quot;"/>
+<element type="text" label="text6">
+	<show object="true" label="false" ev="43"/>
+	<condition showObject="lang ≠ 1"/>
+	<objColor r="0" g="0" b="255" alpha="0"/>
+	<layer val="5"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<font serif="false" sizeM="0.85" size="-3" style="0"/>
+	<absoluteScreenLocation x="43" y="27"/>
+</element>
+<expression label="text7" exp="&quot;Cartesian coordinates&quot;"/>
+<element type="text" label="text7">
+	<show object="true" label="false" ev="43"/>
+	<condition showObject="lang ≠ 1 ∧ showRect"/>
+	<objColor r="127" g="0" b="255" alpha="0"/>
+	<layer val="5"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<font serif="false" sizeM="0.85" size="-3" style="0"/>
+	<absoluteScreenLocation x="419" y="59"/>
+</element>
+<expression label="text8" exp="&quot;Polar coordinates&quot;"/>
+<element type="text" label="text8">
+	<show object="true" label="false" ev="43"/>
+	<condition showObject="lang ≠ 1 ∧ showPolar"/>
+	<objColor r="0" g="0" b="255" alpha="0"/>
+	<layer val="5"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<font serif="false" sizeM="0.85" size="-3" style="0"/>
+	<absoluteScreenLocation x="419" y="28"/>
+</element>
+<expression label="text9" exp="&quot;restrict points on polar grid lines&quot;"/>
+<element type="text" label="text9">
+	<show object="true" label="false" ev="43"/>
+	<condition showObject="lang ≠ 1 ∧ showPolar"/>
+	<objColor r="0" g="0" b="255" alpha="0"/>
+	<layer val="5"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<font serif="false" sizeM="0.85" size="-3" style="0"/>
+	<absoluteScreenLocation x="701" y="29"/>
+</element>
+<expression label="text10" exp="&quot;show two points&quot;"/>
+<element type="text" label="text10">
+	<show object="true" label="false" ev="43"/>
+	<condition showObject="lang ≠ 1"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="5"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<font serif="false" sizeM="0.85" size="-3" style="0"/>
+	<absoluteScreenLocation x="700" y="59"/>
+</element>
+<expression label="textPolar" exp="&quot;&quot; + (LaTeX[If[fixPolar, &quot;P(&quot; + (Length[P_{pol}]) + &quot;, &quot; + (Angle[P_{pol}]) + &quot;)&quot;, &quot;P(&quot; + (Length[P_{rec}]) + &quot;, &quot; + (Angle[P_{rec}]) + &quot;)&quot;]]) + &quot;\\n&quot; + (LaTeX[If[showQ, If[fixPolar, &quot;Q(&quot; + (Length[Q_{pol}]) + &quot;, &quot; + (Angle[Q_{pol}]) + &quot;)&quot;, &quot;Q(&quot; + (Length[Q_{rec}]) + &quot;, &quot; + (Angle[Q_{rec}]) + &quot;)&quot;], &quot;&quot;]]) + &quot;&quot;" />
+<element type="text" label="textPolar">
+	<show object="true" label="false" ev="8"/>
+	<condition showObject="showPolarCo"/>
+	<objColor r="0" g="0" b="255" alpha="0"/>
+	<bgColor r="255" g="255" b="255" alpha="255"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<selectionAllowed val="false"/>
+	<font serif="false" sizeM="1.6" size="12" style="0"/>
+	<absoluteScreenLocation x="23" y="59"/>
+</element>
+<command name="Segment">
+	<input a0="(0, 0)" a1="(Distance[P_{pol}, (0, 0)], 0)"/>
+	<output a0="f"/>
+</command>
+<element type="segment" label="f">
+	<show object="false" label="false"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="5"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<coords x="0" y="2" z="0"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<command name="CircleArc">
+	<input a0="(0, 0)" a1="(Distance[P_{pol}, (0, 0)], 0)" a2="P_{pol}"/>
+	<output a0="c"/>
+</command>
+<element type="conicpart" label="c">
+	<show object="false" label="false"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="5"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<eigenvectors  x0="1" y0="0" z0="1.0" x1="0" y1="1" z1="1.0"/>
+	<matrix A0="1" A1="1" A2="-4" A3="0" A4="0" A5="0"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="numeric" label="t">
+	<value val="1"/>
+	<symbolic val="true" />
+	<show object="false" label="true"/>
+	<objColor r="0" g="0" b="0" alpha="0.10000000149011612"/>
+	<layer val="5"/>
+	<labelMode val="1"/>
+	<slider min="0" max="1" absoluteScreenLocation="true" width="200" x="32" y="355" fixed="false" horizontal="true" showAlgebra="true"/>
+	<lineStyle thickness="10" type="0" typeHidden="1"/>
+	<animation step="0.001" speed="5" type="3" playing="false"/>
+</element>
+<command name="Point">
+	<input a0="{f, c}" a1="t"/>
+	<output a0="A"/>
+</command>
+<element type="point" label="A">
+	<show object="true" label="false" ev="4"/>
+	<condition showObject="fixPolar"/>
+	<objColor r="255" g="0" b="0" alpha="0"/>
+	<layer val="2"/>
+	<labelMode val="0"/>
+	<coords x="1.0000000000000002" y="-1.7320508075688772" z="1"/>
+	<pointSize val="4"/>
+	<pointStyle val="0"/>
+</element>
+<command name="Angle">
+	<input a0="(Distance[P_{pol}, (0, 0)], 0)" a1="(0, 0)" a2="A"/>
+	<output a0="α"/>
+</command>
+<element type="angle" label="α">
+	<angleStyle val="0"/>
+	<emphasizeRightAngle val="false"/>
+	<value val="5.235987755982989"/>
+	<show object="true" label="false" ev="5"/>
+	<condition showObject="showPolar ∧ fixPolar"/>
+	<objColor r="127" g="0" b="255" alpha="0.5"/>
+	<layer val="8"/>
+	<labelMode val="1"/>
+	<decoration type="6"/>
+	<lineStyle thickness="2" type="0" typeHidden="2"/>
+	<arcSize val="70"/>
+	<selectionAllowed val="false"/>
+</element>
+<element type="button" label="button1">
+	<show object="true" label="true" ev="3"/>
+	<condition showObject="showPolar ∧ fixPolar"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<bgColor r="255" g="153" b="153" alpha="255"/>
+	<layer val="8"/>
+	<labelOffset x="568" y="8"/>
+	<labelMode val="3"/>
+	<animation step="1" speed="1" type="0" playing="false"/>
+	<auxiliary val="true"/>
+	<ggbscript val="SetVisibleInView(g,1,true)&#xa;SetVisibleInView(α,1,true)&#xa;SetValue(t,0)&#xa;StartAnimation(t)"/>
+	<font serif="false" sizeM="1.4" size="8" style="0"/>
+	<caption val="Animate"/>
+</element>
+<command name="Segment">
+	<input a0="(0, 0)" a1="A"/>
+	<output a0="g"/>
+</command>
+<element type="segment" label="g">
+	<show object="true" label="false" ev="5"/>
+	<condition showObject="showPolar ∧ fixPolar"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="8"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<coords x="1.7320508075688772" y="1.0000000000000002" z="0"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+</construction>
+</geogebra>

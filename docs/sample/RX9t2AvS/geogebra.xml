@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<geogebra format="5.0" version="5.0.44.0" id="84810fe6-11b2-4c11-84a1-61a43958fcb8"  xsi:noNamespaceSchemaLocation="http://www.geogebra.org/ggb.xsd" xmlns="" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" >
+<gui>
+	<window width="936" height="734" />
+	<perspectives>
+<perspective id="tmp">
+	<panes>
+		<pane location="" divider="0.8728632478632479" orientation="1" />
+	</panes>
+	<views>
+		<view id="1" visible="false" inframe="false" stylebar="false" location="3,1,3" size="290" window="100,100,600,400" />
+		<view id="4" toolbar="0 || 2020 , 2021 , 2022 , 66 || 2001 , 2003 , 2002 , 2004 , 2005 || 2040 , 2041 , 2042 , 2044 , 2043" visible="false" inframe="false" stylebar="true" location="1,1" size="300" window="100,100,600,400" />
+		<view id="8" toolbar="1001 | 1002 | 1003  || 1005 | 1004 || 1006 | 1007 | 1010 || 1008 1009 || 66 68 || 6" visible="false" inframe="false" stylebar="false" location="1,3" size="300" window="100,100,600,400" />
+		<view id="2" visible="false" inframe="false" stylebar="true" location="3" size="263" window="100,100,250,400" />
+		<view id="16" visible="true" inframe="false" stylebar="true" location="3" size="917" window="50,50,500,500" />
+		<view id="32" visible="false" inframe="false" stylebar="true" location="1" size="150" window="50,50,500,500" />
+		<view id="64" visible="false" inframe="true" stylebar="true" location="1" size="150" window="50,50,500,500" />
+		<view id="4097" visible="false" inframe="true" stylebar="true" location="0" size="225" window="179,104,694,544" />
+		<view id="70" toolbar="0 || 2020 || 2021 || 2022" visible="false" inframe="true" stylebar="true" location="1" size="150" window="50,50,500,500" />
+		<view id="512" toolbar="0 | 1 501 5 19 , 67 | 2 15 45 18 , 7 37 | 514 3 9 , 13 44 , 47 | 16 | 551 550 11 , 22 , 23 , 55 56 57 , 12 | 69 | 510 511 , 512 513 | 533 531 , 534 532 , 522 523 , 537 536 , 535 | 521 520 | 36 , 38 49 560 | 571 30 29 570 31 33 | 17 | 540 40 41 42 , 27 28 35 , 6 , 502" visible="false" inframe="false" stylebar="false" location="1" size="333" window="100,100,600,400" />
+	</views>
+	<toolbar show="true" items="0 39 | 1 501 67 , 5 19 , 72 | 2 15 45 , 18 65 , 7 37 | 4 3 8 9 , 13 44 , 58 , 47 | 16 51 64 , 70 | 10 34 53 11 , 24  20 22 , 21 23 | 55 56 57 , 12 | 36 46 , 38 49  50 , 71 | 30 29 54 32 31 33 | 17 26 62 73 , 14 68 | 25 52 60 61 | 40 41 42 , 27 28 35 , 6" position="1" help="false" />
+	<input show="true" cmd="true" top="false" />
+	<dockBar show="true" east="true" />
+</perspective>
+	</perspectives>
+	<labelingStyle  val="3"/>
+	<font  size="20"/>
+	<graphicsSettings javaLatexFonts="false"/>
+</gui>
+<euclidianView>
+	<size  width="576" height="401"/>
+	<coordSystem xZero="214.99999999999997" yZero="314.99999999999983" scale="49.999999999999986" yscale="49.99999999999998"/>
+	<evSettings axes="true" grid="false" gridIsBold="false" pointCapturing="3" rightAngleStyle="1" checkboxSize="26" gridType="0"/>
+	<bgColor r="255" g="255" b="255"/>
+	<axesColor r="0" g="0" b="0"/>
+	<gridColor r="192" g="192" b="192"/>
+	<lineStyle axes="1" grid="10"/>
+	<axis id="0" show="true" label="" unitLabel="" tickStyle="1" showNumbers="true"/>
+	<axis id="1" show="true" label="" unitLabel="" tickStyle="1" showNumbers="true"/>
+</euclidianView>
+<euclidianView>
+	<viewNumber viewNo="2"/>
+	<size  width="917" height="541"/>
+	<coordSystem xZero="219.00000000000009" yZero="321.9999999999998" scale="49.99999999999998" yscale="49.999999999999986"/>
+	<evSettings axes="false" grid="false" gridIsBold="false" pointCapturing="0" rightAngleStyle="1" checkboxSize="26" gridType="0"/>
+	<bgColor r="234" g="234" b="234"/>
+	<axesColor r="0" g="0" b="0"/>
+	<gridColor r="192" g="192" b="192"/>
+	<lineStyle axes="1" grid="10"/>
+	<axis id="0" show="false" label="" unitLabel="" tickStyle="1" showNumbers="true"/>
+	<axis id="1" show="false" label="" unitLabel="" tickStyle="1" showNumbers="true"/>
+</euclidianView>
+<algebraView>
+	<auxiliary show="true"/>
+</algebraView>
+<kernel>
+	<continuous val="false"/>
+	<usePathAndRegionParameters val="true"/>
+	<decimals val="2"/>
+	<angleUnit val="degree"/>
+	<algebraStyle val="0"/>
+	<coordStyle val="0"/>
+	<angleFromInvTrig val="false"/>
+</kernel>
+<scripting blocked="false" disabled="false"/>
+<construction title="" author="" date="">
+<expression label="text1" exp="&quot;這是柱體嗎？&quot;"/>
+<element type="text" label="text1">
+	<show object="true" label="false" ev="3"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<font serif="false" sizeM="1.0" size="0" style="1"/>
+	<absoluteScreenLocation  x="198" y="54"/>
+</element>
+<expression label="text5" exp="&quot;這個柱體的名稱是：&quot;"/>
+<element type="text" label="text5">
+	<show object="true" label="false" ev="3"/>
+	<condition showObject="show2"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<font serif="false" sizeM="1.4" size="8" style="0"/>
+	<absoluteScreenLocation  x="143" y="440"/>
+</element>
+<expression label="text6" exp="&quot;六角柱&quot;"/>
+<element type="text" label="text6">
+	<show object="true" label="false" ev="3"/>
+	<condition showObject="l ∧ show2"/>
+	<objColor r="255" g="0" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<font serif="false" sizeM="1.4" size="8" style="1"/>
+	<absoluteScreenLocation  x="402" y="440"/>
+</element>
+<element type="boolean" label="l">
+	<value val="false"/>
+	<show object="true" label="false" ev="3"/>
+	<condition showObject="show2"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelOffset x="506" y="414"/>
+	<labelMode val="0"/>
+	<checkbox fixed="true"/>
+</element>
+<element type="image" label="pic1">
+	<file name="b2d8f52c287de2f250d470746bc74e32\prism_judge1.png"/>
+	<inBackground val="false"/>
+	<absoluteScreenLocation x="402" y="374"/>	<show object="true" label="false" ev="3"/>
+	<objColor r="0" g="0" b="0" alpha="1.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+</element>
+<element type="image" label="pic2">
+	<file name="84ddfb9860f20f9afbf8a5e3e52b4451\cylinder3.png"/>
+	<inBackground val="false"/>
+	<startPoint number="0" x="-4.28" y="1.4800000000000009" z="1.0"/>
+	<show object="true" label="false" ev="3"/>
+	<objColor r="0" g="0" b="0" alpha="1.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+</element>
+<expression label="text2" exp="&quot;為甚麼？&quot;"/>
+<element type="text" label="text2">
+	<show object="true" label="false" ev="3"/>
+	<objColor r="255" g="0" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<font serif="false" sizeM="1.0" size="0" style="1"/>
+	<startPoint  x="-0.42000000000000265" y="4.7599999999999945" z="1.0"/>
+</element>
+<element type="image" label="pic3">
+	<file name="5d6d04938dd8a1c79b8d4cb300432b88\prism_judge1a.png"/>
+	<inBackground val="false"/>
+	<startPoint number="0" exp="A"/>
+	<show object="true" label="false" ev="3"/>
+	<condition showObject="show"/>
+	<objColor r="0" g="0" b="0" alpha="1.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+</element>
+<element type="point" label="B">
+	<show object="false" label="true" ev="3"/>
+	<objColor r="0" g="0" b="255" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<animation step="0.1" speed="1" type="1" playing="false"/>
+	<coords x="5.14" y="-0.76" z="1.0"/>
+	<pointSize val="3"/>
+	<pointStyle val="0"/>
+</element>
+<element type="point" label="C">
+	<show object="false" label="true" ev="3"/>
+	<objColor r="0" g="0" b="255" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<animation step="0.1" speed="1" type="1" playing="false"/>
+	<coords x="4.92" y="0.82" z="1.0"/>
+	<pointSize val="3"/>
+	<pointStyle val="0"/>
+</element>
+<command name="Segment">
+	<input a0="B" a1="C"/>
+	<output a0="a"/>
+</command>
+<element type="segment" label="a">
+	<show object="false" label="false" ev="3"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<coords x="-1.58" y="-0.21999999999999975" z="7.953999999999999"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<command name="Point">
+	<input a0="a"/>
+	<output a0="A"/>
+</command>
+<element type="point" label="A">
+	<show object="false" label="true" ev="3"/>
+	<objColor r="255" g="0" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<animation step="0.1" speed="5" type="3" playing="false"/>
+	<coords x="5.14" y="-0.76" z="1.0"/>
+	<pointSize val="3"/>
+	<pointStyle val="0"/>
+</element>
+<element type="button" label="button1">
+	<show object="true" label="true" ev="3"/>
+	<objColor r="255" g="0" b="0" alpha="1.0"/>
+	<layer val="0"/>
+	<labelOffset x="217" y="227"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<auxiliary val="true"/>
+	<ggbscript val="SetValue[A, B]&#10;SetValue[show, true]&#10;StartAnimation[A]"/>
+	<font serif="false" sizeM="2.0" size="20" style="0"/>
+	<caption val="解釋"/>
+</element>
+<element type="boolean" label="show">
+	<value val="false"/>
+	<show object="false" label="true"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+</element>
+<command name="If">
+	<input a0="A ≟ C" a1="true" a2="false"/>
+	<output a0="show2"/>
+</command>
+<element type="boolean" label="show2">
+	<value val="false"/>
+	<show object="false" label="true" ev="3"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+</element>
+</construction>
+</geogebra>

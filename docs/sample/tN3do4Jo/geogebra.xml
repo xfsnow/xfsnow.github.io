@@ -1,0 +1,531 @@
+<?xml version="1.0" encoding="utf-8"?>
+<geogebra format="5.0" version="5.0.332.0" id="ad06fe48-204e-4462-bcf9-c623a97129c8"  xsi:noNamespaceSchemaLocation="http://www.geogebra.org/ggb.xsd" xmlns="" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" >
+<gui>
+	<window width="960" height="660" />
+	<perspectives>
+<perspective id="tmp">
+	<panes>
+		<pane location="" divider="0.7104166666666667" orientation="1" />
+	</panes>
+	<views>
+		<view id="4" toolbar="0 || 2020 , 2021 , 2022 , 66 || 2001 , 2003 , 2002 , 2004 , 2005 || 2040 , 2041 , 2042 , 2044 , 2043" visible="false" inframe="false" stylebar="true" location="1,1" size="300" window="100,100,600,400" />
+		<view id="8" toolbar="1001 | 1002 | 1003  || 1005 | 1004 || 1006 | 1007 | 1010 || 1008 1009 || 66 68 || 6" visible="false" inframe="false" stylebar="false" location="1,3" size="300" window="100,100,600,400" />
+		<view id="4097" visible="false" inframe="true" stylebar="true" location="1,1" size="97" window="188,40,904,716" />
+		<view id="1" visible="true" inframe="false" stylebar="false" location="3" size="682" window="100,100,600,400" />
+		<view id="2" visible="false" inframe="false" stylebar="false" location="1" size="229" window="100,100,250,400" />
+		<view id="16" visible="true" inframe="false" stylebar="false" location="1" size="268" window="50,50,500,500" />
+		<view id="32" visible="false" inframe="false" stylebar="true" location="1" size="150" window="50,50,500,500" />
+		<view id="64" toolbar="0" visible="false" inframe="true" stylebar="true" location="1" size="150" window="50,50,500,500" />
+		<view id="128" visible="false" inframe="true" stylebar="false" location="1" size="480" window="50,50,500,500" />
+		<view id="70" toolbar="0 || 2020 || 2021 || 2022" visible="false" inframe="true" stylebar="true" location="1" size="150" window="50,50,500,500" />
+		<view id="43" visible="false" inframe="false" stylebar="false" location="1" size="450" window="50,50,500,500" />
+		<view id="512" toolbar="0 | 1 501 5 19 , 67 | 2 15 45 18 , 7 37 | 514 3 9 , 13 44 , 47 | 16 | 551 550 11 , 22 , 23 , 55 56 57 , 12 | 69 | 510 511 , 512 513 | 533 531 , 534 532 , 522 523 , 537 536 , 535 | 521 520 | 36 , 38 49 560 | 571 30 29 570 31 33 | 17 | 540 40 41 42 , 27 28 35 , 6 , 502" visible="false" inframe="false" stylebar="false" location="1" size="300" window="50,50,500,500" />
+	</views>
+	<toolbar show="false" items="0 39 | 1 501 67 , 5 19 , 72 | 2 15 45 , 18 65 , 7 37 | 4 3 8 9 , 13 44 , 58 , 47 | 16 51 64 , 70 | 10 34 53 11 , 24  20 22 , 21 23 | 55 56 57 , 12 | 36 46 , 38 49  50 , 71 | 30 29 54 32 31 33 | 17 26 62 73 , 14 68 | 25 52 60 61 | 40 41 42 , 27 28 35 , 6" position="7" help="false" />
+	<input show="false" cmd="true" top="algebra" />
+	<dockBar show="false" east="false" />
+</perspective>
+	</perspectives>
+	<labelingStyle  val="2"/>
+	<font  size="20"/>
+</gui>
+<euclidianView>
+	<viewNumber viewNo="1"/>
+	<size  width="682" height="658"/>
+	<coordSystem xZero="341" yZero="340.5" scale="41.88573485660769" yscale="41.88573485660773"/>
+	<evSettings axes="false" grid="true" gridIsBold="true" pointCapturing="2" rightAngleStyle="1" checkboxSize="26" gridType="0"/>
+	<bgColor r="255" g="255" b="255"/>
+	<axesColor r="0" g="0" b="0"/>
+	<gridColor r="192" g="192" b="192"/>
+	<lineStyle axes="3" grid="0"/>
+	<axis id="0" show="false" label="x" unitLabel="" tickStyle="1" showNumbers="true" tickDistance="1" tickExpression=""/>
+	<axis id="1" show="false" label="y" unitLabel="" tickStyle="1" showNumbers="true" tickDistance="1" tickExpression=""/>
+	<grid distX="1" distY="1" distTheta="0.5235987755982988"/>
+</euclidianView>
+<euclidianView>
+	<viewNumber viewNo="2"/>
+	<size  width="268" height="658"/>
+	<coordSystem xZero="24.99999999999997" yZero="291.9999999999999" scale="49.99999999999998" yscale="49.999999999999986"/>
+	<evSettings axes="false" grid="false" gridIsBold="false" pointCapturing="3" rightAngleStyle="1" checkboxSize="26" gridType="0"/>
+	<bgColor r="255" g="255" b="153"/>
+	<axesColor r="0" g="0" b="0"/>
+	<gridColor r="192" g="192" b="192"/>
+	<lineStyle axes="1" grid="0"/>
+	<axis id="0" show="false" label="" unitLabel="" tickStyle="1" showNumbers="true"/>
+	<axis id="1" show="false" label="" unitLabel="" tickStyle="1" showNumbers="true"/>
+</euclidianView>
+<kernel>
+	<continuous val="false"/>
+	<usePathAndRegionParameters val="true"/>
+	<decimals val="2"/>
+	<angleUnit val="degree"/>
+	<algebraStyle val="0" spreadsheet="0"/>
+	<coordStyle val="0"/>
+</kernel>
+<scripting blocked="false" disabled="false"/>
+<construction title="" author="" date="">
+<element type="point" label="A">
+	<show object="true" label="false" ev="4"/>
+	<objColor r="0" g="153" b="255" alpha="0"/>
+	<layer val="9"/>
+	<labelMode val="2"/>
+	<animation step="1" speed="1" type="1" playing="false"/>
+	<isShape val="false"/>
+	<coords x="-4" y="0" z="1"/>
+	<pointSize val="7"/>
+	<pointStyle val="0"/>
+</element>
+<element type="point" label="B">
+	<show object="true" label="false" ev="4"/>
+	<objColor r="0" g="153" b="255" alpha="0"/>
+	<layer val="9"/>
+	<labelMode val="2"/>
+	<animation step="1" speed="1" type="1" playing="false"/>
+	<isShape val="false"/>
+	<coords x="-2" y="-1" z="1"/>
+	<pointSize val="7"/>
+	<pointStyle val="0"/>
+</element>
+<command name="Segment">
+	<input a0="A" a1="B"/>
+	<output a0="a"/>
+</command>
+<element type="segment" label="a">
+	<show object="true" label="false" ev="4"/>
+	<condition showObject="join"/>
+	<objColor r="0" g="153" b="255" alpha="0"/>
+	<layer val="8"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<isShape val="false"/>
+	<coords x="1" y="2" z="4"/>
+	<lineStyle thickness="9" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<expression label ="N" exp="6"/>
+<element type="numeric" label="N">
+	<value val="6"/>
+	<show object="false" label="true"/>
+	<objColor r="0" g="0" b="0" alpha="0.10000000149011612"/>
+	<layer val="0"/>
+	<labelMode val="2"/>
+	<animation step="1" speed="1" type="0" playing="false"/>
+</element>
+<command name="Shuffle">
+	<input a0="Flatten[Sequence[Sequence[(i, j), j, (-N), i - 1], i, (-N) + 1, N]]"/>
+	<output a0="list45b"/>
+</command>
+<element type="list" label="list45b">
+	<show object="false" label="true" ev="4"/>
+	<objColor r="0" g="153" b="0" alpha="0"/>
+	<bgColor r="255" g="255" b="255" alpha="255"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<isShape val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<pointSize val="3"/>
+	<pointStyle val="-1"/>
+</element>
+<command name="Shuffle">
+	<input a0="Flatten[Sequence[Sequence[(i, j), j, i + 1, N], i, (-N), N - 1]]"/>
+	<output a0="list45a"/>
+</command>
+<element type="list" label="list45a">
+	<show object="false" label="true" ev="4"/>
+	<objColor r="0" g="153" b="0" alpha="0"/>
+	<bgColor r="255" g="255" b="255" alpha="255"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<isShape val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<pointSize val="3"/>
+	<pointStyle val="-1"/>
+</element>
+<command name="Rotate">
+	<input a0="list45a" a1="90°"/>
+	<output a0="list135b"/>
+</command>
+<element type="list" label="list135b">
+	<show object="false" label="true" ev="4"/>
+	<objColor r="255" g="127" b="0" alpha="0"/>
+	<bgColor r="255" g="255" b="255" alpha="255"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<isShape val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<pointSize val="3"/>
+	<pointStyle val="-1"/>
+</element>
+<command name="Rotate">
+	<input a0="list45b" a1="90°"/>
+	<output a0="list135a"/>
+</command>
+<element type="list" label="list135a">
+	<show object="false" label="true" ev="4"/>
+	<objColor r="255" g="127" b="0" alpha="0"/>
+	<bgColor r="255" g="255" b="255" alpha="255"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<isShape val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<pointSize val="3"/>
+	<pointStyle val="-1"/>
+</element>
+<command name="Random">
+	<input a0="1" a1="8"/>
+	<output a0="qtype"/>
+</command>
+<element type="numeric" label="qtype">
+	<value val="5"/>
+	<objColor r="0" g="0" b="0" alpha="0.10000000149011612"/>
+	<selectionAllowed val="false"/>
+</element>
+<command name="Shuffle">
+	<input a0="Flatten[Sequence[Sequence[(i, j), j, (-N), -1], i, (-N), N]]"/>
+	<output a0="listDown"/>
+</command>
+<element type="list" label="listDown">
+	<show object="false" label="true" ev="4"/>
+	<objColor r="0" g="0" b="255" alpha="0"/>
+	<bgColor r="255" g="255" b="255" alpha="255"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<isShape val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<pointSize val="3"/>
+	<pointStyle val="-1"/>
+</element>
+<command name="Shuffle">
+	<input a0="Flatten[Sequence[Sequence[(i, j), j, 1, N], i, (-N), N]]"/>
+	<output a0="listUp"/>
+</command>
+<element type="list" label="listUp">
+	<show object="false" label="true" ev="4"/>
+	<objColor r="0" g="0" b="255" alpha="0"/>
+	<bgColor r="255" g="255" b="255" alpha="255"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<isShape val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<pointSize val="3"/>
+	<pointStyle val="-1"/>
+</element>
+<command name="Shuffle">
+	<input a0="Flatten[Sequence[Sequence[(i, j), j, (-N), N], i, (-N), -1]]"/>
+	<output a0="listLeft"/>
+</command>
+<element type="list" label="listLeft">
+	<show object="false" label="true" ev="4"/>
+	<objColor r="255" g="0" b="0" alpha="0"/>
+	<bgColor r="255" g="255" b="255" alpha="255"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<isShape val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<pointSize val="3"/>
+	<pointStyle val="-1"/>
+</element>
+<command name="Shuffle">
+	<input a0="Flatten[Sequence[Sequence[(i, j), j, (-N), N], i, 1, N]]"/>
+	<output a0="listRight"/>
+</command>
+<element type="list" label="listRight">
+	<show object="false" label="true" ev="4"/>
+	<objColor r="255" g="0" b="0" alpha="0"/>
+	<bgColor r="255" g="255" b="255" alpha="255"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<isShape val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<pointSize val="3"/>
+	<pointStyle val="-1"/>
+</element>
+<element type="button" label="buttonNext">
+	<show object="true" label="true" ev="1"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelOffset x="25" y="242"/>
+	<labelMode val="3"/>
+	<animation step="1" speed="1" type="0" playing="false"/>
+	<isShape val="false"/>
+	<auxiliary val="true"/>
+	<ggbscript val="UpdateConstruction[]&#10;SetValue[A,Q1]&#10;SetValue[B,Q2]&#10;SetValue[join,false]&#10;&#10;SetVisibleInView[picCorrect,2,false]&#10;SetVisibleInView[picWrong,2,false]&#10;SetVisibleInView[buttonCheck,2,true]&#10;SetVisibleInView[buttonNext,2,false]&#10;&#10;SetVisibleInView[Q1&apos;,1,false]&#10;SetVisibleInView[Q2&apos;,1,false]&#10;SetVisibleInView[segAns,1,false]"/>
+	<font serif="false" sizeM="2" size="20" style="0"/>
+	<caption val="Next"/>
+</element>
+<command name="If">
+	<input a0="qtype ≟ 1" a1="Element[listUp, 1]" a2="If[qtype ≟ 2, Element[listDown, 1], If[qtype ≟ 3, Element[listLeft, 1], If[qtype ≟ 4, Element[listRight, 1], If[qtype ≟ 5, Element[list45a, 1], If[qtype ≟ 6, Element[list45b, 1], If[qtype ≟ 7, Element[list135a, 1], If[qtype ≟ 8, Element[list135b, 1]]]]]]]]"/>
+	<output a0="Q1"/>
+</command>
+<element type="point" label="Q1">
+	<show object="true" label="false" ev="4"/>
+	<objColor r="0" g="0" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="2"/>
+	<selectionAllowed val="false"/>
+	<isShape val="false"/>
+	<coords x="-2" y="5" z="1"/>
+	<pointSize val="7"/>
+	<pointStyle val="0"/>
+</element>
+<command name="If">
+	<input a0="qtype ≟ 1" a1="Element[listUp, 2]" a2="If[qtype ≟ 2, Element[listDown, 2], If[qtype ≟ 3, Element[listLeft, 2], If[qtype ≟ 4, Element[listRight, 2], If[qtype ≟ 5, Element[list45a, 2], If[qtype ≟ 6, Element[list45b, 2], If[qtype ≟ 7, Element[list135a, 2], If[qtype ≟ 8, Element[list135b, 2]]]]]]]]"/>
+	<output a0="Q2"/>
+</command>
+<element type="point" label="Q2">
+	<show object="true" label="false" ev="4"/>
+	<objColor r="0" g="0" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="2"/>
+	<selectionAllowed val="false"/>
+	<isShape val="false"/>
+	<coords x="-1" y="3" z="1"/>
+	<pointSize val="7"/>
+	<pointStyle val="0"/>
+</element>
+<command name="Segment">
+	<input a0="Q1" a1="Q2"/>
+	<output a0="b"/>
+</command>
+<element type="segment" label="b">
+	<show object="true" label="false" ev="4"/>
+	<objColor r="0" g="0" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<isShape val="false"/>
+	<coords x="2" y="1" z="-1"/>
+	<lineStyle thickness="9" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<expression label ="L34" exp="x = 0" type="line"/>
+<element type="line" label="L34">
+	<show object="true" label="true" ev="4"/>
+	<condition showObject="qtype ≟ 3 ∨ qtype ≟ 4"/>
+	<objColor r="255" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="3"/>
+	<animation step="0.1" speed="1" type="0" playing="false"/>
+	<selectionAllowed val="false"/>
+	<isShape val="false"/>
+	<coords x="1" y="0" z="0"/>
+	<lineStyle thickness="7" type="0" typeHidden="1"/>
+	<eqnStyle style="implicit"/>
+	<caption val="line of reflection"/>
+</element>
+<expression label ="L12" exp="y = 0" type="line"/>
+<element type="line" label="L12">
+	<show object="true" label="true" ev="4"/>
+	<condition showObject="qtype ≟ 1 ∨ qtype ≟ 2"/>
+	<objColor r="255" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="3"/>
+	<animation step="0.1" speed="1" type="0" playing="false"/>
+	<selectionAllowed val="false"/>
+	<isShape val="false"/>
+	<coords x="0" y="1" z="0"/>
+	<lineStyle thickness="7" type="0" typeHidden="1"/>
+	<eqnStyle style="explicit"/>
+	<caption val="line of reflection"/>
+</element>
+<expression label ="L56" exp="y = x" type="line"/>
+<element type="line" label="L56">
+	<show object="true" label="true" ev="4"/>
+	<condition showObject="qtype ≟ 5 ∨ qtype ≟ 6"/>
+	<objColor r="255" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="3"/>
+	<animation step="0.1" speed="1" type="0" playing="false"/>
+	<selectionAllowed val="false"/>
+	<isShape val="false"/>
+	<coords x="-1" y="1" z="0"/>
+	<lineStyle thickness="7" type="0" typeHidden="1"/>
+	<eqnStyle style="explicit"/>
+	<caption val="line of reflection"/>
+</element>
+<expression label ="L78" exp="y = (-x)" type="line"/>
+<element type="line" label="L78">
+	<show object="true" label="true" ev="4"/>
+	<condition showObject="qtype ≟ 7 ∨ qtype ≟ 8"/>
+	<objColor r="255" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="3"/>
+	<animation step="0.1" speed="1" type="0" playing="false"/>
+	<selectionAllowed val="false"/>
+	<isShape val="false"/>
+	<coords x="1" y="1" z="0"/>
+	<lineStyle thickness="7" type="0" typeHidden="1"/>
+	<eqnStyle style="explicit"/>
+	<caption val="line of reflection"/>
+</element>
+<command name="Mirror">
+	<input a0="Q1" a1="If[qtype ≤ 2, L12, If[qtype ≤ 4, L34, If[qtype ≤ 6, L56, L78]]]"/>
+	<output a0="Q1&apos;"/>
+</command>
+<element type="point" label="Q1&apos;">
+	<show object="true" label="false" ev="5"/>
+	<objColor r="255" g="127" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="2"/>
+	<selectionAllowed val="false"/>
+	<isShape val="false"/>
+	<coords x="5" y="-2.0000000000000004" z="1"/>
+	<pointSize val="7"/>
+	<pointStyle val="0"/>
+</element>
+<command name="Mirror">
+	<input a0="Q2" a1="If[qtype ≤ 2, L12, If[qtype ≤ 4, L34, If[qtype ≤ 6, L56, L78]]]"/>
+	<output a0="Q2&apos;"/>
+</command>
+<element type="point" label="Q2&apos;">
+	<show object="true" label="false" ev="5"/>
+	<objColor r="255" g="127" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="2"/>
+	<selectionAllowed val="false"/>
+	<isShape val="false"/>
+	<coords x="3" y="-1.0000000000000002" z="1"/>
+	<pointSize val="7"/>
+	<pointStyle val="0"/>
+</element>
+<command name="Segment">
+	<input a0="Q2&apos;" a1="Q1&apos;"/>
+	<output a0="segAns"/>
+</command>
+<element type="segment" label="segAns">
+	<show object="true" label="true" ev="5"/>
+	<objColor r="255" g="127" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="3"/>
+	<selectionAllowed val="false"/>
+	<isShape val="false"/>
+	<coords x="1.0000000000000002" y="2" z="-1.0000000000000009"/>
+	<lineStyle thickness="9" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+	<caption val="Answer"/>
+</element>
+<expression label="correct" exp="{A, B} ≟ {Q1&apos;, Q2&apos;} ∨ {A, B} ≟ {Q2&apos;, Q1&apos;}" />
+<element type="boolean" label="correct">
+	<value val="false"/>
+	<show object="false" label="true"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<checkbox fixed="true"/>
+</element>
+<element type="button" label="buttonCheck">
+	<show object="true" label="true" ev="3"/>
+	<condition showObject="join"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelOffset x="25" y="242"/>
+	<labelMode val="3"/>
+	<animation step="1" speed="1" type="0" playing="false"/>
+	<isShape val="false"/>
+	<auxiliary val="true"/>
+	<ggbscript val="SetValue[marks,If[correct,marks+1,marks]]&#10;SetVisibleInView[picCorrect,2,correct]&#10;SetVisibleInView[picWrong,2,!correct]&#10;SetVisibleInView[buttonCheck,2,false]&#10;SetVisibleInView[buttonNext,2,true]&#10;&#10;SetVisibleInView[Q1&apos;,1,!correct]&#10;SetVisibleInView[Q2&apos;,1,!correct]&#10;SetVisibleInView[segAns,1,!correct]"/>
+	<font serif="false" sizeM="2" size="20" style="0"/>
+	<caption val="Check"/>
+</element>
+<element type="numeric" label="marks">
+	<value val="0"/>
+	<show object="false" label="true"/>
+	<objColor r="255" g="0" b="0" alpha="0.10000000149011612"/>
+	<layer val="0"/>
+	<labelMode val="2"/>
+	<slider min="-999" max="999" absoluteScreenLocation="true" width="200" x="30" y="50" fixed="false" horizontal="true" showAlgebra="true"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<animation step="1" speed="1" type="0" playing="false"/>
+</element>
+<element type="image" label="picCorrect">
+	<file name="96bee65b9df1ebf3a821122f720c42ff/clap_small.png"/>
+	<inBackground val="false"/>
+	<absoluteScreenLocation x="25" y="192"/>	<show object="true" label="true" ev="1"/>
+	<objColor r="0" g="0" b="0" alpha="1"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<selectionAllowed val="false"/>
+	<isShape val="false"/>
+</element>
+<element type="image" label="picWrong">
+	<file name="e4b6a4497f2a9e29df36092a3f5cedd0/shocked-emoji_small.png"/>
+	<inBackground val="false"/>
+	<absoluteScreenLocation x="25" y="192"/>	<show object="true" label="true" ev="1"/>
+	<objColor r="0" g="0" b="0" alpha="1"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<selectionAllowed val="false"/>
+	<isShape val="false"/>
+</element>
+<element type="boolean" label="showAxes">
+	<value val="false"/>
+	<show object="true" label="true" ev="3"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelOffset x="20" y="37"/>
+	<labelMode val="3"/>
+	<checkbox fixed="true"/>
+	<ggbscript onUpdate="ShowAxes[1,showAxes]&#10;&#10;ShowLabel[A,showAxes]&#10;ShowLabel[B,showAxes]&#10;ShowLabel[Q1,showAxes]&#10;ShowLabel[Q2,showAxes]&#10;ShowLabel[Q1&apos;,showAxes]&#10;ShowLabel[Q2&apos;,showAxes]"/>
+	<caption val="Show coordinates"/>
+</element>
+<element type="numeric" label="lang">
+	<value val="2"/>
+	<symbolic val="true" />
+	<show object="false" label="true"/>
+	<objColor r="0" g="0" b="0" alpha="0.10000000149011612"/>
+	<layer val="3"/>
+	<labelMode val="2"/>
+	<animation step="1" speed="1" type="0" playing="false"/>
+</element>
+<element type="button" label="button0">
+	<show object="true" label="true" ev="3"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="3"/>
+	<labelOffset x="28" y="445"/>
+	<labelMode val="3"/>
+	<animation step="1" speed="1" type="0" playing="false"/>
+	<isShape val="false"/>
+	<auxiliary val="true"/>
+	<ggbscript val="SetValue[lang,If[lang==1,2,1]]&#10;RunClickScript[buttonLang]&#10;"/>
+	<font serif="false" sizeM="1.4" size="8" style="0"/>
+	<caption val="中文"/>
+</element>
+<element type="button" label="buttonLang">
+	<show object="false" label="true" ev="3"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="3"/>
+	<labelOffset x="41" y="521"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<isShape val="false"/>
+	<auxiliary val="true"/>
+	<ggbscript val="SetCaption[button0,If[lang==1,&quot;ENG&quot;,&quot;中文&quot;]]&#10;SetCaption[buttonNext,If[lang==1,&quot;下一題&quot;,&quot;Next&quot;]]&#10;SetCaption[buttonCheck,If[lang==1,&quot;核對&quot;,&quot;Check&quot;]]&#10;SetCaption[showAxes,If[lang==1,&quot;顯示坐標&quot;,&quot;Show coordinates&quot;]]&#10;SetCaption[segAns,If[lang==1,&quot;答案&quot;,&quot;Answer&quot;]]&#10;SetCaption[L12,If[lang==1,&quot;反射軸&quot;,&quot;line of reflection&quot;]]&#10;SetCaption[L34,If[lang==1,&quot;反射軸&quot;,&quot;line of reflection&quot;]]&#10;SetCaption[L56,If[lang==1,&quot;反射軸&quot;,&quot;line of reflection&quot;]]&#10;SetCaption[L78,If[lang==1,&quot;反射軸&quot;,&quot;line of reflection&quot;]]&#10;SetCaption[join,If[lang==1,&quot;連線&quot;,&quot;Join&quot;]]"/>
+	<font serif="false" sizeM="2" size="20" style="0"/>
+</element>
+<expression label="text1" exp="&quot;&quot; + (If[lang ≟ 1, &quot;分數&quot;, &quot;Marks&quot;]) + &quot; = &quot; + marks + &quot;&quot;" />
+<element type="text" label="text1">
+	<show object="true" label="false" ev="11"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<absoluteScreenLocation  x="28" y="365"/>
+</element>
+<element type="boolean" label="join">
+	<value val="false"/>
+	<show object="true" label="true"/>
+	<condition showObject="(A ≠ Q1) ∨ (B ≠ Q2)"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelOffset x="545" y="42"/>
+	<labelMode val="3"/>
+	<checkbox fixed="true"/>
+	<caption val="Join"/>
+</element>
+</construction>
+</geogebra>

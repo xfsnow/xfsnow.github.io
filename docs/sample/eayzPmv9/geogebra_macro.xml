@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8"?>
+<geogebra format="5.0" version="5.0.332.0"  xsi:noNamespaceSchemaLocation="http://www.geogebra.org/ggt.xsd" xmlns="" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" >
+<macro cmdName="testBF" toolName="testBF" toolHelp="testBF" iconFile="" showInToolBar="true" copyCaptions="true" viewId="1">
+<macroInput a0="mat"/>
+<macroOutput a0="bf"/>
+<construction title="" author="" date="">
+<expression label ="mat" exp="{{(0, 0, 0), (0, 1, 1), (0, 2, 0), (0, 3, 1)}, {(1, 0, 0), (1, 1, 1), (1, 2, 0), (1, 3, 1)}, {(2, 0, 0), (2, 1, 1), (2, 2, 0), (2, 3, 1)}}"/>
+<element type="list" label="mat">
+	<show object="true" label="false" ev="4"/>
+	<objColor r="0" g="100" b="0" alpha="0"/>
+	<bgColor r="255" g="255" b="255" alpha="255"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<animation step="1" speed="1" type="0" playing="false"/>
+	<isShape val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<pointSize val="5"/>
+	<pointStyle val="0"/>
+</element>
+<expression label="m" exp="Dimension[mat] - 1" />
+<element type="numeric" label="m">
+	<value val="2"/>
+	<symbolic val="true" />
+	<objColor r="0" g="0" b="0" alpha="0.10000000149011612"/>
+</element>
+<expression label="n" exp="Dimension[Element[mat, 1]] - 1" />
+<element type="numeric" label="n">
+	<value val="3"/>
+	<symbolic val="true" />
+	<objColor r="0" g="0" b="0" alpha="0.10000000149011612"/>
+</element>
+<command name="Sum">
+	<input a0="Sum[Sequence[Sequence[((((((x(Element[mat, j + 1, k + 1]) * Binomial[m, j]) * Binomial[n, k]) * (1 - x)^(m - j)) * x^(j)) * (1 - y)^(n - k)) * y^(k)), k, 0, n], j, 0, m]]"/>
+	<output a0="bx"/>
+</command>
+<element type="functionNVar" label="bx">
+	<show object="false" label="false" ev="4"/>
+	<objColor r="204" g="0" b="0" alpha="0.75"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<isShape val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+</element>
+<command name="Sum">
+	<input a0="Sum[Sequence[Sequence[((((((y(Element[mat, j + 1, k + 1]) * Binomial[m, j]) * Binomial[n, k]) * (1 - x)^(m - j)) * x^(j)) * (1 - y)^(n - k)) * y^(k)), k, 0, n], j, 0, m]]"/>
+	<output a0="by"/>
+</command>
+<element type="functionNVar" label="by">
+	<show object="false" label="false" ev="4"/>
+	<objColor r="204" g="0" b="0" alpha="0.75"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<isShape val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+</element>
+<command name="Sum">
+	<input a0="Sum[Sequence[Sequence[((((((z(Element[mat, j + 1, k + 1]) * Binomial[m, j]) * Binomial[n, k]) * (1 - x)^(m - j)) * x^(j)) * (1 - y)^(n - k)) * y^(k)), k, 0, n], j, 0, m]]"/>
+	<output a0="bz"/>
+</command>
+<element type="functionNVar" label="bz">
+	<show object="false" label="false" ev="4"/>
+	<objColor r="204" g="0" b="0" alpha="0.75"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<isShape val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+</element>
+<command name="Surface">
+	<input a0="bx(s, t)" a1="by(s, t)" a2="bz(s, t)" a3="s" a4="0" a5="1" a6="t" a7="0" a8="1"/>
+	<output a0="bf"/>
+</command>
+<element type="surfacecartesian3d" label="bf">
+	<show object="true" label="false" ev="4"/>
+	<objColor r="204" g="0" b="0" alpha="0.75"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<isShape val="false"/>
+	<lineStyle thickness="1" type="0" typeHidden="1"/>
+</element>
+</construction>
+</macro>
+<macro cmdName="BezierSurface" toolName="BezierSurface" toolHelp="BezierSurface[&lt;matrix of 3D points&gt;]" iconFile="" showInToolBar="true" copyCaptions="true" viewId="1">
+<macroInput a0="mat"/>
+<macroOutput a0="bf"/>
+<construction title="" author="" date="">
+<expression label ="mat" exp="{{(0, 0, 0), (0, 1, 1), (0, 2, 0), (0, 3, 1)}, {(1, 0, 0), (1, 1, 1), (1, 2, 0), (1, 3, 1)}, {(2, 0, 0), (2, 1, 1), (2, 2, 0), (2, 3, 1)}}"/>
+<element type="list" label="mat">
+	<show object="true" label="false" ev="4"/>
+	<objColor r="0" g="100" b="0" alpha="0"/>
+	<bgColor r="255" g="255" b="255" alpha="255"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<animation step="1" speed="1" type="0" playing="false"/>
+	<isShape val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<pointSize val="5"/>
+	<pointStyle val="0"/>
+</element>
+<expression label="m" exp="Dimension[mat] - 1" />
+<element type="numeric" label="m">
+	<value val="2"/>
+	<symbolic val="true" />
+	<objColor r="0" g="0" b="0" alpha="0.10000000149011612"/>
+</element>
+<expression label="n" exp="Dimension[Element[mat, 1]] - 1" />
+<element type="numeric" label="n">
+	<value val="3"/>
+	<symbolic val="true" />
+	<objColor r="0" g="0" b="0" alpha="0.10000000149011612"/>
+</element>
+<command name="Sum">
+	<input a0="Sum[Sequence[Sequence[((((((x(Element[mat, j + 1, k + 1]) * Binomial[m, j]) * Binomial[n, k]) * (1 - x)^(m - j)) * x^(j)) * (1 - y)^(n - k)) * y^(k)), k, 0, n], j, 0, m]]"/>
+	<output a0="bx"/>
+</command>
+<element type="functionNVar" label="bx">
+	<show object="false" label="false" ev="4"/>
+	<objColor r="204" g="0" b="0" alpha="0.75"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<isShape val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+</element>
+<command name="Sum">
+	<input a0="Sum[Sequence[Sequence[((((((y(Element[mat, j + 1, k + 1]) * Binomial[m, j]) * Binomial[n, k]) * (1 - x)^(m - j)) * x^(j)) * (1 - y)^(n - k)) * y^(k)), k, 0, n], j, 0, m]]"/>
+	<output a0="by"/>
+</command>
+<element type="functionNVar" label="by">
+	<show object="false" label="false" ev="4"/>
+	<objColor r="204" g="0" b="0" alpha="0.75"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<isShape val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+</element>
+<command name="Sum">
+	<input a0="Sum[Sequence[Sequence[((((((z(Element[mat, j + 1, k + 1]) * Binomial[m, j]) * Binomial[n, k]) * (1 - x)^(m - j)) * x^(j)) * (1 - y)^(n - k)) * y^(k)), k, 0, n], j, 0, m]]"/>
+	<output a0="bz"/>
+</command>
+<element type="functionNVar" label="bz">
+	<show object="false" label="false" ev="4"/>
+	<objColor r="204" g="0" b="0" alpha="0.75"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<isShape val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+</element>
+<command name="Surface">
+	<input a0="bx(s, t)" a1="by(s, t)" a2="bz(s, t)" a3="s" a4="0" a5="1" a6="t" a7="0" a8="1"/>
+	<output a0="bf"/>
+</command>
+<element type="surfacecartesian3d" label="bf">
+	<show object="true" label="false" ev="4"/>
+	<objColor r="204" g="0" b="0" alpha="0.75"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<isShape val="false"/>
+	<lineStyle thickness="1" type="0" typeHidden="1"/>
+</element>
+</construction>
+</macro>
+<macro cmdName="Polyline3D" toolName="Polyline3D" toolHelp="Polyline3D[&lt;list of 3D points&gt;]" iconFile="" showInToolBar="true" copyCaptions="true" viewId="1">
+<macroInput a0="pts"/>
+<macroOutput a0="list2"/>
+<construction title="" author="" date="">
+<expression label ="pts" exp="{(1, 2, 3), (1, 1, 1), (0, 0, 1)}"/>
+<element type="list" label="pts">
+	<show object="false" label="false" ev="4"/>
+	<objColor r="0" g="100" b="0" alpha="0"/>
+	<bgColor r="255" g="255" b="255" alpha="255"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<animation step="1" speed="1" type="0" playing="false"/>
+	<isShape val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<pointSize val="5"/>
+	<pointStyle val="0"/>
+</element>
+<command name="Sequence">
+	<input a0="Segment[Element[pts, k], Element[pts, k + 1]]" a1="k" a2="1" a3="Length[pts] - 1"/>
+	<output a0="list2"/>
+</command>
+<element type="list" label="list2">
+	<show object="true" label="false" ev="4"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<bgColor r="255" g="255" b="255" alpha="255"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<isShape val="false"/>
+	<lineStyle thickness="1" type="20" typeHidden="1"/>
+	<pointSize val="5"/>
+	<pointStyle val="0"/>
+</element>
+</construction>
+</macro>
+<macro cmdName="Net3D" toolName="Net3D" toolHelp="Net3D[&lt;matrix of 3D points&gt;]" iconFile="" showInToolBar="true" copyCaptions="true" viewId="1">
+<macroInput a0="mat"/>
+<macroOutput a0="xlines" a1="ylines"/>
+<construction title="" author="" date="">
+<expression label ="mat" exp="{{(0, 0, 0), (0, 1, 1), (0, 2, 0), (0, 3, 1)}, {(1, 0, 0), (1, 1, 1), (1, 2, 0), (1, 3, 1)}, {(2, 0, 0), (2, 1, 1), (2, 2, 0), (2, 3, 1)}}"/>
+<element type="list" label="mat">
+	<show object="true" label="false" ev="4"/>
+	<objColor r="0" g="100" b="0" alpha="0"/>
+	<bgColor r="255" g="255" b="255" alpha="255"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<animation step="1" speed="1" type="0" playing="false"/>
+	<isShape val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<pointSize val="5"/>
+	<pointStyle val="0"/>
+</element>
+<command name="Zip">
+	<input a0="Polyline3D[pts]" a1="pts" a2="mat"/>
+	<output a0="xlines"/>
+</command>
+<element type="list" label="xlines">
+	<show object="true" label="false" ev="4"/>
+	<objColor r="0" g="100" b="0" alpha="0"/>
+	<bgColor r="255" g="255" b="255" alpha="255"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<isShape val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<pointSize val="5"/>
+	<pointStyle val="0"/>
+</element>
+<command name="Zip">
+	<input a0="Polyline3D[pts]" a1="pts" a2="Transpose[mat]"/>
+	<output a0="ylines"/>
+</command>
+<element type="list" label="ylines">
+	<show object="true" label="false" ev="4"/>
+	<objColor r="0" g="100" b="0" alpha="0"/>
+	<bgColor r="255" g="255" b="255" alpha="255"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<isShape val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<pointSize val="5"/>
+	<pointStyle val="0"/>
+</element>
+</construction>
+</macro>
+</geogebra>

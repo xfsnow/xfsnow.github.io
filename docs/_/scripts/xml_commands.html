@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GeoGebra XML 执行工具</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html, body { height: 100%; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 8px;
+            display: flex;
+            flex-direction: column;
+        }
+        .header {
+            text-align: center;
+            color: white;
+            margin-bottom: 8px;
+            padding: 4px 0;
+        }
+        .header h1 { font-size: 1.1rem; margin-bottom: 2px; font-weight: 500; }
+        .header p { font-size: 0.75rem; opacity: 0.9; }
+        .main-content {
+            display: grid;
+            grid-template-columns: 260px 400px 1fr;
+            gap: 8px;
+            flex: 1;
+            min-height: calc(100vh - 55px);
+        }
+        .sidebar {
+            background: white;
+            border-radius: 10px;
+            padding: 10px;
+            display: flex;
+            flex-direction: column;
+            height: calc(100vh - 55px);
+            max-height: calc(100vh - 55px);
+        }
+        .stats-bar {
+            display: flex;
+            justify-content: space-around;
+            padding: 8px;
+            background: #f8f9fa;
+            border-radius: 6px;
+            margin-bottom: 10px;
+        }
+        .stat-item { text-align: center; }
+        .stat-value { font-size: 1rem; font-weight: 600; color: #667eea; }
+        .stat-label { font-size: 0.65rem; color: #888; margin-top: 1px; }
+        .sidebar h2 {
+            font-size: 0.85rem;
+            color: #333;
+            margin-bottom: 8px;
+            padding-bottom: 4px;
+            border-bottom: 1px solid #eee;
+        }
+        .material-list {
+            list-style: none;
+            flex: 1;
+            overflow-y: auto;
+            margin-bottom: 8px;
+        }
+        .material-item {
+            padding: 6px 8px;
+            margin-bottom: 4px;
+            background: #f8f9fa;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.2s;
+            border: 1px solid transparent;
+        }
+        .material-item:hover { background: #e9ecef; border-color: #667eea; }
+        .material-item.active { background: #667eea; color: white; }
+        .material-item .id { font-size: 0.7rem; opacity: 0.7; }
+        .material-item .title { font-size: 0.78rem; font-weight: 500; }
+        .sidebar-footer { margin-top: auto; }
+        .xml-panel {
+            background: white;
+            border-radius: 10px;
+            padding: 10px;
+            display: flex;
+            flex-direction: column;
+            height: calc(100vh - 55px);
+            max-height: calc(100vh - 55px);
+            width: 400px;
+        }
+        .xml-header { margin-bottom: 8px; padding-bottom: 6px; border-bottom: 1px solid #eee; }
+        .xml-header h3 { font-size: 0.9rem; color: #333; font-weight: 500; }
+        .xml-header span { font-size: 0.65rem; color: #888; margin-left: 6px; }
+        .material-title {
+            padding: 8px;
+            background: #f0f4ff;
+            border-radius: 5px;
+            margin-bottom: 8px;
+            font-size: 0.85rem;
+            color: #333;
+            font-weight: 500;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        .xml-textarea {
+            flex: 1;
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            font-family: 'Courier New', Courier, 'Lucida Console', 'Monaco', 'Consolas', monospace;
+            font-size: 11px;
+            line-height: 1.4;
+            resize: none;
+            background: #fafafa;
+            overflow-y: auto;
+            tab-size: 2;
+        }
+        .xml-textarea:focus {
+            outline: none;
+            border-color: #667eea;
+            box-shadow: 0 0 0 2px rgba(102, 126, 234, 0.1);
+        }
+        .xml-actions { display: flex; gap: 6px; margin-top: 8px; }
+        .btn {
+            padding: 6px 14px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 0.78rem;
+            font-weight: 500;
+            transition: all 0.2s;
+        }
+        .btn-primary {
+            flex: 1;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+        .btn-primary:hover { transform: translateY(-1px); box-shadow: 0 2px 8px rgba(102, 126, 234, 0.4); }
+        .btn-secondary { flex: 1; background: #f8f9fa; color: #666; }
+        .btn-secondary:hover { background: #e9ecef; }
+        .btn-outline {
+            width: 100%;
+            background: transparent;
+            color: #667eea;
+            border: 1px solid #667eea;
+            margin-top: 6px;
+        }
+        .btn-outline:hover { background: #667eea; color: white; }
+        .btn:disabled { opacity: 0.5; cursor: not-allowed; transform: none !important; }
+        .progress-bar {
+            height: 2px;
+            background: #eee;
+            border-radius: 1px;
+            margin-bottom: 6px;
+            overflow: hidden;
+        }
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #667eea, #764ba2);
+            transition: width 0.3s;
+        }
+        .preview-panel {
+            background: white;
+            border-radius: 10px;
+            padding: 10px;
+            height: calc(100vh - 55px);
+            max-height: calc(100vh - 55px);
+        }
+        .ggb-wrapper {
+            width: 100%;
+            height: 100%;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+            background: #fff;
+            border: 1px solid #eee;
+            position: relative;
+        }
+        .ggb-container {
+            width: 100%;
+            height: 100%;
+        }
+        .loading-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(255,255,255,0.95);
+            z-index: 100;
+        }
+        .loading-text { color: #667eea; font-size: 0.9rem; }
+        @media (max-width: 1200px) {
+            .main-content { grid-template-columns: 240px 360px 1fr; }
+            .xml-panel { width: 360px; }
+        }
+        @media (max-width: 900px) {
+            .main-content { grid-template-columns: 1fr; height: auto; }
+            .sidebar, .xml-panel, .preview-panel { 
+                height: auto; 
+                max-height: none;
+                width: 100%; 
+            }
+            .ggb-wrapper { height: 400px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>GeoGebra XML 执行工具</h1>
+        <p>验证提取的命令是否能正确绘制图形</p>
+    </div>
+    
+    <div class="main-content">
+        <div class="sidebar">
+            <div class="stats-bar">
+                <div class="stat-item">
+                    <div class="stat-value" id="statTotal">0</div>
+                    <div class="stat-label">材料总数</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-value" id="statLoaded">0</div>
+                    <div class="stat-label">已加载</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-value" id="statSuccess">0</div>
+                    <div class="stat-label">成功执行</div>
+                </div>
+            </div>
+            
+            <h2>材料列表</h2>
+            <ul class="material-list" id="materialList">
+                <li style="padding: 8px; color: #667eea;">加载中...</li>
+            </ul>
+            
+            <div class="sidebar-footer">
+                <button class="btn btn-outline" id="testBtn">测试画板</button>
+            </div>
+        </div>
+        
+        <div class="xml-panel">
+            <div class="xml-header">
+                <h3>GeoGebra XML<span id="xmlLength">0 字符</span></h3>
+            </div>
+            <div class="material-title" id="materialTitle">选择一个材料</div>
+            <textarea id="xmlTextarea" class="xml-textarea"></textarea>
+            <div class="xml-actions">
+                <button class="btn btn-secondary" id="clearBtn" disabled>清空画板</button>
+                <button class="btn btn-primary" id="runBtn" disabled>执行 XML</button>
+            </div>
+            <div class="progress-bar" id="progressBar" style="display: none;">
+                <div class="progress-fill" id="progressFill"></div>
+            </div>
+        </div>
+        
+        <div class="preview-panel">
+            <div class="ggb-wrapper">
+                <div id="ggbContainer" class="ggb-container"></div>
+                <div class="loading-overlay" id="loadingOverlay">
+                    <span class="loading-text">GeoGebra 加载中...</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.geogebra.org/apps/deployggb.js"></script>
+    
+    <script>
+        const BASE_DIR = '../../sample';
+        let currentMaterial = null;
+        let currentXML = '';
+        let ggbApi = null;
+        let ggbApplet = null;
+        let isGGBInitialized = false;
+
+        async function loadMaterials() {
+            try {
+                const response = await fetch(`${BASE_DIR}/materials.json`);
+                if (!response.ok) throw new Error('加载失败');
+                const materials = await response.json();
+                displayMaterials(materials);
+            } catch (error) {
+                console.error('加载材料失败:', error);
+                document.getElementById('materialList').innerHTML = '<li style="padding: 8px; color: #dc3545;">加载失败</li>';
+            }
+        }
+
+        function displayMaterials(materials) {
+            const list = document.getElementById('materialList');
+            document.getElementById('statTotal').textContent = materials.length;
+            
+            if (!materials.length) {
+                list.innerHTML = '<li style="padding: 8px; color: #999;">暂无材料</li>';
+                return;
+            }
+            
+            list.innerHTML = materials.map(m => `
+                <li class="material-item" data-id="${m.id}" data-title="${m.title}">
+                    <div class="id">${m.id}</div>
+                    <div class="title">${m.title}</div>
+                </li>
+            `).join('');
+            
+            list.querySelectorAll('.material-item').forEach(item => {
+                item.addEventListener('click', () => selectMaterial(item.dataset.id, item.dataset.title));
+            });
+        }
+
+        async function selectMaterial(id, title) {
+            currentMaterial = id;
+            currentXML = '';
+            
+            document.querySelector('.material-item.active')?.classList.remove('active');
+            document.querySelector(`[data-id="${id}"]`)?.classList.add('active');
+            
+            document.getElementById('materialTitle').textContent = title;
+            
+            try {
+                const response = await fetch(`${BASE_DIR}/${id}/geogebra.xml`);
+                if (!response.ok) throw new Error('无法加载 geogebra.xml');
+                
+                const xmlText = await response.text();
+                currentXML = extractConstructionXML(xmlText);
+                
+                if (!currentXML) throw new Error('未找到 <construction> 节点');
+                
+                document.getElementById('xmlTextarea').value = currentXML;
+                document.getElementById('xmlLength').textContent = `${currentXML.length} 字符`;
+                
+                document.getElementById('statLoaded').textContent = parseInt(document.getElementById('statLoaded').textContent) + 1;
+                
+                if (isGGBInitialized) {
+                    resetGGBApplet();
+                }
+            } catch (error) {
+                console.error('加载 XML 失败:', error);
+                document.getElementById('materialTitle').textContent = `加载失败: ${error.message}`;
+            }
+        }
+
+        function extractConstructionXML(xmlText) {
+            const match = xmlText.match(/<construction[\s\S]*?<\/construction>/i);
+            return match ? match[0] : null;
+        }
+
+        function initGGBApplet() {
+            const container = document.getElementById('ggbContainer');
+            const wrapper = document.querySelector('.ggb-wrapper');
+            
+            const initWidth = Math.max(wrapper.clientWidth || 600, 320);
+            const initHeight = Math.max(wrapper.clientHeight || 400, 240);
+            
+            console.log('GGB init - Width:', initWidth, 'Height:', initHeight);
+            
+            const params = {
+                id: 'ggbContainer',
+                width: initWidth,
+                height: initHeight,
+                showToolBar: true,
+                showAlgebraInput: false,
+                showMenuBar: true,
+                appName: "classic",
+                language: "zh-CN",
+                enableLabelDrags: false,
+                enableShiftDragZoom: true,
+                showZoomButtons: true,
+                useBrowserForJS: false,
+                allowUpscale: true,
+                capturingThreshold: null
+            };
+            
+            try {
+                const applet = new GGBApplet(params, '5.0', 'ggbContainer');
+                
+                params.appletOnLoad = function(api) {
+                    ggbApi = api;
+                    isGGBInitialized = true;
+                    
+                    try {
+                        if (typeof api.setErrorDialogsActive === 'function') {
+                            api.setErrorDialogsActive(false);
+                        }
+                    } catch(e) {}
+                    
+                    document.getElementById('loadingOverlay').style.display = 'none';
+                    document.getElementById('runBtn').disabled = false;
+                    document.getElementById('clearBtn').disabled = false;
+                    
+                    console.log('GeoGebra initialized successfully');
+                };
+                
+                applet.inject('ggbContainer', 'preferHTML5');
+                
+                if (typeof ResizeObserver !== 'undefined') {
+                    const resizeObserver = new ResizeObserver(entries => {
+                        for (let entry of entries) {
+                            const newWidth = entry.contentRect.width;
+                            const newHeight = entry.contentRect.height;
+                            
+                            if (newWidth > 100 && ggbApi && typeof ggbApi.setSize === 'function') {
+                                ggbApi.setSize(newWidth, newHeight);
+                            }
+                        }
+                    });
+                    
+                    resizeObserver.observe(wrapper);
+                }
+                
+            } catch (error) {
+                console.error('GeoGebra initialization failed:', error);
+                document.getElementById('loadingOverlay').innerHTML = '<span class="loading-text" style="color: #dc3545;">GeoGebra 加载失败</span>';
+            }
+        }
+
+        function runAllCommands() {
+            if (!ggbApi) {
+                alert('GeoGebra 画板尚未加载完成');
+                return;
+            }
+            
+            const xmlString = document.getElementById('xmlTextarea').value.trim();
+            if (!xmlString) {
+                alert('没有可执行的 XML');
+                return;
+            }
+            
+            document.getElementById('runBtn').disabled = true;
+            document.getElementById('clearBtn').disabled = true;
+            document.getElementById('progressBar').style.display = 'block';
+            document.getElementById('progressFill').style.width = '0%';
+            
+            try {
+                ggbApi.reset();
+                clearAllViews();
+            } catch (e) {
+                console.error('清空画板失败:', e);
+            }
+            
+            try {
+                ggbApi.evalXML(xmlString);
+                document.getElementById('statSuccess').textContent = parseInt(document.getElementById('statSuccess').textContent) + 1;
+                
+                setTimeout(() => {
+                    try {
+                        if (typeof ggbApi.evalCommand === 'function') {
+                            ggbApi.evalCommand("SetAxesRatio[1, 1]");
+                        }
+                    } catch (e) {
+                        console.error('设置坐标轴比例失败:', e);
+                    }
+                }, 500);
+                
+            } catch (error) {
+                console.error('XML 执行失败:', error);
+                alert('XML 执行失败: ' + error.message);
+            }
+            
+            document.getElementById('progressFill').style.width = '100%';
+            document.getElementById('runBtn').disabled = false;
+            document.getElementById('clearBtn').disabled = false;
+            document.getElementById('progressBar').style.display = 'none';
+        }
+
+        function clearBoard() {
+            resetGGBApplet();
+        }
+
+        function clearAllViews() {
+            if (!ggbApi) return;
+            try {
+                if (typeof ggbApi.evalCommand === 'function') {
+                    ggbApi.evalCommand("DeleteAll");
+                    ggbApi.evalCommand("DeleteAll[3]");
+                }
+            } catch (e) {
+                console.error('清空视图失败:', e);
+            }
+        }
+
+        function resetGGBApplet() {
+            const container = document.getElementById('ggbContainer');
+            const wrapper = document.querySelector('.ggb-wrapper');
+            
+            if (!container || !wrapper) return;
+            
+            document.getElementById('loadingOverlay').style.display = 'flex';
+            
+            try {
+                if (ggbApi && typeof ggbApi.reset === 'function') {
+                    ggbApi.reset();
+                }
+            } catch (e) {
+                console.error('Reset failed:', e);
+            }
+            
+            container.innerHTML = '';
+            ggbApi = null;
+            ggbApplet = null;
+            isGGBInitialized = false;
+            
+            const initWidth = Math.max(wrapper.clientWidth || 600, 320);
+            const initHeight = Math.max(wrapper.clientHeight || 400, 240);
+            
+            const params = {
+                id: 'ggbContainer',
+                width: initWidth,
+                height: initHeight,
+                showToolBar: true,
+                showAlgebraInput: false,
+                showMenuBar: true,
+                appName: "classic",
+                language: "zh-CN",
+                enableLabelDrags: false,
+                enableShiftDragZoom: true,
+                showZoomButtons: true,
+                useBrowserForJS: false,
+                allowUpscale: true,
+                capturingThreshold: null
+            };
+            
+            try {
+                const applet = new GGBApplet(params, '5.0', 'ggbContainer');
+                
+                params.appletOnLoad = function(api) {
+                    ggbApi = api;
+                    isGGBInitialized = true;
+                    
+                    try {
+                        if (typeof api.setErrorDialogsActive === 'function') {
+                            api.setErrorDialogsActive(false);
+                        }
+                    } catch(e) {}
+                    
+                    document.getElementById('loadingOverlay').style.display = 'none';
+                    document.getElementById('runBtn').disabled = false;
+                    document.getElementById('clearBtn').disabled = false;
+                    
+                    console.log('GeoGebra reinitialized successfully');
+                };
+                
+                applet.inject('ggbContainer', 'preferHTML5');
+                
+            } catch (error) {
+                console.error('GeoGebra reinitialization failed:', error);
+                document.getElementById('loadingOverlay').innerHTML = '<span class="loading-text" style="color: #dc3545;">GeoGebra 重新加载失败</span>';
+            }
+        }
+
+        function testGGBApplet() {
+            const panel = document.createElement('div');
+            panel.id = 'testPanel';
+            panel.innerHTML = `
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
+                    <h3 style="font-size: 1rem;">画板测试</h3>
+                    <button id="closeTestBtn" style="padding: 4px 12px; border: none; border-radius: 4px; cursor: pointer;">关闭</button>
+                </div>
+                <div id="testGGBContainer" style="width: 500px; height: 400px; border: 1px solid #eee; border-radius: 6px;"></div>
+            `;
+            Object.assign(panel.style, {
+                padding: '12px',
+                position: 'fixed',
+                top: '50%',
+                left: '50%',
+                transform: 'translate(-50%, -50%)',
+                background: '#fff',
+                borderRadius: '8px',
+                zIndex: '1000',
+                boxShadow: '0 4px 20px rgba(0,0,0,0.2)'
+            });
+            document.body.appendChild(panel);
+            
+            document.getElementById('closeTestBtn').addEventListener('click', () => {
+                document.body.removeChild(panel);
+            });
+            
+            const params = {
+                appName: "classic",
+                width: 500,
+                height: 400,
+                showToolBar: true,
+                showAlgebraInput: true
+            };
+            const applet = new GGBApplet(params);
+            applet.inject('testGGBContainer');
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            loadMaterials();
+            document.getElementById('runBtn').addEventListener('click', runAllCommands);
+            document.getElementById('clearBtn').addEventListener('click', clearBoard);
+            document.getElementById('testBtn').addEventListener('click', testGGBApplet);
+            
+            setTimeout(() => {
+                initGGBApplet();
+            }, 100);
+        });
+    </script>
+</body>
+</html>

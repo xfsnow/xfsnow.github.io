@@ -1,0 +1,1186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<geogebra format="5.0" version="5.0.426.0" app="classic" platform="d"  xsi:noNamespaceSchemaLocation="http://www.geogebra.org/ggt.xsd" xmlns="" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" >
+<macro cmdName="Frog" toolName="Frog" toolHelp="Frog(A, B, k, f)" iconFile="" showInToolBar="true" copyCaptions="true">
+<macroInput a0="A" a1="B" a2="k" a3="f"/>
+<macroOutput a0="frog"/>
+<construction title="" author="" date="">
+<element type="numeric" label="k">
+	<value val="7.0"/>
+	<symbolic val="true" />
+	<show object="true" label="true"/>
+	<objColor r="0" g="0" b="0" alpha="0.10000000149011612"/>
+	<layer val="0"/>
+	<labelMode val="1"/>
+	<animation step="0.01" speed="1" type="0" playing="false"/>
+</element>
+<expression label ="f" exp="f(x, y, z) = If[x ≤ y, 0, If[x ≥ z, 1, (x - y) / (z - y)]]"/>
+<element type="functionNVar" label="f">
+	<show object="true" label="true" ev="4"/>
+	<objColor r="204" g="0" b="0" alpha="0.75"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<animation step="0.1" speed="1" type="0" playing="false"/>
+</element>
+<element type="point" label="A">
+	<show object="true" label="true" ev="4"/>
+	<objColor r="255" g="127" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<animation step="0.1" speed="1" type="1" playing="false"/>
+	<coords x="-1.0" y="-3.0" z="1.0"/>
+	<pointSize val="5"/>
+	<pointStyle val="0"/>
+</element>
+<element type="point" label="B">
+	<show object="true" label="true" ev="4"/>
+	<objColor r="255" g="127" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<animation step="0.1" speed="1" type="1" playing="false"/>
+	<coords x="3.0" y="-3.0" z="1.0"/>
+	<pointSize val="5"/>
+	<pointStyle val="0"/>
+</element>
+<command name="Polygon">
+	<input a0="A" a1="B" a2="6"/>
+	<output a0="poly1" a1="g" a2="h" a3="i" a4="j" a5="l" a6="m1" a7="C" a8="D" a9="E" a10="F"/>
+</command>
+<element type="polygon" label="poly1">
+	<lineStyle thickness="5" type="0" typeHidden="1" opacity="178"/>
+	<show object="true" label="true" ev="4"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+</element>
+<element type="segment" label="g">
+	<show object="true" label="false" ev="4"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<auxiliary val="false"/>
+	<coords x="0.0" y="4.0" z="12.0"/>
+	<lineStyle thickness="5" type="0" typeHidden="1" opacity="178"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment" label="h">
+	<show object="true" label="false" ev="4"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<auxiliary val="true"/>
+	<coords x="-3.464101615137755" y="2.0" z="16.392304845413264"/>
+	<lineStyle thickness="5" type="0" typeHidden="1" opacity="178"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment" label="i">
+	<show object="true" label="false" ev="4"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<auxiliary val="true"/>
+	<coords x="-3.4641016151377553" y="-1.9999999999999996" z="18.248711305964285"/>
+	<lineStyle thickness="5" type="0" typeHidden="1" opacity="178"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment" label="j">
+	<show object="true" label="false" ev="4"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<auxiliary val="true"/>
+	<coords x="-1.3322676295501878E-15" y="-3.9999999999999996" z="15.712812921102042"/>
+	<lineStyle thickness="5" type="0" typeHidden="1" opacity="178"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment" label="l">
+	<show object="true" label="false" ev="4"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<auxiliary val="true"/>
+	<coords x="3.4641016151377535" y="-2.000000000000001" z="11.320508075688778"/>
+	<lineStyle thickness="5" type="0" typeHidden="1" opacity="178"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment" label="m1">
+	<show object="true" label="false" ev="4"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<auxiliary val="true"/>
+	<coords x="3.464101615137758" y="2.0" z="9.464101615137757"/>
+	<lineStyle thickness="5" type="0" typeHidden="1" opacity="178"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="point" label="C">
+	<show object="true" label="true" ev="4"/>
+	<objColor r="255" g="127" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<auxiliary val="true"/>
+	<coords x="5.0" y="0.46410161513775483" z="1.0"/>
+	<pointSize val="5"/>
+	<pointStyle val="0"/>
+</element>
+<element type="point" label="D">
+	<show object="true" label="true" ev="4"/>
+	<objColor r="255" g="127" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<auxiliary val="true"/>
+	<coords x="3.0000000000000004" y="3.92820323027551" z="1.0"/>
+	<pointSize val="5"/>
+	<pointStyle val="0"/>
+</element>
+<element type="point" label="E">
+	<show object="true" label="true" ev="4"/>
+	<objColor r="255" g="127" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<auxiliary val="true"/>
+	<coords x="-0.9999999999999991" y="3.9282032302755114" z="1.0"/>
+	<pointSize val="5"/>
+	<pointStyle val="0"/>
+</element>
+<element type="point" label="F">
+	<show object="true" label="true" ev="4"/>
+	<objColor r="255" g="127" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<auxiliary val="true"/>
+	<coords x="-3.0" y="0.46410161513775794" z="1.0"/>
+	<pointSize val="5"/>
+	<pointStyle val="0"/>
+</element>
+<command name="PointIn">
+	<input a0="poly1"/>
+	<output a0="G"/>
+</command>
+<element type="point" label="G">
+	<show object="false" label="true" ev="4"/>
+	<objColor r="255" g="127" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<animation step="0.1" speed="1" type="0" playing="false"/>
+	<coords x="-0.07416466780773412" y="2.3023578688284054" z="1.0"/>
+	<pointSize val="5"/>
+	<pointStyle val="1"/>
+</element>
+<command name="PointIn">
+	<input a0="poly1"/>
+	<output a0="H"/>
+</command>
+<element type="point" label="H">
+	<show object="false" label="true" ev="4"/>
+	<objColor r="255" g="127" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<animation step="1" speed="1" type="0" playing="false"/>
+	<coords x="-0.5157942020632147" y="1.5782969507086273" z="1.0"/>
+	<pointSize val="5"/>
+	<pointStyle val="0"/>
+</element>
+<command name="Point">
+	<input a0="poly1"/>
+	<output a0="I"/>
+</command>
+<element type="point" label="I">
+	<show object="false" label="true" ev="4"/>
+	<objColor r="255" g="127" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<animation step="0.1" speed="1" type="1" playing="false"/>
+	<coords x="-2.5011871731118642" y="1.328070774775068" z="1.0"/>
+	<pointSize val="5"/>
+	<pointStyle val="0"/>
+</element>
+<command name="Point">
+	<input a0="poly1"/>
+	<output a0="J"/>
+</command>
+<element type="point" label="J">
+	<show object="false" label="true" ev="4"/>
+	<objColor r="255" g="127" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<animation step="1" speed="1" type="1" playing="false"/>
+	<coords x="-2.818592083937325" y="0.14989388762201492" z="1.0"/>
+	<pointSize val="5"/>
+	<pointStyle val="0"/>
+</element>
+<command name="PointIn">
+	<input a0="poly1"/>
+	<output a0="K"/>
+</command>
+<element type="point" label="K">
+	<show object="false" label="true" ev="4"/>
+	<objColor r="255" g="127" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<animation step="1" speed="1" type="0" playing="false"/>
+	<coords x="-0.960491343016038" y="0.43244013616775145" z="1.0"/>
+	<pointSize val="5"/>
+	<pointStyle val="0"/>
+</element>
+<command name="PointIn">
+	<input a0="poly1"/>
+	<output a0="L"/>
+</command>
+<element type="point" label="L">
+	<show object="false" label="true" ev="4"/>
+	<objColor r="255" g="127" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<animation step="1" speed="1" type="0" playing="false"/>
+	<coords x="-0.1228232534256426" y="-0.38819749754636446" z="1.0"/>
+	<pointSize val="5"/>
+	<pointStyle val="0"/>
+</element>
+<command name="PointIn">
+	<input a0="poly1"/>
+	<output a0="M"/>
+</command>
+<element type="point" label="M">
+	<show object="false" label="true" ev="4"/>
+	<objColor r="255" g="127" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<animation step="0.1" speed="1" type="0" playing="false"/>
+	<coords x="-0.9366909496011031" y="-0.29500572707689576" z="1.0"/>
+	<pointSize val="5"/>
+	<pointStyle val="0"/>
+</element>
+<command name="Point">
+	<input a0="poly1"/>
+	<output a0="N"/>
+</command>
+<element type="point" label="N">
+	<show object="false" label="true" ev="4"/>
+	<objColor r="255" g="127" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<animation step="1" speed="1" type="1" playing="false"/>
+	<coords x="-2.199851544757159" y="-0.9217961629405955" z="1.0"/>
+	<pointSize val="5"/>
+	<pointStyle val="0"/>
+</element>
+<command name="PointIn">
+	<input a0="poly1"/>
+	<output a0="O"/>
+</command>
+<element type="point" label="O">
+	<show object="false" label="true" ev="4"/>
+	<objColor r="255" g="127" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<animation step="1" speed="1" type="0" playing="false"/>
+	<coords x="-1.353039176863566" y="-1.542886903272493" z="1.0"/>
+	<pointSize val="5"/>
+	<pointStyle val="0"/>
+</element>
+<command name="PointIn">
+	<input a0="poly1"/>
+	<output a0="P"/>
+</command>
+<element type="point" label="P">
+	<show object="false" label="true" ev="4"/>
+	<objColor r="255" g="127" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<animation step="1" speed="1" type="0" playing="false"/>
+	<coords x="-0.7023364045634932" y="-2.0712556813598932" z="1.0"/>
+	<pointSize val="5"/>
+	<pointStyle val="0"/>
+</element>
+<command name="PointIn">
+	<input a0="poly1"/>
+	<output a0="Q"/>
+</command>
+<element type="point" label="Q">
+	<show object="false" label="true" ev="4"/>
+	<objColor r="255" g="127" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<animation step="1" speed="1" type="0" playing="false"/>
+	<coords x="0.3136759713897038" y="-2.3695539704903155" z="1.0"/>
+	<pointSize val="5"/>
+	<pointStyle val="0"/>
+</element>
+<command name="PointIn">
+	<input a0="poly1"/>
+	<output a0="R"/>
+</command>
+<element type="point" label="R">
+	<show object="false" label="true" ev="4"/>
+	<objColor r="255" g="127" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<animation step="1" speed="1" type="0" playing="false"/>
+	<coords x="1.2742598744576208" y="-2.289267303309468" z="1.0"/>
+	<pointSize val="5"/>
+	<pointStyle val="0"/>
+</element>
+<command name="Point">
+	<input a0="poly1"/>
+	<output a0="S"/>
+</command>
+<element type="point" label="S">
+	<show object="false" label="true" ev="4"/>
+	<objColor r="255" g="127" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<animation step="1" speed="1" type="1" playing="false"/>
+	<coords x="1.388230809249413" y="-3.0" z="1.0"/>
+	<pointSize val="5"/>
+	<pointStyle val="0"/>
+</element>
+<command name="Point">
+	<input a0="poly1"/>
+	<output a0="T"/>
+</command>
+<element type="point" label="T">
+	<show object="false" label="true" ev="4"/>
+	<objColor r="255" g="127" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<animation step="1" speed="1" type="1" playing="false"/>
+	<coords x="2.6225672493677985" y="-3.0" z="1.0"/>
+	<pointSize val="5"/>
+	<pointStyle val="0"/>
+</element>
+<command name="PointIn">
+	<input a0="poly1"/>
+	<output a0="U"/>
+</command>
+<element type="point" label="U">
+	<show object="false" label="true" ev="4"/>
+	<objColor r="255" g="127" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<animation step="0.1" speed="1" type="0" playing="false"/>
+	<coords x="2.4978116867943143" y="-2.0508931208430123" z="1.0"/>
+	<pointSize val="5"/>
+	<pointStyle val="0"/>
+</element>
+<command name="PointIn">
+	<input a0="poly1"/>
+	<output a0="V"/>
+</command>
+<element type="point" label="V">
+	<show object="false" label="true" ev="4"/>
+	<objColor r="255" g="127" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<animation step="0.1" speed="1" type="0" playing="false"/>
+	<coords x="3.3867299590766318" y="-1.8246306951515332" z="1.0"/>
+	<pointSize val="5"/>
+	<pointStyle val="0"/>
+</element>
+<command name="Point">
+	<input a0="poly1"/>
+	<output a0="W"/>
+</command>
+<element type="point" label="W">
+	<show object="false" label="true" ev="4"/>
+	<objColor r="255" g="127" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<animation step="1" speed="1" type="1" playing="false"/>
+	<coords x="4.246672302167165" y="-0.8407002322576096" z="1.0"/>
+	<pointSize val="5"/>
+	<pointStyle val="0"/>
+</element>
+<command name="PointIn">
+	<input a0="poly1"/>
+	<output a0="Z"/>
+</command>
+<element type="point" label="Z">
+	<show object="false" label="true" ev="4"/>
+	<objColor r="255" g="127" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<animation step="0.1" speed="1" type="0" playing="false"/>
+	<coords x="3.228378006017494" y="0.40197563004379555" z="1.0"/>
+	<pointSize val="5"/>
+	<pointStyle val="0"/>
+</element>
+<command name="PointIn">
+	<input a0="poly1"/>
+	<output a0="A_1"/>
+</command>
+<element type="point" label="A_1">
+	<show object="false" label="true" ev="4"/>
+	<objColor r="255" g="127" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<animation step="0.1" speed="1" type="0" playing="false"/>
+	<coords x="2.3940419702901483" y="-0.31922924062684777" z="1.0"/>
+	<pointSize val="5"/>
+	<pointStyle val="0"/>
+</element>
+<command name="PointIn">
+	<input a0="poly1"/>
+	<output a0="B_1"/>
+</command>
+<element type="point" label="B_1">
+	<show object="false" label="true" ev="4"/>
+	<objColor r="255" g="127" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<animation step="0.1" speed="1" type="0" playing="false"/>
+	<coords x="2.3303890212766323" y="0.8569806273156768" z="1.0"/>
+	<pointSize val="5"/>
+	<pointStyle val="0"/>
+</element>
+<command name="Point">
+	<input a0="poly1"/>
+	<output a0="C_1"/>
+</command>
+<element type="point" label="C_1">
+	<show object="false" label="true" ev="4"/>
+	<objColor r="255" g="127" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<animation step="0.1" speed="1" type="1" playing="false"/>
+	<coords x="4.244840795457298" y="1.7720757252090127" z="1.0"/>
+	<pointSize val="5"/>
+	<pointStyle val="0"/>
+</element>
+<command name="PointIn">
+	<input a0="poly1"/>
+	<output a0="D_1"/>
+</command>
+<element type="point" label="D_1">
+	<show object="false" label="true" ev="4"/>
+	<objColor r="255" g="127" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<animation step="0.1" speed="1" type="0" playing="false"/>
+	<coords x="2.607557952444054" y="3.039218110701624" z="1.0"/>
+	<pointSize val="5"/>
+	<pointStyle val="0"/>
+</element>
+<command name="PointIn">
+	<input a0="poly1"/>
+	<output a0="E_1"/>
+</command>
+<element type="point" label="E_1">
+	<show object="false" label="true" ev="4"/>
+	<objColor r="255" g="127" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<animation step="0.1" speed="1" type="0" playing="false"/>
+	<coords x="3.0414655801854007" y="2.701516944726861" z="1.0"/>
+	<pointSize val="5"/>
+	<pointStyle val="0"/>
+</element>
+<command name="PointIn">
+	<input a0="poly1"/>
+	<output a0="F_1"/>
+</command>
+<element type="point" label="F_1">
+	<show object="false" label="true" ev="4"/>
+	<objColor r="255" g="127" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<animation step="1" speed="1" type="0" playing="false"/>
+	<coords x="3.0518848633148243" y="2.13416840793571" z="1.0"/>
+	<pointSize val="5"/>
+	<pointStyle val="0"/>
+</element>
+<command name="PointIn">
+	<input a0="poly1"/>
+	<output a0="G_1"/>
+</command>
+<element type="point" label="G_1">
+	<show object="false" label="true" ev="4"/>
+	<objColor r="255" g="127" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<animation step="1" speed="1" type="0" playing="false"/>
+	<coords x="1.8726017839449547" y="1.982745003364717" z="1.0"/>
+	<pointSize val="5"/>
+	<pointStyle val="0"/>
+</element>
+<command name="PointIn">
+	<input a0="poly1"/>
+	<output a0="H_1"/>
+</command>
+<element type="point" label="H_1">
+	<show object="false" label="true" ev="4"/>
+	<objColor r="255" g="127" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<animation step="1" speed="1" type="0" playing="false"/>
+	<coords x="1.3657591709225247" y="2.29188569484828" z="1.0"/>
+	<pointSize val="5"/>
+	<pointStyle val="0"/>
+</element>
+<command name="Point">
+	<input a0="poly1"/>
+	<output a0="I_1"/>
+</command>
+<element type="point" label="I_1">
+	<show object="false" label="true" ev="4"/>
+	<objColor r="255" g="127" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<animation step="1" speed="1" type="1" playing="false"/>
+	<coords x="2.0468735596556997" y="3.92820323027551" z="1.0"/>
+	<pointSize val="5"/>
+	<pointStyle val="0"/>
+</element>
+<expression label="frog" exp="{Rotate[Polygon[{E, G, H, I}], (-240° * f(k, 0, 1)), E], Rotate[Polygon[{J, K, L, M, N}], (240° * f(k, 1, 2)), A], Rotate[Polygon[{A, O, P, Q, R, S}], (-240° * f(k, 2, 3)), A], Rotate[Polygon[{T, U, V, W, B}], (240° * f(k, 3, 4)), C], Rotate[Polygon[{C, Z, A_1, B_1, C_1}], (-240° * f(k, 4, 5)), C], Rotate[Polygon[{D, D_1, E_1, F_1, G_1, H_1, I_1}], (240° * f(k, 5, 6)), E], Polygon[{E, G, H, I, F, J, K, L, M, N, A, O, P, Q, R, S, T, U, V, W, C, Z, A_1, B_1, C_1, D, D_1, E_1, F_1, G_1, H_1, I_1}]}" />
+<element type="list" label="frog">
+	<show object="true" label="true" ev="4"/>
+	<objColor r="255" g="0" b="51" alpha="0.75"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<lineStyle thickness="0" type="0" typeHidden="1"/>
+	<pointSize val="5"/>
+	<pointStyle val="0"/>
+</element>
+</construction>
+</macro>
+<macro cmdName="Frogs" toolName="Frogs" toolHelp="Frogs(A, B, k, m, f)" iconFile="" showInToolBar="true" copyCaptions="true">
+<macroInput a0="A" a1="B" a2="k" a3="m" a4="f"/>
+<macroOutput a0="frog0" a1="frog1" a2="frog2" a3="frog3" a4="frog4" a5="frog5" a6="frog6"/>
+<construction title="" author="" date="">
+<element type="numeric" label="k">
+	<value val="7.0"/>
+	<symbolic val="true" />
+	<show object="true" label="true"/>
+	<objColor r="0" g="0" b="0" alpha="0.10000000149011612"/>
+	<layer val="0"/>
+	<labelMode val="1"/>
+	<animation step="0.01" speed="1" type="0" playing="false"/>
+</element>
+<expression label ="f" exp="f(x, y, z) = If[x ≤ y, 0, If[x ≥ z, 1, (x - y) / (z - y)]]"/>
+<element type="functionNVar" label="f">
+	<show object="true" label="true" ev="4"/>
+	<objColor r="204" g="0" b="0" alpha="0.75"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<animation step="0.1" speed="1" type="0" playing="false"/>
+</element>
+<element type="point" label="A">
+	<show object="true" label="true" ev="4"/>
+	<objColor r="255" g="127" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<animation step="0.1" speed="1" type="1" playing="false"/>
+	<coords x="-1.0" y="-3.0" z="1.0"/>
+	<pointSize val="5"/>
+	<pointStyle val="0"/>
+</element>
+<element type="point" label="B">
+	<show object="true" label="true" ev="4"/>
+	<objColor r="255" g="127" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<animation step="0.1" speed="1" type="1" playing="false"/>
+	<coords x="2.0" y="-3.0" z="1.0"/>
+	<pointSize val="5"/>
+	<pointStyle val="0"/>
+</element>
+<command name="Polygon">
+	<input a0="A" a1="B" a2="6"/>
+	<output a0="poly1" a1="g" a2="h" a3="i" a4="j" a5="l" a6="m1" a7="C" a8="D" a9="E" a10="F"/>
+</command>
+<element type="polygon" label="poly1">
+	<lineStyle thickness="5" type="0" typeHidden="1" opacity="178"/>
+	<show object="true" label="true" ev="4"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+</element>
+<element type="segment" label="g">
+	<show object="true" label="false" ev="4"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<auxiliary val="false"/>
+	<coords x="0.0" y="3.0" z="9.0"/>
+	<lineStyle thickness="5" type="0" typeHidden="1" opacity="178"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment" label="h">
+	<show object="true" label="false" ev="4"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<auxiliary val="true"/>
+	<coords x="-2.598076211353316" y="1.5" z="9.696152422706632"/>
+	<lineStyle thickness="5" type="0" typeHidden="1" opacity="178"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment" label="i">
+	<show object="true" label="false" ev="4"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<auxiliary val="true"/>
+	<coords x="-2.598076211353317" y="-1.5" z="8.490381056766584"/>
+	<lineStyle thickness="5" type="0" typeHidden="1" opacity="178"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment" label="j">
+	<show object="true" label="false" ev="4"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<auxiliary val="true"/>
+	<coords x="-4.440892098500626E-16" y="-2.999999999999999" z="6.588457268119898"/>
+	<lineStyle thickness="5" type="0" typeHidden="1" opacity="178"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment" label="l">
+	<show object="true" label="false" ev="4"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<auxiliary val="true"/>
+	<coords x="2.598076211353315" y="-1.500000000000001" z="5.892304845413266"/>
+	<lineStyle thickness="5" type="0" typeHidden="1" opacity="178"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment" label="m1">
+	<show object="true" label="false" ev="4"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<auxiliary val="true"/>
+	<coords x="2.5980762113533187" y="1.5000000000000004" z="7.0980762113533205"/>
+	<lineStyle thickness="5" type="0" typeHidden="1" opacity="178"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="point" label="C">
+	<show object="true" label="true" ev="4"/>
+	<objColor r="255" g="127" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<auxiliary val="true"/>
+	<coords x="3.5" y="-0.401923788646684" z="1.0"/>
+	<pointSize val="5"/>
+	<pointStyle val="0"/>
+</element>
+<element type="point" label="D">
+	<show object="true" label="true" ev="4"/>
+	<objColor r="255" g="127" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<auxiliary val="true"/>
+	<coords x="2.0" y="2.196152422706633" z="1.0"/>
+	<pointSize val="5"/>
+	<pointStyle val="0"/>
+</element>
+<element type="point" label="E">
+	<show object="true" label="true" ev="4"/>
+	<objColor r="255" g="127" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<auxiliary val="true"/>
+	<coords x="-0.9999999999999993" y="2.1961524227066334" z="1.0"/>
+	<pointSize val="5"/>
+	<pointStyle val="0"/>
+</element>
+<element type="point" label="F">
+	<show object="true" label="true" ev="4"/>
+	<objColor r="255" g="127" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<auxiliary val="true"/>
+	<coords x="-2.5000000000000004" y="-0.40192378864668155" z="1.0"/>
+	<pointSize val="5"/>
+	<pointStyle val="0"/>
+</element>
+<command name="PointIn">
+	<input a0="poly1"/>
+	<output a0="G"/>
+</command>
+<element type="point" label="G">
+	<show object="false" label="true" ev="4"/>
+	<objColor r="255" g="127" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<animation step="0.1" speed="1" type="0" playing="false"/>
+	<coords x="-0.30562350085580015" y="0.9767684016213041" z="1.0"/>
+	<pointSize val="5"/>
+	<pointStyle val="1"/>
+</element>
+<command name="PointIn">
+	<input a0="poly1"/>
+	<output a0="H"/>
+</command>
+<element type="point" label="H">
+	<show object="false" label="true" ev="4"/>
+	<objColor r="255" g="127" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<animation step="1" speed="1" type="0" playing="false"/>
+	<coords x="-0.6368456515474099" y="0.4337227130314707" z="1.0"/>
+	<pointSize val="5"/>
+	<pointStyle val="0"/>
+</element>
+<command name="Point">
+	<input a0="poly1"/>
+	<output a0="I"/>
+</command>
+<element type="point" label="I">
+	<show object="false" label="true" ev="4"/>
+	<objColor r="255" g="127" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<animation step="0.1" speed="1" type="1" playing="false"/>
+	<coords x="-2.1258903798338986" y="0.24605308108130045" z="1.0"/>
+	<pointSize val="5"/>
+	<pointStyle val="0"/>
+</element>
+<command name="Point">
+	<input a0="poly1"/>
+	<output a0="J"/>
+</command>
+<element type="point" label="J">
+	<show object="false" label="true" ev="4"/>
+	<objColor r="255" g="127" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<animation step="1" speed="1" type="1" playing="false"/>
+	<coords x="-2.3639440629529944" y="-0.6375795842834889" z="1.0"/>
+	<pointSize val="5"/>
+	<pointStyle val="0"/>
+</element>
+<command name="PointIn">
+	<input a0="poly1"/>
+	<output a0="K"/>
+</command>
+<element type="point" label="K">
+	<show object="false" label="true" ev="4"/>
+	<objColor r="255" g="127" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<animation step="1" speed="1" type="0" playing="false"/>
+	<coords x="-0.9703685072620285" y="-0.42566989787418663" z="1.0"/>
+	<pointSize val="5"/>
+	<pointStyle val="0"/>
+</element>
+<command name="PointIn">
+	<input a0="poly1"/>
+	<output a0="L"/>
+</command>
+<element type="point" label="L">
+	<show object="false" label="true" ev="4"/>
+	<objColor r="255" g="127" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<animation step="1" speed="1" type="0" playing="false"/>
+	<coords x="-0.3421174400692313" y="-1.0411481231597732" z="1.0"/>
+	<pointSize val="5"/>
+	<pointStyle val="0"/>
+</element>
+<command name="PointIn">
+	<input a0="poly1"/>
+	<output a0="M"/>
+</command>
+<element type="point" label="M">
+	<show object="false" label="true" ev="4"/>
+	<objColor r="255" g="127" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<animation step="0.1" speed="1" type="0" playing="false"/>
+	<coords x="-0.9525182122008271" y="-0.9712542953076717" z="1.0"/>
+	<pointSize val="5"/>
+	<pointStyle val="0"/>
+</element>
+<command name="Point">
+	<input a0="poly1"/>
+	<output a0="N"/>
+</command>
+<element type="point" label="N">
+	<show object="false" label="true" ev="4"/>
+	<objColor r="255" g="127" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<animation step="1" speed="1" type="1" playing="false"/>
+	<coords x="-1.8998886585678696" y="-1.4413471222054468" z="1.0"/>
+	<pointSize val="5"/>
+	<pointStyle val="0"/>
+</element>
+<command name="PointIn">
+	<input a0="poly1"/>
+	<output a0="O"/>
+</command>
+<element type="point" label="O">
+	<show object="false" label="true" ev="4"/>
+	<objColor r="255" g="127" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<animation step="1" speed="1" type="0" playing="false"/>
+	<coords x="-1.2647793826476748" y="-1.9071651774543699" z="1.0"/>
+	<pointSize val="5"/>
+	<pointStyle val="0"/>
+</element>
+<command name="PointIn">
+	<input a0="poly1"/>
+	<output a0="P"/>
+</command>
+<element type="point" label="P">
+	<show object="false" label="true" ev="4"/>
+	<objColor r="255" g="127" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<animation step="1" speed="1" type="0" playing="false"/>
+	<coords x="-0.7767523034226198" y="-2.30344176101992" z="1.0"/>
+	<pointSize val="5"/>
+	<pointStyle val="0"/>
+</element>
+<command name="PointIn">
+	<input a0="poly1"/>
+	<output a0="Q"/>
+</command>
+<element type="point" label="Q">
+	<show object="false" label="true" ev="4"/>
+	<objColor r="255" g="127" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<animation step="1" speed="1" type="0" playing="false"/>
+	<coords x="-0.014743021457722216" y="-2.5271654778677366" z="1.0"/>
+	<pointSize val="5"/>
+	<pointStyle val="0"/>
+</element>
+<command name="PointIn">
+	<input a0="poly1"/>
+	<output a0="R"/>
+</command>
+<element type="point" label="R">
+	<show object="false" label="true" ev="4"/>
+	<objColor r="255" g="127" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<animation step="1" speed="1" type="0" playing="false"/>
+	<coords x="0.7056949058432155" y="-2.4669504774821007" z="1.0"/>
+	<pointSize val="5"/>
+	<pointStyle val="0"/>
+</element>
+<command name="Point">
+	<input a0="poly1"/>
+	<output a0="S"/>
+</command>
+<element type="point" label="S">
+	<show object="false" label="true" ev="4"/>
+	<objColor r="255" g="127" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<animation step="1" speed="1" type="1" playing="false"/>
+	<coords x="0.7911731069370598" y="-3.0" z="1.0"/>
+	<pointSize val="5"/>
+	<pointStyle val="0"/>
+</element>
+<command name="Point">
+	<input a0="poly1"/>
+	<output a0="T"/>
+</command>
+<element type="point" label="T">
+	<show object="false" label="true" ev="4"/>
+	<objColor r="255" g="127" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<animation step="1" speed="1" type="1" playing="false"/>
+	<coords x="1.716925437025849" y="-3.0" z="1.0"/>
+	<pointSize val="5"/>
+	<pointStyle val="0"/>
+</element>
+<command name="PointIn">
+	<input a0="poly1"/>
+	<output a0="U"/>
+</command>
+<element type="point" label="U">
+	<show object="false" label="true" ev="4"/>
+	<objColor r="255" g="127" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<animation step="0.1" speed="1" type="0" playing="false"/>
+	<coords x="1.6233587650957355" y="-2.2881698406322593" z="1.0"/>
+	<pointSize val="5"/>
+	<pointStyle val="0"/>
+</element>
+<command name="PointIn">
+	<input a0="poly1"/>
+	<output a0="V"/>
+</command>
+<element type="point" label="V">
+	<show object="false" label="true" ev="4"/>
+	<objColor r="255" g="127" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<animation step="0.1" speed="1" type="0" playing="false"/>
+	<coords x="2.2900474693074737" y="-2.1184730213636502" z="1.0"/>
+	<pointSize val="5"/>
+	<pointStyle val="0"/>
+</element>
+<command name="Point">
+	<input a0="poly1"/>
+	<output a0="W"/>
+</command>
+<element type="point" label="W">
+	<show object="false" label="true" ev="4"/>
+	<objColor r="255" g="127" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<animation step="1" speed="1" type="1" playing="false"/>
+	<coords x="2.935004226625374" y="-1.3805251741932076" z="1.0"/>
+	<pointSize val="5"/>
+	<pointStyle val="0"/>
+</element>
+<command name="PointIn">
+	<input a0="poly1"/>
+	<output a0="Z"/>
+</command>
+<element type="point" label="Z">
+	<show object="false" label="true" ev="4"/>
+	<objColor r="255" g="127" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<animation step="0.1" speed="1" type="0" playing="false"/>
+	<coords x="2.1712835045131205" y="-0.44851827746715367" z="1.0"/>
+	<pointSize val="5"/>
+	<pointStyle val="0"/>
+</element>
+<command name="PointIn">
+	<input a0="poly1"/>
+	<output a0="A_1"/>
+</command>
+<element type="point" label="A_1">
+	<show object="false" label="true" ev="4"/>
+	<objColor r="255" g="127" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<animation step="0.1" speed="1" type="0" playing="false"/>
+	<coords x="1.5455314777176112" y="-0.9894219304701362" z="1.0"/>
+	<pointSize val="5"/>
+	<pointStyle val="0"/>
+</element>
+<command name="PointIn">
+	<input a0="poly1"/>
+	<output a0="B_1"/>
+</command>
+<element type="point" label="B_1">
+	<show object="false" label="true" ev="4"/>
+	<objColor r="255" g="127" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<animation step="0.1" speed="1" type="0" playing="false"/>
+	<coords x="1.497791765957475" y="-0.10726452951324239" z="1.0"/>
+	<pointSize val="5"/>
+	<pointStyle val="0"/>
+</element>
+<command name="Point">
+	<input a0="poly1"/>
+	<output a0="C_1"/>
+</command>
+<element type="point" label="C_1">
+	<show object="false" label="true" ev="4"/>
+	<objColor r="255" g="127" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<animation step="0.1" speed="1" type="1" playing="false"/>
+	<coords x="2.9336305965929736" y="0.5790567939067596" z="1.0"/>
+	<pointSize val="5"/>
+	<pointStyle val="0"/>
+</element>
+<command name="PointIn">
+	<input a0="poly1"/>
+	<output a0="D_1"/>
+</command>
+<element type="point" label="D_1">
+	<show object="false" label="true" ev="4"/>
+	<objColor r="255" g="127" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<animation step="0.1" speed="1" type="0" playing="false"/>
+	<coords x="1.7056684643330406" y="1.5294135830262174" z="1.0"/>
+	<pointSize val="5"/>
+	<pointStyle val="0"/>
+</element>
+<command name="PointIn">
+	<input a0="poly1"/>
+	<output a0="E_1"/>
+</command>
+<element type="point" label="E_1">
+	<show object="false" label="true" ev="4"/>
+	<objColor r="255" g="127" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<animation step="0.1" speed="1" type="0" playing="false"/>
+	<coords x="2.03109918513905" y="1.2761377085451455" z="1.0"/>
+	<pointSize val="5"/>
+	<pointStyle val="0"/>
+</element>
+<command name="PointIn">
+	<input a0="poly1"/>
+	<output a0="F_1"/>
+</command>
+<element type="point" label="F_1">
+	<show object="false" label="true" ev="4"/>
+	<objColor r="255" g="127" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<animation step="1" speed="1" type="0" playing="false"/>
+	<coords x="2.038913647486118" y="0.8506263059517822" z="1.0"/>
+	<pointSize val="5"/>
+	<pointStyle val="0"/>
+</element>
+<command name="PointIn">
+	<input a0="poly1"/>
+	<output a0="G_1"/>
+</command>
+<element type="point" label="G_1">
+	<show object="false" label="true" ev="4"/>
+	<objColor r="255" g="127" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<animation step="1" speed="1" type="0" playing="false"/>
+	<coords x="1.1544513379587151" y="0.7370587525235375" z="1.0"/>
+	<pointSize val="5"/>
+	<pointStyle val="0"/>
+</element>
+<command name="PointIn">
+	<input a0="poly1"/>
+	<output a0="H_1"/>
+</command>
+<element type="point" label="H_1">
+	<show object="false" label="true" ev="4"/>
+	<objColor r="255" g="127" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<animation step="1" speed="1" type="0" playing="false"/>
+	<coords x="0.7743193781918931" y="0.9689142711362098" z="1.0"/>
+	<pointSize val="5"/>
+	<pointStyle val="0"/>
+</element>
+<command name="Point">
+	<input a0="poly1"/>
+	<output a0="I_1"/>
+</command>
+<element type="point" label="I_1">
+	<show object="false" label="true" ev="4"/>
+	<objColor r="255" g="127" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<animation step="1" speed="1" type="1" playing="false"/>
+	<coords x="1.2851551697417747" y="2.196152422706633" z="1.0"/>
+	<pointSize val="5"/>
+	<pointStyle val="0"/>
+</element>
+<expression label="frog0" exp="{Rotate[Polygon[{E, G, H, I}], (-240° * f(k, 0, 1)), E], Rotate[Polygon[{J, K, L, M, N}], (240° * f(k, 1, 2)), A], Rotate[Polygon[{A, O, P, Q, R, S}], (-240° * f(k, 2, 3)), A], Rotate[Polygon[{T, U, V, W, B}], (240° * f(k, 3, 4)), C], Rotate[Polygon[{C, Z, A_1, B_1, C_1}], (-240° * f(k, 4, 5)), C], Rotate[Polygon[{D, D_1, E_1, F_1, G_1, H_1, I_1}], (240° * f(k, 5, 6)), E], Polygon[{E, G, H, I, F, J, K, L, M, N, A, O, P, Q, R, S, T, U, V, W, C, Z, A_1, B_1, C_1, D, D_1, E_1, F_1, G_1, H_1, I_1}]}" />
+<element type="list" label="frog0">
+	<show object="true" label="true" ev="4"/>
+	<objColor r="255" g="0" b="51" alpha="0.75"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<lineStyle thickness="0" type="0" typeHidden="1"/>
+	<pointSize val="5"/>
+	<pointStyle val="0"/>
+</element>
+<element type="numeric" label="m">
+	<value val="6.0"/>
+	<symbolic val="true" />
+	<show object="true" label="true"/>
+	<objColor r="0" g="0" b="0" alpha="0.10000000149011612"/>
+	<layer val="0"/>
+	<labelMode val="1"/>
+	<animation step="0.01" speed="1" type="0" playing="false"/>
+</element>
+<command name="Rotate">
+	<input a0="frog0" a1="(120° * f(m, 0, 1))" a2="E"/>
+	<output a0="frog1"/>
+</command>
+<element type="list" label="frog1">
+	<show object="true" label="true" ev="4"/>
+	<objColor r="255" g="127" b="0" alpha="0.75"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<lineStyle thickness="0" type="0" typeHidden="1"/>
+	<pointSize val="5"/>
+	<pointStyle val="0"/>
+</element>
+<command name="Rotate">
+	<input a0="frog1" a1="(120° * f(m, 1, 2))" a2="E"/>
+	<output a0="frog2"/>
+</command>
+<element type="list" label="frog2">
+	<show object="true" label="true" ev="4"/>
+	<objColor r="255" g="255" b="0" alpha="0.75"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<lineStyle thickness="0" type="0" typeHidden="1"/>
+	<pointSize val="5"/>
+	<pointStyle val="0"/>
+</element>
+<command name="Rotate">
+	<input a0="frog0" a1="(120° * f(m, 2, 3))" a2="A"/>
+	<output a0="frog3"/>
+</command>
+<element type="list" label="frog3">
+	<show object="true" label="true" ev="4"/>
+	<objColor r="102" g="153" b="0" alpha="0.75"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<lineStyle thickness="0" type="0" typeHidden="1"/>
+	<pointSize val="5"/>
+	<pointStyle val="0"/>
+</element>
+<command name="Rotate">
+	<input a0="frog3" a1="(120° * f(m, 3, 4))" a2="A"/>
+	<output a0="frog4"/>
+</command>
+<element type="list" label="frog4">
+	<show object="true" label="true" ev="4"/>
+	<objColor r="0" g="153" b="255" alpha="0.75"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<lineStyle thickness="0" type="0" typeHidden="1"/>
+	<pointSize val="5"/>
+	<pointStyle val="0"/>
+</element>
+<command name="Rotate">
+	<input a0="frog0" a1="(120° * f(m, 4, 5))" a2="C"/>
+	<output a0="frog5"/>
+</command>
+<element type="list" label="frog5">
+	<show object="true" label="true" ev="4"/>
+	<objColor r="0" g="0" b="255" alpha="0.75"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<lineStyle thickness="0" type="0" typeHidden="1"/>
+	<pointSize val="5"/>
+	<pointStyle val="0"/>
+</element>
+<command name="Rotate">
+	<input a0="frog5" a1="(120° * f(m, 5, 6))" a2="C"/>
+	<output a0="frog6"/>
+</command>
+<element type="list" label="frog6">
+	<show object="true" label="true" ev="4"/>
+	<objColor r="102" g="0" b="153" alpha="0.75"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<lineStyle thickness="0" type="0" typeHidden="1"/>
+	<pointSize val="5"/>
+	<pointStyle val="0"/>
+</element>
+</construction>
+</macro>
+</geogebra>

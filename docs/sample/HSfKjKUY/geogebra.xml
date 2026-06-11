@@ -1,0 +1,632 @@
+<?xml version="1.0" encoding="utf-8"?>
+<geogebra format="5.0" version="5.0.158.0" id="a205a27c-7740-4591-9d8f-7ec035e014be"  xsi:noNamespaceSchemaLocation="http://www.geogebra.org/ggb.xsd" xmlns="" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" >
+<gui>
+	<window width="800" height="625" />
+	<perspectives>
+<perspective id="tmp">
+	<panes>
+		<pane location="" divider="0.25" orientation="1" />
+	</panes>
+	<views>
+		<view id="4097" visible="false" inframe="true" stylebar="true" location="1,1,1,1" size="400" window="671,325,754,550" />
+		<view id="4" toolbar="0 || 2020 , 2021 , 2022 , 66 || 2001 , 2003 , 2002 , 2004 , 2005 || 2040 , 2041 , 2042 , 2044 , 2043" visible="false" inframe="true" stylebar="true" location="1,1" size="291" window="773,95,600,400" />
+		<view id="8" toolbar="1001 | 1002 | 1003  || 1005 | 1004 || 1006 | 1007 | 1010 || 1008 1009 || 66 68 || 6" visible="false" inframe="false" stylebar="false" location="1,3" size="300" window="100,100,600,400" />
+		<view id="1" visible="true" inframe="false" stylebar="true" location="1" size="789" window="100,100,600,400" />
+		<view id="2" visible="false" inframe="false" stylebar="true" location="3" size="200" window="208,302,250,400" />
+		<view id="16" visible="false" inframe="false" stylebar="false" location="1" size="150" window="50,50,500,500" />
+		<view id="32" visible="false" inframe="false" stylebar="true" location="1" size="150" window="50,50,500,500" />
+		<view id="64" toolbar="0" visible="false" inframe="true" stylebar="true" location="1" size="150" window="50,50,500,500" />
+		<view id="70" toolbar="0 || 2020 || 2021 || 2022" visible="false" inframe="true" stylebar="true" location="1" size="150" window="50,50,500,500" />
+		<view id="512" toolbar="0 | 1 501 5 19 , 67 | 2 15 45 18 , 7 37 | 514 3 9 , 13 44 , 47 | 16 | 551 550 11 ,  20 22 21 23 , 55 56 57 , 12 | 69 | 510 511 , 512 513 | 533 531 , 534 532 , 522 523 , 537 536 , 535 | 521 520 | 36 , 38 49 560 | 571 30 29 570 31 33 | 17 | 540 40 41 42 , 27 28 35 , 6 , 502" visible="false" inframe="false" stylebar="false" location="1" size="300" window="50,50,500,500" />
+	</views>
+	<toolbar show="true" items="0 39 | 1 501 67 , 5 19 , 72 | 2 15 45 , 18 65 , 7 37 | 4 3 8 9 , 13 44 , 58 , 47 | 16 51 64 , 70 | 10 34 53 11 , 24  20 22 , 21 23 | 55 56 57 , 12 | 36 46 , 38 49  50 , 71 | 30 29 54 32 31 33 | 17 26 62 73 , 14 68 | 25 52 60 61 | 40 41 42 , 27 28 35 , 6" position="1" help="true" />
+	<input show="true" cmd="true" top="false" />
+	<dockBar show="true" east="true" />
+</perspective>
+	</perspectives>
+	<labelingStyle  val="3"/>
+	<font  size="12"/>
+	<graphicsSettings javaLatexFonts="false"/>
+</gui>
+<euclidianView>
+	<viewNumber viewNo="1"/>
+	<size  width="789" height="492"/>
+	<coordSystem xZero="265.33333333333337" yZero="330.00000000000006" scale="49.999999999999986" yscale="50.000000000000036"/>
+	<evSettings axes="false" grid="false" gridIsBold="false" pointCapturing="3" rightAngleStyle="1" checkboxSize="26" gridType="0"/>
+	<bgColor r="255" g="255" b="255"/>
+	<axesColor r="0" g="0" b="0"/>
+	<gridColor r="192" g="192" b="192"/>
+	<lineStyle axes="1" grid="10"/>
+	<axis id="0" show="false" label="" unitLabel="" tickStyle="1" showNumbers="true"/>
+	<axis id="1" show="false" label="" unitLabel="" tickStyle="1" showNumbers="true"/>
+</euclidianView>
+<spreadsheetView>
+</spreadsheetView>
+<kernel>
+	<continuous val="false"/>
+	<usePathAndRegionParameters val="true"/>
+	<decimals val="2"/>
+	<angleUnit val="degree"/>
+	<algebraStyle val="0"/>
+	<coordStyle val="0"/>
+	<angleFromInvTrig val="false"/>
+</kernel>
+<scripting blocked="false" disabled="false"/>
+<construction title="" author="" date="">
+<element type="point" label="O">
+	<show object="false" label="true" ev="4"/>
+	<objColor r="0" g="0" b="255" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<animation step="0.1" speed="1" type="1" playing="false"/>
+	<coords x="0.0" y="0.0" z="1.0"/>
+	<pointSize val="3"/>
+	<pointStyle val="0"/>
+</element>
+<element type="point" label="A">
+	<show object="true" label="false" ev="4"/>
+	<objColor r="255" g="0" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<animation step="0.1" speed="1" type="1" playing="false"/>
+	<ggbscript onUpdate="RunClickScript[maintainRelativeCoords]"/>
+	<coords x="3.193333333333334" y="0.74" z="1.0"/>
+	<pointSize val="3"/>
+	<pointStyle val="1"/>
+</element>
+<element type="point" label="B">
+	<show object="true" label="false" ev="4"/>
+	<objColor r="0" g="0" b="255" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<animation step="0.1" speed="1" type="1" playing="false"/>
+	<ggbscript onUpdate="RunClickScript[maintainRelativeCoords]"/>
+	<coords x="0.23333333333333267" y="1.62" z="1.0"/>
+	<pointSize val="3"/>
+	<pointStyle val="1"/>
+</element>
+<command name="Vector">
+	<input a0="O" a1="A"/>
+	<output a0="u"/>
+</command>
+<element type="vector" label="u">
+	<show object="true" label="false" ev="4"/>
+	<objColor r="255" g="0" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<coords x="3.193333333333334" y="0.74" z="0.0"/>
+	<lineStyle thickness="7" type="0" typeHidden="1"/>
+	<coordStyle style="cartesian"/>
+	<startPoint exp="O"/>
+</element>
+<command name="Vector">
+	<input a0="O" a1="B"/>
+	<output a0="v"/>
+</command>
+<element type="vector" label="v">
+	<show object="true" label="false" ev="4"/>
+	<objColor r="0" g="0" b="255" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<coords x="0.23333333333333267" y="1.62" z="0.0"/>
+	<lineStyle thickness="7" type="0" typeHidden="1"/>
+	<coordStyle style="cartesian"/>
+	<startPoint exp="O"/>
+</element>
+<expression label="M" exp="{{x(u), x(v)}, {y(u), y(v)}}" />
+<element type="list" label="M">
+	<objColor r="0" g="100" b="0" alpha="0.1"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<pointSize val="3"/>
+	<pointStyle val="-1"/>
+</element>
+<command name="Invert">
+	<input a0="M"/>
+	<output a0="Minv"/>
+</command>
+<element type="list" label="Minv">
+	<objColor r="0" g="100" b="0" alpha="0.1"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<pointSize val="3"/>
+	<pointStyle val="-1"/>
+</element>
+<command name="Sequence">
+	<input a0="(Minv * Corner[k])" a1="k" a2="1" a3="4"/>
+	<output a0="corners"/>
+</command>
+<element type="list" label="corners">
+	<show object="false" label="false" ev="4"/>
+	<objColor r="0" g="100" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<pointSize val="3"/>
+	<pointStyle val="-1"/>
+</element>
+<command name="Min">
+	<input a0="x(corners)"/>
+	<output a0="amin"/>
+</command>
+<element type="numeric" label="amin">
+	<value val="-2.0345563139931735"/>
+	<objColor r="0" g="0" b="0" alpha="0.1"/>
+</element>
+<command name="Max">
+	<input a0="x(corners)"/>
+	<output a0="amax"/>
+</command>
+<element type="numeric" label="amax">
+	<value val="3.5515944965870303"/>
+	<objColor r="0" g="0" b="0" alpha="0.1"/>
+</element>
+<command name="Max">
+	<input a0="y(corners)"/>
+	<output a0="bmax"/>
+</command>
+<element type="numeric" label="bmax">
+	<value val="5.015784982935151"/>
+	<objColor r="0" g="0" b="0" alpha="0.1"/>
+</element>
+<command name="Min">
+	<input a0="y(corners)"/>
+	<output a0="bmin"/>
+</command>
+<element type="numeric" label="bmin">
+	<value val="-3.6346789675767894"/>
+	<objColor r="0" g="0" b="0" alpha="0.1"/>
+</element>
+<command name="Sequence">
+	<input a0="Line[O + (k * u), v]" a1="k" a2="ceil(amin)" a3="floor(amax)"/>
+	<output a0="linesX"/>
+</command>
+<element type="list" label="linesX">
+	<show object="true" label="false" ev="4"/>
+	<objColor r="51" g="0" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<lineStyle thickness="2" type="20" typeHidden="1"/>
+	<pointSize val="3"/>
+	<pointStyle val="-1"/>
+</element>
+<command name="Sequence">
+	<input a0="Line[O + (k * v), u]" a1="k" a2="ceil(bmin)" a3="floor(bmax)"/>
+	<output a0="linesY"/>
+</command>
+<element type="list" label="linesY">
+	<show object="true" label="false" ev="4"/>
+	<objColor r="51" g="0" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<lineStyle thickness="2" type="20" typeHidden="1"/>
+	<pointSize val="3"/>
+	<pointStyle val="-1"/>
+</element>
+<element type="point" label="P1">
+	<show object="true" label="false" ev="4"/>
+	<condition showObject="showPoints"/>
+	<objColor r="255" g="51" b="102" alpha="0.0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<animation step="0.1" speed="1" type="1" playing="false"/>
+	<ggbscript onUpdate="SetValue[P3, P2]&#10;"/>
+	<coords x="0.4733333333333328" y="3.22" z="1.0"/>
+	<pointSize val="5"/>
+	<pointStyle val="0"/>
+</element>
+<expression label="P2" exp="(Minv * P1)" type="point" />
+<element type="point" label="P2">
+	<show object="false" label="true" ev="4"/>
+	<objColor r="68" g="68" b="68" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<coords x="0.0030930034129695305" y="1.9862414675767917" z="1.0"/>
+	<pointSize val="3"/>
+	<pointStyle val="0"/>
+</element>
+<element type="numeric" label="px">
+	<value val="-0.006019036954087342"/>
+	<show object="false" label="true"/>
+	<objColor r="0" g="0" b="0" alpha="0.1"/>
+	<layer val="0"/>
+	<labelMode val="1"/>
+	<animation step="1" speed="1" type="0" playing="false"/>
+</element>
+<element type="numeric" label="py">
+	<value val="1.9947508398656217"/>
+	<show object="false" label="true"/>
+	<objColor r="0" g="0" b="0" alpha="0.1"/>
+	<layer val="0"/>
+	<labelMode val="1"/>
+	<animation step="0.1" speed="1" type="0" playing="false"/>
+</element>
+<element type="button" label="maintainRelativeCoords">
+	<show object="false" label="true"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelOffset x="30" y="53"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<auxiliary val="true"/>
+	<ggbscript val="SetValue[P1, M * P3 ]&#10;SetValue[Q1, M * Q3 ]&#10;SetValue[R1, M * R3 ]&#10;SetValue[S1, M * S3 ]"/>
+	<font serif="false" sizeM="2.0" size="12" style="0"/>
+	<caption val="updateP"/>
+</element>
+<element type="point" label="P3">
+	<show object="false" label="true" ev="4"/>
+	<objColor r="0" g="0" b="255" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<animation step="0.1" speed="1" type="1" playing="false"/>
+	<coords x="0.00402623720136544" y="1.9734694965870307" z="1.0"/>
+	<pointSize val="3"/>
+	<pointStyle val="0"/>
+</element>
+<element type="numeric" label="P22">
+	<value val="NaN"/>
+	<show object="false" label="true"/>
+	<objColor r="0" g="0" b="0" alpha="0.1"/>
+	<layer val="0"/>
+	<labelMode val="1"/>
+	<animation step="1" speed="1" type="0" playing="false"/>
+	<auxiliary val="true"/>
+</element>
+<element type="point" label="Q1">
+	<show object="true" label="false" ev="4"/>
+	<condition showObject="showPoints"/>
+	<objColor r="255" g="153" b="0" alpha="0.0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<animation step="0.1" speed="1" type="1" playing="false"/>
+	<auxiliary val="true"/>
+	<ggbscript onUpdate="SetValue[Q3, Q2]"/>
+	<coords x="1.5308177993527508" y="0.37814466019417464" z="1.0"/>
+	<pointSize val="5"/>
+	<pointStyle val="0"/>
+</element>
+<expression label="Q2" exp="(Minv * Q1)" type="point" />
+<element type="point" label="Q2">
+	<show object="false" label="true" ev="4"/>
+	<objColor r="68" g="68" b="68" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<auxiliary val="true"/>
+	<coords x="0.47828719888001586" y="0.014945761125285784" z="1.0"/>
+	<pointSize val="3"/>
+	<pointStyle val="0"/>
+</element>
+<element type="point" label="Q3">
+	<show object="false" label="true" ev="4"/>
+	<objColor r="0" g="0" b="255" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<animation step="1" speed="1" type="1" playing="false"/>
+	<auxiliary val="true"/>
+	<coords x="0.4783009708737863" y="0.014757281553398054" z="1.0"/>
+	<pointSize val="3"/>
+	<pointStyle val="0"/>
+</element>
+<element type="point" label="R1">
+	<show object="true" label="false" ev="4"/>
+	<condition showObject="showPoints"/>
+	<objColor r="102" g="204" b="0" alpha="0.0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<animation step="0.1" speed="1" type="1" playing="false"/>
+	<auxiliary val="true"/>
+	<ggbscript onUpdate="SetValue[R3, R2]"/>
+	<coords x="0.6801579756960461" y="4.8817000461467455" z="1.0"/>
+	<pointSize val="5"/>
+	<pointStyle val="0"/>
+</element>
+<expression label="R2" exp="(Minv * R1)" type="point" />
+<element type="point" label="R2">
+	<show object="false" label="true" ev="4"/>
+	<objColor r="68" g="68" b="68" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<auxiliary val="true"/>
+	<coords x="-0.007440691020952933" y="3.016793924384105" z="1.0"/>
+	<pointSize val="3"/>
+	<pointStyle val="0"/>
+</element>
+<element type="point" label="R3">
+	<show object="false" label="true" ev="4"/>
+	<objColor r="0" g="0" b="255" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<animation step="1" speed="1" type="1" playing="false"/>
+	<auxiliary val="true"/>
+	<coords x="-0.0046608214120900104" y="2.978749423165666" z="1.0"/>
+	<pointSize val="3"/>
+	<pointStyle val="0"/>
+</element>
+<element type="point" label="S1">
+	<show object="true" label="false" ev="4"/>
+	<condition showObject="showPoints"/>
+	<objColor r="255" g="255" b="102" alpha="0.0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<animation step="0.1" speed="1" type="1" playing="false"/>
+	<auxiliary val="true"/>
+	<ggbscript onUpdate="SetValue[S3, S2]"/>
+	<coords x="6.39280403014921" y="1.4800682971850485" z="1.0"/>
+	<pointSize val="5"/>
+	<pointStyle val="0"/>
+</element>
+<expression label="S2" exp="(Minv * S1)" type="point" />
+<element type="point" label="S2">
+	<show object="false" label="true" ev="4"/>
+	<objColor r="68" g="68" b="68" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<auxiliary val="true"/>
+	<coords x="2.0019851068216474" y="-8.646184339323737E-4" z="1.0"/>
+	<pointSize val="3"/>
+	<pointStyle val="0"/>
+</element>
+<element type="point" label="S3">
+	<show object="false" label="true" ev="4"/>
+	<objColor r="0" g="0" b="255" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<animation step="1" speed="1" type="1" playing="false"/>
+	<auxiliary val="true"/>
+	<coords x="2.001984310106138" y="-8.537148131058103E-4" z="1.0"/>
+	<pointSize val="3"/>
+	<pointStyle val="0"/>
+</element>
+<command name="Line">
+	<input a0="P1" a1="S1"/>
+	<output a0="a"/>
+</command>
+<element type="line" label="a">
+	<show object="true" label="false" ev="4"/>
+	<condition showObject="showLines"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<coords x="1.7399317028149517" y="5.9194706968158775" z="-19.88426331641287"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<eqnStyle style="implicit"/>
+</element>
+<command name="Line">
+	<input a0="Q1" a1="R1"/>
+	<output a0="b"/>
+</command>
+<element type="line" label="b">
+	<show object="true" label="false" ev="4"/>
+	<condition showObject="showLines"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<coords x="-4.503555385952571" y="-0.8506598236567047" z="7.215795215144643"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<eqnStyle style="implicit"/>
+</element>
+<command name="Intersect">
+	<input a0="a" a1="b"/>
+	<output a0="C"/>
+</command>
+<element type="point" label="C">
+	<show object="true" label="false" ev="4"/>
+	<condition showObject="showIntersection"/>
+	<objColor r="68" g="68" b="68" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<coords x="25.798944403989683" y="76.9948902984797" z="25.178574143142285"/>
+	<pointSize val="5"/>
+	<pointStyle val="0"/>
+</element>
+<element type="boolean" label="showLines">
+	<value val="false"/>
+	<show object="true" label="true"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelOffset x="4" y="337"/>
+	<labelMode val="4"/>
+	<caption val="Lines"/>
+</element>
+<element type="boolean" label="showPoints">
+	<value val="true"/>
+	<show object="true" label="true"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelOffset x="4" y="302"/>
+	<labelMode val="4"/>
+	<caption val="Points"/>
+</element>
+<command name="Segment">
+	<input a0="P1" a1="S1"/>
+	<output a0="d"/>
+</command>
+<element type="segment" label="d">
+	<show object="true" label="false" ev="4"/>
+	<condition showObject="showSegments"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<coords x="1.7399317028149517" y="5.9194706968158775" z="-19.88426331641287"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<command name="Segment">
+	<input a0="R1" a1="Q1"/>
+	<output a0="e"/>
+</command>
+<element type="segment" label="e">
+	<show object="true" label="false" ev="4"/>
+	<condition showObject="showSegments"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<coords x="4.503555385952571" y="0.8506598236567047" z="-7.215795215144643"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="boolean" label="showSegments">
+	<value val="true"/>
+	<show object="true" label="true"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelOffset x="5" y="370"/>
+	<labelMode val="4"/>
+	<caption val="Segments"/>
+</element>
+<expression label="C2" exp="(Minv * C)" type="point" />
+<element type="point" label="C2">
+	<show object="false" label="true"/>
+	<objColor r="68" g="68" b="68" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<coords x="0.18925832675668677" y="1.8011738261620205" z="1.0"/>
+	<pointSize val="3"/>
+	<pointStyle val="0"/>
+</element>
+<expression label="Cx" exp="(M * (x(C2), 0))" type="point" />
+<element type="point" label="Cx">
+	<show object="false" label="true"/>
+	<objColor r="68" g="68" b="68" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<coords x="0.6043649234430198" y="0.1400511617999482" z="1.0"/>
+	<pointSize val="3"/>
+	<pointStyle val="0"/>
+</element>
+<expression label="Cy" exp="(M * (0, y(C2)))" type="point" />
+<element type="point" label="Cy">
+	<show object="false" label="true" ev="4"/>
+	<objColor r="68" g="68" b="68" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<coords x="0.4202738927711369" y="2.9179015983824734" z="1.0"/>
+	<pointSize val="3"/>
+	<pointStyle val="0"/>
+</element>
+<command name="Segment">
+	<input a0="C" a1="Cx"/>
+	<output a0="g"/>
+</command>
+<element type="segment" label="g">
+	<show object="true" label="false" ev="4"/>
+	<condition showObject="showIntersection"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<coords x="2.9179015983824734" y="-0.4202738927711368" z="-1.7046175291639043"/>
+	<lineStyle thickness="4" type="20" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<command name="Segment">
+	<input a0="C" a1="Cy"/>
+	<output a0="h"/>
+</command>
+<element type="segment" label="h">
+	<show object="true" label="false" ev="4"/>
+	<condition showObject="showIntersection"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<coords x="0.14005116179994825" y="-0.6043649234430197" z="1.704617529163904"/>
+	<lineStyle thickness="4" type="20" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<expression label="txtX" exp="&quot;&quot; + (x(C2)) + &quot;&quot;" />
+<element type="text" label="txtX">
+	<show object="false" label="true" ev="20"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<startPoint exp="Cx"/>
+	<labelOffset x="0" y="18"/>
+</element>
+<expression label="txtY" exp="&quot;&quot; + (y(C2)) + &quot;&quot;" />
+<element type="text" label="txtY">
+	<show object="false" label="true" ev="20"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<startPoint exp="Cy"/>
+	<labelOffset x="-37" y="7"/>
+</element>
+<command name="RotateText">
+	<input a0="txtX" a1="Angle[u]"/>
+	<output a0="txtX2"/>
+</command>
+<element type="text" label="txtX2">
+	<show object="true" label="false" ev="8"/>
+	<condition showObject="c"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<isLaTeX val="true"/>
+	<font serif="false" sizeM="1.0" size="0" style="0"/>
+	<startPoint exp="Cx"/>
+	<labelOffset x="-20" y="3"/>
+</element>
+<command name="RotateText">
+	<input a0="txtY" a1="Angle[u]"/>
+	<output a0="txtY2"/>
+</command>
+<element type="text" label="txtY2">
+	<show object="true" label="false" ev="8"/>
+	<condition showObject="c"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<isLaTeX val="true"/>
+	<font serif="false" sizeM="1.0" size="0" style="0"/>
+	<startPoint exp="Cy"/>
+	<labelOffset x="-51" y="-8"/>
+</element>
+<element type="boolean" label="showIntersection">
+	<value val="true"/>
+	<show object="true" label="true"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="1"/>
+	<labelOffset x="4" y="404"/>
+	<labelMode val="4"/>
+	<caption val="Intersection"/>
+</element>
+<element type="boolean" label="c">
+	<value val="true"/>
+	<show object="true" label="true"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="1"/>
+	<labelOffset x="4" y="439"/>
+	<labelMode val="4"/>
+	<caption val="Coordinates"/>
+</element>
+<element type="button" label="normalize">
+	<show object="true" label="true"/>
+	<objColor r="0" g="0" b="0" alpha="1.0"/>
+	<bgColor r="255" g="192" b="203" alpha="255"/>
+	<layer val="1"/>
+	<labelOffset x="716" y="447"/>
+	<labelMode val="0"/>
+	<animation step="1" speed="1" type="0" playing="false"/>
+	<auxiliary val="true"/>
+	<ggbscript val="A=(1,0)&#10;B=(0,1)&#10;RunClickScript[maintainRelativeCoords]"/>
+	<font serif="false" sizeM="2.0" size="12" style="0"/>
+	<file name="/geogebra/gui/images/nav_skipback.png"/>
+</element>
+</construction>
+</geogebra>

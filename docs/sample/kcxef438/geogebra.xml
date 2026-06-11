@@ -1,0 +1,5282 @@
+<?xml version="1.0" encoding="utf-8"?>
+<geogebra format="5.0" version="5.0.574.0" app="classic" platform="w" id="83ccb8bb-f045-41c2-a6dc-ad4e0b8be774"  xsi:noNamespaceSchemaLocation="https://ggb123.cn/apps/xsd/ggb.xsd" xmlns="" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" >
+<gui>
+	<window width="1000" height="560" />
+	<perspectives>
+<perspective id="tmp">
+	<panes>
+		<pane location="" divider="0.62" orientation="1" />
+	</panes>
+	<views>
+		<view id="4" toolbar="0 || 2020 , 2021 , 2022 , 66 || 2001 , 2003 , 2002 , 2004 , 2005 || 2040 , 2041 , 2042 , 2044 , 2043" visible="false" inframe="false" stylebar="true" location="3,1,1,1" size="321" window="100,100,600,400" />
+		<view id="8" toolbar="1001 | 1002 | 1003  || 1005 | 1004 || 1006 | 1007 | 1010 || 1008 1009 || 66 68 || 6" visible="false" inframe="false" stylebar="false" location="3,1,1" size="426" window="100,100,600,400" />
+		<view id="2" visible="false" inframe="false" stylebar="true" location="3,3" size="357" window="100,100,600,400" />
+		<view id="4097" visible="false" inframe="false" stylebar="true" location="1,0" size="758" window="95,226,862,757" />
+		<view id="1" visible="true" inframe="false" stylebar="true" location="1" size="370" window="100,100,600,400" />
+		<view id="16" visible="false" inframe="false" stylebar="false" location="1" size="150" window="50,50,500,500" />
+		<view id="32" visible="false" inframe="false" stylebar="true" location="1" size="150" window="50,50,500,500" />
+		<view id="64" toolbar="0" visible="false" inframe="false" stylebar="true" location="1" size="410" window="631,269,620,752" />
+		<view id="128" visible="false" inframe="false" stylebar="false" location="1" size="480" window="50,50,500,500" />
+		<view id="70" toolbar="0 || 2020 || 2021 || 2022" visible="false" inframe="false" stylebar="true" location="1" size="150" window="631,269,663,500" />
+		<view id="43" visible="false" inframe="false" stylebar="false" location="1" size="450" window="50,50,500,500" />
+		<view id="512" toolbar="0 | 1 501 5 19 , 67 | 2 15 45 18 , 7 37 | 514 3 9 , 13 44 , 47 | 16 | 551 550 11 ,  20 22 21 23 , 55 56 57 , 12 | 69 | 510 511 , 512 513 | 533 531 , 534 532 , 522 523 , 537 536 , 535 | 521 520 | 36 , 38 49 560 | 571 30 29 570 31 33 | 17 | 540 40 41 42 , 27 28 35 , 6 , 502" visible="true" inframe="false" stylebar="true" location="3" size="620" window="100,100,600,400" />
+	</views>
+	<toolbar show="false" items="0 39 73 62 | 1 501 67 , 5 19 , 72 75 76 | 2 15 45 , 18 65 , 7 37 | 4 3 8 9 , 13 44 , 58 , 47 | 16 51 64 , 70 | 10 34 53 11 , 24  20 22 , 21 23 | 55 56 57 , 12 | 36 46 , 38 49  50 , 71  14  68 | 30 29 54 32 31 33 | 25 17 26 60 52 61 | 40 41 42 , 27 28 35 , 6" position="1" help="false" />
+	<input show="false" cmd="true" top="algebra" />
+	<dockBar show="false" east="false" />
+</perspective>
+	</perspectives>
+	<labelingStyle  val="0"/>
+	<font  size="20"/>
+</gui>
+<euclidianView>
+	<viewNumber viewNo="1"/>
+	<size  width="370" height="558"/>
+	<coordSystem xZero="262.8821600631511" yZero="315.21872718210375" scale="26.29935355932367" yscale="26.299353559323745"/>
+	<evSettings axes="false" grid="false" gridIsBold="false" pointCapturing="3" rightAngleStyle="1" checkboxSize="26" gridType="3"/>
+	<bgColor r="0" g="0" b="0"/>
+	<axesColor r="0" g="0" b="0"/>
+	<gridColor r="192" g="192" b="192"/>
+	<lineStyle axes="1" grid="0"/>
+	<axis id="0" show="false" label="" unitLabel="" tickStyle="1" showNumbers="true"/>
+	<axis id="1" show="false" label="" unitLabel="" tickStyle="1" showNumbers="true"/>
+</euclidianView>
+<kernel>
+	<uses3D val="true"/>
+	<continuous val="false"/>
+	<usePathAndRegionParameters val="true"/>
+	<decimals val="2"/>
+	<angleUnit val="degree"/>
+	<algebraStyle val="0" spreadsheet="0"/>
+	<coordStyle val="0"/>
+</kernel>
+<tableview min="-2" max="2" step="1"/>
+<scripting blocked="false" disabled="false"/>
+<euclidianView3D>
+	<coordSystem xZero="0" yZero="0" zZero="-1.5" scale="78.72852954394851" xAngle="20" zAngle="-60"/>
+	<evSettings axes="true" grid="false" gridIsBold="false" pointCapturing="3" rightAngleStyle="1" gridType="3"/>
+	<axis id="0" show="true" label="" unitLabel="" tickStyle="2" showNumbers="false" selectionAllowed="false"/>
+	<axis id="1" show="true" label="" unitLabel="" tickStyle="2" showNumbers="false" selectionAllowed="false"/>
+	<axis id="2" show="true" label="" unitLabel="" tickStyle="2" showNumbers="false" selectionAllowed="false"/>
+	<plate show="false"/>
+	<bgColor r="0" g="0" b="0"/>
+	<clipping use="false" show="false" size="2"/>
+	<projection type="0"/>
+</euclidianView3D>
+<construction title="" author="" date="">
+<command name="Point">
+	<input a0="xAxis"/>
+	<output a0="A"/>
+</command>
+<element type="point" label="A">
+	<show object="false" label="false" ev="5"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<animation step="1" speed="1" type="1" playing="false"/>
+	<selectionAllowed val="false"/>
+	<coords x="0" y="0" z="1"/>
+	<coordStyle style="cartesian3d"/>
+	<pointSize val="3"/>
+	<pointStyle val="0"/>
+</element>
+<command name="Point">
+	<input a0="xAxis"/>
+	<output a0="B"/>
+</command>
+<element type="point" label="B">
+	<show object="false" label="false" ev="5"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<animation step="1" speed="1" type="1" playing="false"/>
+	<selectionAllowed val="false"/>
+	<coords x="1" y="0" z="1"/>
+	<coordStyle style="cartesian3d"/>
+	<pointSize val="3"/>
+	<pointStyle val="0"/>
+</element>
+<command name="Point">
+	<input a0="Circle[B, Distance[A, B], Segment[A, B]]"/>
+	<output a0="C"/>
+</command>
+<element type="point3d" label="C">
+	<show object="false" label="false" ev="5"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<animation step="1" speed="1" type="0" playing="false"/>
+	<selectionAllowed val="false"/>
+	<coords x="1" y="1" z="0" w="1"/>
+	<pointSize val="3"/>
+</element>
+<command name="Cube">
+	<input a0="A" a1="B" a2="C"/>
+	<output a0="a" a1="D" a2="E" a3="F" a4="G" a5="H" a6="ABCD" a7="ADHE" a8="ABFE" a9="BCGF" a10="CDHG" a11="EFGH" a12="AD" a13="AB" a14="BC" a15="CD" a16="AE" a17="DH" a18="EH" a19="EF" a20="BF" a21="FG" a22="CG" a23="GH"/>
+</command>
+<element type="polyhedron" label="a">
+	<lineStyle thickness="1" type="15" typeHidden="1"/>
+	<show object="true" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 0"/>
+	<objColor r="255" g="0" b="255" alpha="0.5199999809265137"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+</element>
+<element type="point3d" label="D">
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 0"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<coords x="0" y="1" z="0" w="1"/>
+	<pointSize val="3"/>
+</element>
+<element type="point3d" label="E">
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 0"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<coords x="0" y="0" z="1" w="1"/>
+	<pointSize val="3"/>
+</element>
+<element type="point3d" label="F">
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 0"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<coords x="1" y="0" z="1" w="1"/>
+	<pointSize val="3"/>
+</element>
+<element type="point3d" label="G">
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 0"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<coords x="1" y="1" z="1" w="1"/>
+	<pointSize val="3"/>
+</element>
+<element type="point3d" label="H">
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 0"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<coords x="0" y="1" z="1" w="1"/>
+	<pointSize val="3"/>
+</element>
+<element type="polygon3d" label="ABCD">
+	<lineStyle thickness="1" type="15" typeHidden="1" opacity="178"/>
+	<show object="true" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 0"/>
+	<objColor r="102" g="204" b="255" alpha="0.4000000059604645"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+</element>
+<element type="polygon3d" label="ADHE">
+	<lineStyle thickness="1" type="15" typeHidden="1" opacity="178"/>
+	<show object="true" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 0"/>
+	<objColor r="102" g="204" b="255" alpha="0.4000000059604645"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+</element>
+<element type="polygon3d" label="ABFE">
+	<lineStyle thickness="1" type="15" typeHidden="1" opacity="178"/>
+	<show object="true" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 0"/>
+	<objColor r="102" g="204" b="255" alpha="0.4000000059604645"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+</element>
+<element type="polygon3d" label="BCGF">
+	<lineStyle thickness="1" type="15" typeHidden="1" opacity="178"/>
+	<show object="true" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 0"/>
+	<objColor r="102" g="204" b="255" alpha="0.4000000059604645"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+</element>
+<element type="polygon3d" label="CDHG">
+	<lineStyle thickness="1" type="15" typeHidden="1" opacity="178"/>
+	<show object="true" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 0"/>
+	<objColor r="102" g="204" b="255" alpha="0.4000000059604645"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+</element>
+<element type="polygon3d" label="EFGH">
+	<lineStyle thickness="1" type="15" typeHidden="1" opacity="178"/>
+	<show object="true" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 0"/>
+	<objColor r="102" g="204" b="255" alpha="0.4000000059604645"/>
+	<layer val="0"/>
+	<labelOffset x="15" y="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+</element>
+<element type="segment3d" label="AD">
+	<show object="true" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 0"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment3d" label="AB">
+	<show object="true" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 0"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment3d" label="BC">
+	<show object="true" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 0"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment3d" label="CD">
+	<show object="true" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 0"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment3d" label="AE">
+	<show object="true" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 0"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment3d" label="DH">
+	<show object="true" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 0"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment3d" label="EH">
+	<show object="true" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 0"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment3d" label="EF">
+	<show object="true" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 0"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment3d" label="BF">
+	<show object="true" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 0"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment3d" label="FG">
+	<show object="true" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 0"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment3d" label="CG">
+	<show object="true" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 0"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment3d" label="GH">
+	<show object="true" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 0"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="numeric" label="展开动画">
+	<value val="0"/>
+	<show object="true" label="true"/>
+	<objColor r="255" g="255" b="255" alpha="0.10000000149011612"/>
+	<bgColor r="255" g="255" b="255" alpha="255"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<slider min="0" max="1" absoluteScreenLocation="true" width="200" x="52" y="315" fixed="false" horizontal="true" showAlgebra="true"/>
+	<lineStyle thickness="10" type="0" typeHidden="1"/>
+	<animation speed="速度" type="0" playing="false"/>
+</element>
+<command name="Net">
+	<input a0="a" a1="展开动画" a2="ABCD" a3="AB" a4="AE" a5="BF" a6="FG" a7="EH"/>
+	<output a0="方案1" a1="M_1" a2="N_1" a3="O_1" a4="P_1" a5="Q_1" a6="R_1" a7="S_1" a8="T_1" a9="U_1" a10="V_1" a11="W_1" a12="Z_1" a13="A_2" a14="B_2" a15="face7" a16="face8" a17="face12" a18="face9" a19="face10" a20="face11" a21="edge20" a22="edge19" a23="edge22" a24="edge24" a25="edge27" a26="edge29" a27="edge21" a28="edge34" a29="edge36" a30="edge37" a31="edge35" a32="edge23" a33="edge30" a34="edge25" a35="edge26" a36="edge31" a37="edge28" a38="edge32" a39="edge33"/>
+</command>
+<element type="net" label="方案1">
+	<lineStyle thickness="5" type="0" typeHidden="1"/>
+	<show object="false" label="true" ev="5"/>
+	<condition showObject="展开方式 ≟ 1"/>
+	<objColor r="102" g="204" b="255" alpha="0.5"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+</element>
+<element type="point3d" label="M_1">
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 1"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<coords x="0" y="0" z="0" w="1"/>
+	<pointSize val="3"/>
+</element>
+<element type="point3d" label="N_1">
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 1"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<coords x="1" y="0" z="0" w="1"/>
+	<pointSize val="3"/>
+</element>
+<element type="point3d" label="O_1">
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 1"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<coords x="1" y="1" z="0" w="1"/>
+	<pointSize val="3"/>
+</element>
+<element type="point3d" label="P_1">
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 1"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<coords x="0" y="1" z="0" w="1"/>
+	<pointSize val="3"/>
+</element>
+<element type="point3d" label="Q_1">
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 1"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<coords x="0" y="0" z="1" w="1"/>
+	<pointSize val="3"/>
+</element>
+<element type="point3d" label="R_1">
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 1"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<coords x="0" y="1" z="1" w="1"/>
+	<pointSize val="3"/>
+</element>
+<element type="point3d" label="S_1">
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 1"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<coords x="1" y="0" z="1" w="1"/>
+	<pointSize val="3"/>
+</element>
+<element type="point3d" label="T_1">
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 1"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<coords x="1" y="1" z="1" w="1"/>
+	<pointSize val="3"/>
+</element>
+<element type="point3d" label="U_1">
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 1"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<coords x="1" y="1" z="1" w="1"/>
+	<pointSize val="3"/>
+</element>
+<element type="point3d" label="V_1">
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 1"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<coords x="0" y="1" z="1" w="1"/>
+	<pointSize val="3"/>
+</element>
+<element type="point3d" label="W_1">
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 1"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<coords x="0" y="0" z="1" w="1"/>
+	<pointSize val="3"/>
+</element>
+<element type="point3d" label="Z_1">
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 1"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<coords x="1" y="0" z="1" w="1"/>
+	<pointSize val="3"/>
+</element>
+<element type="point3d" label="A_2">
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 1"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<coords x="1" y="0" z="0" w="1"/>
+	<pointSize val="3"/>
+</element>
+<element type="point3d" label="B_2">
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 1"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<coords x="0" y="0" z="0" w="1"/>
+	<pointSize val="3"/>
+</element>
+<element type="polygon3d" label="face7">
+	<lineStyle thickness="5" type="0" typeHidden="1" opacity="178"/>
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 1"/>
+	<objColor r="102" g="204" b="255" alpha="0.4000000059604645"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+</element>
+<element type="polygon3d" label="face8">
+	<lineStyle thickness="5" type="0" typeHidden="1" opacity="178"/>
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 1"/>
+	<objColor r="102" g="204" b="255" alpha="0.4000000059604645"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+</element>
+<element type="polygon3d" label="face12">
+	<lineStyle thickness="5" type="0" typeHidden="1" opacity="178"/>
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 1"/>
+	<objColor r="102" g="204" b="255" alpha="0.4000000059604645"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+</element>
+<element type="polygon3d" label="face9">
+	<lineStyle thickness="5" type="0" typeHidden="1" opacity="178"/>
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 1"/>
+	<objColor r="102" g="204" b="255" alpha="0.4000000059604645"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+</element>
+<element type="polygon3d" label="face10">
+	<lineStyle thickness="5" type="0" typeHidden="1" opacity="178"/>
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 1"/>
+	<objColor r="102" g="204" b="255" alpha="0.4000000059604645"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+</element>
+<element type="polygon3d" label="face11">
+	<lineStyle thickness="5" type="0" typeHidden="1" opacity="178"/>
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 1"/>
+	<objColor r="102" g="204" b="255" alpha="0.4000000059604645"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+</element>
+<element type="segment3d" label="edge20">
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 1"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment3d" label="edge19">
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 1"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment3d" label="edge22">
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 1"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment3d" label="edge24">
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 1"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment3d" label="edge27">
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 1"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment3d" label="edge29">
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 1"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment3d" label="edge21">
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 1"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment3d" label="edge34">
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 1"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment3d" label="edge36">
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 1"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment3d" label="edge37">
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 1"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment3d" label="edge35">
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 1"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment3d" label="edge23">
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 1"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment3d" label="edge30">
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 1"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment3d" label="edge25">
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 1"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment3d" label="edge26">
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 1"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment3d" label="edge31">
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 1"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment3d" label="edge28">
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 1"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment3d" label="edge32">
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 1"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment3d" label="edge33">
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 1"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<command name="Net">
+	<input a0="a" a1="展开动画" a2="ABCD" a3="AD" a4="EF" a5="FG"/>
+	<output a0="方案2" a1="I" a2="J" a3="K" a4="L" a5="M" a6="N" a7="O" a8="P" a9="Q" a10="R" a11="S" a12="T" a13="U" a14="V" a15="faceIJKL" a16="faceIMPO" a17="faceIJNM" a18="faceJKRQ" a19="faceKLTS" a20="faceSTUV" a21="edgeIL" a22="edgeIJ" a23="edgeJK" a24="edgeKL" a25="edgeIM" a26="edgeIO" a27="edgeOP" a28="edgeMP" a29="edgeMN" a30="edgeJN" a31="edgeJQ" a32="edgeQR" a33="edgeKR" a34="edgeKS" a35="edgeST" a36="edgeLT" a37="edgeSV" a38="edgeUV" a39="edgeTU"/>
+</command>
+<element type="net" label="方案2">
+	<lineStyle thickness="5" type="0" typeHidden="1"/>
+	<show object="false" label="true" ev="5"/>
+	<condition showObject="展开方式 ≟ 2"/>
+	<objColor r="102" g="204" b="255" alpha="0.5"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+</element>
+<element type="point3d" label="I">
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 2"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<coords x="0" y="0" z="0" w="1"/>
+	<pointSize val="3"/>
+</element>
+<element type="point3d" label="J">
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 2"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<coords x="1" y="0" z="0" w="1"/>
+	<pointSize val="3"/>
+</element>
+<element type="point3d" label="K">
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 2"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<coords x="1" y="1" z="0" w="1"/>
+	<pointSize val="3"/>
+</element>
+<element type="point3d" label="L">
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 2"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<coords x="0" y="1" z="0" w="1"/>
+	<pointSize val="3"/>
+</element>
+<element type="point3d" label="M">
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 2"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<coords x="0" y="0" z="1" w="1"/>
+	<pointSize val="3"/>
+</element>
+<element type="point3d" label="N">
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 2"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<coords x="1" y="0" z="1" w="1"/>
+	<pointSize val="3"/>
+</element>
+<element type="point3d" label="O">
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 2"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<coords x="0" y="1" z="0" w="1"/>
+	<pointSize val="3"/>
+</element>
+<element type="point3d" label="P">
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 2"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<coords x="0" y="1" z="1" w="1"/>
+	<pointSize val="3"/>
+</element>
+<element type="point3d" label="Q">
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 2"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<coords x="1" y="0" z="1" w="1"/>
+	<pointSize val="3"/>
+</element>
+<element type="point3d" label="R">
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 2"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<coords x="1" y="1" z="1" w="1"/>
+	<pointSize val="3"/>
+</element>
+<element type="point3d" label="S">
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 2"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<coords x="1" y="1" z="1" w="1"/>
+	<pointSize val="3"/>
+</element>
+<element type="point3d" label="T">
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 2"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<coords x="0" y="1" z="1" w="1"/>
+	<pointSize val="3"/>
+</element>
+<element type="point3d" label="U">
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 2"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<coords x="0" y="0" z="1" w="1"/>
+	<pointSize val="3"/>
+</element>
+<element type="point3d" label="V">
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 2"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<coords x="1" y="0" z="1" w="1"/>
+	<pointSize val="3"/>
+</element>
+<element type="polygon3d" label="faceIJKL">
+	<lineStyle thickness="5" type="0" typeHidden="1" opacity="178"/>
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 2"/>
+	<objColor r="102" g="204" b="255" alpha="0.4000000059604645"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+</element>
+<element type="polygon3d" label="faceIMPO">
+	<lineStyle thickness="5" type="0" typeHidden="1" opacity="178"/>
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 2"/>
+	<objColor r="102" g="204" b="255" alpha="0.4000000059604645"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+</element>
+<element type="polygon3d" label="faceIJNM">
+	<lineStyle thickness="5" type="0" typeHidden="1" opacity="178"/>
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 2"/>
+	<objColor r="102" g="204" b="255" alpha="0.4000000059604645"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+</element>
+<element type="polygon3d" label="faceJKRQ">
+	<lineStyle thickness="5" type="0" typeHidden="1" opacity="178"/>
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 2"/>
+	<objColor r="102" g="204" b="255" alpha="0.4000000059604645"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+</element>
+<element type="polygon3d" label="faceKLTS">
+	<lineStyle thickness="5" type="0" typeHidden="1" opacity="178"/>
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 2"/>
+	<objColor r="102" g="204" b="255" alpha="0.4000000059604645"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+</element>
+<element type="polygon3d" label="faceSTUV">
+	<lineStyle thickness="5" type="0" typeHidden="1" opacity="178"/>
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 2"/>
+	<objColor r="102" g="204" b="255" alpha="0.4000000059604645"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+</element>
+<element type="segment3d" label="edgeIL">
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 2"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment3d" label="edgeIJ">
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 2"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment3d" label="edgeJK">
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 2"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment3d" label="edgeKL">
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 2"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment3d" label="edgeIM">
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 2"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment3d" label="edgeIO">
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 2"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment3d" label="edgeOP">
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 2"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment3d" label="edgeMP">
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 2"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment3d" label="edgeMN">
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 2"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment3d" label="edgeJN">
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 2"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment3d" label="edgeJQ">
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 2"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment3d" label="edgeQR">
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 2"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment3d" label="edgeKR">
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 2"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment3d" label="edgeKS">
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 2"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment3d" label="edgeST">
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 2"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment3d" label="edgeLT">
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 2"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment3d" label="edgeSV">
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 2"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment3d" label="edgeUV">
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 2"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment3d" label="edgeTU">
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 2"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<command name="Net">
+	<input a0="a" a1="展开动画" a2="ABCD" a3="BC" a4="CD" a5="BF" a6="FG"/>
+	<output a0="方案7" a1="W" a2="Z" a3="A_1" a4="B_1" a5="C_1" a6="D_1" a7="E_1" a8="F_1" a9="G_1" a10="H_1" a11="I_1" a12="J_1" a13="K_1" a14="L_1" a15="face1" a16="face3" a17="face2" a18="face6" a19="face4" a20="face5" a21="edge1" a22="edgeWZ" a23="edge4" a24="edge6" a25="edge7" a26="edge9" a27="edge2" a28="edge3" a29="edge18" a30="edge5" a31="edge13" a32="edge14" a33="edge16" a34="edge15" a35="edge8" a36="edge11" a37="edge12" a38="edge17" a39="edge10"/>
+</command>
+<element type="net" label="方案7">
+	<lineStyle thickness="5" type="0" typeHidden="1"/>
+	<show object="false" label="true" ev="5"/>
+	<condition showObject="展开方式 ≟ 7"/>
+	<objColor r="102" g="204" b="255" alpha="0.5"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+</element>
+<element type="point3d" label="W">
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 7"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<coords x="0" y="0" z="0" w="1"/>
+	<pointSize val="3"/>
+</element>
+<element type="point3d" label="Z">
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 7"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<coords x="1" y="0" z="0" w="1"/>
+	<pointSize val="3"/>
+</element>
+<element type="point3d" label="A_1">
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 7"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<coords x="1" y="1" z="0" w="1"/>
+	<pointSize val="3"/>
+</element>
+<element type="point3d" label="B_1">
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 7"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<coords x="0" y="1" z="0" w="1"/>
+	<pointSize val="3"/>
+</element>
+<element type="point3d" label="C_1">
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 7"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<coords x="0" y="0" z="1" w="1"/>
+	<pointSize val="3"/>
+</element>
+<element type="point3d" label="D_1">
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 7"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<coords x="0" y="1" z="1" w="1"/>
+	<pointSize val="3"/>
+</element>
+<element type="point3d" label="E_1">
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 7"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<coords x="1" y="1" z="0" w="1"/>
+	<pointSize val="3"/>
+</element>
+<element type="point3d" label="F_1">
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 7"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<coords x="1" y="1" z="1" w="1"/>
+	<pointSize val="3"/>
+</element>
+<element type="point3d" label="G_1">
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 7"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<coords x="1" y="0" z="0" w="1"/>
+	<pointSize val="3"/>
+</element>
+<element type="point3d" label="H_1">
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 7"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<coords x="1" y="0" z="1" w="1"/>
+	<pointSize val="3"/>
+</element>
+<element type="point3d" label="I_1">
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 7"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<coords x="1" y="1" z="1" w="1"/>
+	<pointSize val="3"/>
+</element>
+<element type="point3d" label="J_1">
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 7"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<coords x="1" y="0" z="1" w="1"/>
+	<pointSize val="3"/>
+</element>
+<element type="point3d" label="K_1">
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 7"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<coords x="0" y="0" z="1" w="1"/>
+	<pointSize val="3"/>
+</element>
+<element type="point3d" label="L_1">
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 7"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<coords x="1" y="0" z="1" w="1"/>
+	<pointSize val="3"/>
+</element>
+<element type="polygon3d" label="face1">
+	<lineStyle thickness="5" type="0" typeHidden="1" opacity="178"/>
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 7"/>
+	<objColor r="102" g="204" b="255" alpha="0.4000000059604645"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+</element>
+<element type="polygon3d" label="face3">
+	<lineStyle thickness="5" type="0" typeHidden="1" opacity="178"/>
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 7"/>
+	<objColor r="102" g="204" b="255" alpha="0.4000000059604645"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+</element>
+<element type="polygon3d" label="face2">
+	<lineStyle thickness="5" type="0" typeHidden="1" opacity="178"/>
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 7"/>
+	<objColor r="102" g="204" b="255" alpha="0.4000000059604645"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+</element>
+<element type="polygon3d" label="face6">
+	<lineStyle thickness="5" type="0" typeHidden="1" opacity="178"/>
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 7"/>
+	<objColor r="102" g="204" b="255" alpha="0.4000000059604645"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+</element>
+<element type="polygon3d" label="face4">
+	<lineStyle thickness="5" type="0" typeHidden="1" opacity="178"/>
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 7"/>
+	<objColor r="102" g="204" b="255" alpha="0.4000000059604645"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+</element>
+<element type="polygon3d" label="face5">
+	<lineStyle thickness="5" type="0" typeHidden="1" opacity="178"/>
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 7"/>
+	<objColor r="102" g="204" b="255" alpha="0.4000000059604645"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+</element>
+<element type="segment3d" label="edge1">
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 7"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment3d" label="edgeWZ">
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 7"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment3d" label="edge4">
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 7"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment3d" label="edge6">
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 7"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment3d" label="edge7">
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 7"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment3d" label="edge9">
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 7"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment3d" label="edge2">
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 7"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment3d" label="edge3">
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 7"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment3d" label="edge18">
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 7"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment3d" label="edge5">
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 7"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment3d" label="edge13">
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 7"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment3d" label="edge14">
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 7"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment3d" label="edge16">
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 7"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment3d" label="edge15">
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 7"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment3d" label="edge8">
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 7"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment3d" label="edge11">
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 7"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment3d" label="edge12">
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 7"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment3d" label="edge17">
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 7"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment3d" label="edge10">
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 7"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<command name="Net">
+	<input a0="a" a1="展开动画" a2="ABCD" a3="CD" a4="BC" a5="AE" a6="BF" a7="EH"/>
+	<output a0="方案3" a1="C_2" a2="D_2" a3="E_2" a4="F_2" a5="G_2" a6="H_2" a7="I_2" a8="J_2" a9="K_2" a10="L_2" a11="M_2" a12="N_2" a13="O_2" a14="P_2" a15="face13" a16="face14" a17="face15" a18="face16" a19="face17" a20="face18" a21="edge38" a22="edge39" a23="edge40" a24="edge41" a25="edge42" a26="edge43" a27="edge44" a28="edge45" a29="edge46" a30="edge47" a31="edge48" a32="edge49" a33="edge50" a34="edge51" a35="edge52" a36="edge53" a37="edge54" a38="edge55" a39="edge56"/>
+</command>
+<element type="net" label="方案3">
+	<lineStyle thickness="5" type="0" typeHidden="1"/>
+	<show object="false" label="true" ev="5"/>
+	<condition showObject="展开方式 ≟ 3"/>
+	<objColor r="102" g="204" b="255" alpha="0.5"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+</element>
+<element type="point3d" label="C_2">
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 3"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<coords x="0" y="0" z="0" w="1"/>
+	<pointSize val="3"/>
+</element>
+<element type="point3d" label="D_2">
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 3"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<coords x="1" y="0" z="0" w="1"/>
+	<pointSize val="3"/>
+</element>
+<element type="point3d" label="E_2">
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 3"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<coords x="1" y="1" z="0" w="1"/>
+	<pointSize val="3"/>
+</element>
+<element type="point3d" label="F_2">
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 3"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<coords x="0" y="1" z="0" w="1"/>
+	<pointSize val="3"/>
+</element>
+<element type="point3d" label="G_2">
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 3"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<coords x="0" y="0" z="1" w="1"/>
+	<pointSize val="3"/>
+</element>
+<element type="point3d" label="H_2">
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 3"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<coords x="0" y="1" z="1" w="1"/>
+	<pointSize val="3"/>
+</element>
+<element type="point3d" label="I_2">
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 3"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<coords x="1" y="1" z="0" w="1"/>
+	<pointSize val="3"/>
+</element>
+<element type="point3d" label="J_2">
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 3"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<coords x="1" y="1" z="1" w="1"/>
+	<pointSize val="3"/>
+</element>
+<element type="point3d" label="K_2">
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 3"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<coords x="1" y="0" z="0" w="1"/>
+	<pointSize val="3"/>
+</element>
+<element type="point3d" label="L_2">
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 3"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<coords x="1" y="0" z="1" w="1"/>
+	<pointSize val="3"/>
+</element>
+<element type="point3d" label="M_2">
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 3"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<coords x="0" y="0" z="1" w="1"/>
+	<pointSize val="3"/>
+</element>
+<element type="point3d" label="N_2">
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 3"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<coords x="1" y="0" z="1" w="1"/>
+	<pointSize val="3"/>
+</element>
+<element type="point3d" label="O_2">
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 3"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<coords x="0" y="1" z="1" w="1"/>
+	<pointSize val="3"/>
+</element>
+<element type="point3d" label="P_2">
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 3"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<coords x="1" y="1" z="1" w="1"/>
+	<pointSize val="3"/>
+</element>
+<element type="polygon3d" label="face13">
+	<lineStyle thickness="5" type="0" typeHidden="1" opacity="178"/>
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 3"/>
+	<objColor r="102" g="204" b="255" alpha="0.4000000059604645"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+</element>
+<element type="polygon3d" label="face14">
+	<lineStyle thickness="5" type="0" typeHidden="1" opacity="178"/>
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 3"/>
+	<objColor r="102" g="204" b="255" alpha="0.4000000059604645"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+</element>
+<element type="polygon3d" label="face15">
+	<lineStyle thickness="5" type="0" typeHidden="1" opacity="178"/>
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 3"/>
+	<objColor r="102" g="204" b="255" alpha="0.4000000059604645"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+</element>
+<element type="polygon3d" label="face16">
+	<lineStyle thickness="5" type="0" typeHidden="1" opacity="178"/>
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 3"/>
+	<objColor r="102" g="204" b="255" alpha="0.4000000059604645"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+</element>
+<element type="polygon3d" label="face17">
+	<lineStyle thickness="5" type="0" typeHidden="1" opacity="178"/>
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 3"/>
+	<objColor r="102" g="204" b="255" alpha="0.4000000059604645"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+</element>
+<element type="polygon3d" label="face18">
+	<lineStyle thickness="5" type="0" typeHidden="1" opacity="178"/>
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 3"/>
+	<objColor r="102" g="204" b="255" alpha="0.4000000059604645"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+</element>
+<element type="segment3d" label="edge38">
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 3"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment3d" label="edge39">
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 3"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment3d" label="edge40">
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 3"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment3d" label="edge41">
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 3"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment3d" label="edge42">
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 3"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment3d" label="edge43">
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 3"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment3d" label="edge44">
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 3"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment3d" label="edge45">
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 3"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment3d" label="edge46">
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 3"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment3d" label="edge47">
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 3"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment3d" label="edge48">
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 3"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment3d" label="edge49">
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 3"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment3d" label="edge50">
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 3"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment3d" label="edge51">
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 3"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment3d" label="edge52">
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 3"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment3d" label="edge53">
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 3"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment3d" label="edge54">
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 3"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment3d" label="edge55">
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 3"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment3d" label="edge56">
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 3"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<command name="Net">
+	<input a0="a" a1="展开动画" a2="ABCD" a3="CD" a4="BC" a5="BF" a6="EH" a7="CG"/>
+	<output a0="方案4" a1="Q_2" a2="R_2" a3="S_2" a4="T_2" a5="U_2" a6="V_2" a7="W_2" a8="Z_2" a9="A_3" a10="B_3" a11="C_3" a12="D_3" a13="E_3" a14="F_3" a15="face19" a16="face20" a17="face21" a18="face22" a19="face23" a20="face24" a21="edge57" a22="edge58" a23="edge59" a24="edge60" a25="edge61" a26="edge62" a27="edge63" a28="edge64" a29="edge65" a30="edge66" a31="edge67" a32="edge68" a33="edge69" a34="edge70" a35="edge71" a36="edge72" a37="edge73" a38="edge74" a39="edge75"/>
+</command>
+<element type="net" label="方案4">
+	<lineStyle thickness="5" type="0" typeHidden="1"/>
+	<show object="false" label="true" ev="5"/>
+	<condition showObject="展开方式 ≟ 4"/>
+	<objColor r="102" g="204" b="255" alpha="0.5"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+</element>
+<element type="point3d" label="Q_2">
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 4"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<coords x="0" y="0" z="0" w="1"/>
+	<pointSize val="3"/>
+</element>
+<element type="point3d" label="R_2">
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 4"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<coords x="1" y="0" z="0" w="1"/>
+	<pointSize val="3"/>
+</element>
+<element type="point3d" label="S_2">
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 4"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<coords x="1" y="1" z="0" w="1"/>
+	<pointSize val="3"/>
+</element>
+<element type="point3d" label="T_2">
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 4"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<coords x="0" y="1" z="0" w="1"/>
+	<pointSize val="3"/>
+</element>
+<element type="point3d" label="U_2">
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 4"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<coords x="0" y="0" z="1" w="1"/>
+	<pointSize val="3"/>
+</element>
+<element type="point3d" label="V_2">
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 4"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<coords x="0" y="1" z="1" w="1"/>
+	<pointSize val="3"/>
+</element>
+<element type="point3d" label="W_2">
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 4"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<coords x="1" y="1" z="0" w="1"/>
+	<pointSize val="3"/>
+</element>
+<element type="point3d" label="Z_2">
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 4"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<coords x="1" y="1" z="1" w="1"/>
+	<pointSize val="3"/>
+</element>
+<element type="point3d" label="A_3">
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 4"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<coords x="0" y="0" z="1" w="1"/>
+	<pointSize val="3"/>
+</element>
+<element type="point3d" label="B_3">
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 4"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<coords x="1" y="0" z="1" w="1"/>
+	<pointSize val="3"/>
+</element>
+<element type="point3d" label="C_3">
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 4"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<coords x="0" y="1" z="1" w="1"/>
+	<pointSize val="3"/>
+</element>
+<element type="point3d" label="D_3">
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 4"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<coords x="1" y="1" z="1" w="1"/>
+	<pointSize val="3"/>
+</element>
+<element type="point3d" label="E_3">
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 4"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<coords x="1" y="1" z="0" w="1"/>
+	<pointSize val="3"/>
+</element>
+<element type="point3d" label="F_3">
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 4"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<coords x="1" y="0" z="0" w="1"/>
+	<pointSize val="3"/>
+</element>
+<element type="polygon3d" label="face19">
+	<lineStyle thickness="5" type="0" typeHidden="1" opacity="178"/>
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 4"/>
+	<objColor r="102" g="204" b="255" alpha="0.4000000059604645"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+</element>
+<element type="polygon3d" label="face20">
+	<lineStyle thickness="5" type="0" typeHidden="1" opacity="178"/>
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 4"/>
+	<objColor r="102" g="204" b="255" alpha="0.4000000059604645"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+</element>
+<element type="polygon3d" label="face21">
+	<lineStyle thickness="5" type="0" typeHidden="1" opacity="178"/>
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 4"/>
+	<objColor r="102" g="204" b="255" alpha="0.4000000059604645"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+</element>
+<element type="polygon3d" label="face22">
+	<lineStyle thickness="5" type="0" typeHidden="1" opacity="178"/>
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 4"/>
+	<objColor r="102" g="204" b="255" alpha="0.4000000059604645"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+</element>
+<element type="polygon3d" label="face23">
+	<lineStyle thickness="5" type="0" typeHidden="1" opacity="178"/>
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 4"/>
+	<objColor r="102" g="204" b="255" alpha="0.4000000059604645"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+</element>
+<element type="polygon3d" label="face24">
+	<lineStyle thickness="5" type="0" typeHidden="1" opacity="178"/>
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 4"/>
+	<objColor r="102" g="204" b="255" alpha="0.4000000059604645"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+</element>
+<element type="segment3d" label="edge57">
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 4"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment3d" label="edge58">
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 4"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment3d" label="edge59">
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 4"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment3d" label="edge60">
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 4"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment3d" label="edge61">
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 4"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment3d" label="edge62">
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 4"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment3d" label="edge63">
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 4"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment3d" label="edge64">
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 4"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment3d" label="edge65">
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 4"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment3d" label="edge66">
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 4"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment3d" label="edge67">
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 4"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment3d" label="edge68">
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 4"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment3d" label="edge69">
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 4"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment3d" label="edge70">
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 4"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment3d" label="edge71">
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 4"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment3d" label="edge72">
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 4"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment3d" label="edge73">
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 4"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment3d" label="edge74">
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 4"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment3d" label="edge75">
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 4"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<command name="Net">
+	<input a0="a" a1="展开动画" a2="ABCD" a3="AD" a4="AE" a5="DH"/>
+	<output a0="方案5" a1="G_3" a2="H_3" a3="I_3" a4="J_3" a5="K_3" a6="L_3" a7="M_3" a8="N_3" a9="O_3" a10="P_3" a11="Q_3" a12="R_3" a13="S_3" a14="T_3" a15="face25" a16="face30" a17="face26" a18="face27" a19="face28" a20="face29" a21="edge77" a22="edge76" a23="edge79" a24="edge82" a25="edge87" a26="edge88" a27="edge92" a28="edge91" a29="edge78" a30="edge86" a31="edge80" a32="edge81" a33="edge93" a34="edge83" a35="edge84" a36="edge94" a37="edge85" a38="edge90" a39="edge89"/>
+</command>
+<element type="net" label="方案5">
+	<lineStyle thickness="5" type="0" typeHidden="1"/>
+	<show object="false" label="true" ev="5"/>
+	<condition showObject="展开方式 ≟ 5"/>
+	<objColor r="102" g="204" b="255" alpha="0.5"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+</element>
+<element type="point3d" label="G_3">
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 5"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<coords x="0" y="0" z="0" w="1"/>
+	<pointSize val="3"/>
+</element>
+<element type="point3d" label="H_3">
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 5"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<coords x="1" y="0" z="0" w="1"/>
+	<pointSize val="3"/>
+</element>
+<element type="point3d" label="I_3">
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 5"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<coords x="1" y="1" z="0" w="1"/>
+	<pointSize val="3"/>
+</element>
+<element type="point3d" label="J_3">
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 5"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<coords x="0" y="1" z="0" w="1"/>
+	<pointSize val="3"/>
+</element>
+<element type="point3d" label="K_3">
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 5"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<coords x="0" y="0" z="1" w="1"/>
+	<pointSize val="3"/>
+</element>
+<element type="point3d" label="L_3">
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 5"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<coords x="1" y="0" z="1" w="1"/>
+	<pointSize val="3"/>
+</element>
+<element type="point3d" label="M_3">
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 5"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<coords x="0" y="1" z="1" w="1"/>
+	<pointSize val="3"/>
+</element>
+<element type="point3d" label="N_3">
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 5"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<coords x="1" y="1" z="1" w="1"/>
+	<pointSize val="3"/>
+</element>
+<element type="point3d" label="O_3">
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 5"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<coords x="0" y="0" z="0" w="1"/>
+	<pointSize val="3"/>
+</element>
+<element type="point3d" label="P_3">
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 5"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<coords x="0" y="1" z="0" w="1"/>
+	<pointSize val="3"/>
+</element>
+<element type="point3d" label="Q_3">
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 5"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<coords x="1" y="0" z="1" w="1"/>
+	<pointSize val="3"/>
+</element>
+<element type="point3d" label="R_3">
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 5"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<coords x="1" y="1" z="1" w="1"/>
+	<pointSize val="3"/>
+</element>
+<element type="point3d" label="S_3">
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 5"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<coords x="1" y="1" z="1" w="1"/>
+	<pointSize val="3"/>
+</element>
+<element type="point3d" label="T_3">
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 5"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<coords x="0" y="1" z="1" w="1"/>
+	<pointSize val="3"/>
+</element>
+<element type="polygon3d" label="face25">
+	<lineStyle thickness="5" type="0" typeHidden="1" opacity="178"/>
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 5"/>
+	<objColor r="102" g="204" b="255" alpha="0.4000000059604645"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+</element>
+<element type="polygon3d" label="face30">
+	<lineStyle thickness="5" type="0" typeHidden="1" opacity="178"/>
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 5"/>
+	<objColor r="102" g="204" b="255" alpha="0.4000000059604645"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+</element>
+<element type="polygon3d" label="face26">
+	<lineStyle thickness="5" type="0" typeHidden="1" opacity="178"/>
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 5"/>
+	<objColor r="102" g="204" b="255" alpha="0.4000000059604645"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+</element>
+<element type="polygon3d" label="face27">
+	<lineStyle thickness="5" type="0" typeHidden="1" opacity="178"/>
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 5"/>
+	<objColor r="102" g="204" b="255" alpha="0.4000000059604645"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+</element>
+<element type="polygon3d" label="face28">
+	<lineStyle thickness="5" type="0" typeHidden="1" opacity="178"/>
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 5"/>
+	<objColor r="102" g="204" b="255" alpha="0.4000000059604645"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+</element>
+<element type="polygon3d" label="face29">
+	<lineStyle thickness="5" type="0" typeHidden="1" opacity="178"/>
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 5"/>
+	<objColor r="102" g="204" b="255" alpha="0.4000000059604645"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+</element>
+<element type="segment3d" label="edge77">
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 5"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment3d" label="edge76">
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 5"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment3d" label="edge79">
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 5"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment3d" label="edge82">
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 5"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment3d" label="edge87">
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 5"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment3d" label="edge88">
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 5"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment3d" label="edge92">
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 5"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment3d" label="edge91">
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 5"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment3d" label="edge78">
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 5"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment3d" label="edge86">
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 5"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment3d" label="edge80">
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 5"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment3d" label="edge81">
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 5"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment3d" label="edge93">
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 5"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment3d" label="edge83">
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 5"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment3d" label="edge84">
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 5"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment3d" label="edge94">
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 5"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment3d" label="edge85">
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 5"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment3d" label="edge90">
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 5"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment3d" label="edge89">
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 5"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<command name="Net">
+	<input a0="a" a1="展开动画" a2="ABCD" a3="AB" a4="AE" a5="BC" a6="CG" a7="EH" a8="FG"/>
+	<output a0="方案6" a1="U_3" a2="V_3" a3="W_3" a4="Z_3" a5="A_4" a6="B_4" a7="C_4" a8="D_4" a9="E_4" a10="F_4" a11="G_4" a12="H_4" a13="I_4" a14="J_4" a15="face31" a16="face32" a17="face35" a18="face36" a19="face33" a20="face34" a21="edge96" a22="edge95" a23="edge98" a24="edge99" a25="edge101" a26="edge103" a27="edge97" a28="edge107" a29="edge109" a30="edge111" a31="edge108" a32="edge110" a33="edge113" a34="edge112" a35="edge100" a36="edge104" a37="edge102" a38="edge105" a39="edge106"/>
+</command>
+<element type="net" label="方案6">
+	<lineStyle thickness="5" type="0" typeHidden="1"/>
+	<show object="false" label="true" ev="5"/>
+	<condition showObject="展开方式 ≟ 6"/>
+	<objColor r="102" g="204" b="255" alpha="0.5"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+</element>
+<element type="point3d" label="U_3">
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 6"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<coords x="0" y="0" z="0" w="1"/>
+	<pointSize val="3"/>
+</element>
+<element type="point3d" label="V_3">
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 6"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<coords x="1" y="0" z="0" w="1"/>
+	<pointSize val="3"/>
+</element>
+<element type="point3d" label="W_3">
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 6"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<coords x="1" y="1" z="0" w="1"/>
+	<pointSize val="3"/>
+</element>
+<element type="point3d" label="Z_3">
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 6"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<coords x="0" y="1" z="0" w="1"/>
+	<pointSize val="3"/>
+</element>
+<element type="point3d" label="A_4">
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 6"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<coords x="0" y="0" z="1" w="1"/>
+	<pointSize val="3"/>
+</element>
+<element type="point3d" label="B_4">
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 6"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<coords x="0" y="1" z="1" w="1"/>
+	<pointSize val="3"/>
+</element>
+<element type="point3d" label="C_4">
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 6"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<coords x="1" y="1" z="1" w="1"/>
+	<pointSize val="3"/>
+</element>
+<element type="point3d" label="D_4">
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 6"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<coords x="0" y="1" z="1" w="1"/>
+	<pointSize val="3"/>
+</element>
+<element type="point3d" label="E_4">
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 6"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<coords x="0" y="0" z="1" w="1"/>
+	<pointSize val="3"/>
+</element>
+<element type="point3d" label="F_4">
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 6"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<coords x="1" y="0" z="1" w="1"/>
+	<pointSize val="3"/>
+</element>
+<element type="point3d" label="G_4">
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 6"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<coords x="1" y="0" z="0" w="1"/>
+	<pointSize val="3"/>
+</element>
+<element type="point3d" label="H_4">
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 6"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<coords x="0" y="0" z="0" w="1"/>
+	<pointSize val="3"/>
+</element>
+<element type="point3d" label="I_4">
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 6"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<coords x="1" y="1" z="0" w="1"/>
+	<pointSize val="3"/>
+</element>
+<element type="point3d" label="J_4">
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 6"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<coords x="1" y="1" z="1" w="1"/>
+	<pointSize val="3"/>
+</element>
+<element type="polygon3d" label="face31">
+	<lineStyle thickness="5" type="0" typeHidden="1" opacity="178"/>
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 6"/>
+	<objColor r="102" g="204" b="255" alpha="0.4000000059604645"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+</element>
+<element type="polygon3d" label="face32">
+	<lineStyle thickness="5" type="0" typeHidden="1" opacity="178"/>
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 6"/>
+	<objColor r="102" g="204" b="255" alpha="0.4000000059604645"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+</element>
+<element type="polygon3d" label="face35">
+	<lineStyle thickness="5" type="0" typeHidden="1" opacity="178"/>
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 6"/>
+	<objColor r="102" g="204" b="255" alpha="0.4000000059604645"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+</element>
+<element type="polygon3d" label="face36">
+	<lineStyle thickness="5" type="0" typeHidden="1" opacity="178"/>
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 6"/>
+	<objColor r="102" g="204" b="255" alpha="0.4000000059604645"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+</element>
+<element type="polygon3d" label="face33">
+	<lineStyle thickness="5" type="0" typeHidden="1" opacity="178"/>
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 6"/>
+	<objColor r="102" g="204" b="255" alpha="0.4000000059604645"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+</element>
+<element type="polygon3d" label="face34">
+	<lineStyle thickness="5" type="0" typeHidden="1" opacity="178"/>
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 6"/>
+	<objColor r="102" g="204" b="255" alpha="0.4000000059604645"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+</element>
+<element type="segment3d" label="edge96">
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 6"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment3d" label="edge95">
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 6"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment3d" label="edge98">
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 6"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment3d" label="edge99">
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 6"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment3d" label="edge101">
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 6"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment3d" label="edge103">
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 6"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment3d" label="edge97">
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 6"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment3d" label="edge107">
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 6"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment3d" label="edge109">
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 6"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment3d" label="edge111">
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 6"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment3d" label="edge108">
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 6"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment3d" label="edge110">
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 6"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment3d" label="edge113">
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 6"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment3d" label="edge112">
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 6"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment3d" label="edge100">
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 6"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment3d" label="edge104">
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 6"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment3d" label="edge102">
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 6"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment3d" label="edge105">
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 6"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment3d" label="edge106">
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 6"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="numeric" label="展开方式">
+	<value val="1"/>
+	<show object="true" label="true"/>
+	<objColor r="255" g="255" b="255" alpha="0.10000000149011612"/>
+	<bgColor r="255" g="255" b="255" alpha="255"/>
+	<layer val="0"/>
+	<labelOffset x="-29" y="-16"/>
+	<labelMode val="1"/>
+	<slider min="0" max="11" absoluteScreenLocation="true" width="200" x="52" y="157" fixed="false" horizontal="true" showAlgebra="true"/>
+	<lineStyle thickness="10" type="0" typeHidden="1"/>
+	<animation step="1" speed="1" type="0" playing="false"/>
+</element>
+<command name="Net">
+	<input a0="a" a1="展开动画" a2="ABCD" a3="CD" a4="BC" a5="AE" a6="EH" a7="EF"/>
+	<output a0="方案8" a1="K_4" a2="L_4" a3="M_4" a4="N_4" a5="O_4" a6="P_4" a7="Q_4" a8="R_4" a9="S_4" a10="T_4" a11="U_4" a12="V_4" a13="W_4" a14="Z_4" a15="face37" a16="face39" a17="face38" a18="face40" a19="face41" a20="face42" a21="edge115" a22="edge114" a23="edge118" a24="edge121" a25="edge122" a26="edge124" a27="edge116" a28="edge117" a29="edge127" a30="edge119" a31="edge128" a32="edge130" a33="edge120" a34="edge123" a35="edge126" a36="edge125" a37="edge129" a38="edge132" a39="edge131"/>
+</command>
+<element type="net" label="方案8">
+	<lineStyle thickness="5" type="0" typeHidden="1"/>
+	<show object="true" label="true" ev="5"/>
+	<condition showObject="展开方式 ≟ 8"/>
+	<objColor r="102" g="204" b="255" alpha="0.5"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+</element>
+<element type="point3d" label="K_4">
+	<show object="true" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 8"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<coords x="0" y="0" z="0" w="1"/>
+	<pointSize val="3"/>
+</element>
+<element type="point3d" label="L_4">
+	<show object="true" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 8"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<coords x="1" y="0" z="0" w="1"/>
+	<pointSize val="3"/>
+</element>
+<element type="point3d" label="M_4">
+	<show object="true" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 8"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<coords x="1" y="1" z="0" w="1"/>
+	<pointSize val="3"/>
+</element>
+<element type="point3d" label="N_4">
+	<show object="true" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 8"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<coords x="0" y="1" z="0" w="1"/>
+	<pointSize val="3"/>
+</element>
+<element type="point3d" label="O_4">
+	<show object="true" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 8"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<coords x="0" y="0" z="1" w="1"/>
+	<pointSize val="3"/>
+</element>
+<element type="point3d" label="P_4">
+	<show object="true" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 8"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<coords x="0" y="1" z="1" w="1"/>
+	<pointSize val="3"/>
+</element>
+<element type="point3d" label="Q_4">
+	<show object="true" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 8"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<coords x="1" y="1" z="0" w="1"/>
+	<pointSize val="3"/>
+</element>
+<element type="point3d" label="R_4">
+	<show object="true" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 8"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<coords x="1" y="1" z="1" w="1"/>
+	<pointSize val="3"/>
+</element>
+<element type="point3d" label="S_4">
+	<show object="true" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 8"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<coords x="0" y="0" z="1" w="1"/>
+	<pointSize val="3"/>
+</element>
+<element type="point3d" label="T_4">
+	<show object="true" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 8"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<coords x="1" y="0" z="1" w="1"/>
+	<pointSize val="3"/>
+</element>
+<element type="point3d" label="U_4">
+	<show object="true" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 8"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<coords x="1" y="1" z="0" w="1"/>
+	<pointSize val="3"/>
+</element>
+<element type="point3d" label="V_4">
+	<show object="true" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 8"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<coords x="1" y="1" z="1" w="1"/>
+	<pointSize val="3"/>
+</element>
+<element type="point3d" label="W_4">
+	<show object="true" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 8"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<coords x="0" y="0" z="1" w="1"/>
+	<pointSize val="3"/>
+</element>
+<element type="point3d" label="Z_4">
+	<show object="true" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 8"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<coords x="0" y="1" z="1" w="1"/>
+	<pointSize val="3"/>
+</element>
+<element type="polygon3d" label="face37">
+	<lineStyle thickness="5" type="0" typeHidden="1" opacity="178"/>
+	<show object="true" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 8"/>
+	<objColor r="102" g="204" b="255" alpha="0.4000000059604645"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+</element>
+<element type="polygon3d" label="face39">
+	<lineStyle thickness="5" type="0" typeHidden="1" opacity="178"/>
+	<show object="true" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 8"/>
+	<objColor r="102" g="204" b="255" alpha="0.4000000059604645"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+</element>
+<element type="polygon3d" label="face38">
+	<lineStyle thickness="5" type="0" typeHidden="1" opacity="178"/>
+	<show object="true" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 8"/>
+	<objColor r="102" g="204" b="255" alpha="0.4000000059604645"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+</element>
+<element type="polygon3d" label="face40">
+	<lineStyle thickness="5" type="0" typeHidden="1" opacity="178"/>
+	<show object="true" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 8"/>
+	<objColor r="102" g="204" b="255" alpha="0.4000000059604645"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+</element>
+<element type="polygon3d" label="face41">
+	<lineStyle thickness="5" type="0" typeHidden="1" opacity="178"/>
+	<show object="true" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 8"/>
+	<objColor r="102" g="204" b="255" alpha="0.4000000059604645"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+</element>
+<element type="polygon3d" label="face42">
+	<lineStyle thickness="5" type="0" typeHidden="1" opacity="178"/>
+	<show object="true" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 8"/>
+	<objColor r="102" g="204" b="255" alpha="0.4000000059604645"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+</element>
+<element type="segment3d" label="edge115">
+	<show object="true" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 8"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment3d" label="edge114">
+	<show object="true" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 8"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment3d" label="edge118">
+	<show object="true" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 8"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment3d" label="edge121">
+	<show object="true" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 8"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment3d" label="edge122">
+	<show object="true" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 8"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment3d" label="edge124">
+	<show object="true" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 8"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment3d" label="edge116">
+	<show object="true" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 8"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment3d" label="edge117">
+	<show object="true" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 8"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment3d" label="edge127">
+	<show object="true" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 8"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment3d" label="edge119">
+	<show object="true" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 8"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment3d" label="edge128">
+	<show object="true" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 8"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment3d" label="edge130">
+	<show object="true" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 8"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment3d" label="edge120">
+	<show object="true" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 8"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment3d" label="edge123">
+	<show object="true" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 8"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment3d" label="edge126">
+	<show object="true" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 8"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment3d" label="edge125">
+	<show object="true" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 8"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment3d" label="edge129">
+	<show object="true" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 8"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment3d" label="edge132">
+	<show object="true" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 8"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment3d" label="edge131">
+	<show object="true" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 8"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<command name="Net">
+	<input a0="a" a1="展开动画" a2="ABCD" a3="AE" a4="BF" a5="CG" a6="DH" a7="EH" a8="EF" a9="FG"/>
+	<output a0="方案9" a1="A_5" a2="B_5" a3="C_5" a4="D_5" a5="E_5" a6="F_5" a7="G_5" a8="H_5" a9="I_5" a10="J_5" a11="K_5" a12="L_5" a13="M_5" a14="N_5" a15="face43" a16="face45" a17="face44" a18="face46" a19="face47" a20="face48" a21="edge134" a22="edge133" a23="edge137" a24="edge140" a25="edge143" a26="edge145" a27="edge135" a28="edge136" a29="edge146" a30="edge138" a31="edge139" a32="edge147" a33="edge141" a34="edge142" a35="edge148" a36="edge144" a37="edge149" a38="edge151" a39="edge150"/>
+</command>
+<element type="net" label="方案9">
+	<lineStyle thickness="5" type="0" typeHidden="1"/>
+	<show object="false" label="true" ev="5"/>
+	<condition showObject="展开方式 ≟ 9"/>
+	<objColor r="102" g="204" b="255" alpha="0.5"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+</element>
+<element type="point3d" label="A_5">
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 9"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<coords x="0" y="0" z="0" w="1"/>
+	<pointSize val="3"/>
+</element>
+<element type="point3d" label="B_5">
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 9"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<coords x="1" y="0" z="0" w="1"/>
+	<pointSize val="3"/>
+</element>
+<element type="point3d" label="C_5">
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 9"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<coords x="1" y="1" z="0" w="1"/>
+	<pointSize val="3"/>
+</element>
+<element type="point3d" label="D_5">
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 9"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<coords x="0" y="1" z="0" w="1"/>
+	<pointSize val="3"/>
+</element>
+<element type="point3d" label="E_5">
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 9"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<coords x="0" y="0" z="1" w="1"/>
+	<pointSize val="3"/>
+</element>
+<element type="point3d" label="F_5">
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 9"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<coords x="0" y="1" z="1" w="1"/>
+	<pointSize val="3"/>
+</element>
+<element type="point3d" label="G_5">
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 9"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<coords x="0" y="0" z="1" w="1"/>
+	<pointSize val="3"/>
+</element>
+<element type="point3d" label="H_5">
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 9"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<coords x="1" y="0" z="1" w="1"/>
+	<pointSize val="3"/>
+</element>
+<element type="point3d" label="I_5">
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 9"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<coords x="1" y="0" z="1" w="1"/>
+	<pointSize val="3"/>
+</element>
+<element type="point3d" label="J_5">
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 9"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<coords x="1" y="1" z="1" w="1"/>
+	<pointSize val="3"/>
+</element>
+<element type="point3d" label="K_5">
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 9"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<coords x="1" y="1" z="1" w="1"/>
+	<pointSize val="3"/>
+</element>
+<element type="point3d" label="L_5">
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 9"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<coords x="0" y="1" z="1" w="1"/>
+	<pointSize val="3"/>
+</element>
+<element type="point3d" label="M_5">
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 9"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<coords x="0" y="0" z="1" w="1"/>
+	<pointSize val="3"/>
+</element>
+<element type="point3d" label="N_5">
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 9"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<coords x="1" y="0" z="1" w="1"/>
+	<pointSize val="3"/>
+</element>
+<element type="polygon3d" label="face43">
+	<lineStyle thickness="5" type="0" typeHidden="1" opacity="178"/>
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 9"/>
+	<objColor r="102" g="204" b="255" alpha="0.4000000059604645"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+</element>
+<element type="polygon3d" label="face45">
+	<lineStyle thickness="5" type="0" typeHidden="1" opacity="178"/>
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 9"/>
+	<objColor r="102" g="204" b="255" alpha="0.4000000059604645"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+</element>
+<element type="polygon3d" label="face44">
+	<lineStyle thickness="5" type="0" typeHidden="1" opacity="178"/>
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 9"/>
+	<objColor r="102" g="204" b="255" alpha="0.4000000059604645"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+</element>
+<element type="polygon3d" label="face46">
+	<lineStyle thickness="5" type="0" typeHidden="1" opacity="178"/>
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 9"/>
+	<objColor r="102" g="204" b="255" alpha="0.4000000059604645"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+</element>
+<element type="polygon3d" label="face47">
+	<lineStyle thickness="5" type="0" typeHidden="1" opacity="178"/>
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 9"/>
+	<objColor r="102" g="204" b="255" alpha="0.4000000059604645"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+</element>
+<element type="polygon3d" label="face48">
+	<lineStyle thickness="5" type="0" typeHidden="1" opacity="178"/>
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 9"/>
+	<objColor r="102" g="204" b="255" alpha="0.4000000059604645"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+</element>
+<element type="segment3d" label="edge134">
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 9"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment3d" label="edge133">
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 9"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment3d" label="edge137">
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 9"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment3d" label="edge140">
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 9"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment3d" label="edge143">
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 9"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment3d" label="edge145">
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 9"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment3d" label="edge135">
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 9"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment3d" label="edge136">
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 9"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment3d" label="edge146">
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 9"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment3d" label="edge138">
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 9"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment3d" label="edge139">
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 9"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment3d" label="edge147">
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 9"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment3d" label="edge141">
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 9"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment3d" label="edge142">
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 9"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment3d" label="edge148">
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 9"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment3d" label="edge144">
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 9"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment3d" label="edge149">
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 9"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment3d" label="edge151">
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 9"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment3d" label="edge150">
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 9"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<command name="Net">
+	<input a0="a" a1="展开动画" a2="ABCD" a3="BC" a4="AE" a5="BF" a6="EH" a7="EF"/>
+	<output a0="方案10" a1="O_5" a2="P_5" a3="Q_5" a4="R_5" a5="S_5" a6="T_5" a7="U_5" a8="V_5" a9="W_5" a10="Z_5" a11="A_6" a12="B_6" a13="C_6" a14="D_6" a15="face49" a16="face51" a17="face50" a18="face53" a19="face52" a20="face54" a21="edge153" a22="edge152" a23="edge156" a24="edge158" a25="edge161" a26="edge163" a27="edge154" a28="edge155" a29="edge164" a30="edge157" a31="edge159" a32="edge160" a33="edge169" a34="edge166" a35="edge165" a36="edge162" a37="edge167" a38="edge170" a39="edge168"/>
+</command>
+<element type="net" label="方案10">
+	<lineStyle thickness="5" type="0" typeHidden="1"/>
+	<show object="false" label="true" ev="5"/>
+	<condition showObject="展开方式 ≟ 10"/>
+	<objColor r="102" g="204" b="255" alpha="0.5"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+</element>
+<element type="point3d" label="O_5">
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 10"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<coords x="0" y="0" z="0" w="1"/>
+	<pointSize val="3"/>
+</element>
+<element type="point3d" label="P_5">
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 10"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<coords x="1" y="0" z="0" w="1"/>
+	<pointSize val="3"/>
+</element>
+<element type="point3d" label="Q_5">
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 10"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<coords x="1" y="1" z="0" w="1"/>
+	<pointSize val="3"/>
+</element>
+<element type="point3d" label="R_5">
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 10"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<coords x="0" y="1" z="0" w="1"/>
+	<pointSize val="3"/>
+</element>
+<element type="point3d" label="S_5">
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 10"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<coords x="0" y="0" z="1" w="1"/>
+	<pointSize val="3"/>
+</element>
+<element type="point3d" label="T_5">
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 10"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<coords x="0" y="1" z="1" w="1"/>
+	<pointSize val="3"/>
+</element>
+<element type="point3d" label="U_5">
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 10"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<coords x="0" y="0" z="1" w="1"/>
+	<pointSize val="3"/>
+</element>
+<element type="point3d" label="V_5">
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 10"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<coords x="1" y="0" z="1" w="1"/>
+	<pointSize val="3"/>
+</element>
+<element type="point3d" label="W_5">
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 10"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<coords x="1" y="1" z="1" w="1"/>
+	<pointSize val="3"/>
+</element>
+<element type="point3d" label="Z_5">
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 10"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<coords x="0" y="1" z="1" w="1"/>
+	<pointSize val="3"/>
+</element>
+<element type="point3d" label="A_6">
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 10"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<coords x="1" y="0" z="0" w="1"/>
+	<pointSize val="3"/>
+</element>
+<element type="point3d" label="B_6">
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 10"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<coords x="1" y="0" z="1" w="1"/>
+	<pointSize val="3"/>
+</element>
+<element type="point3d" label="C_6">
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 10"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<coords x="0" y="0" z="1" w="1"/>
+	<pointSize val="3"/>
+</element>
+<element type="point3d" label="D_6">
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 10"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<coords x="1" y="0" z="1" w="1"/>
+	<pointSize val="3"/>
+</element>
+<element type="polygon3d" label="face49">
+	<lineStyle thickness="5" type="0" typeHidden="1" opacity="178"/>
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 10"/>
+	<objColor r="102" g="204" b="255" alpha="0.4000000059604645"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+</element>
+<element type="polygon3d" label="face51">
+	<lineStyle thickness="5" type="0" typeHidden="1" opacity="178"/>
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 10"/>
+	<objColor r="102" g="204" b="255" alpha="0.4000000059604645"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+</element>
+<element type="polygon3d" label="face50">
+	<lineStyle thickness="5" type="0" typeHidden="1" opacity="178"/>
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 10"/>
+	<objColor r="102" g="204" b="255" alpha="0.4000000059604645"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+</element>
+<element type="polygon3d" label="face53">
+	<lineStyle thickness="5" type="0" typeHidden="1" opacity="178"/>
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 10"/>
+	<objColor r="102" g="204" b="255" alpha="0.4000000059604645"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+</element>
+<element type="polygon3d" label="face52">
+	<lineStyle thickness="5" type="0" typeHidden="1" opacity="178"/>
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 10"/>
+	<objColor r="102" g="204" b="255" alpha="0.4000000059604645"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+</element>
+<element type="polygon3d" label="face54">
+	<lineStyle thickness="5" type="0" typeHidden="1" opacity="178"/>
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 10"/>
+	<objColor r="102" g="204" b="255" alpha="0.4000000059604645"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+</element>
+<element type="segment3d" label="edge153">
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 10"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment3d" label="edge152">
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 10"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment3d" label="edge156">
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 10"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment3d" label="edge158">
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 10"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment3d" label="edge161">
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 10"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment3d" label="edge163">
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 10"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment3d" label="edge154">
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 10"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment3d" label="edge155">
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 10"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment3d" label="edge164">
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 10"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment3d" label="edge157">
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 10"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment3d" label="edge159">
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 10"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment3d" label="edge160">
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 10"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment3d" label="edge169">
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 10"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment3d" label="edge166">
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 10"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment3d" label="edge165">
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 10"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment3d" label="edge162">
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 10"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment3d" label="edge167">
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 10"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment3d" label="edge170">
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 10"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment3d" label="edge168">
+	<show object="false" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 10"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<command name="Net">
+	<input a0="a" a1="展开动画" a2="ABCD" a3="AD" a4="AE" a5="BF" a6="CG" a7="EF" a8="FG" a9="GH"/>
+	<output a0="方案11" a1="E_6" a2="F_6" a3="G_6" a4="H_6" a5="I_6" a6="J_6" a7="K_6" a8="L_6" a9="M_6" a10="N_6" a11="O_6" a12="P_6" a13="Q_6" a14="R_6" a15="face55" a16="face59" a17="face56" a18="face57" a19="face58" a20="face60" a21="edge172" a22="edge171" a23="edge174" a24="edge177" a25="edge180" a26="edge185" a27="edge187" a28="edge181" a29="edge173" a30="edge182" a31="edge175" a32="edge176" a33="edge183" a34="edge178" a35="edge179" a36="edge184" a37="edge186" a38="edge189" a39="edge188"/>
+</command>
+<element type="net" label="方案11">
+	<lineStyle thickness="5" type="0" typeHidden="1"/>
+	<show object="true" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 11"/>
+	<objColor r="102" g="204" b="255" alpha="0.5"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+</element>
+<element type="point3d" label="E_6">
+	<show object="true" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 11"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<coords x="0" y="0" z="0" w="1"/>
+	<pointSize val="3"/>
+</element>
+<element type="point3d" label="F_6">
+	<show object="true" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 11"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<coords x="1" y="0" z="0" w="1"/>
+	<pointSize val="3"/>
+</element>
+<element type="point3d" label="G_6">
+	<show object="true" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 11"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<coords x="1" y="1" z="0" w="1"/>
+	<pointSize val="3"/>
+</element>
+<element type="point3d" label="H_6">
+	<show object="true" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 11"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<coords x="0" y="1" z="0" w="1"/>
+	<pointSize val="3"/>
+</element>
+<element type="point3d" label="I_6">
+	<show object="true" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 11"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<coords x="0" y="0" z="1" w="1"/>
+	<pointSize val="3"/>
+</element>
+<element type="point3d" label="J_6">
+	<show object="true" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 11"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<coords x="1" y="0" z="1" w="1"/>
+	<pointSize val="3"/>
+</element>
+<element type="point3d" label="K_6">
+	<show object="true" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 11"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<coords x="1" y="0" z="1" w="1"/>
+	<pointSize val="3"/>
+</element>
+<element type="point3d" label="L_6">
+	<show object="true" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 11"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<coords x="1" y="1" z="1" w="1"/>
+	<pointSize val="3"/>
+</element>
+<element type="point3d" label="M_6">
+	<show object="true" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 11"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<coords x="1" y="1" z="1" w="1"/>
+	<pointSize val="3"/>
+</element>
+<element type="point3d" label="N_6">
+	<show object="true" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 11"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<coords x="0" y="1" z="1" w="1"/>
+	<pointSize val="3"/>
+</element>
+<element type="point3d" label="O_6">
+	<show object="true" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 11"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<coords x="0" y="0" z="1" w="1"/>
+	<pointSize val="3"/>
+</element>
+<element type="point3d" label="P_6">
+	<show object="true" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 11"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<coords x="0" y="0" z="0" w="1"/>
+	<pointSize val="3"/>
+</element>
+<element type="point3d" label="Q_6">
+	<show object="true" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 11"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<coords x="1" y="1" z="1" w="1"/>
+	<pointSize val="3"/>
+</element>
+<element type="point3d" label="R_6">
+	<show object="true" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 11"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<coords x="1" y="0" z="1" w="1"/>
+	<pointSize val="3"/>
+</element>
+<element type="polygon3d" label="face55">
+	<lineStyle thickness="5" type="0" typeHidden="1" opacity="178"/>
+	<show object="true" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 11"/>
+	<objColor r="102" g="204" b="255" alpha="0.4000000059604645"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+</element>
+<element type="polygon3d" label="face59">
+	<lineStyle thickness="5" type="0" typeHidden="1" opacity="178"/>
+	<show object="true" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 11"/>
+	<objColor r="102" g="204" b="255" alpha="0.4000000059604645"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+</element>
+<element type="polygon3d" label="face56">
+	<lineStyle thickness="5" type="0" typeHidden="1" opacity="178"/>
+	<show object="true" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 11"/>
+	<objColor r="102" g="204" b="255" alpha="0.4000000059604645"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+</element>
+<element type="polygon3d" label="face57">
+	<lineStyle thickness="5" type="0" typeHidden="1" opacity="178"/>
+	<show object="true" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 11"/>
+	<objColor r="102" g="204" b="255" alpha="0.4000000059604645"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+</element>
+<element type="polygon3d" label="face58">
+	<lineStyle thickness="5" type="0" typeHidden="1" opacity="178"/>
+	<show object="true" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 11"/>
+	<objColor r="102" g="204" b="255" alpha="0.4000000059604645"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+</element>
+<element type="polygon3d" label="face60">
+	<lineStyle thickness="5" type="0" typeHidden="1" opacity="178"/>
+	<show object="true" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 11"/>
+	<objColor r="102" g="204" b="255" alpha="0.4000000059604645"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+</element>
+<element type="segment3d" label="edge172">
+	<show object="true" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 11"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment3d" label="edge171">
+	<show object="true" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 11"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment3d" label="edge174">
+	<show object="true" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 11"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment3d" label="edge177">
+	<show object="true" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 11"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment3d" label="edge180">
+	<show object="true" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 11"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment3d" label="edge185">
+	<show object="true" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 11"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment3d" label="edge187">
+	<show object="true" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 11"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment3d" label="edge181">
+	<show object="true" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 11"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment3d" label="edge173">
+	<show object="true" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 11"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment3d" label="edge182">
+	<show object="true" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 11"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment3d" label="edge175">
+	<show object="true" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 11"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment3d" label="edge176">
+	<show object="true" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 11"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment3d" label="edge183">
+	<show object="true" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 11"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment3d" label="edge178">
+	<show object="true" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 11"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment3d" label="edge179">
+	<show object="true" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 11"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment3d" label="edge184">
+	<show object="true" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 11"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment3d" label="edge186">
+	<show object="true" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 11"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment3d" label="edge189">
+	<show object="true" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 11"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment3d" label="edge188">
+	<show object="true" label="false" ev="5"/>
+	<condition showObject="展开方式 ≟ 11"/>
+	<objColor r="102" g="204" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="numeric" label="速度">
+	<value val="0"/>
+	<show object="true" label="true"/>
+	<objColor r="255" g="255" b="255" alpha="0.10000000149011612"/>
+	<bgColor r="255" g="255" b="255" alpha="255"/>
+	<layer val="0"/>
+	<labelOffset x="-20" y="-1"/>
+	<labelMode val="1"/>
+	<slider min="0" max="5" absoluteScreenLocation="true" width="200" x="52" y="210" fixed="false" horizontal="true" showAlgebra="true"/>
+	<lineStyle thickness="10" type="0" typeHidden="1"/>
+	<animation speed="1" type="0" playing="false"/>
+	<ggbscript onUpdate="If[速度==0,StartAnimation[展开动画,false],StartAnimation[展开动画,true]]"/>
+</element>
+<element type="numeric" label="视图">
+	<value val="4"/>
+	<show object="true" label="true"/>
+	<objColor r="255" g="255" b="255" alpha="0.10000000149011612"/>
+	<bgColor r="255" g="255" b="255" alpha="255"/>
+	<layer val="0"/>
+	<labelOffset x="-28" y="-1"/>
+	<labelMode val="1"/>
+	<slider min="1" max="4" absoluteScreenLocation="true" width="200" x="52" y="263" fixed="false" horizontal="true" showAlgebra="true"/>
+	<lineStyle thickness="10" type="0" typeHidden="1"/>
+	<animation step="1" speed="1" type="0" playing="false"/>
+	<ggbscript onUpdate="If[视图==1,SetViewDirection[(0,0,-1)] ]&#xd;&#xa;If[视图==2,SetViewDirection[(-1,0,0)] ]&#xd;&#xa;If[视图==3,SetViewDirection[(0,-1,0)] ]&#xd;&#xa;If[视图==4,SetViewDirection[(-2,-1,-1)] ]"/>
+</element>
+</construction>
+</geogebra>

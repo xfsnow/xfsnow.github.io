@@ -1,0 +1,683 @@
+<?xml version="1.0" encoding="utf-8"?>
+<geogebra format="5.0" version="5.0.331.0" id="439a4b41-0a6c-42a8-af20-c371547f2377"  xsi:noNamespaceSchemaLocation="http://www.geogebra.org/ggb.xsd" xmlns="" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" >
+<gui>
+	<window width="960" height="660" />
+	<perspectives>
+<perspective id="tmp">
+	<panes>
+		<pane location="" divider="0.1984848484848485" orientation="0" />
+		<pane location="1" divider="0.10416666666666667" orientation="1" />
+	</panes>
+	<views>
+		<view id="1" visible="true" inframe="false" stylebar="false" location="2,1" size="958" window="100,100,600,400" />
+		<view id="4" toolbar="0 59 || 2020 , 2021 , 2022 , 66 || 2001 , 2003 , 2002 , 2004 , 2005 || 2040 , 2041 , 2042 , 2044 , 2043" visible="false" inframe="false" stylebar="true" location="1,1" size="300" window="100,100,600,400" />
+		<view id="8" toolbar="1001 | 1002 | 1003  || 1005 | 1004 || 1006 | 1007 | 1010 | 1011 || 1008 1009 || 6" visible="false" inframe="false" stylebar="false" location="1,3" size="300" window="100,100,600,400" />
+		<view id="2" visible="false" inframe="false" stylebar="true" location="1" size="265" window="100,100,250,400" />
+		<view id="16" visible="true" inframe="false" stylebar="false" location="0" size="131" window="50,50,500,500" />
+		<view id="32" visible="false" inframe="false" stylebar="true" location="1" size="150" window="50,50,500,500" />
+		<view id="64" toolbar="0" visible="false" inframe="true" stylebar="true" location="1" size="150" window="50,50,500,500" />
+		<view id="128" visible="false" inframe="true" stylebar="false" location="1" size="480" window="50,50,500,500" />
+		<view id="4097" visible="false" inframe="true" stylebar="true" location="1" size="383" window="159,124,961,548" />
+		<view id="70" toolbar="0 || 2020 || 2021 || 2022" visible="false" inframe="true" stylebar="true" location="1" size="150" window="50,50,500,500" />
+		<view id="43" visible="false" inframe="false" stylebar="false" location="1" size="450" window="50,50,500,500" />
+		<view id="512" toolbar="0 | 1 501 5 19 , 67 | 2 15 45 18 , 7 37 | 514 3 9 , 13 44 , 47 | 16 | 551 550 11 ,  20 22 21 23 , 55 56 57 , 12 | 69 | 510 511 , 512 513 | 533 531 , 534 532 , 522 523 , 537 536 , 535 | 521 520 | 36 , 38 49 560 | 571 30 29 570 31 33 | 17 | 540 40 41 42 , 27 28 35 , 6 , 502" visible="false" inframe="true" stylebar="true" location="1" size="480" window="50,50,500,500" />
+	</views>
+	<toolbar show="false" items="0 39 59 | 1 501 67 , 5 19 , 72 | 2 15 45 , 18 65 , 7 37 | 4 3 8 9 , 13 44 , 58 , 47 | 16 51 64 , 70 | 10 34 53 11 , 24  20 22 , 21 23 | 55 56 57 , 12 | 36 46 , 38 49 50 , 71 | 30 29 54 32 31 33 | 17 26 62 73 , 14 66 68 | 25 52 60 61 | 40 41 42 , 27 28 35 , 6 || 100001 100002 100003 100004 100005 100006 " position="7" help="false" />
+	<input show="false" cmd="true" top="false" />
+	<dockBar show="false" east="false" />
+</perspective>
+	</perspectives>
+	<labelingStyle  val="3"/>
+	<font  size="20"/>
+</gui>
+<euclidianView>
+	<viewNumber viewNo="1"/>
+	<size  width="958" height="519"/>
+	<coordSystem xZero="589.5" yZero="282" scale="188.6464149204832" yscale="188.64641492048492"/>
+	<evSettings axes="false" grid="false" gridIsBold="false" pointCapturing="0" rightAngleStyle="1" checkboxSize="26" gridType="0"/>
+	<bgColor r="255" g="255" b="255"/>
+	<axesColor r="0" g="0" b="0"/>
+	<gridColor r="192" g="192" b="192"/>
+	<lineStyle axes="1" grid="10"/>
+	<axis id="0" show="false" label="" unitLabel="" tickStyle="1" showNumbers="true"/>
+	<axis id="1" show="false" label="" unitLabel="" tickStyle="1" showNumbers="true"/>
+	<grid distX="1" distY="1" distTheta="0.5235987755982988"/>
+</euclidianView>
+<euclidianView>
+	<viewNumber viewNo="2"/>
+	<size  width="958" height="131"/>
+	<coordSystem xZero="178.31373206436902" yZero="216.3083743188257" scale="24.923944468845683" yscale="24.923944468845587"/>
+	<evSettings axes="false" grid="false" gridIsBold="false" pointCapturing="3" rightAngleStyle="1" checkboxSize="26" gridType="0"/>
+	<bgColor r="255" g="255" b="255"/>
+	<axesColor r="0" g="0" b="0"/>
+	<gridColor r="192" g="192" b="192"/>
+	<lineStyle axes="1" grid="10"/>
+	<axis id="0" show="false" label="" unitLabel="" tickStyle="1" showNumbers="true"/>
+	<axis id="1" show="false" label="" unitLabel="" tickStyle="1" showNumbers="true"/>
+	<grid distX="1" distY="1" distTheta="0.5235987755982988"/>
+</euclidianView>
+<kernel>
+	<continuous val="false"/>
+	<usePathAndRegionParameters val="true"/>
+	<decimals val="0"/>
+	<angleUnit val="degree"/>
+	<algebraStyle val="0" spreadsheet="0"/>
+	<coordStyle val="0"/>
+</kernel>
+<scripting blocked="false" disabled="false"/>
+<construction title="" author="" date="">
+<element type="point" label="A">
+	<show object="true" label="false" ev="4"/>
+	<condition showObject="¬box1"/>
+	<objColor r="0" g="0" b="255" alpha="0"/>
+	<layer val="6"/>
+	<labelOffset x="-25" y="1"/>
+	<labelMode val="0"/>
+	<animation step="1" speed="1" type="1" playing="false"/>
+	<isShape val="false"/>
+	<coords x="-0.30901699437494734" y="-0.9510565162951536" z="1"/>
+	<pointSize val="4"/>
+	<pointStyle val="0"/>
+</element>
+<command name="Sequence">
+	<input a0="i" a1="i" a2="3" a3="10"/>
+	<output a0="listSide"/>
+</command>
+<element type="list" label="listSide">
+	<show object="true" label="true" ev="11"/>
+	<objColor r="0" g="0" b="255" alpha="0.10000000149011612"/>
+	<bgColor r="255" g="255" b="255" alpha="255"/>
+	<layer val="6"/>
+	<labelOffset x="10" y="15"/>
+	<labelMode val="3"/>
+	<isShape val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<selectedIndex val="2"/>
+	<comboBox val="true"/>
+	<pointSize val="3"/>
+	<pointStyle val="-1"/>
+	<caption val="Number of sides="/>
+</element>
+<element type="point" label="B">
+	<show object="true" label="false"/>
+	<condition showObject="¬box1"/>
+	<objColor r="0" g="0" b="255" alpha="0"/>
+	<layer val="6"/>
+	<labelMode val="0"/>
+	<animation step="1" speed="1" type="1" playing="false"/>
+	<isShape val="false"/>
+	<coords x="0.8090169943749475" y="-0.5877852522924731" z="1"/>
+	<pointSize val="4"/>
+	<pointStyle val="0"/>
+</element>
+<element type="point" label="C">
+	<show object="true" label="false"/>
+	<condition showObject="¬box1"/>
+	<objColor r="0" g="0" b="255" alpha="0"/>
+	<layer val="6"/>
+	<labelMode val="0"/>
+	<animation step="1" speed="1" type="1" playing="false"/>
+	<isShape val="false"/>
+	<coords x="0.8090169943749475" y="0.5877852522924731" z="1"/>
+	<pointSize val="4"/>
+	<pointStyle val="0"/>
+</element>
+<element type="point" label="D">
+	<show object="true" label="false" ev="4"/>
+	<condition showObject="(¬box1) ∧ (n ≥ 4)"/>
+	<objColor r="0" g="0" b="255" alpha="0"/>
+	<layer val="6"/>
+	<labelMode val="0"/>
+	<animation step="1" speed="1" type="1" playing="false"/>
+	<isShape val="false"/>
+	<coords x="-0.30901699437494734" y="0.9510565162951536" z="1"/>
+	<pointSize val="4"/>
+	<pointStyle val="0"/>
+</element>
+<element type="point" label="E">
+	<show object="true" label="false" ev="4"/>
+	<condition showObject="(¬box1) ∧ (n ≥ 5)"/>
+	<objColor r="0" g="0" b="255" alpha="0"/>
+	<layer val="6"/>
+	<labelMode val="0"/>
+	<animation step="1" speed="1" type="1" playing="false"/>
+	<isShape val="false"/>
+	<coords x="-1" y="1.2246467991473532e-16" z="1"/>
+	<pointSize val="4"/>
+	<pointStyle val="0"/>
+</element>
+<element type="point" label="F">
+	<show object="true" label="false"/>
+	<condition showObject="(¬box1) ∧ (n ≥ 6)"/>
+	<objColor r="0" g="0" b="255" alpha="0"/>
+	<layer val="6"/>
+	<labelMode val="0"/>
+	<animation step="1" speed="1" type="1" playing="false"/>
+	<isShape val="false"/>
+	<coords x="-1" y="1.2246467991473532e-16" z="1"/>
+	<pointSize val="4"/>
+	<pointStyle val="0"/>
+</element>
+<element type="point" label="G">
+	<show object="true" label="false"/>
+	<condition showObject="(¬box1) ∧ (n ≥ 7)"/>
+	<objColor r="0" g="0" b="255" alpha="0"/>
+	<layer val="6"/>
+	<labelMode val="0"/>
+	<animation step="1" speed="1" type="1" playing="false"/>
+	<isShape val="false"/>
+	<coords x="-1" y="1.2246467991473532e-16" z="1"/>
+	<pointSize val="4"/>
+	<pointStyle val="0"/>
+</element>
+<element type="point" label="H">
+	<show object="true" label="false"/>
+	<condition showObject="(¬box1) ∧ (n ≥ 8)"/>
+	<objColor r="0" g="0" b="255" alpha="0"/>
+	<layer val="6"/>
+	<labelMode val="0"/>
+	<animation step="1" speed="1" type="1" playing="false"/>
+	<isShape val="false"/>
+	<coords x="-1" y="1.2246467991473532e-16" z="1"/>
+	<pointSize val="4"/>
+	<pointStyle val="0"/>
+</element>
+<element type="point" label="I">
+	<show object="true" label="false"/>
+	<condition showObject="(¬box1) ∧ (n ≥ 9)"/>
+	<objColor r="0" g="0" b="255" alpha="0"/>
+	<layer val="6"/>
+	<labelMode val="0"/>
+	<animation step="1" speed="1" type="1" playing="false"/>
+	<isShape val="false"/>
+	<coords x="-1" y="1.2246467991473532e-16" z="1"/>
+	<pointSize val="4"/>
+	<pointStyle val="0"/>
+</element>
+<expression label="n" exp="SelectedIndex[listSide] + 2" />
+<element type="numeric" label="n">
+	<value val="5"/>
+	<objColor r="0" g="0" b="255" alpha="0.10000000149011612"/>
+	<labelOffset x="-8" y="53"/>
+	<selectionAllowed val="false"/>
+	<ggbscript onUpdate="SetValue[A,Point[c,1/n]]&#13;&#10;SetValue[B,Point[c,2/n]]&#13;&#10;SetValue[C,Point[c,3/n]]&#13;&#10;SetValue[D,Point[c,4/n]]&#13;&#10;SetValue[E,Point[c,5/n]]&#13;&#10;SetValue[F,Point[c,6/n]]&#13;&#10;SetValue[G,Point[c,7/n]]&#13;&#10;SetValue[H,Point[c,8/n]]&#13;&#10;SetValue[I,Point[c,9/n]]&#13;&#10;SetValue[J,Point[c,10/n]]"/>
+	<caption val="邊的數目 = %v"/>
+</element>
+<element type="point" label="J">
+	<show object="true" label="false"/>
+	<condition showObject="(¬box1) ∧ (n ≥ 10)"/>
+	<objColor r="0" g="0" b="255" alpha="0"/>
+	<layer val="6"/>
+	<labelMode val="0"/>
+	<animation step="1" speed="1" type="1" playing="false"/>
+	<isShape val="false"/>
+	<coords x="-1" y="1.2246467991473532e-16" z="1"/>
+	<pointSize val="4"/>
+	<pointStyle val="0"/>
+</element>
+<command name="Append">
+	<input a0="First[{A, B, C, D, E, F, G, H, I, J}, n]" a1="A"/>
+	<output a0="listP"/>
+</command>
+<element type="list" label="listP">
+	<show object="false" label="false"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<bgColor r="255" g="255" b="255" alpha="255"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<isShape val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<pointSize val="3"/>
+	<pointStyle val="-1"/>
+</element>
+<element type="button" label="button1">
+	<show object="true" label="true" ev="3"/>
+	<condition showObject="simple ∧ convex ∧ box1"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<bgColor r="255" g="255" b="0" alpha="255"/>
+	<layer val="0"/>
+	<labelOffset x="752" y="67"/>
+	<labelMode val="3"/>
+	<animation step="1" speed="1" type="0" playing="false"/>
+	<isShape val="false"/>
+	<auxiliary val="true"/>
+	<ggbscript val="SetActiveView[1]&#10;ZoomIn[1.5,M]"/>
+	<font serif="false" sizeM="2" size="20" style="0"/>
+	<caption val="Enlarge"/>
+</element>
+<element type="button" label="button2">
+	<show object="true" label="true" ev="3"/>
+	<condition showObject="simple ∧ convex ∧ box1"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<bgColor r="255" g="255" b="0" alpha="255"/>
+	<layer val="0"/>
+	<labelOffset x="752" y="17"/>
+	<labelMode val="3"/>
+	<animation step="1" speed="1" type="0" playing="false"/>
+	<isShape val="false"/>
+	<auxiliary val="true"/>
+	<ggbscript val="SetActiveView[1]&#10;ZoomOut[1.5,M]"/>
+	<font serif="false" sizeM="2" size="20" style="0"/>
+	<caption val="Reduce"/>
+</element>
+<expression label="M" exp="Sum[listP, n] / n" type="point" />
+<element type="point" label="M">
+	<show object="false" label="true"/>
+	<objColor r="127" g="0" b="255" alpha="0"/>
+	<layer val="6"/>
+	<labelMode val="0"/>
+	<isShape val="false"/>
+	<coords x="0" y="2.4492935982947065e-17" z="1"/>
+	<pointSize val="4"/>
+	<pointStyle val="0"/>
+</element>
+<element type="boolean" label="box1">
+	<value val="false"/>
+	<show object="true" label="true" ev="3"/>
+	<condition showObject="simple ∧ convex"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="1"/>
+	<labelOffset x="248" y="12"/>
+	<labelMode val="3"/>
+	<checkbox fixed="true"/>
+	<caption val="Show exterior angles"/>
+</element>
+<command name="Sequence">
+	<input a0="Translate[listP(i), Vector[(2 * Vector[listP(i), listP(i + 1)])]]" a1="i" a2="1" a3="n"/>
+	<output a0="list1"/>
+</command>
+<element type="list" label="list1">
+	<show object="false" label="false"/>
+	<objColor r="255" g="0" b="0" alpha="0"/>
+	<bgColor r="255" g="255" b="255" alpha="255"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<isShape val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<pointSize val="3"/>
+	<pointStyle val="-1"/>
+</element>
+<command name="Join">
+	<input a0="{Last[list1], First[list1, n - 1]}"/>
+	<output a0="list2"/>
+</command>
+<element type="list" label="list2">
+	<show object="false" label="false"/>
+	<objColor r="255" g="0" b="0" alpha="0"/>
+	<bgColor r="255" g="255" b="255" alpha="255"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<isShape val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<pointSize val="3"/>
+	<pointStyle val="-1"/>
+</element>
+<command name="Sequence">
+	<input a0="Angle[Ray[listP(i), list2(i)], Ray[listP(i), listP(i + 1)]]" a1="i" a2="1" a3="n"/>
+	<output a0="listAngle1"/>
+</command>
+<element type="list" label="listAngle1">
+	<show object="true" label="true" ev="4"/>
+	<condition showObject="box1 ∧ (angle1  &lt;  180°)"/>
+	<objColor r="0" g="153" b="0" alpha="0.5"/>
+	<bgColor r="255" g="255" b="255" alpha="255"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<isShape val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<pointSize val="3"/>
+	<pointStyle val="-1"/>
+</element>
+<command name="Sequence">
+	<input a0="Angle[Ray[listP(i), listP(i + 1)], Ray[listP(i), list2(i)]]" a1="i" a2="1" a3="n"/>
+	<output a0="listAngle2"/>
+</command>
+<element type="list" label="listAngle2">
+	<show object="true" label="false"/>
+	<condition showObject="box1 ∧ (angle2  &lt;  180°)"/>
+	<objColor r="0" g="153" b="0" alpha="0.5"/>
+	<bgColor r="255" g="255" b="255" alpha="255"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<isShape val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<pointSize val="3"/>
+	<pointStyle val="-1"/>
+</element>
+<command name="Polygon">
+	<input a0="First[{A, B, C, D, E, F, G, H, I, J}, n]"/>
+	<output a0="poly1"/>
+</command>
+<element type="polygon" label="poly1">
+	<lineStyle thickness="0" type="0" typeHidden="1"/>
+	<show object="true" label="false" ev="4"/>
+	<objColor r="0" g="255" b="255" alpha="0.10000000149011612"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<isShape val="false"/>
+	<ggbscript val="SetValue[showFinger,!showFinger]"/>
+</element>
+<command name="IsSimple">
+	<input a0="poly1"/>
+	<output a0="simple"/>
+</command>
+<element type="boolean" label="simple">
+	<value val="true"/>
+	<show object="false" label="true"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="6"/>
+	<labelMode val="0"/>
+	<checkbox fixed="true"/>
+</element>
+<command name="IsConvex">
+	<input a0="poly1"/>
+	<output a0="convex"/>
+</command>
+<element type="boolean" label="convex">
+	<value val="true"/>
+	<show object="false" label="true"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="6"/>
+	<labelMode val="0"/>
+	<checkbox fixed="true"/>
+</element>
+<command name="Element" type="angle">
+	<input a0="listAngle2" a1="1"/>
+	<output a0="angle2"/>
+</command>
+<element type="angle" label="angle2">
+	<angleStyle val="0"/>
+	<value val="5.026548245743669"/>
+	<show object="false" label="true"/>
+	<objColor r="0" g="100" b="0" alpha="0.10000000149011612"/>
+	<layer val="6"/>
+	<labelMode val="0"/>
+	<lineStyle thickness="2" type="0" typeHidden="2"/>
+	<arcSize val="30"/>
+	<selectionAllowed val="false"/>
+</element>
+<command name="Element" type="angle">
+	<input a0="listAngle1" a1="1"/>
+	<output a0="angle1"/>
+</command>
+<element type="angle" label="angle1">
+	<angleStyle val="0"/>
+	<value val="1.2566370614359172"/>
+	<show object="false" label="true"/>
+	<objColor r="0" g="100" b="0" alpha="0.10000000149011612"/>
+	<layer val="6"/>
+	<labelMode val="0"/>
+	<lineStyle thickness="2" type="0" typeHidden="2"/>
+	<arcSize val="30"/>
+	<selectionAllowed val="false"/>
+</element>
+<element type="boolean" label="box2">
+	<value val="false"/>
+	<show object="true" label="true" ev="3"/>
+	<condition showObject="box1"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="6"/>
+	<labelOffset x="497" y="12"/>
+	<labelMode val="3"/>
+	<checkbox fixed="true"/>
+	<caption val="Show angle measures"/>
+</element>
+<command name="If">
+	<input a0="angle1  &lt;  180°" a1="TableText[{listAngle1}, &quot;vc&quot;]" a2="TableText[{listAngle2}, &quot;vc&quot;]"/>
+	<output a0="text2"/>
+</command>
+<element type="text" label="text2">
+	<show object="true" label="false" ev="8"/>
+	<condition showObject="simple ∧ convex ∧ box2 ∧ box1"/>
+	<objColor r="0" g="100" b="0" alpha="0"/>
+	<layer val="6"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<isLaTeX val="true"/>
+	<font serif="true" sizeM="1.4" size="8" style="0"/>
+	<absoluteScreenLocation  x="810" y="11"/>
+</element>
+<element type="image" label="pic1">
+	<file name="5be69daf3db59420ff634da42fac1b7c/babc8a566e1acec35744550140d0aa1d\finger_carton.png"/>
+	<inBackground val="false"/>
+	<startPoint number="0" exp="A - (0, (45 * unitPerPixel))"/>
+	<show object="true" label="false"/>
+	<condition showObject="(¬box1) ∧ showFinger"/>
+	<objColor r="0" g="0" b="0" alpha="1"/>
+	<layer val="5"/>
+	<labelMode val="0"/>
+	<animation step="1" speed="1" type="0" playing="false"/>
+	<selectionAllowed val="false"/>
+	<isShape val="false"/>
+</element>
+<expression label="unitPerPixel" exp="(y(Corner[4]) - y(Corner[1])) / y(Corner[5])" />
+<element type="numeric" label="unitPerPixel">
+	<value val="0.00532134981187071"/>
+	<objColor r="0" g="0" b="0" alpha="0.10000000149011612"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="true"/>
+</element>
+<element type="image" label="pic2">
+	<file name="6a176c013f476cdf4a350d923d832d4b/babc8a566e1acec35744550140d0aa1d\finger_carton_35x45pixels.png"/>
+	<inBackground val="false"/>
+	<startPoint number="0" exp="B - (0, (45 * unitPerPixel))"/>
+	<show object="true" label="false"/>
+	<condition showObject="(¬box1) ∧ showFinger"/>
+	<objColor r="0" g="0" b="0" alpha="1"/>
+	<layer val="5"/>
+	<labelMode val="0"/>
+	<animation step="1" speed="1" type="0" playing="false"/>
+	<selectionAllowed val="false"/>
+	<isShape val="false"/>
+</element>
+<element type="image" label="pic3">
+	<file name="6a176c013f476cdf4a350d923d832d4b/babc8a566e1acec35744550140d0aa1d\finger_carton_35x45pixels.png"/>
+	<inBackground val="false"/>
+	<startPoint number="0" exp="C - (0, (45 * unitPerPixel))"/>
+	<show object="true" label="false"/>
+	<condition showObject="(¬box1) ∧ showFinger"/>
+	<objColor r="0" g="0" b="0" alpha="1"/>
+	<layer val="5"/>
+	<labelMode val="0"/>
+	<animation step="1" speed="1" type="0" playing="false"/>
+	<selectionAllowed val="false"/>
+	<isShape val="false"/>
+</element>
+<element type="image" label="pic4">
+	<file name="6a176c013f476cdf4a350d923d832d4b/babc8a566e1acec35744550140d0aa1d\finger_carton_35x45pixels.png"/>
+	<inBackground val="false"/>
+	<startPoint number="0" exp="D - (0, (45 * unitPerPixel))"/>
+	<show object="true" label="false"/>
+	<condition showObject="(¬box1) ∧ (n ≥ 4) ∧ showFinger"/>
+	<objColor r="0" g="0" b="0" alpha="1"/>
+	<layer val="5"/>
+	<labelMode val="0"/>
+	<animation step="1" speed="1" type="0" playing="false"/>
+	<selectionAllowed val="false"/>
+	<isShape val="false"/>
+</element>
+<element type="image" label="pic5">
+	<file name="6a176c013f476cdf4a350d923d832d4b/babc8a566e1acec35744550140d0aa1d\finger_carton_35x45pixels.png"/>
+	<inBackground val="false"/>
+	<startPoint number="0" exp="E - (0, (45 * unitPerPixel))"/>
+	<show object="true" label="false"/>
+	<condition showObject="(¬box1) ∧ (n ≥ 5) ∧ showFinger"/>
+	<objColor r="0" g="0" b="0" alpha="1"/>
+	<layer val="5"/>
+	<labelMode val="0"/>
+	<animation step="1" speed="1" type="0" playing="false"/>
+	<selectionAllowed val="false"/>
+	<isShape val="false"/>
+</element>
+<element type="image" label="pic6">
+	<file name="6a176c013f476cdf4a350d923d832d4b/babc8a566e1acec35744550140d0aa1d\finger_carton_35x45pixels.png"/>
+	<inBackground val="false"/>
+	<startPoint number="0" exp="F - (0, (45 * unitPerPixel))"/>
+	<show object="true" label="false"/>
+	<condition showObject="(¬box1) ∧ (n ≥ 6) ∧ showFinger"/>
+	<objColor r="0" g="0" b="0" alpha="1"/>
+	<layer val="5"/>
+	<labelMode val="0"/>
+	<animation step="1" speed="1" type="0" playing="false"/>
+	<selectionAllowed val="false"/>
+	<isShape val="false"/>
+</element>
+<element type="image" label="pic7">
+	<file name="6a176c013f476cdf4a350d923d832d4b/babc8a566e1acec35744550140d0aa1d\finger_carton_35x45pixels.png"/>
+	<inBackground val="false"/>
+	<startPoint number="0" exp="G - (0, (45 * unitPerPixel))"/>
+	<show object="true" label="false"/>
+	<condition showObject="(¬box1) ∧ (n ≥ 7) ∧ showFinger"/>
+	<objColor r="0" g="0" b="0" alpha="1"/>
+	<layer val="5"/>
+	<labelMode val="0"/>
+	<animation step="1" speed="1" type="0" playing="false"/>
+	<selectionAllowed val="false"/>
+	<isShape val="false"/>
+</element>
+<element type="image" label="pic8">
+	<file name="6a176c013f476cdf4a350d923d832d4b/babc8a566e1acec35744550140d0aa1d\finger_carton_35x45pixels.png"/>
+	<inBackground val="false"/>
+	<startPoint number="0" exp="H - (0, (45 * unitPerPixel))"/>
+	<show object="true" label="false"/>
+	<condition showObject="(¬box1) ∧ (n ≥ 8) ∧ showFinger"/>
+	<objColor r="0" g="0" b="0" alpha="1"/>
+	<layer val="5"/>
+	<labelMode val="0"/>
+	<animation step="1" speed="1" type="0" playing="false"/>
+	<selectionAllowed val="false"/>
+	<isShape val="false"/>
+</element>
+<element type="image" label="pic9">
+	<file name="6a176c013f476cdf4a350d923d832d4b/babc8a566e1acec35744550140d0aa1d\finger_carton_35x45pixels.png"/>
+	<inBackground val="false"/>
+	<startPoint number="0" exp="I - (0, (45 * unitPerPixel))"/>
+	<show object="true" label="false"/>
+	<condition showObject="(¬box1) ∧ (n ≥ 9) ∧ showFinger"/>
+	<objColor r="0" g="0" b="0" alpha="1"/>
+	<layer val="5"/>
+	<labelMode val="0"/>
+	<animation step="1" speed="1" type="0" playing="false"/>
+	<selectionAllowed val="false"/>
+	<isShape val="false"/>
+</element>
+<element type="image" label="pic10">
+	<file name="6a176c013f476cdf4a350d923d832d4b/babc8a566e1acec35744550140d0aa1d\finger_carton_35x45pixels.png"/>
+	<inBackground val="false"/>
+	<startPoint number="0" exp="J - (0, (45 * unitPerPixel))"/>
+	<show object="true" label="false"/>
+	<condition showObject="(¬box1) ∧ (n ≥ 10) ∧ showFinger"/>
+	<objColor r="0" g="0" b="0" alpha="1"/>
+	<layer val="5"/>
+	<labelMode val="0"/>
+	<animation step="1" speed="1" type="0" playing="false"/>
+	<selectionAllowed val="false"/>
+	<isShape val="false"/>
+</element>
+<element type="boolean" label="showFinger">
+	<value val="true"/>
+	<show object="false" label="true"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="6"/>
+	<labelMode val="0"/>
+	<checkbox fixed="true"/>
+</element>
+<command name="Circle">
+	<input a0="(0, 0)" a1="1"/>
+	<output a0="c"/>
+</command>
+<element type="conic" label="c">
+	<show object="false" label="false"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="6"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<isShape val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<eigenvectors  x0="1" y0="0" z0="1.0" x1="0" y1="1" z1="1.0"/>
+	<matrix A0="1" A1="1" A2="-1" A3="0" A4="0" A5="0"/>
+	<eqnStyle style="specific"/>
+</element>
+<command name="Sequence">
+	<input a0="Ray[listP(i), list2(i)]" a1="i" a2="1" a3="n"/>
+	<output a0="listRay"/>
+</command>
+<element type="list" label="listRay">
+	<show object="true" label="false" ev="4"/>
+	<condition showObject="box1"/>
+	<objColor r="255" g="127" b="0" alpha="0"/>
+	<bgColor r="255" g="255" b="255" alpha="255"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<isShape val="false"/>
+	<lineStyle thickness="5" type="0" typeHidden="1"/>
+	<pointSize val="3"/>
+	<pointStyle val="-1"/>
+</element>
+<command name="Sequence">
+	<input a0="Segment[listP(i), listP(i + 1)]" a1="i" a2="1" a3="n"/>
+	<output a0="listSeg"/>
+</command>
+<element type="list" label="listSeg">
+	<show object="true" label="false" ev="4"/>
+	<objColor r="0" g="0" b="255" alpha="0"/>
+	<bgColor r="255" g="255" b="255" alpha="255"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<isShape val="false"/>
+	<lineStyle thickness="5" type="0" typeHidden="1"/>
+	<pointSize val="3"/>
+	<pointStyle val="-1"/>
+</element>
+<element type="button" label="button0">
+	<show object="true" label="true" ev="3"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="6"/>
+	<labelOffset x="890" y="21"/>
+	<labelMode val="3"/>
+	<animation step="1" speed="1" type="0" playing="false"/>
+	<isShape val="false"/>
+	<auxiliary val="true"/>
+	<ggbscript val="SetValue[lang,If[lang==1,2,1]]&#10;RunClickScript[buttonLang]&#10;"/>
+	<font serif="false" sizeM="1.4" size="8" style="0"/>
+	<caption val="中文"/>
+</element>
+<element type="button" label="buttonLang">
+	<show object="false" label="true" ev="3"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="6"/>
+	<labelOffset x="976" y="17"/>
+	<labelMode val="0"/>
+	<animation step="1" speed="1" type="0" playing="false"/>
+	<isShape val="false"/>
+	<auxiliary val="true"/>
+	<ggbscript val="SetCaption[button0,If[lang==1,&quot;ENG&quot;,&quot;中文&quot;]]&#10;SetCaption[listSide,If[lang==1,&quot;邊的數目=&quot;,&quot;Number of sides=&quot;]]&#10;SetCaption[box1,If[lang==1,&quot;顯示外角&quot;,&quot;Show exterior angles&quot;]]&#10;SetCaption[box2,If[lang==1,&quot;顯示外角數值&quot;,&quot;Show angle measures&quot;]]&#10;SetCaption[button1,If[lang==1,&quot;放大圖形&quot;,&quot;Enlarge&quot;]]&#10;SetCaption[button2,If[lang==1,&quot;縮小圖形&quot;,&quot;Reduce&quot;]]"/>
+	<font serif="false" sizeM="2" size="20" style="0"/>
+</element>
+<element type="numeric" label="lang">
+	<value val="2"/>
+	<symbolic val="true" />
+	<show object="false" label="true"/>
+	<objColor r="0" g="0" b="0" alpha="0.10000000149011612"/>
+	<layer val="6"/>
+	<labelMode val="1"/>
+	<animation step="1" speed="1" type="0" playing="false"/>
+</element>
+<command name="If">
+	<input a0="simple" a1="If[convex, If[lang ≟ 1, &quot;這是凸多邊形。&quot;, &quot;This is a convex polygon.&quot;], If[lang ≟ 1, &quot;這是凹多邊形。&quot;, &quot;This is a concave polygon.&quot;]]" a2="If[lang ≟ 1, &quot;這不是簡單多邊形。&quot;, &quot;This is not a simple polygon.&quot;]"/>
+	<output a0="text1"/>
+</command>
+<element type="text" label="text1">
+	<show object="true" label="false" ev="11"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="6"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<font serif="false" sizeM="2" size="20" style="0"/>
+	<absoluteScreenLocation  x="22" y="103"/>
+</element>
+</construction>
+</geogebra>

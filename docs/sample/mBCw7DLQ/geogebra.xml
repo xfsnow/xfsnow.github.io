@@ -1,0 +1,1350 @@
+<?xml version="1.0" encoding="utf-8"?>
+<geogebra format="5.0" version="5.0.706.0" app="classic" platform="w" id="4e242a32-79d4-4386-9c11-bdf8aeac9cb9"  xsi:noNamespaceSchemaLocation="http://www.geogebra.org/apps/xsd/ggb.xsd" xmlns="" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" >
+<gui>
+	<window width="1050" height="620" />
+	<perspectives>
+<perspective id="tmp">
+	<panes>
+		<pane location="" divider="1" orientation="1" />
+	</panes>
+	<views>
+		<view id="4" toolbar="0 || 2020 , 2021 , 2022 , 66 || 2001 , 2003 , 2002 , 2004 , 2005 || 2040 , 2041 , 2042 , 2044 , 2043" visible="false" inframe="false" stylebar="true" location="1,1" size="200" window="0,0,400,400" />
+		<view id="2" visible="false" inframe="false" stylebar="true" location="1" size="548" tab="ALGEBRA" window="0,0,200,400" />
+		<view id="8" toolbar="1001 | 1002 | 1003  || 1005 | 1004 || 1006 | 1007 | 1010 || 1008 1009 || 66 68 || 6" visible="false" inframe="false" stylebar="false" location="1" size="150" window="50,50,500,500" />
+		<view id="16" visible="false" inframe="false" stylebar="true" location="1" size="150" window="-22,57,1822,1148" />
+		<view id="32" visible="false" inframe="false" stylebar="true" location="1" size="150" window="50,50,500,500" />
+		<view id="64" toolbar="0" visible="false" inframe="false" stylebar="true" location="1" size="150" window="50,50,500,500" />
+		<view id="128" visible="false" inframe="false" stylebar="false" location="1" size="480" window="50,50,500,500" />
+		<view id="4097" visible="false" inframe="false" stylebar="true" location="1" size="150" window="171,176,1530,823" />
+		<view id="70" toolbar="0 || 2020 || 2021 || 2022" visible="false" inframe="false" stylebar="true" location="1" size="150" window="50,50,500,500" />
+		<view id="512" toolbar="0 | 1 501 5 19 , 67 | 2 15 45 18 , 7 37 | 514 3 9 , 13 44 , 47 | 16 | 551 550 11 , 22 , 23 , 55 56 57 , 12 | 69 | 510 511 , 512 513 | 533 531 , 534 532 , 522 523 , 537 536 , 535 | 521 520 | 36 , 38 49 560 | 571 30 29 570 31 33 | 17 | 540 40 41 42 , 27 28 35 , 6 , 502" visible="false" inframe="false" stylebar="false" location="1" size="300" window="50,50,500,500" />
+		<view id="1" visible="true" inframe="false" stylebar="true" location="" size="620" window="0,0,400,400" />
+	</views>
+	<toolbar show="false" items="0 39 | 1 501 67 , 5 19 , 72 75 76 | 2 15 45 , 18 65 , 7 37 | 4 3 8 9 , 13 44 , 58 , 47 | 16 51 64 , 70 | 10 34 53 11 , 24  20 22 , 21 23 | 55 56 57 , 12 | 36 46 , 38 49  50 , 71 | 30 29 54 32 31 33 | 17 26 62 73 , 14 68 | 25 52 60 61 | 40 41 42 , 27 28 35 , 6" position="7" help="false" />
+	<input show="false" cmd="true" top="algebra" />
+	<dockBar show="false" east="false" />
+</perspective>
+	</perspectives>
+	<labelingStyle  val="2"/>
+	<font  size="24"/>
+</gui>
+<euclidianView>
+	<viewNumber viewNo="1"/>
+	<size  width="1050" height="620"/>
+	<coordSystem xZero="248.35721619555449" yZero="242.62240491504477" scale="181.57290420726738" yscale="181.57286370940363"/>
+	<evSettings axes="false" grid="false" gridIsBold="false" pointCapturing="3" rightAngleStyle="1" checkboxSize="26" gridType="0"/>
+	<bgColor r="255" g="255" b="255"/>
+	<axesColor r="0" g="0" b="0"/>
+	<gridColor r="192" g="192" b="192"/>
+	<lineStyle axes="1" grid="0"/>
+	<axis id="0" show="false" label="" unitLabel="" tickStyle="1" showNumbers="true"/>
+	<axis id="1" show="false" label="" unitLabel="" tickStyle="1" showNumbers="true"/>
+	<grid distX="0.1" distY="0.1" distTheta="0.5235987755982988"/>
+</euclidianView>
+<algebraView>
+	<mode val="1"/>
+</algebraView>
+<kernel>
+	<uses3D val="true"/>
+	<continuous val="false"/>
+	<usePathAndRegionParameters val="true"/>
+	<decimals val="2"/>
+	<angleUnit val="degree"/>
+	<algebraStyle val="0" spreadsheet="0"/>
+	<coordStyle val="0"/>
+</kernel>
+<tableview min="-2" max="2" step="1"/>
+<scripting blocked="false" disabled="false"/>
+<construction title="" author="" date="">
+<command name="Intersect">
+	<input a0="xAxis" a1="yAxis"/>
+	<output a0="O"/>
+</command>
+<element type="point" label="O">
+	<show object="false" label="true" ev="4"/>
+	<condition showObject="type ≟ 2 ∨ type ≟ 3 ∨ type ≟ 4 ∨ type ≟ 5 ∨ type ≟ 7"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelOffset x="-10" y="-2"/>
+	<labelMode val="0"/>
+	<pointSize val="4"/>
+	<pointStyle val="1"/>
+	<coords x="0" y="0" z="1"/>
+</element>
+<command name="Point">
+	<input a0="xAxis"/>
+	<output a0="R"/>
+</command>
+<element type="point" label="R">
+	<show object="false" label="true" ev="4"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<animation step="1" speed="1" type="1" playing="false"/>
+	<pointSize val="3"/>
+	<pointStyle val="0"/>
+	<coords x="1" y="0" z="1"/>
+</element>
+<command name="Circle">
+	<input a0="O" a1="R"/>
+	<output a0="c"/>
+</command>
+<element type="conic" label="c">
+	<show object="true" label="false" ev="4"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<lineStyle thickness="4" type="0" typeHidden="1"/>
+	<eqnStyle style="specific"/>
+	<eigenvectors x0="1" y0="0" z0="1.0" x1="0" y1="1" z1="1.0"/>
+	<matrix A0="1" A1="1" A2="-1" A3="0" A4="0" A5="0"/>
+</element>
+<command name="Rotate">
+	<input a0="R" a1="Random[0, 360]°" a2="O"/>
+	<output a0="A"/>
+</command>
+<element type="point" label="A">
+	<show object="true" label="false" ev="4"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelOffset x="23" y="57"/>
+	<labelMode val="0"/>
+	<pointSize val="3"/>
+	<pointStyle val="0"/>
+	<coords x="0.9455185755993168" y="-0.3255681544571567" z="1"/>
+</element>
+<element type="button" label="buttonNext">
+	<show object="true" label="true" ev="1"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<bgColor r="255" g="255" b="0" alpha="255"/>
+	<layer val="0"/>
+	<labelOffset x="845" y="390"/>
+	<labelMode val="3"/>
+	<animation step="1" speed="1" type="0" playing="false"/>
+	<auxiliary val="true"/>
+	<ggbscript val="SetValue(type,If(includeQuad,Random(1,7),RandomElement({1,2,3,4,5,7})))&#xa;&#xa;UpdateConstruction()&#xa;&#xa;If(type==1,RunClickScript(button1))&#xa;If(type==2,RunClickScript(button2))&#xa;If(type==3,RunClickScript(button3))&#xa;If(type==4,RunClickScript(button4))&#xa;If(type==5,RunClickScript(button5))&#xa;If(type==6,RunClickScript(button6))&#xa;If(type==7,RunClickScript(button7))&#xa;&#xa;SetValue(n,0°)&#xa;SetVisibleInView(picCorrect,1,false)&#xa;SetVisibleInView(picWrong,1,false)&#xa;SetVisibleInView(text2,1,false)&#xa;SetVisibleInView(buttonNext,1,false)&#xa;SetVisibleInView(buttonCheck,1,true)&#xa;&#xa;SetColor(ABC,textColor)&#xa;SetColor(ABE,textColor)&#xa;SetColor(ACB,textColor)&#xa;SetColor(ADB,textColor)&#xa;SetColor(ADC,textColor)&#xa;SetColor(AOB,textColor)&#xa;SetColor(BAD,textColor)&#xa;SetColor(BCD,textColor)&#xa;SetColor(BODin,textColor)&#xa;SetColor(BODout,textColor)&#xa;SetColor(CAD,textColor)&#xa;SetColor(CBD,textColor)&#xa;SetColor(OAB,textColor)&#xa;SetColor(OEB,textColor)&#xa;SetColor(OBA,textColor)"/>
+	<caption val="Next"/>
+	<font serif="false" sizeM="2" size="24" style="0"/>
+</element>
+<expression label="alpha" exp="(2 * Random[15, 65]°)" />
+<element type="angle" label="alpha">
+	<angleStyle val="3"/>
+	<emphasizeRightAngle val="false"/>
+	<value val="1.5009831567151235"/>
+	<objColor r="0" g="100" b="0" alpha="0.10000000149011612"/>
+	<selectionAllowed val="false"/>
+</element>
+<command name="Rotate">
+	<input a0="A" a1="alpha" a2="O"/>
+	<output a0="B"/>
+</command>
+<element type="point" label="B">
+	<show object="true" label="false" ev="4"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelOffset x="-9" y="-18"/>
+	<labelMode val="0"/>
+	<pointSize val="3"/>
+	<pointStyle val="0"/>
+	<coords x="0.3907311284892737" y="0.9205048534524404" z="1"/>
+</element>
+<command name="Segment">
+	<input a0="O" a1="A"/>
+	<output a0="OA"/>
+</command>
+<element type="segment" label="OA">
+	<show object="false" label="false" ev="4"/>
+	<condition showObject="type ≟ 2 ∨ type ≟ 3 ∨ type ≟ 4 ∨ type ≟ 5"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<lineStyle thickness="4" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+	<startStyle val="default"/>
+	<endStyle val="default"/>
+	<coords x="0.3255681544571567" y="0.9455185755993168" z="0"/>
+</element>
+<expression label="beta1" exp="(2 * Random[25, 75]°)" />
+<element type="angle" label="beta1">
+	<angleStyle val="3"/>
+	<emphasizeRightAngle val="false"/>
+	<value val="1.0122909661567112"/>
+	<objColor r="0" g="100" b="0" alpha="0.10000000149011612"/>
+	<selectionAllowed val="false"/>
+</element>
+<command name="Segment">
+	<input a0="O" a1="B"/>
+	<output a0="OB"/>
+</command>
+<element type="segment" label="OB">
+	<show object="false" label="false" ev="4"/>
+	<condition showObject="type ≟ 2 ∨ type ≟ 3 ∨ type ≟ 4 ∨ type ≟ 7"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<lineStyle thickness="4" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+	<startStyle val="default"/>
+	<endStyle val="default"/>
+	<coords x="-0.9205048534524404" y="0.3907311284892737" z="0"/>
+</element>
+<command name="Segment">
+	<input a0="A" a1="B"/>
+	<output a0="AB"/>
+</command>
+<element type="segment" label="AB">
+	<show object="false" label="false" ev="4"/>
+	<condition showObject="type ≟ 3 ∨ type ≟ 4 ∨ type ≟ 5 ∨ type ≟ 6 ∨ type ≟ 7"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<lineStyle thickness="4" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+	<startStyle val="default"/>
+	<endStyle val="default"/>
+	<coords x="-1.246073007909597" y="-0.5547874471100431" z="0.9975640502598243"/>
+</element>
+<command name="Rotate">
+	<input a0="B" a1="beta1" a2="O"/>
+	<output a0="C"/>
+</command>
+<element type="point" label="C">
+	<show object="false" label="false" ev="4"/>
+	<condition showObject="type ≟ 1 ∨ type ≟ 2 ∨ type ≟ 6 ∨ debug"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelOffset x="-17" y="-31"/>
+	<labelMode val="0"/>
+	<pointSize val="3"/>
+	<pointStyle val="0"/>
+	<coords x="-0.5735764363510463" y="0.8191520442889918" z="1"/>
+</element>
+<expression label="beta2" exp="(2 * Random[Div[180 - beta1 / °, 2] + 10, Div[320 - alpha / ° - beta1 / °, 2]]°)" />
+<element type="angle" label="beta2">
+	<angleStyle val="3"/>
+	<emphasizeRightAngle val="false"/>
+	<value val="2.792526803190927"/>
+	<objColor r="0" g="100" b="0" alpha="0.10000000149011612"/>
+	<selectionAllowed val="false"/>
+</element>
+<command name="Rotate">
+	<input a0="C" a1="beta2" a2="O"/>
+	<output a0="D"/>
+</command>
+<element type="point" label="D">
+	<show object="true" label="false" ev="4"/>
+	<condition showObject="type ≟ 1 ∨ type ≟ 6 ∨ type ≟ 7 ∨ debug"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelOffset x="-14" y="-23"/>
+	<labelMode val="0"/>
+	<pointSize val="3"/>
+	<pointStyle val="0"/>
+	<coords x="0.2588190451025208" y="-0.9659258262890684" z="1"/>
+</element>
+<command name="Segment">
+	<input a0="B" a1="D"/>
+	<output a0="BD"/>
+</command>
+<element type="segment" label="BD">
+	<show object="false" label="false" ev="4"/>
+	<condition showObject="type ≟ 1"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<lineStyle thickness="4" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+	<startStyle val="default"/>
+	<endStyle val="default"/>
+	<coords x="1.8864306797415087" y="-0.13191208338675292" z="-0.6156614753256583"/>
+</element>
+<command name="Segment">
+	<input a0="A" a1="D"/>
+	<output a0="AD"/>
+</command>
+<element type="segment" label="AD">
+	<show object="false" label="false" ev="4"/>
+	<condition showObject="type ≟ 1 ∨ type ≟ 6 ∨ type ≟ 7"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<lineStyle thickness="4" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+	<startStyle val="default"/>
+	<endStyle val="default"/>
+	<coords x="0.6403576718319117" y="-0.686699530496796" z="-0.8290375725550418"/>
+</element>
+<command name="Segment">
+	<input a0="A" a1="C"/>
+	<output a0="AC"/>
+</command>
+<element type="segment" label="AC">
+	<show object="false" label="false" ev="4"/>
+	<condition showObject="type ≟ 1 ∨ type ≟ 2"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<lineStyle thickness="4" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+	<startStyle val="default"/>
+	<endStyle val="default"/>
+	<coords x="-1.1447201987461484" y="-1.519095011950363" z="0.5877852522924731"/>
+</element>
+<command name="Segment">
+	<input a0="C" a1="B"/>
+	<output a0="BC"/>
+</command>
+<element type="segment" label="BC">
+	<show object="false" label="false" ev="4"/>
+	<condition showObject="type ≟ 1 ∨ type ≟ 2 ∨ type ≟ 6"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<lineStyle thickness="4" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+	<startStyle val="default"/>
+	<endStyle val="default"/>
+	<coords x="-0.10135280916344858" y="0.96430756484032" z="-0.8480480961564261"/>
+</element>
+<command name="Angle">
+	<input a0="A" a1="D" a2="B"/>
+	<output a0="ADB"/>
+</command>
+<element type="angle" label="ADB">
+	<angleStyle val="0"/>
+	<emphasizeRightAngle val="false"/>
+	<value val="0.7504915783575616"/>
+	<lineStyle thickness="4" type="0" typeHidden="2"/>
+	<arcSize val="30"/>
+	<show object="true" label="true" ev="4"/>
+	<condition showObject="type ≟ 1"/>
+	<objColor r="138" g="43" b="226" alpha="0.20000000298023224"/>
+	<layer val="0"/>
+	<labelOffset x="4" y="18"/>
+	<labelMode val="2"/>
+	<selectionAllowed val="false"/>
+</element>
+<command name="Angle">
+	<input a0="A" a1="C" a2="B"/>
+	<output a0="ACB"/>
+</command>
+<element type="angle" label="ACB">
+	<angleStyle val="0"/>
+	<emphasizeRightAngle val="false"/>
+	<value val="0.7504915783575618"/>
+	<lineStyle thickness="4" type="0" typeHidden="2"/>
+	<arcSize val="30"/>
+	<show object="false" label="true" ev="4"/>
+	<condition showObject="type ≟ 1 ∨ type ≟ 2"/>
+	<objColor r="138" g="43" b="226" alpha="0.20000000298023224"/>
+	<layer val="0"/>
+	<labelOffset x="-49" y="-3"/>
+	<labelMode val="3"/>
+	<selectionAllowed val="false"/>
+	<caption val="$\bold{h}$"/>
+</element>
+<command name="Angle">
+	<input a0="C" a1="B" a2="D"/>
+	<output a0="CBD"/>
+</command>
+<element type="angle" label="CBD">
+	<angleStyle val="0"/>
+	<emphasizeRightAngle val="false"/>
+	<value val="1.3962634015954636"/>
+	<lineStyle thickness="4" type="0" typeHidden="2"/>
+	<arcSize val="30"/>
+	<show object="true" label="true" ev="4"/>
+	<condition showObject="type ≟ 1 ∧ subtype ≟ 2"/>
+	<objColor r="138" g="43" b="226" alpha="0.20000000298023224"/>
+	<layer val="0"/>
+	<labelOffset x="25" y="1"/>
+	<labelMode val="2"/>
+	<selectionAllowed val="false"/>
+</element>
+<command name="Angle">
+	<input a0="C" a1="A" a2="D"/>
+	<output a0="CAD"/>
+</command>
+<element type="angle" label="CAD">
+	<angleStyle val="0"/>
+	<emphasizeRightAngle val="false"/>
+	<value val="1.3962634015954638"/>
+	<lineStyle thickness="4" type="0" typeHidden="2"/>
+	<arcSize val="30"/>
+	<show object="true" label="true" ev="4"/>
+	<condition showObject="type ≟ 1 ∧ subtype ≟ 1"/>
+	<objColor r="138" g="43" b="226" alpha="0.20000000298023224"/>
+	<layer val="0"/>
+	<labelOffset x="26" y="-4"/>
+	<labelMode val="2"/>
+	<selectionAllowed val="false"/>
+</element>
+<command name="Angle">
+	<input a0="A" a1="O" a2="B"/>
+	<output a0="AOB"/>
+</command>
+<element type="angle" label="AOB">
+	<angleStyle val="0"/>
+	<emphasizeRightAngle val="false"/>
+	<value val="1.5009831567151235"/>
+	<lineStyle thickness="4" type="0" typeHidden="2"/>
+	<arcSize val="30"/>
+	<show object="true" label="true" ev="4"/>
+	<condition showObject="type ≟ 2 ∨ type ≟ 3 ∨ type ≟ 4"/>
+	<objColor r="138" g="43" b="226" alpha="0.20000000298023224"/>
+	<layer val="0"/>
+	<labelOffset x="-43" y="18"/>
+	<labelMode val="3"/>
+	<selectionAllowed val="false"/>
+	<caption val="$\bold{c}$"/>
+</element>
+<command name="Angle">
+	<input a0="B" a1="A" a2="O"/>
+	<output a0="OAB"/>
+</command>
+<element type="angle" label="OAB">
+	<angleStyle val="0"/>
+	<emphasizeRightAngle val="false"/>
+	<value val="0.8203047484373348"/>
+	<lineStyle thickness="4" type="0" typeHidden="2"/>
+	<arcSize val="30"/>
+	<show object="true" label="true" ev="4"/>
+	<condition showObject="type ≟ 3 ∧ (subtype ≟ 1 ∨ subtype ≟ 3) ∨ type ≟ 5"/>
+	<objColor r="138" g="43" b="226" alpha="0.20000000298023224"/>
+	<layer val="0"/>
+	<labelOffset x="22" y="22"/>
+	<labelMode val="2"/>
+	<selectionAllowed val="false"/>
+</element>
+<command name="Angle">
+	<input a0="O" a1="B" a2="A"/>
+	<output a0="OBA"/>
+</command>
+<element type="angle" label="OBA">
+	<angleStyle val="0"/>
+	<emphasizeRightAngle val="false"/>
+	<value val="0.8203047484373348"/>
+	<lineStyle thickness="4" type="0" typeHidden="2"/>
+	<arcSize val="30"/>
+	<show object="false" label="true" ev="4"/>
+	<condition showObject="type ≟ 3 ∧ (subtype ≟ 2 ∨ subtype ≟ 4)"/>
+	<objColor r="138" g="43" b="226" alpha="0.20000000298023224"/>
+	<layer val="0"/>
+	<labelOffset x="-9" y="27"/>
+	<labelMode val="3"/>
+	<selectionAllowed val="false"/>
+</element>
+<expression label="E" exp="O + O - A" type="point" />
+<element type="point" label="E">
+	<show object="true" label="false" ev="4"/>
+	<condition showObject="type ≟ 4 ∨ type ≟ 5 ∨ debug"/>
+	<objColor r="0" g="0" b="0" alpha="0" dynamicr="0" dynamicg="0" dynamicb="0" colorSpace="0"/>
+	<layer val="0"/>
+	<labelOffset x="2" y="33"/>
+	<labelMode val="0"/>
+	<pointSize val="3"/>
+	<pointStyle val="0"/>
+	<coords x="-0.9455185755993168" y="0.3255681544571567" z="1"/>
+</element>
+<command name="Segment">
+	<input a0="O" a1="E"/>
+	<output a0="OE"/>
+</command>
+<element type="segment" label="OE">
+	<show object="false" label="false" ev="4"/>
+	<condition showObject="type ≟ 4 ∨ type ≟ 5"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<lineStyle thickness="4" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+	<startStyle val="default"/>
+	<endStyle val="default"/>
+	<coords x="-0.3255681544571567" y="-0.9455185755993168" z="0"/>
+</element>
+<command name="Segment">
+	<input a0="B" a1="E"/>
+	<output a0="BE"/>
+</command>
+<element type="segment" label="BE">
+	<show object="false" label="false" ev="4"/>
+	<condition showObject="type ≟ 4 ∨ type ≟ 5"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<lineStyle thickness="4" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+	<startStyle val="default"/>
+	<endStyle val="default"/>
+	<coords x="0.5949366989952837" y="-1.3362497040885906" z="0.9975640502598243"/>
+</element>
+<element type="numeric" label="type">
+	<value val="5"/>
+	<slider min="0" max="7" absoluteScreenLocation="true" width="200" x="434" y="78" fixed="true" horizontal="true" showAlgebra="true"/>
+	<lineStyle thickness="10" type="0" typeHidden="1"/>
+	<show object="false" label="true"/>
+	<objColor r="0" g="153" b="0" alpha="0.10000000149011612"/>
+	<layer val="0"/>
+	<labelOffset x="-27" y="-6"/>
+	<labelMode val="1"/>
+	<animation step="1" speed="1" type="0" playing="false"/>
+</element>
+<command name="Segment">
+	<input a0="C" a1="D"/>
+	<output a0="CD"/>
+</command>
+<element type="segment" label="CD">
+	<show object="true" label="false" ev="4"/>
+	<condition showObject="type ≟ 6"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<lineStyle thickness="4" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+	<startStyle val="default"/>
+	<endStyle val="default"/>
+	<coords x="1.78507787057806" y="0.832395481453567" z="0.34202014332566893"/>
+</element>
+<command name="Segment">
+	<input a0="D" a1="O"/>
+	<output a0="OD"/>
+</command>
+<element type="segment" label="OD">
+	<show object="true" label="false" ev="4"/>
+	<condition showObject="type ≟ 7"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<lineStyle thickness="4" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+	<startStyle val="default"/>
+	<endStyle val="default"/>
+	<coords x="-0.9659258262890684" y="-0.2588190451025208" z="0"/>
+</element>
+<command name="Angle">
+	<input a0="O" a1="E" a2="B"/>
+	<output a0="OEB"/>
+</command>
+<element type="angle" label="OEB">
+	<angleStyle val="0"/>
+	<emphasizeRightAngle val="false"/>
+	<value val="0.7504915783575616"/>
+	<lineStyle thickness="4" type="0" typeHidden="2"/>
+	<arcSize val="30"/>
+	<show object="false" label="true" ev="4"/>
+	<condition showObject="type ≟ 4 ∨ type ≟ 5 ∧ subtype ≟ 2"/>
+	<objColor r="138" g="43" b="226" alpha="0.20000000298023224"/>
+	<layer val="0"/>
+	<labelOffset x="8" y="-5"/>
+	<labelMode val="2"/>
+	<selectionAllowed val="false"/>
+</element>
+<command name="Angle">
+	<input a0="E" a1="B" a2="A"/>
+	<output a0="ABE"/>
+</command>
+<element type="angle" label="ABE">
+	<angleStyle val="0"/>
+	<emphasizeRightAngle val="false"/>
+	<value val="1.5707963267948968"/>
+	<lineStyle thickness="4" type="0" typeHidden="2"/>
+	<arcSize val="30"/>
+	<show object="true" label="true" ev="4"/>
+	<condition showObject="type ≟ 5 ∧ subtype ≟ 1"/>
+	<objColor r="138" g="43" b="226" alpha="0.20000000298023224"/>
+	<layer val="0"/>
+	<labelOffset x="6" y="5"/>
+	<labelMode val="3"/>
+	<selectionAllowed val="false"/>
+	<caption val="$\bold{s}$"/>
+</element>
+<command name="Angle">
+	<input a0="C" a1="B" a2="A"/>
+	<output a0="ABC"/>
+</command>
+<element type="angle" label="ABC">
+	<angleStyle val="0"/>
+	<emphasizeRightAngle val="false"/>
+	<value val="1.884955592153876"/>
+	<lineStyle thickness="4" type="0" typeHidden="2"/>
+	<arcSize val="30"/>
+	<show object="false" label="true" ev="4"/>
+	<condition showObject="type ≟ 6"/>
+	<objColor r="138" g="43" b="226" alpha="0.20000000298023224"/>
+	<layer val="0"/>
+	<labelOffset x="14" y="19"/>
+	<labelMode val="3"/>
+	<selectionAllowed val="false"/>
+	<caption val="$\bold{n}$"/>
+</element>
+<command name="Angle">
+	<input a0="D" a1="C" a2="B"/>
+	<output a0="BCD"/>
+</command>
+<element type="angle" label="BCD">
+	<angleStyle val="0"/>
+	<emphasizeRightAngle val="false"/>
+	<value val="1.239183768915974"/>
+	<lineStyle thickness="4" type="0" typeHidden="2"/>
+	<arcSize val="30"/>
+	<show object="false" label="true" ev="4"/>
+	<condition showObject="type ≟ 6 ∧ subtype ≟ 2"/>
+	<objColor r="138" g="43" b="226" alpha="0.20000000298023224"/>
+	<layer val="0"/>
+	<labelOffset x="-36" y="12"/>
+	<labelMode val="2"/>
+	<selectionAllowed val="false"/>
+</element>
+<command name="Angle">
+	<input a0="A" a1="D" a2="C"/>
+	<output a0="ADC"/>
+</command>
+<element type="angle" label="ADC">
+	<angleStyle val="0"/>
+	<emphasizeRightAngle val="false"/>
+	<value val="1.2566370614359172"/>
+	<lineStyle thickness="4" type="0" typeHidden="2"/>
+	<arcSize val="30"/>
+	<show object="false" label="true" ev="4"/>
+	<condition showObject="type ≟ 6"/>
+	<objColor r="138" g="43" b="226" alpha="0.20000000298023224"/>
+	<layer val="0"/>
+	<labelOffset x="-1" y="11"/>
+	<labelMode val="2"/>
+	<selectionAllowed val="false"/>
+</element>
+<command name="Angle">
+	<input a0="B" a1="A" a2="D"/>
+	<output a0="BAD"/>
+</command>
+<element type="angle" label="BAD">
+	<angleStyle val="0"/>
+	<emphasizeRightAngle val="false"/>
+	<value val="1.9024088846738194"/>
+	<lineStyle thickness="4" type="0" typeHidden="2"/>
+	<arcSize val="30"/>
+	<show object="true" label="true" ev="4"/>
+	<condition showObject="type ≟ 6 ∧ subtype ≟ 1 ∨ type ≟ 7"/>
+	<objColor r="138" g="43" b="226" alpha="0.20000000298023224"/>
+	<layer val="0"/>
+	<labelOffset x="22" y="20"/>
+	<labelMode val="2"/>
+	<selectionAllowed val="false"/>
+</element>
+<command name="Angle">
+	<input a0="B" a1="O" a2="D"/>
+	<output a0="BODout"/>
+</command>
+<element type="angle" label="BODout">
+	<angleStyle val="0"/>
+	<emphasizeRightAngle val="false"/>
+	<value val="3.804817769347638"/>
+	<lineStyle thickness="4" type="0" typeHidden="2"/>
+	<arcSize val="30"/>
+	<show object="false" label="true" ev="4"/>
+	<condition showObject="type ≟ 7 ∧ subtype ≤ 2"/>
+	<objColor r="138" g="43" b="226" alpha="0.20000000298023224"/>
+	<layer val="0"/>
+	<labelOffset x="-13" y="19"/>
+	<labelMode val="2"/>
+	<selectionAllowed val="false"/>
+</element>
+<command name="Angle">
+	<input a0="D" a1="O" a2="B"/>
+	<output a0="BODin"/>
+</command>
+<element type="angle" label="BODin">
+	<angleStyle val="0"/>
+	<emphasizeRightAngle val="false"/>
+	<value val="2.4783675378319483"/>
+	<lineStyle thickness="4" type="0" typeHidden="2"/>
+	<arcSize val="30"/>
+	<show object="false" label="true" ev="4"/>
+	<condition showObject="type ≟ 7 ∧ subtype ≥ 3"/>
+	<objColor r="138" g="43" b="226" alpha="0.20000000298023224"/>
+	<layer val="0"/>
+	<labelOffset x="8" y="-9"/>
+	<labelMode val="3"/>
+	<selectionAllowed val="false"/>
+	<caption val="$\bold{b}$"/>
+</element>
+<command name="If">
+	<input a0="type ≟ 3 ∨ type ≟ 7" a1="Random[1, 4]" a2="Random[1, 2]"/>
+	<output a0="subtype"/>
+</command>
+<element type="numeric" label="subtype">
+	<value val="1"/>
+	<objColor r="0" g="153" b="0" alpha="0.10000000149011612"/>
+	<selectionAllowed val="false"/>
+</element>
+<element type="button" label="button1">
+	<show object="false" label="true"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelOffset x="487" y="61"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<auxiliary val="true"/>
+	<ggbscript val="#type=1&#xa;SetCaption(ACB,If(type==1,&quot;$\bold{&quot;+letter+&quot;}$&quot;,&quot;&quot;))&#xa;SetLabelMode(ACB,If(type==1,3,2))"/>
+	<caption val="next1"/>
+	<font serif="false" sizeM="1.4" size="10" style="0"/>
+</element>
+<element type="button" label="button2">
+	<show object="false" label="true"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelOffset x="489" y="128"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<auxiliary val="true"/>
+	<ggbscript val="#type=2&#xa;SetCaption(AOB,If(type==2&amp;&amp;subtype==1,&quot;$\bold{&quot;+letter+&quot;}$&quot;,&quot;&quot;))&#xa;SetLabelMode(AOB,If(type==2&amp;&amp;subtype==1,3,2))&#xa;SetCaption(ACB,If(type==2&amp;&amp;subtype==2,&quot;$\bold{&quot;+letter+&quot;}$&quot;,&quot;&quot;))&#xa;SetLabelMode(ACB,If(type==2&amp;&amp;subtype==2,3,2))&#xa;"/>
+	<caption val="next2"/>
+	<font serif="false" sizeM="1.4" size="10" style="0"/>
+</element>
+<element type="button" label="button3">
+	<show object="false" label="true"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelOffset x="491" y="186"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<auxiliary val="true"/>
+	<ggbscript val="#type=3&#xa;SetCaption(AOB,If(type==3&amp;&amp;subtype&lt;=2,&quot;$\bold{&quot;+letter+&quot;}$&quot;,&quot;&quot;))&#xa;SetLabelMode(AOB,If(type==3&amp;&amp;subtype&lt;=2,3,2))&#xa;SetCaption(OAB,If(type==3&amp;&amp;subtype==3,&quot;$\bold{&quot;+letter+&quot;}$&quot;,&quot;&quot;))&#xa;SetLabelMode(OAB,If(type==3&amp;&amp;subtype==3,3,2))&#xa;SetCaption(OBA,If(type==3&amp;&amp;subtype==4,&quot;$\bold{&quot;+letter+&quot;}$&quot;,&quot;&quot;))&#xa;SetLabelMode(OBA,If(type==3&amp;&amp;subtype==4,3,2))"/>
+	<caption val="next3"/>
+	<font serif="false" sizeM="1.4" size="10" style="0"/>
+</element>
+<element type="button" label="button4">
+	<show object="false" label="true"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelOffset x="495" y="247"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<auxiliary val="true"/>
+	<ggbscript val="#type=4&#xa;SetCaption(AOB,If(type==4&amp;&amp;subtype==1,&quot;$\bold{&quot;+letter+&quot;}$&quot;,&quot;&quot;))&#xa;SetLabelMode(AOB,If(type==4&amp;&amp;subtype==1,3,2))&#xa;SetCaption(OEB,If(type==4&amp;&amp;subtype==2,&quot;$\bold{&quot;+letter+&quot;}$&quot;,&quot;&quot;))&#xa;SetLabelMode(OEB,If(type==4&amp;&amp;subtype==2,3,2))&#xa;SetCaption(OAB,&quot;&quot;)&#xa;SetCaption(OBA,&quot;&quot;)"/>
+	<caption val="next4"/>
+	<font serif="false" sizeM="1.4" size="10" style="0"/>
+</element>
+<element type="button" label="button5">
+	<show object="false" label="true"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelOffset x="494" y="312"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<auxiliary val="true"/>
+	<ggbscript val="#type=5&#xa;SetCaption(ABE,If(type==5&amp;&amp;subtype==1,&quot;$\bold{&quot;+letter+&quot;}$&quot;,&quot;&quot;))&#xa;SetLabelMode(ABE,If(type==5&amp;&amp;subtype==1,3,2))&#xa;SetCaption(OEB,If(type==5&amp;&amp;subtype==2,&quot;$\bold{&quot;+letter+&quot;}$&quot;,&quot;&quot;))&#xa;SetLabelMode(OEB,If(type==5&amp;&amp;subtype==2,3,2))&#xa;SetCaption(OAB,&quot;&quot;)&#xa;SetLabelMode(OAB,2)"/>
+	<caption val="next5"/>
+	<font serif="false" sizeM="1.4" size="10" style="0"/>
+</element>
+<element type="button" label="button6">
+	<show object="false" label="true"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelOffset x="496" y="381"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<auxiliary val="true"/>
+	<ggbscript val="#type=6&#xa;SetCaption(ABC,If(type==6,&quot;$\bold{&quot;+letter+&quot;}$&quot;,&quot;&quot;))&#xa;SetLabelMode(ABC,If(type==6,3,2))&#xa;SetCaption(BCD,&quot;&quot;)&#xa;SetLabelMode(BCD,2)&#xa;SetCaption(BAD,&quot;&quot;)&#xa;SetLabelMode(BAD,2)"/>
+	<caption val="next6"/>
+	<font serif="false" sizeM="1.4" size="10" style="0"/>
+</element>
+<element type="button" label="button7">
+	<show object="false" label="true"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelOffset x="496" y="445"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<auxiliary val="true"/>
+	<ggbscript val="#type=7&#xa;SetCaption(BAD,If(type==7&amp;&amp;(subtype==2||subtype==4),&quot;$\bold{&quot;+letter+&quot;}$&quot;,&quot;&quot;))&#xa;SetLabelMode(BAD,If(type==7&amp;&amp;(subtype==2||subtype==4),3,2))&#xa;SetCaption(BODin,If(type==7&amp;&amp;subtype==3,&quot;$\bold{&quot;+letter+&quot;}$&quot;,&quot;&quot;))&#xa;SetLabelMode(BODin,If(type==7&amp;&amp;subtype==3,3,2))&#xa;SetCaption(BODout,If(type==7&amp;&amp;subtype==1,&quot;$\bold{&quot;+letter+&quot;}$&quot;,&quot;&quot;))&#xa;SetLabelMode(BODout,If(type==7&amp;&amp;subtype==1,3,2))"/>
+	<caption val="next7"/>
+	<font serif="false" sizeM="1.4" size="10" style="0"/>
+</element>
+<expression label="ans1" exp="ADB" />
+<element type="angle" label="ans1">
+	<angleStyle val="0"/>
+	<value val="0.7504915783575616"/>
+	<lineStyle thickness="2" type="0" typeHidden="2"/>
+	<arcSize val="30"/>
+	<show object="false" label="true" ev="4"/>
+	<objColor r="127" g="0" b="255" alpha="0.20000000298023224"/>
+	<layer val="0"/>
+	<labelMode val="2"/>
+	<selectionAllowed val="false"/>
+</element>
+<command name="If">
+	<input a0="subtype ≟ 1" a1="AOB" a2="ACB"/>
+	<output a0="ans2"/>
+</command>
+<element type="angle" label="ans2">
+	<angleStyle val="0"/>
+	<value val="1.5009831567151235"/>
+	<lineStyle thickness="2" type="0" typeHidden="2"/>
+	<arcSize val="30"/>
+	<show object="false" label="true" ev="4"/>
+	<objColor r="127" g="0" b="255" alpha="0.20000000298023224"/>
+	<layer val="0"/>
+	<labelMode val="2"/>
+	<selectionAllowed val="false"/>
+</element>
+<command name="If">
+	<input a0="subtype ≤ 2" a1="AOB" a2="OAB"/>
+	<output a0="ans3"/>
+</command>
+<element type="angle" label="ans3">
+	<angleStyle val="0"/>
+	<value val="1.5009831567151235"/>
+	<lineStyle thickness="2" type="0" typeHidden="2"/>
+	<arcSize val="30"/>
+	<show object="false" label="true" ev="4"/>
+	<objColor r="127" g="0" b="255" alpha="0.20000000298023224"/>
+	<layer val="0"/>
+	<labelMode val="2"/>
+	<selectionAllowed val="false"/>
+</element>
+<command name="If">
+	<input a0="subtype ≟ 1" a1="AOB" a2="OEB"/>
+	<output a0="ans4"/>
+</command>
+<element type="angle" label="ans4">
+	<angleStyle val="0"/>
+	<value val="1.5009831567151235"/>
+	<lineStyle thickness="2" type="0" typeHidden="2"/>
+	<arcSize val="30"/>
+	<show object="false" label="true" ev="4"/>
+	<objColor r="127" g="0" b="255" alpha="0.20000000298023224"/>
+	<layer val="0"/>
+	<labelMode val="2"/>
+	<selectionAllowed val="false"/>
+</element>
+<command name="If">
+	<input a0="subtype ≟ 1" a1="90°" a2="OEB"/>
+	<output a0="ans5"/>
+</command>
+<element type="angle" label="ans5">
+	<angleStyle val="0"/>
+	<value val="1.5707963267948966"/>
+	<lineStyle thickness="2" type="0" typeHidden="2"/>
+	<arcSize val="30"/>
+	<show object="false" label="true" ev="4"/>
+	<objColor r="127" g="0" b="255" alpha="0.20000000298023224"/>
+	<layer val="0"/>
+	<labelMode val="2"/>
+	<selectionAllowed val="false"/>
+</element>
+<expression label="ans6" exp="180° - ADC" />
+<element type="angle" label="ans6">
+	<angleStyle val="0"/>
+	<value val="1.8849555921538759"/>
+	<objColor r="0" g="100" b="0" alpha="0.10000000149011612"/>
+	<selectionAllowed val="false"/>
+</element>
+<command name="If">
+	<input a0="subtype ≟ 1" a1="BODout" a2="If[subtype ≟ 3, BODin, BAD]"/>
+	<output a0="ans7"/>
+</command>
+<element type="angle" label="ans7">
+	<angleStyle val="0"/>
+	<value val="3.804817769347638"/>
+	<lineStyle thickness="2" type="0" typeHidden="2"/>
+	<arcSize val="30"/>
+	<show object="false" label="true" ev="4"/>
+	<objColor r="127" g="0" b="255" alpha="0.20000000298023224"/>
+	<layer val="0"/>
+	<labelMode val="2"/>
+	<selectionAllowed val="false"/>
+</element>
+<command name="If">
+	<input a0="type ≟ 1" a1="ans1" a2="If[type ≟ 2, ans2, If[type ≟ 3, ans3, If[type ≟ 4, ans4, If[type ≟ 5, ans5, If[type ≟ 6, ans6, If[type ≟ 7, ans7]]]]]]"/>
+	<output a0="answer"/>
+</command>
+<element type="angle" label="answer">
+	<angleStyle val="0"/>
+	<value val="1.5707963267948966"/>
+	<lineStyle thickness="2" type="0" typeHidden="2"/>
+	<arcSize val="30"/>
+	<show object="false" label="true" ev="4"/>
+	<objColor r="255" g="0" b="0" alpha="0.20000000298023224"/>
+	<layer val="0"/>
+	<labelMode val="2"/>
+	<selectionAllowed val="false"/>
+</element>
+<element type="angle" label="n">
+	<angleStyle val="3"/>
+	<value val="0"/>
+	<slider min="0°" max="6.283185307179586" absoluteScreenLocation="true" width="820" x="86" y="525" fixed="true" horizontal="true" showAlgebra="true"/>
+	<pointSize val="8"/>
+	<lineStyle thickness="10" type="0" typeHidden="2"/>
+	<arcSize val="30"/>
+	<show object="true" label="true" ev="4"/>
+	<objColor r="0" g="0" b="0" alpha="0.20000000298023224"/>
+	<layer val="0"/>
+	<labelOffset x="-17" y="-3"/>
+	<labelMode val="3"/>
+	<animation step="°" speed="1" type="0" playing="false"/>
+	<ggbscript onUpdate="SetValue(n&apos;,n/°)"/>
+	<caption val="or choose answer=%v"/>
+</element>
+<expression label="correct" exp="n ≟ answer" />
+<element type="boolean" label="correct">
+	<value val="false"/>
+	<show object="false" label="true"/>
+	<objColor r="255" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<checkbox fixed="true"/>
+</element>
+<element type="image" label="picCorrect">
+	<file name="ac60c94a2aa06c56b488b82e4022653e/thumb-up.png"/>
+	<inBackground val="false"/>
+	<absoluteScreenLocation x="787" y="234"/>	<show object="true" label="true" ev="1"/>
+	<objColor r="0" g="0" b="0" alpha="1"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<selectionAllowed val="false"/>
+</element>
+<element type="image" label="picWrong">
+	<file name="a94e0f31e7dfd448c35c108f5edd6f90/Cold Sweat.png"/>
+	<inBackground val="false"/>
+	<absoluteScreenLocation x="787" y="234"/>	<show object="true" label="true" ev="1"/>
+	<objColor r="0" g="0" b="0" alpha="1"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<selectionAllowed val="false"/>
+</element>
+<element type="button" label="buttonCheck">
+	<show object="true" label="true"/>
+	<condition showObject="n ≠ 0°"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<bgColor r="255" g="255" b="0" alpha="255"/>
+	<layer val="0"/>
+	<labelOffset x="856" y="396"/>
+	<labelMode val="3"/>
+	<fixed val="true"/>
+	<auxiliary val="true"/>
+	<ggbscript val="SetValue(marks,If(correct,marks+1,marks-1))&#xa;SetVisibleInView(picCorrect,1,correct)&#xa;SetVisibleInView(picWrong,1,!correct)&#xa;SetVisibleInView(text2,1,!correct)&#xa;SetVisibleInView(buttonNext,1,true)&#xa;SetVisibleInView(buttonCheck,1,false)&#xa;SelectObjects()&#xa;If(correct,PlaySound(&quot;http://m.geogebra.hk/sounds/clap.mp3&quot;))"/>
+	<caption val="Check"/>
+	<font serif="false" sizeM="2" size="24" style="0"/>
+</element>
+<element type="numeric" label="marks">
+	<value val="0"/>
+	<slider min="0" max="30" absoluteScreenLocation="true" width="200" x="30" y="90" fixed="true" horizontal="true" showAlgebra="true"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<show object="false" label="true"/>
+	<objColor r="255" g="0" b="0" alpha="0.10000000149011612"/>
+	<layer val="0"/>
+	<labelMode val="1"/>
+	<animation step="1" speed="1" type="0" playing="false"/>
+</element>
+<element type="numeric" label="n&apos;">
+	<value val="0"/>
+	<show object="false" label="true"/>
+	<objColor r="0" g="0" b="0" alpha="0.10000000149011612"/>
+	<layer val="0"/>
+	<labelMode val="2"/>
+	<animation step="1" speed="1" type="0" playing="false"/>
+	<ggbscript onUpdate="SetValue(n,n&apos; deg)"/>
+</element>
+<command name="Textfield">
+	<input a0="n&apos;"/>
+	<output a0="InputBox1"/>
+</command>
+<element type="textfield" label="InputBox1">
+	<show object="true" label="true"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<bgColor r="255" g="250" b="205" alpha="255"/>
+	<layer val="0"/>
+	<labelOffset x="493" y="387"/>
+	<labelMode val="3"/>
+	<fixed val="true"/>
+	<auxiliary val="true"/>
+	<caption val="Input answer (°):"/>
+	<font serif="false" sizeM="1.4" size="10" style="0"/>
+	<length val="3"/>
+	<textAlign val="center"/>
+</element>
+<element type="point" label="Dummy1">
+	<show object="true" label="true" ev="11"/>
+	<objColor r="160" g="160" b="160" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<selectionAllowed val="false"/>
+	<pointSize val="5"/>
+	<pointStyle val="0"/>
+	<coords x="0" y="0" z="1"/>
+</element>
+<element type="point" label="Dummy2">
+	<show object="true" label="true" ev="11"/>
+	<objColor r="160" g="160" b="160" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<selectionAllowed val="false"/>
+	<pointSize val="5"/>
+	<pointStyle val="0"/>
+	<coords x="10" y="0" z="1"/>
+</element>
+<element type="image" label="picSpec">
+	<file name="15ec412fddbd8256464279fad09dabc8/circle.jpg"/>
+	<inBackground val="false"/>
+	<startPoint number="0" exp="Dummy1"/>
+	<startPoint number="1" exp="Dummy2"/>
+	<show object="true" label="false" ev="3"/>
+	<objColor r="0" g="0" b="0" alpha="1"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<animation step="1" speed="1" type="0" playing="false"/>
+	<selectionAllowed val="false"/>
+</element>
+<command name="RandomElement">
+	<input a0="{&quot;a&quot;, &quot;b&quot;, &quot;c&quot;, &quot;h&quot;, &quot;k&quot;, &quot;m&quot;, &quot;n&quot;, &quot;p&quot;, &quot;s&quot;, &quot;x&quot;, &quot;y&quot;}"/>
+	<output a0="letter" randomResult="&quot;s&quot;"/>
+</command>
+<element type="text" label="letter">
+	<show object="false" label="false" ev="8"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+</element>
+<expression label="text1" exp="&quot;&quot; + (LaTeX[letter]) + &quot;=&quot; + (LaTeX[n]) + &quot;&quot;" />
+<element type="text" label="text1">
+	<show object="true" label="true" ev="8"/>
+	<condition showObject="n ≠ 0°"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<selectionAllowed val="false"/>
+	<isLaTeX val="true"/>
+	<font serif="true" sizeM="2" size="24" style="0"/>
+	<absoluteScreenLocation x="519" y="160"/>
+</element>
+<element type="boolean" label="includeQuad">
+	<value val="false"/>
+	<show object="true" label="true"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelOffset x="490" y="19"/>
+	<labelMode val="3"/>
+	<checkbox fixed="true"/>
+	<caption val="Questions include cyclic quadrilaterals"/>
+</element>
+<element type="numeric" label="delta">
+	<value val="1.1"/>
+	<symbolic val="true" />
+	<slider min="-5" max="5" absoluteScreenLocation="true" width="200" x="30" y="90" fixed="true" horizontal="true" showAlgebra="true"/>
+	<lineStyle thickness="10" type="0" typeHidden="1"/>
+	<show object="false" label="true"/>
+	<objColor r="0" g="0" b="0" alpha="0.10000000149011612"/>
+	<layer val="3"/>
+	<labelMode val="2"/>
+	<animation step="0.1" speed="1" type="0" playing="false"/>
+</element>
+<command name="Dilate">
+	<input a0="A" a1="delta"/>
+	<output a0="A&apos;"/>
+</command>
+<element type="point" label="A&apos;">
+	<show object="false" label="false" ev="4"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="3"/>
+	<labelMode val="0"/>
+	<pointSize val="3"/>
+	<pointStyle val="0"/>
+	<coords x="1.0400704331592485" y="-0.3581249699028724" z="1"/>
+</element>
+<command name="Dilate">
+	<input a0="B" a1="delta"/>
+	<output a0="B&apos;"/>
+</command>
+<element type="point" label="B&apos;">
+	<show object="false" label="false"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="3"/>
+	<labelMode val="0"/>
+	<pointSize val="3"/>
+	<pointStyle val="0"/>
+	<coords x="0.4298042413382011" y="1.0125553387976844" z="1"/>
+</element>
+<command name="Dilate">
+	<input a0="C" a1="delta"/>
+	<output a0="C&apos;"/>
+</command>
+<element type="point" label="C&apos;">
+	<show object="false" label="false"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="3"/>
+	<labelOffset x="-32" y="18"/>
+	<labelMode val="0"/>
+	<pointSize val="3"/>
+	<pointStyle val="0"/>
+	<coords x="-0.6309340799861509" y="0.901067248717891" z="1"/>
+</element>
+<command name="Dilate">
+	<input a0="D" a1="delta"/>
+	<output a0="D&apos;"/>
+</command>
+<element type="point" label="D&apos;">
+	<show object="false" label="false"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="3"/>
+	<labelOffset x="-18" y="31"/>
+	<labelMode val="0"/>
+	<pointSize val="3"/>
+	<pointStyle val="0"/>
+	<coords x="0.2847009496127729" y="-1.0625184089179753" z="1"/>
+</element>
+<expression label="textA" exp="&quot;A&quot;"/>
+<element type="text" label="textA">
+	<symbolic val="true" />
+	<show object="true" label="false" ev="8"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="3"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<startPoint exp="A&apos;"/>
+	<labelOffset x="-8" y="7"/>
+</element>
+<expression label="textB" exp="&quot;B&quot;"/>
+<element type="text" label="textB">
+	<symbolic val="true" />
+	<show object="true" label="false" ev="8"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="3"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<startPoint exp="B&apos;"/>
+	<labelOffset x="-6" y="9"/>
+</element>
+<expression label="textC" exp="&quot;C&quot;"/>
+<element type="text" label="textC">
+	<symbolic val="true" />
+	<show object="true" label="false" ev="8"/>
+	<condition showObject="type ≟ 1 ∨ type ≟ 2 ∨ type ≟ 6 ∨ debug"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="3"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<startPoint exp="C&apos;"/>
+	<labelOffset x="-8" y="8"/>
+</element>
+<expression label="textD" exp="&quot;D&quot;"/>
+<element type="text" label="textD">
+	<symbolic val="true" />
+	<show object="true" label="false" ev="8"/>
+	<condition showObject="type ≟ 1 ∨ type ≟ 6 ∨ type ≟ 7 ∨ debug"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="3"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<startPoint exp="D&apos;"/>
+	<labelOffset x="-8" y="8"/>
+</element>
+<element type="numeric" label="lang">
+	<value val="2"/>
+	<symbolic val="true" />
+	<show object="false" label="true"/>
+	<objColor r="0" g="0" b="0" alpha="0.10000000149011612"/>
+	<layer val="3"/>
+	<labelMode val="2"/>
+	<animation step="1" speed="1" type="0" playing="false"/>
+</element>
+<element type="button" label="button0">
+	<show object="true" label="true"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="3"/>
+	<labelOffset x="925" y="580"/>
+	<labelMode val="3"/>
+	<animation step="1" speed="1" type="0" playing="false"/>
+	<auxiliary val="true"/>
+	<ggbscript val="SetValue(lang,If(lang==1,2,1))&#xa;RunClickScript(buttonLang)"/>
+	<caption val="中文"/>
+	<font serif="false" sizeM="1.4" size="10" style="0"/>
+</element>
+<element type="button" label="buttonLang">
+	<show object="false" label="true"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="3"/>
+	<labelOffset x="898" y="542"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<auxiliary val="true"/>
+	<ggbscript val="SetCaption(button0,If(lang==1,&quot;ENG&quot;,&quot;中文&quot;))&#xa;SetCaption(includeQuad,If(lang==1,&quot;題目包括圓內接四邊形&quot;,&quot;Questions include cyclic quadrilaterals&quot;))&#xa;SetCaption(InputBox1,If(lang==1,&quot;輸入答案(°)：&quot;,&quot;Input answer (°): &quot;))&#xa;SetCaption(buttonCheck,If(lang==1,&quot;核對&quot;,&quot;Check&quot;))&#xa;SetCaption(buttonNext,If(lang==1,&quot;下一題&quot;,&quot;Next&quot;))&#xa;SetCaption(n,If(lang==1,&quot;或選取答案=%v&quot;,&quot;or choose answer=%v&quot;))&#xa;"/>
+	<font serif="false" sizeM="1.4" size="10" style="0"/>
+</element>
+<expression label="textMarks" exp="&quot;&quot; + (If[lang ≟ 1, &quot;分數&quot;, &quot;Marks&quot;]) + &quot; = &quot; + marks + &quot;&quot;" />
+<element type="text" label="textMarks">
+	<show object="true" label="false" ev="8"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<absoluteScreenLocation x="819" y="115"/>
+</element>
+<expression label="textQ" exp="&quot;\text{&quot; + (LaTeX[If[lang ≟ 1, &quot;求未知角&quot;, &quot;Find the value of&quot;]]) + &quot; }&quot; + (LaTeX[letter]) + &quot;&quot; + (LaTeX[If[lang ≟ 1, &quot;。&quot;, &quot;.&quot;]]) + &quot;&quot;" />
+<element type="text" label="textQ">
+	<show object="true" label="true" ev="8"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<isLaTeX val="true"/>
+	<font serif="true" sizeM="1.2" size="5" style="0"/>
+	<absoluteScreenLocation x="488" y="82"/>
+</element>
+<expression label="text2" exp="&quot;\text{&quot; + (LaTeX[If[lang ≟ 1, &quot;正確答案：&quot;, &quot;Correct answer:&quot;]]) + &quot; }&quot; + (LaTeX[letter]) + &quot;=&quot; + (LaTeX[answer]) + &quot;&quot;" />
+<element type="text" label="text2">
+	<show object="true" label="true" ev="9"/>
+	<objColor r="255" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<isLaTeX val="true"/>
+	<font serif="true" sizeM="1.4" size="10" style="0"/>
+	<absoluteScreenLocation x="520" y="277"/>
+</element>
+<expression label="textCentre" exp="&quot;&quot; + (If[lang ≟ 1, &quot;O點是圓心&quot;, &quot;O is the centre of circle&quot;]) + &quot;&quot;" />
+<element type="text" label="textCentre">
+	<show object="true" label="true" ev="8"/>
+	<condition showObject="type ≟ 2 ∨ type ≟ 3 ∨ type ≟ 4 ∨ type ≟ 5 ∨ type ≟ 7"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<font serif="false" sizeM="0.7" size="-8" style="0"/>
+	<absoluteScreenLocation x="11" y="27"/>
+</element>
+<command name="RandomElement">
+	<input a0="{&quot;blue&quot;, &quot;red&quot;, &quot;blueviolet&quot;, &quot;chocolate&quot;, &quot;deeppink&quot;, &quot;darkgreen&quot;, &quot;forestgreen&quot;}"/>
+	<output a0="textColor" randomResult="&quot;blueviolet&quot;"/>
+</command>
+<element type="text" label="textColor">
+	<show object="false" label="false" ev="8"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+</element>
+<expression label="textE" exp="&quot;E&quot;"/>
+<element type="text" label="textE">
+	<symbolic val="true" />
+	<show object="true" label="false" ev="8"/>
+	<condition showObject="type ≟ 4 ∨ type ≟ 5 ∨ debug"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="3"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<startPoint exp="E&apos;"/>
+	<labelOffset x="-8" y="7"/>
+</element>
+<command name="Dilate">
+	<input a0="E" a1="delta"/>
+	<output a0="E&apos;"/>
+</command>
+<element type="point" label="E&apos;">
+	<show object="false" label="false" ev="4"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="3"/>
+	<labelMode val="0"/>
+	<pointSize val="3"/>
+	<pointStyle val="0"/>
+	<coords x="-1.0400704331592485" y="0.3581249699028724" z="1"/>
+</element>
+<element type="point" label="star1">
+	<show object="false" label="true" ev="4"/>
+	<objColor r="0" g="0" b="255" alpha="0"/>
+	<layer val="3"/>
+	<labelMode val="0"/>
+	<animation step="0.1" speed="1" type="1" playing="false"/>
+	<pointSize val="5"/>
+	<pointStyle val="0"/>
+	<coords x="3.3509568940578833" y="-0.8259912413177817" z="1"/>
+</element>
+<element type="image" label="picStar">
+	<file name="a1438ea254ee24f940dc2e1cb2430ccf/star.png"/>
+	<inBackground val="false"/>
+	<startPoint number="0" exp="star1"/>
+	<startPoint number="1" exp="star1 + (0.5, 0)"/>
+	<show object="true" label="true"/>
+	<condition showObject="marks ≥ 30"/>
+	<objColor r="0" g="0" b="0" alpha="1"/>
+	<layer val="3"/>
+	<labelMode val="0"/>
+	<animation step="1" speed="1" type="0" playing="false"/>
+	<selectionAllowed val="false"/>
+</element>
+<element type="button" label="button8">
+	<show object="true" label="true"/>
+	<objColor r="0" g="0" b="0" alpha="1"/>
+	<layer val="3"/>
+	<labelOffset x="13" y="507"/>
+	<labelMode val="0"/>
+	<animation step="1" speed="1" type="0" playing="false"/>
+	<auxiliary val="true"/>
+	<ggbscript val="SetValue(n,n-1°)"/>
+	<font serif="false" sizeM="2" size="24" style="0"/>
+	<file name="/geogebra/gui/images/go-previous.png"/>
+	<dimensions width="40" height="40" />
+</element>
+<element type="button" label="button9">
+	<show object="true" label="true"/>
+	<objColor r="0" g="0" b="0" alpha="1"/>
+	<layer val="3"/>
+	<labelOffset x="936" y="511"/>
+	<labelMode val="0"/>
+	<animation step="1" speed="1" type="0" playing="false"/>
+	<auxiliary val="true"/>
+	<ggbscript val="SetValue(n,n+1°)"/>
+	<font serif="false" sizeM="2" size="24" style="0"/>
+	<file name="/geogebra/gui/images/go-next.png"/>
+	<dimensions width="40" height="40" />
+</element>
+<element type="boolean" label="debug">
+	<value val="false"/>
+	<show object="true" label="true"/>
+	<objColor r="160" g="160" b="160" alpha="0"/>
+	<layer val="0"/>
+	<labelOffset x="719" y="578"/>
+	<labelMode val="0"/>
+	<checkbox fixed="true"/>
+</element>
+<expression label="text3" exp="&quot;&quot; + type + &quot;.&quot; + subtype + &quot;&quot;" />
+<element type="text" label="text3">
+	<show object="true" label="false" ev="40"/>
+	<condition showObject="debug"/>
+	<objColor r="160" g="160" b="160" alpha="0"/>
+	<layer val="3"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<startPoint x="3.241908732882872" y="-2.0122918569468617" z="1"/>
+</element>
+</construction>
+</geogebra>

@@ -1,0 +1,636 @@
+<?xml version="1.0" encoding="utf-8"?>
+<geogebra format="5.0" version="5.0.574.0" app="classic" platform="w" id="10317f26-fa7b-4c3c-bbe4-c5b6b2ab2ec3"  xsi:noNamespaceSchemaLocation="http://www.geogebra.org/apps/xsd/ggb.xsd" xmlns="" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" >
+<gui>
+	<window width="1355" height="582" />
+	<perspectives>
+<perspective id="tmp">
+	<panes>
+		<pane location="" divider="0.17343173431734318" orientation="1" />
+	</panes>
+	<views>
+		<view id="512" toolbar="0 | 1 501 5 19 , 67 | 2 15 45 18 , 7 37 | 514 3 9 , 13 44 , 47 | 16 51 | 551 550 11 ,  20 22 21 23 , 55 56 57 , 12 | 69 | 510 511 , 512 513 | 533 531 , 534 532 , 522 523 , 537 536 , 535 | 521 520 | 36 , 38 49 560 | 571 30 29 570 31 33 | 17 | 540 40 41 42 , 27 28 35 , 6 , 502" visible="false" inframe="false" stylebar="false" location="1,1,1" size="500" window="100,100,600,400" />
+		<view id="4" toolbar="0 || 2020 , 2021 , 2022 , 66 || 2001 , 2003 , 2002 , 2004 , 2005 || 2040 , 2041 , 2042 , 2044 , 2043" visible="false" inframe="false" stylebar="false" location="1,1" size="300" window="100,100,600,400" />
+		<view id="8" toolbar="1001 | 1002 | 1003  || 1005 | 1004 || 1006 | 1007 | 1010 || 1008 1009 || 66 68 || 6" visible="false" inframe="false" stylebar="false" location="1,3" size="300" window="100,100,600,400" />
+		<view id="4097" visible="false" inframe="false" stylebar="true" location="1,1" size="542" window="100,100,700,550" />
+		<view id="1" visible="true" inframe="false" stylebar="true" location="1" size="1355" window="100,100,600,400" />
+		<view id="2" visible="false" inframe="false" stylebar="false" location="3" size="235" window="100,100,600,400" />
+		<view id="16" visible="false" inframe="false" stylebar="false" location="1" size="150" window="50,50,500,500" />
+		<view id="32" visible="false" inframe="false" stylebar="true" location="1" size="150" window="50,50,500,500" />
+		<view id="64" toolbar="0" visible="false" inframe="false" stylebar="false" location="1" size="150" window="50,50,500,500" />
+		<view id="128" visible="false" inframe="false" stylebar="false" location="1" size="480" window="50,50,500,500" />
+		<view id="70" toolbar="0 || 2020 || 2021 || 2022" visible="false" inframe="false" stylebar="true" location="1" size="150" window="50,50,500,500" />
+		<view id="43" visible="false" inframe="false" stylebar="false" location="1" size="450" window="50,50,500,500" />
+	</views>
+	<toolbar show="false" items="0 39 73 62 | 1 501 67 , 5 19 , 72 75 76 | 2 15 45 , 18 65 , 7 37 | 4 3 8 9 , 13 44 , 58 , 47 | 16 51 64 , 70 | 10 34 53 11 , 24  20 22 , 21 23 | 55 56 57 , 12 | 36 46 , 38 49  50 , 71  14  68 | 30 29 54 32 31 33 | 25 17 26 60 52 61 | 40 41 42 , 27 28 35 , 6" position="1" help="false" />
+	<input show="false" cmd="true" top="algebra" />
+	<dockBar show="false" east="false" />
+</perspective>
+	</perspectives>
+	<labelingStyle  val="0"/>
+	<font  size="12"/>
+</gui>
+<euclidianView>
+	<viewNumber viewNo="1"/>
+	<size  width="1355" height="582"/>
+	<coordSystem xZero="290.5647930791325" yZero="324.18830756238884" scale="27.204617050098634" yscale="27.2046170500988"/>
+	<evSettings axes="true" grid="true" gridIsBold="false" pointCapturing="3" rightAngleStyle="1" checkboxSize="26" gridType="3"/>
+	<bgColor r="255" g="255" b="255"/>
+	<axesColor r="0" g="0" b="0"/>
+	<gridColor r="224" g="224" b="224"/>
+	<lineStyle axes="1" grid="0"/>
+	<axis id="0" show="true" label="" unitLabel="" tickStyle="1" showNumbers="true"/>
+	<axis id="1" show="true" label="" unitLabel="" tickStyle="1" showNumbers="true"/>
+</euclidianView>
+<kernel>
+	<continuous val="false"/>
+	<usePathAndRegionParameters val="true"/>
+	<decimals val="2"/>
+	<angleUnit val="degree"/>
+	<algebraStyle val="0" spreadsheet="0"/>
+	<coordStyle val="0"/>
+</kernel>
+<tableview min="-2" max="2" step="1"/>
+<scripting blocked="true" disabled="false"/>
+<construction title="" author="" date="">
+<element type="numeric" label="a">
+	<value val="1"/>
+	<show object="true" label="true"/>
+	<objColor r="0" g="0" b="0" alpha="0.10000000149011612"/>
+	<layer val="0"/>
+	<labelOffset x="-3" y="-1"/>
+	<labelMode val="1"/>
+	<slider min="-5" max="5" absoluteScreenLocation="true" width="120" x="574" y="93" fixed="false" horizontal="true" showAlgebra="true"/>
+	<lineStyle thickness="10" type="0" typeHidden="1"/>
+	<animation step="0.1" speed="1" type="0" playing="false"/>
+	<ggbscript onUpdate="delta=&quot;判别式：&quot;If[a==0,&quot; &quot;,&quot;\Delta=b^2-4ac=&quot;Δ]"/>
+</element>
+<element type="numeric" label="b">
+	<value val="3"/>
+	<symbolic val="true" />
+	<show object="true" label="true"/>
+	<objColor r="0" g="0" b="0" alpha="0.10000000149011612"/>
+	<layer val="0"/>
+	<labelOffset x="-1" y="1"/>
+	<labelMode val="1"/>
+	<slider min="-5" max="5" absoluteScreenLocation="true" width="120" x="718" y="93" fixed="false" horizontal="true" showAlgebra="true"/>
+	<lineStyle thickness="10" type="0" typeHidden="1"/>
+	<animation step="0.1" speed="1" type="0" playing="false"/>
+</element>
+<element type="numeric" label="c">
+	<value val="-4"/>
+	<show object="true" label="true"/>
+	<objColor r="0" g="0" b="0" alpha="0.10000000149011612"/>
+	<layer val="0"/>
+	<labelOffset x="-1" y="2"/>
+	<labelMode val="1"/>
+	<slider min="-5" max="5" absoluteScreenLocation="true" width="120" x="865" y="93" fixed="false" horizontal="true" showAlgebra="true"/>
+	<lineStyle thickness="10" type="0" typeHidden="1"/>
+	<animation step="0.1" speed="1" type="0" playing="false"/>
+</element>
+<expression label="f" exp="f(x) = (a * x^(2)) + (b * x) + c" />
+<element type="function" label="f">
+	<show object="true" label="true" ev="4"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<lineStyle thickness="7" type="0" typeHidden="1" opacity="178"/>
+</element>
+<expression label="Delta" exp="b^(2) - (4 * (a * c))" />
+<element type="numeric" label="Delta">
+	<value val="25"/>
+	<objColor r="0" g="0" b="0" alpha="0.10000000149011612"/>
+</element>
+<command name="If">
+	<input a0="Delta ≥ 0" a1="((-b) - sqrt(Delta)) / ((2 * a))"/>
+	<output a0="g_1"/>
+</command>
+<element type="numeric" label="g_1">
+	<value val="-4"/>
+	<objColor r="0" g="0" b="0" alpha="0.10000000149011612"/>
+</element>
+<command name="If">
+	<input a0="Delta ≥ 0" a1="((-b) + sqrt(Delta)) / ((2 * a))"/>
+	<output a0="g_2"/>
+</command>
+<element type="numeric" label="g_2">
+	<value val="1"/>
+	<objColor r="0" g="0" b="0" alpha="0.10000000149011612"/>
+</element>
+<command name="Min">
+	<input a0="g_1" a1="g_2"/>
+	<output a0="a_1"/>
+</command>
+<element type="numeric" label="a_1">
+	<value val="-4"/>
+	<objColor r="0" g="0" b="0" alpha="0.10000000149011612"/>
+</element>
+<command name="Max">
+	<input a0="g_1" a1="g_2"/>
+	<output a0="a_2"/>
+</command>
+<element type="numeric" label="a_2">
+	<value val="1"/>
+	<objColor r="0" g="0" b="0" alpha="0.10000000149011612"/>
+</element>
+<expression label="e" exp="e(x) = f(x) &gt; 0" />
+<element type="function" label="e">
+	<show object="false" label="true" ev="4"/>
+	<objColor r="0" g="0" b="255" alpha="0.25"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<lineStyle thickness="5" type="0" typeHidden="1"/>
+</element>
+<command name="Solutions">
+	<input a0="e"/>
+	<output a0="l1"/>
+</command>
+<element type="list" label="l1">
+	<objColor r="0" g="100" b="0" alpha="0"/>
+	<labelOffset x="5" y="55"/>
+	<lineStyle thickness="5" type="0" typeHidden="1"/>
+	<pointSize val="5"/>
+	<angleStyle val="0"/>
+</element>
+<expression label="d" exp="d(x) = f(x) &lt; 0" />
+<element type="function" label="d">
+	<show object="false" label="true" ev="4"/>
+	<objColor r="0" g="0" b="255" alpha="0.25"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<lineStyle thickness="5" type="0" typeHidden="1"/>
+</element>
+<command name="Solutions">
+	<input a0="d"/>
+	<output a0="l2"/>
+</command>
+<element type="list" label="l2">
+	<objColor r="0" g="100" b="0" alpha="0.25"/>
+	<lineStyle thickness="5" type="0" typeHidden="1"/>
+	<pointSize val="5"/>
+	<angleStyle val="0"/>
+</element>
+<command name="Point">
+	<input a0="xAxis"/>
+	<output a0="DminX"/>
+</command>
+<element type="point" label="DminX">
+	<show object="true" label="false" ev="4"/>
+	<objColor r="125" g="125" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<animation step="1" speed="1" type="1" playing="false"/>
+	<coords x="-8.648146076983233" y="0" z="1"/>
+	<pointSize val="5"/>
+	<pointStyle val="0"/>
+</element>
+<command name="Point">
+	<input a0="xAxis"/>
+	<output a0="DmaxX"/>
+</command>
+<element type="point" label="DmaxX">
+	<show object="true" label="false" ev="4"/>
+	<objColor r="125" g="125" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<animation step="1" speed="1" type="1" playing="false"/>
+	<coords x="7.6226577493578445" y="0" z="1"/>
+	<pointSize val="5"/>
+	<pointStyle val="0"/>
+</element>
+<command name="Point">
+	<input a0="yAxis"/>
+	<output a0="DminY"/>
+</command>
+<element type="point" label="DminY">
+	<show object="true" label="false" ev="4"/>
+	<objColor r="125" g="125" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<animation step="1" speed="1" type="1" playing="false"/>
+	<coords x="0" y="-8" z="1"/>
+	<pointSize val="5"/>
+	<pointStyle val="0"/>
+</element>
+<command name="Point">
+	<input a0="yAxis"/>
+	<output a0="DmaxY"/>
+</command>
+<element type="point" label="DmaxY">
+	<show object="true" label="false" ev="4"/>
+	<objColor r="125" g="125" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<animation step="1" speed="1" type="1" playing="false"/>
+	<coords x="0" y="11.150257268291812" z="1"/>
+	<pointSize val="5"/>
+	<pointStyle val="0"/>
+</element>
+<command name="Vector">
+	<input a0="DminX" a1="DmaxX"/>
+	<output a0="u"/>
+</command>
+<element type="vector" label="u">
+	<show object="true" label="false"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<coords x="16.270803826341076" y="0" z="0"/>
+	<lineStyle thickness="5" type="0" typeHidden="1" opacity="178"/>
+	<coordStyle style="cartesian"/>
+	<startPoint exp="DminX"/>
+</element>
+<command name="Vector">
+	<input a0="DminY" a1="DmaxY"/>
+	<output a0="v"/>
+</command>
+<element type="vector" label="v">
+	<show object="true" label="false"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<coords x="0" y="19.15025726829181" z="0"/>
+	<lineStyle thickness="5" type="0" typeHidden="1" opacity="178"/>
+	<coordStyle style="cartesian"/>
+	<startPoint exp="DminY"/>
+</element>
+<expression label="g" exp="g(y) = y ≥ y(DmaxY)" />
+<element type="function" label="g">
+	<show object="true" label="false" ev="4"/>
+	<objColor r="224" g="224" b="224" alpha="1"/>
+	<layer val="0"/>
+	<labelOffset x="44" y="-6"/>
+	<labelMode val="0"/>
+	<lineStyle thickness="5" type="0" typeHidden="1"/>
+</element>
+<expression label="h" exp="h(y) = y ≤ y(DminY)" />
+<element type="function" label="h">
+	<show object="true" label="false" ev="4"/>
+	<objColor r="224" g="224" b="224" alpha="1"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<lineStyle thickness="5" type="0" typeHidden="1"/>
+</element>
+<expression label="i" exp="i(x) = x ≤ x(DminX)" />
+<element type="function" label="i">
+	<show object="true" label="false" ev="4"/>
+	<objColor r="224" g="224" b="224" alpha="1"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<lineStyle thickness="5" type="0" typeHidden="1"/>
+</element>
+<expression label="j" exp="j(x) = x ≥ x(DmaxX)" />
+<element type="function" label="j">
+	<show object="true" label="true" ev="4"/>
+	<objColor r="224" g="224" b="224" alpha="1"/>
+	<layer val="0"/>
+	<labelMode val="3"/>
+	<fixed val="true"/>
+	<lineStyle thickness="5" type="0" typeHidden="1"/>
+</element>
+<expression label="text6" exp="&quot;二次函数与二次不等式&quot;"/>
+<element type="text" label="text6">
+	<show object="true" label="true" ev="40"/>
+	<objColor r="255" g="0" b="0" alpha="0"/>
+	<bgColor r="255" g="255" b="0" alpha="255"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<isLaTeX val="true"/>
+	<font serif="true" sizeM="2" size="12" style="1"/>
+	<absoluteScreenLocation x="540" y="9"/>
+</element>
+<expression label="delta" exp="&quot;&quot; + (LaTeX[If[a ≟ 0, &quot; &quot;, ((((((((&quot;判别式：\Delta=b^2-4ac=(&quot; * b) * &quot;)^2-4×(&quot;) * a) * &quot;)×(&quot;) * c) * &quot;)=&quot;) * Delta) * If[Delta ≟ 0, &quot;=0&quot;, If[Delta &gt; 0, &quot;&gt;0&quot;, &quot;&lt;0&quot;]])]]) + &quot;&quot;" />
+<element type="text" label="delta">
+	<show object="true" label="true" ev="8"/>
+	<objColor r="75" g="0" b="130" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<isLaTeX val="true"/>
+	<font serif="true" sizeM="1.4" size="5" style="1"/>
+	<absoluteScreenLocation x="574" y="160"/>
+</element>
+<expression label="xl标题" exp="{&quot;不等式&quot;, &quot;解集&quot;}"/>
+<element type="list" label="xl标题">
+	<show object="false" label="true"/>
+	<objColor r="0" g="100" b="0" alpha="0"/>
+	<bgColor r="255" g="255" b="255" alpha="255"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<animation step="1" speed="1" type="0" playing="false"/>
+	<lineStyle thickness="5" type="0" typeHidden="1"/>
+	<pointSize val="5"/>
+	<angleStyle val="0"/>
+	<symbolic val="true" />
+</element>
+<expression label="xlXy0" exp="{((&quot;\blue {&quot; * LaTeX[f, true, false]) * &quot;&lt;0}&quot;), ((&quot;\blue {&quot; * If[a &gt; 0, If[Delta &gt; 0, ((((&quot;(&quot; * a_1) * &quot;,&quot;) * a_2) * &quot;)&quot;), &quot;∅&quot;], If[Delta ≥ 0, ((((&quot;(-∞,&quot; * a_1) * &quot;)∪(&quot;) * a_2) * &quot;,+∞)&quot;), &quot;R&quot;]]) * &quot;}&quot;)}" />
+<element type="list" label="xlXy0">
+	<show object="false" label="true" ev="4"/>
+	<objColor r="0" g="100" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<lineStyle thickness="5" type="0" typeHidden="1"/>
+	<pointSize val="5"/>
+	<angleStyle val="0"/>
+	<symbolic val="true" />
+</element>
+<expression label="xlDy0" exp="{((&quot;\red {&quot; * LaTeX[f, true, false]) * &quot;&gt;0}&quot;), ((&quot;\red {&quot; * If[a &gt; 0, If[Delta ≥ 0, ((((&quot;(-∞,&quot; * a_1) * &quot;)∪(&quot;) * a_2) * &quot;,+∞)&quot;), &quot;R&quot;], If[Delta &gt; 0, ((((&quot;(&quot; * a_1) * &quot;,&quot;) * a_2) * &quot;)&quot;), &quot;∅&quot;]]) * &quot;}&quot;)}" />
+<element type="list" label="xlDy0">
+	<show object="false" label="true" ev="4"/>
+	<objColor r="0" g="100" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<lineStyle thickness="5" type="0" typeHidden="1"/>
+	<pointSize val="5"/>
+	<angleStyle val="0"/>
+	<symbolic val="true" />
+</element>
+<expression label="xlDxy0Dy0" exp="{}"/>
+<element type="list" label="xlDxy0Dy0">
+	<show object="false" label="true"/>
+	<objColor r="0" g="100" b="0" alpha="-1"/>
+	<bgColor r="255" g="255" b="255" alpha="255"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<animation step="1" speed="1" type="0" playing="false"/>
+	<lineStyle thickness="5" type="0" typeHidden="1"/>
+	<pointSize val="5"/>
+	<angleStyle val="0"/>
+</element>
+<expression label="text1" exp="&quot;&quot; + (LaTeX[If[a ≠ 0 ∧ Delta ≥ 0, (((((((&quot;x_1=\frac{-(&quot; * b) * &quot;)-\sqrt{&quot;) * Delta) * &quot;}}{2×(&quot;) * a) * &quot;)}=&quot;) * a_1)]]) + &quot;&quot;" />
+<element type="text" label="text1">
+	<show object="true" label="true" ev="8"/>
+	<objColor r="75" g="0" b="130" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<isLaTeX val="true"/>
+	<font serif="true" sizeM="1.4" size="5" style="1"/>
+	<absoluteScreenLocation x="574" y="203"/>
+</element>
+<expression label="text2" exp="&quot;&quot; + (LaTeX[If[a ≠ 0 ∧ Delta ≥ 0, (((((((&quot;x_2=\frac{-(&quot; * b) * &quot;)+\sqrt{&quot;) * Delta) * &quot;}}{2×(&quot;) * a) * &quot;)}=&quot;) * a_2)]]) + &quot;&quot;" />
+<element type="text" label="text2">
+	<show object="true" label="true" ev="8"/>
+	<objColor r="128" g="0" b="128" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<isLaTeX val="true"/>
+	<font serif="true" sizeM="1.4" size="5" style="1"/>
+	<absoluteScreenLocation x="883" y="203"/>
+</element>
+<command name="Point">
+	<input a0="Segment[DminX, DmaxX]"/>
+	<output a0="dd"/>
+</command>
+<element type="point" label="dd">
+	<show object="false" label="true" ev="4"/>
+	<objColor r="125" g="125" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<animation step="1" speed="1" type="1" playing="false"/>
+	<coords x="-2.2674386941043787" y="0" z="1"/>
+	<pointSize val="5"/>
+	<pointStyle val="0"/>
+</element>
+<command name="If">
+	<input a0="f(x(dd)) &gt; 0 ∧ f(x(dd)) &lt; y(DmaxY)" a1="f(x(dd))"/>
+	<output a0="yUp"/>
+</command>
+<element type="numeric" label="yUp">
+	<value val="NaN"/>
+	<objColor r="255" g="0" b="0" alpha="0"/>
+</element>
+<expression label="A" exp="(x(dd), yUp)" type="point" />
+<element type="point" label="A">
+	<show object="false" label="true"/>
+	<objColor r="68" g="68" b="68" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<coords x="-2.2674386941043787" y="NaN" z="1"/>
+	<pointSize val="4"/>
+	<pointStyle val="0"/>
+</element>
+<command name="Locus">
+	<input a0="A" a1="dd"/>
+	<output a0="loc1"/>
+</command>
+<element type="locus" label="loc1">
+	<show object="true" label="false" ev="4"/>
+	<objColor r="255" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="11" type="0" typeHidden="1" opacity="178"/>
+</element>
+<command name="If">
+	<input a0="f(x(dd)) &lt; 0 ∧ f(x(dd)) &lt; y(DmaxY) ∧ f(x(dd)) &gt; y(DminY)" a1="f(x(dd))"/>
+	<output a0="yDown"/>
+</command>
+<element type="numeric" label="yDown">
+	<value val="-5.661037850791366"/>
+	<objColor r="0" g="0" b="0" alpha="0.10000000149011612"/>
+</element>
+<expression label="B" exp="(x(dd), yDown)" type="point" />
+<element type="point" label="B">
+	<show object="false" label="true"/>
+	<objColor r="68" g="68" b="68" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<coords x="-2.2674386941043787" y="-5.661037850791366" z="1"/>
+	<pointSize val="4"/>
+	<pointStyle val="0"/>
+</element>
+<command name="Locus">
+	<input a0="B" a1="dd"/>
+	<output a0="loc2"/>
+</command>
+<element type="locus" label="loc2">
+	<show object="true" label="false" ev="4"/>
+	<objColor r="0" g="0" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="11" type="0" typeHidden="1" opacity="178"/>
+</element>
+<command name="Intersect">
+	<input a0="f" a1="xAxis"/>
+	<output a0="x_1" a1="x_2"/>
+</command>
+<element type="point" label="x_1">
+	<show object="true" label="true" ev="4"/>
+	<objColor r="68" g="68" b="68" alpha="0"/>
+	<layer val="0"/>
+	<labelOffset x="-38" y="14"/>
+	<labelMode val="3"/>
+	<coords x="-4" y="0" z="1"/>
+	<pointSize val="4"/>
+	<pointStyle val="0"/>
+	<caption val="$\large %n$"/>
+</element>
+<element type="point" label="x_2">
+	<show object="true" label="true" ev="4"/>
+	<objColor r="68" g="68" b="68" alpha="0"/>
+	<layer val="0"/>
+	<labelOffset x="8" y="12"/>
+	<labelMode val="3"/>
+	<coords x="1" y="0" z="1"/>
+	<pointSize val="4"/>
+	<pointStyle val="0"/>
+	<caption val="$\large %n$"/>
+</element>
+<expression label="xlXDy0" exp="{((&quot;\blue {&quot; * LaTeX[f, true, false]) * &quot;≤0}&quot;), ((&quot;\blue {&quot; * If[a &gt; 0, If[Delta &gt; 0, ((((&quot;[&quot; * a_1) * &quot;,&quot;) * a_2) * &quot;]&quot;), &quot;∅&quot;], If[Delta &gt; 0, ((((&quot;(-∞,&quot; * a_1) * &quot;]∪[&quot;) * a_2) * &quot;,+∞)&quot;), &quot;R&quot;]]) * &quot;}&quot;)}" />
+<element type="list" label="xlXDy0">
+	<show object="false" label="true"/>
+	<objColor r="0" g="100" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<lineStyle thickness="5" type="0" typeHidden="1"/>
+	<pointSize val="5"/>
+	<angleStyle val="0"/>
+	<symbolic val="true" />
+</element>
+<expression label="xlDDy0" exp="{((&quot;\red {&quot; * LaTeX[f, true, false]) * &quot;≥0}&quot;), ((&quot;\red {&quot; * If[a &gt; 0, If[Delta &gt; 0, ((((&quot;(-∞,&quot; * a_1) * &quot;]∪[&quot;) * a_2) * &quot;,+∞)&quot;), &quot;R&quot;], If[Delta &gt; 0, ((((&quot;[&quot; * a_1) * &quot;,&quot;) * a_2) * &quot;]&quot;), &quot;∅&quot;]]) * &quot;}&quot;)}" />
+<element type="list" label="xlDDy0">
+	<show object="false" label="true"/>
+	<objColor r="0" g="100" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<lineStyle thickness="5" type="0" typeHidden="1"/>
+	<pointSize val="5"/>
+	<angleStyle val="0"/>
+	<symbolic val="true" />
+</element>
+<command name="TableText">
+	<input a0="xl标题" a1="xlDy0" a2="xlXy0" a3="&quot;|_c&quot;"/>
+	<output a0="text4"/>
+</command>
+<element type="text" label="text4">
+	<show object="true" label="true" ev="8"/>
+	<condition showObject="a ≠ 0 ∧ 显示不含等号"/>
+	<objColor r="128" g="0" b="128" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<isLaTeX val="true"/>
+	<font serif="true" sizeM="1.4" size="5" style="1"/>
+	<absoluteScreenLocation x="614" y="306"/>
+</element>
+<command name="TableText">
+	<input a0="xl标题" a1="xlDDy0" a2="xlXDy0" a3="&quot;|_c&quot;"/>
+	<output a0="text5"/>
+</command>
+<element type="text" label="text5">
+	<show object="true" label="true" ev="8"/>
+	<condition showObject="a ≠ 0 ∧ 显示包含等号"/>
+	<objColor r="0" g="51" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<isLaTeX val="true"/>
+	<font serif="true" sizeM="1.4" size="5" style="1"/>
+	<absoluteScreenLocation x="617" y="435"/>
+</element>
+<element type="button" label="button1">
+	<show object="true" label="true"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelOffset x="1154" y="44"/>
+	<labelMode val="3"/>
+	<animation step="0.1" speed="1" type="0" playing="false"/>
+	<auxiliary val="true"/>
+	<ggbscript val="SetValue(a,1)&#xd;&#xa;SetValue(b,3)&#xd;&#xa;SetValue(c,-4)"/>
+	<font serif="true" sizeM="0.7" size="-4" style="0"/>
+	<caption val="$y=x^2+3x-4$"/>
+</element>
+<element type="button" label="button2">
+	<show object="true" label="true"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelOffset x="1153" y="91"/>
+	<labelMode val="0"/>
+	<animation step="0.1" speed="1" type="0" playing="false"/>
+	<auxiliary val="true"/>
+	<ggbscript val="SetValue(a,1)&#xd;&#xa;SetValue(b,2)&#xd;&#xa;SetValue(c,1)"/>
+	<font serif="true" sizeM="0.7" size="-4" style="0"/>
+	<caption val="$y=x^2+2x+1$"/>
+</element>
+<element type="button" label="button3">
+	<show object="true" label="true"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelOffset x="1153" y="185"/>
+	<labelMode val="3"/>
+	<animation step="0.1" speed="1" type="0" playing="false"/>
+	<auxiliary val="true"/>
+	<ggbscript val="SetValue(a,-1)&#xd;&#xa;SetValue(b,3)&#xd;&#xa;SetValue(c,4)"/>
+	<font serif="true" sizeM="0.7" size="-4" style="0"/>
+	<caption val="$y=-x^2+3x+4$"/>
+</element>
+<element type="button" label="button4">
+	<show object="true" label="true"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelOffset x="1154" y="233"/>
+	<labelMode val="3"/>
+	<animation step="0.1" speed="1" type="0" playing="false"/>
+	<auxiliary val="true"/>
+	<ggbscript val="SetValue(a,-1)&#xd;&#xa;SetValue(b,4)&#xd;&#xa;SetValue(c,-4)"/>
+	<font serif="true" sizeM="0.7" size="-4" style="0"/>
+	<caption val="$y=-x^2+4x-4$"/>
+</element>
+<element type="button" label="button5">
+	<show object="true" label="true"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelOffset x="1153" y="138"/>
+	<labelMode val="0"/>
+	<animation step="0.1" speed="1" type="0" playing="false"/>
+	<auxiliary val="true"/>
+	<ggbscript val="SetValue(a,1)&#xd;&#xa;SetValue(b,1)&#xd;&#xa;SetValue(c,3)"/>
+	<font serif="true" sizeM="0.7" size="-4" style="0"/>
+	<caption val="$y=x^2+x+3$"/>
+</element>
+<element type="button" label="button6">
+	<show object="true" label="true"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelOffset x="1153" y="282"/>
+	<labelMode val="0"/>
+	<animation step="0.1" speed="1" type="0" playing="false"/>
+	<auxiliary val="true"/>
+	<ggbscript val="SetValue(a,-2)&#xd;&#xa;SetValue(b,1)&#xd;&#xa;SetValue(c,-2)"/>
+	<font serif="true" sizeM="0.7" size="-4" style="0"/>
+	<caption val="$y=-2x^2+x-2$"/>
+</element>
+<element type="boolean" label="显示不含等号">
+	<value val="true"/>
+	<show object="true" label="true"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="9"/>
+	<labelOffset x="580" y="276"/>
+	<labelMode val="0"/>
+	<checkbox fixed="true"/>
+	<caption val="不含等号"/>
+</element>
+<element type="boolean" label="显示包含等号">
+	<value val="false"/>
+	<show object="true" label="true"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="9"/>
+	<labelOffset x="582" y="402"/>
+	<labelMode val="0"/>
+	<checkbox fixed="true"/>
+	<caption val="包含等号"/>
+</element>
+<expression label="text3" exp="&quot;函数解析式：y=&quot; + (LaTeX[LaTeX[f, true, false]]) + &quot;&quot;" />
+<element type="text" label="text3">
+	<symbolic val="true" />
+	<show object="true" label="true" ev="8"/>
+	<objColor r="255" g="0" b="0" alpha="0"/>
+	<bgColor r="255" g="250" b="205" alpha="255"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<isLaTeX val="true"/>
+	<font serif="true" sizeM="1.4" size="5" style="1"/>
+	<absoluteScreenLocation x="574" y="118"/>
+</element>
+</construction>
+</geogebra>

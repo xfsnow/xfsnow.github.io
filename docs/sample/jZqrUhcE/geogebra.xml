@@ -1,0 +1,2195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<geogebra format="4.2" version="4.2.47.0" id="bfaaa274-8192-420a-87c2-e782c10fd965"  xsi:noNamespaceSchemaLocation="http://www.geogebra.org/ggb.xsd" xmlns="" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" >
+<gui>
+	<window width="928" height="648" />
+	<perspectives>
+<perspective id="tmp">
+	<panes>
+		<pane location="" divider="0.21551724137931033" orientation="1" />
+	</panes>
+	<views>
+		<view id="4" toolbar="0 || 2020 , 2021 , 2022 , 66 || 2001 , 2003 , 2002 , 2004 , 2005 || 2040 , 2041 , 2042 , 2044 , 2043" visible="false" inframe="false" stylebar="false" location="1,1" size="200" window="0,0,400,400" />
+		<view id="1" visible="true" inframe="false" stylebar="true" location="1" size="912" window="0,0,400,400" />
+		<view id="2" visible="false" inframe="false" stylebar="false" location="3" size="200" window="0,0,200,400" />
+		<view id="8" toolbar="1001 | 1002 | 1003  || 1005 | 1004 || 1006 | 1007 | 1010 | 1011 || 1008 1009 || 6" visible="false" inframe="false" stylebar="false" location="1" size="150" window="50,50,500,500" />
+		<view id="16" visible="false" inframe="true" stylebar="false" location="1" size="150" window="50,50,500,500" />
+		<view id="32" visible="false" inframe="true" stylebar="true" location="1" size="150" window="50,50,500,500" />
+		<view id="64" visible="false" inframe="true" stylebar="false" location="1" size="150" window="50,50,500,500" />
+		<view id="4097" visible="false" inframe="true" stylebar="true" location="1" size="150" window="270,196,739,591" />
+		<view id="70" toolbar="0 || 2020 || 2021 || 2022" visible="false" inframe="true" stylebar="true" location="1" size="150" window="50,50,500,500" />
+	</views>
+	<toolbar show="true" items="0 39 59 || 1 501 67 , 5 19 , 72 | 2 15 45 , 18 65 , 7 37 | 4 3 8 9 , 13 44 , 58 , 47 || 16 51 64 , 70 | 10 34 53 11 , 24  20 22 , 21 23 | 55 56 57 , 12 || 36 46 , 38 49 50 , 71 | 30 29 54 32 31 33 | 17 26 62 , 14 66 68 | 25 52 60 61 || 40 41 42 , 27 28 35 , 6" position="1" help="true" />
+	<input show="true" cmd="true" top="false" />
+	<dockBar show="false" east="false" />
+</perspective>
+	</perspectives>
+	<labelingStyle  val="3"/>
+	<font  size="18"/>
+	<graphicsSettings javaLatexFonts="false"/>
+</gui>
+<euclidianView>
+	<size  width="912" height="453"/>
+	<coordSystem xZero="49.272727272727245" yZero="302.4214876033057" scale="37.565740045078876" yscale="37.56574004507887"/>
+	<evSettings axes="false" grid="false" gridIsBold="false" pointCapturing="3" rightAngleStyle="1" checkboxSize="13" gridType="0"/>
+	<bgColor r="255" g="255" b="255"/>
+	<axesColor r="0" g="0" b="0"/>
+	<gridColor r="192" g="192" b="192"/>
+	<lineStyle axes="1" grid="10"/>
+	<axis id="0" show="false" label="" unitLabel="" tickStyle="1" showNumbers="true"/>
+	<axis id="1" show="false" label="" unitLabel="" tickStyle="1" showNumbers="true"/>
+	<grid distX="1.0" distY="1.0" distTheta="0.5235987755982988"/>
+</euclidianView>
+<kernel>
+	<continuous val="false"/>
+	<usePathAndRegionParameters val="true"/>
+	<decimals val="2"/>
+	<angleUnit val="degree"/>
+	<algebraStyle val="0"/>
+	<coordStyle val="0"/>
+	<angleFromInvTrig val="false"/>
+</kernel>
+<scripting blocked="false" disabled="false"/>
+<construction title="" author="教育局評估及考評局組" date="">
+<element type="point" label="P">
+	<show object="true" label="false"/>
+	<condition showObject="¬旋轉"/>
+	<objColor r="0" g="0" b="255" alpha="0.0"/>
+	<layer val="1"/>
+	<labelOffset x="-30" y="24"/>
+	<labelMode val="0"/>
+	<animation step="0.1" speed="1" type="0" playing="false"/>
+	<coords x="12.061280000000004" y="-1.5787200000000006" z="1.0"/>
+	<pointSize val="1"/>
+	<pointStyle val="0"/>
+</element>
+<command name="Point">
+	<input a0="Segment[(1, 2), (10, 2)]"/>
+	<output a0="B"/>
+</command>
+<element type="point" label="B">
+	<show object="true" label="false"/>
+	<condition showObject="¬旋轉"/>
+	<objColor r="0" g="0" b="255" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<animation step="0.1" speed="1" type="0" playing="false"/>
+	<coords x="4.01236" y="2.0" z="1.0"/>
+	<pointSize val="5"/>
+	<pointStyle val="1"/>
+</element>
+<command name="Segment">
+	<input a0="(0, 2)" a1="(round(10 * x(B)) / 10, 2)"/>
+	<output a0="b"/>
+</command>
+<element type="segment" label="b">
+	<show object="true" label="false"/>
+	<objColor r="0" g="0" b="255" alpha="0.0" dynamicr="If[b ≟ a, 1, 0]" dynamicg="0" dynamicb="If[b ≟ a, 0, 1]" colorSpace="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<coords x="0.0" y="4.0" z="-8.0"/>
+	<lineStyle thickness="7" type="0" typeHidden="1"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<command name="Point">
+	<input a0="Segment[(1, 1), (10, 1)]"/>
+	<output a0="A"/>
+</command>
+<element type="point" label="A">
+	<show object="true" label="false"/>
+	<condition showObject="¬旋轉"/>
+	<objColor r="255" g="0" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="3"/>
+	<animation step="0.1" speed="1" type="0" playing="false"/>
+	<coords x="5.98224" y="1.0" z="1.0"/>
+	<pointSize val="5"/>
+	<pointStyle val="1"/>
+</element>
+<command name="Segment">
+	<input a0="(0, 1)" a1="(round(10 * x(A)) / 10, 1)"/>
+	<output a0="a"/>
+</command>
+<element type="segment" label="a">
+	<show object="true" label="false"/>
+	<objColor r="255" g="0" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<coords x="0.0" y="6.0" z="-6.0"/>
+	<lineStyle thickness="7" type="0" typeHidden="1"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<expression label="Q" exp="(x(P) + a, y(P))" type="point" />
+<element type="point" label="Q">
+	<show object="false" label="true"/>
+	<objColor r="64" g="64" b="64" alpha="0.0"/>
+	<layer val="0"/>
+	<labelOffset x="4" y="23"/>
+	<labelMode val="0"/>
+	<coords x="18.061280000000004" y="-1.5787200000000006" z="1.0"/>
+	<pointSize val="5"/>
+	<pointStyle val="0"/>
+</element>
+<command name="Semicircle">
+	<input a0="(x(Q) - b, y(Q))" a1="(x(Q) + b, y(Q))"/>
+	<output a0="c_q"/>
+</command>
+<element type="conicpart" label="c_q">
+	<show object="false" label="true"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<eigenvectors  x0="1.0" y0="0.0" z0="1.0" x1="-0.0" y1="1.0" z1="1.0"/>
+	<matrix A0="1.0" A1="1.0" A2="312.7021920768001" A3="0.0" A4="-18.061280000000004" A5="1.5787200000000006"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<command name="Point">
+	<input a0="c_q"/>
+	<output a0="R1"/>
+</command>
+<element type="point" label="R1">
+	<show object="true" label="false"/>
+	<condition showObject="¬旋轉"/>
+	<objColor r="0" g="255" b="0" alpha="0.0"/>
+	<layer val="1"/>
+	<labelOffset x="-73" y="33"/>
+	<labelMode val="0"/>
+	<animation step="0.1" speed="1" type="0" playing="false"/>
+	<coords x="19.407925801871954" y="2.1877830312347615" z="1.0"/>
+	<pointSize val="5"/>
+	<pointStyle val="0"/>
+</element>
+<expression label="R" exp="R1" type="point" />
+<element type="point" label="R">
+	<show object="false" label="true"/>
+	<objColor r="125" g="125" b="255" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<coords x="19.407925801871954" y="2.1877830312347615" z="1.0"/>
+	<pointSize val="5"/>
+	<pointStyle val="0"/>
+</element>
+<command name="Point">
+	<input a0="Segment[(1, 3), (10, 3)]"/>
+	<output a0="C"/>
+</command>
+<element type="point" label="C">
+	<show object="true" label="false"/>
+	<condition showObject="¬旋轉"/>
+	<objColor r="255" g="0" b="255" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<animation step="0.1" speed="1" type="0" playing="false"/>
+	<coords x="5.02392" y="3.0" z="1.0"/>
+	<pointSize val="5"/>
+	<pointStyle val="1"/>
+</element>
+<command name="Segment">
+	<input a0="(0, 3)" a1="(round(10 * x(C)) / 10, 3)"/>
+	<output a0="c"/>
+</command>
+<element type="segment" label="c">
+	<show object="true" label="false"/>
+	<objColor r="255" g="0" b="255" alpha="0.0" dynamicr="If[c ≟ b ∧ (b ≠ a), 0, 1]" dynamicg="0" dynamicb="If[c ≟ b ∧ (b ≠ a), 1, If[c ≟ a, 0, 1]]" colorSpace="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<coords x="0.0" y="5.0" z="-15.0"/>
+	<lineStyle thickness="7" type="0" typeHidden="1"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<command name="Circle">
+	<input a0="R" a1="c"/>
+	<output a0="c_r"/>
+</command>
+<element type="conic" label="c_r">
+	<show object="false" label="true"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<eigenvectors  x0="1.0" y0="0.0" z0="1.0" x1="-0.0" y1="1.0" z1="1.0"/>
+	<matrix A0="1.0" A1="1.0" A2="356.4539785227259" A3="0.0" A4="-19.407925801871954" A5="-2.1877830312347615"/>
+	<eqnStyle style="specific"/>
+</element>
+<command name="Point">
+	<input a0="Segment[(1, 4), (10, 4)]"/>
+	<output a0="D"/>
+</command>
+<element type="point" label="D">
+	<show object="true" label="false"/>
+	<condition showObject="¬旋轉"/>
+	<objColor r="0" g="204" b="204" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<animation step="0.1" speed="1" type="0" playing="false"/>
+	<coords x="3.978480000000002" y="4.0" z="1.0"/>
+	<pointSize val="5"/>
+	<pointStyle val="1"/>
+</element>
+<command name="Segment">
+	<input a0="(0, 4)" a1="(round(10 * x(D)) / 10, 4)"/>
+	<output a0="d"/>
+</command>
+<element type="segment" label="d">
+	<show object="true" label="false"/>
+	<objColor r="0" g="204" b="204" alpha="0.0" dynamicr="If[d ≟ c ∧ (c ≠ b) ∧ (c ≠ a), 1, If[d ≟ b ∧ (b ≠ a), 0, If[d ≟ a, 1, 0]]]" dynamicg="If[d ≟ c ∧ (c ≠ b) ∧ (c ≠ a), 0, If[d ≟ b ∧ (b ≠ a), 0, If[d ≟ a, 0, 0.8]]]" dynamicb="If[d ≟ c ∧ (c ≠ b) ∧ (c ≠ a), 1, If[d ≟ b ∧ (b ≠ a), 1, If[d ≟ a, 0, 0.8]]]" colorSpace="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<coords x="0.0" y="4.0" z="-16.0"/>
+	<lineStyle thickness="7" type="0" typeHidden="1"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<command name="Circle">
+	<input a0="P" a1="d"/>
+	<output a0="c_p"/>
+</command>
+<element type="conic" label="c_p">
+	<show object="false" label="true"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<eigenvectors  x0="1.0" y0="0.0" z0="1.0" x1="-0.0" y1="1.0" z1="1.0"/>
+	<matrix A0="1.0" A1="1.0" A2="131.9668320768001" A3="0.0" A4="-12.061280000000004" A5="1.5787200000000006"/>
+	<eqnStyle style="specific"/>
+</element>
+<command name="Intersect">
+	<input a0="c_r" a1="c_p" a2="2"/>
+	<output a0="S1"/>
+</command>
+<element type="point" label="S1">
+	<show object="false" label="true"/>
+	<objColor r="64" g="64" b="64" alpha="0.0"/>
+	<layer val="0"/>
+	<labelOffset x="-7" y="39"/>
+	<labelMode val="0"/>
+	<coords x="14.438192290327123" y="1.638466342767833" z="1.0"/>
+	<pointSize val="5"/>
+	<pointStyle val="0"/>
+</element>
+<expression label="S" exp="S1" type="point" />
+<element type="point" label="S">
+	<show object="false" label="true"/>
+	<objColor r="64" g="64" b="64" alpha="0.0"/>
+	<layer val="0"/>
+	<labelOffset x="-15" y="-3"/>
+	<labelMode val="0"/>
+	<coords x="14.438192290327123" y="1.638466342767833" z="1.0"/>
+	<pointSize val="5"/>
+	<pointStyle val="0"/>
+</element>
+<expression label="δ1" exp="round(CircleArc[S, P, Intersect[Circle[S, d], Ray[S, R]]] / d * 180 / 3.141592653589793 * 2) / 2" />
+<element type="numeric" label="δ1">
+	<value val="133.0"/>
+	<objColor r="0" g="0" b="0" alpha="0.1"/>
+</element>
+<command name="Sequence">
+	<input a0="Segment[(k, 0), (k, -1 * 0.5)]" a1="k" a2="0" a3="10"/>
+	<output a0="list1"/>
+</command>
+<element type="list" label="list1">
+	<show object="true" label="true"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<pointSize val="3"/>
+	<pointStyle val="0"/>
+</element>
+<expression label="β1" exp="round(CircleArc[Q, R1, (x(Q) - b, y(Q))] / b * 180 / 3.141592653589793 * 2) / 2" />
+<element type="numeric" label="β1">
+	<value val="109.5"/>
+	<objColor r="0" g="0" b="255" alpha="0.1"/>
+	<labelOffset x="-68" y="-10"/>
+</element>
+<command name="Polygon">
+	<input a0="(-0.3, 0.02662)" a1="(-0.3, -1.27338)" a2="(10.3, -1.27338)" a3="(10.3, 0.02662)"/>
+	<output a0="poly1" a1="poly1_1" a2="poly1_2" a3="poly1_3" a4="poly1_4"/>
+</command>
+<element type="polygon" label="poly1">
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<show object="true" label="false"/>
+	<objColor r="0" g="0" b="0" alpha="0.05"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+</element>
+<element type="segment" label="poly1_1">
+	<show object="true" label="false"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<selectionAllowed val="false"/>
+	<coords x="1.3" y="0.0" z="0.38999999999999996"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment" label="poly1_2">
+	<show object="true" label="false"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<selectionAllowed val="false"/>
+	<coords x="0.0" y="10.600000000000001" z="13.497828"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment" label="poly1_3">
+	<show object="true" label="false"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<selectionAllowed val="false"/>
+	<coords x="-1.3" y="0.0" z="13.39"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment" label="poly1_4">
+	<show object="true" label="false"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<selectionAllowed val="false"/>
+	<coords x="0.0" y="-10.600000000000001" z="0.28217200000000003"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<command name="Sequence">
+	<input a0="Segment[(k + 0.5, 0), (k + 0.5, -1 * 0.375)]" a1="k" a2="0" a3="9"/>
+	<output a0="list2"/>
+</command>
+<element type="list" label="list2">
+	<show object="true" label="true"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<pointSize val="3"/>
+	<pointStyle val="0"/>
+</element>
+<command name="Sequence">
+	<input a0="Sequence[Segment[(0.5 * (i - 1) + j / 10, 0), (0.5 * (i - 1) + j / 10, -1 * 0.25)], j, 1, 4]" a1="i" a2="1" a3="20"/>
+	<output a0="list3"/>
+</command>
+<element type="list" label="list3">
+	<show object="true" label="true"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<pointSize val="3"/>
+	<pointStyle val="0"/>
+</element>
+<expression label="text0" exp="&quot;0 cm&quot;"/>
+<element type="text" label="text0">
+	<show object="true" label="false"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<font serif="false" sizeM="0.5555555555555556" size="-8" style="0"/>
+	<startPoint  x="-0.1" y="-0.8" z="1.0"/>
+</element>
+<expression label="text1" exp="&quot;1&quot;"/>
+<element type="text" label="text1">
+	<show object="true" label="false"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<font serif="false" sizeM="0.5555555555555556" size="-8" style="0"/>
+	<startPoint  x="0.9" y="-0.8" z="1.0"/>
+</element>
+<expression label="text2" exp="&quot;2&quot;"/>
+<element type="text" label="text2">
+	<show object="true" label="false"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<font serif="false" sizeM="0.5555555555555556" size="-8" style="0"/>
+	<startPoint  x="1.9" y="-0.8" z="1.0"/>
+</element>
+<expression label="text3" exp="&quot;3&quot;"/>
+<element type="text" label="text3">
+	<show object="true" label="false"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<font serif="false" sizeM="0.5555555555555556" size="-8" style="0"/>
+	<startPoint  x="2.9" y="-0.8" z="1.0"/>
+</element>
+<expression label="text4" exp="&quot;4&quot;"/>
+<element type="text" label="text4">
+	<show object="true" label="false"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<font serif="false" sizeM="0.5555555555555556" size="-8" style="0"/>
+	<startPoint  x="3.9" y="-0.8" z="1.0"/>
+</element>
+<expression label="text5" exp="&quot;5&quot;"/>
+<element type="text" label="text5">
+	<show object="true" label="false"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<font serif="false" sizeM="0.5555555555555556" size="-8" style="0"/>
+	<startPoint  x="4.9" y="-0.8" z="1.0"/>
+</element>
+<expression label="text6" exp="&quot;6&quot;"/>
+<element type="text" label="text6">
+	<show object="true" label="false"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<font serif="false" sizeM="0.5555555555555556" size="-8" style="0"/>
+	<startPoint  x="5.9" y="-0.8" z="1.0"/>
+</element>
+<expression label="text7" exp="&quot;7&quot;"/>
+<element type="text" label="text7">
+	<show object="true" label="false"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<font serif="false" sizeM="0.5555555555555556" size="-8" style="0"/>
+	<startPoint  x="6.9" y="-0.8" z="1.0"/>
+</element>
+<expression label="text8" exp="&quot;8&quot;"/>
+<element type="text" label="text8">
+	<show object="true" label="false"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<font serif="false" sizeM="0.5555555555555556" size="-8" style="0"/>
+	<startPoint  x="7.9" y="-0.8" z="1.0"/>
+</element>
+<expression label="text9" exp="&quot;9&quot;"/>
+<element type="text" label="text9">
+	<show object="true" label="false"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<font serif="false" sizeM="0.5555555555555556" size="-8" style="0"/>
+	<startPoint  x="8.9" y="-0.8" z="1.0"/>
+</element>
+<expression label="text10" exp="&quot;10&quot;"/>
+<element type="text" label="text10">
+	<show object="true" label="false"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<font serif="false" sizeM="0.5555555555555556" size="-8" style="0"/>
+	<startPoint  x="9.9" y="-0.8" z="1.0"/>
+</element>
+<expression label="text11" exp="a + &quot; cm&quot;" />
+<element type="text" label="text11">
+	<show object="true" label="false"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<startPoint exp="A&apos;"/>
+	<labelOffset x="-20" y="-9"/>
+</element>
+<expression label="text12" exp="b + &quot; cm&quot;" />
+<element type="text" label="text12">
+	<show object="true" label="false"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<startPoint exp="B&apos;"/>
+	<labelOffset x="-20" y="-8"/>
+</element>
+<expression label="text13" exp="c + &quot; cm&quot;" />
+<element type="text" label="text13">
+	<show object="true" label="false"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<startPoint exp="C&apos;"/>
+	<labelOffset x="-20" y="-9"/>
+</element>
+<expression label="text14" exp="d + &quot; cm&quot;" />
+<element type="text" label="text14">
+	<show object="true" label="false"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<startPoint exp="D&apos;"/>
+	<labelOffset x="-21" y="-8"/>
+</element>
+<command name="Midpoint">
+	<input a0="(0, 1)" a1="A"/>
+	<output a0="A&apos;"/>
+</command>
+<element type="point" label="A&apos;">
+	<show object="false" label="false"/>
+	<objColor r="64" g="64" b="64" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<coords x="2.99112" y="1.0" z="1.0"/>
+	<pointSize val="5"/>
+	<pointStyle val="0"/>
+</element>
+<command name="Midpoint">
+	<input a0="(0, 2)" a1="B"/>
+	<output a0="B&apos;"/>
+</command>
+<element type="point" label="B&apos;">
+	<show object="false" label="false"/>
+	<objColor r="64" g="64" b="64" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<coords x="2.00618" y="2.0" z="1.0"/>
+	<pointSize val="5"/>
+	<pointStyle val="0"/>
+</element>
+<command name="Midpoint">
+	<input a0="(0, 3)" a1="C"/>
+	<output a0="C&apos;"/>
+</command>
+<element type="point" label="C&apos;">
+	<show object="false" label="false"/>
+	<objColor r="64" g="64" b="64" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<coords x="2.51196" y="3.0" z="1.0"/>
+	<pointSize val="5"/>
+	<pointStyle val="0"/>
+</element>
+<command name="Midpoint">
+	<input a0="(0, 4)" a1="D"/>
+	<output a0="D&apos;"/>
+</command>
+<element type="point" label="D&apos;">
+	<show object="false" label="false"/>
+	<objColor r="64" g="64" b="64" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<coords x="1.989240000000001" y="4.0" z="1.0"/>
+	<pointSize val="5"/>
+	<pointStyle val="0"/>
+</element>
+<command name="Segment">
+	<input a0="(0, 4)" a1="(0, 0)"/>
+	<output a0="i"/>
+</command>
+<element type="segment" label="i">
+	<show object="true" label="false"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<coords x="4.0" y="0.0" z="0.0"/>
+	<lineStyle thickness="2" type="10" typeHidden="1"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<command name="Segment">
+	<input a0="P" a1="Q"/>
+	<output a0="j"/>
+</command>
+<element type="segment" label="j">
+	<show object="true" label="false"/>
+	<condition showObject="¬旋轉"/>
+	<objColor r="255" g="0" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<coords x="0.0" y="6.0" z="9.472320000000003"/>
+	<lineStyle thickness="7" type="0" typeHidden="1"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<command name="Segment">
+	<input a0="P" a1="R"/>
+	<output a0="k"/>
+</command>
+<element type="segment" label="k">
+	<show object="false" label="false"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<coords x="-3.766503031234762" y="7.346645801871951" z="57.02714434090251"/>
+	<lineStyle thickness="5" type="0" typeHidden="1"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<command name="Intersect">
+	<input a0="c_p" a1="k" a2="1"/>
+	<output a0="E"/>
+</command>
+<element type="point" label="E">
+	<show object="false" label="true"/>
+	<objColor r="64" g="64" b="64" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<coords x="15.62074805921072" y="0.2461600331689331" z="1.0"/>
+	<pointSize val="5"/>
+	<pointStyle val="0"/>
+</element>
+<command name="Intersect">
+	<input a0="c_r" a1="k" a2="1"/>
+	<output a0="F"/>
+</command>
+<element type="point" label="F">
+	<show object="false" label="true"/>
+	<objColor r="64" g="64" b="64" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<coords x="14.958590727858546" y="-0.09331701022640893" z="1.0"/>
+	<pointSize val="5"/>
+	<pointStyle val="0"/>
+</element>
+<command name="Segment">
+	<input a0="(round(10 * x(C)) / 10, 3)" a1="(round(10 * x(C)) / 10, 0)"/>
+	<output a0="g"/>
+</command>
+<element type="segment" label="g">
+	<show object="true" label="false"/>
+	<objColor r="255" g="0" b="255" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<coords x="3.0" y="0.0" z="-15.0"/>
+	<lineStyle thickness="2" type="10" typeHidden="1"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<command name="Segment">
+	<input a0="(round(10 * x(B)) / 10, 2)" a1="(round(10 * x(B)) / 10, 0)"/>
+	<output a0="f"/>
+</command>
+<element type="segment" label="f">
+	<show object="true" label="false"/>
+	<objColor r="0" g="0" b="255" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<coords x="2.0" y="0.0" z="-8.0"/>
+	<lineStyle thickness="2" type="10" typeHidden="1"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<command name="Segment">
+	<input a0="(round(10 * x(A)) / 10, 1)" a1="(round(10 * x(A)) / 10, 0)"/>
+	<output a0="e"/>
+</command>
+<element type="segment" label="e">
+	<show object="true" label="false"/>
+	<objColor r="255" g="0" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<coords x="1.0" y="0.0" z="-6.0"/>
+	<lineStyle thickness="2" type="10" typeHidden="1"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<command name="Segment">
+	<input a0="(round(10 * x(D)) / 10, 4)" a1="(round(10 * x(D)) / 10, 0)"/>
+	<output a0="h"/>
+</command>
+<element type="segment" label="h">
+	<show object="true" label="false"/>
+	<objColor r="0" g="204" b="204" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<coords x="4.0" y="0.0" z="-16.0"/>
+	<lineStyle thickness="2" type="10" typeHidden="1"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<command name="Angle">
+	<input a0="Rotate[P, (-β1)°, Q]" a1="Q" a2="P"/>
+	<output a0="β"/>
+</command>
+<element type="angle" label="β">
+	<value val="1.9111355309337914"/>
+	<show object="false" label="false"/>
+	<condition showObject="連接紅點 ∧ (¬旋轉) ∧ 顯示直角和相等的角 ∧ (β ≠ 90°) ∧ (β ≟ α ∨ β ≟ γ ∨ β ≟ δ)"/>
+	<objColor r="0" g="0" b="255" alpha="0.1" dynamicr="If[β ≟ α, 1, 0]" dynamicg="0" dynamicb="If[β ≟ α, 0, 1]" colorSpace="0"/>
+	<layer val="0"/>
+	<labelOffset x="-34" y="-17"/>
+	<labelMode val="2"/>
+	<lineStyle thickness="3" type="0" typeHidden="1"/>
+	<arcSize val="45"/>
+	<allowReflexAngle val="true"/>
+</element>
+<expression label="γ1" exp="round(CircleArc[R, S1, Q] / c * 180 / 3.141592653589793 * 2) / 2" />
+<element type="numeric" label="γ1">
+	<value val="64.0"/>
+	<objColor r="0" g="100" b="0" alpha="0.1"/>
+</element>
+<command name="Angle">
+	<input a0="Rotate[Q, (-γ1)°, R]" a1="R" a2="Q"/>
+	<output a0="γ"/>
+</command>
+<element type="angle" label="γ">
+	<value val="1.117010721276371"/>
+	<show object="true" label="false"/>
+	<condition showObject="連接紅點 ∧ (¬旋轉) ∧ 顯示直角和相等的角 ∧ (γ ≠ 90°) ∧ (γ ≟ α ∨ γ ≟ β ∨ γ ≟ δ)"/>
+	<objColor r="255" g="0" b="0" alpha="0.1" dynamicr="If[γ ≟ α, 1, 0]" dynamicg="If[γ ≟ α ∨ γ ≟ β, 0, 0.39]" dynamicb="If[γ ≟ β ∧ (β ≠ α), 1, 0]" colorSpace="0"/>
+	<layer val="0"/>
+	<labelMode val="2"/>
+	<lineStyle thickness="3" type="0" typeHidden="1"/>
+	<arcSize val="45"/>
+	<allowReflexAngle val="true"/>
+</element>
+<expression label="α1" exp="round(CircleArc[P, (x(P) + d, y(P)), S1] / d * 180 / 3.141592653589793 * 2) / 2" />
+<element type="numeric" label="α1">
+	<value val="53.5"/>
+	<objColor r="255" g="0" b="0" alpha="0.1"/>
+</element>
+<command name="Angle">
+	<input a0="Q" a1="P" a2="Rotate[Q, α1°, P]"/>
+	<output a0="α"/>
+</command>
+<element type="angle" label="α">
+	<value val="0.9337511498169662"/>
+	<show object="true" label="false"/>
+	<condition showObject="連接紅點 ∧ (¬旋轉) ∧ 顯示直角和相等的角 ∧ (α ≠ 90°) ∧ (α ≟ β ∨ α ≟ γ ∨ α ≟ δ)"/>
+	<objColor r="255" g="0" b="0" alpha="0.1"/>
+	<layer val="0"/>
+	<labelOffset x="26" y="-7"/>
+	<labelMode val="2"/>
+	<lineStyle thickness="3" type="0" typeHidden="1"/>
+	<arcSize val="45"/>
+	<allowReflexAngle val="true"/>
+</element>
+<command name="Polygon">
+	<input a0="P" a1="Q" a2="R1" a3="S1"/>
+	<output a0="poly2" a1="t" a2="a_1" a3="b_1" a4="c_1"/>
+</command>
+<element type="polygon" label="poly2">
+	<lineStyle thickness="5" type="0" typeHidden="1"/>
+	<show object="true" label="false"/>
+	<condition showObject="(¬旋轉) ∧ 連接紅點"/>
+	<objColor r="255" g="255" b="0" alpha="0.3"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+</element>
+<element type="segment" label="t">
+	<show object="false" label="false"/>
+	<objColor r="153" g="51" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<coords x="0.0" y="6.0" z="9.472320000000003"/>
+	<lineStyle thickness="5" type="0" typeHidden="1"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment" label="a_1">
+	<show object="false" label="false"/>
+	<objColor r="153" g="51" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<coords x="-3.766503031234762" y="1.3466458018719507" z="70.15384252831109"/>
+	<lineStyle thickness="5" type="0" typeHidden="1"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment" label="b_1">
+	<show object="false" label="false"/>
+	<objColor r="153" g="51" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<coords x="0.5493166884669285" y="-4.969733511544831" z="0.2116011148203647"/>
+	<lineStyle thickness="5" type="0" typeHidden="1"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment" label="c_1">
+	<show object="false" label="false"/>
+	<objColor r="153" g="51" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<coords x="3.2171863427678336" y="-2.3769122903271196" z="-42.555864263284064"/>
+	<lineStyle thickness="5" type="0" typeHidden="1"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<command name="Angle">
+	<input a0="Q" a1="P" a2="Rotate[Q, 90*°, P]"/>
+	<output a0="α_0"/>
+</command>
+<element type="angle" label="α_0">
+	<value val="1.5707963267948966"/>
+	<show object="true" label="false"/>
+	<condition showObject="連接紅點 ∧ (¬旋轉) ∧ 顯示直角和相等的角 ∧ α ≟ 90°"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<lineStyle thickness="4" type="0" typeHidden="1"/>
+	<arcSize val="45"/>
+	<allowReflexAngle val="true"/>
+</element>
+<command name="Angle">
+	<input a0="R" a1="Q" a2="Rotate[R, 90*°, Q]"/>
+	<output a0="β_0"/>
+</command>
+<element type="angle" label="β_0">
+	<value val="1.5707963267948966"/>
+	<show object="true" label="false"/>
+	<condition showObject="連接紅點 ∧ (¬旋轉) ∧ 顯示直角和相等的角 ∧ β ≟ 90°"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<lineStyle thickness="4" type="0" typeHidden="1"/>
+	<arcSize val="45"/>
+	<allowReflexAngle val="true"/>
+</element>
+<command name="Angle">
+	<input a0="S" a1="R" a2="Rotate[S, 90*°, R]"/>
+	<output a0="γ_0"/>
+</command>
+<element type="angle" label="γ_0">
+	<value val="1.5707963267948963"/>
+	<show object="true" label="false"/>
+	<condition showObject="連接紅點 ∧ (¬旋轉) ∧ 顯示直角和相等的角 ∧ γ ≟ 90°"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<lineStyle thickness="4" type="0" typeHidden="1"/>
+	<arcSize val="45"/>
+	<allowReflexAngle val="true"/>
+</element>
+<command name="Angle">
+	<input a0="P" a1="S" a2="Rotate[P, 90*°, S]"/>
+	<output a0="δ_0"/>
+</command>
+<element type="angle" label="δ_0">
+	<value val="1.5707963267948963"/>
+	<show object="true" label="false"/>
+	<condition showObject="連接紅點 ∧ (¬旋轉) ∧ 顯示直角和相等的角 ∧ δ ≟ 90°"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<lineStyle thickness="4" type="0" typeHidden="1"/>
+	<arcSize val="45"/>
+	<allowReflexAngle val="true"/>
+</element>
+<element type="boolean" label="顯示直角和相等的角">
+	<value val="false"/>
+	<show object="true" label="true"/>
+	<condition showObject="連接紅點"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelOffset x="17" y="96"/>
+	<labelMode val="0"/>
+</element>
+<element type="boolean" label="顯示平行邊">
+	<value val="false"/>
+	<show object="true" label="true"/>
+	<condition showObject="連接紅點"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelOffset x="230" y="96"/>
+	<labelMode val="0"/>
+</element>
+<command name="Segment">
+	<input a0="Midpoint[P, Q]" a1="Rotate[Intersect[Circle[Midpoint[P, Q], 0.2], Ray[Midpoint[P, Q], P]], 30*°, Midpoint[P, Q]]"/>
+	<output a0="u_2"/>
+</command>
+<element type="segment" label="u_2">
+	<show object="true" label="false"/>
+	<condition showObject="連接紅點 ∧ (¬旋轉) ∧ 顯示平行邊 ∧ β + γ ≟ 180°"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<coords x="0.10000000000001741" y="-0.17320508075691876" z="-1.779570325092827"/>
+	<lineStyle thickness="5" type="0" typeHidden="1"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<command name="Segment">
+	<input a0="Midpoint[P, Q]" a1="Rotate[Intersect[Circle[Midpoint[P, Q], 0.2], Ray[Midpoint[P, Q], P]], 330*°, Midpoint[P, Q]]"/>
+	<output a0="u_1"/>
+</command>
+<element type="segment" label="u_1">
+	<show object="true" label="false"/>
+	<condition showObject="連接紅點 ∧ (¬旋轉) ∧ 顯示平行邊 ∧ β + γ ≟ 180°"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<coords x="-0.10000000000001741" y="-0.17320508075691698" z="1.232685674907703"/>
+	<lineStyle thickness="5" type="0" typeHidden="1"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<command name="Segment">
+	<input a0="Midpoint[S, R]" a1="Rotate[Intersect[Circle[Midpoint[S, R], 0.2], Ray[Midpoint[S, R], S]], 330*°, Midpoint[S, R]]"/>
+	<output a0="v_1"/>
+</command>
+<element type="segment" label="v_1">
+	<show object="true" label="false"/>
+	<condition showObject="連接紅點 ∧ (¬旋轉) ∧ 顯示平行邊 ∧ β + γ ≟ 180°"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<coords x="-0.0803657819533854" y="-0.18314295261055946" z="1.710410177172676"/>
+	<lineStyle thickness="5" type="0" typeHidden="1"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<command name="Segment">
+	<input a0="Midpoint[S, R]" a1="Rotate[Intersect[Circle[Midpoint[S, R], 0.2], Ray[Midpoint[S, R], S]], 30*°, Midpoint[S, R]]"/>
+	<output a0="v_2"/>
+</command>
+<element type="segment" label="v_2">
+	<show object="true" label="false"/>
+	<condition showObject="連接紅點 ∧ (¬旋轉) ∧ 顯示平行邊 ∧ β + γ ≟ 180°"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<coords x="0.1184235585081419" y="-0.16117028507191122" z="-1.6957500219004018"/>
+	<lineStyle thickness="5" type="0" typeHidden="1"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<command name="Segment">
+	<input a0="Midpoint[Q, R]" a1="Rotate[Intersect[Circle[Midpoint[Q, R], 0.2], Ray[Midpoint[Q, R], Q]], 330*°, Midpoint[Q, R]]"/>
+	<output a0="w_1"/>
+</command>
+<element type="segment" label="w_1">
+	<show object="true" label="false"/>
+	<condition showObject="連接紅點 ∧ (¬旋轉) ∧ 顯示平行邊 ∧ α + β ≟ 180°"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<coords x="0.12942822037722454" y="-0.152474049496913" z="-2.3783531595565175"/>
+	<lineStyle thickness="5" type="0" typeHidden="1"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<command name="Segment">
+	<input a0="Midpoint[Q, R]" a1="Rotate[Intersect[Circle[Midpoint[Q, R], 0.2], Ray[Midpoint[Q, R], Q]], 30*°, Midpoint[Q, R]]"/>
+	<output a0="w_2"/>
+</command>
+<element type="segment" label="w_2">
+	<show object="true" label="false"/>
+	<condition showObject="連接紅點 ∧ (¬旋轉) ∧ 顯示平行邊 ∧ α + β ≟ 180°"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<coords x="0.19676051047082396" y="0.03585110206483222" z="-3.6971478207047"/>
+	<lineStyle thickness="5" type="0" typeHidden="1"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<command name="Segment">
+	<input a0="Translate[Midpoint[Q, R], Vector[Q, R] / b * 0.2]" a1="Translate[Rotate[Intersect[Circle[Midpoint[Q, R], 0.2], Ray[Midpoint[Q, R], Q]], 330*°, Midpoint[Q, R]], Vector[Q, R] / b * 0.2]"/>
+	<output a0="w_3"/>
+</command>
+<element type="segment" label="w_3">
+	<show object="true" label="false"/>
+	<condition showObject="連接紅點 ∧ (¬旋轉) ∧ 顯示平行邊 ∧ α + β ≟ 180°"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<coords x="0.12942822037722457" y="-0.15247404949691656" z="-2.3583531595565157"/>
+	<lineStyle thickness="5" type="0" typeHidden="1"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<command name="Segment">
+	<input a0="Translate[Midpoint[Q, R], Vector[Q, R] / b * 0.2]" a1="Translate[Rotate[Intersect[Circle[Midpoint[Q, R], 0.2], Ray[Midpoint[Q, R], Q]], 30*°, Midpoint[Q, R]], Vector[Q, R] / b * 0.2]"/>
+	<output a0="w_4"/>
+</command>
+<element type="segment" label="w_4">
+	<show object="true" label="false"/>
+	<condition showObject="連接紅點 ∧ (¬旋轉) ∧ 顯示平行邊 ∧ α + β ≟ 180°"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<coords x="0.196760510470824" y="0.03585110206483222" z="-3.7171478207047004"/>
+	<lineStyle thickness="5" type="0" typeHidden="1"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<command name="Segment">
+	<input a0="Midpoint[P, S]" a1="Rotate[Intersect[Circle[Midpoint[P, S], 0.2], Ray[Midpoint[P, S], P]], 330*°, Midpoint[P, S]]"/>
+	<output a0="z_1"/>
+</command>
+<element type="segment" label="z_1">
+	<show object="true" label="false"/>
+	<condition showObject="連接紅點 ∧ (¬旋轉) ∧ 顯示平行邊 ∧ α + β ≟ 180°"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<coords x="0.07988544781907739" y="-0.18335297986871346" z="-1.0529837704496376"/>
+	<lineStyle thickness="5" type="0" typeHidden="1"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<command name="Segment">
+	<input a0="Midpoint[P, S]" a1="Rotate[Intersect[Circle[Midpoint[P, S], 0.2], Ray[Midpoint[P, S], P]], 30*°, Midpoint[P, S]]"/>
+	<output a0="z_2"/>
+</command>
+<element type="segment" label="z_2">
+	<show object="true" label="false"/>
+	<condition showObject="連接紅點 ∧ (¬旋轉) ∧ 顯示平行邊 ∧ α + β ≟ 180°"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<coords x="0.1987310623354214" y="-0.022493662730338926" z="-2.6324621827505905"/>
+	<lineStyle thickness="5" type="0" typeHidden="1"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<command name="Angle">
+	<input a0="P" a1="S" a2="Rotate[P, δ1°, S]"/>
+	<output a0="δ"/>
+</command>
+<element type="angle" label="δ">
+	<value val="2.321287905152458"/>
+	<show object="false" label="false"/>
+	<condition showObject="連接紅點 ∧ (¬旋轉) ∧ 顯示直角和相等的角 ∧ (δ ≠ 90°) ∧ (δ ≟ α ∨ δ ≟ β ∨ δ ≟ γ)"/>
+	<objColor r="255" g="0" b="0" alpha="0.1" dynamicr="If[δ ≟ α, 1, 0]" dynamicg="If[δ ≟ α ∨ δ ≟ β, 0, 0.39]" dynamicb="If[δ ≟ β ∧ (β ≠ α), 1, 0]" colorSpace="0"/>
+	<layer val="0"/>
+	<labelMode val="2"/>
+	<lineStyle thickness="3" type="0" typeHidden="1"/>
+	<arcSize val="45"/>
+	<allowReflexAngle val="true"/>
+</element>
+<element type="boolean" label="旋轉">
+	<value val="false"/>
+	<show object="true" label="true"/>
+	<condition showObject="連接紅點 ∧ (c + d ≥ Distance[P, R])"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelOffset x="25" y="436"/>
+	<labelMode val="0"/>
+</element>
+<command name="Midpoint">
+	<input a0="Midpoint[P, R]" a1="Midpoint[Q, S]"/>
+	<output a0="G"/>
+</command>
+<element type="point" label="G">
+	<show object="false" label="true"/>
+	<objColor r="64" g="64" b="64" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<coords x="15.992169523049771" y="0.16720234350064833" z="1.0"/>
+	<pointSize val="5"/>
+	<pointStyle val="0"/>
+</element>
+<element type="point" label="H">
+	<show object="true" label="false"/>
+	<condition showObject="連接紅點 ∧ 旋轉"/>
+	<objColor r="0" g="0" b="255" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<animation step="0.1" speed="1" type="0" playing="false"/>
+	<coords x="2.8894800000000025" y="-2.8613200000000005" z="1.0"/>
+	<pointSize val="5"/>
+	<pointStyle val="0"/>
+</element>
+<command name="Circle">
+	<input a0="H" a1="1"/>
+	<output a0="r"/>
+</command>
+<element type="conic" label="r">
+	<show object="true" label="false"/>
+	<condition showObject="連接紅點 ∧ 旋轉"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<lineStyle thickness="3" type="0" typeHidden="1"/>
+	<eigenvectors  x0="1.0" y0="0.0" z0="1.0" x1="-0.0" y1="1.0" z1="1.0"/>
+	<matrix A0="1.0" A1="1.0" A2="15.536246812800016" A3="0.0" A4="-2.8894800000000025" A5="2.8613200000000005"/>
+	<eqnStyle style="specific"/>
+</element>
+<command name="Point">
+	<input a0="r"/>
+	<output a0="I"/>
+</command>
+<element type="point" label="I">
+	<show object="true" label="false"/>
+	<condition showObject="連接紅點 ∧ 旋轉"/>
+	<objColor r="255" g="0" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<animation step="0.1" speed="1" type="0" playing="false"/>
+	<coords x="3.8894800000000025" y="-2.8613200000000005" z="1.0"/>
+	<pointSize val="5"/>
+	<pointStyle val="0"/>
+</element>
+<expression label="ε1" exp="round(CircleArc[H, (x(H) + 1, y(H)), I] * 180 / 3.141592653589793)" />
+<element type="numeric" label="ε1">
+	<value val="0.0"/>
+	<objColor r="0" g="0" b="0" alpha="0.1"/>
+</element>
+<command name="Rotate">
+	<input a0="P" a1="ε1°" a2="G"/>
+	<output a0="P&apos;"/>
+</command>
+<element type="point" label="P&apos;">
+	<show object="false" label="true"/>
+	<objColor r="64" g="64" b="64" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<coords x="12.061280000000004" y="-1.5787200000000006" z="1.0"/>
+	<pointSize val="5"/>
+	<pointStyle val="0"/>
+</element>
+<command name="Rotate">
+	<input a0="Q" a1="ε1°" a2="G"/>
+	<output a0="Q&apos;"/>
+</command>
+<element type="point" label="Q&apos;">
+	<show object="false" label="true"/>
+	<objColor r="64" g="64" b="64" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<coords x="18.061280000000004" y="-1.5787200000000006" z="1.0"/>
+	<pointSize val="5"/>
+	<pointStyle val="0"/>
+</element>
+<command name="Rotate">
+	<input a0="R" a1="ε1°" a2="G"/>
+	<output a0="R&apos;"/>
+</command>
+<element type="point" label="R&apos;">
+	<show object="false" label="true"/>
+	<objColor r="64" g="64" b="64" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<coords x="19.407925801871954" y="2.1877830312347615" z="1.0"/>
+	<pointSize val="5"/>
+	<pointStyle val="0"/>
+</element>
+<command name="Rotate">
+	<input a0="S" a1="ε1°" a2="G"/>
+	<output a0="S&apos;"/>
+</command>
+<element type="point" label="S&apos;">
+	<show object="false" label="true"/>
+	<objColor r="64" g="64" b="64" alpha="0.0"/>
+	<layer val="0"/>
+	<labelOffset x="-35" y="28"/>
+	<labelMode val="0"/>
+	<coords x="14.438192290327123" y="1.638466342767833" z="1.0"/>
+	<pointSize val="5"/>
+	<pointStyle val="0"/>
+</element>
+<command name="Polygon">
+	<input a0="P&apos;" a1="Q&apos;" a2="R&apos;" a3="S&apos;"/>
+	<output a0="poly2&apos;" a1="p&apos;" a2="q&apos;" a3="r&apos;_1" a4="s&apos;_1"/>
+</command>
+<element type="polygon" label="poly2&apos;">
+	<lineStyle thickness="5" type="0" typeHidden="1"/>
+	<show object="true" label="false"/>
+	<condition showObject="連接紅點 ∧ 旋轉"/>
+	<objColor r="255" g="255" b="0" alpha="0.3"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+</element>
+<element type="segment" label="p&apos;">
+	<show object="true" label="false"/>
+	<condition showObject="旋轉"/>
+	<objColor r="255" g="0" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<coords x="0.0" y="6.0" z="9.472320000000003"/>
+	<lineStyle thickness="7" type="0" typeHidden="1"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment" label="q&apos;">
+	<show object="true" label="false"/>
+	<condition showObject="旋轉"/>
+	<objColor r="0" g="0" b="255" alpha="0.0" dynamicr="If[b ≟ a, 1, 0]" dynamicg="0" dynamicb="If[b ≟ a, 0, 1]" colorSpace="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<coords x="-3.766503031234762" y="1.3466458018719507" z="70.15384252831109"/>
+	<lineStyle thickness="7" type="0" typeHidden="1"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment" label="r&apos;_1">
+	<show object="true" label="false"/>
+	<condition showObject="連接紅點 ∧ 旋轉"/>
+	<objColor r="255" g="0" b="255" alpha="0.0" dynamicr="If[c ≟ b ∧ (b ≠ a), 0, 1]" dynamicg="0" dynamicb="If[c ≟ b ∧ (b ≠ a), 1, If[c ≟ a, 0, 1]]" colorSpace="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<coords x="0.5493166884669285" y="-4.969733511544831" z="0.2116011148203647"/>
+	<lineStyle thickness="7" type="0" typeHidden="1"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="segment" label="s&apos;_1">
+	<show object="true" label="false"/>
+	<condition showObject="連接紅點 ∧ 旋轉"/>
+	<objColor r="0" g="204" b="204" alpha="0.0" dynamicr="If[d ≟ c ∧ (c ≠ b) ∧ (c ≠ a), 1, If[d ≟ b ∧ (b ≠ a), 0, If[d ≟ a, 1, 0]]]" dynamicg="If[d ≟ c ∧ (c ≠ b) ∧ (c ≠ a), 0, If[d ≟ b ∧ (b ≠ a), 0, If[d ≟ a, 0, 0.8]]]" dynamicb="If[d ≟ c ∧ (c ≠ b) ∧ (c ≠ a), 1, If[d ≟ b ∧ (b ≠ a), 1, If[d ≟ a, 0, 0.8]]]" colorSpace="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<coords x="3.2171863427678336" y="-2.3769122903271196" z="-42.555864263284064"/>
+	<lineStyle thickness="7" type="0" typeHidden="1"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<command name="Angle">
+	<input a0="Q&apos;" a1="P&apos;" a2="Rotate[Q&apos;, α1°, P&apos;]"/>
+	<output a0="α&apos;"/>
+</command>
+<element type="angle" label="α&apos;">
+	<value val="0.9337511498169662"/>
+	<show object="true" label="false"/>
+	<condition showObject="連接紅點 ∧ 旋轉 ∧ 顯示直角和相等的角 ∧ (α ≠ 90°) ∧ (α ≟ β ∨ α ≟ γ ∨ α ≟ δ)"/>
+	<objColor r="255" g="0" b="0" alpha="0.1"/>
+	<layer val="0"/>
+	<labelMode val="2"/>
+	<lineStyle thickness="3" type="0" typeHidden="1"/>
+	<arcSize val="45"/>
+	<allowReflexAngle val="true"/>
+</element>
+<command name="Angle">
+	<input a0="Rotate[P&apos;, (-β1)°, Q&apos;]" a1="Q&apos;" a2="P&apos;"/>
+	<output a0="β&apos;"/>
+</command>
+<element type="angle" label="β&apos;">
+	<value val="1.9111355309337914"/>
+	<show object="true" label="false"/>
+	<condition showObject="連接紅點 ∧ 旋轉 ∧ 顯示直角和相等的角 ∧ (β ≠ 90°) ∧ (β ≟ α ∨ β ≟ γ ∨ β ≟ δ)"/>
+	<objColor r="0" g="0" b="255" alpha="0.1" dynamicr="If[β ≟ α, 1, 0]" dynamicg="0" dynamicb="If[β ≟ α, 0, 1]" colorSpace="0"/>
+	<layer val="0"/>
+	<labelMode val="2"/>
+	<lineStyle thickness="3" type="0" typeHidden="1"/>
+	<arcSize val="45"/>
+	<allowReflexAngle val="true"/>
+</element>
+<expression label="S_0" exp="S" type="point" />
+<element type="point" label="S_0">
+	<show object="false" label="true"/>
+	<objColor r="64" g="64" b="64" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<coords x="14.438192290327123" y="1.638466342767833" z="1.0"/>
+	<pointSize val="5"/>
+	<pointStyle val="0"/>
+</element>
+<command name="Rotate">
+	<input a0="S_0" a1="ε1°" a2="G"/>
+	<output a0="S&apos;_1"/>
+</command>
+<element type="point" label="S&apos;_1">
+	<show object="false" label="true"/>
+	<objColor r="64" g="64" b="64" alpha="0.0"/>
+	<layer val="0"/>
+	<labelOffset x="-19" y="-9"/>
+	<labelMode val="0"/>
+	<coords x="14.438192290327123" y="1.638466342767833" z="1.0"/>
+	<pointSize val="5"/>
+	<pointStyle val="0"/>
+</element>
+<command name="Angle">
+	<input a0="Rotate[Q&apos;, (-γ1)°, R&apos;]" a1="R&apos;" a2="Q&apos;"/>
+	<output a0="γ&apos;"/>
+</command>
+<element type="angle" label="γ&apos;">
+	<value val="1.117010721276371"/>
+	<show object="true" label="false"/>
+	<condition showObject="連接紅點 ∧ 旋轉 ∧ 顯示直角和相等的角 ∧ (γ ≠ 90°) ∧ (γ ≟ α ∨ γ ≟ β ∨ γ ≟ δ)"/>
+	<objColor r="0" g="100" b="0" alpha="0.1" dynamicr="If[γ ≟ α, 1, 0]" dynamicg="If[γ ≟ α ∨ γ ≟ β, 0, 0.39]" dynamicb="If[γ ≟ β ∧ (β ≠ α), 1, 0]" colorSpace="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<lineStyle thickness="3" type="0" typeHidden="1"/>
+	<arcSize val="45"/>
+	<allowReflexAngle val="true"/>
+</element>
+<command name="Angle">
+	<input a0="P&apos;" a1="S&apos;" a2="Rotate[P&apos;, δ1°, S&apos;]"/>
+	<output a0="δ&apos;"/>
+</command>
+<element type="angle" label="δ&apos;">
+	<value val="2.321287905152458"/>
+	<show object="false" label="false"/>
+	<condition showObject="連接紅點 ∧ 旋轉 ∧ 顯示直角和相等的角 ∧ (δ ≠ 90°) ∧ (δ ≟ α ∨ δ ≟ β ∨ δ ≟ γ)"/>
+	<objColor r="0" g="100" b="0" alpha="0.1" dynamicr="If[δ ≟ α, 1, 0]" dynamicg="If[δ ≟ α ∨ δ ≟ β, 0, 0.39]" dynamicb="If[δ ≟ β ∧ (β ≠ α), 1, 0]" colorSpace="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<lineStyle thickness="3" type="0" typeHidden="1"/>
+	<arcSize val="45"/>
+	<allowReflexAngle val="true"/>
+</element>
+<command name="Angle">
+	<input a0="Q&apos;" a1="P&apos;" a2="Rotate[Q&apos;, 90*°, P&apos;]"/>
+	<output a0="α&apos;_0"/>
+</command>
+<element type="angle" label="α&apos;_0">
+	<value val="1.5707963267948966"/>
+	<show object="true" label="false"/>
+	<condition showObject="連接紅點 ∧ 旋轉 ∧ 顯示直角和相等的角 ∧ α&apos; ≟ 90°"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<lineStyle thickness="4" type="0" typeHidden="1"/>
+	<arcSize val="45"/>
+	<allowReflexAngle val="true"/>
+</element>
+<command name="Angle">
+	<input a0="R&apos;" a1="Q&apos;" a2="Rotate[R&apos;, 90*°, Q&apos;]"/>
+	<output a0="β&apos;_0"/>
+</command>
+<element type="angle" label="β&apos;_0">
+	<value val="1.5707963267948966"/>
+	<show object="true" label="false"/>
+	<condition showObject="連接紅點 ∧ 旋轉 ∧ 顯示直角和相等的角 ∧ β&apos; ≟ 90°"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<lineStyle thickness="4" type="0" typeHidden="1"/>
+	<arcSize val="45"/>
+	<allowReflexAngle val="true"/>
+</element>
+<command name="Angle">
+	<input a0="S&apos;" a1="R&apos;" a2="Rotate[S&apos;, 90*°, R&apos;]"/>
+	<output a0="γ&apos;_0"/>
+</command>
+<element type="angle" label="γ&apos;_0">
+	<value val="1.5707963267948963"/>
+	<show object="true" label="false"/>
+	<condition showObject="連接紅點 ∧ 旋轉 ∧ 顯示直角和相等的角 ∧ γ&apos; ≟ 90°"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<lineStyle thickness="4" type="0" typeHidden="1"/>
+	<arcSize val="45"/>
+	<allowReflexAngle val="true"/>
+</element>
+<command name="Angle">
+	<input a0="P&apos;" a1="S&apos;" a2="Rotate[P&apos;, 90*°, S&apos;]"/>
+	<output a0="δ&apos;_0"/>
+</command>
+<element type="angle" label="δ&apos;_0">
+	<value val="1.5707963267948963"/>
+	<show object="true" label="false"/>
+	<condition showObject="連接紅點 ∧ 旋轉 ∧ 顯示直角和相等的角 ∧ δ&apos; ≟ 90°"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<lineStyle thickness="4" type="0" typeHidden="1"/>
+	<arcSize val="45"/>
+	<allowReflexAngle val="true"/>
+</element>
+<command name="Segment">
+	<input a0="Midpoint[P&apos;, Q&apos;]" a1="Rotate[Intersect[Circle[Midpoint[P&apos;, Q&apos;], 0.2], Ray[Midpoint[P&apos;, Q&apos;], P&apos;]], 330*°, Midpoint[P&apos;, Q&apos;]]"/>
+	<output a0="u&apos;_1"/>
+</command>
+<element type="segment" label="u&apos;_1">
+	<show object="true" label="false"/>
+	<condition showObject="連接紅點 ∧ 旋轉 ∧ 顯示平行邊 ∧ β + γ ≟ 180°"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<coords x="-0.10000000000001741" y="-0.17320508075691698" z="1.232685674907703"/>
+	<lineStyle thickness="5" type="0" typeHidden="1"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<command name="Segment">
+	<input a0="Midpoint[P&apos;, Q&apos;]" a1="Rotate[Intersect[Circle[Midpoint[P&apos;, Q&apos;], 0.2], Ray[Midpoint[P&apos;, Q&apos;], P&apos;]], 30*°, Midpoint[P&apos;, Q&apos;]]"/>
+	<output a0="u&apos;_2"/>
+</command>
+<element type="segment" label="u&apos;_2">
+	<show object="true" label="false"/>
+	<condition showObject="連接紅點 ∧ 旋轉 ∧ 顯示平行邊 ∧ β + γ ≟ 180°"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<coords x="0.10000000000001741" y="-0.17320508075691876" z="-1.779570325092827"/>
+	<lineStyle thickness="5" type="0" typeHidden="1"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<command name="Segment">
+	<input a0="Midpoint[S&apos;, R&apos;]" a1="Rotate[Intersect[Circle[Midpoint[S&apos;, R&apos;], 0.2], Ray[Midpoint[S&apos;, R&apos;], S&apos;]], 330*°, Midpoint[S&apos;, R&apos;]]"/>
+	<output a0="v&apos;_1"/>
+</command>
+<element type="segment" label="v&apos;_1">
+	<show object="true" label="false"/>
+	<condition showObject="連接紅點 ∧ 旋轉 ∧ 顯示平行邊 ∧ β + γ ≟ 180°"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<coords x="-0.0803657819533854" y="-0.18314295261055946" z="1.710410177172676"/>
+	<lineStyle thickness="5" type="0" typeHidden="1"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<command name="Segment">
+	<input a0="Midpoint[S&apos;, R&apos;]" a1="Rotate[Intersect[Circle[Midpoint[S&apos;, R&apos;], 0.2], Ray[Midpoint[S&apos;, R&apos;], S&apos;]], 30*°, Midpoint[S&apos;, R&apos;]]"/>
+	<output a0="v&apos;_2"/>
+</command>
+<element type="segment" label="v&apos;_2">
+	<show object="true" label="false"/>
+	<condition showObject="連接紅點 ∧ 旋轉 ∧ 顯示平行邊 ∧ β + γ ≟ 180°"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<coords x="0.1184235585081419" y="-0.16117028507191122" z="-1.6957500219004018"/>
+	<lineStyle thickness="5" type="0" typeHidden="1"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<command name="Segment">
+	<input a0="Midpoint[Q&apos;, R&apos;]" a1="Rotate[Intersect[Circle[Midpoint[Q&apos;, R&apos;], 0.2], Ray[Midpoint[Q&apos;, R&apos;], Q&apos;]], 330*°, Midpoint[Q&apos;, R&apos;]]"/>
+	<output a0="w&apos;_1"/>
+</command>
+<element type="segment" label="w&apos;_1">
+	<show object="true" label="false"/>
+	<condition showObject="連接紅點 ∧ 旋轉 ∧ 顯示平行邊 ∧ α + β ≟ 180°"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<coords x="0.12942822037722454" y="-0.152474049496913" z="-2.3783531595565175"/>
+	<lineStyle thickness="5" type="0" typeHidden="1"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<command name="Segment">
+	<input a0="Midpoint[Q&apos;, R&apos;]" a1="Rotate[Intersect[Circle[Midpoint[Q&apos;, R&apos;], 0.2], Ray[Midpoint[Q&apos;, R&apos;], Q&apos;]], 30*°, Midpoint[Q&apos;, R&apos;]]"/>
+	<output a0="w&apos;_2"/>
+</command>
+<element type="segment" label="w&apos;_2">
+	<show object="true" label="false"/>
+	<condition showObject="連接紅點 ∧ 旋轉 ∧ 顯示平行邊 ∧ α + β ≟ 180°"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<coords x="0.19676051047082396" y="0.03585110206483222" z="-3.6971478207047"/>
+	<lineStyle thickness="5" type="0" typeHidden="1"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<command name="Segment">
+	<input a0="Translate[Midpoint[Q&apos;, R&apos;], Vector[Q&apos;, R&apos;] / b * 0.2]" a1="Translate[Rotate[Intersect[Circle[Midpoint[Q&apos;, R&apos;], 0.2], Ray[Midpoint[Q&apos;, R&apos;], Q&apos;]], 330*°, Midpoint[Q&apos;, R&apos;]], Vector[Q&apos;, R&apos;] / b * 0.2]"/>
+	<output a0="w&apos;_3"/>
+</command>
+<element type="segment" label="w&apos;_3">
+	<show object="true" label="false"/>
+	<condition showObject="連接紅點 ∧ 旋轉 ∧ 顯示平行邊 ∧ α + β ≟ 180°"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<coords x="0.12942822037722457" y="-0.15247404949691656" z="-2.3583531595565157"/>
+	<lineStyle thickness="5" type="0" typeHidden="1"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<command name="Segment">
+	<input a0="Translate[Midpoint[Q&apos;, R&apos;], Vector[Q&apos;, R&apos;] / b * 0.2]" a1="Translate[Rotate[Intersect[Circle[Midpoint[Q&apos;, R&apos;], 0.2], Ray[Midpoint[Q&apos;, R&apos;], Q&apos;]], 30*°, Midpoint[Q&apos;, R&apos;]], Vector[Q&apos;, R&apos;] / b * 0.2]"/>
+	<output a0="w&apos;_4"/>
+</command>
+<element type="segment" label="w&apos;_4">
+	<show object="true" label="false"/>
+	<condition showObject="連接紅點 ∧ 旋轉 ∧ 顯示平行邊 ∧ α + β ≟ 180°"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<coords x="0.196760510470824" y="0.03585110206483222" z="-3.7171478207047004"/>
+	<lineStyle thickness="5" type="0" typeHidden="1"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<command name="Segment">
+	<input a0="Midpoint[P&apos;, S&apos;]" a1="Rotate[Intersect[Circle[Midpoint[P&apos;, S&apos;], 0.2], Ray[Midpoint[P&apos;, S&apos;], P&apos;]], 330*°, Midpoint[P&apos;, S&apos;]]"/>
+	<output a0="z&apos;_1"/>
+</command>
+<element type="segment" label="z&apos;_1">
+	<show object="true" label="false"/>
+	<condition showObject="連接紅點 ∧ 旋轉 ∧ 顯示平行邊 ∧ α + β ≟ 180°"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<coords x="0.07988544781907739" y="-0.18335297986871346" z="-1.0529837704496376"/>
+	<lineStyle thickness="5" type="0" typeHidden="1"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<command name="Segment">
+	<input a0="Midpoint[P&apos;, S&apos;]" a1="Rotate[Intersect[Circle[Midpoint[P&apos;, S&apos;], 0.2], Ray[Midpoint[P&apos;, S&apos;], P&apos;]], 30*°, Midpoint[P&apos;, S&apos;]]"/>
+	<output a0="z&apos;_2"/>
+</command>
+<element type="segment" label="z&apos;_2">
+	<show object="true" label="false"/>
+	<condition showObject="連接紅點 ∧ 旋轉 ∧ 顯示平行邊 ∧ α + β ≟ 180°"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<coords x="0.1987310623354214" y="-0.022493662730338926" z="-2.6324621827505905"/>
+	<lineStyle thickness="5" type="0" typeHidden="1"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<command name="Vector">
+	<input a0="H" a1="I"/>
+	<output a0="u"/>
+</command>
+<element type="vector" label="u">
+	<show object="true" label="false"/>
+	<condition showObject="連接紅點 ∧ 旋轉"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<coords x="1.0" y="0.0" z="0.0"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<coordStyle style="cartesian"/>
+	<startPoint exp="H"/>
+</element>
+<command name="Angle">
+	<input a0="(x(H) + 1, y(H))" a1="H" a2="I"/>
+	<output a0="ε"/>
+</command>
+<element type="angle" label="ε">
+	<value val="0.0"/>
+	<show object="true" label="false"/>
+	<condition showObject="連接紅點 ∧ 旋轉"/>
+	<objColor r="0" g="100" b="0" alpha="0.1"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<lineStyle thickness="3" type="0" typeHidden="1"/>
+	<arcSize val="25"/>
+	<allowReflexAngle val="false"/>
+</element>
+<command name="Segment">
+	<input a0="(x(H) + 1, y(H))" a1="H"/>
+	<output a0="s"/>
+</command>
+<element type="segment" label="s">
+	<show object="true" label="false"/>
+	<condition showObject="連接紅點 ∧ 旋轉"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<coords x="0.0" y="-1.0" z="-2.861320000000001"/>
+	<lineStyle thickness="3" type="0" typeHidden="1"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<expression label="text15" exp="&quot;邊長與四邊形&quot;"/>
+<element type="text" label="text15">
+	<show object="true" label="true"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<font serif="false" sizeM="1.3333333333333333" size="6" style="1"/>
+	<absoluteScreenLocation  x="18" y="36"/>
+</element>
+<command name="Midpoint">
+	<input a0="P" a1="Q"/>
+	<output a0="J"/>
+</command>
+<element type="point" label="J">
+	<show object="false" label="true"/>
+	<objColor r="64" g="64" b="64" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<coords x="15.061280000000004" y="-1.5787200000000006" z="1.0"/>
+	<pointSize val="5"/>
+	<pointStyle val="0"/>
+</element>
+<command name="Midpoint">
+	<input a0="Q" a1="R"/>
+	<output a0="K"/>
+</command>
+<element type="point" label="K">
+	<show object="false" label="true"/>
+	<objColor r="64" g="64" b="64" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<coords x="18.73460290093598" y="0.30453151561738045" z="1.0"/>
+	<pointSize val="5"/>
+	<pointStyle val="0"/>
+</element>
+<command name="Midpoint">
+	<input a0="R" a1="S"/>
+	<output a0="L"/>
+</command>
+<element type="point" label="L">
+	<show object="false" label="true"/>
+	<objColor r="64" g="64" b="64" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<coords x="16.92305904609954" y="1.9131246870012972" z="1.0"/>
+	<pointSize val="5"/>
+	<pointStyle val="0"/>
+</element>
+<command name="Midpoint">
+	<input a0="S" a1="P"/>
+	<output a0="M"/>
+</command>
+<element type="point" label="M">
+	<show object="false" label="true"/>
+	<objColor r="64" g="64" b="64" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<coords x="13.249736145163563" y="0.02987317138391621" z="1.0"/>
+	<pointSize val="5"/>
+	<pointStyle val="0"/>
+</element>
+<expression label="text16" exp="a + &quot; cm&quot;" />
+<element type="text" label="text16">
+	<show object="true" label="false"/>
+	<condition showObject="¬旋轉"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<startPoint exp="J"/>
+	<labelOffset x="-19" y="27"/>
+</element>
+<expression label="text17" exp="b + &quot; cm&quot;" />
+<element type="text" label="text17">
+	<show object="true" label="false"/>
+	<condition showObject="¬旋轉"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<startPoint exp="K"/>
+	<labelOffset x="10" y="6"/>
+</element>
+<expression label="text18" exp="c + &quot; cm&quot;" />
+<element type="text" label="text18">
+	<show object="true" label="false"/>
+	<condition showObject="(¬旋轉) ∧ 連接紅點"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<startPoint exp="L"/>
+	<labelOffset x="-6" y="-10"/>
+</element>
+<expression label="text19" exp="d + &quot; cm&quot;" />
+<element type="text" label="text19">
+	<show object="true" label="false"/>
+	<condition showObject="(¬旋轉) ∧ 連接紅點"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<startPoint exp="M"/>
+	<labelOffset x="-47" y="5"/>
+</element>
+<command name="Rotate">
+	<input a0="J" a1="ε1°" a2="G"/>
+	<output a0="J&apos;"/>
+</command>
+<element type="point" label="J&apos;">
+	<show object="false" label="true"/>
+	<objColor r="64" g="64" b="64" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<coords x="15.061280000000004" y="-1.5787200000000006" z="1.0"/>
+	<pointSize val="5"/>
+	<pointStyle val="0"/>
+</element>
+<command name="Rotate">
+	<input a0="K" a1="ε1°" a2="G"/>
+	<output a0="K&apos;"/>
+</command>
+<element type="point" label="K&apos;">
+	<show object="false" label="true"/>
+	<objColor r="64" g="64" b="64" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<coords x="18.73460290093598" y="0.30453151561738045" z="1.0"/>
+	<pointSize val="5"/>
+	<pointStyle val="0"/>
+</element>
+<command name="Rotate">
+	<input a0="L" a1="ε1°" a2="G"/>
+	<output a0="L&apos;"/>
+</command>
+<element type="point" label="L&apos;">
+	<show object="false" label="true"/>
+	<objColor r="64" g="64" b="64" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<coords x="16.92305904609954" y="1.9131246870012975" z="1.0"/>
+	<pointSize val="5"/>
+	<pointStyle val="0"/>
+</element>
+<command name="Rotate">
+	<input a0="M" a1="ε1°" a2="G"/>
+	<output a0="M&apos;"/>
+</command>
+<element type="point" label="M&apos;">
+	<show object="false" label="true"/>
+	<objColor r="64" g="64" b="64" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<coords x="13.249736145163563" y="0.02987317138391621" z="1.0"/>
+	<pointSize val="5"/>
+	<pointStyle val="0"/>
+</element>
+<expression label="text20" exp="a + &quot; cm&quot;" />
+<element type="text" label="text20">
+	<show object="true" label="false"/>
+	<condition showObject="連接紅點 ∧ 旋轉"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<startPoint exp="J&apos;"/>
+	<labelOffset x="-19" y="27"/>
+</element>
+<expression label="text21" exp="b + &quot; cm&quot;" />
+<element type="text" label="text21">
+	<show object="true" label="false"/>
+	<condition showObject="連接紅點 ∧ 旋轉"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<startPoint exp="K&apos;"/>
+	<labelOffset x="10" y="6"/>
+</element>
+<expression label="text22" exp="c + &quot; cm&quot;" />
+<element type="text" label="text22">
+	<show object="true" label="false"/>
+	<condition showObject="連接紅點 ∧ 旋轉"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<startPoint exp="L&apos;"/>
+	<labelOffset x="-6" y="-10"/>
+</element>
+<expression label="text23" exp="d + &quot; cm&quot;" />
+<element type="text" label="text23">
+	<show object="true" label="false"/>
+	<condition showObject="連接紅點 ∧ 旋轉"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<startPoint exp="M&apos;"/>
+	<labelOffset x="-47" y="5"/>
+</element>
+<command name="Segment">
+	<input a0="Translate[Midpoint[P, S], Vector[P, S] / d * 0.2]" a1="Translate[Rotate[Intersect[Circle[Midpoint[P, S], 0.2], Ray[Midpoint[P, S], P]], 330*°, Midpoint[P, S]], Vector[P, S] / d * 0.2]"/>
+	<output a0="z_3"/>
+</command>
+<element type="segment" label="z_3">
+	<show object="true" label="false"/>
+	<condition showObject="連接紅點 ∧ (¬旋轉) ∧ 顯示平行邊 ∧ α + β ≟ 180°"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<coords x="0.07988544781907739" y="-0.18335297986871346" z="-1.0329837704496394"/>
+	<lineStyle thickness="5" type="0" typeHidden="1"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<command name="Segment">
+	<input a0="Translate[Midpoint[P, S], Vector[P, S] / d * 0.2]" a1="Translate[Rotate[Intersect[Circle[Midpoint[P, S], 0.2], Ray[Midpoint[P, S], P]], 30*°, Midpoint[P, S]], Vector[P, S] / d * 0.2]"/>
+	<output a0="z_4"/>
+</command>
+<element type="segment" label="z_4">
+	<show object="true" label="false"/>
+	<condition showObject="連接紅點 ∧ (¬旋轉) ∧ 顯示平行邊 ∧ α + β ≟ 180°"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<coords x="0.1987310623354214" y="-0.022493662730338926" z="-2.6524621827505888"/>
+	<lineStyle thickness="5" type="0" typeHidden="1"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<command name="Segment">
+	<input a0="Translate[Midpoint[P&apos;, S&apos;], Vector[P&apos;, S&apos;] / d * 0.2]" a1="Translate[Rotate[Intersect[Circle[Midpoint[P&apos;, S&apos;], 0.2], Ray[Midpoint[P&apos;, S&apos;], P&apos;]], 330*°, Midpoint[P&apos;, S&apos;]], Vector[P&apos;, S&apos;] / d * 0.2]"/>
+	<output a0="z&apos;_3"/>
+</command>
+<element type="segment" label="z&apos;_3">
+	<show object="true" label="false"/>
+	<condition showObject="連接紅點 ∧ 旋轉 ∧ 顯示平行邊 ∧ α + β ≟ 180°"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<coords x="0.07988544781907739" y="-0.18335297986871346" z="-1.0329837704496394"/>
+	<lineStyle thickness="5" type="0" typeHidden="1"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<command name="Segment">
+	<input a0="Translate[Midpoint[P&apos;, S&apos;], Vector[P&apos;, S&apos;] / d * 0.2]" a1="Translate[Rotate[Intersect[Circle[Midpoint[P&apos;, S&apos;], 0.2], Ray[Midpoint[P&apos;, S&apos;], P&apos;]], 30*°, Midpoint[P&apos;, S&apos;]], Vector[P&apos;, S&apos;] / d * 0.2]"/>
+	<output a0="z&apos;_4"/>
+</command>
+<element type="segment" label="z&apos;_4">
+	<show object="true" label="false"/>
+	<condition showObject="連接紅點 ∧ 旋轉 ∧ 顯示平行邊 ∧ α + β ≟ 180°"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<coords x="0.1987310623354214" y="-0.022493662730338926" z="-2.6524621827505888"/>
+	<lineStyle thickness="5" type="0" typeHidden="1"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<command name="Midpoint">
+	<input a0="P" a1="E"/>
+	<output a0="N"/>
+</command>
+<element type="point" label="N">
+	<show object="false" label="true"/>
+	<objColor r="64" g="64" b="64" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<coords x="13.841014029605361" y="-0.6662799834155337" z="1.0"/>
+	<pointSize val="5"/>
+	<pointStyle val="0"/>
+</element>
+<command name="Midpoint">
+	<input a0="F" a1="R"/>
+	<output a0="O"/>
+</command>
+<element type="point" label="O">
+	<show object="false" label="true"/>
+	<objColor r="64" g="64" b="64" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<coords x="17.183258264865252" y="1.0472330105041763" z="1.0"/>
+	<pointSize val="5"/>
+	<pointStyle val="0"/>
+</element>
+<command name="If">
+	<input a0="d ≟ c ∧ (c ≠ b) ∧ (c ≠ a)" a1="1" a2="If[d ≟ b ∧ (b ≠ a), 0, If[d ≟ a, 1, 0]]"/>
+	<output a0="d1"/>
+</command>
+<element type="numeric" label="d1">
+	<value val="0.0"/>
+	<objColor r="0" g="0" b="0" alpha="0.1"/>
+</element>
+<command name="If">
+	<input a0="d ≟ c ∧ (c ≠ b) ∧ (c ≠ a)" a1="0" a2="If[d ≟ b ∧ (b ≠ a), 0, If[d ≟ a, 0, 0.8]]"/>
+	<output a0="d2"/>
+</command>
+<element type="numeric" label="d2">
+	<value val="0.0"/>
+	<objColor r="0" g="0" b="0" alpha="0.1"/>
+</element>
+<command name="If">
+	<input a0="d ≟ c ∧ (c ≠ b) ∧ (c ≠ a)" a1="1" a2="If[d ≟ b ∧ (b ≠ a), 1, If[d ≟ a, 0, 0.8]]"/>
+	<output a0="d3"/>
+</command>
+<element type="numeric" label="d3">
+	<value val="1.0"/>
+	<objColor r="0" g="0" b="0" alpha="0.1"/>
+</element>
+<command name="Segment">
+	<input a0="R1" a1="S1"/>
+	<output a0="n"/>
+</command>
+<element type="segment" label="n">
+	<show object="true" label="false"/>
+	<condition showObject="(¬旋轉) ∧ 連接紅點"/>
+	<objColor r="255" g="0" b="255" alpha="0.0" dynamicr="If[c ≟ b ∧ (b ≠ a), 0, 1]" dynamicg="0" dynamicb="If[c ≟ b ∧ (b ≠ a), 1, If[c ≟ a, 0, 1]]" colorSpace="0"/>
+	<layer val="0"/>
+	<labelMode val="2"/>
+	<coords x="0.5493166884669285" y="-4.969733511544831" z="0.2116011148203647"/>
+	<lineStyle thickness="7" type="0" typeHidden="1"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<command name="Segment">
+	<input a0="P" a1="S1"/>
+	<output a0="m"/>
+</command>
+<element type="segment" label="m">
+	<show object="true" label="false"/>
+	<condition showObject="(¬旋轉) ∧ 連接紅點"/>
+	<objColor r="0" g="204" b="204" alpha="0.0" dynamicr="If[d ≟ c ∧ (c ≠ b) ∧ (c ≠ a), 1, If[d ≟ b ∧ (b ≠ a), 0, If[d ≟ a, 1, 0]]]" dynamicg="If[d ≟ c ∧ (c ≠ b) ∧ (c ≠ a), 0, If[d ≟ b ∧ (b ≠ a), 0, If[d ≟ a, 0, 0.8]]]" dynamicb="If[d ≟ c ∧ (c ≠ b) ∧ (c ≠ a), 1, If[d ≟ b ∧ (b ≠ a), 1, If[d ≟ a, 0, 0.8]]]" colorSpace="0"/>
+	<layer val="0"/>
+	<labelOffset x="-37" y="-31"/>
+	<labelMode val="2"/>
+	<coords x="-3.2171863427678336" y="2.3769122903271196" z="42.555864263284064"/>
+	<lineStyle thickness="7" type="0" typeHidden="1"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<command name="Segment">
+	<input a0="Q" a1="R1"/>
+	<output a0="l"/>
+</command>
+<element type="segment" label="l">
+	<show object="true" label="false"/>
+	<condition showObject="¬旋轉"/>
+	<objColor r="0" g="0" b="255" alpha="0.0" dynamicr="If[b ≟ a, 1, 0]" dynamicg="0" dynamicb="If[b ≟ a, 0, 1]" colorSpace="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<coords x="-3.766503031234762" y="1.3466458018719507" z="70.15384252831109"/>
+	<lineStyle thickness="7" type="0" typeHidden="1"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<command name="Point">
+	<input a0="c_r"/>
+	<output a0="T"/>
+</command>
+<element type="point" label="T">
+	<show object="true" label="false"/>
+	<condition showObject="¬連接紅點"/>
+	<objColor r="255" g="0" b="0" alpha="0.0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<animation step="0.1" speed="1" type="0" playing="false"/>
+	<coords x="14.408005155465057" y="2.2159526892737973" z="1.0"/>
+	<pointSize val="5"/>
+	<pointStyle val="0"/>
+</element>
+<command name="Point">
+	<input a0="c_p"/>
+	<output a0="U"/>
+</command>
+<element type="point" label="U">
+	<show object="true" label="false"/>
+	<condition showObject="¬連接紅點"/>
+	<objColor r="255" g="0" b="0" alpha="0.0"/>
+	<layer val="1"/>
+	<labelOffset x="-23" y="0"/>
+	<labelMode val="0"/>
+	<animation step="0.1" speed="1" type="0" playing="false"/>
+	<coords x="12.826848075285175" y="2.3473347018736446" z="1.0"/>
+	<pointSize val="5"/>
+	<pointStyle val="0"/>
+</element>
+<command name="Segment">
+	<input a0="R" a1="T"/>
+	<output a0="d_1"/>
+</command>
+<element type="segment" label="d_1">
+	<show object="true" label="false"/>
+	<condition showObject="¬連接紅點"/>
+	<objColor r="255" g="0" b="255" alpha="0.0" dynamicr="If[c ≟ b ∧ (b ≠ a), 0, 1]" dynamicg="0" dynamicb="If[c ≟ b ∧ (b ≠ a), 1, If[c ≟ a, 0, 1]]" colorSpace="0"/>
+	<layer val="1"/>
+	<labelMode val="2"/>
+	<coords x="-0.028169658039035816" y="-4.999920646406897" z="11.48545618081506"/>
+	<lineStyle thickness="7" type="0" typeHidden="1"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<command name="Segment">
+	<input a0="P" a1="U"/>
+	<output a0="e_1"/>
+</command>
+<element type="segment" label="e_1">
+	<show object="true" label="false"/>
+	<condition showObject="¬連接紅點"/>
+	<objColor r="0" g="204" b="204" alpha="0.0" dynamicr="If[d ≟ c ∧ (c ≠ b) ∧ (c ≠ a), 1, If[d ≟ b ∧ (b ≠ a), 0, If[d ≟ a, 1, 0]]]" dynamicg="If[d ≟ c ∧ (c ≠ b) ∧ (c ≠ a), 0, If[d ≟ b ∧ (b ≠ a), 0, If[d ≟ a, 0, 0.8]]]" dynamicb="If[d ≟ c ∧ (c ≠ b) ∧ (c ≠ a), 1, If[d ≟ b ∧ (b ≠ a), 1, If[d ≟ a, 0, 0.8]]]" colorSpace="0"/>
+	<layer val="1"/>
+	<labelMode val="2"/>
+	<coords x="-3.926054701873645" y="0.7655680752851719" z="48.56186268642878"/>
+	<lineStyle thickness="7" type="0" typeHidden="1"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<command name="Midpoint">
+	<input a0="R" a1="T"/>
+	<output a0="V"/>
+</command>
+<element type="point" label="V">
+	<show object="false" label="true"/>
+	<objColor r="64" g="64" b="64" alpha="0.0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<coords x="16.907965478668505" y="2.2018678602542794" z="1.0"/>
+	<pointSize val="5"/>
+	<pointStyle val="0"/>
+</element>
+<command name="Midpoint">
+	<input a0="P" a1="U"/>
+	<output a0="W"/>
+</command>
+<element type="point" label="W">
+	<show object="false" label="true"/>
+	<objColor r="64" g="64" b="64" alpha="0.0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<coords x="12.44406403764259" y="0.384307350936822" z="1.0"/>
+	<pointSize val="5"/>
+	<pointStyle val="0"/>
+</element>
+<expression label="text26" exp="c + &quot; cm&quot;" />
+<element type="text" label="text26">
+	<show object="true" label="false"/>
+	<condition showObject="¬連接紅點"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<startPoint exp="V"/>
+	<labelOffset x="-44" y="-2"/>
+</element>
+<expression label="text27" exp="d + &quot; cm&quot;" />
+<element type="text" label="text27">
+	<show object="true" label="false"/>
+	<condition showObject="¬連接紅點"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<startPoint exp="W"/>
+	<labelOffset x="-45" y="-8"/>
+</element>
+<element type="boolean" label="連接紅點">
+	<value val="false"/>
+	<show object="true" label="true"/>
+	<condition showObject="(Distance[U, T] &lt; 0.1) ∧ (¬連接紅點)"/>
+	<objColor r="255" g="0" b="0" alpha="0.0"/>
+	<layer val="1"/>
+	<labelOffset x="604" y="49"/>
+	<labelMode val="0"/>
+</element>
+<command name="Segment">
+	<input a0="F" a1="R"/>
+	<output a0="q"/>
+</command>
+<element type="segment" label="q">
+	<show object="true" label="false"/>
+	<condition showObject="連接紅點 ∧ (c + d &lt; Distance[P, R])"/>
+	<objColor r="0" g="0" b="0" alpha="0.0" dynamicr="If[c ≟ b ∧ (b ≠ a), 0, 1]" dynamicg="0" dynamicb="If[c ≟ b ∧ (b ≠ a), 1, If[c ≟ a, 0, 1]]" colorSpace="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<coords x="-2.2811000414611704" y="4.449335074013408" z="34.53724057612124"/>
+	<lineStyle thickness="7" type="0" typeHidden="1"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<command name="Segment">
+	<input a0="P" a1="E"/>
+	<output a0="p"/>
+</command>
+<element type="segment" label="p">
+	<show object="true" label="false"/>
+	<condition showObject="連接紅點 ∧ (c + d &lt; Distance[P, R])"/>
+	<objColor r="0" g="0" b="0" alpha="0.0" dynamicr="If[d ≟ c ∧ (c ≠ b) ∧ (c ≠ a), 1, If[d ≟ b ∧ (b ≠ a), 0, If[d ≟ a, 1, 0]]]" dynamicg="If[d ≟ c ∧ (c ≠ b) ∧ (c ≠ a), 0, If[d ≟ b ∧ (b ≠ a), 0, If[d ≟ a, 0, 0.8]]]" dynamicb="If[d ≟ c ∧ (c ≠ b) ∧ (c ≠ a), 1, If[d ≟ b ∧ (b ≠ a), 1, If[d ≟ a, 0, 0.8]]]" colorSpace="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<coords x="-1.8248800331689337" y="3.559468059210717" z="27.629792460896947"/>
+	<lineStyle thickness="7" type="0" typeHidden="1"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<expression label="text24" exp="c + &quot; cm&quot;" />
+<element type="text" label="text24">
+	<show object="true" label="false"/>
+	<condition showObject="連接紅點 ∧ (c + d &lt; Distance[P, R])"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<startPoint exp="O"/>
+	<labelOffset x="-39" y="-6"/>
+</element>
+<expression label="text25" exp="d + &quot; cm&quot;" />
+<element type="text" label="text25">
+	<show object="true" label="false"/>
+	<condition showObject="連接紅點 ∧ (c + d &lt; Distance[P, R])"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<startPoint exp="N"/>
+	<labelOffset x="-46" y="-5"/>
+</element>
+<expression label="text28" exp="&quot;拖拉 × 點，改變四邊長度。&quot;"/>
+<element type="text" label="text28">
+	<show object="true" label="false"/>
+	<condition showObject="¬連接紅點"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<absoluteScreenLocation  x="229" y="64"/>
+</element>
+<expression label="text29" exp="&quot;拖拉綠色及紅色圓點，將紅點重疊，再按「連接紅點」鈕連成一個四邊形。&quot;"/>
+<element type="text" label="text29">
+	<show object="true" label="false"/>
+	<condition showObject="¬連接紅點"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<absoluteScreenLocation  x="229" y="35"/>
+</element>
+<expression label="text30" exp="&quot;拖拉綠色圓點，觀察四邊形的變化。&quot;"/>
+<element type="text" label="text30">
+	<show object="true" label="false"/>
+	<condition showObject="連接紅點"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<absoluteScreenLocation  x="229" y="35"/>
+</element>
+</construction>
+</geogebra>

@@ -1,0 +1,461 @@
+<?xml version="1.0" encoding="utf-8"?>
+<geogebra format="5.0" version="5.0.280.0" id="6a3e6ec0-f2ec-436c-8c24-09b04837bfcf"  xsi:noNamespaceSchemaLocation="http://www.geogebra.org/ggb.xsd" xmlns="" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" >
+<gui>
+	<window width="960" height="660" />
+	<perspectives>
+	</perspectives>
+	<labelingStyle  val="3"/>
+	<font  size="24"/>
+</gui>
+<euclidianView>
+	<viewNumber viewNo="1"/>
+	<size  width="958" height="658"/>
+	<coordSystem xZero="122.5573007243204" yZero="465.19131773237865" scale="205.9245257212311" yscale="205.9245257212318"/>
+	<evSettings axes="false" grid="false" gridIsBold="false" pointCapturing="3" rightAngleStyle="0" checkboxSize="26" gridType="0"/>
+	<bgColor r="255" g="255" b="255"/>
+	<axesColor r="0" g="0" b="0"/>
+	<gridColor r="192" g="192" b="192"/>
+	<lineStyle axes="1" grid="10"/>
+	<axis id="0" show="false" label="" unitLabel="" tickStyle="1" showNumbers="true"/>
+	<axis id="1" show="false" label="" unitLabel="" tickStyle="1" showNumbers="true"/>
+</euclidianView>
+<kernel>
+	<continuous val="false"/>
+	<usePathAndRegionParameters val="true"/>
+	<significantfigures val="3"/>
+	<angleUnit val="degree"/>
+	<algebraStyle val="0" spreadsheet="0"/>
+	<coordStyle val="0"/>
+	<angleFromInvTrig val="false"/>
+</kernel>
+<scripting blocked="false" disabled="false"/>
+<construction title="" author="" date="">
+<element type="point" label="O">
+	<show object="false" label="false"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="4"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<auxiliary val="true"/>
+	<coords x="0" y="0" z="1"/>
+	<pointSize val="3"/>
+	<pointStyle val="0"/>
+</element>
+<command name="Point">
+	<input a0="Sequence[((0.5 * cos(i°)), (0.5 * sin(i°))), i, 0, 90]"/>
+	<output a0="R"/>
+</command>
+<element type="point" label="R">
+	<show object="true" label="false" ev="4"/>
+	<objColor r="0" g="153" b="0" alpha="0"/>
+	<layer val="9"/>
+	<labelMode val="0"/>
+	<animation step="1" speed="1" type="1" playing="false"/>
+	<coords x="0.43301270189221935" y="0.24999999999999997" z="1"/>
+	<pointSize val="5"/>
+	<pointStyle val="0"/>
+</element>
+<command name="Angle">
+	<input a0="(2, 0)" a1="O" a2="(2 * R)"/>
+	<output a0="α"/>
+</command>
+<element type="angle" label="α">
+	<angleStyle val="0"/>
+	<value val="0.5235987755982987"/>
+	<show object="true" label="true"/>
+	<objColor r="0" g="100" b="0" alpha="0.5"/>
+	<layer val="4"/>
+	<labelOffset x="42" y="-10"/>
+	<labelMode val="2"/>
+	<lineStyle thickness="2" type="0" typeHidden="2"/>
+	<arcSize val="60"/>
+	<selectionAllowed val="false"/>
+</element>
+<command name="Sequence">
+	<input a0="((i * cos(α)), (i * sin(α)))" a1="i" a2="1" a3="5" a4="0.01"/>
+	<output a0="listPointOnRod"/>
+</command>
+<element type="list" label="listPointOnRod">
+	<show object="false" label="true"/>
+	<objColor r="0" g="100" b="0" alpha="0"/>
+	<bgColor r="255" g="255" b="255" alpha="255"/>
+	<layer val="9"/>
+	<labelMode val="0"/>
+	<auxiliary val="true"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<pointSize val="3"/>
+	<pointStyle val="-1"/>
+</element>
+<command name="Point">
+	<input a0="listPointOnRod"/>
+	<output a0="P"/>
+</command>
+<element type="point" label="P">
+	<show object="true" label="false" ev="4"/>
+	<objColor r="0" g="204" b="0" alpha="0"/>
+	<layer val="4"/>
+	<labelMode val="0"/>
+	<animation step="1" speed="1" type="1" playing="false"/>
+	<coords x="1.9052558883257615" y="1.0999999999999974" z="1"/>
+	<pointSize val="5"/>
+	<pointStyle val="0"/>
+</element>
+<command name="Segment">
+	<input a0="O" a1="P"/>
+	<output a0="rod"/>
+</command>
+<element type="segment" label="rod">
+	<show object="true" label="true"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="2"/>
+	<labelOffset x="-76" y="-25"/>
+	<labelMode val="3"/>
+	<selectionAllowed val="false"/>
+	<coords x="-1.0999999999999974" y="1.9052558883257615" z="0"/>
+	<lineStyle thickness="7" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+	<caption val="%v m"/>
+</element>
+<expression label ="water" exp="water(y) = y ≤ 0"/>
+<element type="function" label="water">
+	<show object="true" label="false"/>
+	<objColor r="102" g="153" b="255" alpha="0.5"/>
+	<layer val="0"/>
+	<labelOffset x="-1" y="0"/>
+	<labelMode val="0"/>
+	<animation step="1" speed="1" type="0" playing="false"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="true"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+</element>
+<element type="image" label="fish">
+	<file name="31ec4f8660244a942f3e2336b3cdd13a\fish.png"/>
+	<inBackground val="false"/>
+	<startPoint number="0" exp="A - (0, 0.2)"/>
+	<show object="true" label="true"/>
+	<condition showObject="reach"/>
+	<objColor r="0" g="0" b="0" alpha="1"/>
+	<layer val="6"/>
+	<labelMode val="0"/>
+	<animation step="1" speed="1" type="0" playing="false"/>
+	<selectionAllowed val="false"/>
+</element>
+<element type="image" label="fishingRod">
+	<file name="ac0ea28f49a48cbb08bcd17b02f4e18c\rod.png"/>
+	<inBackground val="false"/>
+	<startPoint number="0" exp="O"/>
+	<startPoint number="1" exp="(2 * R)"/>
+	<show object="true" label="true"/>
+	<objColor r="0" g="0" b="0" alpha="1"/>
+	<layer val="6"/>
+	<labelMode val="0"/>
+	<animation step="1" speed="1" type="0" playing="false"/>
+	<selectionAllowed val="false"/>
+	<caption val="?"/>
+</element>
+<element type="image" label="boy">
+	<file name="8ca3de6a3f3aed8cc2be8412bea258e2\boy.png"/>
+	<inBackground val="false"/>
+	<startPoint number="0" x="-0.25" y="0" z="1"/>
+	<startPoint number="1" x="0" y="0" z="1"/>
+	<show object="true" label="false"/>
+	<condition showObject="showBoy"/>
+	<objColor r="0" g="0" b="0" alpha="1"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<ggbscript val="SetValue[showBoy,!showBoy]"/>
+</element>
+<element type="image" label="girl">
+	<file name="c3e4473f81d9bde4acab3e8d8b5cf87f\girl.png"/>
+	<inBackground val="false"/>
+	<startPoint number="0" x="-0.25" y="0" z="1"/>
+	<startPoint number="1" x="0" y="0" z="1"/>
+	<show object="true" label="false"/>
+	<condition showObject="¬showBoy"/>
+	<objColor r="0" g="0" b="0" alpha="1"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<ggbscript val="SetValue[showBoy,!showBoy]"/>
+</element>
+<element type="boolean" label="showBoy">
+	<value val="false"/>
+	<show object="false" label="true"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="9"/>
+	<labelOffset x="346" y="29"/>
+	<labelMode val="0"/>
+	<checkbox fixed="true"/>
+</element>
+<element type="numeric" label="length">
+	<value val="1.3"/>
+	<show object="true" label="true"/>
+	<objColor r="255" g="0" b="0" alpha="0.1"/>
+	<layer val="9"/>
+	<labelMode val="3"/>
+	<slider min="0" max="3" absoluteScreenLocation="true" width="200" x="17" y="53" fixed="false" horizontal="true" showAlgebra="false"/>
+	<lineStyle thickness="9" type="0" typeHidden="1"/>
+	<animation step="0.01" speed="1" type="0" playing="false"/>
+	<caption val="Length of fishing line = %v m"/>
+</element>
+<command name="Circle">
+	<input a0="P" a1="length"/>
+	<output a0="circle"/>
+</command>
+<element type="conic" label="circle">
+	<show object="false" label="false"/>
+	<condition showObject="showCircle"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="9"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<lineStyle thickness="2" type="10" typeHidden="1"/>
+	<eigenvectors  x0="1" y0="0" z0="1.0" x1="0" y1="1" z1="1.0"/>
+	<matrix A0="1" A1="1" A2="3.149999999999981" A3="0" A4="-1.9052558883257615" A5="-1.0999999999999974"/>
+	<eqnStyle style="specific"/>
+</element>
+<command name="Point">
+	<input a0="circle"/>
+	<output a0="A"/>
+</command>
+<element type="point" label="A">
+	<show object="true" label="false" ev="4"/>
+	<objColor r="255" g="0" b="0" alpha="0"/>
+	<layer val="9"/>
+	<labelOffset x="-2" y="33"/>
+	<labelMode val="0"/>
+	<animation step="0.1" speed="1" type="1" playing="false"/>
+	<ggbscript onUpdate="SetValue[A,If[abs(x(A)-x(A_2))&lt;AxisStepX[ ]/10,A_2,If[abs(x(A)-x(A_1))&lt;AxisStepX[ ]/10,A_1,A]]]"/>
+	<coords x="3.072008424244208" y="0.5266863686184698" z="1"/>
+	<pointSize val="4"/>
+	<pointStyle val="0"/>
+</element>
+<command name="Segment">
+	<input a0="P" a1="A"/>
+	<output a0="string"/>
+</command>
+<element type="segment" label="string">
+	<show object="true" label="true"/>
+	<objColor r="255" g="0" b="0" alpha="0"/>
+	<layer val="4"/>
+	<labelOffset x="22" y="-23"/>
+	<labelMode val="3"/>
+	<selectionAllowed val="false"/>
+	<coords x="0.5733136313815276" y="1.1667525359184465" z="-2.3757369615573687"/>
+	<lineStyle thickness="7" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+	<caption val="%v m"/>
+</element>
+<command name="Intersect">
+	<input a0="circle" a1="xAxis" a2="1"/>
+	<output a0="A_1"/>
+</command>
+<element type="point" label="A_1">
+	<show object="false" label="true"/>
+	<objColor r="68" g="68" b="68" alpha="0"/>
+	<layer val="9"/>
+	<labelMode val="0"/>
+	<coords x="1.2124355652982064" y="0" z="1"/>
+	<pointSize val="3"/>
+	<pointStyle val="0"/>
+</element>
+<command name="Intersect">
+	<input a0="circle" a1="xAxis" a2="2"/>
+	<output a0="A_2"/>
+</command>
+<element type="point" label="A_2">
+	<show object="false" label="true"/>
+	<objColor r="68" g="68" b="68" alpha="0"/>
+	<layer val="9"/>
+	<labelMode val="0"/>
+	<coords x="2.5980762113533165" y="0" z="1"/>
+	<pointSize val="3"/>
+	<pointStyle val="0"/>
+</element>
+<command name="Segment">
+	<input a0="O" a1="A"/>
+	<output a0="dist"/>
+</command>
+<element type="segment" label="dist">
+	<show object="true" label="true"/>
+	<condition showObject="reach"/>
+	<objColor r="0" g="0" b="255" alpha="0"/>
+	<layer val="4"/>
+	<labelOffset x="-17" y="9"/>
+	<labelMode val="3"/>
+	<selectionAllowed val="false"/>
+	<coords x="-0.5266863686184698" y="3.072008424244208" z="0"/>
+	<lineStyle thickness="9" type="0" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+	<caption val="x"/>
+</element>
+<expression label="reach" exp="(A ≟ A_1 ∨ A ≟ A_2) ∧ (x(A) &gt; 0)" />
+<element type="boolean" label="reach">
+	<value val="false"/>
+	<show object="false" label="true"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="9"/>
+	<labelMode val="0"/>
+	<checkbox fixed="true"/>
+</element>
+<command name="Angle">
+	<input a0="P" a1="A" a2="O"/>
+	<output a0="θ"/>
+</command>
+<element type="angle" label="θ">
+	<angleStyle val="1"/>
+	<value val="0.6265203435047806"/>
+	<show object="true" label="true"/>
+	<condition showObject="reach"/>
+	<objColor r="0" g="0" b="255" alpha="0.5"/>
+	<layer val="2"/>
+	<labelOffset x="-45" y="-14"/>
+	<labelMode val="3"/>
+	<lineStyle thickness="2" type="0" typeHidden="2"/>
+	<arcSize val="60"/>
+	<selectionAllowed val="false"/>
+</element>
+<element type="boolean" label="showX">
+	<value val="false"/>
+	<show object="true" label="true"/>
+	<condition showObject="reach"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="9"/>
+	<labelOffset x="197" y="578"/>
+	<labelMode val="3"/>
+	<checkbox fixed="true"/>
+	<ggbscript onUpdate="SetCaption[dist,If[showX,&quot;%v m&quot;,&quot;x&quot;]]"/>
+	<caption val="Find x"/>
+</element>
+<element type="boolean" label="showTheta">
+	<value val="false"/>
+	<show object="true" label="true"/>
+	<condition showObject="reach"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="9"/>
+	<labelOffset x="197" y="525"/>
+	<labelMode val="3"/>
+	<checkbox fixed="true"/>
+	<ggbscript onUpdate="SetCaption[θ,If[showTheta,&quot;%v&quot;,&quot;θ&quot;]]"/>
+	<caption val="Find θ"/>
+</element>
+<element type="boolean" label="showCircle">
+	<value val="false"/>
+	<show object="true" label="true"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="9"/>
+	<labelOffset x="744" y="25"/>
+	<labelMode val="3"/>
+	<checkbox fixed="true"/>
+	<caption val="Auxiliary circle"/>
+</element>
+<element type="image" label="worm">
+	<file name="fc3d88682baf184e6215adb2c7ecb8c1\worm_small.png"/>
+	<inBackground val="false"/>
+	<startPoint number="0" exp="A - (0, 0.15)"/>
+	<show object="true" label="false"/>
+	<condition showObject="¬reach"/>
+	<objColor r="0" g="0" b="0" alpha="1"/>
+	<layer val="9"/>
+	<labelMode val="0"/>
+	<animation step="1" speed="1" type="0" playing="false"/>
+	<selectionAllowed val="false"/>
+</element>
+<element type="button" label="button1">
+	<show object="true" label="true"/>
+	<condition showObject="α &gt; 0°"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="9"/>
+	<labelOffset x="71" y="477"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<auxiliary val="true"/>
+	<ggbscript val="SetValue[R,(0.5cos(α-1°), 0.5sin(α-1°))]"/>
+	<font serif="false" sizeM="1.4" size="10" style="0"/>
+	<caption val="-1°"/>
+</element>
+<element type="button" label="button2">
+	<show object="true" label="true"/>
+	<condition showObject="α  &lt;  90°"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="9"/>
+	<labelOffset x="119" y="477"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<auxiliary val="true"/>
+	<ggbscript val="SetValue[R,(0.5cos(α+1°), 0.5sin(α+1°))]"/>
+	<font serif="false" sizeM="1.4" size="10" style="0"/>
+	<caption val="+1°"/>
+</element>
+<command name="Segment">
+	<input a0="P" a1="A_1"/>
+	<output a0="a"/>
+</command>
+<element type="segment" label="a">
+	<show object="true" label="false" ev="4"/>
+	<condition showObject="showCircle ∧ (A ≟ A_1 ∨ A ≟ A_2)"/>
+	<objColor r="255" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<decoration type="2"/>
+	<selectionAllowed val="false"/>
+	<coords x="1.0999999999999974" y="-0.6928203230275551" z="-1.333679121828024"/>
+	<lineStyle thickness="3" type="10" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<command name="Segment">
+	<input a0="P" a1="A_2"/>
+	<output a0="b"/>
+</command>
+<element type="segment" label="b">
+	<show object="true" label="false" ev="4"/>
+	<condition showObject="showCircle ∧ (A ≟ A_1 ∨ A ≟ A_2)"/>
+	<objColor r="255" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<decoration type="2"/>
+	<selectionAllowed val="false"/>
+	<coords x="1.0999999999999974" y="0.6928203230275549" z="-2.8578838324886413"/>
+	<lineStyle thickness="3" type="10" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="numeric" label="lang">
+	<value val="2"/>
+	<symbolic val="true" />
+	<show object="false" label="true"/>
+	<objColor r="0" g="0" b="0" alpha="0.1"/>
+	<layer val="8"/>
+	<labelMode val="1"/>
+	<animation step="1" speed="1" type="0" playing="false"/>
+</element>
+<element type="button" label="button0">
+	<show object="true" label="true"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="8"/>
+	<labelOffset x="872" y="478"/>
+	<labelMode val="3"/>
+	<fixed val="true"/>
+	<auxiliary val="true"/>
+	<ggbscript val="SetValue[lang,If[lang==1,2,1]]&#10;RunClickScript[buttonLang]"/>
+	<font serif="false" sizeM="1.4" size="10" style="0"/>
+	<caption val="中文"/>
+</element>
+<element type="button" label="buttonLang">
+	<show object="false" label="true"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="8"/>
+	<labelOffset x="832" y="524"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<auxiliary val="true"/>
+	<ggbscript val="SetCaption[button0,If[lang==1,&quot;ENG&quot;,&quot;中文&quot;]]&#10;SetCaption[length,If[lang==1,&quot;魚絲長度 = %v m&quot;,&quot;Length of fishing line = %v m&quot;]]&#10;SetCaption[showCircle,If[lang==1,&quot;輔助圓&quot;,&quot;Auxiliary circle&quot;]]&#10;SetCaption[showTheta,If[lang==1,&quot;求 θ&quot;,&quot;Find θ&quot;]]&#10;SetCaption[showX,If[lang==1,&quot;求 x&quot;,&quot;Find x&quot;]]"/>
+	<font serif="false" sizeM="1.4" size="10" style="0"/>
+</element>
+</construction>
+</geogebra>

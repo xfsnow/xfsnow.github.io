@@ -1,0 +1,721 @@
+<?xml version="1.0" encoding="utf-8"?>
+<geogebra format="5.0" version="5.0.288.0" id="b256d9c1-f080-4851-8f2e-9c24d152869f"  xsi:noNamespaceSchemaLocation="http://www.geogebra.org/ggb.xsd" xmlns="" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" >
+<gui>
+	<window width="960" height="660" />
+	<perspectives>
+<perspective id="tmp">
+	<panes>
+		<pane location="" divider="0.296969696969697" orientation="0" />
+		<pane location="1" divider="0.10416666666666667" orientation="1" />
+	</panes>
+	<views>
+		<view id="4097" visible="false" inframe="true" stylebar="true" location="1,1,1" size="400" window="159,134,961,550" />
+		<view id="1" visible="true" inframe="false" stylebar="false" location="2,1" size="958" window="100,100,600,400" />
+		<view id="4" toolbar="0 59 || 2020 , 2021 , 2022 , 66 || 2001 , 2003 , 2002 , 2004 , 2005 || 2040 , 2041 , 2042 , 2044 , 2043" visible="false" inframe="false" stylebar="true" location="1,1" size="300" window="100,100,600,400" />
+		<view id="8" toolbar="1001 | 1002 | 1003  || 1005 | 1004 || 1006 | 1007 | 1010 | 1011 || 1008 1009 || 6" visible="false" inframe="false" stylebar="false" location="1,3" size="300" window="100,100,600,400" />
+		<view id="2" visible="false" inframe="false" stylebar="true" location="3" size="221" window="100,100,250,400" />
+		<view id="16" visible="true" inframe="false" stylebar="false" location="0" size="196" window="50,50,500,500" />
+		<view id="32" visible="false" inframe="false" stylebar="true" location="1" size="150" window="50,50,500,500" />
+		<view id="64" toolbar="0" visible="false" inframe="true" stylebar="true" location="1" size="150" window="50,50,500,500" />
+		<view id="128" visible="false" inframe="true" stylebar="false" location="1" size="480" window="50,50,500,500" />
+		<view id="70" toolbar="0 || 2020 || 2021 || 2022" visible="false" inframe="true" stylebar="true" location="1" size="150" window="50,50,500,500" />
+		<view id="43" visible="false" inframe="false" stylebar="false" location="1" size="450" window="50,50,500,500" />
+		<view id="512" toolbar="0 | 1 501 5 19 , 67 | 2 15 45 18 , 7 37 | 514 3 9 , 13 44 , 47 | 16 | 551 550 11 ,  20 22 21 23 , 55 56 57 , 12 | 69 | 510 511 , 512 513 | 533 531 , 534 532 , 522 523 , 537 536 , 535 | 521 520 | 36 , 38 49 560 | 571 30 29 570 31 33 | 17 | 540 40 41 42 , 27 28 35 , 6 , 502" visible="false" inframe="true" stylebar="false" location="1" size="480" window="50,50,500,500" />
+	</views>
+	<toolbar show="false" items="0 39 59 | 1 501 67 , 5 19 , 72 | 2 15 45 , 18 65 , 7 37 | 4 3 8 9 , 13 44 , 58 , 47 | 16 51 64 , 70 | 10 34 53 11 , 24  20 22 , 21 23 | 55 56 57 , 12 | 36 46 , 38 49 50 , 71 | 30 29 54 32 31 33 | 17 26 62 73 , 14 66 68 | 25 52 60 61 | 40 41 42 , 27 28 35 , 6" position="7" help="false" />
+	<input show="false" cmd="true" top="false" />
+	<dockBar show="false" east="false" />
+</perspective>
+	</perspectives>
+	<labelingStyle  val="3"/>
+	<font  size="20"/>
+</gui>
+<euclidianView>
+	<viewNumber viewNo="1"/>
+	<size  width="958" height="454"/>
+	<coordSystem xZero="605.5" yZero="238.00000000000003" scale="35.006814828331606" yscale="35.00681482833145"/>
+	<evSettings axes="false" grid="false" gridIsBold="false" pointCapturing="0" rightAngleStyle="1" checkboxSize="26" gridType="0"/>
+	<bgColor r="255" g="255" b="255"/>
+	<axesColor r="0" g="0" b="0"/>
+	<gridColor r="192" g="192" b="192"/>
+	<lineStyle axes="1" grid="10"/>
+	<axis id="0" show="false" label="" unitLabel="" tickStyle="1" showNumbers="true"/>
+	<axis id="1" show="false" label="" unitLabel="" tickStyle="1" showNumbers="true"/>
+	<grid distX="1" distY="1" distTheta="0.5235987755982988"/>
+</euclidianView>
+<euclidianView>
+	<viewNumber viewNo="2"/>
+	<size  width="958" height="196"/>
+	<coordSystem xZero="383.9523077447388" yZero="238.64173488748034" scale="32.747629392105885" yscale="32.747629392106006"/>
+	<evSettings axes="false" grid="false" gridIsBold="false" pointCapturing="1" rightAngleStyle="1" checkboxSize="26" gridType="0"/>
+	<bgColor r="175" g="238" b="238"/>
+	<axesColor r="0" g="0" b="0"/>
+	<gridColor r="192" g="192" b="192"/>
+	<lineStyle axes="1" grid="10"/>
+	<axis id="0" show="false" label="" unitLabel="" tickStyle="1" showNumbers="true"/>
+	<axis id="1" show="false" label="" unitLabel="" tickStyle="1" showNumbers="true"/>
+	<grid distX="1" distY="0.5" distTheta="0.5235987755982988"/>
+</euclidianView>
+<kernel>
+	<continuous val="false"/>
+	<usePathAndRegionParameters val="true"/>
+	<decimals val="0"/>
+	<angleUnit val="degree"/>
+	<algebraStyle val="0" spreadsheet="0"/>
+	<coordStyle val="0"/>
+	<angleFromInvTrig val="false"/>
+</kernel>
+<scripting blocked="false" disabled="false"/>
+<construction title="" author="" date="">
+<element type="image" label="pic1">
+	<file name="0de44ded35b58b83df1a36bd90cbff85\HKSAR.png"/>
+	<inBackground val="false"/>
+	<startPoint number="0" x="-3.8293421778214047" y="-3.8293421778214034" z="1"/>
+	<startPoint number="1" x="4.170657822178596" y="-3.8293421778214034" z="1"/>
+	<auxiliary val="false"/>
+	<show object="true" label="false"/>
+	<condition showObject="a ∧ (¬showImage)"/>
+	<objColor r="0" g="0" b="0" alpha="0.75"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+</element>
+<element type="image" label="pic2">
+	<file name="8af23a4a06fd3b1695f51e838fb94868\Eastern_District_Hong_Kong.png"/>
+	<inBackground val="false"/>
+	<startPoint number="0" x="-4" y="-4" z="1"/>
+	<startPoint number="1" x="4" y="-4" z="1"/>
+	<auxiliary val="false"/>
+	<show object="true" label="false"/>
+	<condition showObject="b ∧ (¬showImage)"/>
+	<objColor r="0" g="0" b="0" alpha="0.75"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+</element>
+<element type="image" label="pic3">
+	<file name="59bbf3bcff6ba5f7dd10f7367422d93e\Kwun_Tong_District_logo.png"/>
+	<inBackground val="false"/>
+	<startPoint number="0" x="-4" y="-4" z="1"/>
+	<startPoint number="1" x="4" y="-4" z="1"/>
+	<startPoint number="2" x="-4" y="3.9619047619047283" z="1"/>
+	<auxiliary val="false"/>
+	<show object="true" label="false"/>
+	<condition showObject="c ∧ (¬showImage)"/>
+	<objColor r="0" g="0" b="0" alpha="0.75"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+</element>
+<element type="image" label="pic4">
+	<file name="7165db8fa971a95daa136147e69613bf\Sham_Shui_Po_District_logo.png"/>
+	<inBackground val="false"/>
+	<startPoint number="0" x="-3.955854104185652" y="-3.9337811562784792" z="1"/>
+	<startPoint number="1" x="4.0441458958143475" y="-3.9337811562784792" z="1"/>
+	<auxiliary val="false"/>
+	<show object="true" label="false"/>
+	<condition showObject="d ∧ (¬showImage)"/>
+	<objColor r="0" g="0" b="0" alpha="0.75"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+</element>
+<element type="image" label="pic5">
+	<file name="5da28394bd19f4370249b4c67c485964\Shatin_District_logo.png"/>
+	<inBackground val="false"/>
+	<startPoint number="0" x="-3.9779270520928267" y="-3.889635260464132" z="1"/>
+	<startPoint number="1" x="4.022072947907173" y="-3.889635260464132" z="1"/>
+	<auxiliary val="false"/>
+	<show object="true" label="false"/>
+	<condition showObject="e ∧ (¬showImage)"/>
+	<objColor r="0" g="0" b="0" alpha="0.75"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+</element>
+<element type="image" label="pic6">
+	<file name="dba09a41e755216805c195f4939ed447\Tsuen_Wan_District_logo.png"/>
+	<inBackground val="false"/>
+	<startPoint number="0" x="-4" y="-4" z="1"/>
+	<startPoint number="1" x="4" y="-4" z="1"/>
+	<auxiliary val="false"/>
+	<show object="true" label="false"/>
+	<condition showObject="f ∧ (¬showImage)"/>
+	<objColor r="0" g="0" b="0" alpha="0.75"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+</element>
+<element type="image" label="pic7">
+	<file name="c40759008829375adb1ce483627c5cb4\Tuen_Mun_District.png"/>
+	<inBackground val="false"/>
+	<startPoint number="0" x="-4" y="-4" z="1"/>
+	<startPoint number="1" x="4" y="-4" z="1"/>
+	<auxiliary val="false"/>
+	<show object="true" label="false"/>
+	<condition showObject="g ∧ (¬showImage)"/>
+	<objColor r="0" g="0" b="0" alpha="0.75"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+</element>
+<element type="image" label="pic8">
+	<file name="87c3484c1e17fc2ac18e64af6161a923\Wong_Tai_Sin District_logo.png"/>
+	<inBackground val="false"/>
+	<startPoint number="0" x="-3.9779270520928263" y="-4.088291791628695" z="1"/>
+	<startPoint number="1" x="4.022072947907174" y="-4.088291791628695" z="1"/>
+	<startPoint number="2" x="-3.9779270520928263" y="3.9117082083712713" z="1"/>
+	<auxiliary val="false"/>
+	<show object="true" label="false"/>
+	<condition showObject="h ∧ (¬showImage)"/>
+	<objColor r="0" g="0" b="0" alpha="0.75"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+</element>
+<element type="image" label="pic9">
+	<file name="7bd025efea0f16552990c8b201bd5119\Yau_Tsim_Mong_District_logo.png"/>
+	<inBackground val="false"/>
+	<startPoint number="0" x="-4" y="-4" z="1"/>
+	<startPoint number="1" x="4" y="-4" z="1"/>
+	<auxiliary val="false"/>
+	<show object="true" label="false"/>
+	<condition showObject="i ∧ (¬showImage)"/>
+	<objColor r="0" g="0" b="0" alpha="0.75"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+</element>
+<element type="boolean" label="a">
+	<value val="true"/>
+	<show object="true" label="true" ev="3"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelOffset x="19" y="4"/>
+	<labelMode val="3"/>
+	<auxiliary val="true"/>
+	<checkbox fixed="true"/>
+	<ggbscript onUpdate="SetValue[b,false]&#13;&#10;SetValue[c,false]&#13;&#10;SetValue[d,false]&#13;&#10;SetValue[e,false]&#13;&#10;SetValue[f,false]&#13;&#10;SetValue[g,false]&#13;&#10;SetValue[h,false]&#13;&#10;SetValue[i,false]&#13;&#10;"/>
+	<caption val="Figure 1"/>
+</element>
+<element type="boolean" label="b">
+	<value val="false"/>
+	<show object="true" label="true" ev="3"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelOffset x="150" y="4"/>
+	<labelMode val="3"/>
+	<auxiliary val="true"/>
+	<checkbox fixed="true"/>
+	<ggbscript onUpdate="SetValue[a,false]&#13;&#10;SetValue[c,false]&#13;&#10;SetValue[d,false]&#13;&#10;SetValue[e,false]&#13;&#10;SetValue[f,false]&#13;&#10;SetValue[g,false]&#13;&#10;SetValue[h,false]&#13;&#10;SetValue[i,false]&#13;&#10;"/>
+	<caption val="Figure 2"/>
+</element>
+<element type="boolean" label="c">
+	<value val="false"/>
+	<show object="true" label="true" ev="3"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelOffset x="281" y="4"/>
+	<labelMode val="3"/>
+	<auxiliary val="true"/>
+	<checkbox fixed="true"/>
+	<ggbscript onUpdate="SetValue[a,false]&#13;&#10;SetValue[b,false]&#13;&#10;SetValue[d,false]&#13;&#10;SetValue[e,false]&#13;&#10;SetValue[f,false]&#13;&#10;SetValue[g,false]&#13;&#10;SetValue[h,false]&#13;&#10;SetValue[i,false]&#13;&#10;"/>
+	<caption val="Figure 3"/>
+</element>
+<element type="boolean" label="d">
+	<value val="false"/>
+	<show object="true" label="true" ev="3"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelOffset x="412" y="4"/>
+	<labelMode val="3"/>
+	<auxiliary val="true"/>
+	<checkbox fixed="true"/>
+	<ggbscript onUpdate="SetValue[a,false]&#13;&#10;SetValue[b,false]&#13;&#10;SetValue[c,false]&#13;&#10;SetValue[e,false]&#13;&#10;SetValue[f,false]&#13;&#10;SetValue[g,false]&#13;&#10;SetValue[h,false]&#13;&#10;SetValue[i,false]&#13;&#10;"/>
+	<caption val="Figure 4"/>
+</element>
+<element type="boolean" label="e">
+	<value val="false"/>
+	<show object="true" label="true" ev="3"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelOffset x="543" y="4"/>
+	<labelMode val="3"/>
+	<auxiliary val="true"/>
+	<checkbox fixed="true"/>
+	<ggbscript onUpdate="SetValue[a,false]&#13;&#10;SetValue[b,false]&#13;&#10;SetValue[c,false]&#13;&#10;SetValue[d,false]&#13;&#10;SetValue[f,false]&#13;&#10;SetValue[g,false]&#13;&#10;SetValue[h,false]&#13;&#10;SetValue[i,false]&#13;&#10;"/>
+	<caption val="Figure 5"/>
+</element>
+<element type="boolean" label="f">
+	<value val="false"/>
+	<show object="true" label="true" ev="3"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelOffset x="674" y="4"/>
+	<labelMode val="3"/>
+	<auxiliary val="true"/>
+	<checkbox fixed="true"/>
+	<ggbscript onUpdate="SetValue[a,false]&#13;&#10;SetValue[b,false]&#13;&#10;SetValue[c,false]&#13;&#10;SetValue[d,false]&#13;&#10;SetValue[e,false]&#13;&#10;SetValue[g,false]&#13;&#10;SetValue[h,false]&#13;&#10;SetValue[i,false]&#13;&#10;"/>
+	<caption val="Figure 6"/>
+</element>
+<element type="boolean" label="g">
+	<value val="false"/>
+	<show object="true" label="true" ev="3"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelOffset x="19" y="37"/>
+	<labelMode val="3"/>
+	<auxiliary val="true"/>
+	<checkbox fixed="true"/>
+	<ggbscript onUpdate="SetValue[a,false]&#13;&#10;SetValue[b,false]&#13;&#10;SetValue[c,false]&#13;&#10;SetValue[d,false]&#13;&#10;SetValue[e,false]&#13;&#10;SetValue[f,false]&#13;&#10;SetValue[h,false]&#13;&#10;SetValue[i,false]&#13;&#10;"/>
+	<caption val="Figure 7"/>
+</element>
+<element type="boolean" label="h">
+	<value val="false"/>
+	<show object="true" label="true" ev="3"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelOffset x="150" y="37"/>
+	<labelMode val="3"/>
+	<auxiliary val="true"/>
+	<checkbox fixed="true"/>
+	<ggbscript onUpdate="SetValue[a,false]&#13;&#10;SetValue[b,false]&#13;&#10;SetValue[c,false]&#13;&#10;SetValue[d,false]&#13;&#10;SetValue[e,false]&#13;&#10;SetValue[f,false]&#13;&#10;SetValue[g,false]&#13;&#10;SetValue[i,false]&#13;&#10;"/>
+	<caption val="Figure 8"/>
+</element>
+<element type="boolean" label="i">
+	<value val="false"/>
+	<show object="true" label="true" ev="3"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelOffset x="281" y="37"/>
+	<labelMode val="3"/>
+	<auxiliary val="true"/>
+	<checkbox fixed="true"/>
+	<ggbscript onUpdate="SetValue[a,false]&#13;&#10;SetValue[b,false]&#13;&#10;SetValue[c,false]&#13;&#10;SetValue[d,false]&#13;&#10;SetValue[e,false]&#13;&#10;SetValue[f,false]&#13;&#10;SetValue[g,false]&#13;&#10;SetValue[h,false]&#13;&#10;"/>
+	<caption val="Figure 9"/>
+</element>
+<element type="point" label="O">
+	<show object="false" label="false"/>
+	<objColor r="255" g="127" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<animation step="1" speed="1" type="1" playing="false"/>
+	<coords x="0" y="0" z="1"/>
+	<pointSize val="4"/>
+	<pointStyle val="1"/>
+</element>
+<expression label="select" exp="a ∨ b ∨ c ∨ d ∨ e ∨ f ∨ g ∨ h ∨ i" />
+<element type="boolean" label="select">
+	<value val="true"/>
+	<show object="false" label="true" ev="3"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="3"/>
+	<labelMode val="0"/>
+	<checkbox fixed="true"/>
+</element>
+<expression label ="A" exp="(0, 5)" type="point"/>
+<element type="point" label="A">
+	<show object="true" label="false"/>
+	<objColor r="255" g="0" b="0" alpha="0"/>
+	<layer val="3"/>
+	<labelMode val="0"/>
+	<animation step="0.1" speed="1" type="1" playing="false"/>
+	<coords x="0" y="5" z="1"/>
+	<pointSize val="4"/>
+	<pointStyle val="1"/>
+</element>
+<expression label ="B" exp="(0, -5)" type="point"/>
+<element type="point" label="B">
+	<show object="true" label="false"/>
+	<objColor r="255" g="0" b="0" alpha="0"/>
+	<layer val="3"/>
+	<labelMode val="0"/>
+	<animation step="0.1" speed="1" type="1" playing="false"/>
+	<coords x="0" y="-5" z="1"/>
+	<pointSize val="4"/>
+	<pointStyle val="1"/>
+</element>
+<command name="Line">
+	<input a0="A" a1="B"/>
+	<output a0="L"/>
+</command>
+<element type="line" label="L">
+	<show object="true" label="false" ev="4"/>
+	<objColor r="255" g="0" b="0" alpha="0"/>
+	<layer val="3"/>
+	<labelOffset x="-19" y="78"/>
+	<labelMode val="3"/>
+	<ggbscript onUpdate="SetValue[P&apos;,Mirror[P,L]]"/>
+	<coords x="10" y="0" z="0"/>
+	<lineStyle thickness="5" type="0" typeHidden="1"/>
+	<eqnStyle style="implicit"/>
+	<caption val="反射軸"/>
+</element>
+<command name="Mirror">
+	<input a0="pic1" a1="L"/>
+	<output a0="pic1&apos;"/>
+</command>
+<element type="image" label="pic1&apos;">
+	<file name="0de44ded35b58b83df1a36bd90cbff85\HKSAR.png"/>
+	<inBackground val="false"/>
+	<startPoint number="0" x="3.829342177821405" y="-3.829342177821403" z="1"/>
+	<startPoint number="1" x="-4.170657822178595" y="-3.829342177821404" z="1"/>
+	<startPoint number="2" x="3.8293421778214043" y="4.123320544072054" z="1"/>
+	<auxiliary val="false"/>
+	<show object="true" label="false"/>
+	<condition showObject="a ∧ showImage"/>
+	<objColor r="0" g="0" b="0" alpha="0.5"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+</element>
+<command name="Mirror">
+	<input a0="pic2" a1="L"/>
+	<output a0="pic2&apos;"/>
+</command>
+<element type="image" label="pic2&apos;">
+	<file name="8af23a4a06fd3b1695f51e838fb94868\Eastern_District_Hong_Kong.png"/>
+	<inBackground val="false"/>
+	<startPoint number="0" x="4.000000000000001" y="-3.9999999999999996" z="1"/>
+	<startPoint number="1" x="-3.9999999999999996" y="-4.000000000000001" z="1"/>
+	<startPoint number="2" x="3.9999999999999996" y="3.999999999999965" z="1"/>
+	<auxiliary val="false"/>
+	<show object="false" label="false"/>
+	<condition showObject="b ∧ showImage"/>
+	<objColor r="0" g="0" b="0" alpha="0.5"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+</element>
+<command name="Mirror">
+	<input a0="pic3" a1="L"/>
+	<output a0="pic3&apos;"/>
+</command>
+<element type="image" label="pic3&apos;">
+	<file name="59bbf3bcff6ba5f7dd10f7367422d93e\Kwun_Tong_District_logo.png"/>
+	<inBackground val="false"/>
+	<startPoint number="0" x="4.000000000000001" y="-3.9999999999999996" z="1"/>
+	<startPoint number="1" x="-3.9999999999999996" y="-4.000000000000001" z="1"/>
+	<startPoint number="2" x="3.9999999999999996" y="3.9619047619047287" z="1"/>
+	<auxiliary val="false"/>
+	<show object="true" label="false"/>
+	<condition showObject="c ∧ showImage"/>
+	<objColor r="0" g="0" b="0" alpha="0.5"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+</element>
+<command name="Mirror">
+	<input a0="pic4" a1="L"/>
+	<output a0="pic4&apos;"/>
+</command>
+<element type="image" label="pic4&apos;">
+	<file name="7165db8fa971a95daa136147e69613bf\Sham_Shui_Po_District_logo.png"/>
+	<inBackground val="false"/>
+	<startPoint number="0" x="3.9558541041856525" y="-3.933781156278479" z="1"/>
+	<startPoint number="1" x="-4.044145895814347" y="-3.9337811562784797" z="1"/>
+	<startPoint number="2" x="3.9558541041856516" y="3.875742653245296" z="1"/>
+	<auxiliary val="false"/>
+	<show object="true" label="false"/>
+	<condition showObject="d ∧ showImage"/>
+	<objColor r="0" g="0" b="0" alpha="0.5"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+</element>
+<command name="Mirror">
+	<input a0="pic5" a1="L"/>
+	<output a0="pic5&apos;"/>
+</command>
+<element type="image" label="pic5&apos;">
+	<file name="5da28394bd19f4370249b4c67c485964\Shatin_District_logo.png"/>
+	<inBackground val="false"/>
+	<startPoint number="0" x="3.977927052092827" y="-3.8896352604641318" z="1"/>
+	<startPoint number="1" x="-4.022072947907172" y="-3.8896352604641327" z="1"/>
+	<startPoint number="2" x="3.9779270520928263" y="3.919888549059643" z="1"/>
+	<auxiliary val="false"/>
+	<show object="true" label="false"/>
+	<condition showObject="e ∧ showImage"/>
+	<objColor r="0" g="0" b="0" alpha="0.5"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+</element>
+<command name="Mirror">
+	<input a0="pic6" a1="L"/>
+	<output a0="pic6&apos;"/>
+</command>
+<element type="image" label="pic6&apos;">
+	<file name="dba09a41e755216805c195f4939ed447\Tsuen_Wan_District_logo.png"/>
+	<inBackground val="false"/>
+	<startPoint number="0" x="4.000000000000001" y="-3.9999999999999996" z="1"/>
+	<startPoint number="1" x="-3.9999999999999996" y="-4.000000000000001" z="1"/>
+	<startPoint number="2" x="3.9999999999999996" y="3.999999999999965" z="1"/>
+	<auxiliary val="false"/>
+	<show object="true" label="false"/>
+	<condition showObject="f ∧ showImage"/>
+	<objColor r="0" g="0" b="0" alpha="0.5"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+</element>
+<command name="Mirror">
+	<input a0="pic7" a1="L"/>
+	<output a0="pic7&apos;"/>
+</command>
+<element type="image" label="pic7&apos;">
+	<file name="c40759008829375adb1ce483627c5cb4\Tuen_Mun_District.png"/>
+	<inBackground val="false"/>
+	<startPoint number="0" x="4.000000000000001" y="-3.9999999999999996" z="1"/>
+	<startPoint number="1" x="-3.9999999999999996" y="-4.000000000000001" z="1"/>
+	<startPoint number="2" x="3.9999999999999996" y="3.999999999999965" z="1"/>
+	<auxiliary val="false"/>
+	<show object="true" label="false"/>
+	<condition showObject="g ∧ showImage"/>
+	<objColor r="0" g="0" b="0" alpha="0.5"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+</element>
+<command name="Mirror">
+	<input a0="pic8" a1="L"/>
+	<output a0="pic8&apos;"/>
+</command>
+<element type="image" label="pic8&apos;">
+	<file name="87c3484c1e17fc2ac18e64af6161a923\Wong_Tai_Sin District_logo.png"/>
+	<inBackground val="false"/>
+	<startPoint number="0" x="3.9779270520928267" y="-4.088291791628694" z="1"/>
+	<startPoint number="1" x="-4.022072947907173" y="-4.088291791628696" z="1"/>
+	<startPoint number="2" x="3.977927052092826" y="3.9117082083712718" z="1"/>
+	<auxiliary val="false"/>
+	<show object="true" label="false"/>
+	<condition showObject="h ∧ showImage"/>
+	<objColor r="0" g="0" b="0" alpha="0.5"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+</element>
+<command name="Mirror">
+	<input a0="pic9" a1="L"/>
+	<output a0="pic9&apos;"/>
+</command>
+<element type="image" label="pic9&apos;">
+	<file name="7bd025efea0f16552990c8b201bd5119\Yau_Tsim_Mong_District_logo.png"/>
+	<inBackground val="false"/>
+	<startPoint number="0" x="4.000000000000001" y="-3.9999999999999996" z="1"/>
+	<startPoint number="1" x="-3.9999999999999996" y="-4.000000000000001" z="1"/>
+	<startPoint number="2" x="3.9999999999999996" y="3.999999999999965" z="1"/>
+	<auxiliary val="false"/>
+	<show object="true" label="false"/>
+	<condition showObject="i ∧ showImage"/>
+	<objColor r="0" g="0" b="0" alpha="0.5"/>
+	<layer val="1"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<selectionAllowed val="false"/>
+	<auxiliary val="false"/>
+</element>
+<element type="button" label="button1">
+	<show object="true" label="true" ev="3"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<bgColor r="255" g="255" b="0" alpha="255"/>
+	<layer val="3"/>
+	<labelOffset x="24" y="91"/>
+	<labelMode val="3"/>
+	<animation step="1" speed="1" type="0" playing="false"/>
+	<auxiliary val="true"/>
+	<ggbscript val="SetValue[A,(0,5)]&#13;&#10;SetValue[B,(0,-5)]"/>
+	<font serif="false" sizeM="2" size="20" style="0"/>
+	<dimensions width="250" height="40" />
+	<caption val="Vertical line of reflection"/>
+</element>
+<element type="button" label="button2">
+	<show object="true" label="true" ev="3"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<bgColor r="255" g="255" b="0" alpha="255"/>
+	<layer val="3"/>
+	<labelOffset x="24" y="140"/>
+	<labelMode val="3"/>
+	<animation step="1" speed="1" type="0" playing="false"/>
+	<auxiliary val="true"/>
+	<ggbscript val="SetValue[A,(-5,0)]&#13;&#10;SetValue[B,(5,0)]"/>
+	<font serif="false" sizeM="2" size="20" style="0"/>
+	<dimensions width="250" height="40" />
+	<caption val="Horizontal line of reflection"/>
+</element>
+<element type="point" label="P">
+	<show object="true" label="false"/>
+	<condition showObject="show"/>
+	<objColor r="51" g="153" b="0" alpha="0"/>
+	<layer val="3"/>
+	<labelMode val="0"/>
+	<animation step="1" speed="1" type="1" playing="false"/>
+	<ggbscript onUpdate="SetValue[P&apos;,Mirror[P,L]]"/>
+	<coords x="5" y="5" z="1"/>
+	<pointSize val="4"/>
+	<pointStyle val="0"/>
+</element>
+<command name="Intersect">
+	<input a0="L" a1="OrthogonalLine[P, L]"/>
+	<output a0="D"/>
+</command>
+<element type="point" label="D">
+	<show object="false" label="true"/>
+	<objColor r="68" g="68" b="68" alpha="0"/>
+	<layer val="3"/>
+	<labelMode val="0"/>
+	<coords x="0" y="500" z="100"/>
+	<pointSize val="3"/>
+	<pointStyle val="0"/>
+</element>
+<command name="Segment">
+	<input a0="P" a1="D"/>
+	<output a0="j"/>
+</command>
+<element type="segment" label="j">
+	<show object="true" label="false"/>
+	<condition showObject="show"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="3"/>
+	<labelMode val="0"/>
+	<decoration type="2"/>
+	<selectionAllowed val="false"/>
+	<coords x="0" y="-5" z="25"/>
+	<lineStyle thickness="5" type="10" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<element type="point" label="P&apos;">
+	<show object="true" label="false"/>
+	<condition showObject="show"/>
+	<objColor r="51" g="153" b="0" alpha="0"/>
+	<layer val="3"/>
+	<labelMode val="0"/>
+	<animation step="1" speed="1" type="1" playing="false"/>
+	<ggbscript onUpdate="SetValue[P,Mirror[P&apos;,L]]"/>
+	<coords x="-5.000000000000001" y="4.999999999999999" z="1"/>
+	<pointSize val="4"/>
+	<pointStyle val="0"/>
+</element>
+<command name="Segment">
+	<input a0="D" a1="P&apos;"/>
+	<output a0="k"/>
+</command>
+<element type="segment" label="k">
+	<show object="true" label="false"/>
+	<condition showObject="show"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="3"/>
+	<labelMode val="0"/>
+	<decoration type="2"/>
+	<selectionAllowed val="false"/>
+	<coords x="8.881784197001252e-16" y="-5.000000000000001" z="25.000000000000004"/>
+	<lineStyle thickness="5" type="10" typeHidden="1"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<command name="Angle">
+	<input a0="L" a1="j"/>
+	<output a0="α"/>
+</command>
+<element type="angle" label="α">
+	<angleStyle val="1"/>
+	<value val="4.71238898038469"/>
+	<show object="true" label="false"/>
+	<condition showObject="show"/>
+	<objColor r="255" g="0" b="0" alpha="0.25"/>
+	<layer val="3"/>
+	<labelMode val="1"/>
+	<lineStyle thickness="2" type="0" typeHidden="2"/>
+	<arcSize val="20"/>
+	<selectionAllowed val="false"/>
+</element>
+<element type="boolean" label="show">
+	<value val="false"/>
+	<show object="true" label="true" ev="3"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="3"/>
+	<labelOffset x="346" y="135"/>
+	<labelMode val="3"/>
+	<checkbox fixed="true"/>
+	<ggbscript onUpdate="SetValue[P,(5,5)]"/>
+	<caption val="Show perpendicular line segments"/>
+</element>
+<element type="boolean" label="showImage">
+	<value val="false"/>
+	<show object="true" label="true" ev="3"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="3"/>
+	<labelOffset x="346" y="86"/>
+	<labelMode val="3"/>
+	<checkbox fixed="true"/>
+	<caption val="Show image of reflection"/>
+</element>
+<element type="button" label="button0">
+	<show object="true" label="true" ev="3"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="3"/>
+	<labelOffset x="842" y="9"/>
+	<labelMode val="3"/>
+	<animation step="1" speed="1" type="0" playing="false"/>
+	<auxiliary val="true"/>
+	<ggbscript val="SetValue[lang,If[lang==1,2,1]]&#10;RunClickScript[buttonLang]&#10;"/>
+	<font serif="false" sizeM="1.4" size="8" style="0"/>
+	<caption val="中文"/>
+</element>
+<element type="button" label="buttonLang">
+	<show object="false" label="true" ev="3"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="3"/>
+	<labelOffset x="711" y="26"/>
+	<labelMode val="0"/>
+	<animation step="1" speed="1" type="0" playing="false"/>
+	<auxiliary val="true"/>
+	<ggbscript val="SetCaption[button0,If[lang==1,&quot;ENG&quot;,&quot;中文&quot;]]&#10;SetCaption[a,If[lang==1,&quot;圖案1&quot;,&quot;Figure 1&quot;]]&#10;SetCaption[b,If[lang==1,&quot;圖案2&quot;,&quot;Figure 2&quot;]]&#10;SetCaption[c,If[lang==1,&quot;圖案3&quot;,&quot;Figure 3&quot;]]&#10;SetCaption[d,If[lang==1,&quot;圖案4&quot;,&quot;Figure 4&quot;]]&#10;SetCaption[e,If[lang==1,&quot;圖案5&quot;,&quot;Figure 5&quot;]]&#10;SetCaption[f,If[lang==1,&quot;圖案6&quot;,&quot;Figure 6&quot;]]&#10;SetCaption[g,If[lang==1,&quot;圖案7&quot;,&quot;Figure 7&quot;]]&#10;SetCaption[h,If[lang==1,&quot;圖案8&quot;,&quot;Figure 8&quot;]]&#10;SetCaption[i,If[lang==1,&quot;圖案9&quot;,&quot;Figure 9&quot;]]&#10;SetCaption[button1,If[lang==1,&quot;鉛垂反射軸&quot;,&quot;Vertical line of reflection&quot;]]&#10;SetCaption[button2,If[lang==1,&quot;水平反射軸&quot;,&quot;Horizontal line of reflection&quot;]]&#10;SetCaption[showImage,If[lang==1,&quot;顯示反射影像&quot;,&quot;Show image of reflection&quot;]]&#10;SetCaption[show,If[lang==1,&quot;顯示垂直線段&quot;,&quot;Show perpendicular line segments&quot;]]&#10;"/>
+	<font serif="false" sizeM="2" size="20" style="0"/>
+</element>
+<element type="numeric" label="lang">
+	<value val="2"/>
+	<symbolic val="true" />
+	<show object="false" label="true" ev="3"/>
+	<objColor r="0" g="0" b="0" alpha="0.1"/>
+	<layer val="3"/>
+	<labelMode val="1"/>
+	<animation step="1" speed="1" type="0" playing="false"/>
+</element>
+</construction>
+</geogebra>

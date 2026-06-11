@@ -1,0 +1,15 @@
+{
+  "global_rules": [
+    "单行单命令",
+    "仅使用英文小括号()",
+    "禁止分号; 禁止方括号[]",
+    "坐标格式：(x,y)",
+    "命令首字母大写"
+  ],
+  "param_rule": "参数使用英文小括号()，坐标格式(x,y)，单行单命令",
+  "invalid_patterns": [
+    "Command[...]",
+    "Command(...);Command(...)"
+  ],
+  "description": "这些是 GeoGebra 命令的全局强制规则，适用于所有命令"
+}

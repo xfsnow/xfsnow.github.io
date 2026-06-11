@@ -1,0 +1,377 @@
+<?xml version="1.0" encoding="utf-8"?>
+<geogebra format="5.0" version="5.0.44.0" id="84810fe6-11b2-4c11-84a1-61a43958fcb8"  xsi:noNamespaceSchemaLocation="http://www.geogebra.org/ggb.xsd" xmlns="" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" >
+<gui>
+	<window width="936" height="734" />
+	<perspectives>
+<perspective id="tmp">
+	<panes>
+		<pane location="" divider="0.6014957264957265" orientation="1" />
+	</panes>
+	<views>
+		<view id="4097" visible="false" inframe="true" stylebar="true" location="1,1,1,1" size="400" window="120,103,694,544" />
+		<view id="1" visible="false" inframe="false" stylebar="false" location="3,1,3" size="290" window="100,100,600,400" />
+		<view id="4" toolbar="0 || 2020 , 2021 , 2022 , 66 || 2001 , 2003 , 2002 , 2004 , 2005 || 2040 , 2041 , 2042 , 2044 , 2043" visible="false" inframe="false" stylebar="true" location="1,1" size="300" window="100,100,600,400" />
+		<view id="2" visible="false" inframe="false" stylebar="false" location="3,3" size="223" window="100,100,250,400" />
+		<view id="8" toolbar="1001 | 1002 | 1003  || 1005 | 1004 || 1006 | 1007 | 1010 || 1008 1009 || 66 68 || 6" visible="false" inframe="false" stylebar="false" location="1,3" size="300" window="100,100,600,400" />
+		<view id="16" visible="true" inframe="false" stylebar="false" location="3" size="563" window="50,50,500,500" />
+		<view id="32" visible="false" inframe="false" stylebar="true" location="1" size="150" window="50,50,500,500" />
+		<view id="64" visible="false" inframe="true" stylebar="true" location="1" size="150" window="50,50,500,500" />
+		<view id="70" toolbar="0 || 2020 || 2021 || 2022" visible="false" inframe="true" stylebar="true" location="1" size="150" window="50,50,500,500" />
+		<view id="512" toolbar="0 | 1 501 5 19 , 67 | 2 15 45 18 , 7 37 | 514 3 9 , 13 44 , 47 | 16 | 551 550 11 , 22 , 23 , 55 56 57 , 12 | 69 | 510 511 , 512 513 | 533 531 , 534 532 , 522 523 , 537 536 , 535 | 521 520 | 36 , 38 49 560 | 571 30 29 570 31 33 | 17 | 540 40 41 42 , 27 28 35 , 6 , 502" visible="true" inframe="false" stylebar="false" location="1" size="349" window="100,100,600,400" />
+	</views>
+	<toolbar show="true" items="0 39 | 1 501 67 , 5 19 , 72 | 2 15 45 , 18 65 , 7 37 | 4 3 8 9 , 13 44 , 58 , 47 | 16 51 64 , 70 | 10 34 53 11 , 24 20 22 , 21 23 | 55 56 57 , 12 | 36 46 , 38 49 50 , 71 | 30 29 54 32 31 33 | 17 26 62 73 , 14 68 | 25 52 60 61 | 40 41 42 , 27 28 35 , 6" position="1" help="false" />
+	<input show="true" cmd="true" top="false" />
+	<dockBar show="true" east="true" />
+</perspective>
+	</perspectives>
+	<labelingStyle  val="3"/>
+	<font  size="20"/>
+	<graphicsSettings javaLatexFonts="false"/>
+</gui>
+<euclidianView>
+	<size  width="576" height="401"/>
+	<coordSystem xZero="214.99999999999997" yZero="314.99999999999983" scale="49.999999999999986" yscale="49.99999999999998"/>
+	<evSettings axes="true" grid="false" gridIsBold="false" pointCapturing="3" rightAngleStyle="1" checkboxSize="26" gridType="0"/>
+	<bgColor r="255" g="255" b="255"/>
+	<axesColor r="0" g="0" b="0"/>
+	<gridColor r="192" g="192" b="192"/>
+	<lineStyle axes="1" grid="10"/>
+	<axis id="0" show="true" label="" unitLabel="" tickStyle="1" showNumbers="true"/>
+	<axis id="1" show="true" label="" unitLabel="" tickStyle="1" showNumbers="true"/>
+</euclidianView>
+<euclidianView>
+	<viewNumber viewNo="2"/>
+	<size  width="563" height="535"/>
+	<coordSystem xZero="218.99999999999994" yZero="348.0" scale="49.99999999999998" yscale="50.00000000000003"/>
+	<evSettings axes="false" grid="false" gridIsBold="false" pointCapturing="1" rightAngleStyle="1" checkboxSize="26" gridType="0"/>
+	<bgColor r="234" g="234" b="234"/>
+	<axesColor r="0" g="0" b="0"/>
+	<gridColor r="192" g="192" b="192"/>
+	<lineStyle axes="1" grid="10"/>
+	<axis id="0" show="false" label="" unitLabel="" tickStyle="1" showNumbers="true"/>
+	<axis id="1" show="false" label="" unitLabel="" tickStyle="1" showNumbers="true"/>
+</euclidianView>
+<kernel>
+	<uses3D val="true"/>
+	<continuous val="false"/>
+	<usePathAndRegionParameters val="true"/>
+	<decimals val="2"/>
+	<angleUnit val="degree"/>
+	<algebraStyle val="0"/>
+	<coordStyle val="0"/>
+	<angleFromInvTrig val="false"/>
+</kernel>
+<scripting blocked="false" disabled="false"/>
+<euclidianView3D>
+	<coordSystem xZero="0.633608815426997" yZero="0.20762412177320788" zZero="-1.65" scale="56.10000000000003" xAngle="21.0" zAngle="-90.0"/>
+	<evSettings axes="false" grid="false" gridIsBold="false" pointCapturing="3" rightAngleStyle="1" gridType="0"/>
+	<axis id="0" show="false" label="" unitLabel="" tickStyle="1" showNumbers="true"/>
+	<axis id="1" show="false" label="" unitLabel="" tickStyle="1" showNumbers="true"/>
+	<axis id="2" show="false" label="" unitLabel="" tickStyle="1" showNumbers="true"/>
+	<plate show="false"/>
+	<bgColor r="255" g="255" b="255"/>
+	<clipping use="false" show="false" size="2"/>
+	<projection type="0"/>
+</euclidianView3D>
+<construction title="" author="" date="">
+<element type="point3d" label="A">
+	<show object="false" label="true"/>
+	<objColor r="0" g="0" b="255" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<animation step="0.1" speed="1" type="0" playing="false"/>
+	<coords x="-2.0" y="0.0" z="0.0" w="1.0"/>
+	<pointSize val="3"/>
+</element>
+<command name="Circle">
+	<input a0="A" a1="A + (1, 0, 0)" a2="OrthogonalLine[A, xOyPlane]"/>
+	<output a0="c"/>
+</command>
+<element type="conic3d" label="c">
+	<show object="true" label="false"/>
+	<objColor r="0" g="102" b="153" alpha="1.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="0"/>
+	<eigenvectors  x0="1.0" y0="0.0" z0="1.0" x1="-0.0" y1="1.0" z1="1.0"/>
+	<matrix A0="1.0" A1="1.0" A2="-1.0" A3="0.0" A4="-0.0" A5="-0.0"/>
+	<eqnStyle style="implicit"/>
+	<lineStyle thickness="2" type="0" typeHidden="0"/>
+</element>
+<element type="point3d" label="B">
+	<show object="false" label="true"/>
+	<objColor r="0" g="0" b="255" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<animation step="0.1" speed="1" type="0" playing="false"/>
+	<coords x="1.0" y="0.0" z="0.0" w="1.0"/>
+	<pointSize val="3"/>
+</element>
+<command name="Circle">
+	<input a0="B" a1="B + (1, 0, 0)" a2="OrthogonalLine[B, xOyPlane]"/>
+	<output a0="p"/>
+</command>
+<element type="conic3d" label="p">
+	<show object="true" label="false"/>
+	<objColor r="192" g="192" b="192" alpha="1.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="0"/>
+	<eigenvectors  x0="1.0" y0="0.0" z0="1.0" x1="-0.0" y1="1.0" z1="1.0"/>
+	<matrix A0="1.0" A1="1.0" A2="-1.0" A3="0.0" A4="-0.0" A5="-0.0"/>
+	<eqnStyle style="implicit"/>
+	<lineStyle thickness="2" type="0" typeHidden="0"/>
+</element>
+<command name="Cylinder">
+	<input a0="c" a1="3"/>
+	<output a0="a" a1="d" a2="b"/>
+</command>
+<element type="quadriclimited" label="a">
+	<show object="true" label="false"/>
+	<objColor r="0" g="102" b="153" alpha="1.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+</element>
+<element type="conic3d" label="d">
+	<show object="true" label="false"/>
+	<objColor r="0" g="102" b="153" alpha="1.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="0"/>
+	<eigenvectors  x0="1.0" y0="0.0" z0="1.0" x1="-0.0" y1="1.0" z1="1.0"/>
+	<matrix A0="1.0" A1="1.0" A2="-1.0" A3="0.0" A4="0.0" A5="0.0"/>
+	<eqnStyle style="implicit"/>
+	<lineStyle thickness="2" type="0" typeHidden="0"/>
+</element>
+<element type="quadricpart" label="b">
+	<show object="true" label="false"/>
+	<objColor r="0" g="102" b="153" alpha="1.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<auxiliary val="false"/>
+</element>
+<element type="conic3d" label="c">
+	<show object="true" label="false"/>
+	<objColor r="0" g="102" b="153" alpha="1.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="0"/>
+	<eigenvectors  x0="1.0" y0="0.0" z0="1.0" x1="-0.0" y1="1.0" z1="1.0"/>
+	<matrix A0="1.0" A1="1.0" A2="-1.0" A3="0.0" A4="-0.0" A5="-0.0"/>
+	<eqnStyle style="implicit"/>
+	<lineStyle thickness="2" type="0" typeHidden="0"/>
+</element>
+<command name="Circle">
+	<input a0="A" a1="A + (1, 0, 0)" a2="OrthogonalLine[A, xOyPlane]"/>
+	<output a0="e"/>
+</command>
+<element type="conic3d" label="e">
+	<show object="true" label="false"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<eigenvectors  x0="1.0" y0="0.0" z0="1.0" x1="-0.0" y1="1.0" z1="1.0"/>
+	<matrix A0="1.0" A1="1.0" A2="-1.0" A3="0.0" A4="-0.0" A5="-0.0"/>
+	<eqnStyle style="implicit"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+</element>
+<command name="Top">
+	<input a0="a"/>
+	<output a0="f"/>
+</command>
+<element type="conic3d" label="f">
+	<show object="true" label="false"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<eigenvectors  x0="1.0" y0="0.0" z0="1.0" x1="-0.0" y1="1.0" z1="1.0"/>
+	<matrix A0="1.0" A1="1.0" A2="-1.0" A3="0.0" A4="0.0" A5="0.0"/>
+	<eqnStyle style="implicit"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+</element>
+<command name="Circle">
+	<input a0="B" a1="B + (1, 0, 0)" a2="OrthogonalLine[B, xOyPlane]"/>
+	<output a0="g"/>
+</command>
+<element type="conic3d" label="g">
+	<show object="true" label="false"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<selectionAllowed val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<eigenvectors  x0="1.0" y0="0.0" z0="1.0" x1="-0.0" y1="1.0" z1="1.0"/>
+	<matrix A0="1.0" A1="1.0" A2="-1.0" A3="0.0" A4="-0.0" A5="-0.0"/>
+	<eqnStyle style="implicit"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+</element>
+<expression label="text1" exp="&quot;向上拖拉灰色圓形，&#10;看看我是怎樣建造這&#10;個柱體的。&quot;"/>
+<element type="text" label="text1">
+	<show object="true" label="false" ev="3"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<font serif="false" sizeM="1.0" size="0" style="1"/>
+	<absoluteScreenLocation  x="62" y="38"/>
+</element>
+<expression label="text2" exp="&quot;這個柱體的　是甚麼形狀？&quot;"/>
+<element type="text" label="text2">
+	<show object="true" label="false" ev="3"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<font serif="false" sizeM="1.4" size="8" style="0"/>
+	<absoluteScreenLocation  x="22" y="203"/>
+</element>
+<expression label="text4" exp="&quot;底&quot;"/>
+<element type="text" label="text4">
+	<show object="true" label="false" ev="3"/>
+	<objColor r="0" g="0" b="255" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<font serif="false" sizeM="1.4" size="8" style="1"/>
+	<absoluteScreenLocation  x="161" y="203"/>
+</element>
+<expression label="text5" exp="&quot;這個柱體的名稱是甚麼？&quot;"/>
+<element type="text" label="text5">
+	<show object="true" label="false" ev="3"/>
+	<condition showObject="j"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<font serif="false" sizeM="1.4" size="8" style="0"/>
+	<absoluteScreenLocation  x="22" y="303"/>
+</element>
+<expression label="text3" exp="&quot;圓形&quot;"/>
+<element type="text" label="text3">
+	<show object="true" label="false" ev="3"/>
+	<condition showObject="j"/>
+	<objColor r="255" g="0" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<font serif="false" sizeM="1.4" size="8" style="1"/>
+	<absoluteScreenLocation  x="422" y="203"/>
+</element>
+<expression label="text6" exp="&quot;圓柱&quot;"/>
+<element type="text" label="text6">
+	<show object="true" label="false" ev="3"/>
+	<condition showObject="l ∧ j"/>
+	<objColor r="255" g="0" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<font serif="false" sizeM="1.4" size="8" style="1"/>
+	<absoluteScreenLocation  x="422" y="303"/>
+</element>
+<element type="boolean" label="j">
+	<value val="false"/>
+	<show object="true" label="false" ev="3"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelOffset x="364" y="176"/>
+	<labelMode val="0"/>
+	<checkbox fixed="true"/>
+</element>
+<element type="boolean" label="l">
+	<value val="false"/>
+	<show object="true" label="false" ev="3"/>
+	<condition showObject="j"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelOffset x="365" y="277"/>
+	<labelMode val="0"/>
+	<checkbox fixed="true"/>
+</element>
+<element type="image" label="pic2">
+	<file name="4a881b3fca48f50648d19bd6850806d8\cylinder2.png"/>
+	<inBackground val="false"/>
+	<absoluteScreenLocation x="19" y="122"/>	<show object="true" label="false" ev="3"/>
+	<objColor r="0" g="0" b="0" alpha="1.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+</element>
+<expression label="text7" exp="&quot;按滑鼠右鍵（或於平板電腦中以兩隻手指）拖拉右邊視窗，&#10;可以不同的角度觀察立體圖形。&quot;"/>
+<element type="text" label="text7">
+	<show object="true" label="false" ev="3"/>
+	<objColor r="255" g="0" b="0" alpha="0.0"/>
+	<bgColor r="255" g="250" b="205" alpha="255"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<fixed val="true"/>
+	<absoluteScreenLocation  x="22" y="495"/>
+</element>
+<command name="Cylinder">
+	<input a0="p" a1="9.99999999971024E-5"/>
+	<output a0="h" a1="k" a2="i"/>
+</command>
+<element type="quadriclimited" label="h">
+	<show object="true" label="false"/>
+	<objColor r="192" g="192" b="192" alpha="1.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+</element>
+<element type="conic3d" label="k">
+	<show object="true" label="false"/>
+	<objColor r="192" g="192" b="192" alpha="1.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<eigenvectors  x0="1.0" y0="0.0" z0="1.0" x1="-0.0" y1="1.0" z1="1.0"/>
+	<matrix A0="1.0" A1="1.0" A2="-1.0" A3="0.0" A4="0.0" A5="0.0"/>
+	<eqnStyle style="implicit"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+</element>
+<element type="quadricpart" label="i">
+	<show object="true" label="false"/>
+	<objColor r="192" g="192" b="192" alpha="1.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<auxiliary val="false"/>
+</element>
+<element type="conic3d" label="p">
+	<show object="true" label="false"/>
+	<objColor r="192" g="192" b="192" alpha="1.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<auxiliary val="false"/>
+	<lineStyle thickness="2" type="0" typeHidden="0"/>
+	<eigenvectors  x0="1.0" y0="0.0" z0="1.0" x1="-0.0" y1="1.0" z1="1.0"/>
+	<matrix A0="1.0" A1="1.0" A2="-1.0" A3="0.0" A4="-0.0" A5="-0.0"/>
+	<eqnStyle style="implicit"/>
+	<lineStyle thickness="2" type="0" typeHidden="0"/>
+</element>
+<command name="Top">
+	<input a0="h"/>
+	<output a0="q"/>
+</command>
+<element type="conic3d" label="q">
+	<show object="true" label="false"/>
+	<objColor r="0" g="0" b="0" alpha="0.0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<eigenvectors  x0="1.0" y0="0.0" z0="1.0" x1="-0.0" y1="1.0" z1="1.0"/>
+	<matrix A0="1.0" A1="1.0" A2="-1.0" A3="0.0" A4="0.0" A5="0.0"/>
+	<eqnStyle style="implicit"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+</element>
+</construction>
+</geogebra>

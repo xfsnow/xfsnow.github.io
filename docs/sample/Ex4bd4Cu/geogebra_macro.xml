@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<geogebra format="5.0" version="5.0.298.0"  xsi:noNamespaceSchemaLocation="http://www.geogebra.org/ggt.xsd" xmlns="" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" >
+<macro cmdName="ArcCounterClockwise" toolName="ArcCounterClockwise" toolHelp="ArcCounterClockwise[A, B, deg]" iconFile="ea92e4cb20c0e186ff2b17874c46ff40/arc.png" showInToolBar="true" copyCaptions="true" viewId="1">
+<macroInput a0="A" a1="B" a2="a"/>
+<macroOutput a0="c" a1="w"/>
+<construction title="" author="" date="">
+<element type="point" label="A">
+	<show object="true" label="true" ev="4"/>
+	<objColor r="0" g="0" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<animation step="0.1" speed="1" type="1" playing="false"/>
+	<coords x="5.173333333333335" y="2.68" z="1"/>
+	<pointSize val="5"/>
+	<pointStyle val="0"/>
+</element>
+<element type="point" label="B">
+	<show object="true" label="true" ev="4"/>
+	<objColor r="0" g="0" b="255" alpha="0"/>
+	<layer val="0"/>
+	<labelOffset x="-9" y="32"/>
+	<labelMode val="0"/>
+	<animation step="0.1" speed="1" type="1" playing="false"/>
+	<coords x="2.4733333333333336" y="5.04" z="1"/>
+	<pointSize val="5"/>
+	<pointStyle val="0"/>
+</element>
+<expression label ="a" exp="60"/>
+<element type="numeric" label="a">
+	<value val="60"/>
+	<show object="true" label="true"/>
+	<objColor r="0" g="0" b="0" alpha="0.1"/>
+	<layer val="0"/>
+	<labelMode val="2"/>
+	<animation step="0.1" speed="1" type="0" playing="false"/>
+</element>
+<command name="Vector">
+	<input a0="A" a1="B"/>
+	<output a0="u"/>
+</command>
+<element type="vector" label="u">
+	<show object="false" label="false"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<coords x="-2.700000000000001" y="2.36" z="0"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<coordStyle style="cartesian"/>
+	<startPoint exp="A"/>
+</element>
+<command name="OrthogonalVector">
+	<input a0="u"/>
+	<output a0="v"/>
+</command>
+<element type="vector" label="v">
+	<show object="false" label="false"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<coords x="-2.36" y="-2.700000000000001" z="0"/>
+	<lineStyle thickness="2" type="0" typeHidden="1"/>
+	<coordStyle style="cartesian"/>
+	<startPoint exp="A"/>
+</element>
+<expression label="O" exp="A + u / 2 + (tan((90 - a / 2)°) / 2 * v)" type="point" />
+<element type="point" label="O">
+	<show object="true" label="false"/>
+	<objColor r="68" g="68" b="68" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<coords x="1.7795133804020598" y="1.5217314097820158" z="1"/>
+	<pointSize val="3"/>
+	<pointStyle val="0"/>
+</element>
+<command name="CircleArc">
+	<input a0="O" a1="A" a2="B"/>
+	<output a0="c"/>
+</command>
+<element type="conicpart" label="c">
+	<show object="true" label="false" ev="4"/>
+	<objColor r="0" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<lineStyle thickness="2" type="20" typeHidden="1"/>
+	<eigenvectors  x0="1" y0="0" z0="1.0" x1="0" y1="1" z1="1.0"/>
+	<matrix A0="1" A1="1" A2="-7.377265645452875" A3="0" A4="-1.7795133804020598" A5="-1.5217314097820158"/>
+	<eqnStyle style="implicit"/>
+	<outlyingIntersections val="false"/>
+	<keepTypeOnTransform val="true"/>
+</element>
+<expression label="d" exp="1 / c" />
+<element type="numeric" label="d">
+	<value val="0.26629171338359714"/>
+	<objColor r="0" g="0" b="0" alpha="0.1"/>
+</element>
+<command name="Vector">
+	<input a0="Point[c, 0.55 - (0.2 * d)]" a1="Point[c, 0.55 + (0.2 * d)]"/>
+	<output a0="w"/>
+</command>
+<element type="vector" label="w">
+	<show object="true" label="false"/>
+	<objColor r="255" g="0" b="0" alpha="0"/>
+	<layer val="0"/>
+	<labelMode val="0"/>
+	<coords x="-0.3143701759617632" y="0.24699305057232035" z="0"/>
+	<lineStyle thickness="5" type="0" typeHidden="1"/>
+	<coordStyle style="cartesian"/>
+	<startPoint  x="4.148712371120663" y="4.213663084690938" z="1"/>
+</element>
+</construction>
+</macro>
+</geogebra>
