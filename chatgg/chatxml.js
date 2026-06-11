@@ -822,6 +822,15 @@ XML 格式铁律：
     return formatMessageFromText(content);
   }
 
+  function escapeHtmlForStreaming(text) {
+    if (!text) return '';
+    const div = document.createElement('div');
+    div.textContent = text;
+    let html = div.innerHTML;
+    html = html.replace(/\n/g, '<br>');
+    return `<p>${html}</p>`;
+  }
+
   function formatMessageFromText(content) {
     const extracted = extractGGBCommandsFromText(content);
     
@@ -984,7 +993,7 @@ XML 格式铁律：
         body: JSON.stringify({
           model: settings.modelName,
           messages: messagesForAPI,
-          stream: true
+          stream: false
         })
       });
       
@@ -993,55 +1002,13 @@ XML 格式铁律：
         throw new Error(errorData.error?.message || `HTTP error! status: ${response.status}`);
       }
       
-      const reader = response.body.getReader();
-      const decoder = new TextDecoder('utf-8');
+      const result = await response.json();
+      const aiContent = result.choices?.[0]?.message?.content || '';
       
-      let aiContent = '';
-      let aiContentDiv = null;
-      let isFirstChunk = true;
-      
-      while (true) {
-        const { done, value } = await reader.read();
-        if (done) break;
+      if (aiContent) {
+        messageHistory.push({ role: 'assistant', content: aiContent });
+        const aiContentDiv = addMessageToUI(aiContent, 'assistant', false);
         
-        const chunk = decoder.decode(value);
-        
-        const lines = chunk.split('\n').filter(line => line.trim());
-        for (const line of lines) {
-          if (line.startsWith('data: ')) {
-            const data = line.substring(6);
-            if (data === '[DONE]') continue;
-            
-            try {
-              const json = JSON.parse(data);
-              const contentChunk = json.choices?.[0]?.delta?.content;
-              
-              if (contentChunk) {
-                aiContent += contentChunk;
-                
-                if (isFirstChunk) {
-                  messageHistory.push({ role: 'assistant', content: aiContent });
-                  aiContentDiv = addMessageToUI(aiContent, 'assistant', false);
-                  isFirstChunk = false;
-                } else {
-                  messageHistory[messageHistory.length - 1].content = aiContent;
-                  
-                  if (aiContentDiv) {
-                    const formatted = formatMessage(aiContent);
-                    aiContentDiv.innerHTML = formatted.text;
-                  }
-                }
-              }
-            } catch (e) {
-              console.error('解析响应失败:', e);
-            }
-          }
-        }
-        
-        chatContainer.scrollTop = chatContainer.scrollHeight;
-      }
-      
-      if (aiContentDiv) {
         const formatted = formatMessage(aiContent);
         aiContentDiv.innerHTML = formatted.text;
         
