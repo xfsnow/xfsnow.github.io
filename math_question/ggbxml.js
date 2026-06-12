@@ -1,164 +1,325 @@
-var ggbApp;
+// 全局变量
+let currentQuestion = null;
+let currentXML = '';
+let ggbApi = null;
+let isGGBInitialized = false;
+let questionsData = [];
 
-function initGeoGebra() {
-    try {
-        var container = document.getElementById('ggb-element');
-        var height = container.offsetHeight || 500;
+// 分类颜色映射
+const categoryColors = {
+    '三角形': '#2196F3',
+    '四边形': '#4CAF50',
+    '圆': '#FF9800',
+    '综合': '#9C27B0',
+    '其他': '#9E9E9E'
+};
+
+// 根据内容自动分类
+function classifyQuestion(content) {
+    const keywords = {
+        '三角形': ['三角形', '△', '等边', '等腰', '直角', '锐角', '钝角'],
+        '四边形': ['四边形', '平行四边形', '矩形', '正方形', '菱形', '梯形'],
+        '圆': ['圆', '圆心', '半径', '直径', '弧', '切线', '圆周角'],
+        '综合': ['全等', '相似', '对称', '垂直平分线', '角平分线']
+    };
+    
+    for (const [category, kwList] of Object.entries(keywords)) {
+        for (const kw of kwList) {
+            if (content.includes(kw)) {
+                return category;
+            }
+        }
+    }
+    return '其他';
+}
+
+// 筛选题目
+function filterQuestions(category) {
+    const items = document.querySelectorAll('.question-item');
+    items.forEach(item => {
+        if (category === '全部' || item.dataset.category === category) {
+            item.style.display = '';
+        } else {
+            item.style.display = 'none';
+        }
+    });
+}
+
+// 显示题目列表
+function displayQuestions(questions) {
+    const list = document.getElementById('questionList');
+    document.getElementById('statTotal').textContent = questions.length;
+    
+    if (!questions.length) {
+        list.innerHTML = '<li style="padding: 8px; color: #999;">暂无题目</li>';
+        return;
+    }
+    
+    list.innerHTML = questions.map(q => {
+        const category = q.category || classifyQuestion(q.content);
+        const catColor = categoryColors[category] || categoryColors['其他'];
+        return `
+        <li class="question-item" data-id="${q.id}" data-title="${q.title}" data-category="${category}">
+            <div class="id">${q.id}</div>
+            <div class="title">${q.title}</div>
+            <div class="cat-badge" style="background: ${catColor}">${category}</div>
+        </li>
+        `;
+    }).join('');
+    
+    list.querySelectorAll('.question-item').forEach(item => {
+        item.addEventListener('click', () => selectQuestion(item.dataset.id, item.dataset.title));
+    });
+}
+
+// 选择题目
+async function selectQuestion(id, title) {
+    currentQuestion = id;
+    currentXML = '';
+    
+    document.querySelector('.question-item.active')?.classList.remove('active');
+    document.querySelector(`[data-id="${id}"]`)?.classList.add('active');
+    
+    document.getElementById('questionTitle').textContent = title;
+    
+    const question = questionsData.find(q => q.id == id);
+    if (question) {
+        // 显示题目内容（保留图片）
+        let content = question.content;
+        // 将 Markdown 图片格式转换为 HTML img 标签
+        content = content.replace(/!\[img\]\(([^)]+)\)/g, '<img src="$1" alt="题目配图" class="question-image" />');
+        // 将换行转换为 <br>
+        content = content.replace(/\n/g, '<br>');
+        document.getElementById('questionContent').innerHTML = content;
         
-        var parameters = {
-            "appName": "classic",
-            "width": container.offsetWidth,
-            "height": height,
-            "borderColor": "#FFFFFF",
-            "borderRadius": "8px",
-            "showToolBar": true,
-            "showAlgebraInput": false,
-            "showMenuBar": true,
-            "allowStyleBar": true,
-            "enable3d": false,
-            "perspective": "D",
-            "appletOnLoad": function(api) {
-                window.ggbApp = api;
-                console.log("GeoGebra applet loaded successfully");
-                logMessage("GeoGebra 画板初始化完成");
-                
-                setTimeout(function() {
-                    api.evalCommand('SetViewDirection(Vector((0, 0, 1)))');
-                    api.evalCommand('ZoomIn(1.5)');
-                }, 500);
-            },
-            "errorDialogsActive": true,
-            "language": "zh-CN"
-        };
+        // 触发 MathJax 重新渲染
+        renderMathJax();
         
-        var applet = new GGBApplet(parameters, true);
-        applet.inject('ggb-element');
+        // 如果有 geogebra 数据，显示 XML
+        if (question.geogebra && question.geogebra.question) {
+            currentXML = question.geogebra.question;
+            document.getElementById('xmlTextarea').value = currentXML;
+            document.getElementById('xmlLength').textContent = `${currentXML.length} 字符`;
+        } else {
+            document.getElementById('xmlTextarea').value = '';
+            document.getElementById('xmlLength').textContent = '0 字符';
+        }
         
-    } catch (error) {
-        logMessage("初始化失败: " + error.message);
+        document.getElementById('statLoaded').textContent = parseInt(document.getElementById('statLoaded').textContent) + 1;
+        
+        if (isGGBInitialized && currentXML) {
+            runXMLCommands();
+        }
     }
 }
 
-function logMessage(message) {
-    var outputLog = document.getElementById('outputLog');
-    var timestamp = new Date().toLocaleTimeString();
-    outputLog.innerHTML += "[" + timestamp + "] " + message + "<br>";
-    outputLog.scrollTop = outputLog.scrollHeight;
-}
-
-function clearLog() {
-    document.getElementById('outputLog').innerHTML = "";
-}
-
-function executeXML() {
-    var xmlInput = document.getElementById('xmlInput').value;
+// 初始化 GeoGebra
+function initGGBApplet() {
+    const container = document.getElementById('ggbContainer');
+    const wrapper = document.querySelector('.ggb-wrapper');
     
-    if (!xmlInput.trim()) {
-        logMessage("错误：请输入 XML 命令");
+    const initWidth = Math.max(wrapper.clientWidth || 600, 320);
+    const initHeight = Math.max(wrapper.clientHeight || 400, 240);
+    
+    const params = {
+        id: 'ggbContainer',
+        width: initWidth,
+        height: initHeight,
+        showToolBar: true,
+        showAlgebraInput: false,
+        showMenuBar: true,
+        appName: "classic",
+        language: "zh-CN",
+        enableLabelDrags: false,
+        enableShiftDragZoom: true,
+        showZoomButtons: true,
+        useBrowserForJS: false,
+        allowUpscale: true,
+        capturingThreshold: null
+    };
+    
+    try {
+        const applet = new GGBApplet(params, '5.0', 'ggbContainer');
+        
+        params.appletOnLoad = function(api) {
+            ggbApi = api;
+            isGGBInitialized = true;
+            
+            try {
+                if (typeof api.setErrorDialogsActive === 'function') {
+                    api.setErrorDialogsActive(false);
+                }
+            } catch(e) {}
+            
+            document.getElementById('loadingOverlay').style.display = 'none';
+            document.getElementById('runBtn').disabled = false;
+            document.getElementById('clearBtn').disabled = false;
+            
+            console.log('GeoGebra initialized successfully');
+        };
+        
+        applet.inject('ggbContainer', 'preferHTML5');
+        
+        if (typeof ResizeObserver !== 'undefined') {
+            const resizeObserver = new ResizeObserver(entries => {
+                for (let entry of entries) {
+                    const newWidth = entry.contentRect.width;
+                    const newHeight = entry.contentRect.height;
+                    
+                    if (newWidth > 100 && ggbApi && typeof ggbApi.setSize === 'function') {
+                        ggbApi.setSize(newWidth, newHeight);
+                    }
+                }
+            });
+            
+            resizeObserver.observe(wrapper);
+        }
+        
+    } catch (error) {
+        console.error('GeoGebra initialization failed:', error);
+        document.getElementById('loadingOverlay').innerHTML = '<span class="loading-text" style="color: #dc3545;">GeoGebra 加载失败</span>';
+    }
+}
+
+// 执行 XML 命令
+function runXMLCommands() {
+    if (!ggbApi) {
+        addLog('错误：GeoGebra 画板尚未加载完成');
+        return;
+    }
+    
+    const xmlString = document.getElementById('xmlTextarea').value.trim();
+    if (!xmlString) {
+        addLog('警告：没有可执行的 XML');
+        return;
+    }
+    
+    document.getElementById('runBtn').disabled = true;
+    document.getElementById('clearBtn').disabled = true;
+    
+    try {
+        ggbApi.reset();
+        clearAllViews();
+    } catch (e) {
+        console.error('清空画板失败:', e);
+    }
+    
+    try {
+        ggbApi.evalXML(xmlString);
+        addLog('✅ XML 命令执行成功');
+        
+        setTimeout(() => {
+            try {
+                if (typeof ggbApi.evalCommand === 'function') {
+                    ggbApi.evalCommand("SetAxesRatio[1, 1]");
+                }
+            } catch (e) {
+                console.error('设置坐标轴比例失败:', e);
+            }
+        }, 500);
+        
+    } catch (error) {
+        console.error('XML 执行失败:', error);
+        addLog('❌ XML 执行失败: ' + error.message);
+    }
+    
+    document.getElementById('runBtn').disabled = false;
+    document.getElementById('clearBtn').disabled = false;
+}
+
+// 清空画板
+function clearBoard() {
+    if (!ggbApi) {
+        addLog('错误：GeoGebra 画板尚未加载完成');
         return;
     }
     
     try {
-        ggbApp.evalXML(xmlInput);
-        logMessage("XML 命令执行成功");
-    } catch (error) {
-        logMessage("执行失败: " + error.message);
+        ggbApi.reset();
+        clearAllViews();
+        addLog('✅ 画板已清空');
+    } catch (e) {
+        console.error('清空画板失败:', e);
+        addLog('❌ 清空画板失败');
     }
 }
 
-function clearCanvas() {
+// 清除所有视图
+function clearAllViews() {
+    if (!ggbApi) return;
     try {
-        ggbApp.reset();
-        logMessage("画布已清空");
-    } catch (error) {
-        logMessage("清空失败: " + error.message);
+        if (typeof ggbApi.evalCommand === 'function') {
+            ggbApi.evalCommand("DeleteAll");
+            ggbApi.evalCommand("DeleteAll[3]");
+        }
+    } catch (e) {
+        console.error('清空视图失败:', e);
     }
 }
 
-function loadExample() {
-    var xmlContent = `
-<construction>
-  <!-- 1. 创建等边三角形ABC -->
-  <element type="point" label="A"><coords x="-3.0" y="-2.0" z="1.0"/></element>
-  <element type="point" label="B"><coords x="3.0" y="-2.0" z="1.0"/></element>
-  <expression label="C" exp="Rotate[B, 60°, A]" type="point"/>
-  
-  <!-- 2. 创建外侧直线AP -->
-  <element type="point" label="P"><coords x="0.0" y="-5.0" z="1.0"/></element>
-  <command name="Line"><input a0="A" a1="P"/><output a0="lineAP"/></command>
-  
-  <!-- 3. 创建对称点D -->
-  <command name="Reflection"><input a0="C" a1="lineAP"/><output a0="D"/></command>
-  
-  <!-- 4. 连接线段AD、BD、CE -->
-  <command name="Segment"><input a0="A" a1="D"/><output a0="segAD"/></command>
-  <command name="Segment"><input a0="B" a1="D"/><output a0="segBD"/></command>
-  
-  <!-- 5. 求交点E -->
-  <command name="Intersection"><input a0="segBD" a1="lineAP"/><output a0="E"/></command>
-  
-  <!-- 6. 连接CE -->
-  <command name="Segment"><input a0="C" a1="E"/><output a0="segCE"/></command>
-  
-  <!-- 美化设置 -->
-  <element type="polygon" label="triangle1">
-    <show object="true" label="true"/>
-    <objColor r="0" g="0" b="255"/>
-  </element>
-  <element type="segment" label="segAD">
-    <show object="true" label="true"/>
-    <objColor r="255" g="0" b="0"/>
-  </element>
-  <element type="segment" label="segBD">
-    <show object="true" label="true"/>
-    <objColor r="255" g="165" b="0"/>
-  </element>
-  <element type="segment" label="segCE">
-    <show object="true" label="true"/>
-    <objColor r="0" g="128" b="0"/>
-    <lineStyle type="dashed"/>
-  </element>
-  <element type="line" label="lineAP">
-    <show object="true" label="true"/>
-    <objColor r="128" g="128" b="128"/>
-    <lineStyle type="dashed"/>
-  </element>
-  
-  <!-- 设置视图范围 -->
-  <view>
-    <boundingBox xmin="-8" xmax="8" ymin="-8" ymax="8"/>
-  </view>
-</construction>
-    `.trim();
-    
-    document.getElementById('xmlInput').value = xmlContent;
-    clearLog();
-    
+// 触发 MathJax 渲染
+function renderMathJax() {
+    if (typeof MathJax !== 'undefined') {
+        MathJax.typesetPromise()
+            .then(() => {
+                console.log('MathJax rendering completed');
+            })
+            .catch(err => {
+                console.error('MathJax rendering failed:', err);
+            });
+    }
+}
+
+// 添加日志
+function addLog(message) {
+    const logDiv = document.getElementById('outputLog');
+    const timestamp = new Date().toLocaleTimeString();
+    logDiv.innerHTML += `[${timestamp}] ${message}\n`;
+    logDiv.scrollTop = logDiv.scrollHeight;
+}
+
+// 加载题库数据
+async function loadQuestions() {
     try {
-        ggbApp.reset();
-        ggbApp.evalXML(xmlContent);
-        logMessage("示例图形加载成功");
-        logMessage("已创建：等边三角形ABC、直线AP、对称点D、线段AD、BD、CE");
+        const response = await fetch('question.js');
+        if (!response.ok) throw new Error('加载失败');
+        
+        const text = await response.text();
+        // 解析 JavaScript 对象
+        const match = text.match(/var\s+math_question\s*=\s*(\{[\s\S]*\});/);
+        if (!match) throw new Error('解析失败');
+        
+        const data = JSON.parse(match[1]);
+        questionsData = data.questions || [];
+        displayQuestions(questionsData);
+        
+        addLog('✅ 题库加载成功，共 ' + questionsData.length + ' 道题目');
     } catch (error) {
-        logMessage("加载示例失败: " + error.message);
+        console.error('加载题库失败:', error);
+        document.getElementById('questionList').innerHTML = '<li style="padding: 8px; color: #dc3545;">加载失败</li>';
+        addLog('❌ 题库加载失败: ' + error.message);
     }
 }
 
-function setupEventListeners() {
-    document.getElementById('executeBtn').addEventListener('click', executeXML);
-    document.getElementById('loadExample').addEventListener('click', loadExample);
-    document.getElementById('clearCanvas').addEventListener('click', clearCanvas);
-}
-
-function onWindowLoad() {
-    setTimeout(function() {
-        initGeoGebra();
-        setupEventListeners();
+// 页面加载完成后初始化
+document.addEventListener('DOMContentLoaded', () => {
+    loadQuestions();
+    
+    // 绑定按钮事件
+    document.getElementById('runBtn').addEventListener('click', runXMLCommands);
+    document.getElementById('clearBtn').addEventListener('click', clearBoard);
+    
+    // 分类筛选事件
+    document.querySelectorAll('.cat-filter-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+            document.querySelectorAll('.cat-filter-btn').forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+            filterQuestions(btn.dataset.category);
+        });
+    });
+    
+    // 延迟初始化 GeoGebra
+    setTimeout(() => {
+        initGGBApplet();
     }, 100);
-}
-
-if (document.readyState === 'loading') {
-    window.addEventListener('load', onWindowLoad);
-} else {
-    onWindowLoad();
-}
+});

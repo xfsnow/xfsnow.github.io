@@ -3,45 +3,87 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GeoGebra XML 绘图测试</title>
+    <title>GeoGebra XML 绘图测试 - 初中数学几何题库</title>
     <link rel="stylesheet" href="ggbxml.css">
     <script src="https://cdn.geogebra.org/apps/deployggb.js"></script>
+<script>
+    MathJax = {
+        tex: {
+            inlineMath: [['$', '$'], ['\\(', '\\)']],
+            displayMath: [['$$', '$$'], ['\\[', '\\]']]
+        },
+        svg: {
+            fontCache: 'global'
+        }
+    };
+</script>
+<script defer src="https://lib.baomitu.com/mathjax/3.2.2/es5/tex-mml-chtml.min.js"></script>
 </head>
 <body>
-    <div class="container">
-        <header>
-            <h1>GeoGebra XML 绘图测试</h1>
-            <p>测试题目：已知△ABC是等边三角形，直线AP位于△ABC外侧，点C关于直线AP的对称点为D，连接AD、BD，BD交AP于点E。</p>
-        </header>
-
-        <div class="main-content">
-            <div class="ggb-container">
-                <div id="ggb-element"></div>
-                <div class="ggb-controls">
-                    <button id="loadExample">加载示例图形</button>
-                    <button id="clearCanvas">清空画布</button>
+    <div class="header">
+        <h1>初中数学几何题库</h1>
+        <p>选择题目，查看GeoGebra绘图效果</p>
+    </div>
+    
+    <div class="main-content">
+        <!-- 左栏：题目列表 -->
+        <div class="sidebar">
+            <div class="stats-bar">
+                <div class="stat-item">
+                    <div class="stat-value" id="statTotal">0</div>
+                    <div class="stat-label">题目总数</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-value" id="statLoaded">0</div>
+                    <div class="stat-label">已加载</div>
                 </div>
             </div>
-
-            <div class="input-panel">
-                <h3>XML 命令输入</h3>
-                <textarea id="xmlInput" placeholder="输入 GeoGebra XML 命令..."></textarea>
-                <button id="executeBtn">执行命令</button>
-                <div class="output-panel">
-                    <h4>输出日志</h4>
-                    <div id="outputLog"></div>
-                </div>
+            
+            <div class="category-filter">
+                <button class="cat-filter-btn active" data-category="全部">全部</button>
+                <button class="cat-filter-btn" data-category="三角形">三角形</button>
+                <button class="cat-filter-btn" data-category="四边形">四边形</button>
+                <button class="cat-filter-btn" data-category="圆">圆</button>
+                <button class="cat-filter-btn" data-category="综合">综合</button>
+            </div>
+            
+            <h2>题目列表</h2>
+            <ul class="question-list" id="questionList">
+                <li style="padding: 8px; color: #667eea;">加载中...</li>
+            </ul>
+        </div>
+        
+        <!-- 中栏：题目内容和XML命令 -->
+        <div class="xml-panel">
+            <div class="xml-header">
+                <h3>题目内容 & XML命令<span id="xmlLength">0 字符</span></h3>
+            </div>
+            
+            <div class="question-title" id="questionTitle">选择一个题目</div>
+            
+            <div class="question-content" id="questionContent">点击左侧题目列表选择题目</div>
+            
+            <textarea id="xmlTextarea" class="xml-textarea" placeholder="GeoGebra XML 命令将显示在这里..."></textarea>
+            
+            <div class="xml-actions">
+                <button class="btn btn-secondary" id="clearBtn" disabled>清空画板</button>
+                <button class="btn btn-primary" id="runBtn" disabled>执行 XML</button>
+            </div>
+            
+            <div class="output-panel">
+                <h4>输出日志</h4>
+                <div id="outputLog"></div>
             </div>
         </div>
-
-        <div class="expected-output">
-            <h3>预期输出</h3>
-            <ul>
-                <li>1. 等边三角形ABC</li>
-                <li>2. 外侧直线AP</li>
-                <li>3. 对称点D</li>
-                <li>4. 连接线AD、BD、CE</li>
-            </ul>
+        
+        <!-- 右栏：GeoGebra画板 -->
+        <div class="preview-panel">
+            <div class="ggb-wrapper">
+                <div id="ggbContainer" class="ggb-container"></div>
+                <div class="loading-overlay" id="loadingOverlay">
+                    <span class="loading-text">GeoGebra 加载中...</span>
+                </div>
+            </div>
         </div>
     </div>
 
