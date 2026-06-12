@@ -779,6 +779,12 @@ XML 格式铁律：
     messageDiv.appendChild(contentDiv);
     chatContainer.appendChild(messageDiv);
     
+    if (typeof MathJax !== 'undefined') {
+      MathJax.typesetPromise([contentDiv]).catch(err => {
+        console.warn('[MathJax] 渲染失败:', err);
+      });
+    }
+    
     if (!skipScroll) {
       chatContainer.scrollTop = chatContainer.scrollHeight;
     }
@@ -834,6 +840,7 @@ XML 格式铁律：
   function createLoadingAnimation() {
     const loadingDiv = document.createElement('div');
     loadingDiv.className = 'message assistant loading';
+    loadingDiv.dataset.startTime = Date.now().toString();
     
     const contentDiv = document.createElement('div');
     contentDiv.className = 'message-content';
@@ -851,7 +858,11 @@ XML 格式铁律：
     
     const thinkingDiv = document.createElement('div');
     thinkingDiv.className = 'thinking-text';
-    thinkingDiv.innerHTML = `<span class="thinking-message">${randomMessage}</span><span class="thinking-cursor">|</span>`;
+    thinkingDiv.innerHTML = `
+      <span class="thinking-message">${randomMessage}</span>
+      <span class="thinking-cursor">|</span>
+      <span class="thinking-timer">0秒</span>
+    `;
     
     contentDiv.appendChild(thinkingDiv);
     loadingDiv.appendChild(contentDiv);
@@ -859,11 +870,34 @@ XML 格式铁律：
     chatContainer.appendChild(loadingDiv);
     chatContainer.scrollTop = chatContainer.scrollHeight;
     
+    // 启动计时器更新
+    const startTime = Date.now();
+    const timerInterval = setInterval(() => {
+      const elapsed = Math.floor((Date.now() - startTime) / 1000);
+      const timerSpan = loadingDiv.querySelector('.thinking-timer');
+      if (timerSpan) {
+        if (elapsed < 60) {
+          timerSpan.textContent = `${elapsed}秒`;
+        } else {
+          const minutes = Math.floor(elapsed / 60);
+          const seconds = elapsed % 60;
+          timerSpan.textContent = `${minutes}分${seconds}秒`;
+        }
+      }
+    }, 1000);
+    
+    loadingDiv.dataset.timerInterval = timerInterval;
+    
     return loadingDiv;
   }
 
   function removeLoadingAnimation(loadingDiv) {
     if (loadingDiv && loadingDiv.parentNode) {
+      // 清除计时器
+      const timerInterval = loadingDiv.dataset.timerInterval;
+      if (timerInterval) {
+        clearInterval(parseInt(timerInterval));
+      }
       loadingDiv.parentNode.removeChild(loadingDiv);
     }
   }
@@ -976,6 +1010,51 @@ XML 格式铁律：
     return out.join('\n');
   }
 
+  // 创建带超时和进度指示的请求
+  function createRequestWithProgress(url, options, onProgress) {
+    return new Promise((resolve, reject) => {
+      const abortController = new AbortController();
+      const timeout = 600000; // 10分钟超时
+      
+      const timeoutId = setTimeout(() => {
+        abortController.abort();
+        reject(new Error('请求超时，请重试'));
+      }, timeout);
+      
+      // 定期检测请求状态
+      const progressInterval = setInterval(() => {
+        if (onProgress) {
+          onProgress('in_progress');
+        }
+      }, 5000); // 每5秒更新一次状态
+      
+      fetch(url, {
+        ...options,
+        signal: abortController.signal
+      })
+      .then(response => {
+        clearTimeout(timeoutId);
+        clearInterval(progressInterval);
+        if (!response.ok) {
+          return response.json().then(errorData => {
+            throw new Error(errorData.error?.message || `HTTP error! status: ${response.status}`);
+          }).catch(() => {
+            throw new Error(`HTTP error! status: ${response.status}`);
+          });
+        }
+        return response.json();
+      })
+      .then(data => {
+        resolve(data);
+      })
+      .catch(error => {
+        clearTimeout(timeoutId);
+        clearInterval(progressInterval);
+        reject(error);
+      });
+    });
+  }
+
   async function sendMessage() {
     const input = document.getElementById('user-input');
     const sendBtn = document.getElementById('send-btn');
@@ -1022,26 +1101,46 @@ XML 格式铁律：
     
     const loadingDiv = createLoadingAnimation();
     
-    try {
-      const response = await fetch(`${settings.endpoint}/chat/completions`, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          'Authorization': `Bearer ${settings.apiKey}`
-        },
-        body: JSON.stringify({
-          model: settings.modelName,
-          messages: messagesForAPI,
-          stream: false
-        })
-      });
-      
-      if (!response.ok) {
-        const errorData = await response.json();
-        throw new Error(errorData.error?.message || `HTTP error! status: ${response.status}`);
+    // 更新加载状态的函数
+    const updateProgress = (status) => {
+      const statusSpan = loadingDiv.querySelector('.thinking-message');
+      if (statusSpan) {
+        const messages = [
+          'AI正在思考...',
+          '正在和数学图形斗智斗勇，马上胜利！',
+          '画师 AI 在线作图，草稿变成品 ing。',
+          '正在把公式变成看得见的样子',
+          '数学元素正在排队入场，请耐心围观。',
+          '偷偷打磨图形细节，力求完美！',
+          '正在处理复杂的几何关系...',
+          '努力绘制精确的图形...'
+        ];
+        // 每5秒随机换一条消息，让用户知道还在工作
+        if (status === 'in_progress') {
+          const randomIndex = Math.floor(Math.random() * messages.length);
+          statusSpan.textContent = messages[randomIndex];
+        }
       }
+    };
+    
+    try {
+      const result = await createRequestWithProgress(
+        `${settings.endpoint}/chat/completions`,
+        {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'Authorization': `Bearer ${settings.apiKey}`
+          },
+          body: JSON.stringify({
+            model: settings.modelName,
+            messages: messagesForAPI,
+            stream: false
+          })
+        },
+        updateProgress
+      );
       
-      const result = await response.json();
       const aiContent = result.choices?.[0]?.message?.content || '';
       
       removeLoadingAnimation(loadingDiv);
@@ -1052,6 +1151,12 @@ XML 格式铁律：
         
         const formatted = formatMessage(aiContent);
         aiContentDiv.innerHTML = formatted.text;
+        
+        if (typeof MathJax !== 'undefined') {
+          MathJax.typesetPromise([aiContentDiv]).catch(err => {
+            console.warn('[MathJax] 渲染失败:', err);
+          });
+        }
         
         if (formatted.hasGGB && formatted.xmlContent && formatted.xmlContent.trim()) {
           const ggbContainerId = 'ggb-' + Date.now();
