@@ -4,6 +4,7 @@ let currentXML = '';
 let ggbApi = null;
 let isGGBInitialized = false;
 let questionsData = [];
+let questionsXMLData = [];
 
 // 分类颜色映射
 const categoryColors = {
@@ -95,9 +96,10 @@ async function selectQuestion(id, title) {
         // 触发 MathJax 重新渲染
         renderMathJax();
         
-        // 如果有 geogebra 数据，显示 XML
-        if (question.geogebra && question.geogebra.question) {
-            currentXML = question.geogebra.question;
+        // 从 question_xml.js 中获取 XML 命令
+        const xmlData = questionsXMLData.find(q => q.id == id);
+        if (xmlData && xmlData.xml) {
+            currentXML = xmlData.xml;
             document.getElementById('xmlTextarea').value = currentXML;
             document.getElementById('xmlLength').textContent = `${currentXML.length} 字符`;
         } else {
@@ -281,6 +283,7 @@ function addLog(message) {
 // 加载题库数据
 async function loadQuestions() {
     try {
+        // 加载题目数据
         const response = await fetch('question.js');
         if (!response.ok) throw new Error('加载失败');
         
@@ -291,8 +294,16 @@ async function loadQuestions() {
         
         const data = JSON.parse(match[1]);
         questionsData = data.questions || [];
-        displayQuestions(questionsData);
         
+        // 加载 XML 数据
+        if (typeof question_xml !== 'undefined' && question_xml.questions) {
+            questionsXMLData = question_xml.questions;
+            addLog('✅ XML 命令加载成功，共 ' + questionsXMLData.length + ' 道题目');
+        } else {
+            addLog('⚠️ 未找到 XML 命令数据');
+        }
+        
+        displayQuestions(questionsData);
         addLog('✅ 题库加载成功，共 ' + questionsData.length + ' 道题目');
     } catch (error) {
         console.error('加载题库失败:', error);
