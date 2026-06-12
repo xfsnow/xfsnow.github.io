@@ -207,28 +207,6 @@ body {
 .btn-secondary:hover { background: #e9ecef; }
 .btn:disabled { opacity: 0.5; cursor: not-allowed; transform: none !important; }
 
-.output-panel {
-    margin-top: 8px;
-    padding: 8px;
-    background: #f8f9fa;
-    border-radius: 5px;
-    max-height: 100px;
-    overflow-y: auto;
-}
-
-.output-panel h4 {
-    font-size: 0.75rem;
-    color: #666;
-    margin-bottom: 4px;
-}
-
-#outputLog {
-    font-size: 0.7rem;
-    color: #555;
-    font-family: 'Courier New', monospace;
-    line-height: 1.4;
-}
-
 /* ==================== 右栏：GeoGebra画板 ==================== */
 .preview-panel {
     background: white;

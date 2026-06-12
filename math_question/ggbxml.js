@@ -272,12 +272,10 @@ function renderMathJax() {
     }
 }
 
-// 添加日志
+// 添加日志（输出到控制台）
 function addLog(message) {
-    const logDiv = document.getElementById('outputLog');
     const timestamp = new Date().toLocaleTimeString();
-    logDiv.innerHTML += `[${timestamp}] ${message}\n`;
-    logDiv.scrollTop = logDiv.scrollHeight;
+    console.log(`[${timestamp}] ${message}`);
 }
 
 // 加载题库数据
