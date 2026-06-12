@@ -156,6 +156,7 @@ function initGGBApplet() {
             document.getElementById('loadingOverlay').style.display = 'none';
             document.getElementById('runBtn').disabled = false;
             document.getElementById('clearBtn').disabled = false;
+            document.getElementById('copyBtn').disabled = false;
             
             console.log('GeoGebra initialized successfully');
         };
@@ -198,6 +199,7 @@ function runXMLCommands() {
     
     document.getElementById('runBtn').disabled = true;
     document.getElementById('clearBtn').disabled = true;
+    document.getElementById('copyBtn').disabled = true;
     
     try {
         ggbApi.reset();
@@ -227,6 +229,7 @@ function runXMLCommands() {
     
     document.getElementById('runBtn').disabled = false;
     document.getElementById('clearBtn').disabled = false;
+    document.getElementById('copyBtn').disabled = false;
 }
 
 // 清空画板
@@ -244,6 +247,60 @@ function clearBoard() {
         console.error('清空画板失败:', e);
         addLog('❌ 清空画板失败');
     }
+}
+
+// 复制原题
+function copyQuestion() {
+    const question = questionsData.find(q => q.id == currentQuestion);
+    if (!question) {
+        addLog('错误：未找到题目');
+        return;
+    }
+    
+    // 获取纯文本内容（移除图片标记）
+    const textContent = question.content.replace(/!\[img\]\([^)]+\)/g, '');
+    
+    // 检查 clipboard API 是否可用
+    if (!navigator.clipboard) {
+        // 降级方案：使用 textarea
+        const textarea = document.createElement('textarea');
+        textarea.value = textContent;
+        textarea.style.position = 'fixed';
+        textarea.style.left = '-9999px';
+        document.body.appendChild(textarea);
+        textarea.select();
+        
+        try {
+            document.execCommand('copy');
+            addLog('✅ 原题已复制到剪贴板');
+            const btn = document.getElementById('copyBtn');
+            const originalText = btn.textContent;
+            btn.textContent = '已复制';
+            setTimeout(() => {
+                btn.textContent = originalText;
+            }, 2000);
+        } catch (err) {
+            console.error('复制失败:', err);
+            addLog('❌ 复制失败');
+        }
+        
+        document.body.removeChild(textarea);
+        return;
+    }
+    
+    navigator.clipboard.writeText(textContent).then(() => {
+        addLog('✅ 原题已复制到剪贴板');
+        // 临时改变按钮文字提示
+        const btn = document.getElementById('copyBtn');
+        const originalText = btn.textContent;
+        btn.textContent = '已复制';
+        setTimeout(() => {
+            btn.textContent = originalText;
+        }, 2000);
+    }).catch(err => {
+        console.error('复制失败:', err);
+        addLog('❌ 复制失败');
+    });
 }
 
 // 清除所有视图
@@ -317,6 +374,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // 绑定按钮事件
     document.getElementById('runBtn').addEventListener('click', runXMLCommands);
     document.getElementById('clearBtn').addEventListener('click', clearBoard);
+    document.getElementById('copyBtn').addEventListener('click', copyQuestion);
     
     // 分类筛选事件
     document.querySelectorAll('.cat-filter-btn').forEach(btn => {

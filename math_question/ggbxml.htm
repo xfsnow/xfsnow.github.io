@@ -64,12 +64,13 @@
             
             <div class="question-content" id="questionContent">点击左侧题目列表选择题目</div>
             
-            <textarea id="xmlTextarea" class="xml-textarea" placeholder="GeoGebra XML 命令将显示在这里..."></textarea>
-            
             <div class="xml-actions">
+                <button class="btn btn-secondary" id="copyBtn" disabled>复制原题</button>
                 <button class="btn btn-secondary" id="clearBtn" disabled>清空画板</button>
-                <button class="btn btn-primary" id="runBtn" disabled>执行 XML</button>
+                <button class="btn btn-secondary" id="runBtn" disabled>执行 XML</button>
             </div>
+            
+            <textarea id="xmlTextarea" class="xml-textarea" placeholder="GeoGebra XML 命令将显示在这里..."></textarea>
         </div>
         
         <!-- 右栏：GeoGebra画板 -->
