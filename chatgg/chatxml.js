@@ -360,6 +360,8 @@ document.addEventListener('DOMContentLoaded', () => {
   function checkSidebarAutoCollapse() {
     if (window.innerWidth <= SIDEBAR_BREAKPOINT) {
       sidebar?.classList.add('collapsed');
+    } else {
+      sidebar?.classList.remove('collapsed');
     }
   }
   checkSidebarAutoCollapse();
@@ -670,59 +672,63 @@ document.addEventListener('DOMContentLoaded', () => {
   });
   closePreviewBtn?.addEventListener('click', hideImagePreview);
 
-  const systemPrompt = `你是一个GeoGebra几何绘图专家。请根据用户的几何作图需求，生成正确的GeoGebra XML命令。
+  const systemPrompt = `你是GeoGebra几何绘图专家。根据用户的几何作图需求，分步生成XML命令。
 
-重要规则：GeoGebra 的 evalXML 引擎非常死板，标签、属性名或嵌套结构错误会被静默忽略。
+格式要求：
+1. label属性标识对象，不用name属性
+2. 点使用齐次坐标 <coords x="0.0" y="0.0" z="1.0"/>
+3. 公式用<expression label="名称" exp="公式" type="类型"/>
+4. 几何命令用<command name="命令"><input a0="A" a1="B"/><output a0="结果"/></command>
 
-XML 格式铁律：
-1. **对象标识**：使用 label="..." 而不是 name="..."
-2. **点定义**：必须使用齐次坐标，平面点包含 z="1.0"
-3. **公式表达式**：使用 <expression> 标签，公式写在 exp="..." 属性里，用方括号 []
-4. **几何构造**：使用 <command name="命令"> 块，参数用 a0, a1, a2...
+分步规则：
+1. 先分析题目，列出绘图步骤规划（不输出XML）
+2. 每步只画1-2个相关元素，输出XML后等待用户确认
+3. 用户说"继续"或"下一步"后再画下一步
+4. 用户可随时要求调整
+5. ⚠️ 重要：每一步输出的XML必须包含**之前所有步骤的完整命令**，不是只输出当前步骤的命令
 
-构造规则：
-- **固定点/数值**：<element type="point" label="名称"><coords x="0.0" y="0.0" z="1.0"/></element>
-- **公式计算**：<expression label="名称" exp="公式" type="类型"/>
-- **几何作图**：<command name="命令"><input a0="A" a1="B"/><output a0="结果"/></command>
+示例：
+用户：画等边三角形
+助手：好的，分步绘制等边三角形。
 
-输出格式：
-1. 先用自然语言简要解释绘图思路和步骤
-2. 然后将所有GeoGebra命令放在一个 \`\`\`ggb-xml\`\`\` 代码块中
-3. 最后补充说明或注意事项
+步骤规划：
+1. 定义底边端点A、B
+2. 旋转得到顶点C
+3. 连接成三角形
 
-正确示例：
-
-我来画一个等边三角形。
-
-首先定义点A和B，然后通过旋转得到点C，最后用Polygon命令连接成三角形。
-
+第1步：定义点A(0,0)和B(4,0)
 \`\`\`ggb-xml
 <construction>
-  <element type="point" label="A">
-    <coords x="0.0" y="0.0" z="1.0"/>
-  </element>
-
-  <element type="point" label="B">
-    <coords x="4.0" y="0.0" z="1.0"/>
-  </element>
-
-  <expression label="C" exp="Rotate[B, 60°, A]" type="point"/>
-  <element type="point" label="C">
-    <coords x="2.0" y="3.4641" z="1.0"/>
-  </element>
-
-  <command name="Polygon">
-    <input a0="A" a1="B" a2="C"/>
-    <output a0="triangle"/>
-  </command>
-  <element type="polygon" label="triangle">
-    <show object="true" label="false"/>
-    <objColor r="0" g="100" b="0" alpha="0.1"/>
-  </element>
+  <element type="point" label="A"><coords x="0.0" y="0.0" z="1.0"/></element>
+  <element type="point" label="B"><coords x="4.0" y="0.0" z="1.0"/></element>
 </construction>
 \`\`\`
+请确认后说"继续"。
 
-这样就完成了等边三角形的绘制。`;
+用户：继续
+助手：第2步：以A为中心旋转B 60°得到C
+\`\`\`ggb-xml
+<construction>
+  <element type="point" label="A"><coords x="0.0" y="0.0" z="1.0"/></element>
+  <element type="point" label="B"><coords x="4.0" y="0.0" z="1.0"/></element>
+  <expression label="C" exp="Rotate[B, 60°, A]" type="point"/>
+  <element type="point" label="C"><coords x="2.0" y="3.4641" z="1.0"/></element>
+</construction>
+\`\`\`
+请确认后说"继续"。
+
+用户：继续
+助手：第3步：连接A、B、C成三角形
+\`\`\`ggb-xml
+<construction>
+  <element type="point" label="A"><coords x="0.0" y="0.0" z="1.0"/></element>
+  <element type="point" label="B"><coords x="4.0" y="0.0" z="1.0"/></element>
+  <expression label="C" exp="Rotate[B, 60°, A]" type="point"/>
+  <element type="point" label="C"><coords x="2.0" y="3.4641" z="1.0"/></element>
+  <command name="Polygon"><input a0="A" a1="B" a2="C"/><output a0="tri"/></command>
+</construction>
+\`\`\`
+完成！`;
 
   let messageHistory = [];
 
@@ -1135,7 +1141,12 @@ XML 格式铁律：
           body: JSON.stringify({
             model: settings.modelName,
             messages: messagesForAPI,
-            stream: false
+            stream: false,
+            max_tokens: 4096,
+            temperature: 0.3,
+            top_p: 0.9,
+            presence_penalty: 0,
+            frequency_penalty: 0
           })
         },
         updateProgress

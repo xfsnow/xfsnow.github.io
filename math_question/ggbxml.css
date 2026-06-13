@@ -140,20 +140,34 @@ body {
     text-overflow: ellipsis;
 }
 
-.question-content {
-    padding: 12px;
-    background: #ffffff;
-    border-radius: 5px;
+/* 题目和解答分区样式 */
+.question-section, .answer-section {
     margin-bottom: 8px;
-    font-size: 0.85rem;
-    color: #333;
-    line-height: 1.8;
-    max-height: 350px;
-    overflow-y: auto;
-    border: 1px solid #eee;
 }
 
-.question-content .question-image {
+.section-header {
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: #667eea;
+    padding: 4px 8px;
+    background: #f0f4ff;
+    border-radius: 3px 3px 0 0;
+    border-bottom: 1px solid #e0e7ff;
+}
+
+.question-content, .answer-content {
+    padding: 12px;
+    background: #ffffff;
+    font-size: 0.85rem;
+    line-height: 1.6;
+    max-height: 250px;
+    overflow-y: auto;
+    border: 1px solid #eee;
+    border-radius: 0 0 5px 5px;
+}
+
+.question-content .question-image,
+.answer-content .answer-image {
     display: block;
     max-width: 100%;
     height: auto;
@@ -161,8 +175,14 @@ body {
     border-radius: 4px;
 }
 
-.question-content mjx-container {
+.question-content mjx-container,
+.answer-content mjx-container {
     font-size: 1.1em;
+}
+
+.answer-content {
+    background: #fffef0;
+    border-color: #f0e6c0;
 }
 
 .xml-textarea {

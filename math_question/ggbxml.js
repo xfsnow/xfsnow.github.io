@@ -93,6 +93,14 @@ async function selectQuestion(id, title) {
         content = content.replace(/\n/g, '<br>');
         document.getElementById('questionContent').innerHTML = content;
         
+        // 显示解答内容
+        let answer = question.answer || '暂无解答';
+        // 将 Markdown 图片格式转换为 HTML img 标签
+        answer = answer.replace(/!\[img\]\(([^)]+)\)/g, '<img src="$1" alt="解答配图" class="answer-image" />');
+        // 将换行转换为 <br>
+        answer = answer.replace(/\n/g, '<br>');
+        document.getElementById('answerContent').innerHTML = answer;
+        
         // 触发 MathJax 重新渲染
         renderMathJax();
         
@@ -249,7 +257,7 @@ function clearBoard() {
     }
 }
 
-// 复制原题
+// 复制原题和解答
 function copyQuestion() {
     const question = questionsData.find(q => q.id == currentQuestion);
     if (!question) {
@@ -258,7 +266,11 @@ function copyQuestion() {
     }
     
     // 获取纯文本内容（移除图片标记）
-    const textContent = question.content.replace(/!\[img\]\([^)]+\)/g, '');
+    const questionText = question.content.replace(/!\[img\]\([^)]+\)/g, '');
+    const answerText = question.answer ? question.answer.replace(/!\[img\]\([^)]+\)/g, '') : '';
+    
+    // 组合题目和解答
+    const textContent = `【题目】\n${questionText}\n\n【解答】\n${answerText}`;
     
     // 检查 clipboard API 是否可用
     if (!navigator.clipboard) {
@@ -272,7 +284,7 @@ function copyQuestion() {
         
         try {
             document.execCommand('copy');
-            addLog('✅ 原题已复制到剪贴板');
+            addLog('✅ 题目和解答已复制到剪贴板');
             const btn = document.getElementById('copyBtn');
             const originalText = btn.textContent;
             btn.textContent = '已复制';
@@ -289,7 +301,7 @@ function copyQuestion() {
     }
     
     navigator.clipboard.writeText(textContent).then(() => {
-        addLog('✅ 原题已复制到剪贴板');
+        addLog('✅ 题目和解答已复制到剪贴板');
         // 临时改变按钮文字提示
         const btn = document.getElementById('copyBtn');
         const originalText = btn.textContent;
