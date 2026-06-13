@@ -89,14 +89,26 @@ async function selectQuestion(id, title) {
         let content = question.content;
         // 将 Markdown 图片格式转换为 HTML img 标签
         content = content.replace(/!\[img\]\(([^)]+)\)/g, '<img src="$1" alt="题目配图" class="question-image" />');
+        // 将 Markdown 标题格式转换为 HTML 标签
+        content = content.replace(/^###\s+(.+)$/gm, '<h3>$1</h3>');
+        content = content.replace(/^##\s+(.+)$/gm, '<h2>$1</h2>');
+        content = content.replace(/^#\s+(.+)$/gm, '<h1>$1</h1>');
+        // 将 Markdown 加粗格式转换为 HTML strong 标签
+        content = content.replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>');
         // 将换行转换为 <br>
         content = content.replace(/\n/g, '<br>');
         document.getElementById('questionContent').innerHTML = content;
         
         // 显示解答内容
         let answer = question.answer || '暂无解答';
+        // 将 Markdown 标题格式转换为 HTML 标签
+        answer = answer.replace(/^###\s+(.+)$/gm, '<h3>$1</h3>');
+        answer = answer.replace(/^##\s+(.+)$/gm, '<h2>$1</h2>');
+        answer = answer.replace(/^#\s+(.+)$/gm, '<h1>$1</h1>');
         // 将 Markdown 图片格式转换为 HTML img 标签
         answer = answer.replace(/!\[img\]\(([^)]+)\)/g, '<img src="$1" alt="解答配图" class="answer-image" />');
+        // 将 Markdown 加粗格式转换为 HTML strong 标签
+        answer = answer.replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>');
         // 将换行转换为 <br>
         answer = answer.replace(/\n/g, '<br>');
         document.getElementById('answerContent').innerHTML = answer;

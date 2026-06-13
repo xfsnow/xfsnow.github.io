@@ -933,13 +933,35 @@ document.addEventListener('DOMContentLoaded', () => {
     
     let html = text;
     
-    // 处理代码块
+    // 先提取代码块和行内代码，用占位符替换
+    const codeBlocks = [];
+    const inlineCodes = [];
+    
+    // 提取代码块
     html = html.replace(/```(\w+)?\n([\s\S]*?)```/g, (match, lang, code) => {
-      return `<pre><code>${escapeHtml(code.trim())}</code></pre>`;
+      codeBlocks.push({ lang, code: code.trim() });
+      return `[[CODE_BLOCK_${codeBlocks.length - 1}]]`;
     });
     
-    // 处理行内代码
-    html = html.replace(/`([^`]+)`/g, '<code>$1</code>');
+    // 提取行内代码
+    html = html.replace(/`([^`]+)`/g, (match, code) => {
+      inlineCodes.push(code);
+      return `[[INLINE_CODE_${inlineCodes.length - 1}]]`;
+    });
+    
+    // 对普通文本进行HTML转义
+    html = escapeHtml(html);
+    
+    // 恢复代码块
+    html = html.replace(/\[\[CODE_BLOCK_(\d+)\]\]/g, (match, idx) => {
+      const block = codeBlocks[parseInt(idx)];
+      return `<pre><code>${escapeHtml(block.code)}</code></pre>`;
+    });
+    
+    // 恢复行内代码
+    html = html.replace(/\[\[INLINE_CODE_(\d+)\]\]/g, (match, idx) => {
+      return `<code>${escapeHtml(inlineCodes[parseInt(idx)])}</code>`;
+    });
     
     // 处理表格
     html = parseMarkdownTable(html);
