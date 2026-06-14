@@ -177,6 +177,7 @@ function initGGBApplet() {
             document.getElementById('runBtn').disabled = false;
             document.getElementById('clearBtn').disabled = false;
             document.getElementById('copyBtn').disabled = false;
+            document.getElementById('saveBtn').disabled = false;
             
             console.log('GeoGebra initialized successfully');
         };
@@ -327,6 +328,110 @@ function copyQuestion() {
     });
 }
 
+// 保存 XML 到 question_xml.js
+async function saveXML() {
+    if (!currentQuestion) {
+        addLog('❌ 请先选择一个题目');
+        return;
+    }
+    
+    const xmlContent = document.getElementById('xmlTextarea').value.trim();
+    if (!xmlContent) {
+        addLog('❌ XML 内容为空');
+        return;
+    }
+    
+    // 获取当前题目信息
+    const question = questionsData.find(q => q.id == currentQuestion);
+    if (!question) {
+        addLog('❌ 未找到当前题目信息');
+        return;
+    }
+    
+    // 更新 questionsXMLData 中的数据
+    const existingIndex = questionsXMLData.findIndex(q => q.id == currentQuestion);
+    if (existingIndex >= 0) {
+        questionsXMLData[existingIndex].xml = xmlContent;
+    } else {
+        questionsXMLData.push({
+            id: parseInt(currentQuestion),
+            title: question.title,
+            xml: xmlContent
+        });
+    }
+    
+    // 生成新的 question_xml.js 内容
+    const escapeJSString = (str) => {
+        return str
+            .replace(/\\/g, '\\\\')   // 先转义反斜杠
+            .replace(/"/g, '\\"')     // 转义双引号
+            .replace(/\n/g, '\\n')    // 转义换行
+            .replace(/\r/g, '\\r')    // 转义回车
+            .replace(/\t/g, '\\t');   // 转义制表符
+    };
+    
+    const newContent = `var question_xml = {
+  "exportTime": "${new Date().toISOString()}",
+  "description": "GeoGebra XML 绘图命令（自动生成）",
+  "questions": [
+${questionsXMLData.map(q => `    {
+      "id": ${q.id},
+      "title": "${escapeJSString(q.title)}",
+      "xml": "${escapeJSString(q.xml)}"
+    }`).join(',\n')}
+  ]
+};`;
+    
+    // 尝试使用 File System Access API（Chrome/Edge）
+    if ('showSaveFilePicker' in window) {
+        try {
+            const handle = await window.showSaveFilePicker({
+                suggestedName: 'question_xml.js',
+                types: [{
+                    description: 'JavaScript 文件',
+                    accept: { 'application/javascript': ['.js'] }
+                }]
+            });
+            
+            const writable = await handle.createWritable();
+            await writable.write(newContent);
+            await writable.close();
+            
+            addLog('✅ XML 已保存到 question_xml.js');
+            
+            // 临时改变按钮文字提示
+            const btn = document.getElementById('saveBtn');
+            const originalText = btn.textContent;
+            btn.textContent = '已保存';
+            setTimeout(() => {
+                btn.textContent = originalText;
+            }, 2000);
+            
+            return;
+        } catch (err) {
+            if (err.name === 'AbortError') {
+                addLog('⚠️ 用户取消了保存');
+                return;
+            }
+            console.error('File System API 保存失败:', err);
+            // 继续尝试下载方式
+        }
+    }
+    
+    // 备选方案：下载文件
+    const blob = new Blob([newContent], { type: 'application/javascript' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = 'question_xml.js';
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    URL.revokeObjectURL(url);
+    
+    addLog('✅ XML 已生成下载文件，请手动替换 question_xml.js');
+}
+
 // 清除所有视图
 function clearAllViews() {
     if (!ggbApi) return;
@@ -399,6 +504,7 @@ document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('runBtn').addEventListener('click', runXMLCommands);
     document.getElementById('clearBtn').addEventListener('click', clearBoard);
     document.getElementById('copyBtn').addEventListener('click', copyQuestion);
+    document.getElementById('saveBtn').addEventListener('click', saveXML);
     
     // 分类筛选事件
     document.querySelectorAll('.cat-filter-btn').forEach(btn => {
