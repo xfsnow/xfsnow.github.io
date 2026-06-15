@@ -266,13 +266,13 @@ document.addEventListener('DOMContentLoaded', function() {
             </div>
             <div class="question-actions">
               <button class="btn btn-warning btn-sm" data-action="edit" data-index="${index}" title="编辑题目">
-                <i class="fas fa-edit"></i> 编辑
+                <svg class="icon" aria-hidden="true"><use href="#icon-edit"/></svg> 编辑
               </button>
               <button class="btn btn-secondary btn-sm" data-action="toggleAnswer" data-index="${index}" id="toggle-${index}">
-                <i class="fas fa-eye"></i> 显示答案
+                <svg class="icon" aria-hidden="true"><use href="#icon-eye"/></svg> 显示答案
               </button>
               <button class="btn btn-danger btn-sm" data-action="delete" data-index="${index}">
-                <i class="fas fa-trash"></i> 删除
+                <svg class="icon" aria-hidden="true"><use href="#icon-trash"/></svg> 删除
               </button>
             </div>
           </div>
@@ -283,7 +283,7 @@ document.addEventListener('DOMContentLoaded', function() {
             <div class="answer-space"></div>
             <div class="answer-section" id="answer-${index}" style="display: none;">
               <h5 class="answer-ref">
-                <i class="fas fa-lightbulb"></i> 参考答案：
+                <svg class="icon" aria-hidden="true"><use href="#icon-lightbulb"/></svg> 参考答案：
               </h5>
               ${this.convertLatexToHTML(question.answer)}
             </div>
@@ -293,14 +293,14 @@ document.addEventListener('DOMContentLoaded', function() {
         <div class="question-edit" id="edit-${index}" style="display: none;">
           <div class="question-header">
             <h4>
-              <i class="fas fa-edit"></i> 编辑题目
+              <svg class="icon" aria-hidden="true"><use href="#icon-edit"/></svg> 编辑题目
             </h4>
             <div class="question-actions">
               <button class="btn btn-success btn-sm" data-action="save" data-index="${index}" title="保存修改">
-                <i class="fas fa-save"></i> 保存
+                <svg class="icon" aria-hidden="true"><use href="#icon-save"/></svg> 保存
               </button>
               <button class="btn btn-secondary btn-sm" data-action="cancelEdit" data-index="${index}" title="取消编辑">
-                <i class="fas fa-times"></i> 取消
+                <svg class="icon" aria-hidden="true"><use href="#icon-times"/></svg> 取消
               </button>
             </div>
           </div>
@@ -369,12 +369,12 @@ document.addEventListener('DOMContentLoaded', function() {
       
       if (answerSection.style.display === 'none' || answerSection.style.display === '') {
         answerSection.style.display = 'block';
-        toggleButton.innerHTML = '<i class="fas fa-eye-slash"></i> 隐藏答案';
+        toggleButton.innerHTML = '<svg class="icon" aria-hidden="true"><use href="#icon-eye-slash"/></svg> 隐藏答案';
         toggleButton.classList.remove('btn-secondary');
         toggleButton.classList.add('btn-success');
       } else {
         answerSection.style.display = 'none';
-        toggleButton.innerHTML = '<i class="fas fa-eye"></i> 显示答案';
+        toggleButton.innerHTML = '<svg class="icon" aria-hidden="true"><use href="#icon-eye"/></svg> 显示答案';
         toggleButton.classList.remove('btn-success');
         toggleButton.classList.add('btn-secondary');
       }
@@ -388,7 +388,7 @@ document.addEventListener('DOMContentLoaded', function() {
         // 显示添加题目区域
         this.addQuestionArea.style.display = 'block';
         // 更新按钮文字和样式
-        toggleButton.innerHTML = '<i class="fas fa-times"></i> 取消添加';
+        toggleButton.innerHTML = '<svg class="icon" aria-hidden="true"><use href="#icon-times"/></svg> 取消添加';
         toggleButton.classList.remove('btn-success');
         toggleButton.classList.add('btn-secondary');
         
@@ -399,7 +399,7 @@ document.addEventListener('DOMContentLoaded', function() {
         // 隐藏添加题目区域
         this.addQuestionArea.style.display = 'none';
         // 恢复按钮文字和样式
-        toggleButton.innerHTML = '<i class="fas fa-plus"></i> 添加题目';
+        toggleButton.innerHTML = '<svg class="icon" aria-hidden="true"><use href="#icon-plus"/></svg> 添加题目';
         toggleButton.classList.remove('btn-secondary');
         toggleButton.classList.add('btn-success');
       }
@@ -413,7 +413,7 @@ document.addEventListener('DOMContentLoaded', function() {
       this.addQuestionArea.style.display = 'none';
       
       // 恢复主按钮的文字和样式
-      toggleButton.innerHTML = '<i class="fas fa-plus"></i> 添加题目';
+      toggleButton.innerHTML = '<svg class="icon" aria-hidden="true"><use href="#icon-plus"/></svg> 添加题目';
       toggleButton.classList.remove('btn-secondary');
       toggleButton.classList.add('btn-success');
       
