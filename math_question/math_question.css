@@ -4,7 +4,7 @@ padding: 0;
 box-sizing: border-box;
 }
 
-/* SVG 图标样式 (替代 Font Awesome) */
+/* SVG 图标样式*/
 .icon {
 display: inline-block;
 width: 1em;
