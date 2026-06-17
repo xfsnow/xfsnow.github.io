@@ -626,6 +626,234 @@ document.addEventListener('DOMContentLoaded', () => {
     return div.innerHTML;
   }
 
+  // ==================== 搜索历史记录功能 ====================
+  
+  function highlightSearchTerm(text, term) {
+    if (!term) return escapeHtml(text);
+    const regex = new RegExp(`(${term.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')})`, 'gi');
+    return text.replace(regex, '<span class="search-result-highlight">$1</span>');
+  }
+  
+  function searchHistory(keyword) {
+    const history = loadHistory();
+    if (!keyword.trim()) return [];
+    
+    const results = history.filter(chat => {
+      const titleMatch = chat.title.toLowerCase().includes(keyword.toLowerCase());
+      const messagesMatch = chat.messages.some(msg => {
+        const content = typeof msg.content === 'object' 
+          ? msg.content.find(c => c.type === 'text')?.text || ''
+          : msg.content;
+        return content.toLowerCase().includes(keyword.toLowerCase());
+      });
+      return titleMatch || messagesMatch;
+    });
+    
+    return results;
+  }
+  
+  function openSearchModal() {
+    const searchModal = document.getElementById('search-modal');
+    searchModal?.classList.add('active');
+  }
+  
+  function closeSearchModal() {
+    const searchModal = document.getElementById('search-modal');
+    searchModal?.classList.remove('active');
+    const searchInput = document.getElementById('search-input');
+    if (searchInput) searchInput.value = '';
+    const searchClearBtn = document.getElementById('search-clear-btn');
+    if (searchClearBtn) searchClearBtn.style.display = 'none';
+  }
+  
+  function renderSearchResults(keyword) {
+    const resultsContainer = document.getElementById('search-results');
+    const results = searchHistory(keyword);
+    
+    if (!resultsContainer) return;
+    
+    if (results.length === 0) {
+      resultsContainer.innerHTML = '<div class="search-no-results">未找到匹配的对话记录</div>';
+      return;
+    }
+    
+    resultsContainer.innerHTML = results.map(chat => {
+      const firstUserMsg = chat.messages.find(m => m.role === 'user');
+      const preview = firstUserMsg 
+        ? (typeof firstUserMsg.content === 'object' 
+            ? firstUserMsg.content.find(c => c.type === 'text')?.text || ''
+            : firstUserMsg.content)
+        : '';
+      
+      return `
+        <div class="search-result-item" data-chat-id="${chat.id}">
+          <div class="search-result-title">${highlightSearchTerm(chat.title, keyword)}</div>
+          <div class="search-result-preview">${highlightSearchTerm(preview.substring(0, 100) + (preview.length > 100 ? '...' : ''), keyword)}</div>
+        </div>
+      `;
+    }).join('');
+    
+    // 绑定点击事件
+    resultsContainer.querySelectorAll('.search-result-item').forEach(item => {
+      item.addEventListener('click', () => {
+        const chatId = item.dataset.chatId;
+        loadChat(chatId);
+        closeSearchModal();
+      });
+    });
+  }
+  
+  // ==================== 导出历史记录功能 ====================
+  
+  function exportHistory() {
+    const history = loadHistory();
+    if (history.length === 0) {
+      alert('没有历史记录可以导出');
+      return;
+    }
+    
+    const dataStr = `// ChatGG 历史记录导出文件
+// 导出时间: ${new Date().toLocaleString('zh-CN')}
+// 记录数量: ${history.length}
+
+const chatggHistoryData = ${JSON.stringify(history, null, 2)};`;
+    
+    const blob = new Blob([dataStr], { type: 'text/javascript' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = `chatgg_history_${Date.now()}.js`;
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    URL.revokeObjectURL(url);
+    
+    alert(`成功导出 ${history.length} 条历史记录`);
+  }
+  
+  // ==================== 导入历史记录功能 ====================
+  
+  function importHistory(file) {
+    const reader = new FileReader();
+    reader.onload = function(e) {
+      try {
+        const content = e.target.result;
+        // 尝试解析 JavaScript 文件（提取 JSON 数据）
+        let data;
+        
+        // 尝试匹配 const chatggHistoryData = ... 格式
+        const match = content.match(/chatggHistoryData\s*=\s*(\[.*\]);/s);
+        if (match) {
+          data = JSON.parse(match[1]);
+        } else {
+          // 尝试直接解析为 JSON
+          data = JSON.parse(content);
+        }
+        
+        if (!Array.isArray(data)) {
+          throw new Error('数据格式错误，应为数组');
+        }
+        
+        const existingHistory = loadHistory();
+        const newHistory = [...existingHistory];
+        
+        // 合并历史记录（去重）
+        data.forEach(newChat => {
+          const existingIndex = newHistory.findIndex(c => c.id === newChat.id);
+          if (existingIndex >= 0) {
+            newHistory[existingIndex] = newChat;
+          } else {
+            newHistory.unshift(newChat);
+          }
+        });
+        
+        // 限制最大数量
+        if (newHistory.length > MAX_HISTORY) {
+          newHistory.length = MAX_HISTORY;
+        }
+        
+        saveHistory(newHistory);
+        renderHistoryList();
+        alert(`成功导入 ${data.length} 条历史记录`);
+        
+      } catch (err) {
+        console.error('导入历史记录失败:', err);
+        alert('导入失败：' + err.message);
+      }
+    };
+    
+    reader.readAsText(file);
+  }
+  
+  // ==================== 绑定搜索和导入导出事件 ====================
+  
+  const openSearchBtn = document.getElementById('open-search-btn');
+  const searchInput = document.getElementById('search-input');
+  const searchClearBtn = document.getElementById('search-clear-btn');
+  const closeSearchBtn = document.getElementById('close-search-btn');
+  const exportHistoryBtn = document.getElementById('export-history-btn');
+  const importHistoryBtn = document.getElementById('import-history-btn');
+  const historyImportFile = document.getElementById('history-import-file');
+  
+  // 打开搜索弹窗
+  openSearchBtn?.addEventListener('click', () => {
+    openSearchModal();
+    searchInput?.focus();
+  });
+  
+  // 搜索输入事件
+  searchInput?.addEventListener('input', (e) => {
+    const keyword = e.target.value;
+    if (searchClearBtn) searchClearBtn.style.display = keyword ? 'block' : 'none';
+    
+    if (keyword.length >= 2) {
+      renderSearchResults(keyword);
+    } else {
+      renderSearchResults('');
+    }
+  });
+  
+  // 搜索输入回车键
+  searchInput?.addEventListener('keypress', (e) => {
+    if (e.key === 'Enter') {
+      renderSearchResults(e.target.value);
+    }
+  });
+  
+  // 清除搜索按钮
+  searchClearBtn?.addEventListener('click', () => {
+    if (searchInput) searchInput.value = '';
+    if (searchClearBtn) searchClearBtn.style.display = 'none';
+    renderSearchResults('');
+  });
+  
+  // 关闭搜索弹窗
+  closeSearchBtn?.addEventListener('click', closeSearchModal);
+  
+  // 点击弹窗背景关闭
+  document.getElementById('search-modal')?.addEventListener('click', (e) => {
+    if (e.target.id === 'search-modal') {
+      closeSearchModal();
+    }
+  });
+  
+  // 导出历史按钮
+  exportHistoryBtn?.addEventListener('click', exportHistory);
+  
+  // 导入历史按钮
+  importHistoryBtn?.addEventListener('click', () => {
+    historyImportFile?.click();
+  });
+  
+  // 文件选择事件
+  historyImportFile?.addEventListener('change', (e) => {
+    const file = e.target.files?.[0];
+    if (file) {
+      importHistory(file);
+      e.target.value = ''; // 重置文件选择
+    }
+  });
+
   function showImagePreview(imageUrl) {
     const previewWrapper = document.getElementById('image-preview-wrapper');
     const previewImage = document.getElementById('image-preview');

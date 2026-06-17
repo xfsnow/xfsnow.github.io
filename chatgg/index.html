@@ -22,13 +22,41 @@
   <div class="container">
     <!-- 侧边栏 -->
     <div class="sidebar">
+      <!-- 新对话按钮 -->
       <button id="new-chat-btn" class="new-chat-btn">
         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
           <line x1="12" y1="5" x2="12" y2="19"></line>
           <line x1="5" y1="12" x2="19" y2="12"></line>
         </svg>
-        <span class="btn-text">新对话</span>
+        <span>新对话</span>
       </button>
+      
+      <!-- 操作按钮组 -->
+      <div class="sidebar-actions">
+        <button id="open-search-btn" class="sidebar-action-btn">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+          <span>搜索历史</span>
+        </button>
+        <button id="export-history-btn" class="sidebar-action-btn">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+            <polyline points="7 10 12 15 17 10"></polyline>
+            <line x1="12" y1="15" x2="12" y2="3"></line>
+          </svg>
+          <span>保存历史</span>
+        </button>
+        <button id="import-history-btn" class="sidebar-action-btn">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+            <polyline points="17 8 12 3 7 8"></polyline>
+            <line x1="12" y1="3" x2="12" y2="15"></line>
+          </svg>
+          <span>导入历史</span>
+        </button>
+      </div>
       
       <div class="history-section">
         <h3 class="history-title">历史记录</h3>
@@ -109,6 +137,34 @@
   </div>
   
   <input type="file" id="image-input" accept="image/*" style="display: none;">
+  
+  <!-- 导入历史记录文件输入 -->
+  <input type="file" id="history-import-file" accept=".js,.json" style="display: none;">
+  
+  <!-- 搜索结果弹窗 -->
+  <div class="modal-overlay" id="search-modal">
+    <div class="modal-content search-modal-content">
+      <div class="modal-header">
+        <div class="search-modal-input-container">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+          <input type="text" id="search-input" placeholder="搜索历史对话..." />
+          <button id="search-clear-btn" class="search-clear-btn" style="display: none;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="18" y1="6" x2="6" y2="18"></line>
+              <line x1="6" y1="6" x2="18" y2="18"></line>
+            </svg>
+          </button>
+        </div>
+        <button class="modal-close-btn" id="close-search-btn">×</button>
+      </div>
+      <div class="modal-body search-results-body">
+        <div id="search-results" class="search-results"></div>
+      </div>
+    </div>
+  </div>
   
   <!-- 设置弹窗 -->
   <div class="modal-overlay" id="settings-modal">
