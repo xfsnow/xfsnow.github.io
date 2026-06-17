@@ -20,7 +20,7 @@ class AiClient {
   }
 
   // 发送消息并获取流式响应
-  async sendMessage(messages, onUpdate, onComplete, onError) {
+  async stream(messages, onUpdate, onComplete, onError) {
     const endpoint = this.apiEndpoint.endsWith('/') 
       ? this.apiEndpoint + 'chat/completions'
       : this.apiEndpoint + '/chat/completions';
@@ -93,7 +93,7 @@ class AiClient {
   }
 
   // 发送非流式消息（用于图片场景的备用方案）
-  async sendMessageNonStream(messages, onComplete, onError) {
+  async fetch(messages, onComplete, onError) {
     const endpoint = this.apiEndpoint.endsWith('/') 
       ? this.apiEndpoint + 'chat/completions'
       : this.apiEndpoint + '/chat/completions';

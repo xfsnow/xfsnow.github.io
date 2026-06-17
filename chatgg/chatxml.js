@@ -2,6 +2,18 @@ document.addEventListener('DOMContentLoaded', () => {
   let selectedImageData = null;
   let selectedImageUrl = null;
 
+  // ==================== 应用常量 ====================
+  const APP_CONFIG = {
+    welcomeTitle: '欢迎使用AI数学绘图助手',
+    welcomeMessage: '输入数学作图需求,AI会自动帮你生成GeoGebra XML并绘制图形',
+    defaultChatTitle: '新对话',
+    exampleQuestions: [
+      '画一个等边三角形',
+      '构造圆的切线',
+      '证明勾股定理'
+    ]
+  };
+
   function escapeHtmlForCommands(text) {
     const div = document.createElement('div');
     div.textContent = text;
@@ -386,18 +398,16 @@ document.addEventListener('DOMContentLoaded', () => {
     if (chatContainer) {
       chatContainer.innerHTML = `
         <div class="welcome-message">
-          <h3>欢迎使用AI数学绘图助手</h3>
-          <p>输入数学作图需求,AI会自动帮你生成GeoGebra XML并绘制图形</p>
+          <h3>${APP_CONFIG.welcomeTitle}</h3>
+          <p>${APP_CONFIG.welcomeMessage}</p>
           <div class="welcome-examples">
-            <button type="button" class="example-tag">画一个等边三角形</button>
-            <button type="button" class="example-tag">构造圆的切线</button>
-            <button type="button" class="example-tag">证明勾股定理</button>
+            ${APP_CONFIG.exampleQuestions.map(q => `<button type="button" class="example-tag">${q}</button>`).join('')}
           </div>
         </div>
       `;
       bindExampleTags();
     }
-    if (chatTitle) chatTitle.textContent = '新对话';
+    if (chatTitle) chatTitle.textContent = APP_CONFIG.defaultChatTitle;
     renderHistoryList();
   }
 

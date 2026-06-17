@@ -130,7 +130,7 @@ async function testStreamResponse() {
   const startTime = Date.now();
   let firstCharTime = null;
   
-  await aiClient.sendMessage(
+  await aiClient.stream(
     messages,
     (content) => {
       if (!firstCharTime && content.length > 0) {

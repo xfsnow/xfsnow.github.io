@@ -1166,7 +1166,7 @@ XML 格式铁律：
     let lastRenderTime = 0;
     const RENDER_INTERVAL = 60;
     
-    await aiClient.sendMessage(
+    await aiClient.stream(
       messages,
       (content) => {
         fullResponse = content;
