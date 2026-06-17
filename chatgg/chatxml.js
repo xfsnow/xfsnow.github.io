@@ -454,14 +454,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
   
-  function useDefaultSettings() {
-    Object.keys(settingsElements).forEach(key => {
-      if (settingsElements[key]) {
-        settingsElements[key].value = defaultSettings[key] || '';
-      }
-    });
-  }
-  
   function saveSettings() {
     const settings = {};
     Object.keys(settingsElements).forEach(key => {
@@ -1036,14 +1028,6 @@ const chatggHistoryData = ${JSON.stringify(history, null, 2)};`;
     return contentDiv;
   }
 
-  function extractGGBCommands(content) {
-    if (typeof content === 'object') {
-      const textContent = content.find(c => c.type === 'text')?.text || '';
-      return extractGGBCommandsFromText(textContent);
-    }
-    return extractGGBCommandsFromText(content);
-  }
-
   function extractGGBCommandsFromText(text) {
     const xmlMatch = text.match(/```ggb-xml\s*([\s\S]*?)```/);
     if (xmlMatch) {
@@ -1070,15 +1054,6 @@ const chatggHistoryData = ${JSON.stringify(history, null, 2)};`;
 
   function formatMessage(content) {
     return formatMessageFromText(content);
-  }
-
-  function escapeHtmlForStreaming(text) {
-    if (!text) return '';
-    const div = document.createElement('div');
-    div.textContent = text;
-    let html = div.innerHTML;
-    html = html.replace(/\n/g, '<br>');
-    return `<p>${html}</p>`;
   }
 
   function createLoadingAnimation() {
