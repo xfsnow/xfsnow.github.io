@@ -1472,6 +1472,25 @@ const chatggHistoryData = ${JSON.stringify(history, null, 2)};`;
     });
   }
 
+  function initWelcomeMessage() {
+    const welcomeMessageDiv = document.querySelector('.welcome-message');
+    if (!welcomeMessageDiv) return;
+    
+    const titleEl = welcomeMessageDiv.querySelector('h3');
+    const messageEl = welcomeMessageDiv.querySelector('p');
+    const examplesContainer = welcomeMessageDiv.querySelector('.welcome-examples');
+    
+    if (titleEl) titleEl.textContent = APP_CONFIG.welcomeTitle;
+    if (messageEl) messageEl.textContent = APP_CONFIG.welcomeMessage;
+    
+    if (examplesContainer) {
+      examplesContainer.innerHTML = APP_CONFIG.exampleQuestions.map(q => 
+        `<button type="button" class="example-tag">${q}</button>`
+      ).join('');
+    }
+  }
+
+  initWelcomeMessage();
   bindExampleTags();
   renderHistoryList();
   loadSettings();
