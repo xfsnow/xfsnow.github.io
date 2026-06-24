@@ -1,7 +1,15 @@
 var math_question = {
-  "exportTime": "2026-02-25T12:54:46.544Z",
+  "exportTime": "2026-06-24T11:45:18.619Z",
   "description": "数学题库数据",
   "questions": [
+    {
+      "id": 1782301513070,
+      "title": "包含菱形的四边形面积",
+      "content": "已知：$AB=AC$，$PB=PC$，$PD\\perp AB$，$PE\\perp AC$，垂足分别为$D$、$E$。\n(1) 求证：$PD=PE$；\n(2) 若$AB=BP$，$\\angle DBP=45^\\circ$，$AP=2$，求四边形$ADPE$的面积。\n\n![img](1782301513070_q.svg)",
+      "answer": "## (1) 证明 $PD=PE$\n连接$AP$。\n在$\\triangle ABP$和$\\triangle ACP$中：\n$$\n\\begin{cases}\nAB=AC \\\\\nPB=PC \\\\\nAP=AP\n\\end{cases}\n$$\n$\\therefore \\triangle ABP \\cong \\triangle ACP \\ (\\text{SSS})$。\n$\\therefore \\angle BAP=\\angle CAP$，即$AP$平分$\\angle BAC$。\n$\\because PD\\perp AB,\\ PE\\perp AC$，\n根据**角平分线的性质**：角平分线上的点到角两边距离相等，\n$\\therefore PD=PE$。\n\n---\n\n## (2) 求四边形$ADPE$的面积\n### 步骤1：分析等腰$\\text{Rt}\\triangle BDP$\n$\\because PD\\perp AB$，$\\angle DBP=45^\\circ$，\n$\\therefore \\triangle BDP$为等腰直角三角形，$BD=PD$。\n设$PD=BD=x$，由勾股定理：\n$$BP=\\sqrt{BD^2+PD^2}=\\sqrt{x^2+x^2}=\\sqrt{2}x.$$\n已知$AB=BP$，故$AB=\\sqrt{2}x$。\n\n### 步骤2：正确表示$AD$长度（修正原图错误）\n点$D$在线段$AB$上，$AB=AD+BD$，\n$\\therefore AD=AB-BD=\\sqrt{2}x - x = (\\sqrt{2}-1)x$。\n\n### 步骤3：$\\text{Rt}\\triangle ADP$勾股定理列方程\n$\\because PD\\perp AB$，$\\angle ADP=90^\\circ$，$AP=2$，\n由勾股定理 $AD^2 + PD^2 = AP^2$，代入：\n$$\\left[(\\sqrt{2}-1)x\\right]^2 + x^2 = 2^2$$\n展开计算：\n$$(2-2\\sqrt{2}+1)x^2 + x^2 = 4$$\n$$(3-2\\sqrt{2})x^2 + x^2 = 4$$\n$$(4-2\\sqrt{2})x^2 = 4$$\n$$x^2=\\frac{4}{4-2\\sqrt{2}}=\\frac{2}{2-\\sqrt{2}}$$\n分母有理化：\n$$x^2=\\frac{2(2+\\sqrt{2})}{(2-\\sqrt{2})(2+\\sqrt{2})}=\\frac{4+2\\sqrt{2}}{2}=2+\\sqrt{2}.$$\n\n### 步骤4：证明两个直角三角形全等\n在$\\text{Rt}\\triangle ADP$与$\\text{Rt}\\triangle AEP$中：\n$$\n\\begin{cases}\n\\angle ADP=\\angle AEP=90^\\circ \\\\\n\\angle DAP=\\angle EAP \\\\\nAP=AP\n\\end{cases}\n$$\n$\\therefore \\text{Rt}\\triangle ADP \\cong \\text{Rt}\\triangle AEP \\ (\\text{AAS})$，\n$\\therefore S_{\\text{四边形}ADPE}=2S_{\\triangle ADP}$。\n\n### 步骤5：计算面积\n$$S_{\\triangle ADP}=\\frac12 \\cdot AD \\cdot PD=\\frac12 \\cdot (\\sqrt{2}-1)x \\cdot x=\\frac12(\\sqrt{2}-1)x^2$$\n$$S_{ADPE}=2\\times \\frac12(\\sqrt{2}-1)x^2=(\\sqrt{2}-1)x^2$$\n将$x^2=2+\\sqrt{2}$代入：\n$$\n\\begin{align*}\nS_{ADPE}&=(\\sqrt{2}-1)(2+\\sqrt{2}) \\\\\n&=2\\sqrt{2}+(\\sqrt{2})^2 -2 -\\sqrt{2} \\\\\n&=2\\sqrt{2}+2-2-\\sqrt{2} \\\\\n&=\\sqrt{2}.\n\\end{align*}\n$$\n\n---\n\n## 最终答案\n(1) 证明如上，${PD=PE}$；\n(2) 四边形$ADPE$的面积为${\\sqrt{2}}$。",
+      "category": "geometry",
+      "difficulty": "hard"
+    },
     {
       "id": 1772024076546,
       "title": "初二数学基础练习9-第28题",
