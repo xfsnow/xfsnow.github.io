@@ -1,10 +1,10 @@
 [
         {
-            "id": "image-process",
-            "title": "Responsive Image Processing",
-            "description": "Online image compression and format conversion tool",
-            "url": "../imageprocess/",
-            "icon": "fas fa-images"
+            "id": "geogebra-manual",
+            "title": "GeoGebra Manual (Chinese)",
+            "description": "Chinese manual translated from the official English GeoGebra manual",
+            "url": "../geogebra/",
+            "icon": "fas fa-book"
         },
         {
             "id": "ai-assistant",

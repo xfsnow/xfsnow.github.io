@@ -1,10 +1,10 @@
 [
     {
-        "id": "image-process",
-        "title": "响应式图片处理",
-        "description": "在线图片压缩和格式转换工具",
-        "url": "/imageprocess/",
-        "icon": "fas fa-images"
+        "id": "geogebra-manual",
+        "title": "GeoGebra手册中文版",
+        "description": "根据官网GeoGebra手册英文版翻译的中文手册",
+        "url": "/geogebra/",
+        "icon": "fas fa-book"
     },
     {
         "id": "ai-assistant",
