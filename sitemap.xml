@@ -5,6 +5,11 @@
     <priority>1.0</priority>
   </url>
   <url>
+    <loc>https://www.snowpeak.org/zh/workbuddy-auto-checkin/</loc>
+    <lastmod>2026-10-05</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://www.snowpeak.org/zh/ai-round-table/</loc>
     <lastmod>2026-01-14</lastmod>
     <priority>0.8</priority>
@@ -452,6 +457,11 @@
   <url>
     <loc>https://www.snowpeak.org/zh/compress-rmvb/</loc>
     <lastmod>2004-06-20</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.snowpeak.org/en/workbuddy-auto-checkin/</loc>
+    <lastmod>2026-10-05</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
