@@ -57,6 +57,17 @@ class Blog {
             );
         }
 
+        // 搜索表单提交：阻止跳转到 /search，改为调用本页搜索
+        const searchForm = document.querySelector('.search-form');
+        if (searchForm) {
+            searchForm.addEventListener('submit', (e) => {
+                e.preventDefault();
+                if (this.searchInput) {
+                    this.handleSearch(this.searchInput.value);
+                }
+            });
+        }
+
         // 分类筛选事件
         this.filterBtns.forEach(btn => {
             btn.addEventListener('click', (e) => {
