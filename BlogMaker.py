@@ -43,6 +43,8 @@ class BlogMaker:
         articles = self.list_articles()
         # 取最前 self.pageSize 条
         data['articles'] = articles[:self.pageSize]
+        # 首页规范网址，供模板输出 canonical
+        data['page_url'] = '/' if self.langPath == 'zh' else '/en/'
 
         # 提取所有文章的分类并创建分类映射
         categories_set = set()
@@ -211,7 +213,8 @@ class BlogMaker:
                 'page': page_num,
                 'total_pages': total_pages,
                 'page_size': page_size,
-                'total_articles': total_articles
+                'total_articles': total_articles,
+                'page_url': f"/{self.langPath}/page-{page_num}/"
             }
 
             # 渲染模板
