@@ -4,3 +4,4 @@ Allow: /en/
 Disallow: /assets/
 
 Sitemap: https://www.snowpeak.org/sitemap.xml
+Sitemap: https://www.snowpeak.org/geogebra/sitemap.xml
